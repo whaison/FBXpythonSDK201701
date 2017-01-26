@@ -1,0 +1,347 @@
+\hypertarget{class_fbx_anim_curve_def}{}\section{Fbx\+Anim\+Curve\+Def クラス}
+\label{class_fbx_anim_curve_def}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+
+
+{\ttfamily \#include $<$fbxanimcurve.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{E\+Tangent\+Mode} \{ \newline
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{e\+Tangent\+Auto} = 0x00000100, 
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ae9d885e8a384fd9165123ac47a661dd8}{e\+Tangent\+T\+CB} = 0x00000200, 
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{e\+Tangent\+User} = 0x00000400, 
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a423a9e02047b705ec23561f87d8ff15b}{e\+Tangent\+Generic\+Break} = 0x00000800, 
+\newline
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{e\+Tangent\+Break} = e\+Tangent\+Generic\+Break$\vert$e\+Tangent\+User, 
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87afce344e3f0ada1ec522ef67f0a0e92cb}{e\+Tangent\+Auto\+Break} = e\+Tangent\+Generic\+Break$\vert$e\+Tangent\+Auto, 
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a53bad41061d60bae2373a88e13eeac50}{e\+Tangent\+Generic\+Clamp} = 0x00001000, 
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87abaaae6df50c5a1a651d0e5678c4a90cd}{e\+Tangent\+Generic\+Time\+Independent} = 0x00002000, 
+\newline
+\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a87eba898c30497b7e94da22822500757}{e\+Tangent\+Generic\+Clamp\+Progressive} = 0x00004000$\vert$e\+Tangent\+Generic\+Time\+Independent
+ \}\begin{DoxyCompactList}\small\item\em Key tangent mode for cubic interpolation. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{E\+Interpolation\+Type} \{ \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5acb7611d721a1ae1e6df7a2f072dc7c9f}{e\+Interpolation\+Constant} = 0x00000002, 
+\hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20}{e\+Interpolation\+Linear} = 0x00000004, 
+\hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae}{e\+Interpolation\+Cubic} = 0x00000008
+ \}\begin{DoxyCompactList}\small\item\em Key interpolation type. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990e}{E\+Weighted\+Mode} \{ \hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3}{e\+Weighted\+None} = 0x00000000, 
+\hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea869960737022db21fc64480daa22725a}{e\+Weighted\+Right} = 0x01000000, 
+\hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990eae28d75f955feebe5756d77ad0765d000}{e\+Weighted\+Next\+Left} = 0x02000000, 
+\hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea4337e6853fab642c2a432ab1bb303922}{e\+Weighted\+All} = e\+Weighted\+Right$\vert$e\+Weighted\+Next\+Left
+ \}\begin{DoxyCompactList}\small\item\em Weighted mode. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}{E\+Constant\+Mode} \{ \hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64afa9ab4c869fe6eb4589e1298375ac66f}{e\+Constant\+Standard} = 0x00000000, 
+\hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64acd33e33b487685436e39688ca986f2d6}{e\+Constant\+Next} = 0x00000100
+ \}\begin{DoxyCompactList}\small\item\em Key constant mode. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fff}{E\+Velocity\+Mode} \{ \hyperlink{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffa7919a5bf6ff7855e3b60673ade08afbc}{e\+Velocity\+None} = 0x00000000, 
+\hyperlink{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffa1265ff9732df8deb70ee9822af11b995}{e\+Velocity\+Right} = 0x10000000, 
+\hyperlink{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffac10e4a2ea06592874b83d4389dcaf560}{e\+Velocity\+Next\+Left} = 0x20000000, 
+\hyperlink{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffab8603ba4ecc238f5dee7489b6a0123ee}{e\+Velocity\+All} = e\+Velocity\+Right$\vert$e\+Velocity\+Next\+Left
+ \}\begin{DoxyCompactList}\small\item\em Velocity mode. Velocity settings speed up or slow down animation on either side of a key without changing the trajectory of the animation. Unlike Auto and Weight settings, Velocity changes the animation in time, but not in space. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3b}{E\+Tangent\+Visibility} \{ \hyperlink{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba88013fc4cb5832cd963bd7b5a640ee1c}{e\+Tangent\+Show\+None} = 0x00000000, 
+\hyperlink{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3bafc33bb613976689a8f49fe80eca8de02}{e\+Tangent\+Show\+Left} = 0x00100000, 
+\hyperlink{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba7392f6d6b65c19bce64032708c6a81ff}{e\+Tangent\+Show\+Right} = 0x00200000, 
+\hyperlink{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba9288cf3a65d5ee1c1bf50d1be8cb9ecc}{e\+Tangent\+Show\+Both} = e\+Tangent\+Show\+Left$\vert$e\+Tangent\+Show\+Right
+ \}\begin{DoxyCompactList}\small\item\em Tangent visibility. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300}{E\+Data\+Index} \{ \newline
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a97c20bbd5b06a532773ffd8c88624ec2}{e\+Right\+Slope} = 0, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a3107e2f5903a757095499010eb74d475}{e\+Next\+Left\+Slope} = 1, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a08699f6d2da38b05a490f90841afe5e0}{e\+Weights} = 2, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a83afb43c5a3867c140ede62339f6ccc3}{e\+Right\+Weight} = 2, 
+\newline
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a1fd893ddfdb66ac8a9c6961752362c07}{e\+Next\+Left\+Weight} = 3, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a8732f3303563dd6d7e92373e6e930648}{e\+Velocity} = 4, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a4009b9f2bd63546ecd6ce63e5a60701f}{e\+Right\+Velocity} = 4, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300af617635230401e91d520361c9b02db41}{e\+Next\+Left\+Velocity} = 5, 
+\newline
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a38129a423990a42f94187b77ab041caa}{e\+T\+C\+B\+Tension} = 0, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a5544ce65720f37d5a2620dc32556b2ba}{e\+T\+C\+B\+Continuity} = 1, 
+\hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a4ed5dbb6b725478205a3c750c20790d3}{e\+T\+C\+B\+Bias} = 2
+ \}\begin{DoxyCompactList}\small\item\em \hyperlink{class_fbx_anim_curve_key}{Fbx\+Anim\+Curve\+Key} data indices for cubic interpolation tangent information. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const float \hyperlink{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}
+\item 
+static const float \hyperlink{class_fbx_anim_curve_def_a469319cefa59b62fd38985b837e49d07}{s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT}
+\item 
+static const float \hyperlink{class_fbx_anim_curve_def_ad0e9ffa9198f867a8eec3b78d7363438}{s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT}
+\item 
+static const float \hyperlink{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Definitions used for the F\+BX animation curves and keys. 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}\label{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Constant\+Mode@{E\+Constant\+Mode}}
+\index{E\+Constant\+Mode@{E\+Constant\+Mode}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Constant\+Mode}{EConstantMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}{Fbx\+Anim\+Curve\+Def\+::\+E\+Constant\+Mode}}
+
+
+
+Key constant mode. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Constant\+Standard@{e\+Constant\+Standard}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Constant\+Standard@{e\+Constant\+Standard}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64afa9ab4c869fe6eb4589e1298375ac66f}\label{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64afa9ab4c869fe6eb4589e1298375ac66f}} 
+e\+Constant\+Standard&Curve value is constant between this key and the next \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Constant\+Next@{e\+Constant\+Next}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Constant\+Next@{e\+Constant\+Next}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64acd33e33b487685436e39688ca986f2d6}\label{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64acd33e33b487685436e39688ca986f2d6}} 
+e\+Constant\+Next&Curve value is constant, with next key\textquotesingle{}s value \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Data\+Index@{E\+Data\+Index}}
+\index{E\+Data\+Index@{E\+Data\+Index}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Data\+Index}{EDataIndex}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300}{Fbx\+Anim\+Curve\+Def\+::\+E\+Data\+Index}}
+
+
+
+\hyperlink{class_fbx_anim_curve_key}{Fbx\+Anim\+Curve\+Key} data indices for cubic interpolation tangent information. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Right\+Slope@{e\+Right\+Slope}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Right\+Slope@{e\+Right\+Slope}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a97c20bbd5b06a532773ffd8c88624ec2}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a97c20bbd5b06a532773ffd8c88624ec2}} 
+e\+Right\+Slope&Index of the right derivative, User and Break tangent mode (data are float). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Next\+Left\+Slope@{e\+Next\+Left\+Slope}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Next\+Left\+Slope@{e\+Next\+Left\+Slope}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a3107e2f5903a757095499010eb74d475}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a3107e2f5903a757095499010eb74d475}} 
+e\+Next\+Left\+Slope&Index of the left derivative for the next key, User and Break tangent mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Weights@{e\+Weights}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Weights@{e\+Weights}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a08699f6d2da38b05a490f90841afe5e0}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a08699f6d2da38b05a490f90841afe5e0}} 
+e\+Weights&Start index of weight values, User and Break tangent break mode (data are Fbx\+Int16 tokens from weight and converted to float). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Right\+Weight@{e\+Right\+Weight}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Right\+Weight@{e\+Right\+Weight}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a83afb43c5a3867c140ede62339f6ccc3}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a83afb43c5a3867c140ede62339f6ccc3}} 
+e\+Right\+Weight&Index of weight on right tangent, User and Break tangent break mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Next\+Left\+Weight@{e\+Next\+Left\+Weight}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Next\+Left\+Weight@{e\+Next\+Left\+Weight}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a1fd893ddfdb66ac8a9c6961752362c07}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a1fd893ddfdb66ac8a9c6961752362c07}} 
+e\+Next\+Left\+Weight&Index of weight on next key\textquotesingle{}s left tangent, User and Break tangent break mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Velocity@{e\+Velocity}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Velocity@{e\+Velocity}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a8732f3303563dd6d7e92373e6e930648}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a8732f3303563dd6d7e92373e6e930648}} 
+e\+Velocity&Start index of velocity values, Velocity mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Right\+Velocity@{e\+Right\+Velocity}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Right\+Velocity@{e\+Right\+Velocity}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a4009b9f2bd63546ecd6ce63e5a60701f}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a4009b9f2bd63546ecd6ce63e5a60701f}} 
+e\+Right\+Velocity&Index of velocity on right tangent, Velocity mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Next\+Left\+Velocity@{e\+Next\+Left\+Velocity}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Next\+Left\+Velocity@{e\+Next\+Left\+Velocity}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300af617635230401e91d520361c9b02db41}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300af617635230401e91d520361c9b02db41}} 
+e\+Next\+Left\+Velocity&Index of velocity on next key\textquotesingle{}s left tangent, Velocity mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+T\+C\+B\+Tension@{e\+T\+C\+B\+Tension}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+T\+C\+B\+Tension@{e\+T\+C\+B\+Tension}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a38129a423990a42f94187b77ab041caa}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a38129a423990a42f94187b77ab041caa}} 
+e\+T\+C\+B\+Tension&Index of Tension, T\+CB tangent mode (data are floats). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+T\+C\+B\+Continuity@{e\+T\+C\+B\+Continuity}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+T\+C\+B\+Continuity@{e\+T\+C\+B\+Continuity}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a5544ce65720f37d5a2620dc32556b2ba}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a5544ce65720f37d5a2620dc32556b2ba}} 
+e\+T\+C\+B\+Continuity&Index of Continuity, T\+CB tangent mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+T\+C\+B\+Bias@{e\+T\+C\+B\+Bias}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+T\+C\+B\+Bias@{e\+T\+C\+B\+Bias}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a4ed5dbb6b725478205a3c750c20790d3}\label{class_fbx_anim_curve_def_a3be261d961f8226235529b148cf80300a4ed5dbb6b725478205a3c750c20790d3}} 
+e\+T\+C\+B\+Bias&Index of Bias, T\+CB tangent mode. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}\label{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Interpolation\+Type@{E\+Interpolation\+Type}}
+\index{E\+Interpolation\+Type@{E\+Interpolation\+Type}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Interpolation\+Type}{EInterpolationType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type}}
+
+
+
+Key interpolation type. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Interpolation\+Constant@{e\+Interpolation\+Constant}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Interpolation\+Constant@{e\+Interpolation\+Constant}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5acb7611d721a1ae1e6df7a2f072dc7c9f}\label{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5acb7611d721a1ae1e6df7a2f072dc7c9f}} 
+e\+Interpolation\+Constant&Constant value until next key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Interpolation\+Linear@{e\+Interpolation\+Linear}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Interpolation\+Linear@{e\+Interpolation\+Linear}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20}\label{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20}} 
+e\+Interpolation\+Linear&Linear progression to next key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Interpolation\+Cubic@{e\+Interpolation\+Cubic}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Interpolation\+Cubic@{e\+Interpolation\+Cubic}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae}\label{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae}} 
+e\+Interpolation\+Cubic&Cubic progression to next key. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Tangent\+Mode@{E\+Tangent\+Mode}}
+\index{E\+Tangent\+Mode@{E\+Tangent\+Mode}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Tangent\+Mode}{ETangentMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode}}
+
+
+
+Key tangent mode for cubic interpolation. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Auto@{e\+Tangent\+Auto}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Auto@{e\+Tangent\+Auto}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}} 
+e\+Tangent\+Auto&Auto key (spline cardinal). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+T\+CB@{e\+Tangent\+T\+CB}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+T\+CB@{e\+Tangent\+T\+CB}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ae9d885e8a384fd9165123ac47a661dd8}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ae9d885e8a384fd9165123ac47a661dd8}} 
+e\+Tangent\+T\+CB&Spline T\+CB (Tension, Continuity, Bias) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+User@{e\+Tangent\+User}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+User@{e\+Tangent\+User}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}} 
+e\+Tangent\+User&Next slope at the left equal to slope at the right. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Generic\+Break@{e\+Tangent\+Generic\+Break}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Generic\+Break@{e\+Tangent\+Generic\+Break}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a423a9e02047b705ec23561f87d8ff15b}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a423a9e02047b705ec23561f87d8ff15b}} 
+e\+Tangent\+Generic\+Break&Independent left and right slopes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Break@{e\+Tangent\+Break}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Break@{e\+Tangent\+Break}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}} 
+e\+Tangent\+Break&Independent left and right slopes, with next slope at the left equal to slope at the right. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Auto\+Break@{e\+Tangent\+Auto\+Break}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Auto\+Break@{e\+Tangent\+Auto\+Break}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87afce344e3f0ada1ec522ef67f0a0e92cb}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87afce344e3f0ada1ec522ef67f0a0e92cb}} 
+e\+Tangent\+Auto\+Break&Independent left and right slopes, with auto key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Generic\+Clamp@{e\+Tangent\+Generic\+Clamp}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Generic\+Clamp@{e\+Tangent\+Generic\+Clamp}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a53bad41061d60bae2373a88e13eeac50}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a53bad41061d60bae2373a88e13eeac50}} 
+e\+Tangent\+Generic\+Clamp&Clamp\+: key should be flat if next or previous key has the same value (overrides tangent mode). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Generic\+Time\+Independent@{e\+Tangent\+Generic\+Time\+Independent}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Generic\+Time\+Independent@{e\+Tangent\+Generic\+Time\+Independent}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87abaaae6df50c5a1a651d0e5678c4a90cd}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87abaaae6df50c5a1a651d0e5678c4a90cd}} 
+e\+Tangent\+Generic\+Time\+Independent&Time independent tangent (overrides tangent mode). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Generic\+Clamp\+Progressive@{e\+Tangent\+Generic\+Clamp\+Progressive}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Generic\+Clamp\+Progressive@{e\+Tangent\+Generic\+Clamp\+Progressive}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a87eba898c30497b7e94da22822500757}\label{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a87eba898c30497b7e94da22822500757}} 
+e\+Tangent\+Generic\+Clamp\+Progressive&Clamp progressive\+: key should be flat if tangent control point is outside \mbox{[}next-\/previous key\mbox{]} range (overrides tangent mode). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3b}\label{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3b}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Tangent\+Visibility@{E\+Tangent\+Visibility}}
+\index{E\+Tangent\+Visibility@{E\+Tangent\+Visibility}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Tangent\+Visibility}{ETangentVisibility}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3b}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Visibility}}
+
+
+
+Tangent visibility. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Show\+None@{e\+Tangent\+Show\+None}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Show\+None@{e\+Tangent\+Show\+None}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba88013fc4cb5832cd963bd7b5a640ee1c}\label{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba88013fc4cb5832cd963bd7b5a640ee1c}} 
+e\+Tangent\+Show\+None&No tangent is visible. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Show\+Left@{e\+Tangent\+Show\+Left}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Show\+Left@{e\+Tangent\+Show\+Left}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3bafc33bb613976689a8f49fe80eca8de02}\label{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3bafc33bb613976689a8f49fe80eca8de02}} 
+e\+Tangent\+Show\+Left&Left tangent is visible. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Show\+Right@{e\+Tangent\+Show\+Right}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Show\+Right@{e\+Tangent\+Show\+Right}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba7392f6d6b65c19bce64032708c6a81ff}\label{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba7392f6d6b65c19bce64032708c6a81ff}} 
+e\+Tangent\+Show\+Right&Right tangent is visible. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent\+Show\+Both@{e\+Tangent\+Show\+Both}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Tangent\+Show\+Both@{e\+Tangent\+Show\+Both}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba9288cf3a65d5ee1c1bf50d1be8cb9ecc}\label{class_fbx_anim_curve_def_a70c49072776ac6b3426c57dd80e16e3ba9288cf3a65d5ee1c1bf50d1be8cb9ecc}} 
+e\+Tangent\+Show\+Both&Both left and right tangents are visible. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fff}\label{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fff}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Velocity\+Mode@{E\+Velocity\+Mode}}
+\index{E\+Velocity\+Mode@{E\+Velocity\+Mode}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Velocity\+Mode}{EVelocityMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fff}{Fbx\+Anim\+Curve\+Def\+::\+E\+Velocity\+Mode}}
+
+
+
+Velocity mode. Velocity settings speed up or slow down animation on either side of a key without changing the trajectory of the animation. Unlike Auto and Weight settings, Velocity changes the animation in time, but not in space. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Velocity\+None@{e\+Velocity\+None}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Velocity\+None@{e\+Velocity\+None}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffa7919a5bf6ff7855e3b60673ade08afbc}\label{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffa7919a5bf6ff7855e3b60673ade08afbc}} 
+e\+Velocity\+None&No velocity (default). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Velocity\+Right@{e\+Velocity\+Right}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Velocity\+Right@{e\+Velocity\+Right}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffa1265ff9732df8deb70ee9822af11b995}\label{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffa1265ff9732df8deb70ee9822af11b995}} 
+e\+Velocity\+Right&Right tangent has velocity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Velocity\+Next\+Left@{e\+Velocity\+Next\+Left}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Velocity\+Next\+Left@{e\+Velocity\+Next\+Left}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffac10e4a2ea06592874b83d4389dcaf560}\label{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffac10e4a2ea06592874b83d4389dcaf560}} 
+e\+Velocity\+Next\+Left&Left tangent has velocity. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Velocity\+All@{e\+Velocity\+All}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Velocity\+All@{e\+Velocity\+All}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffab8603ba4ecc238f5dee7489b6a0123ee}\label{class_fbx_anim_curve_def_a747576beffa78ab236d2e140da395fffab8603ba4ecc238f5dee7489b6a0123ee}} 
+e\+Velocity\+All&Both left and right tangents have velocity. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990e}\label{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990e}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!E\+Weighted\+Mode@{E\+Weighted\+Mode}}
+\index{E\+Weighted\+Mode@{E\+Weighted\+Mode}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{E\+Weighted\+Mode}{EWeightedMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990e}{Fbx\+Anim\+Curve\+Def\+::\+E\+Weighted\+Mode}}
+
+
+
+Weighted mode. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Weighted\+None@{e\+Weighted\+None}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Weighted\+None@{e\+Weighted\+None}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3}\label{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3}} 
+e\+Weighted\+None&Tangent has default weights of 0.\+333; we define this state as not weighted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Weighted\+Right@{e\+Weighted\+Right}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Weighted\+Right@{e\+Weighted\+Right}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea869960737022db21fc64480daa22725a}\label{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea869960737022db21fc64480daa22725a}} 
+e\+Weighted\+Right&Right tangent is weighted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Weighted\+Next\+Left@{e\+Weighted\+Next\+Left}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Weighted\+Next\+Left@{e\+Weighted\+Next\+Left}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990eae28d75f955feebe5756d77ad0765d000}\label{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990eae28d75f955feebe5756d77ad0765d000}} 
+e\+Weighted\+Next\+Left&Left tangent is weighted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Weighted\+All@{e\+Weighted\+All}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!e\+Weighted\+All@{e\+Weighted\+All}}}\mbox{\Hypertarget{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea4337e6853fab642c2a432ab1bb303922}\label{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea4337e6853fab642c2a432ab1bb303922}} 
+e\+Weighted\+All&Both left and right tangents are weighted. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}\label{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY@{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}}
+\index{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY@{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}{sDEFAULT\_VELOCITY}}
+{\footnotesize\ttfamily const float Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}\label{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT@{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}}
+\index{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT@{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}{sDEFAULT\_WEIGHT}}
+{\footnotesize\ttfamily const float Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_def_ad0e9ffa9198f867a8eec3b78d7363438}\label{class_fbx_anim_curve_def_ad0e9ffa9198f867a8eec3b78d7363438}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT@{s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT}}
+\index{s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT@{s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT}{sMAX\_WEIGHT}}
+{\footnotesize\ttfamily const float Fbx\+Anim\+Curve\+Def\+::s\+M\+A\+X\+\_\+\+W\+E\+I\+G\+HT\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_def_a469319cefa59b62fd38985b837e49d07}\label{class_fbx_anim_curve_def_a469319cefa59b62fd38985b837e49d07}} 
+\index{Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}!s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT@{s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT}}
+\index{s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT@{s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT}!Fbx\+Anim\+Curve\+Def@{Fbx\+Anim\+Curve\+Def}}
+\subsubsection{\texorpdfstring{s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT}{sMIN\_WEIGHT}}
+{\footnotesize\ttfamily const float Fbx\+Anim\+Curve\+Def\+::s\+M\+I\+N\+\_\+\+W\+E\+I\+G\+HT\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimcurve_8h}{fbxanimcurve.\+h}\end{DoxyCompactItemize}

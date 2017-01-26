@@ -1,0 +1,1008 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXpythonSDKdoxygen01100: FbxFile クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXpythonSDKdoxygen01100
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="class_fbx_file-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxFile クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fbxfile_8h_source.html">fbxfile.h</a>&gt;</code></p>
+<div class="dynheader">
+FbxFile 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_file__coll__graph.png" border="0" usemap="#_fbx_file_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a0370e8fd17b3658f718e1350a6a6f462"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a> { <br />
+&#160;&#160;<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462a176e2ccdd9e671698ea8f6f16e41d906">eNone</a>, 
+<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462a7b582fd52d7c01e076ef4d30d3ca7151">eReadOnly</a>, 
+<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462a6210f903e353d976f304563453cf34da">eReadWrite</a>, 
+<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462ae329198f644b68a3bbf655309eff07c9">eCreateWriteOnly</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49">eCreateReadWrite</a>, 
+<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462a7b54172ce9f59ecc1746a4b6df0a064e">eCreateAppend</a>
+<br />
+ }</td></tr>
+<tr class="separator:a0370e8fd17b3658f718e1350a6a6f462"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba91fe59f9c0a4c84a92f13c0c27deec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deec">ESeekPos</a> { <a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e">eBegin</a>, 
+<a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deecaf2653dc9849e794feee37a015d80b098">eCurrent</a>, 
+<a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deeca1ab3eb84e8694fd4e63d0c864b12508d">eEnd</a>
+ }</td></tr>
+<tr class="separator:aba91fe59f9c0a4c84a92f13c0c27deec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a863a523033dcdf07ad32c257c64d9e61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a863a523033dcdf07ad32c257c64d9e61">FbxFile</a> ()</td></tr>
+<tr class="separator:a863a523033dcdf07ad32c257c64d9e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd86a0057e7caa4865a92508cc9b56d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a2dd86a0057e7caa4865a92508cc9b56d">~FbxFile</a> ()</td></tr>
+<tr class="separator:a2dd86a0057e7caa4865a92508cc9b56d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1942c2245eabf7f0507118226af13727"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a1942c2245eabf7f0507118226af13727">Open</a> (const char *pFileName_UTF8, const <a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a> pMode=<a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49">eCreateReadWrite</a>, const bool pBinary=true)</td></tr>
+<tr class="separator:a1942c2245eabf7f0507118226af13727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32456c88ed5a970971facea637ba96b1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a32456c88ed5a970971facea637ba96b1">Open</a> (<a class="el" href="class_fbx_stream.html">FbxStream</a> *pStream, void *pStreamData, const char *pMode)</td></tr>
+<tr class="separator:a32456c88ed5a970971facea637ba96b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8028a6bb80f3ebe4f6fcbaab367228b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ae8028a6bb80f3ebe4f6fcbaab367228b">Close</a> ()</td></tr>
+<tr class="separator:ae8028a6bb80f3ebe4f6fcbaab367228b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12434c7b2bf0cd193d3327180186901"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#af12434c7b2bf0cd193d3327180186901">Seek</a> (const <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a> pOffset, const <a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deec">ESeekPos</a> pSeekPos=<a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e">eBegin</a>)</td></tr>
+<tr class="separator:af12434c7b2bf0cd193d3327180186901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32606ad8b5a8163f04c38b3020ec826"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#aa32606ad8b5a8163f04c38b3020ec826">Tell</a> () const</td></tr>
+<tr class="separator:aa32606ad8b5a8163f04c38b3020ec826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2eb8ec7b9a877dd7aa9b2950287285"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a9d2eb8ec7b9a877dd7aa9b2950287285">Read</a> (void *pDstBuf, const size_t pSize)</td></tr>
+<tr class="separator:a9d2eb8ec7b9a877dd7aa9b2950287285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad1b9e2c0f770ebfac6d00ebfc0927dd"><td class="memItemLeft" align="right" valign="top">virtual char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#aad1b9e2c0f770ebfac6d00ebfc0927dd">ReadString</a> (char *pDstBuf, const size_t pDstSize, bool pStopAtFirstWhiteSpace=false)</td></tr>
+<tr class="separator:aad1b9e2c0f770ebfac6d00ebfc0927dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fff74d83402e939b69ac4c25a5bc689"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a8fff74d83402e939b69ac4c25a5bc689">Write</a> (const void *pSrcBuf, const size_t pSize)</td></tr>
+<tr class="separator:a8fff74d83402e939b69ac4c25a5bc689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64271cf33bdcd55d35502cd46ab910a5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a64271cf33bdcd55d35502cd46ab910a5">WriteFormat</a> (const char *pFormat,...)</td></tr>
+<tr class="separator:a64271cf33bdcd55d35502cd46ab910a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93638b789020857a19306175a921271"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#aa93638b789020857a19306175a921271">Truncate</a> (const <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a> pSize)</td></tr>
+<tr class="separator:aa93638b789020857a19306175a921271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e438294b7e07dbc3b672ba771ebdd51"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a3e438294b7e07dbc3b672ba771ebdd51">EndOfFile</a> () const</td></tr>
+<tr class="separator:a3e438294b7e07dbc3b672ba771ebdd51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7d93faa5ec8ef431b6c9b82845e8271"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#aa7d93faa5ec8ef431b6c9b82845e8271">GetSize</a> ()</td></tr>
+<tr class="separator:aa7d93faa5ec8ef431b6c9b82845e8271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab603c8d30f989a0d195cc720181b18b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ab603c8d30f989a0d195cc720181b18b3">GetMemoryFileInfo</a> (void **pMemPtr, size_t pSize)</td></tr>
+<tr class="separator:ab603c8d30f989a0d195cc720181b18b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf436397d99f8b7fb5baf5b32eac26b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#acf436397d99f8b7fb5baf5b32eac26b1">IsOpen</a> () const</td></tr>
+<tr class="separator:acf436397d99f8b7fb5baf5b32eac26b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae515a0ebd07a7ebedd0a62b5299cd417"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ae515a0ebd07a7ebedd0a62b5299cd417">IsStream</a> () const</td></tr>
+<tr class="separator:ae515a0ebd07a7ebedd0a62b5299cd417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace17e0fc453b1fa2f565af58eb16ad26"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ace17e0fc453b1fa2f565af58eb16ad26">GetFilePathName</a> () const</td></tr>
+<tr class="separator:ace17e0fc453b1fa2f565af58eb16ad26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26175571d3f5682ea7af8ac5ba1f640f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a26175571d3f5682ea7af8ac5ba1f640f">GetFileMode</a> () const</td></tr>
+<tr class="separator:a26175571d3f5682ea7af8ac5ba1f640f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797c6a169a44de27d96d991e884dafed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a797c6a169a44de27d96d991e884dafed">GetLastError</a> ()</td></tr>
+<tr class="separator:a797c6a169a44de27d96d991e884dafed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abaf8e0ca1c1f47a349848ec49966cc6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#abaf8e0ca1c1f47a349848ec49966cc6a">ClearError</a> ()</td></tr>
+<tr class="separator:abaf8e0ca1c1f47a349848ec49966cc6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a2be552f90b28c49c17626fe52309694a"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a2be552f90b28c49c17626fe52309694a">mFilePtr</a></td></tr>
+<tr class="separator:a2be552f90b28c49c17626fe52309694a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c5d8c4cc9284b848f2283af005325f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_stream.html">FbxStream</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ad2c5d8c4cc9284b848f2283af005325f">mStreamPtr</a></td></tr>
+<tr class="separator:ad2c5d8c4cc9284b848f2283af005325f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88370b753b3632ed4970357a2ec290d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a88370b753b3632ed4970357a2ec290d4">mIsOpen</a></td></tr>
+<tr class="separator:a88370b753b3632ed4970357a2ec290d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5a1b024c0b9b67aede8605c4565013"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ada5a1b024c0b9b67aede8605c4565013">mIsStream</a></td></tr>
+<tr class="separator:ada5a1b024c0b9b67aede8605c4565013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9b7111817531ba69e1abddc7cc6d247"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#ad9b7111817531ba69e1abddc7cc6d247">mMode</a></td></tr>
+<tr class="separator:ad9b7111817531ba69e1abddc7cc6d247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47455f1ec52460e17c7a687f2e873128"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_string.html">FbxString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_file.html#a47455f1ec52460e17c7a687f2e873128">mFileName</a></td></tr>
+<tr class="separator:a47455f1ec52460e17c7a687f2e873128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Class for interfacing with files, providing a similar interface for files independant of the OS or filesystem. </p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a0370e8fd17b3658f718e1350a6a6f462"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0370e8fd17b3658f718e1350a6a6f462">&#9670;&nbsp;</a></span>EMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">FbxFile::EMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a0370e8fd17b3658f718e1350a6a6f462a176e2ccdd9e671698ea8f6f16e41d906"></a>eNone&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0370e8fd17b3658f718e1350a6a6f462a7b582fd52d7c01e076ef4d30d3ca7151"></a>eReadOnly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0370e8fd17b3658f718e1350a6a6f462a6210f903e353d976f304563453cf34da"></a>eReadWrite&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0370e8fd17b3658f718e1350a6a6f462ae329198f644b68a3bbf655309eff07c9"></a>eCreateWriteOnly&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49"></a>eCreateReadWrite&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0370e8fd17b3658f718e1350a6a6f462a7b54172ce9f59ecc1746a4b6df0a064e"></a>eCreateAppend&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aba91fe59f9c0a4c84a92f13c0c27deec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba91fe59f9c0a4c84a92f13c0c27deec">&#9670;&nbsp;</a></span>ESeekPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deec">FbxFile::ESeekPos</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e"></a>eBegin&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aba91fe59f9c0a4c84a92f13c0c27deecaf2653dc9849e794feee37a015d80b098"></a>eCurrent&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aba91fe59f9c0a4c84a92f13c0c27deeca1ab3eb84e8694fd4e63d0c864b12508d"></a>eEnd&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a863a523033dcdf07ad32c257c64d9e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863a523033dcdf07ad32c257c64d9e61">&#9670;&nbsp;</a></span>FbxFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxFile::FbxFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dd86a0057e7caa4865a92508cc9b56d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dd86a0057e7caa4865a92508cc9b56d">&#9670;&nbsp;</a></span>~FbxFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual FbxFile::~FbxFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="abaf8e0ca1c1f47a349848ec49966cc6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf8e0ca1c1f47a349848ec49966cc6a">&#9670;&nbsp;</a></span>ClearError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxFile::ClearError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Resets the current error code and the end of file indicator of the opened file </p>
+
+</div>
+</div>
+<a id="ae8028a6bb80f3ebe4f6fcbaab367228b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8028a6bb80f3ebe4f6fcbaab367228b">&#9670;&nbsp;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxFile::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Closes a file, freeing its handle. </p><dl class="section return"><dt>戻り値</dt><dd>True if closing is successful. </dd></dl>
+
+</div>
+</div>
+<a id="a3e438294b7e07dbc3b672ba771ebdd51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e438294b7e07dbc3b672ba771ebdd51">&#9670;&nbsp;</a></span>EndOfFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxFile::EndOfFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks whether the current file cursor position is at the end of file. </p><dl class="section return"><dt>戻り値</dt><dd>True if the cursor is at the end of file, false otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a26175571d3f5682ea7af8ac5ba1f640f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26175571d3f5682ea7af8ac5ba1f640f">&#9670;&nbsp;</a></span>GetFileMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a> FbxFile::GetFileMode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the mode with which the file was opened, when calling the <a class="el" href="class_fbx_file.html#a1942c2245eabf7f0507118226af13727">Open()</a> method. </p><dl class="section return"><dt>戻り値</dt><dd>Mode with which the file was opened </dd></dl>
+
+</div>
+</div>
+<a id="ace17e0fc453b1fa2f565af58eb16ad26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace17e0fc453b1fa2f565af58eb16ad26">&#9670;&nbsp;</a></span>GetFilePathName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* FbxFile::GetFilePathName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the full file path name, as provided when opening it. </p><dl class="section return"><dt>戻り値</dt><dd>File full path </dd></dl>
+
+</div>
+</div>
+<a id="a797c6a169a44de27d96d991e884dafed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797c6a169a44de27d96d991e884dafed">&#9670;&nbsp;</a></span>GetLastError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FbxFile::GetLastError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns last encountered error when performing any operation on the file. </p><dl class="section return"><dt>戻り値</dt><dd>Last error code </dd></dl>
+
+</div>
+</div>
+<a id="ab603c8d30f989a0d195cc720181b18b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab603c8d30f989a0d195cc720181b18b3">&#9670;&nbsp;</a></span>GetMemoryFileInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxFile::GetMemoryFileInfo </td>
+          <td>(</td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>pMemPtr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>pSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Unused function in this default implementation. Must be implemented by memory files. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pMemPtr</td><td>Unused </td></tr>
+    <tr><td class="paramname">pSize</td><td>Unused </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa7d93faa5ec8ef431b6c9b82845e8271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7d93faa5ec8ef431b6c9b82845e8271">&#9670;&nbsp;</a></span>GetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a> FbxFile::GetSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the size of the currently opened file. </p><dl class="section return"><dt>戻り値</dt><dd>File size </dd></dl>
+
+</div>
+</div>
+<a id="acf436397d99f8b7fb5baf5b32eac26b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf436397d99f8b7fb5baf5b32eac26b1">&#9670;&nbsp;</a></span>IsOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxFile::IsOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether the file is currently opened. </p><dl class="section return"><dt>戻り値</dt><dd>True if file is opened, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ae515a0ebd07a7ebedd0a62b5299cd417"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae515a0ebd07a7ebedd0a62b5299cd417">&#9670;&nbsp;</a></span>IsStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxFile::IsStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether the file is currently opened with a user-provided streaming interface instead of just the file name </p><dl class="section return"><dt>戻り値</dt><dd>True if file has been opened with a stream interface, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1942c2245eabf7f0507118226af13727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1942c2245eabf7f0507118226af13727">&#9670;&nbsp;</a></span>Open() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxFile::Open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pFileName_UTF8</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a>&#160;</td>
+          <td class="paramname"><em>pMode</em> = <code><a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49">eCreateReadWrite</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>pBinary</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Opens a file on disk using the specified read/write mode. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFileName_UTF8</td><td>Filename in UTF8 (compatible with ASCII) </td></tr>
+    <tr><td class="paramname">pMode</td><td>Mode in which to open the file, e.g. eReadOnly, eCreateReadWrite, etc. </td></tr>
+    <tr><td class="paramname">pBinary</td><td>Whether the file is to be opened in binary or text mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>True if opening is successful. </dd></dl>
+
+</div>
+</div>
+<a id="a32456c88ed5a970971facea637ba96b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32456c88ed5a970971facea637ba96b1">&#9670;&nbsp;</a></span>Open() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxFile::Open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_stream.html">FbxStream</a> *&#160;</td>
+          <td class="paramname"><em>pStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pStreamData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pMode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Opens a file from a data stream using the specified read/write mode. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pStream</td><td>Stream instance with which the file will be read/written </td></tr>
+    <tr><td class="paramname">pStreamData</td><td>User-defined data to pass as a parameter to the stream's <a class="el" href="class_fbx_file.html#a1942c2245eabf7f0507118226af13727">Open()</a> method. </td></tr>
+    <tr><td class="paramname">pMode</td><td>Deprecated/Unused. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>True if opening is successful. </dd></dl>
+
+</div>
+</div>
+<a id="a9d2eb8ec7b9a877dd7aa9b2950287285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2eb8ec7b9a877dd7aa9b2950287285">&#9670;&nbsp;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t FbxFile::Read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pDstBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>pSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read a part of the file into a buffer </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pDstBuf</td><td>Pre-allocated buffer in which to read data </td></tr>
+    <tr><td class="paramname">pSize</td><td>Size of the data chunk to be read in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Number of bytes read. </dd></dl>
+
+</div>
+</div>
+<a id="aad1b9e2c0f770ebfac6d00ebfc0927dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad1b9e2c0f770ebfac6d00ebfc0927dd">&#9670;&nbsp;</a></span>ReadString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* FbxFile::ReadString </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pDstBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>pDstSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pStopAtFirstWhiteSpace</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read a part of the file as a string into a buffer </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pDstBuf</td><td>Pre-allocated buffer in which to read the string </td></tr>
+    <tr><td class="paramname">pDstSize</td><td>Size of the data chunk to be read in characters </td></tr>
+    <tr><td class="paramname">pStopAtFirstWhiteSpace</td><td>If true, will stop reading at first white space, otherwise it will stop at the first line feed (<br />
+) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Pointer on the data read. Equivalent to parameter pDstBuf </dd></dl>
+
+</div>
+</div>
+<a id="af12434c7b2bf0cd193d3327180186901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12434c7b2bf0cd193d3327180186901">&#9670;&nbsp;</a></span>Seek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxFile::Seek </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a>&#160;</td>
+          <td class="paramname"><em>pOffset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deec">ESeekPos</a>&#160;</td>
+          <td class="paramname"><em>pSeekPos</em> = <code><a class="el" href="class_fbx_file.html#aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e">eBegin</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Seek to a specific position in the file, starting from either beginning, current position or end </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pOffset</td><td>Offset to seek to (advance the file position cursor) starting from pSeekPos </td></tr>
+    <tr><td class="paramname">pSeekPos</td><td>Starting position from which to seek to. Beginning, current position or end. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa32606ad8b5a8163f04c38b3020ec826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32606ad8b5a8163f04c38b3020ec826">&#9670;&nbsp;</a></span>Tell()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a> FbxFile::Tell </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the position at which the file cursor currently is. For example, will be ==0 for beginning and ==FileSize for end. </p><dl class="section return"><dt>戻り値</dt><dd>The position at which the file cursor currently is. </dd></dl>
+
+</div>
+</div>
+<a id="aa93638b789020857a19306175a921271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93638b789020857a19306175a921271">&#9670;&nbsp;</a></span>Truncate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxFile::Truncate </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="fbxtypes_8h.html#ac7e1334c7c6aacc9c8a9dccddebb4368">FbxInt64</a>&#160;</td>
+          <td class="paramname"><em>pSize</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Modify the size of a file. Null characters ('\0') are appended if the file is extended. If the file is truncated, all data from the end of the shortened file to the original length of the file is lost. Please note that this function considers the current file cursor as the beginning of the file. It is therefore required to use Seek(0) prior to calling it if we want the size specified by the pSize parameter to be absolute. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSize</td><td>New desired file size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>True if file was successfully truncated </dd></dl>
+
+</div>
+</div>
+<a id="a8fff74d83402e939b69ac4c25a5bc689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fff74d83402e939b69ac4c25a5bc689">&#9670;&nbsp;</a></span>Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t FbxFile::Write </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>pSrcBuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t&#160;</td>
+          <td class="paramname"><em>pSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write a buffer to an opened file </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSrcBuf</td><td>Pre-allocated buffer from which to write data </td></tr>
+    <tr><td class="paramname">pSize</td><td>Size of the data chunk to be written in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Number of bytes written. </dd></dl>
+
+</div>
+</div>
+<a id="a64271cf33bdcd55d35502cd46ab910a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64271cf33bdcd55d35502cd46ab910a5">&#9670;&nbsp;</a></span>WriteFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxFile::WriteFormat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pFormat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write a formatted string to an opened file </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFormat</td><td>Pre-allocated format buffer from which to write data </td></tr>
+    <tr><td class="paramname">...</td><td>Variable number of arguments describing the values in the previous parameter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>True if data was successfully written </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a47455f1ec52460e17c7a687f2e873128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47455f1ec52460e17c7a687f2e873128">&#9670;&nbsp;</a></span>mFileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_string.html">FbxString</a> FbxFile::mFileName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2be552f90b28c49c17626fe52309694a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be552f90b28c49c17626fe52309694a">&#9670;&nbsp;</a></span>mFilePtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* FbxFile::mFilePtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88370b753b3632ed4970357a2ec290d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88370b753b3632ed4970357a2ec290d4">&#9670;&nbsp;</a></span>mIsOpen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxFile::mIsOpen</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada5a1b024c0b9b67aede8605c4565013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5a1b024c0b9b67aede8605c4565013">&#9670;&nbsp;</a></span>mIsStream</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxFile::mIsStream</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9b7111817531ba69e1abddc7cc6d247"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9b7111817531ba69e1abddc7cc6d247">&#9670;&nbsp;</a></span>mMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_file.html#a0370e8fd17b3658f718e1350a6a6f462">EMode</a> FbxFile::mMode</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2c5d8c4cc9284b848f2283af005325f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c5d8c4cc9284b848f2283af005325f">&#9670;&nbsp;</a></span>mStreamPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_stream.html">FbxStream</a>* FbxFile::mStreamPtr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/github/FBXpythonSDK201701/FBXpythonSDK201701/2017.1/include/fbxsdk/core/base/<a class="el" href="fbxfile_8h_source.html">fbxfile.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

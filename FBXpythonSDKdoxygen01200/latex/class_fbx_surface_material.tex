@@ -1,0 +1,305 @@
+\hypertarget{class_fbx_surface_material}{}\section{Fbx\+Surface\+Material クラス}
+\label{class_fbx_surface_material}\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+
+
+{\ttfamily \#include $<$fbxsurfacematerial.\+h$>$}
+
+
+
+Fbx\+Surface\+Material の継承関係図
+% FIG 0
+
+
+Fbx\+Surface\+Material 連携図
+% FIG 1
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_surface_material_aecd7c87e5db1902bf2b03834b92d5635}{Set\+Color\+Parameter} (\hyperlink{class_fbx_property}{Fbx\+Property} p\+Property, \hyperlink{class_fbx_color}{Fbx\+Color} const \&p\+Color)
+\item 
+bool \hyperlink{class_fbx_surface_material_a9c9823b3b0c6d2b6c216c4ca0a12a64d}{Get\+Color\+Parameter} (\hyperlink{class_fbx_property}{Fbx\+Property} p\+Property, \hyperlink{class_fbx_color}{Fbx\+Color} \&p\+Color) const
+\item 
+bool \hyperlink{class_fbx_surface_material_a5d2b4164f67106f295a456f68b6d3bf2}{Set\+Double\+Parameter} (\hyperlink{class_fbx_property}{Fbx\+Property} p\+Property, double p\+Double)
+\item 
+bool \hyperlink{class_fbx_surface_material_aa5a97e4e159289d05404b2ad28ed3e31}{Get\+Double\+Parameter} (\hyperlink{class_fbx_property}{Fbx\+Property} p\+Property, double p\+Double) const
+\item 
+virtual void \hyperlink{class_fbx_surface_material_aafc5d21293bea6b63a6ea96fa9fe0bb2}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Standard Material Property Names}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a19cda45ce40caee3f3362df386ed85ed}{s\+Shading\+Model}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a2443f776dd14ffb9b114aa55d653058d}{s\+Multi\+Layer}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a28d09e2e3a188eb5924c2dd2b4963441}{s\+Emissive}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a6a8ba50813f5454b09a0f86dc0018cb4}{s\+Emissive\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a11ec0ad2211cea761901fbc418f4c713}{s\+Ambient}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_ac9daa48c32c82476002a2e003f6a8787}{s\+Ambient\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_adfa9bf8213a75174fd191889779e436e}{s\+Diffuse}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a6087923541801b9f173c5fc896bc928a}{s\+Diffuse\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a8ed16896904dfc813ce3dfb17addfe31}{s\+Specular}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a8f674dd71c227e6265bd0f4175545390}{s\+Specular\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_ab52a948503c98b4483a26d72733f06c8}{s\+Shininess}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_aee6c90fb1f0aedba61cb3ad0b0a4c0c5}{s\+Bump}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_add1de4795018419a9611051d778c9d4d}{s\+Normal\+Map}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a96c5d9038e9916ea09744d8bcba2a570}{s\+Bump\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a0c0458dc370a65c283364bd6aba8a33b}{s\+Transparent\+Color}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a38bf00f2994371e0739b212a3917826a}{s\+Transparency\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_aae008a0c3032aef6782ee608f2bd446a}{s\+Reflection}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_afbc36e9f03dc90b77fdcfef17f2c8b10}{s\+Reflection\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a8e4fdad5870b375006b42000c7063985}{s\+Displacement\+Color}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a1737650dd9b939f5e9cd6bab9aac83cd}{s\+Displacement\+Factor}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a4ab63fcc24b285a9d9d9f52a7199d6da}{s\+Vector\+Displacement\+Color}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a1286fd27069cdb5a3db79be1443783df}{s\+Vector\+Displacement\+Factor}
+\end{DoxyCompactItemize}
+\subsection*{Material Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_surface_material_a8be5b9ae45fbf2da2fcc0aca9d1c995b}{Shading\+Model}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_surface_material_ad62451d6f09f73c151a9f43f9349cd31}{Multi\+Layer}
+\end{DoxyCompactItemize}
+\subsection*{Default property values}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} \hyperlink{class_fbx_surface_material_a2d4700a72c52cf6bdfdce2ef4526d8bc}{s\+Multi\+Layer\+Default}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_surface_material_a9f7362c4d0ad0f41a941159d5e1d27b4}{s\+Shading\+Model\+Default}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class contains material settings. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_surface_material_aafc5d21293bea6b63a6ea96fa9fe0bb2}\label{class_fbx_surface_material_aafc5d21293bea6b63a6ea96fa9fe0bb2}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Surface\+Material\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_surface_lambert_a6693e1c08050978c78eece2aa48688e9}{Fbx\+Surface\+Lambert}, \hyperlink{class_fbx_surface_phong_aa4262a042d35769e8ff745d408315bf9}{Fbx\+Surface\+Phong}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_surface_material_a9c9823b3b0c6d2b6c216c4ca0a12a64d}\label{class_fbx_surface_material_a9c9823b3b0c6d2b6c216c4ca0a12a64d}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Get\+Color\+Parameter@{Get\+Color\+Parameter}}
+\index{Get\+Color\+Parameter@{Get\+Color\+Parameter}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Get\+Color\+Parameter()}{GetColorParameter()}}
+{\footnotesize\ttfamily bool Fbx\+Surface\+Material\+::\+Get\+Color\+Parameter (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property}}]{p\+Property,  }\item[{\hyperlink{class_fbx_color}{Fbx\+Color} \&}]{p\+Color }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_aa5a97e4e159289d05404b2ad28ed3e31}\label{class_fbx_surface_material_aa5a97e4e159289d05404b2ad28ed3e31}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Get\+Double\+Parameter@{Get\+Double\+Parameter}}
+\index{Get\+Double\+Parameter@{Get\+Double\+Parameter}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Get\+Double\+Parameter()}{GetDoubleParameter()}}
+{\footnotesize\ttfamily bool Fbx\+Surface\+Material\+::\+Get\+Double\+Parameter (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property}}]{p\+Property,  }\item[{double}]{p\+Double }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_aecd7c87e5db1902bf2b03834b92d5635}\label{class_fbx_surface_material_aecd7c87e5db1902bf2b03834b92d5635}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Set\+Color\+Parameter@{Set\+Color\+Parameter}}
+\index{Set\+Color\+Parameter@{Set\+Color\+Parameter}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Set\+Color\+Parameter()}{SetColorParameter()}}
+{\footnotesize\ttfamily bool Fbx\+Surface\+Material\+::\+Set\+Color\+Parameter (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property}}]{p\+Property,  }\item[{\hyperlink{class_fbx_color}{Fbx\+Color} const \&}]{p\+Color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a5d2b4164f67106f295a456f68b6d3bf2}\label{class_fbx_surface_material_a5d2b4164f67106f295a456f68b6d3bf2}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Set\+Double\+Parameter@{Set\+Double\+Parameter}}
+\index{Set\+Double\+Parameter@{Set\+Double\+Parameter}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Set\+Double\+Parameter()}{SetDoubleParameter()}}
+{\footnotesize\ttfamily bool Fbx\+Surface\+Material\+::\+Set\+Double\+Parameter (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property}}]{p\+Property,  }\item[{double}]{p\+Double }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_surface_material_ad62451d6f09f73c151a9f43f9349cd31}\label{class_fbx_surface_material_ad62451d6f09f73c151a9f43f9349cd31}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Multi\+Layer@{Multi\+Layer}}
+\index{Multi\+Layer@{Multi\+Layer}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Multi\+Layer}{MultiLayer}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Surface\+Material\+::\+Multi\+Layer}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a11ec0ad2211cea761901fbc418f4c713}\label{class_fbx_surface_material_a11ec0ad2211cea761901fbc418f4c713}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Ambient@{s\+Ambient}}
+\index{s\+Ambient@{s\+Ambient}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Ambient}{sAmbient}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Ambient\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_ac9daa48c32c82476002a2e003f6a8787}\label{class_fbx_surface_material_ac9daa48c32c82476002a2e003f6a8787}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Ambient\+Factor@{s\+Ambient\+Factor}}
+\index{s\+Ambient\+Factor@{s\+Ambient\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Ambient\+Factor}{sAmbientFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Ambient\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_aee6c90fb1f0aedba61cb3ad0b0a4c0c5}\label{class_fbx_surface_material_aee6c90fb1f0aedba61cb3ad0b0a4c0c5}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Bump@{s\+Bump}}
+\index{s\+Bump@{s\+Bump}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Bump}{sBump}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Bump\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a96c5d9038e9916ea09744d8bcba2a570}\label{class_fbx_surface_material_a96c5d9038e9916ea09744d8bcba2a570}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Bump\+Factor@{s\+Bump\+Factor}}
+\index{s\+Bump\+Factor@{s\+Bump\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Bump\+Factor}{sBumpFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Bump\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_adfa9bf8213a75174fd191889779e436e}\label{class_fbx_surface_material_adfa9bf8213a75174fd191889779e436e}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Diffuse@{s\+Diffuse}}
+\index{s\+Diffuse@{s\+Diffuse}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Diffuse}{sDiffuse}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Diffuse\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a6087923541801b9f173c5fc896bc928a}\label{class_fbx_surface_material_a6087923541801b9f173c5fc896bc928a}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Diffuse\+Factor@{s\+Diffuse\+Factor}}
+\index{s\+Diffuse\+Factor@{s\+Diffuse\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Diffuse\+Factor}{sDiffuseFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Diffuse\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a8e4fdad5870b375006b42000c7063985}\label{class_fbx_surface_material_a8e4fdad5870b375006b42000c7063985}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Displacement\+Color@{s\+Displacement\+Color}}
+\index{s\+Displacement\+Color@{s\+Displacement\+Color}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Displacement\+Color}{sDisplacementColor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Displacement\+Color\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a1737650dd9b939f5e9cd6bab9aac83cd}\label{class_fbx_surface_material_a1737650dd9b939f5e9cd6bab9aac83cd}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Displacement\+Factor@{s\+Displacement\+Factor}}
+\index{s\+Displacement\+Factor@{s\+Displacement\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Displacement\+Factor}{sDisplacementFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Displacement\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a28d09e2e3a188eb5924c2dd2b4963441}\label{class_fbx_surface_material_a28d09e2e3a188eb5924c2dd2b4963441}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Emissive@{s\+Emissive}}
+\index{s\+Emissive@{s\+Emissive}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Emissive}{sEmissive}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Emissive\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a6a8ba50813f5454b09a0f86dc0018cb4}\label{class_fbx_surface_material_a6a8ba50813f5454b09a0f86dc0018cb4}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Emissive\+Factor@{s\+Emissive\+Factor}}
+\index{s\+Emissive\+Factor@{s\+Emissive\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Emissive\+Factor}{sEmissiveFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Emissive\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a8be5b9ae45fbf2da2fcc0aca9d1c995b}\label{class_fbx_surface_material_a8be5b9ae45fbf2da2fcc0aca9d1c995b}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!Shading\+Model@{Shading\+Model}}
+\index{Shading\+Model@{Shading\+Model}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{Shading\+Model}{ShadingModel}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Surface\+Material\+::\+Shading\+Model}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a2443f776dd14ffb9b114aa55d653058d}\label{class_fbx_surface_material_a2443f776dd14ffb9b114aa55d653058d}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Multi\+Layer@{s\+Multi\+Layer}}
+\index{s\+Multi\+Layer@{s\+Multi\+Layer}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Multi\+Layer}{sMultiLayer}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Multi\+Layer\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a2d4700a72c52cf6bdfdce2ef4526d8bc}\label{class_fbx_surface_material_a2d4700a72c52cf6bdfdce2ef4526d8bc}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Multi\+Layer\+Default@{s\+Multi\+Layer\+Default}}
+\index{s\+Multi\+Layer\+Default@{s\+Multi\+Layer\+Default}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Multi\+Layer\+Default}{sMultiLayerDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} Fbx\+Surface\+Material\+::s\+Multi\+Layer\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_add1de4795018419a9611051d778c9d4d}\label{class_fbx_surface_material_add1de4795018419a9611051d778c9d4d}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Normal\+Map@{s\+Normal\+Map}}
+\index{s\+Normal\+Map@{s\+Normal\+Map}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Normal\+Map}{sNormalMap}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Normal\+Map\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_aae008a0c3032aef6782ee608f2bd446a}\label{class_fbx_surface_material_aae008a0c3032aef6782ee608f2bd446a}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Reflection@{s\+Reflection}}
+\index{s\+Reflection@{s\+Reflection}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Reflection}{sReflection}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Reflection\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_afbc36e9f03dc90b77fdcfef17f2c8b10}\label{class_fbx_surface_material_afbc36e9f03dc90b77fdcfef17f2c8b10}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Reflection\+Factor@{s\+Reflection\+Factor}}
+\index{s\+Reflection\+Factor@{s\+Reflection\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Reflection\+Factor}{sReflectionFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Reflection\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a19cda45ce40caee3f3362df386ed85ed}\label{class_fbx_surface_material_a19cda45ce40caee3f3362df386ed85ed}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Shading\+Model@{s\+Shading\+Model}}
+\index{s\+Shading\+Model@{s\+Shading\+Model}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Shading\+Model}{sShadingModel}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Shading\+Model\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a9f7362c4d0ad0f41a941159d5e1d27b4}\label{class_fbx_surface_material_a9f7362c4d0ad0f41a941159d5e1d27b4}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Shading\+Model\+Default@{s\+Shading\+Model\+Default}}
+\index{s\+Shading\+Model\+Default@{s\+Shading\+Model\+Default}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Shading\+Model\+Default}{sShadingModelDefault}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Shading\+Model\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_ab52a948503c98b4483a26d72733f06c8}\label{class_fbx_surface_material_ab52a948503c98b4483a26d72733f06c8}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Shininess@{s\+Shininess}}
+\index{s\+Shininess@{s\+Shininess}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Shininess}{sShininess}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Shininess\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a8ed16896904dfc813ce3dfb17addfe31}\label{class_fbx_surface_material_a8ed16896904dfc813ce3dfb17addfe31}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Specular@{s\+Specular}}
+\index{s\+Specular@{s\+Specular}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Specular}{sSpecular}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Specular\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a8f674dd71c227e6265bd0f4175545390}\label{class_fbx_surface_material_a8f674dd71c227e6265bd0f4175545390}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Specular\+Factor@{s\+Specular\+Factor}}
+\index{s\+Specular\+Factor@{s\+Specular\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Specular\+Factor}{sSpecularFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Specular\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a38bf00f2994371e0739b212a3917826a}\label{class_fbx_surface_material_a38bf00f2994371e0739b212a3917826a}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Transparency\+Factor@{s\+Transparency\+Factor}}
+\index{s\+Transparency\+Factor@{s\+Transparency\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Transparency\+Factor}{sTransparencyFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Transparency\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a0c0458dc370a65c283364bd6aba8a33b}\label{class_fbx_surface_material_a0c0458dc370a65c283364bd6aba8a33b}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Transparent\+Color@{s\+Transparent\+Color}}
+\index{s\+Transparent\+Color@{s\+Transparent\+Color}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Transparent\+Color}{sTransparentColor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Transparent\+Color\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a4ab63fcc24b285a9d9d9f52a7199d6da}\label{class_fbx_surface_material_a4ab63fcc24b285a9d9d9f52a7199d6da}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Vector\+Displacement\+Color@{s\+Vector\+Displacement\+Color}}
+\index{s\+Vector\+Displacement\+Color@{s\+Vector\+Displacement\+Color}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Vector\+Displacement\+Color}{sVectorDisplacementColor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Vector\+Displacement\+Color\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_material_a1286fd27069cdb5a3db79be1443783df}\label{class_fbx_surface_material_a1286fd27069cdb5a3db79be1443783df}} 
+\index{Fbx\+Surface\+Material@{Fbx\+Surface\+Material}!s\+Vector\+Displacement\+Factor@{s\+Vector\+Displacement\+Factor}}
+\index{s\+Vector\+Displacement\+Factor@{s\+Vector\+Displacement\+Factor}!Fbx\+Surface\+Material@{Fbx\+Surface\+Material}}
+\subsubsection{\texorpdfstring{s\+Vector\+Displacement\+Factor}{sVectorDisplacementFactor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Surface\+Material\+::s\+Vector\+Displacement\+Factor\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxsurfacematerial_8h}{fbxsurfacematerial.\+h}\end{DoxyCompactItemize}

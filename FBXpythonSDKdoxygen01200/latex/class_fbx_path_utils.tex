@@ -1,0 +1,279 @@
+\hypertarget{class_fbx_path_utils}{}\section{Fbx\+Path\+Utils クラス}
+\label{class_fbx_path_utils}\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+
+
+{\ttfamily \#include $<$fbxutils.\+h$>$}
+
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a1653196effd4938fe520afd70ad09c56}{Bind} (const char $\ast$p\+Root\+Path, const char $\ast$p\+File\+Path, bool p\+Clean\+Path=true)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a387c0512f521b504303361b2d79c4242}{Get\+Folder\+Name} (const char $\ast$p\+File\+Path)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_ac7822ad3605dcfbe63e99a848e959d50}{Get\+File\+Name} (const char $\ast$p\+File\+Path, bool p\+With\+Extension=true)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a2f8743324b82737499681bdaca5adc7e}{Get\+Extension\+Name} (const char $\ast$p\+File\+Path)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a8ba21a5743f08ee16fefbcd15bf58c86}{Change\+Extension} (const char $\ast$p\+File\+Path, const char $\ast$p\+Extension)
+\item 
+static bool \hyperlink{class_fbx_path_utils_ad95bc37bf3ed66b0f1d2ab261b238276}{Is\+Relative} (const char $\ast$p\+Path)
+\begin{DoxyCompactList}\small\item\em Test if the given path is relative path, if it is return true. \end{DoxyCompactList}\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a311c2fe8ecb6dad2fc1a3b7935378598}{Get\+Relative\+Path} (const char $\ast$p\+Root\+Path, const char $\ast$p\+New\+Path)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a330b64c4fc722a47e0bb0a946249e021}{Get\+Relative\+File\+Path} (const char $\ast$p\+Root\+Path, const char $\ast$p\+New\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Get the given new path\textquotesingle{}s relative path to the given root path. \end{DoxyCompactList}\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a5adc2b4d7bed904ba22f3613f9bb729a}{Resolve} (const char $\ast$p\+Rel\+Path)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a33d8212ceaa902e1161882ab8d69e3ca}{Clean} (const char $\ast$p\+Path)
+\begin{DoxyCompactList}\small\item\em Clean the redundant and useless denotations in given path name. \end{DoxyCompactList}\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_path_utils_a0680775ad53444cc7dd91bdd537384ca}{Generate\+File\+Name} (const char $\ast$p\+Folder, const char $\ast$p\+Prefix)
+\item 
+static bool \hyperlink{class_fbx_path_utils_a5098828efd68614f77bc7bbe5f73f7cf}{Exist} (const char $\ast$p\+Folder\+Path\+U\+T\+F8)
+\item 
+static bool \hyperlink{class_fbx_path_utils_aa644a8ad1e94eb8a522e6fd653824e93}{Create} (const char $\ast$p\+Folder\+Path\+U\+T\+F8)
+\item 
+static bool \hyperlink{class_fbx_path_utils_a7061a14d4a9f5dae1353d16d7155ee06}{Delete} (const char $\ast$p\+Folder\+Path\+U\+T\+F8)
+\item 
+static bool \hyperlink{class_fbx_path_utils_a3b887263947d818084273ed982617fec}{Is\+Empty} (const char $\ast$p\+Folder\+Path\+\_\+\+U\+T\+F8)
+\end{DoxyCompactItemize}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_path_utils_a1653196effd4938fe520afd70ad09c56}\label{class_fbx_path_utils_a1653196effd4938fe520afd70ad09c56}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Bind@{Bind}}
+\index{Bind@{Bind}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Bind (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Root\+Path,  }\item[{const char $\ast$}]{p\+File\+Path,  }\item[{bool}]{p\+Clean\+Path = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Bind together a root path with a file path. 
+\begin{DoxyParams}{引数}
+{\em p\+Root\+Path} & The root path that will get binded to the file path. \\
+\hline
+{\em p\+File\+Path} & The file path to bind to the root path. \\
+\hline
+{\em p\+Clean\+Path} & If true, the resulting path will be cleaned via \hyperlink{class_fbx_path_utils_a33d8212ceaa902e1161882ab8d69e3ca}{Fbx\+Path\+Utils\+::\+Clean()}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Both paths binded together forming a new file path. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the file path is already a full valid path, p\+File\+Path is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_path_utils_a8ba21a5743f08ee16fefbcd15bf58c86}\label{class_fbx_path_utils_a8ba21a5743f08ee16fefbcd15bf58c86}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Change\+Extension@{Change\+Extension}}
+\index{Change\+Extension@{Change\+Extension}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Change\+Extension()}{ChangeExtension()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Change\+Extension (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Path,  }\item[{const char $\ast$}]{p\+Extension }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Change or append a file extension to the specified file path. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Path} & The file path to change the file extension \\
+\hline
+{\em p\+Extension} & The extension to change or append to the file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The file path with the file extension changed/added. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the file path doesn\textquotesingle{}t end with a valid file name, p\+File\+Path is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_path_utils_a33d8212ceaa902e1161882ab8d69e3ca}\label{class_fbx_path_utils_a33d8212ceaa902e1161882ab8d69e3ca}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Clean@{Clean}}
+\index{Clean@{Clean}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Clean()}{Clean()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Clean (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Clean the redundant and useless denotations in given path name. 
+
+被呼び出し関係図\+:
+% FIG 0
+\mbox{\Hypertarget{class_fbx_path_utils_aa644a8ad1e94eb8a522e6fd653824e93}\label{class_fbx_path_utils_aa644a8ad1e94eb8a522e6fd653824e93}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static bool Fbx\+Path\+Utils\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Folder\+Path\+U\+T\+F8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create the specified folder path if it doesn\textquotesingle{}t exist. 
+\begin{DoxyParams}{引数}
+{\em p\+Folder\+Path\+U\+T\+F8} & The folder path to create, in U\+T\+F8 encoding. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if folder path already exist, or if it was successfully created, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function will create multiple folders if needed, and it also work for relative paths. 
+\end{DoxyRemark}
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{class_fbx_path_utils_a7061a14d4a9f5dae1353d16d7155ee06}\label{class_fbx_path_utils_a7061a14d4a9f5dae1353d16d7155ee06}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Delete@{Delete}}
+\index{Delete@{Delete}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily static bool Fbx\+Path\+Utils\+::\+Delete (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Folder\+Path\+U\+T\+F8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Delete the specified folder path and all its content recursively. 
+\begin{DoxyParams}{引数}
+{\em p\+Folder\+Path\+U\+T\+F8} & The folder path to delete, in U\+T\+F8 encoding. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if folder path was successfully deleted, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function work for relative paths. It will search from the current work path. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_path_utils_a5098828efd68614f77bc7bbe5f73f7cf}\label{class_fbx_path_utils_a5098828efd68614f77bc7bbe5f73f7cf}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Exist@{Exist}}
+\index{Exist@{Exist}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Exist()}{Exist()}}
+{\footnotesize\ttfamily static bool Fbx\+Path\+Utils\+::\+Exist (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Folder\+Path\+U\+T\+F8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify if the specified folder path exist. 
+\begin{DoxyParams}{引数}
+{\em p\+Folder\+Path\+U\+T\+F8} & The folder path to test its existance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the folder path exist, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function work for relative paths. It will search from the current work path. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_path_utils_a0680775ad53444cc7dd91bdd537384ca}\label{class_fbx_path_utils_a0680775ad53444cc7dd91bdd537384ca}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Generate\+File\+Name@{Generate\+File\+Name}}
+\index{Generate\+File\+Name@{Generate\+File\+Name}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Generate\+File\+Name()}{GenerateFileName()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Generate\+File\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Folder,  }\item[{const char $\ast$}]{p\+Prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Generate full safe file path name you can use to create new file. 
+\begin{DoxyParams}{引数}
+{\em p\+Folder} & The folder where the file name should be attempted to be created. \\
+\hline
+{\em p\+Prefix} & The prefix of generated file name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A valid file path that can safely be used to create a new file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_path_utils_a2f8743324b82737499681bdaca5adc7e}\label{class_fbx_path_utils_a2f8743324b82737499681bdaca5adc7e}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Get\+Extension\+Name@{Get\+Extension\+Name}}
+\index{Get\+Extension\+Name@{Get\+Extension\+Name}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Get\+Extension\+Name()}{GetExtensionName()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Get\+Extension\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Extract the file extension in the given file path. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Path} & The file path to extract the extension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The file extension without the \textquotesingle{}.\textquotesingle{} character. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Return empty string if the file path doesn\textquotesingle{}t contain a valid extension. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_path_utils_ac7822ad3605dcfbe63e99a848e959d50}\label{class_fbx_path_utils_ac7822ad3605dcfbe63e99a848e959d50}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Get\+File\+Name@{Get\+File\+Name}}
+\index{Get\+File\+Name@{Get\+File\+Name}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Get\+File\+Name()}{GetFileName()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Get\+File\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Path,  }\item[{bool}]{p\+With\+Extension = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Extract file name from the given file path. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Path} & The given file path. \\
+\hline
+{\em p\+With\+Extension} & Decide the file name with extension or without extension. If it is true, return the file name with extension; if it is false, return the file name without extension. \\
+\hline
+\end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_path_utils_a387c0512f521b504303361b2d79c4242}\label{class_fbx_path_utils_a387c0512f521b504303361b2d79c4242}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Get\+Folder\+Name@{Get\+Folder\+Name}}
+\index{Get\+Folder\+Name@{Get\+Folder\+Name}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Get\+Folder\+Name()}{GetFolderName()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Get\+Folder\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Extract the folder name from the given file path. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Path} & The given file path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The folder name. If there isn\textquotesingle{}t any \textquotesingle{}\textbackslash{}\textquotesingle{} or \textquotesingle{}/\textquotesingle{} in the given file path, it will return p\+File\+Path. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_path_utils_a330b64c4fc722a47e0bb0a946249e021}\label{class_fbx_path_utils_a330b64c4fc722a47e0bb0a946249e021}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Get\+Relative\+File\+Path@{Get\+Relative\+File\+Path}}
+\index{Get\+Relative\+File\+Path@{Get\+Relative\+File\+Path}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Get\+Relative\+File\+Path()}{GetRelativeFilePath()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Get\+Relative\+File\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Root\+Path,  }\item[{const char $\ast$}]{p\+New\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the given new path\textquotesingle{}s relative path to the given root path. 
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_path_utils_a311c2fe8ecb6dad2fc1a3b7935378598}\label{class_fbx_path_utils_a311c2fe8ecb6dad2fc1a3b7935378598}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Get\+Relative\+Path@{Get\+Relative\+Path}}
+\index{Get\+Relative\+Path@{Get\+Relative\+Path}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Get\+Relative\+Path()}{GetRelativePath()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Get\+Relative\+Path (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Root\+Path,  }\item[{const char $\ast$}]{p\+New\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the given new path\textquotesingle{}s relative path to the given root path. 
+\begin{DoxyParams}{引数}
+{\em p\+Root\+Path} & The given root path \\
+\hline
+{\em p\+New\+Path} & The given new path. If it is only file name, the default directory is work directory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The relative path. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the given two paths have the same drive, the function will turn \textquotesingle{}\textbackslash{}\textquotesingle{} in the relative path to \textquotesingle{}/\textquotesingle{}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_path_utils_a3b887263947d818084273ed982617fec}\label{class_fbx_path_utils_a3b887263947d818084273ed982617fec}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Is\+Empty@{Is\+Empty}}
+\index{Is\+Empty@{Is\+Empty}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Is\+Empty()}{IsEmpty()}}
+{\footnotesize\ttfamily static bool Fbx\+Path\+Utils\+::\+Is\+Empty (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Folder\+Path\+\_\+\+U\+T\+F8 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify if the folder contains items or not. 
+\begin{DoxyParams}{引数}
+{\em p\+Folder\+Path\+\_\+\+U\+T\+F8} & The folder path to test if it contains items. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the folder contain any kind of entry type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_path_utils_ad95bc37bf3ed66b0f1d2ab261b238276}\label{class_fbx_path_utils_ad95bc37bf3ed66b0f1d2ab261b238276}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Is\+Relative@{Is\+Relative}}
+\index{Is\+Relative@{Is\+Relative}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Is\+Relative()}{IsRelative()}}
+{\footnotesize\ttfamily static bool Fbx\+Path\+Utils\+::\+Is\+Relative (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Test if the given path is relative path, if it is return true. 
+
+\mbox{\Hypertarget{class_fbx_path_utils_a5adc2b4d7bed904ba22f3613f9bb729a}\label{class_fbx_path_utils_a5adc2b4d7bed904ba22f3613f9bb729a}} 
+\index{Fbx\+Path\+Utils@{Fbx\+Path\+Utils}!Resolve@{Resolve}}
+\index{Resolve@{Resolve}!Fbx\+Path\+Utils@{Fbx\+Path\+Utils}}
+\subsubsection{\texorpdfstring{Resolve()}{Resolve()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Path\+Utils\+::\+Resolve (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Rel\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the full path of given path (if the given path is relative path, it will take current directory as default root path.) 被呼び出し関係図\+:
+% FIG 5
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxutils_8h}{fbxutils.\+h}\end{DoxyCompactItemize}

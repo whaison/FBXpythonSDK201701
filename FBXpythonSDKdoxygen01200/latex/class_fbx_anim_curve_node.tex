@@ -1,0 +1,652 @@
+\hypertarget{class_fbx_anim_curve_node}{}\section{Fbx\+Anim\+Curve\+Node クラス}
+\label{class_fbx_anim_curve_node}\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+
+
+{\ttfamily \#include $<$fbxanimcurvenode.\+h$>$}
+
+
+
+Fbx\+Anim\+Curve\+Node の継承関係図
+% FIG 0
+
+
+Fbx\+Anim\+Curve\+Node 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_anim_curve_node_a9630a96fb6927737ff49d6dab352c36f}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+void \hyperlink{class_fbx_anim_curve_node_ad38a2414969d07dd7c1905fb8d07a9b5}{Release\+K\+F\+Curve\+Node} ()
+\item 
+void \hyperlink{class_fbx_anim_curve_node_aa52265be388b803f8880e1911e211236}{Sync\+Channels\+With\+K\+F\+Curve} ()
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_a431f4ad514b9c72efc78c1f16dc50b6b}{Use\+Quaternion\+Interpolation} ()
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_a16fee78283fbd1d530e1e80a2bcb166a}{Set\+Quaternion\+Interpolation} (unsigned short p\+Val)
+\item 
+unsigned short \hyperlink{class_fbx_anim_curve_node_aef47daaf7f219b58537fcd4e40adee38}{Get\+Quaternion\+Interpolation} ()
+\item 
+void \hyperlink{class_fbx_anim_curve_node_a9d266fe30162053141dd131a1005abf2}{Set\+K\+F\+Curve\+Node\+Layer\+Type} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop)
+\item 
+K\+F\+Curve\+Node $\ast$ \hyperlink{class_fbx_anim_curve_node_a482d23e7517db05af3252b2c02ce2415}{Get\+K\+F\+Curve\+Node} (bool p\+No\+Create=false)
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_anim_curve_node_ae75e53bb5e39cdefcd59e15e23924a13}{Curve\+Node\+Name\+From} (const char $\ast$p\+Name)
+\item 
+static bool \hyperlink{class_fbx_anim_curve_node_a114170d034199d8a40ccc037c495aa04}{Evaluate\+Channels} (\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$p\+Curve\+Node, double $\ast$p\+Data, unsigned int p\+Count, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_node_a68463f3262085ccffef1d5a68fbd4823}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_node_aa5702533aa63185ec4549b73915476d7}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_node_a979eca26d04013f0ef958173d34aef15}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_node_a0a3743b600796ab2b87dea299654b98c}{Connect\+Notify} (const \hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} \&p\+Event)
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_anim_curve_node_aa60f953e94636bb23a94860f60cc63e1}{Find} (\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$p\+Root, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name)
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_anim_curve_node_a0e66be27522fe93db7ee48dbdb4420bb}{Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter}
+\item 
+class \hyperlink{class_fbx_anim_curve_node_a1b769b6684b71dfe76f350fef1137cab}{Fbx\+Anim\+Eval\+Classic}
+\item 
+void \hyperlink{class_fbx_anim_curve_node_a54d20e7508453ca014d08b85da892621}{Collect\+Anim\+From\+Curve\+Node} (void $\ast$$\ast$l\+Src, void $\ast$fcn, unsigned int nb\+Crvs, \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$cn, \hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map} $\ast$p\+Nick\+To\+Anim\+Curve\+Time\+Warps\+Set, \hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map} \&p\+Nick\+To\+K\+F\+Curve\+Node\+Warp\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Utility functions.}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_ad9ca0ff8cf30e3b55c91184be5f693ac}{Is\+Animated} (bool p\+Recurse=false) const
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_a8bdce1ee829fd11bbd74ea2596f3977d}{Get\+Animation\+Interval} (\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&p\+Time\+Interval) const
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_ad0fd9df109fb4e9c8702d37f03b6cc03}{Is\+Composite} () const
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_anim_curve_node_aca6ee712b7eeafb1d00f42117520bac4}{Find} (const char $\ast$p\+Name)
+\item 
+unsigned int \hyperlink{class_fbx_anim_curve_node_a17a3e0fdd0cb807c3fe37f07c9bef844}{Get\+Channels\+Count} () const
+\item 
+int \hyperlink{class_fbx_anim_curve_node_a8ba8427aa3f99361aaf23cee44439015}{Get\+Channel\+Index} (const char $\ast$p\+Channel\+Name) const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_anim_curve_node_a1ad770dcc06ec0638103935e4dfede3c}{Get\+Channel\+Name} (int p\+Channel\+Id) const
+\item 
+void \hyperlink{class_fbx_anim_curve_node_ad334950a15167317fbbc029fe806976d}{Reset\+Channels} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_anim_curve_node_a985772edb8c85825adfef69c6bd06627}{Add\+Channel} (const char $\ast$p\+Chnl\+Name, T const \&p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_anim_curve_node_a0efefd96f733f636d7aa95148be08726}{Set\+Channel\+Value} (const char $\ast$p\+Chnl\+Name, T p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_anim_curve_node_aceef8634351d11d9058b5d023de5f5b4}{Set\+Channel\+Value} (unsigned int p\+Chnl\+Id, T p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_anim_curve_node_ab9d76b0fea168dfe928ec2385e43c716}{Get\+Channel\+Value} (const char $\ast$p\+Chnl\+Name, T p\+Init\+Val)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_anim_curve_node_a1fb96d04b8c53ec130c5be376b923c6c}{Get\+Channel\+Value} (unsigned int p\+Chnl\+Id, T p\+Init\+Val)
+\item 
+static \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_anim_curve_node_a588814e5973e080f84c54438623ddf7e}{Create\+Typed\+Curve\+Node} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property, \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\end{DoxyCompactItemize}
+\subsection*{Fbx\+Anim\+Curve management.}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_a76db258a1f1d7c2a4a178c00788c7a92}{Disconnect\+From\+Channel} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+Curve, unsigned int p\+Chnl\+Id)
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_a29ef7927112552fcbacd6a82555e15e4}{Connect\+To\+Channel} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+Curve, const char $\ast$p\+Chnl, bool p\+In\+Front=false)
+\item 
+bool \hyperlink{class_fbx_anim_curve_node_a33b04e03a4e6c965963ffc0e4abc9608}{Connect\+To\+Channel} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+Curve, unsigned int p\+Chnl\+Id, bool p\+In\+Front=false)
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_anim_curve_node_af3600f3846c38a82b0ea6491c9b2857f}{Create\+Curve} (const char $\ast$p\+Curve\+Node\+Name, const char $\ast$p\+Channel)
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_anim_curve_node_a10fa606f04216696240ad9d1cc655985}{Create\+Curve} (const char $\ast$p\+Curve\+Node\+Name, unsigned int p\+Channel\+Id=0)
+\item 
+int \hyperlink{class_fbx_anim_curve_node_a41d28a650fa90706d1c67ad5f56530b5}{Get\+Curve\+Count} (unsigned int p\+Channel\+Id, const char $\ast$p\+Curve\+Node\+Name=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_anim_curve_node_a818b6198c31818e863d3d5bc7948c2e2}{Get\+Curve} (unsigned int p\+Channel\+Id, unsigned int p\+Id=0, const char $\ast$p\+Curve\+Node\+Name=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class is an composite of animation curves and is called as animation curve node.
+
+Animation curve node is used as the connection point for animation curves and other animation curve nodes associated to a property. \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} can be connected to other \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}, in this case, the destination animation curve node may be considered as \char`\"{}composite\char`\"{}, \hyperlink{class_fbx_anim_curve_node_ad0fd9df109fb4e9c8702d37f03b6cc03}{Is\+Composite()}. remarks When created, the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} has no valid channels unless it is created using the function \hyperlink{class_fbx_anim_curve_node_a588814e5973e080f84c54438623ddf7e}{Create\+Typed\+Curve\+Node()}. This function will add all the required channels to correctly match the number of values of the property. For instance, when Create\+Typed\+Curve\+Node(p\+Node.\+Lcl\+Translation, p\+Scene) is called, the resulting \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} will automatically have 3 channels corresponding to the X,Y and Z components of the Lcl\+Translation property. You can add and remove channels dynamically but can never remove the channels that have been added by the call to \hyperlink{class_fbx_anim_curve_node_a588814e5973e080f84c54438623ddf7e}{Create\+Typed\+Curve\+Node()}.
+
+However, the F\+BX S\+DK animation system\textquotesingle{}s default implementation is to consider only the first curve connected to the channel. Therefore, if the caller connects multiple animation curves to the same channel, then it becomes the caller\textquotesingle{}s responsibility to handle and manipulate these extra curves in a meaningful manner. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a985772edb8c85825adfef69c6bd06627}\label{class_fbx_anim_curve_node_a985772edb8c85825adfef69c6bd06627}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Add\+Channel@{Add\+Channel}}
+\index{Add\+Channel@{Add\+Channel}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Add\+Channel()}{AddChannel()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Anim\+Curve\+Node\+::\+Add\+Channel (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Chnl\+Name,  }\item[{T const \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Adds the specified channel property. 
+\begin{DoxyParams}{引数}
+{\em p\+Chnl\+Name} & Channel name. \\
+\hline
+{\em p\+Value} & Default value of the channel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+It is an error to try to add a channel that already exists. 
+\end{DoxyRemark}
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a0a3743b600796ab2b87dea299654b98c}\label{class_fbx_anim_curve_node_a0a3743b600796ab2b87dea299654b98c}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Connect\+Notify@{Connect\+Notify}}
+\index{Connect\+Notify@{Connect\+Notify}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Connect\+Notify()}{ConnectNotify()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Node\+::\+Connect\+Notify (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} \&}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_ab7a400f3829d1f0da57d3d78c8168dd0}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a29ef7927112552fcbacd6a82555e15e4}\label{class_fbx_anim_curve_node_a29ef7927112552fcbacd6a82555e15e4}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Connect\+To\+Channel@{Connect\+To\+Channel}}
+\index{Connect\+To\+Channel@{Connect\+To\+Channel}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Connect\+To\+Channel()}{ConnectToChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Connect\+To\+Channel (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+Curve,  }\item[{const char $\ast$}]{p\+Chnl,  }\item[{bool}]{p\+In\+Front = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Connects the given animation curve to the specified channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & The curve to connect to the channel. \\
+\hline
+{\em p\+Chnl} & The name of the channel the curve is to be connected to. \\
+\hline
+{\em p\+In\+Front} & When {\ttfamily true}, all the current connections are moved after this one, making this one the first. By default, the connection is the last one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the connection was made, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a33b04e03a4e6c965963ffc0e4abc9608}\label{class_fbx_anim_curve_node_a33b04e03a4e6c965963ffc0e4abc9608}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Connect\+To\+Channel@{Connect\+To\+Channel}}
+\index{Connect\+To\+Channel@{Connect\+To\+Channel}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Connect\+To\+Channel()}{ConnectToChannel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Connect\+To\+Channel (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+Curve,  }\item[{unsigned int}]{p\+Chnl\+Id,  }\item[{bool}]{p\+In\+Front = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Connects the given animation curve to the specified channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & The curve to connect to the channel. \\
+\hline
+{\em p\+Chnl\+Id} & Index of the channel the curve is to be connected to. \\
+\hline
+{\em p\+In\+Front} & When {\ttfamily true}, all the current connections are moved after this one. making this one the first. By default, the connection is the last one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the connection was made, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index is 0 based. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a68463f3262085ccffef1d5a68fbd4823}\label{class_fbx_anim_curve_node_a68463f3262085ccffef1d5a68fbd4823}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Node\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a979eca26d04013f0ef958173d34aef15}\label{class_fbx_anim_curve_node_a979eca26d04013f0ef958173d34aef15}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Node\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a9630a96fb6927737ff49d6dab352c36f}\label{class_fbx_anim_curve_node_a9630a96fb6927737ff49d6dab352c36f}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Anim\+Curve\+Node\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_af3600f3846c38a82b0ea6491c9b2857f}\label{class_fbx_anim_curve_node_af3600f3846c38a82b0ea6491c9b2857f}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Create\+Curve@{Create\+Curve}}
+\index{Create\+Curve@{Create\+Curve}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Create\+Curve()}{CreateCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Create\+Curve (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Curve\+Node\+Name,  }\item[{const char $\ast$}]{p\+Channel }\end{DoxyParamCaption})}
+
+Creates a new curve and connects it to the specified channel of the animation curve node named p\+Curve\+Node\+Name. If this animation curve node is composite, this function will try to search all children animation curve nodes recursively for the one named p\+Curve\+Node\+Name. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve\+Node\+Name} & Name of the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} we are looking for. \\
+\hline
+{\em p\+Channel} & Channel identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} or N\+U\+LL if an error occurred. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+Curve\+Node\+Name cannot be empty. 
+
+If the p\+Channel identifier is left N\+U\+LL, the first valid channel will be used to create curve. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a10fa606f04216696240ad9d1cc655985}\label{class_fbx_anim_curve_node_a10fa606f04216696240ad9d1cc655985}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Create\+Curve@{Create\+Curve}}
+\index{Create\+Curve@{Create\+Curve}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Create\+Curve()}{CreateCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Create\+Curve (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Curve\+Node\+Name,  }\item[{unsigned int}]{p\+Channel\+Id = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Creates a new curve and connects it to the specified channel of the animation curve node named p\+Curve\+Node\+Name. If this animation curve node is composite, this function will try to search all children animation curve nodes recursively for the one named p\+Curve\+Node\+Name. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve\+Node\+Name} & Name of the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} we are looking for. \\
+\hline
+{\em p\+Channel\+Id} & Channel index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} or N\+U\+LL if an error occurred. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+Curve\+Node\+Name cannot be empty. If the p\+Channel\+Id is not assigned, the first valid channel will be used to create curve. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a588814e5973e080f84c54438623ddf7e}\label{class_fbx_anim_curve_node_a588814e5973e080f84c54438623ddf7e}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Create\+Typed\+Curve\+Node@{Create\+Typed\+Curve\+Node}}
+\index{Create\+Typed\+Curve\+Node@{Create\+Typed\+Curve\+Node}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Create\+Typed\+Curve\+Node()}{CreateTypedCurveNode()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Create\+Typed\+Curve\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property,  }\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} compatible with the specified property data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property that needs a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}. \\
+\hline
+{\em p\+Scene} & The scene the created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} will belong to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The pointer to the newly created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}. Returns N\+U\+LL if an error occurred. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function does not connect the newly created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} to the property. 
+
+This function detects Fbx\+Double3, Fbx\+Double4 and Fbx\+Double4x4 properties Data\+Types and automatically adds the required channels properties. Any other Data\+Type is not specifically processed and the channels properties are left empty and need to be filled using the \hyperlink{class_fbx_anim_curve_node_a985772edb8c85825adfef69c6bd06627}{Add\+Channel()} function. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_ae75e53bb5e39cdefcd59e15e23924a13}\label{class_fbx_anim_curve_node_ae75e53bb5e39cdefcd59e15e23924a13}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Curve\+Node\+Name\+From@{Curve\+Node\+Name\+From}}
+\index{Curve\+Node\+Name\+From@{Curve\+Node\+Name\+From}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Curve\+Node\+Name\+From()}{CurveNodeNameFrom()}}
+{\footnotesize\ttfamily static const char$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Curve\+Node\+Name\+From (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_aa5702533aa63185ec4549b73915476d7}\label{class_fbx_anim_curve_node_aa5702533aa63185ec4549b73915476d7}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Node\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a76db258a1f1d7c2a4a178c00788c7a92}\label{class_fbx_anim_curve_node_a76db258a1f1d7c2a4a178c00788c7a92}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Disconnect\+From\+Channel@{Disconnect\+From\+Channel}}
+\index{Disconnect\+From\+Channel@{Disconnect\+From\+Channel}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Disconnect\+From\+Channel()}{DisconnectFromChannel()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Disconnect\+From\+Channel (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+Curve,  }\item[{unsigned int}]{p\+Chnl\+Id }\end{DoxyParamCaption})}
+
+Disconnect the animation curve from the channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & The curve to disconnect from the channel. \\
+\hline
+{\em p\+Chnl\+Id} & The channel index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the disconnection was made, {\ttfamily false} if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a114170d034199d8a40ccc037c495aa04}\label{class_fbx_anim_curve_node_a114170d034199d8a40ccc037c495aa04}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Evaluate\+Channels@{Evaluate\+Channels}}
+\index{Evaluate\+Channels@{Evaluate\+Channels}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Evaluate\+Channels()}{EvaluateChannels()}}
+{\footnotesize\ttfamily static bool Fbx\+Anim\+Curve\+Node\+::\+Evaluate\+Channels (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$}]{p\+Curve\+Node,  }\item[{double $\ast$}]{p\+Data,  }\item[{unsigned int}]{p\+Count,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_aca6ee712b7eeafb1d00f42117520bac4}\label{class_fbx_anim_curve_node_aca6ee712b7eeafb1d00f42117520bac4}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Recursively look for the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} matching the passed named argument. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name of the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} we are looking for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The found anim curve node or N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If p\+Name is an empty string, this function automatically return N\+U\+LL. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_aa60f953e94636bb23a94860f60cc63e1}\label{class_fbx_anim_curve_node_aa60f953e94636bb23a94860f60cc63e1}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Find (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$}]{p\+Root,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a8bdce1ee829fd11bbd74ea2596f3977d}\label{class_fbx_anim_curve_node_a8bdce1ee829fd11bbd74ea2596f3977d}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Animation\+Interval@{Get\+Animation\+Interval}}
+\index{Get\+Animation\+Interval@{Get\+Animation\+Interval}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Animation\+Interval()}{GetAnimationInterval()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Get\+Animation\+Interval (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&}]{p\+Time\+Interval }\end{DoxyParamCaption}) const}
+
+Find out start and end time of the animation. This function retrieves the including time span for all animation curves of this animation curve node. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Interval} & Reference to receive start time and end time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+{\ttfamily false} is also returned if this animation curve node has no animation. 
+
+This method only considers the first animation curve connected to each channel. To find time interval of multiple animation curves that are connected to the same channel, it is the caller\textquotesingle{}s responsibility to write a new version of this method, and \hyperlink{class_fbx_anim_curve_node_a41d28a650fa90706d1c67ad5f56530b5}{Get\+Curve\+Count()} will be useful in this case. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a8ba8427aa3f99361aaf23cee44439015}\label{class_fbx_anim_curve_node_a8ba8427aa3f99361aaf23cee44439015}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Channel\+Index@{Get\+Channel\+Index}}
+\index{Get\+Channel\+Index@{Get\+Channel\+Index}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Index()}{GetChannelIndex()}}
+{\footnotesize\ttfamily int Fbx\+Anim\+Curve\+Node\+::\+Get\+Channel\+Index (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Channel\+Name }\end{DoxyParamCaption}) const}
+
+Get the index of the named channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Name} & Name of the channel for which we want the index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the index of the named channel or -\/1 if no channel with this name is found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a1ad770dcc06ec0638103935e4dfede3c}\label{class_fbx_anim_curve_node_a1ad770dcc06ec0638103935e4dfede3c}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Channel\+Name@{Get\+Channel\+Name}}
+\index{Get\+Channel\+Name@{Get\+Channel\+Name}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Name()}{GetChannelName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Anim\+Curve\+Node\+::\+Get\+Channel\+Name (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Id }\end{DoxyParamCaption}) const}
+
+Get the name of the channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Id} & Index of the channel for which we want the name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the name of the indexed channel or \char`\"{}\char`\"{} if the index is invalid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a17a3e0fdd0cb807c3fe37f07c9bef844}\label{class_fbx_anim_curve_node_a17a3e0fdd0cb807c3fe37f07c9bef844}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Channels\+Count@{Get\+Channels\+Count}}
+\index{Get\+Channels\+Count@{Get\+Channels\+Count}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Channels\+Count()}{GetChannelsCount()}}
+{\footnotesize\ttfamily unsigned int Fbx\+Anim\+Curve\+Node\+::\+Get\+Channels\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the total number of property channels defined in this animation curve node. For composite animation curve nodes, since they do not contain any channels, this function will always return 0. \begin{DoxyReturn}{戻り値}
+The number of property channels. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_ab9d76b0fea168dfe928ec2385e43c716}\label{class_fbx_anim_curve_node_ab9d76b0fea168dfe928ec2385e43c716}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Channel\+Value@{Get\+Channel\+Value}}
+\index{Get\+Channel\+Value@{Get\+Channel\+Value}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Value()}{GetChannelValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Anim\+Curve\+Node\+::\+Get\+Channel\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Chnl\+Name,  }\item[{T}]{p\+Init\+Val }\end{DoxyParamCaption})}
+
+Get the default value of the channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Chnl\+Name} & Channel name. \\
+\hline
+{\em p\+Init\+Val} & Value returned if the specified channel is invalid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The default value of this channel. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a1fb96d04b8c53ec130c5be376b923c6c}\label{class_fbx_anim_curve_node_a1fb96d04b8c53ec130c5be376b923c6c}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Channel\+Value@{Get\+Channel\+Value}}
+\index{Get\+Channel\+Value@{Get\+Channel\+Value}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Value()}{GetChannelValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Anim\+Curve\+Node\+::\+Get\+Channel\+Value (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Chnl\+Id,  }\item[{T}]{p\+Init\+Val }\end{DoxyParamCaption})}
+
+Get the default value of the channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Chnl\+Id} & Channel index. \\
+\hline
+{\em p\+Init\+Val} & Value returned if the specified channel is invalid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The default value of this channel. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a818b6198c31818e863d3d5bc7948c2e2}\label{class_fbx_anim_curve_node_a818b6198c31818e863d3d5bc7948c2e2}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Curve@{Get\+Curve}}
+\index{Get\+Curve@{Get\+Curve}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Curve()}{GetCurve()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Get\+Curve (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Channel\+Id,  }\item[{unsigned int}]{p\+Id = {\ttfamily 0},  }\item[{const char $\ast$}]{p\+Curve\+Node\+Name = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} of the specified channel. If this animation curve node is composite, this function will try to search all children animation curve nodes recursively for the one named p\+Curve\+Node\+Name. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Id} & Channel index. \\
+\hline
+{\em p\+Id} & The index of the desired anim curve (in case there is more than one). \\
+\hline
+{\em p\+Curve\+Node\+Name} & Name of the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} we are looking for (if this object is a composite). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} that matches the criteria. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method fails if the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} with name p\+Curve\+Node\+Name does not exist and return N\+U\+LL. If the specified channel cannot be found in the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} with name p\+Curve\+Node\+Name, return N\+U\+LL. 
+
+If the p\+Curve\+Node\+Name is left N\+U\+LL, then only search in the curves on this animation curve node even if it is composite. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a41d28a650fa90706d1c67ad5f56530b5}\label{class_fbx_anim_curve_node_a41d28a650fa90706d1c67ad5f56530b5}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Curve\+Count@{Get\+Curve\+Count}}
+\index{Get\+Curve\+Count@{Get\+Curve\+Count}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Curve\+Count()}{GetCurveCount()}}
+{\footnotesize\ttfamily int Fbx\+Anim\+Curve\+Node\+::\+Get\+Curve\+Count (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Channel\+Id,  }\item[{const char $\ast$}]{p\+Curve\+Node\+Name = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} connected to the specified channel. If this animation curve node is composite, this function will try to search all children animation curve nodes recursively for the one named p\+Curve\+Node\+Name. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Id} & Channel index. \\
+\hline
+{\em p\+Curve\+Node\+Name} & Name of the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} we are looking for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of animation curves on the specified channel or 0 if an error occurred. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method fails if the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} with name p\+Curve\+Node\+Name does not exist and return 0. If the specified channel cannot be found on the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} with name p\+Curve\+Node\+Name, return 0. 
+
+If this animation curve node is composite, this function will try to search all children animation curve nodes recursively for the one named p\+Curve\+Node\+Name. If the p\+Curve\+Node\+Name is left N\+U\+LL, then only look for the curves on this animation curve node even if it is composite. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a482d23e7517db05af3252b2c02ce2415}\label{class_fbx_anim_curve_node_a482d23e7517db05af3252b2c02ce2415}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+K\+F\+Curve\+Node@{Get\+K\+F\+Curve\+Node}}
+\index{Get\+K\+F\+Curve\+Node@{Get\+K\+F\+Curve\+Node}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+K\+F\+Curve\+Node()}{GetKFCurveNode()}}
+{\footnotesize\ttfamily K\+F\+Curve\+Node$\ast$ Fbx\+Anim\+Curve\+Node\+::\+Get\+K\+F\+Curve\+Node (\begin{DoxyParamCaption}\item[{bool}]{p\+No\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_aef47daaf7f219b58537fcd4e40adee38}\label{class_fbx_anim_curve_node_aef47daaf7f219b58537fcd4e40adee38}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Get\+Quaternion\+Interpolation@{Get\+Quaternion\+Interpolation}}
+\index{Get\+Quaternion\+Interpolation@{Get\+Quaternion\+Interpolation}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Get\+Quaternion\+Interpolation()}{GetQuaternionInterpolation()}}
+{\footnotesize\ttfamily unsigned short Fbx\+Anim\+Curve\+Node\+::\+Get\+Quaternion\+Interpolation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_ad9ca0ff8cf30e3b55c91184be5f693ac}\label{class_fbx_anim_curve_node_ad9ca0ff8cf30e3b55c91184be5f693ac}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Is\+Animated@{Is\+Animated}}
+\index{Is\+Animated@{Is\+Animated}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Is\+Animated()}{IsAnimated()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Is\+Animated (\begin{DoxyParamCaption}\item[{bool}]{p\+Recurse = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Check if the animation curve node contains any animation key. 
+\begin{DoxyParams}{引数}
+{\em p\+Recurse} & {\ttfamily true} to descend to the children if the animation curve node is composite. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if at least one animation curve that contains one or more animation keys is found, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method only considers the first animation curve connected to each channel. To check multiple animation curves that are connected to the same channel, it is the caller\textquotesingle{}s responsibility to write a new version of this method, and \hyperlink{class_fbx_anim_curve_node_a41d28a650fa90706d1c67ad5f56530b5}{Get\+Curve\+Count()} will be useful in this case. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_ad0fd9df109fb4e9c8702d37f03b6cc03}\label{class_fbx_anim_curve_node_ad0fd9df109fb4e9c8702d37f03b6cc03}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Is\+Composite@{Is\+Composite}}
+\index{Is\+Composite@{Is\+Composite}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Is\+Composite()}{IsComposite()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Is\+Composite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Test this object to see if it is a composite \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} or a \char`\"{}leaf\char`\"{}. A composite \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} is a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} whose all source connections are \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} and its property channels is totally empty. It is just a container to take other \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if this object is a composite, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_ad38a2414969d07dd7c1905fb8d07a9b5}\label{class_fbx_anim_curve_node_ad38a2414969d07dd7c1905fb8d07a9b5}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Release\+K\+F\+Curve\+Node@{Release\+K\+F\+Curve\+Node}}
+\index{Release\+K\+F\+Curve\+Node@{Release\+K\+F\+Curve\+Node}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Release\+K\+F\+Curve\+Node()}{ReleaseKFCurveNode()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Node\+::\+Release\+K\+F\+Curve\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_ad334950a15167317fbbc029fe806976d}\label{class_fbx_anim_curve_node_ad334950a15167317fbbc029fe806976d}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Reset\+Channels@{Reset\+Channels}}
+\index{Reset\+Channels@{Reset\+Channels}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Reset\+Channels()}{ResetChannels()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Node\+::\+Reset\+Channels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Empties the property channels of this animation curve node. \begin{DoxyRemark}{注釈}
+This function will remove all the channels added with the \hyperlink{class_fbx_anim_curve_node_a985772edb8c85825adfef69c6bd06627}{Add\+Channel()} method regardless of their use and/or connections. But it can not remove the channels that are added by the call to \hyperlink{class_fbx_anim_curve_node_a588814e5973e080f84c54438623ddf7e}{Create\+Typed\+Curve\+Node()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a0efefd96f733f636d7aa95148be08726}\label{class_fbx_anim_curve_node_a0efefd96f733f636d7aa95148be08726}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Set\+Channel\+Value@{Set\+Channel\+Value}}
+\index{Set\+Channel\+Value@{Set\+Channel\+Value}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Set\+Channel\+Value()}{SetChannelValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Anim\+Curve\+Node\+::\+Set\+Channel\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Chnl\+Name,  }\item[{T}]{p\+Value }\end{DoxyParamCaption})}
+
+Set the default value of the channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Chnl\+Name} & Channel name. \\
+\hline
+{\em p\+Value} & New default value of this channel. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_anim_curve_node_aceef8634351d11d9058b5d023de5f5b4}\label{class_fbx_anim_curve_node_aceef8634351d11d9058b5d023de5f5b4}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Set\+Channel\+Value@{Set\+Channel\+Value}}
+\index{Set\+Channel\+Value@{Set\+Channel\+Value}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Set\+Channel\+Value()}{SetChannelValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Anim\+Curve\+Node\+::\+Set\+Channel\+Value (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Chnl\+Id,  }\item[{T}]{p\+Value }\end{DoxyParamCaption})}
+
+Set the default value of the channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Chnl\+Id} & Channel index. \\
+\hline
+{\em p\+Value} & New default value of this channel. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a9d266fe30162053141dd131a1005abf2}\label{class_fbx_anim_curve_node_a9d266fe30162053141dd131a1005abf2}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Set\+K\+F\+Curve\+Node\+Layer\+Type@{Set\+K\+F\+Curve\+Node\+Layer\+Type}}
+\index{Set\+K\+F\+Curve\+Node\+Layer\+Type@{Set\+K\+F\+Curve\+Node\+Layer\+Type}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Set\+K\+F\+Curve\+Node\+Layer\+Type()}{SetKFCurveNodeLayerType()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Node\+::\+Set\+K\+F\+Curve\+Node\+Layer\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a16fee78283fbd1d530e1e80a2bcb166a}\label{class_fbx_anim_curve_node_a16fee78283fbd1d530e1e80a2bcb166a}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Set\+Quaternion\+Interpolation@{Set\+Quaternion\+Interpolation}}
+\index{Set\+Quaternion\+Interpolation@{Set\+Quaternion\+Interpolation}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Set\+Quaternion\+Interpolation()}{SetQuaternionInterpolation()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Set\+Quaternion\+Interpolation (\begin{DoxyParamCaption}\item[{unsigned short}]{p\+Val }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_aa52265be388b803f8880e1911e211236}\label{class_fbx_anim_curve_node_aa52265be388b803f8880e1911e211236}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Sync\+Channels\+With\+K\+F\+Curve@{Sync\+Channels\+With\+K\+F\+Curve}}
+\index{Sync\+Channels\+With\+K\+F\+Curve@{Sync\+Channels\+With\+K\+F\+Curve}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Sync\+Channels\+With\+K\+F\+Curve()}{SyncChannelsWithKFCurve()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Node\+::\+Sync\+Channels\+With\+K\+F\+Curve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a431f4ad514b9c72efc78c1f16dc50b6b}\label{class_fbx_anim_curve_node_a431f4ad514b9c72efc78c1f16dc50b6b}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Use\+Quaternion\+Interpolation@{Use\+Quaternion\+Interpolation}}
+\index{Use\+Quaternion\+Interpolation@{Use\+Quaternion\+Interpolation}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Use\+Quaternion\+Interpolation()}{UseQuaternionInterpolation()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Node\+::\+Use\+Quaternion\+Interpolation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a54d20e7508453ca014d08b85da892621}\label{class_fbx_anim_curve_node_a54d20e7508453ca014d08b85da892621}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Collect\+Anim\+From\+Curve\+Node@{Collect\+Anim\+From\+Curve\+Node}}
+\index{Collect\+Anim\+From\+Curve\+Node@{Collect\+Anim\+From\+Curve\+Node}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Collect\+Anim\+From\+Curve\+Node}{CollectAnimFromCurveNode}}
+{\footnotesize\ttfamily void Collect\+Anim\+From\+Curve\+Node (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{l\+Src,  }\item[{void $\ast$}]{fcn,  }\item[{unsigned int}]{nb\+Crvs,  }\item[{\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$}]{cn,  }\item[{\hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map} $\ast$}]{p\+Nick\+To\+Anim\+Curve\+Time\+Warps\+Set,  }\item[{\hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map} \&}]{p\+Nick\+To\+K\+F\+Curve\+Node\+Warp\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a0e66be27522fe93db7ee48dbdb4420bb}\label{class_fbx_anim_curve_node_a0e66be27522fe93db7ee48dbdb4420bb}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter@{Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter}}
+\index{Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter@{Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter}{FbxAnimCurveFilterMatrixConverter}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_anim_curve_filter_matrix_converter}{Fbx\+Anim\+Curve\+Filter\+Matrix\+Converter}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_node_a1b769b6684b71dfe76f350fef1137cab}\label{class_fbx_anim_curve_node_a1b769b6684b71dfe76f350fef1137cab}} 
+\index{Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}!Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}!Fbx\+Anim\+Curve\+Node@{Fbx\+Anim\+Curve\+Node}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Eval\+Classic}{FbxAnimEvalClassic}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_anim_eval_classic}{Fbx\+Anim\+Eval\+Classic}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimcurvenode_8h}{fbxanimcurvenode.\+h}\end{DoxyCompactItemize}

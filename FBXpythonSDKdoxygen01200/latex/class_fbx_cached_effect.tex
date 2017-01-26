@@ -1,0 +1,200 @@
+\hypertarget{class_fbx_cached_effect}{}\section{Fbx\+Cached\+Effect クラス}
+\label{class_fbx_cached_effect}\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+
+
+{\ttfamily \#include $<$fbxcachedeffect.\+h$>$}
+
+
+
+Fbx\+Cached\+Effect の継承関係図
+% FIG 0
+
+
+Fbx\+Cached\+Effect 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{E\+Category} \{ \hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a671d67cb2612c88c7845ded1a00a2354}{e\+Particles}, 
+\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33acafbbfe4981b823c92ea36406118dd98}{e\+Fluids}, 
+\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33aabf5b111f5d739c2f4b0aba73a87c18e}{e\+Hair}, 
+\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a301e356a3faecf6bea31b2ab220b3cf8}{e\+Generic}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_cached_effect_a4c904f4208d8e9f3ddbb49240475b6cc}{Get\+Attribute\+Type} () const
+\begin{DoxyCompactList}\small\item\em Returns the Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Cached\+Effect attribute type. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{E\+Category} \hyperlink{class_fbx_cached_effect_af5282be789653d1a9c189ddd8540bc5b}{Get\+Category} () const
+\begin{DoxyCompactList}\small\item\em Return the specialization category of this effect attribute. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_cached_effect_a4b31ce36a13bc43e6bfad32c6d9b7f7a}{Set\+Cache} (\hyperlink{class_fbx_cache}{Fbx\+Cache} $\ast$p\+Cache, \hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{E\+Category} p\+Category=\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a301e356a3faecf6bea31b2ab220b3cf8}{e\+Generic})
+\item 
+\hyperlink{class_fbx_cache}{Fbx\+Cache} $\ast$ \hyperlink{class_fbx_cached_effect_aca0e9173f8aa5d446616aa92b9abbea0}{Get\+Cache} () const
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_cached_effect_a895c62dc90594a2df7d9392632b626a6}{Get\+Type\+Name} () const
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_cached_effect_a0702b43325ac99858e85525b3174e921}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_cached_effect_a6e336fc1b97a28cbc5cecfc248efe451}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual void \hyperlink{class_fbx_cached_effect_a0a33b753735747046809b241eadb19d2}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+A cached effect is a type of node attribute to represent certain type of effect by an cache object. Categories are particle cache, fluid cache, hair cache and general cache. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{E\+Category} for the effect types that are supported. 
+\end{DoxySeeAlso}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}\label{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!E\+Category@{E\+Category}}
+\index{E\+Category@{E\+Category}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{E\+Category}{ECategory}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{Fbx\+Cached\+Effect\+::\+E\+Category}}
+
+Effect attribute category. This is for identification purpose and has no influence inside the F\+BX S\+DK. However, applications may use this to filter \hyperlink{class_fbx_cached_effect}{Fbx\+Cached\+Effect} objects. \begin{DoxyRemark}{注釈}
+Vertex caches for deforming geometries are not handled by the \hyperlink{class_fbx_cached_effect}{Fbx\+Cached\+Effect} object. These caches are connected with the \hyperlink{class_fbx_vertex_cache_deformer}{Fbx\+Vertex\+Cache\+Deformer} object. 
+
+If an object of this class is used as the default Node\+Attribute for a \hyperlink{class_fbx_node}{Fbx\+Node} and the scene is saved to an F\+BX v6 and earlier versions, the Cached\+Effect attribute is not saved and the \hyperlink{class_fbx_node}{Fbx\+Node} will be processed as a \hyperlink{class_fbx_null}{Fbx\+Null} node with default values for the attribute. 
+\end{DoxyRemark}
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Particles@{e\+Particles}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!e\+Particles@{e\+Particles}}}\mbox{\Hypertarget{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a671d67cb2612c88c7845ded1a00a2354}\label{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a671d67cb2612c88c7845ded1a00a2354}} 
+e\+Particles&This effect handles a particle cache. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Fluids@{e\+Fluids}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!e\+Fluids@{e\+Fluids}}}\mbox{\Hypertarget{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33acafbbfe4981b823c92ea36406118dd98}\label{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33acafbbfe4981b823c92ea36406118dd98}} 
+e\+Fluids&This effect handles a fluid cache. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hair@{e\+Hair}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!e\+Hair@{e\+Hair}}}\mbox{\Hypertarget{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33aabf5b111f5d739c2f4b0aba73a87c18e}\label{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33aabf5b111f5d739c2f4b0aba73a87c18e}} 
+e\+Hair&This effect handles an hair cache. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Generic@{e\+Generic}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!e\+Generic@{e\+Generic}}}\mbox{\Hypertarget{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a301e356a3faecf6bea31b2ab220b3cf8}\label{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a301e356a3faecf6bea31b2ab220b3cf8}} 
+e\+Generic&This effect handles a cache other than particles, fluids or hair. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_cached_effect_a0a33b753735747046809b241eadb19d2}\label{class_fbx_cached_effect_a0a33b753735747046809b241eadb19d2}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Cached\+Effect\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}{Fbx\+Node\+Attribute}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cached_effect_a6e336fc1b97a28cbc5cecfc248efe451}\label{class_fbx_cached_effect_a6e336fc1b97a28cbc5cecfc248efe451}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Cached\+Effect\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cached_effect_a4c904f4208d8e9f3ddbb49240475b6cc}\label{class_fbx_cached_effect_a4c904f4208d8e9f3ddbb49240475b6cc}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Cached\+Effect\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Cached\+Effect attribute type. 
+
+
+
+\hyperlink{class_fbx_node_attribute_a1c2116756906127145a2b8721fc26752}{Fbx\+Node\+Attribute}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cached_effect_aca0e9173f8aa5d446616aa92b9abbea0}\label{class_fbx_cached_effect_aca0e9173f8aa5d446616aa92b9abbea0}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Get\+Cache@{Get\+Cache}}
+\index{Get\+Cache@{Get\+Cache}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Get\+Cache()}{GetCache()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_cache}{Fbx\+Cache}$\ast$ Fbx\+Cached\+Effect\+::\+Get\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the cache object used by this node attribute. \begin{DoxyReturn}{戻り値}
+A pointer to the cache object used by this node attribute, or {\ttfamily N\+U\+LL} if no cache object is assigned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cached_effect_af5282be789653d1a9c189ddd8540bc5b}\label{class_fbx_cached_effect_af5282be789653d1a9c189ddd8540bc5b}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Get\+Category@{Get\+Category}}
+\index{Get\+Category@{Get\+Category}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Get\+Category()}{GetCategory()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{E\+Category} Fbx\+Cached\+Effect\+::\+Get\+Category (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the specialization category of this effect attribute. 
+
+\mbox{\Hypertarget{class_fbx_cached_effect_a0702b43325ac99858e85525b3174e921}\label{class_fbx_cached_effect_a0702b43325ac99858e85525b3174e921}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Cached\+Effect\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cached_effect_a895c62dc90594a2df7d9392632b626a6}\label{class_fbx_cached_effect_a895c62dc90594a2df7d9392632b626a6}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Get\+Type\+Name@{Get\+Type\+Name}}
+\index{Get\+Type\+Name@{Get\+Type\+Name}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Get\+Type\+Name()}{GetTypeName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Cached\+Effect\+::\+Get\+Type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a817dcfa8f7f7e2437324e1e71377c4b2}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cached_effect_a4b31ce36a13bc43e6bfad32c6d9b7f7a}\label{class_fbx_cached_effect_a4b31ce36a13bc43e6bfad32c6d9b7f7a}} 
+\index{Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}!Set\+Cache@{Set\+Cache}}
+\index{Set\+Cache@{Set\+Cache}!Fbx\+Cached\+Effect@{Fbx\+Cached\+Effect}}
+\subsubsection{\texorpdfstring{Set\+Cache()}{SetCache()}}
+{\footnotesize\ttfamily void Fbx\+Cached\+Effect\+::\+Set\+Cache (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cache}{Fbx\+Cache} $\ast$}]{p\+Cache,  }\item[{\hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33}{E\+Category}}]{p\+Category = {\ttfamily \hyperlink{class_fbx_cached_effect_ab402402f3e66d6e31eb3002b0bd58c33a301e356a3faecf6bea31b2ab220b3cf8}{e\+Generic}} }\end{DoxyParamCaption})}
+
+Assign a cache object to be used by this attribute. 
+\begin{DoxyParams}{引数}
+{\em p\+Cache} & The cache object. \\
+\hline
+{\em p\+Category} & The type of this cached effect. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The cache referenced by the {\bfseries p\+Cache} pointer can be freely shared among multiple \hyperlink{class_fbx_cached_effect}{Fbx\+Cached\+Effect} (and even the \hyperlink{class_fbx_vertex_cache_deformer}{Fbx\+Vertex\+Cache\+Deformer}) therefore {\bfseries p\+Category} identifier should really only used as a hint of what this \hyperlink{class_fbx_cached_effect}{Fbx\+Cached\+Effect} represents but it should not be taken for granted that the content of the cache really matches the category. Applications should always check the cache files to ensure that they are manipulating the desired information. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxcachedeffect_8h}{fbxcachedeffect.\+h}\end{DoxyCompactItemize}

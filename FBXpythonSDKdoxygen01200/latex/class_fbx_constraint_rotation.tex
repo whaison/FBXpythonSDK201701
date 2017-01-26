@@ -1,0 +1,204 @@
+\hypertarget{class_fbx_constraint_rotation}{}\section{Fbx\+Constraint\+Rotation クラス}
+\label{class_fbx_constraint_rotation}\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+
+
+This constraint class contains methods for accessing the properties of a rotation constraint. A rotation constraint lets you constrain the rotation of an object based on the rotation of one or more sources.  
+
+
+
+
+{\ttfamily \#include $<$fbxconstraintrotation.\+h$>$}
+
+
+
+Fbx\+Constraint\+Rotation の継承関係図
+% FIG 0
+
+
+Fbx\+Constraint\+Rotation 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_constraint_rotation_ac025636c53dc8316f7da590de99bdb20}{Add\+Constraint\+Source} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, double p\+Weight=100)
+\item 
+int \hyperlink{class_fbx_constraint_rotation_ab27178d5b53654eb9f41f6e3f3a4c5dc}{Get\+Constraint\+Source\+Count} () const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_rotation_a4bfb008520cb5aa6996104c292e5819e}{Get\+Constraint\+Source} (int p\+Index) const
+\item 
+void \hyperlink{class_fbx_constraint_rotation_ae7d40f146877a4defd18cd41692fa78e}{Set\+Constrained\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_rotation_ad9bdaf083716c730fdd907a9387e4991}{Get\+Constrained\+Object} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_constraint_rotation_ad9f6469905777a18e3a383f402bdd9b0}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} \hyperlink{class_fbx_constraint_rotation_a8d9f54ac347d18a0871eafc21e88cb77}{Get\+Constraint\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_rotation_a2fc6ae9614bcc41039d4abd37d3186aa}{AffectX}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_rotation_a8b611c9fd76921a2780254dee0d33870}{AffectY}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_rotation_af7a3d171bfeb0e5fa72d292756c64848}{AffectZ}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_constraint_rotation_aa0bb0aa79b3f983ede4a376f12adb1c9}{Rotation}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_rotation_ac9bb2a7227a6034425e06395a03d57a6}{Constraint\+Sources}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_rotation_aee0715edab2a99b52a40f35aba1d662c}{Constrained\+Object}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This constraint class contains methods for accessing the properties of a rotation constraint. A rotation constraint lets you constrain the rotation of an object based on the rotation of one or more sources. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_constraint_rotation_ac025636c53dc8316f7da590de99bdb20}\label{class_fbx_constraint_rotation_ac025636c53dc8316f7da590de99bdb20}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Add\+Constraint\+Source@{Add\+Constraint\+Source}}
+\index{Add\+Constraint\+Source@{Add\+Constraint\+Source}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Add\+Constraint\+Source()}{AddConstraintSource()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Rotation\+::\+Add\+Constraint\+Source (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{double}]{p\+Weight = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Add a source to the constraint. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & New source object. \\
+\hline
+{\em p\+Weight} & Weight of the source object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_rotation_ad9f6469905777a18e3a383f402bdd9b0}\label{class_fbx_constraint_rotation_ad9f6469905777a18e3a383f402bdd9b0}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Constraint\+Rotation\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_rotation_ad9bdaf083716c730fdd907a9387e4991}\label{class_fbx_constraint_rotation_ad9bdaf083716c730fdd907a9387e4991}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Get\+Constrained\+Object@{Get\+Constrained\+Object}}
+\index{Get\+Constrained\+Object@{Get\+Constrained\+Object}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Get\+Constrained\+Object()}{GetConstrainedObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Rotation\+::\+Get\+Constrained\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constrained object. \begin{DoxyReturn}{戻り値}
+Current constrained object. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_a7f587d5db9685b5ee925a85354263edc}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_rotation_a4bfb008520cb5aa6996104c292e5819e}\label{class_fbx_constraint_rotation_a4bfb008520cb5aa6996104c292e5819e}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Get\+Constraint\+Source@{Get\+Constraint\+Source}}
+\index{Get\+Constraint\+Source@{Get\+Constraint\+Source}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source()}{GetConstraintSource()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Rotation\+::\+Get\+Constraint\+Source (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve a constraint source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the source object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Current source at the specified index. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_a5ff6fe6fc98af1e33e8b297bc1cea007}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_rotation_ab27178d5b53654eb9f41f6e3f3a4c5dc}\label{class_fbx_constraint_rotation_ab27178d5b53654eb9f41f6e3f3a4c5dc}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}}
+\index{Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source\+Count()}{GetConstraintSourceCount()}}
+{\footnotesize\ttfamily int Fbx\+Constraint\+Rotation\+::\+Get\+Constraint\+Source\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constraint source count. \begin{DoxyReturn}{戻り値}
+Current constraint source count. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_aa702f86c6a1832ce3b4905911e66c58f}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_rotation_a8d9f54ac347d18a0871eafc21e88cb77}\label{class_fbx_constraint_rotation_a8d9f54ac347d18a0871eafc21e88cb77}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Get\+Constraint\+Type@{Get\+Constraint\+Type}}
+\index{Get\+Constraint\+Type@{Get\+Constraint\+Type}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Type()}{GetConstraintType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} Fbx\+Constraint\+Rotation\+::\+Get\+Constraint\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Access the type of the constraint. \begin{DoxyReturn}{戻り値}
+This type of the constraint. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_rotation_ae7d40f146877a4defd18cd41692fa78e}\label{class_fbx_constraint_rotation_ae7d40f146877a4defd18cd41692fa78e}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Set\+Constrained\+Object@{Set\+Constrained\+Object}}
+\index{Set\+Constrained\+Object@{Set\+Constrained\+Object}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Set\+Constrained\+Object()}{SetConstrainedObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Rotation\+::\+Set\+Constrained\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set the constrained object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The constrained object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_rotation_a2fc6ae9614bcc41039d4abd37d3186aa}\label{class_fbx_constraint_rotation_a2fc6ae9614bcc41039d4abd37d3186aa}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!AffectX@{AffectX}}
+\index{AffectX@{AffectX}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{AffectX}{AffectX}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Rotation\+::\+AffectX}
+
+This property handles whether to affect x axis. Default value is true. \mbox{\Hypertarget{class_fbx_constraint_rotation_a8b611c9fd76921a2780254dee0d33870}\label{class_fbx_constraint_rotation_a8b611c9fd76921a2780254dee0d33870}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!AffectY@{AffectY}}
+\index{AffectY@{AffectY}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{AffectY}{AffectY}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Rotation\+::\+AffectY}
+
+This property handles whether to affect y axis. Default value is true. \mbox{\Hypertarget{class_fbx_constraint_rotation_af7a3d171bfeb0e5fa72d292756c64848}\label{class_fbx_constraint_rotation_af7a3d171bfeb0e5fa72d292756c64848}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!AffectZ@{AffectZ}}
+\index{AffectZ@{AffectZ}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{AffectZ}{AffectZ}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Rotation\+::\+AffectZ}
+
+This property handles whether to affect z axis. Default value is true. \mbox{\Hypertarget{class_fbx_constraint_rotation_aee0715edab2a99b52a40f35aba1d662c}\label{class_fbx_constraint_rotation_aee0715edab2a99b52a40f35aba1d662c}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Constrained\+Object@{Constrained\+Object}}
+\index{Constrained\+Object@{Constrained\+Object}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Constrained\+Object}{ConstrainedObject}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Rotation\+::\+Constrained\+Object}
+
+This property handles constraint target objects. \mbox{\Hypertarget{class_fbx_constraint_rotation_ac9bb2a7227a6034425e06395a03d57a6}\label{class_fbx_constraint_rotation_ac9bb2a7227a6034425e06395a03d57a6}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Constraint\+Sources@{Constraint\+Sources}}
+\index{Constraint\+Sources@{Constraint\+Sources}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Constraint\+Sources}{ConstraintSources}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Rotation\+::\+Constraint\+Sources}
+
+This property handles constraint source objects. \mbox{\Hypertarget{class_fbx_constraint_rotation_aa0bb0aa79b3f983ede4a376f12adb1c9}\label{class_fbx_constraint_rotation_aa0bb0aa79b3f983ede4a376f12adb1c9}} 
+\index{Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}!Rotation@{Rotation}}
+\index{Rotation@{Rotation}!Fbx\+Constraint\+Rotation@{Fbx\+Constraint\+Rotation}}
+\subsubsection{\texorpdfstring{Rotation}{Rotation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Constraint\+Rotation\+::\+Rotation}
+
+This property handles rotation offset. Default value is (0, 0, 0). 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxconstraintrotation_8h}{fbxconstraintrotation.\+h}\end{DoxyCompactItemize}

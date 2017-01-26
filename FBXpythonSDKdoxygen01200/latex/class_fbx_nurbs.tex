@@ -1,0 +1,715 @@
+\hypertarget{class_fbx_nurbs}{}\section{Fbx\+Nurbs クラス}
+\label{class_fbx_nurbs}\index{Fbx\+Nurbs@{Fbx\+Nurbs}}
+
+
+{\ttfamily \#include $<$fbxnurbs.\+h$>$}
+
+
+
+Fbx\+Nurbs の継承関係図
+% FIG 0
+
+
+Fbx\+Nurbs 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66}{E\+Error\+Code} \{ \newline
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a01fe54ebb22d68039b935dc12cb21b83}{e\+Nurbs\+Type\+Unknown}, 
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66aaaae33f0afccdfa95a07c122a38ebf33}{e\+Wrong\+Number\+Of\+Control\+Point}, 
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a4b31ff7d5ef981f92c5feff4a22f486b}{e\+Weight\+Too\+Small}, 
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a0181fd0c91ed8468c636035f64bd061d}{e\+U\+Multiplicity\+Vector\+Error}, 
+\newline
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a0798e68b10240a4d23aaafbf36b5d613}{e\+V\+Multiplicity\+Vector\+Error}, 
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a2d3f400bc97c95a4168ece3f64910bbf}{e\+U\+Knot\+Vector\+Error}, 
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a6c64868e85a2725eedd4e3fa4e0c0263}{e\+V\+Knot\+Vector\+Error}, 
+\hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a64ca63e4e6ce550332041256bc6f7227}{e\+Error\+Count}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_nurbs_a6c810e3a50538b346cbbf61338dca907}{Get\+Attribute\+Type} () const
+\begin{DoxyCompactList}\small\item\em Returns the Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Nurbs node attribute type. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_nurbs_a2796c708ff8e01b1fd7d1f4d0a02cb5f}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the N\+U\+R\+BS surface its default values. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_nurbs_ac7c9a9018b4fdbe72b258a2fa0a3367d}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual void \hyperlink{class_fbx_nurbs_a46f56bfb4c6ffc90b79b2e0b81c89880}{Set\+Control\+Point\+At} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Ctrl\+Point, int p\+Index)
+\item 
+virtual void \hyperlink{class_fbx_nurbs_aa0ff0dd79f86ab4d6976b73d003fd6be}{Init\+Control\+Points} (int p\+Count)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_nurbs_a1d62f29d7315e343d5c0c414dab3fabb}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_nurbs_a8a5ea388bc948e47ab65e1705f98f402}{Destruct} (bool p\+Recursive)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} \hyperlink{class_fbx_nurbs_a0cb4fa6c97036906cc3ce7d1e6b6d09c}{m\+U\+Order}
+\item 
+\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} \hyperlink{class_fbx_nurbs_a5e4a956f463a54a8c5b966f0799280c5}{m\+V\+Order}
+\item 
+int \hyperlink{class_fbx_nurbs_aa8a85cd84b37efadfa8e0f10e97310a0}{m\+U\+Count}
+\item 
+int \hyperlink{class_fbx_nurbs_ab58fe4ae308396034fd197cbd4982c22}{m\+V\+Count}
+\item 
+int \hyperlink{class_fbx_nurbs_a6153a67656206737889e0a80a838653e}{m\+U\+Step}
+\item 
+int \hyperlink{class_fbx_nurbs_a209ec06ea941b6dea3f68d85b3461d21}{m\+V\+Step}
+\item 
+\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} \hyperlink{class_fbx_nurbs_a2af23d4c207444f0999651135c118e5c}{m\+U\+Type}
+\item 
+\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} \hyperlink{class_fbx_nurbs_ad973e3ca7ca7a3d6d3be94e46153a55b}{m\+V\+Type}
+\item 
+double $\ast$ \hyperlink{class_fbx_nurbs_a3247102a0eec294db52c9b1846d654c6}{m\+U\+Knot\+Vector}
+\item 
+double $\ast$ \hyperlink{class_fbx_nurbs_ab825dd3874f212d1f2761656cb9c3beb}{m\+V\+Knot\+Vector}
+\item 
+int $\ast$ \hyperlink{class_fbx_nurbs_acbd2ab32dc83c8d1292bc21ae251c81d}{m\+U\+Multiplicity\+Vector}
+\item 
+int $\ast$ \hyperlink{class_fbx_nurbs_adfd469d31dde3a8bedb17daaa6c0f38d}{m\+V\+Multiplicity\+Vector}
+\item 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{E\+Surface\+Mode} \hyperlink{class_fbx_nurbs_a50d464f76ef73674c6aca642f87d3134}{m\+Surface\+Mode}
+\item 
+bool \hyperlink{class_fbx_nurbs_aa25c7dc83aab7ce486927e5d247fbc50}{m\+Apply\+Flip\+UV}
+\item 
+bool \hyperlink{class_fbx_nurbs_a5776808fc0329e7634bd88eb5b1c5db0}{m\+Apply\+Flip\+Links}
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_nurbs_a2c65afd59c2bab21d92824fbe4422545}{Fbx\+Geometry\+Converter}
+\end{DoxyCompactItemize}
+\subsection*{N\+U\+R\+BS surface properties}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} \{ \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a74db20646f0e36e6a96fddbf76f4bacd}{e\+Periodic}, 
+\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a14f1b70767443212f08948e5fbb59946}{e\+Closed}, 
+\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a7a7a84326a724c57e0878258c9b25864}{e\+Open}
+ \}
+\item 
+void \hyperlink{class_fbx_nurbs_a6687f58ab39b07a3ce686992e5d8c9f8}{Set\+Surface\+Mode} (\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode} p\+Mode)
+\item 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{E\+Surface\+Mode} \hyperlink{class_fbx_nurbs_a9b482acc4ada0ebd438e8fde99c54b7e}{Get\+Surface\+Mode} () const
+\item 
+void \hyperlink{class_fbx_nurbs_a96a933ed29981ac358b4d3ed63ed3b72}{Init\+Control\+Points} (int p\+U\+Count, \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} p\+U\+Type, int p\+V\+Count, \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} p\+V\+Type)
+\item 
+int \hyperlink{class_fbx_nurbs_aa1b6891345f56dd4e30780853ec4721a}{Get\+U\+Count} () const
+\item 
+int \hyperlink{class_fbx_nurbs_a0592be67af1b1e3f663964f932f12df4}{Get\+V\+Count} () const
+\item 
+\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} \hyperlink{class_fbx_nurbs_a3e11b91a48634ca8a7e082f80aae9013}{Get\+Nurbs\+U\+Type} () const
+\item 
+\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} \hyperlink{class_fbx_nurbs_a07928e9890078aa451609132d263167c}{Get\+Nurbs\+V\+Type} () const
+\item 
+int \hyperlink{class_fbx_nurbs_aea79ac3dfc5c0d5071cb7cc1d97f5a70}{Get\+U\+Knot\+Count} () const
+\item 
+double $\ast$ \hyperlink{class_fbx_nurbs_a114b6f34a8d2438f3916a6ac7e96af2a}{Get\+U\+Knot\+Vector} () const
+\item 
+int \hyperlink{class_fbx_nurbs_afd3187f4ef9e1e02b41f14bdb1a4bcbc}{Get\+V\+Knot\+Count} () const
+\item 
+double $\ast$ \hyperlink{class_fbx_nurbs_ab47ef5f3ec84fa392c38c1d0d3b2ca77}{Get\+V\+Knot\+Vector} () const
+\item 
+int $\ast$ \hyperlink{class_fbx_nurbs_a0ee516428900821e7d97aa745753d0b4}{Get\+U\+Multiplicity\+Vector} () const
+\item 
+int $\ast$ \hyperlink{class_fbx_nurbs_a02bdc93c80499e43de757d4772270dac}{Get\+V\+Multiplicity\+Vector} () const
+\item 
+void \hyperlink{class_fbx_nurbs_a50b478b4c7feab9bf41b805f9893c598}{Set\+Order} (\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+U\+Order, \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+V\+Order)
+\item 
+int \hyperlink{class_fbx_nurbs_a7312be9277b3ca4bf10a723585bd6663}{Get\+U\+Order} () const
+\item 
+int \hyperlink{class_fbx_nurbs_a7c7aff46a8e42db3d788f5a4c4d50797}{Get\+V\+Order} () const
+\item 
+void \hyperlink{class_fbx_nurbs_a4b60585e7190d50e95947ddfcafd39a7}{Set\+Step} (int p\+U\+Step, int p\+V\+Step)
+\item 
+int \hyperlink{class_fbx_nurbs_a99382e737bd84391f67b00ed6866e1dd}{Get\+U\+Step} () const
+\item 
+int \hyperlink{class_fbx_nurbs_abd23a5b818a3227b9de8a4aec12d2e1b}{Get\+V\+Step} () const
+\item 
+int \hyperlink{class_fbx_nurbs_aeac9fe4b1bd0deeb34854a968c852e0e}{Get\+U\+Span\+Count} () const
+\item 
+int \hyperlink{class_fbx_nurbs_a7e3517eab37efde3ed70789fdfc62dfe}{Get\+V\+Span\+Count} () const
+\end{DoxyCompactItemize}
+\subsection*{N\+U\+R\+BS export flags}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_nurbs_ab5f463575449cbc5734258f061f3c9ba}{Set\+Apply\+Flip\+UV} (bool p\+Flag)
+\item 
+bool \hyperlink{class_fbx_nurbs_a1ad0c6471229c9e67da843f0895cb055}{Get\+Apply\+Flip\+UV} () const
+\item 
+void \hyperlink{class_fbx_nurbs_a9e251f61538745bef6ebd5560f52a61f}{Set\+Apply\+Flip\+Links} (bool p\+Flag)
+\item 
+bool \hyperlink{class_fbx_nurbs_a7b3adc47808af1078b0d3865cc464b4a}{Get\+Apply\+Flip\+Links} () const
+\item 
+bool \hyperlink{class_fbx_nurbs_a5078e2c4f27160149e19cac9c0352ceb}{Get\+Apply\+Flip} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+A N\+U\+R\+BS surface is a type of parametric geometry. A N\+U\+R\+BS surface is defined by the order, form, knot vector and control points in the U and V coordinates.
+
+For more information on the meaning of form, knot vectors and control points, see the \hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} documentation. The same rules apply for the N\+U\+R\+BS curves and N\+U\+R\+BS surfaces, but N\+U\+R\+BS surfaces have two dimensions (U and V). 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!E\+Error\+Code@{E\+Error\+Code}}
+\index{E\+Error\+Code@{E\+Error\+Code}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{E\+Error\+Code}{EErrorCode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66}{Fbx\+Nurbs\+::\+E\+Error\+Code}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Nurbs\+Type\+Unknown@{e\+Nurbs\+Type\+Unknown}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Nurbs\+Type\+Unknown@{e\+Nurbs\+Type\+Unknown}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a01fe54ebb22d68039b935dc12cb21b83}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a01fe54ebb22d68039b935dc12cb21b83}} 
+e\+Nurbs\+Type\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Wrong\+Number\+Of\+Control\+Point@{e\+Wrong\+Number\+Of\+Control\+Point}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Wrong\+Number\+Of\+Control\+Point@{e\+Wrong\+Number\+Of\+Control\+Point}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66aaaae33f0afccdfa95a07c122a38ebf33}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66aaaae33f0afccdfa95a07c122a38ebf33}} 
+e\+Wrong\+Number\+Of\+Control\+Point&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Weight\+Too\+Small@{e\+Weight\+Too\+Small}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Weight\+Too\+Small@{e\+Weight\+Too\+Small}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a4b31ff7d5ef981f92c5feff4a22f486b}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a4b31ff7d5ef981f92c5feff4a22f486b}} 
+e\+Weight\+Too\+Small&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+U\+Multiplicity\+Vector\+Error@{e\+U\+Multiplicity\+Vector\+Error}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+U\+Multiplicity\+Vector\+Error@{e\+U\+Multiplicity\+Vector\+Error}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a0181fd0c91ed8468c636035f64bd061d}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a0181fd0c91ed8468c636035f64bd061d}} 
+e\+U\+Multiplicity\+Vector\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+V\+Multiplicity\+Vector\+Error@{e\+V\+Multiplicity\+Vector\+Error}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+V\+Multiplicity\+Vector\+Error@{e\+V\+Multiplicity\+Vector\+Error}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a0798e68b10240a4d23aaafbf36b5d613}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a0798e68b10240a4d23aaafbf36b5d613}} 
+e\+V\+Multiplicity\+Vector\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+U\+Knot\+Vector\+Error@{e\+U\+Knot\+Vector\+Error}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+U\+Knot\+Vector\+Error@{e\+U\+Knot\+Vector\+Error}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a2d3f400bc97c95a4168ece3f64910bbf}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a2d3f400bc97c95a4168ece3f64910bbf}} 
+e\+U\+Knot\+Vector\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+V\+Knot\+Vector\+Error@{e\+V\+Knot\+Vector\+Error}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+V\+Knot\+Vector\+Error@{e\+V\+Knot\+Vector\+Error}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a6c64868e85a2725eedd4e3fa4e0c0263}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a6c64868e85a2725eedd4e3fa4e0c0263}} 
+e\+V\+Knot\+Vector\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Error\+Count@{e\+Error\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Error\+Count@{e\+Error\+Count}}}\mbox{\Hypertarget{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a64ca63e4e6ce550332041256bc6f7227}\label{class_fbx_nurbs_a1ff85864ee6533b4b6d43537ec625a66a64ca63e4e6ce550332041256bc6f7227}} 
+e\+Error\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}\label{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{Fbx\+Nurbs\+::\+E\+Type}}
+
+N\+U\+R\+BS types. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Periodic@{e\+Periodic}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Periodic@{e\+Periodic}}}\mbox{\Hypertarget{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a74db20646f0e36e6a96fddbf76f4bacd}\label{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a74db20646f0e36e6a96fddbf76f4bacd}} 
+e\+Periodic&Periodic. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Closed@{e\+Closed}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Closed@{e\+Closed}}}\mbox{\Hypertarget{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a14f1b70767443212f08948e5fbb59946}\label{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a14f1b70767443212f08948e5fbb59946}} 
+e\+Closed&Closed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Open@{e\+Open}!Fbx\+Nurbs@{Fbx\+Nurbs}}\index{Fbx\+Nurbs@{Fbx\+Nurbs}!e\+Open@{e\+Open}}}\mbox{\Hypertarget{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a7a7a84326a724c57e0878258c9b25864}\label{class_fbx_nurbs_a16d9562676c9d3511503551790c55643a7a7a84326a724c57e0878258c9b25864}} 
+e\+Open&Open. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_nurbs_a1d62f29d7315e343d5c0c414dab3fabb}\label{class_fbx_nurbs_a1d62f29d7315e343d5c0c414dab3fabb}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Nurbs\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_a26ca96a86f17783c45ff83b33d2b5324}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_nurbs_ac7c9a9018b4fdbe72b258a2fa0a3367d}\label{class_fbx_nurbs_ac7c9a9018b4fdbe72b258a2fa0a3367d}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Nurbs\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_nurbs_a8a5ea388bc948e47ab65e1705f98f402}\label{class_fbx_nurbs_a8a5ea388bc948e47ab65e1705f98f402}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Nurbs\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_a07e94f7801067d66429afbf1799795cd}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_nurbs_a5078e2c4f27160149e19cac9c0352ceb}\label{class_fbx_nurbs_a5078e2c4f27160149e19cac9c0352ceb}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Apply\+Flip@{Get\+Apply\+Flip}}
+\index{Get\+Apply\+Flip@{Get\+Apply\+Flip}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Apply\+Flip()}{GetApplyFlip()}}
+{\footnotesize\ttfamily bool Fbx\+Nurbs\+::\+Get\+Apply\+Flip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns flip flags state. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if we need to flip either the UV or the links. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a7b3adc47808af1078b0d3865cc464b4a}\label{class_fbx_nurbs_a7b3adc47808af1078b0d3865cc464b4a}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Apply\+Flip\+Links@{Get\+Apply\+Flip\+Links}}
+\index{Get\+Apply\+Flip\+Links@{Get\+Apply\+Flip\+Links}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Apply\+Flip\+Links()}{GetApplyFlipLinks()}}
+{\footnotesize\ttfamily bool Fbx\+Nurbs\+::\+Get\+Apply\+Flip\+Links (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the flag that induces link flipping at export. \begin{DoxyReturn}{戻り値}
+The current state of the link flip flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a1ad0c6471229c9e67da843f0895cb055}\label{class_fbx_nurbs_a1ad0c6471229c9e67da843f0895cb055}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Apply\+Flip\+UV@{Get\+Apply\+Flip\+UV}}
+\index{Get\+Apply\+Flip\+UV@{Get\+Apply\+Flip\+UV}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Apply\+Flip\+U\+V()}{GetApplyFlipUV()}}
+{\footnotesize\ttfamily bool Fbx\+Nurbs\+::\+Get\+Apply\+Flip\+UV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the flag that induces UV flipping at export. \begin{DoxyReturn}{戻り値}
+The current state of the UV flip flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a6c810e3a50538b346cbbf61338dca907}\label{class_fbx_nurbs_a6c810e3a50538b346cbbf61338dca907}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Nurbs\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Nurbs node attribute type. 
+
+
+
+\hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_nurbs_a3e11b91a48634ca8a7e082f80aae9013}\label{class_fbx_nurbs_a3e11b91a48634ca8a7e082f80aae9013}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Nurbs\+U\+Type@{Get\+Nurbs\+U\+Type}}
+\index{Get\+Nurbs\+U\+Type@{Get\+Nurbs\+U\+Type}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Nurbs\+U\+Type()}{GetNurbsUType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} Fbx\+Nurbs\+::\+Get\+Nurbs\+U\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the U-\/dimension N\+U\+R\+BS type. \begin{DoxyReturn}{戻り値}
+N\+U\+R\+BS type identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a07928e9890078aa451609132d263167c}\label{class_fbx_nurbs_a07928e9890078aa451609132d263167c}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Nurbs\+V\+Type@{Get\+Nurbs\+V\+Type}}
+\index{Get\+Nurbs\+V\+Type@{Get\+Nurbs\+V\+Type}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Nurbs\+V\+Type()}{GetNurbsVType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} Fbx\+Nurbs\+::\+Get\+Nurbs\+V\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the V-\/dimension N\+U\+R\+BS type. \begin{DoxyReturn}{戻り値}
+N\+U\+R\+BS type identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a9b482acc4ada0ebd438e8fde99c54b7e}\label{class_fbx_nurbs_a9b482acc4ada0ebd438e8fde99c54b7e}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+Surface\+Mode@{Get\+Surface\+Mode}}
+\index{Get\+Surface\+Mode@{Get\+Surface\+Mode}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Mode()}{GetSurfaceMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{E\+Surface\+Mode} Fbx\+Nurbs\+::\+Get\+Surface\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the surface mode. \begin{DoxyReturn}{戻り値}
+The surface mode identifier that is currently set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_aa1b6891345f56dd4e30780853ec4721a}\label{class_fbx_nurbs_aa1b6891345f56dd4e30780853ec4721a}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Count@{Get\+U\+Count}}
+\index{Get\+U\+Count@{Get\+U\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Count()}{GetUCount()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+U\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of U-\/dimension control points. \begin{DoxyReturn}{戻り値}
+Number of U-\/dimension control points. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_aea79ac3dfc5c0d5071cb7cc1d97f5a70}\label{class_fbx_nurbs_aea79ac3dfc5c0d5071cb7cc1d97f5a70}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Knot\+Count@{Get\+U\+Knot\+Count}}
+\index{Get\+U\+Knot\+Count@{Get\+U\+Knot\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Knot\+Count()}{GetUKnotCount()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+U\+Knot\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of elements in the U-\/dimension knot vector. See \hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} for more information. \begin{DoxyReturn}{戻り値}
+The number of elements in the U-\/dimension knot vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a114b6f34a8d2438f3916a6ac7e96af2a}\label{class_fbx_nurbs_a114b6f34a8d2438f3916a6ac7e96af2a}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Knot\+Vector@{Get\+U\+Knot\+Vector}}
+\index{Get\+U\+Knot\+Vector@{Get\+U\+Knot\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Knot\+Vector()}{GetUKnotVector()}}
+{\footnotesize\ttfamily double$\ast$ Fbx\+Nurbs\+::\+Get\+U\+Knot\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the U-\/dimension knot vector. \begin{DoxyReturn}{戻り値}
+Pointer to the U-\/dimension knot vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a0ee516428900821e7d97aa745753d0b4}\label{class_fbx_nurbs_a0ee516428900821e7d97aa745753d0b4}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Multiplicity\+Vector@{Get\+U\+Multiplicity\+Vector}}
+\index{Get\+U\+Multiplicity\+Vector@{Get\+U\+Multiplicity\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Multiplicity\+Vector()}{GetUMultiplicityVector()}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Nurbs\+::\+Get\+U\+Multiplicity\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns multiplicity of U-\/dimension control points. \begin{DoxyReturn}{戻り値}
+Pointer to the array of multiplicity values. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The length of this vector is equal to the U count. Its elements are set to 1 by default. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_nurbs_a7312be9277b3ca4bf10a723585bd6663}\label{class_fbx_nurbs_a7312be9277b3ca4bf10a723585bd6663}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Order@{Get\+U\+Order}}
+\index{Get\+U\+Order@{Get\+U\+Order}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Order()}{GetUOrder()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+U\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the N\+U\+R\+BS order in U dimension. \begin{DoxyReturn}{戻り値}
+N\+U\+R\+BS order in U dimension. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_aeac9fe4b1bd0deeb34854a968c852e0e}\label{class_fbx_nurbs_aeac9fe4b1bd0deeb34854a968c852e0e}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Span\+Count@{Get\+U\+Span\+Count}}
+\index{Get\+U\+Span\+Count@{Get\+U\+Span\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Span\+Count()}{GetUSpanCount()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+U\+Span\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Calculates the number of surface spans in the U dimension. See \hyperlink{class_fbx_nurbs_curve_acb1cf2016f20b2a0c8df382046c7d3ea}{Fbx\+Nurbs\+Curve\+::\+Get\+Span\+Count()} for more information. \begin{DoxyReturn}{戻り値}
+The number of spans in the U dimension if the surface has been initialized. If the spans have not been initialized, returns -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a99382e737bd84391f67b00ed6866e1dd}\label{class_fbx_nurbs_a99382e737bd84391f67b00ed6866e1dd}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+U\+Step@{Get\+U\+Step}}
+\index{Get\+U\+Step@{Get\+U\+Step}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+U\+Step()}{GetUStep()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+U\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of divisions between adjacent control points in U dimension. \begin{DoxyReturn}{戻り値}
+Steps in U dimension. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a0592be67af1b1e3f663964f932f12df4}\label{class_fbx_nurbs_a0592be67af1b1e3f663964f932f12df4}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Count@{Get\+V\+Count}}
+\index{Get\+V\+Count@{Get\+V\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Count()}{GetVCount()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+V\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of V-\/dimension control points. \begin{DoxyReturn}{戻り値}
+Number of V-\/dimension control points. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_afd3187f4ef9e1e02b41f14bdb1a4bcbc}\label{class_fbx_nurbs_afd3187f4ef9e1e02b41f14bdb1a4bcbc}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Knot\+Count@{Get\+V\+Knot\+Count}}
+\index{Get\+V\+Knot\+Count@{Get\+V\+Knot\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Knot\+Count()}{GetVKnotCount()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+V\+Knot\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of elements in the V-\/dimension knot vector. See \hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} for more information. \begin{DoxyReturn}{戻り値}
+The number of elements in the V-\/dimension knot vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_ab47ef5f3ec84fa392c38c1d0d3b2ca77}\label{class_fbx_nurbs_ab47ef5f3ec84fa392c38c1d0d3b2ca77}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Knot\+Vector@{Get\+V\+Knot\+Vector}}
+\index{Get\+V\+Knot\+Vector@{Get\+V\+Knot\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Knot\+Vector()}{GetVKnotVector()}}
+{\footnotesize\ttfamily double$\ast$ Fbx\+Nurbs\+::\+Get\+V\+Knot\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the V-\/dimension knot vector. \begin{DoxyReturn}{戻り値}
+Pointer to the V-\/dimension knot vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a02bdc93c80499e43de757d4772270dac}\label{class_fbx_nurbs_a02bdc93c80499e43de757d4772270dac}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Multiplicity\+Vector@{Get\+V\+Multiplicity\+Vector}}
+\index{Get\+V\+Multiplicity\+Vector@{Get\+V\+Multiplicity\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Multiplicity\+Vector()}{GetVMultiplicityVector()}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Nurbs\+::\+Get\+V\+Multiplicity\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns multiplicity of V-\/dimension control points. \begin{DoxyReturn}{戻り値}
+Pointer to the array of multiplicity values. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The length of this vector is equal to the V count. Its elements are set to 1 by default. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_nurbs_a7c7aff46a8e42db3d788f5a4c4d50797}\label{class_fbx_nurbs_a7c7aff46a8e42db3d788f5a4c4d50797}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Order@{Get\+V\+Order}}
+\index{Get\+V\+Order@{Get\+V\+Order}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Order()}{GetVOrder()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+V\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the N\+U\+R\+BS order in V dimension. \begin{DoxyReturn}{戻り値}
+N\+U\+R\+BS order in V dimension. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a7e3517eab37efde3ed70789fdfc62dfe}\label{class_fbx_nurbs_a7e3517eab37efde3ed70789fdfc62dfe}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Span\+Count@{Get\+V\+Span\+Count}}
+\index{Get\+V\+Span\+Count@{Get\+V\+Span\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Span\+Count()}{GetVSpanCount()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+V\+Span\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Calculates the number of surface spans in the V dimension. See \hyperlink{class_fbx_nurbs_curve_acb1cf2016f20b2a0c8df382046c7d3ea}{Fbx\+Nurbs\+Curve\+::\+Get\+Span\+Count()} for more information. \begin{DoxyReturn}{戻り値}
+The number of spans in the V dimension if the surface has been initialized. If the spans have not been initialized, returns -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_abd23a5b818a3227b9de8a4aec12d2e1b}\label{class_fbx_nurbs_abd23a5b818a3227b9de8a4aec12d2e1b}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Get\+V\+Step@{Get\+V\+Step}}
+\index{Get\+V\+Step@{Get\+V\+Step}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Get\+V\+Step()}{GetVStep()}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::\+Get\+V\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of divisions between adjacent control points in V dimension. \begin{DoxyReturn}{戻り値}
+Steps in V dimension. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_nurbs_a96a933ed29981ac358b4d3ed63ed3b72}\label{class_fbx_nurbs_a96a933ed29981ac358b4d3ed63ed3b72}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Init\+Control\+Points@{Init\+Control\+Points}}
+\index{Init\+Control\+Points@{Init\+Control\+Points}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Init\+Control\+Points()}{InitControlPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Init\+Control\+Points (\begin{DoxyParamCaption}\item[{int}]{p\+U\+Count,  }\item[{\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type}}]{p\+U\+Type,  }\item[{int}]{p\+V\+Count,  }\item[{\hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type}}]{p\+V\+Type }\end{DoxyParamCaption})}
+
+Allocates memory space for an array of control points as well as knot and multiplicity vectors. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+Count} & Number of U-\/dimension control points. \\
+\hline
+{\em p\+U\+Type} & U-\/dimension N\+U\+R\+BS type. \\
+\hline
+{\em p\+V\+Count} & Number of V-\/dimension control points. \\
+\hline
+{\em p\+V\+Type} & V-\/dimension N\+U\+R\+BS type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Always call this function after \hyperlink{class_fbx_nurbs_a50b478b4c7feab9bf41b805f9893c598}{Fbx\+Nurbs\+::\+Set\+Order()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_nurbs_aa0ff0dd79f86ab4d6976b73d003fd6be}\label{class_fbx_nurbs_aa0ff0dd79f86ab4d6976b73d003fd6be}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Init\+Control\+Points@{Init\+Control\+Points}}
+\index{Init\+Control\+Points@{Init\+Control\+Points}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Init\+Control\+Points()}{InitControlPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Fbx\+Nurbs\+::\+Init\+Control\+Points (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allocates memory space for the array of control points. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of control points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Any previously allocated array of control points will be cleared. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}{Fbx\+Geometry\+Base}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_nurbs_a2796c708ff8e01b1fd7d1f4d0a02cb5f}\label{class_fbx_nurbs_a2796c708ff8e01b1fd7d1f4d0a02cb5f}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the N\+U\+R\+BS surface its default values. 
+
+\mbox{\Hypertarget{class_fbx_nurbs_a9e251f61538745bef6ebd5560f52a61f}\label{class_fbx_nurbs_a9e251f61538745bef6ebd5560f52a61f}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Set\+Apply\+Flip\+Links@{Set\+Apply\+Flip\+Links}}
+\index{Set\+Apply\+Flip\+Links@{Set\+Apply\+Flip\+Links}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Set\+Apply\+Flip\+Links()}{SetApplyFlipLinks()}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Set\+Apply\+Flip\+Links (\begin{DoxyParamCaption}\item[{bool}]{p\+Flag }\end{DoxyParamCaption})}
+
+Sets the flag that induces link flipping at export. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & If {\ttfamily true}, the links control points indices are flipped. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_nurbs_ab5f463575449cbc5734258f061f3c9ba}\label{class_fbx_nurbs_ab5f463575449cbc5734258f061f3c9ba}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Set\+Apply\+Flip\+UV@{Set\+Apply\+Flip\+UV}}
+\index{Set\+Apply\+Flip\+UV@{Set\+Apply\+Flip\+UV}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Set\+Apply\+Flip\+U\+V()}{SetApplyFlipUV()}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Set\+Apply\+Flip\+UV (\begin{DoxyParamCaption}\item[{bool}]{p\+Flag }\end{DoxyParamCaption})}
+
+Sets the flag that induces UV flipping at export. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & If {\ttfamily true}, UV flipping occurs. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_nurbs_a46f56bfb4c6ffc90b79b2e0b81c89880}\label{class_fbx_nurbs_a46f56bfb4c6ffc90b79b2e0b81c89880}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Set\+Control\+Point\+At@{Set\+Control\+Point\+At}}
+\index{Set\+Control\+Point\+At@{Set\+Control\+Point\+At}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+At()}{SetControlPointAt()}}
+{\footnotesize\ttfamily virtual void Fbx\+Nurbs\+::\+Set\+Control\+Point\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Ctrl\+Point,  }\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the control point at a specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Ctrl\+Point} & The value of the control point. \\
+\hline
+{\em p\+Index} & The specified index of the control point.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the array is not big enough to store the value at the specified index, it will be automatically resized to accommodate the new entry. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_ab2d5567b073e6b9f4feb5bb428fa99e4}{Fbx\+Geometry\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_nurbs_a50b478b4c7feab9bf41b805f9893c598}\label{class_fbx_nurbs_a50b478b4c7feab9bf41b805f9893c598}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Set\+Order@{Set\+Order}}
+\index{Set\+Order@{Set\+Order}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Set\+Order()}{SetOrder()}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Set\+Order (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+U\+Order,  }\item[{\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+V\+Order }\end{DoxyParamCaption})}
+
+Sets the order of the N\+U\+R\+BS surface. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+Order} & N\+U\+R\+BS order in U dimension. \\
+\hline
+{\em p\+V\+Order} & N\+U\+R\+BS order in V dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_nurbs_a4b60585e7190d50e95947ddfcafd39a7}\label{class_fbx_nurbs_a4b60585e7190d50e95947ddfcafd39a7}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Set\+Step@{Set\+Step}}
+\index{Set\+Step@{Set\+Step}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Set\+Step()}{SetStep()}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Set\+Step (\begin{DoxyParamCaption}\item[{int}]{p\+U\+Step,  }\item[{int}]{p\+V\+Step }\end{DoxyParamCaption})}
+
+Sets the N\+U\+R\+BS step. The step value is the number of divisions between adjacent control points. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+Step} & Steps in U dimension. \\
+\hline
+{\em p\+V\+Step} & Steps in V dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_nurbs_a6687f58ab39b07a3ce686992e5d8c9f8}\label{class_fbx_nurbs_a6687f58ab39b07a3ce686992e5d8c9f8}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Set\+Surface\+Mode@{Set\+Surface\+Mode}}
+\index{Set\+Surface\+Mode@{Set\+Surface\+Mode}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Set\+Surface\+Mode()}{SetSurfaceMode()}}
+{\footnotesize\ttfamily void Fbx\+Nurbs\+::\+Set\+Surface\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode}}]{p\+Mode }\end{DoxyParamCaption})}
+
+Sets the surface mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Mode} & Surface mode identifier (see class \hyperlink{class_fbx_geometry}{Fbx\+Geometry}) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_nurbs_a2c65afd59c2bab21d92824fbe4422545}\label{class_fbx_nurbs_a2c65afd59c2bab21d92824fbe4422545}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Converter}{FbxGeometryConverter}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_geometry_converter}{Fbx\+Geometry\+Converter}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_nurbs_a5776808fc0329e7634bd88eb5b1c5db0}\label{class_fbx_nurbs_a5776808fc0329e7634bd88eb5b1c5db0}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+Apply\+Flip\+Links@{m\+Apply\+Flip\+Links}}
+\index{m\+Apply\+Flip\+Links@{m\+Apply\+Flip\+Links}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+Apply\+Flip\+Links}{mApplyFlipLinks}}
+{\footnotesize\ttfamily bool Fbx\+Nurbs\+::m\+Apply\+Flip\+Links\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_aa25c7dc83aab7ce486927e5d247fbc50}\label{class_fbx_nurbs_aa25c7dc83aab7ce486927e5d247fbc50}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+Apply\+Flip\+UV@{m\+Apply\+Flip\+UV}}
+\index{m\+Apply\+Flip\+UV@{m\+Apply\+Flip\+UV}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+Apply\+Flip\+UV}{mApplyFlipUV}}
+{\footnotesize\ttfamily bool Fbx\+Nurbs\+::m\+Apply\+Flip\+UV\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a50d464f76ef73674c6aca642f87d3134}\label{class_fbx_nurbs_a50d464f76ef73674c6aca642f87d3134}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+Surface\+Mode@{m\+Surface\+Mode}}
+\index{m\+Surface\+Mode@{m\+Surface\+Mode}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+Surface\+Mode}{mSurfaceMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{E\+Surface\+Mode} Fbx\+Nurbs\+::m\+Surface\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_aa8a85cd84b37efadfa8e0f10e97310a0}\label{class_fbx_nurbs_aa8a85cd84b37efadfa8e0f10e97310a0}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+U\+Count@{m\+U\+Count}}
+\index{m\+U\+Count@{m\+U\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+U\+Count}{mUCount}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::m\+U\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a3247102a0eec294db52c9b1846d654c6}\label{class_fbx_nurbs_a3247102a0eec294db52c9b1846d654c6}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+U\+Knot\+Vector@{m\+U\+Knot\+Vector}}
+\index{m\+U\+Knot\+Vector@{m\+U\+Knot\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+U\+Knot\+Vector}{mUKnotVector}}
+{\footnotesize\ttfamily double$\ast$ Fbx\+Nurbs\+::m\+U\+Knot\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_acbd2ab32dc83c8d1292bc21ae251c81d}\label{class_fbx_nurbs_acbd2ab32dc83c8d1292bc21ae251c81d}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+U\+Multiplicity\+Vector@{m\+U\+Multiplicity\+Vector}}
+\index{m\+U\+Multiplicity\+Vector@{m\+U\+Multiplicity\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+U\+Multiplicity\+Vector}{mUMultiplicityVector}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Nurbs\+::m\+U\+Multiplicity\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a0cb4fa6c97036906cc3ce7d1e6b6d09c}\label{class_fbx_nurbs_a0cb4fa6c97036906cc3ce7d1e6b6d09c}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+U\+Order@{m\+U\+Order}}
+\index{m\+U\+Order@{m\+U\+Order}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+U\+Order}{mUOrder}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} Fbx\+Nurbs\+::m\+U\+Order\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a6153a67656206737889e0a80a838653e}\label{class_fbx_nurbs_a6153a67656206737889e0a80a838653e}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+U\+Step@{m\+U\+Step}}
+\index{m\+U\+Step@{m\+U\+Step}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+U\+Step}{mUStep}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::m\+U\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a2af23d4c207444f0999651135c118e5c}\label{class_fbx_nurbs_a2af23d4c207444f0999651135c118e5c}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+U\+Type@{m\+U\+Type}}
+\index{m\+U\+Type@{m\+U\+Type}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+U\+Type}{mUType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} Fbx\+Nurbs\+::m\+U\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_ab58fe4ae308396034fd197cbd4982c22}\label{class_fbx_nurbs_ab58fe4ae308396034fd197cbd4982c22}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+V\+Count@{m\+V\+Count}}
+\index{m\+V\+Count@{m\+V\+Count}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+V\+Count}{mVCount}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::m\+V\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_ab825dd3874f212d1f2761656cb9c3beb}\label{class_fbx_nurbs_ab825dd3874f212d1f2761656cb9c3beb}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+V\+Knot\+Vector@{m\+V\+Knot\+Vector}}
+\index{m\+V\+Knot\+Vector@{m\+V\+Knot\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+V\+Knot\+Vector}{mVKnotVector}}
+{\footnotesize\ttfamily double$\ast$ Fbx\+Nurbs\+::m\+V\+Knot\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_adfd469d31dde3a8bedb17daaa6c0f38d}\label{class_fbx_nurbs_adfd469d31dde3a8bedb17daaa6c0f38d}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+V\+Multiplicity\+Vector@{m\+V\+Multiplicity\+Vector}}
+\index{m\+V\+Multiplicity\+Vector@{m\+V\+Multiplicity\+Vector}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+V\+Multiplicity\+Vector}{mVMultiplicityVector}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Nurbs\+::m\+V\+Multiplicity\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a5e4a956f463a54a8c5b966f0799280c5}\label{class_fbx_nurbs_a5e4a956f463a54a8c5b966f0799280c5}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+V\+Order@{m\+V\+Order}}
+\index{m\+V\+Order@{m\+V\+Order}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+V\+Order}{mVOrder}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} Fbx\+Nurbs\+::m\+V\+Order\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_a209ec06ea941b6dea3f68d85b3461d21}\label{class_fbx_nurbs_a209ec06ea941b6dea3f68d85b3461d21}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+V\+Step@{m\+V\+Step}}
+\index{m\+V\+Step@{m\+V\+Step}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+V\+Step}{mVStep}}
+{\footnotesize\ttfamily int Fbx\+Nurbs\+::m\+V\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_nurbs_ad973e3ca7ca7a3d6d3be94e46153a55b}\label{class_fbx_nurbs_ad973e3ca7ca7a3d6d3be94e46153a55b}} 
+\index{Fbx\+Nurbs@{Fbx\+Nurbs}!m\+V\+Type@{m\+V\+Type}}
+\index{m\+V\+Type@{m\+V\+Type}!Fbx\+Nurbs@{Fbx\+Nurbs}}
+\subsubsection{\texorpdfstring{m\+V\+Type}{mVType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_a16d9562676c9d3511503551790c55643}{E\+Type} Fbx\+Nurbs\+::m\+V\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxnurbs_8h}{fbxnurbs.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,110 @@
+\hypertarget{class_fbx_embedded_files_accumulator}{}\section{Fbx\+Embedded\+Files\+Accumulator クラス}
+\label{class_fbx_embedded_files_accumulator}\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+
+
+{\ttfamily \#include $<$fbxembeddedfilesaccumulator.\+h$>$}
+
+
+
+Fbx\+Embedded\+Files\+Accumulator の継承関係図
+% FIG 0
+
+
+Fbx\+Embedded\+Files\+Accumulator 連携図
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_embedded_files_accumulator_1_1_embedded_file_info}{Embedded\+File\+Info}
+\item 
+struct \hyperlink{struct_fbx_embedded_files_accumulator_1_1_fbx_property_url_index_compare}{Fbx\+Property\+Url\+Index\+Compare}
+\begin{DoxyCompactList}\small\item\em Comparer for Property\+Url\+Index\+Set, which outputs consistent partial orders for \hyperlink{struct_fbx_embedded_files_accumulator_1_1_property_url_index}{Property\+Url\+Index} pairs \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fbx_embedded_files_accumulator_1_1_property_url_index}{Property\+Url\+Index}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_embedded_files_accumulator_a22c32a739a59987e432fabe5f46c460e}{Fbx\+Embedded\+Files\+Accumulator} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, const char $\ast$p\+Name, \hyperlink{class_fbx_set}{Fbx\+Set}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \&p\+Property\+Filter)
+\item 
+virtual \hyperlink{class_fbx_embedded_files_accumulator_ade239c37b1e2bc5b772c50a1caa55173}{$\sim$\+Fbx\+Embedded\+Files\+Accumulator} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_set}{Fbx\+Set}$<$ \hyperlink{struct_fbx_embedded_files_accumulator_1_1_property_url_index}{Property\+Url\+Index}, \hyperlink{struct_fbx_embedded_files_accumulator_1_1_fbx_property_url_index_compare}{Fbx\+Property\+Url\+Index\+Compare} $>$ \hyperlink{class_fbx_embedded_files_accumulator_a007ad10c417fc8b5373ab6358f5fb5be}{Property\+Url\+Index\+Set}
+\item 
+typedef \hyperlink{class_fbx_map}{Fbx\+Map}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$, \hyperlink{class_fbx_embedded_files_accumulator_a007ad10c417fc8b5373ab6358f5fb5be}{Property\+Url\+Index\+Set} $>$ \hyperlink{class_fbx_embedded_files_accumulator_abc919e5ba3486530790dcd7ef90b8eed}{Object\+Property\+Map}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_map}{Fbx\+Map}$<$ \hyperlink{class_fbx_string}{Fbx\+String}, \hyperlink{struct_fbx_embedded_files_accumulator_1_1_embedded_file_info}{Embedded\+File\+Info} $>$ \hyperlink{class_fbx_embedded_files_accumulator_a7471092a2496b1e45a263f91ea3db731}{Embedded\+Files\+Map}
+\item 
+\hyperlink{class_fbx_embedded_files_accumulator_a7471092a2496b1e45a263f91ea3db731}{Embedded\+Files\+Map} \hyperlink{class_fbx_embedded_files_accumulator_a41e3d4c6054110af6df9a53066634dc8}{m\+Embedded\+Files}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This processor is used to accumulate the list of file dependencies (embedded files) in a hierarchy of objects. It retrieves information of embedded files from objects and accumulates them to its class member m\+Embedded\+Files. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_processor_acb7f2a7c80e823b16d2639d7293fefb3}{Fbx\+Processor\+::\+Process\+Collection(\+Fbx\+Collection $\ast$)} 
+\end{DoxySeeAlso}
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_embedded_files_accumulator_a7471092a2496b1e45a263f91ea3db731}\label{class_fbx_embedded_files_accumulator_a7471092a2496b1e45a263f91ea3db731}} 
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!Embedded\+Files\+Map@{Embedded\+Files\+Map}}
+\index{Embedded\+Files\+Map@{Embedded\+Files\+Map}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\subsubsection{\texorpdfstring{Embedded\+Files\+Map}{EmbeddedFilesMap}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_map}{Fbx\+Map}$<$\hyperlink{class_fbx_string}{Fbx\+String}, \hyperlink{struct_fbx_embedded_files_accumulator_1_1_embedded_file_info}{Embedded\+File\+Info}$>$ \hyperlink{class_fbx_embedded_files_accumulator_a7471092a2496b1e45a263f91ea3db731}{Fbx\+Embedded\+Files\+Accumulator\+::\+Embedded\+Files\+Map}}
+
+Map the (absolute filename) to which object/properties use this file. To simply get the list of file dependencies, iterate through this map and query all the keys. \mbox{\Hypertarget{class_fbx_embedded_files_accumulator_abc919e5ba3486530790dcd7ef90b8eed}\label{class_fbx_embedded_files_accumulator_abc919e5ba3486530790dcd7ef90b8eed}} 
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!Object\+Property\+Map@{Object\+Property\+Map}}
+\index{Object\+Property\+Map@{Object\+Property\+Map}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\subsubsection{\texorpdfstring{Object\+Property\+Map}{ObjectPropertyMap}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_map}{Fbx\+Map}$<$\hyperlink{class_fbx_object}{Fbx\+Object}$\ast$, \hyperlink{class_fbx_embedded_files_accumulator_a007ad10c417fc8b5373ab6358f5fb5be}{Property\+Url\+Index\+Set}$>$ \hyperlink{class_fbx_embedded_files_accumulator_abc919e5ba3486530790dcd7ef90b8eed}{Fbx\+Embedded\+Files\+Accumulator\+::\+Object\+Property\+Map}}
+
+\mbox{\Hypertarget{class_fbx_embedded_files_accumulator_a007ad10c417fc8b5373ab6358f5fb5be}\label{class_fbx_embedded_files_accumulator_a007ad10c417fc8b5373ab6358f5fb5be}} 
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!Property\+Url\+Index\+Set@{Property\+Url\+Index\+Set}}
+\index{Property\+Url\+Index\+Set@{Property\+Url\+Index\+Set}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\subsubsection{\texorpdfstring{Property\+Url\+Index\+Set}{PropertyUrlIndexSet}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_set}{Fbx\+Set}$<$\hyperlink{struct_fbx_embedded_files_accumulator_1_1_property_url_index}{Property\+Url\+Index}, \hyperlink{struct_fbx_embedded_files_accumulator_1_1_fbx_property_url_index_compare}{Fbx\+Property\+Url\+Index\+Compare}$>$ \hyperlink{class_fbx_embedded_files_accumulator_a007ad10c417fc8b5373ab6358f5fb5be}{Fbx\+Embedded\+Files\+Accumulator\+::\+Property\+Url\+Index\+Set}}
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_embedded_files_accumulator_a22c32a739a59987e432fabe5f46c460e}\label{class_fbx_embedded_files_accumulator_a22c32a739a59987e432fabe5f46c460e}} 
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\subsubsection{\texorpdfstring{Fbx\+Embedded\+Files\+Accumulator()}{FbxEmbeddedFilesAccumulator()}}
+{\footnotesize\ttfamily Fbx\+Embedded\+Files\+Accumulator\+::\+Fbx\+Embedded\+Files\+Accumulator (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_set}{Fbx\+Set}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \&}]{p\+Property\+Filter }\end{DoxyParamCaption})}
+
+Constructor. The name is not important. The property filter is a list of strings, property names, which are automatically ignored when encountered. Property names must be the full hierarchical property name (ie\+: parent$\vert$child$\vert$child).
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & Reference to the S\+DK manager. \\
+\hline
+{\em p\+Name} & Name of this object. \\
+\hline
+{\em p\+Property\+Filter} & Reference to the property filter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_embedded_files_accumulator_ade239c37b1e2bc5b772c50a1caa55173}\label{class_fbx_embedded_files_accumulator_ade239c37b1e2bc5b772c50a1caa55173}} 
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!````~Fbx\+Embedded\+Files\+Accumulator@{$\sim$\+Fbx\+Embedded\+Files\+Accumulator}}
+\index{````~Fbx\+Embedded\+Files\+Accumulator@{$\sim$\+Fbx\+Embedded\+Files\+Accumulator}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Embedded\+Files\+Accumulator()}{~FbxEmbeddedFilesAccumulator()}}
+{\footnotesize\ttfamily virtual Fbx\+Embedded\+Files\+Accumulator\+::$\sim$\+Fbx\+Embedded\+Files\+Accumulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_embedded_files_accumulator_a41e3d4c6054110af6df9a53066634dc8}\label{class_fbx_embedded_files_accumulator_a41e3d4c6054110af6df9a53066634dc8}} 
+\index{Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}!m\+Embedded\+Files@{m\+Embedded\+Files}}
+\index{m\+Embedded\+Files@{m\+Embedded\+Files}!Fbx\+Embedded\+Files\+Accumulator@{Fbx\+Embedded\+Files\+Accumulator}}
+\subsubsection{\texorpdfstring{m\+Embedded\+Files}{mEmbeddedFiles}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_embedded_files_accumulator_a7471092a2496b1e45a263f91ea3db731}{Embedded\+Files\+Map} Fbx\+Embedded\+Files\+Accumulator\+::m\+Embedded\+Files}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxembeddedfilesaccumulator_8h}{fbxembeddedfilesaccumulator.\+h}\end{DoxyCompactItemize}

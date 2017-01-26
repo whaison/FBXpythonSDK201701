@@ -1,0 +1,338 @@
+\hypertarget{class_fbx_blend_shape_channel}{}\section{Fbx\+Blend\+Shape\+Channel クラス}
+\label{class_fbx_blend_shape_channel}\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+
+
+{\ttfamily \#include $<$fbxblendshapechannel.\+h$>$}
+
+
+
+Fbx\+Blend\+Shape\+Channel の継承関係図
+% FIG 0
+
+
+Fbx\+Blend\+Shape\+Channel 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_blend_shape_channel_afa4cd576c24385c4ee10279a1deabc4d}{Set\+Blend\+Shape\+Deformer} (\hyperlink{class_fbx_blend_shape}{Fbx\+Blend\+Shape} $\ast$p\+Blend\+Shape)
+\item 
+\hyperlink{class_fbx_blend_shape}{Fbx\+Blend\+Shape} $\ast$ \hyperlink{class_fbx_blend_shape_channel_aa79b43cdb62a8dc5bbafad03acbf4425}{Get\+Blend\+Shape\+Deformer} ()
+\item 
+bool \hyperlink{class_fbx_blend_shape_channel_aa09d012a7304dd2098ebd2a066d53dde}{Add\+Target\+Shape} (\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$p\+Shape, double p\+Full\+Deform\+Percent=100)
+\item 
+\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$ \hyperlink{class_fbx_blend_shape_channel_a13265acf6f671cf6ec1228105831ff15}{Remove\+Target\+Shape} (\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$p\+Shape)
+\item 
+int \hyperlink{class_fbx_blend_shape_channel_a61e052b389537fcb7db318853c17160c}{Get\+Target\+Shape\+Count} () const
+\item 
+\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$ \hyperlink{class_fbx_blend_shape_channel_a50cdc8d0c76e13c093453efca50484a6}{Get\+Target\+Shape} (int p\+Index)
+\item 
+const \hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$ \hyperlink{class_fbx_blend_shape_channel_ae91fea86db9ce91da637df78762b4fff}{Get\+Target\+Shape} (int p\+Index) const
+\item 
+int \hyperlink{class_fbx_blend_shape_channel_a75e572afbee5b3c5c635932282b86473}{Get\+Target\+Shape\+Index} (\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$p\+Shape)
+\item 
+double $\ast$ \hyperlink{class_fbx_blend_shape_channel_af3d0ae44fb85c9bdc485a7c607190cfd}{Get\+Target\+Shape\+Full\+Weights} ()
+\item 
+void \hyperlink{class_fbx_blend_shape_channel_a2e06faf81dd8983124645590f673d119}{Set\+Full\+Weights\+Count} (int p\+Count)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_blend_shape_channel_a7b6c288c4f2d70fed6f29b424d7020a4}{Deform\+Percent}
+\end{DoxyCompactItemize}
+\subsection*{General Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ double $>$ \hyperlink{class_fbx_blend_shape_channel_a99111b4513741df3e42dd87b1c08d347}{m\+Shape\+Full\+Weight\+Array}
+\item 
+\hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}{E\+Type} \hyperlink{class_fbx_blend_shape_channel_a1dba13e481ea7ba1874587ad92ee0347}{Get\+Sub\+Deformer\+Type} () const
+\item 
+void \hyperlink{class_fbx_blend_shape_channel_a3b633999bdf324fe9ac96e297c572eba}{Reset} ()
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_blend_shape_channel_a7bf3a456eafada45fa2e934f15422026}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_blend_shape_channel_a37993d2cccb4376edb241577ccbd061f}{Clone} (\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} p\+Clone\+Type=\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, void $\ast$p\+Set=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+virtual void \hyperlink{class_fbx_blend_shape_channel_ad16237e4706289af6a9235b8425415cb}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_blend_shape_channel_a6ab3c2d6435d70a7c1b182097802ba90}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_blend_shape_channel_a354002154ea342025ba0936e656b640a}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Class for blend shape channels. A blend shape channel is a sub-\/deformer to help blend shape deformer to organize the target shapes. One blend shape deformer can have multiple blend shape channels in parallel, and each of them can control one or multiple target shapes. If there are multiple target shapes connected to one channel, each target shape could have its own full deformation percentage. For example, given a channel that has 3 target shapes, whose full deform percentage are 30, to 80 to 100 separately, then when the percent changes from 0 to 100, the base geometry will deform from the first target shape to the last one. This is called in-\/between blend shapes or progressive morph. The property Deform\+Percent of blend shape channel will control the deform level of each target shape or in-\/between blend shape on it. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_aa09d012a7304dd2098ebd2a066d53dde}\label{class_fbx_blend_shape_channel_aa09d012a7304dd2098ebd2a066d53dde}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Add\+Target\+Shape@{Add\+Target\+Shape}}
+\index{Add\+Target\+Shape@{Add\+Target\+Shape}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Add\+Target\+Shape()}{AddTargetShape()}}
+{\footnotesize\ttfamily bool Fbx\+Blend\+Shape\+Channel\+::\+Add\+Target\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$}]{p\+Shape,  }\item[{double}]{p\+Full\+Deform\+Percent = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Add a target shape. 
+\begin{DoxyParams}{引数}
+{\em p\+Shape} & Pointer to the target shape to add. \\
+\hline
+{\em p\+Full\+Deform\+Percent} & The full deform percentage for the target shape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a37993d2cccb4376edb241577ccbd061f}\label{class_fbx_blend_shape_channel_a37993d2cccb4376edb241577ccbd061f}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Clone@{Clone}}
+\index{Clone@{Clone}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Blend\+Shape\+Channel\+::\+Clone (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type}}]{p\+Clone\+Type = {\ttfamily \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}},  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{void $\ast$}]{p\+Set = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a clone of this object. By default, the connections are N\+OT cloned. If the desired effect is to clone the connections as well, you must clone using the \hyperlink{class_fbx_clone_manager}{Fbx\+Clone\+Manager} (refer to this class documentation for further details).
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Clone\+Type} & The type of clone to be created. By default, the clone type is e\+Deep\+Clone. \\
+\hline
+{\em p\+Container} & An optional parameter to specify which object will \char`\"{}contain\char`\"{} the new object. By contain, we mean the new object will become a source to the container, connection-\/wise. \\
+\hline
+{\em p\+Set} & See remark section. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new clone, or N\+U\+LL (if the specified clone type is not supported). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When doing either a \char`\"{}deep\char`\"{} or \char`\"{}reference\char`\"{} clone type, the clone will always get its properties values set from the source object properties values. 
+
+Since this is a virtual function, some classes might do additional tasks. 
+
+The {\itshape p\+Set} argument is not used in the default implementation of this method. Specialized implementations should cast this pointer to \hyperlink{class_fbx_clone_manager_aeb8a9c04c9c36eb7e551186a0b18f10d}{Fbx\+Clone\+Manager\+::\+Clone\+Set} to have access to the cloned objects so far. Typically, this pointer is set by the clone manager. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad553a4262b09cb57c3171a93edadbab8}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_ad16237e4706289af6a9235b8425415cb}\label{class_fbx_blend_shape_channel_ad16237e4706289af6a9235b8425415cb}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Blend\+Shape\+Channel\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_sub_deformer_ae3d566383651e82b681827f0f38b97f3}{Fbx\+Sub\+Deformer}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a6ab3c2d6435d70a7c1b182097802ba90}\label{class_fbx_blend_shape_channel_a6ab3c2d6435d70a7c1b182097802ba90}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Blend\+Shape\+Channel\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a7bf3a456eafada45fa2e934f15422026}\label{class_fbx_blend_shape_channel_a7bf3a456eafada45fa2e934f15422026}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Blend\+Shape\+Channel\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_aa79b43cdb62a8dc5bbafad03acbf4425}\label{class_fbx_blend_shape_channel_aa79b43cdb62a8dc5bbafad03acbf4425}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Blend\+Shape\+Deformer@{Get\+Blend\+Shape\+Deformer}}
+\index{Get\+Blend\+Shape\+Deformer@{Get\+Blend\+Shape\+Deformer}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Blend\+Shape\+Deformer()}{GetBlendShapeDeformer()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_blend_shape}{Fbx\+Blend\+Shape}$\ast$ Fbx\+Blend\+Shape\+Channel\+::\+Get\+Blend\+Shape\+Deformer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the blend shape deformer that contains this blend shape channel. \begin{DoxyReturn}{戻り値}
+A pointer to the blend shape deformer if set or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a1dba13e481ea7ba1874587ad92ee0347}\label{class_fbx_blend_shape_channel_a1dba13e481ea7ba1874587ad92ee0347}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Sub\+Deformer\+Type@{Get\+Sub\+Deformer\+Type}}
+\index{Get\+Sub\+Deformer\+Type@{Get\+Sub\+Deformer\+Type}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Sub\+Deformer\+Type()}{GetSubDeformerType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}{E\+Type} Fbx\+Blend\+Shape\+Channel\+::\+Get\+Sub\+Deformer\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the type of the sub deformer. \begin{DoxyReturn}{戻り値}
+The sub deformer type identifier of blend shape channel. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_sub_deformer_a1a1998b98ca03598bc6bec630e1aaa97}{Fbx\+Sub\+Deformer}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a50cdc8d0c76e13c093453efca50484a6}\label{class_fbx_blend_shape_channel_a50cdc8d0c76e13c093453efca50484a6}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Target\+Shape@{Get\+Target\+Shape}}
+\index{Get\+Target\+Shape@{Get\+Target\+Shape}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Target\+Shape()}{GetTargetShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_shape}{Fbx\+Shape}$\ast$ Fbx\+Blend\+Shape\+Channel\+::\+Get\+Target\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the target shape at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the target shape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the target shape or {\ttfamily N\+U\+LL} if index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_ae91fea86db9ce91da637df78762b4fff}\label{class_fbx_blend_shape_channel_ae91fea86db9ce91da637df78762b4fff}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Target\+Shape@{Get\+Target\+Shape}}
+\index{Get\+Target\+Shape@{Get\+Target\+Shape}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Target\+Shape()}{GetTargetShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_shape}{Fbx\+Shape}$\ast$ Fbx\+Blend\+Shape\+Channel\+::\+Get\+Target\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Get the target shape at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the target shape. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the target shape or {\ttfamily N\+U\+LL} if index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a61e052b389537fcb7db318853c17160c}\label{class_fbx_blend_shape_channel_a61e052b389537fcb7db318853c17160c}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Target\+Shape\+Count@{Get\+Target\+Shape\+Count}}
+\index{Get\+Target\+Shape\+Count@{Get\+Target\+Shape\+Count}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Target\+Shape\+Count()}{GetTargetShapeCount()}}
+{\footnotesize\ttfamily int Fbx\+Blend\+Shape\+Channel\+::\+Get\+Target\+Shape\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of target shapes. \begin{DoxyReturn}{戻り値}
+Number of target shapes that have been added to this blend shape channel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_af3d0ae44fb85c9bdc485a7c607190cfd}\label{class_fbx_blend_shape_channel_af3d0ae44fb85c9bdc485a7c607190cfd}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Target\+Shape\+Full\+Weights@{Get\+Target\+Shape\+Full\+Weights}}
+\index{Get\+Target\+Shape\+Full\+Weights@{Get\+Target\+Shape\+Full\+Weights}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Target\+Shape\+Full\+Weights()}{GetTargetShapeFullWeights()}}
+{\footnotesize\ttfamily double$\ast$ Fbx\+Blend\+Shape\+Channel\+::\+Get\+Target\+Shape\+Full\+Weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the full weight values of target shape. To access each value iterate in the array up to \hyperlink{class_fbx_blend_shape_channel_a61e052b389537fcb7db318853c17160c}{Get\+Target\+Shape\+Count()}. \begin{DoxyReturn}{戻り値}
+The array of full weight values of target shape. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a75e572afbee5b3c5c635932282b86473}\label{class_fbx_blend_shape_channel_a75e572afbee5b3c5c635932282b86473}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Target\+Shape\+Index@{Get\+Target\+Shape\+Index}}
+\index{Get\+Target\+Shape\+Index@{Get\+Target\+Shape\+Index}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Target\+Shape\+Index()}{GetTargetShapeIndex()}}
+{\footnotesize\ttfamily int Fbx\+Blend\+Shape\+Channel\+::\+Get\+Target\+Shape\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$}]{p\+Shape }\end{DoxyParamCaption})}
+
+Get the index of the given target shape. 
+\begin{DoxyParams}{引数}
+{\em p\+Shape} & The given target shape to find index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the target shape. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a354002154ea342025ba0936e656b640a}\label{class_fbx_blend_shape_channel_a354002154ea342025ba0936e656b640a}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Blend\+Shape\+Channel\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_sub_deformer_a80652fd0521b2ea1897e221e5ae1b5cf}{Fbx\+Sub\+Deformer}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a13265acf6f671cf6ec1228105831ff15}\label{class_fbx_blend_shape_channel_a13265acf6f671cf6ec1228105831ff15}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Remove\+Target\+Shape@{Remove\+Target\+Shape}}
+\index{Remove\+Target\+Shape@{Remove\+Target\+Shape}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Remove\+Target\+Shape()}{RemoveTargetShape()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_shape}{Fbx\+Shape}$\ast$ Fbx\+Blend\+Shape\+Channel\+::\+Remove\+Target\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$}]{p\+Shape }\end{DoxyParamCaption})}
+
+Remove the given target shape. 
+\begin{DoxyParams}{引数}
+{\em p\+Shape} & Pointer to the target shape to remove from this blend shape channel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the target shape or {\ttfamily N\+U\+LL} if p\+Shape is not owned by this blend shape channel. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a3b633999bdf324fe9ac96e297c572eba}\label{class_fbx_blend_shape_channel_a3b633999bdf324fe9ac96e297c572eba}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Blend\+Shape\+Channel\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Restore the blend shape channel to the initial state. Calling this function will do the following\+: \begin{DoxyItemize}
+\item Set the Deform\+Percent to 0. \item Remove all target shapes. \item Clear the array for fully deform weights of in-\/between target shapes. \end{DoxyItemize}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_afa4cd576c24385c4ee10279a1deabc4d}\label{class_fbx_blend_shape_channel_afa4cd576c24385c4ee10279a1deabc4d}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Set\+Blend\+Shape\+Deformer@{Set\+Blend\+Shape\+Deformer}}
+\index{Set\+Blend\+Shape\+Deformer@{Set\+Blend\+Shape\+Deformer}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Set\+Blend\+Shape\+Deformer()}{SetBlendShapeDeformer()}}
+{\footnotesize\ttfamily bool Fbx\+Blend\+Shape\+Channel\+::\+Set\+Blend\+Shape\+Deformer (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_blend_shape}{Fbx\+Blend\+Shape} $\ast$}]{p\+Blend\+Shape }\end{DoxyParamCaption})}
+
+Set the blend shape deformer that contains this blend shape channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape} & Pointer to the blend shape deformer to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a2e06faf81dd8983124645590f673d119}\label{class_fbx_blend_shape_channel_a2e06faf81dd8983124645590f673d119}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Set\+Full\+Weights\+Count@{Set\+Full\+Weights\+Count}}
+\index{Set\+Full\+Weights\+Count@{Set\+Full\+Weights\+Count}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Set\+Full\+Weights\+Count()}{SetFullWeightsCount()}}
+{\footnotesize\ttfamily void Fbx\+Blend\+Shape\+Channel\+::\+Set\+Full\+Weights\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})}
+
+Set the array size for the fully deform weights. This functions pre-\/allocate the array to p\+Count size. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The new array size to set. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a7b6c288c4f2d70fed6f29b424d7020a4}\label{class_fbx_blend_shape_channel_a7b6c288c4f2d70fed6f29b424d7020a4}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!Deform\+Percent@{Deform\+Percent}}
+\index{Deform\+Percent@{Deform\+Percent}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{Deform\+Percent}{DeformPercent}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Blend\+Shape\+Channel\+::\+Deform\+Percent}
+
+This property stores deform percent of this channel. The default value of this property is 0.\+0.
+
+\begin{DoxyRemark}{注釈}
+Although not enforced, it is strongly suggested to limit the value of this property in the range from 0.\+0 to 100.\+0 because graphic applications may handle values outside of this interval differently, therefore producing unexpected results. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_blend_shape_channel_a99111b4513741df3e42dd87b1c08d347}\label{class_fbx_blend_shape_channel_a99111b4513741df3e42dd87b1c08d347}} 
+\index{Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}!m\+Shape\+Full\+Weight\+Array@{m\+Shape\+Full\+Weight\+Array}}
+\index{m\+Shape\+Full\+Weight\+Array@{m\+Shape\+Full\+Weight\+Array}!Fbx\+Blend\+Shape\+Channel@{Fbx\+Blend\+Shape\+Channel}}
+\subsubsection{\texorpdfstring{m\+Shape\+Full\+Weight\+Array}{mShapeFullWeightArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$double$>$ Fbx\+Blend\+Shape\+Channel\+::m\+Shape\+Full\+Weight\+Array\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxblendshapechannel_8h}{fbxblendshapechannel.\+h}\end{DoxyCompactItemize}

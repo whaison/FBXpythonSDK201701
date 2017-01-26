@@ -1,0 +1,285 @@
+\hypertarget{class_fbx_global_camera_settings}{}\section{Fbx\+Global\+Camera\+Settings クラス}
+\label{class_fbx_global_camera_settings}\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+
+
+{\ttfamily \#include $<$fbxglobalcamerasettings.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings} \& \hyperlink{class_fbx_global_camera_settings_aaee942061eedeb6b7e1bae058b1d3ddd}{operator=} (const \hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings} \&p\+Global\+Camera\+Settings)
+\item 
+bool \hyperlink{class_fbx_global_camera_settings_ad69790f22bd872818ac9d86731833f4f}{Copy\+Producer\+Camera} (const char $\ast$p\+Camera\+Name, const \hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$p\+Camera) const
+\end{DoxyCompactItemize}
+\subsection*{Default Camera Settings}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}{E\+Viewing\+Mode} \{ \hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858a0336e82bb15b3eac5b9b60501aa3cb45}{e\+Standard}, 
+\hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858adecac3c5b557d7f8c27d88ee72ca48ab}{e\+X\+Ray}, 
+\hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858a30be58e2817cc1fd6e68574cb6ba27f1}{e\+Models\+Only}
+ \}
+\item 
+bool \hyperlink{class_fbx_global_camera_settings_a6069976325cb9983f6ed75e1884f1981}{Set\+Default\+Camera} (const char $\ast$p\+Camera\+Name, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+const char $\ast$ \hyperlink{class_fbx_global_camera_settings_ab2f43528a6d09862bc735d7695af9868}{Get\+Default\+Camera} () const
+\item 
+void \hyperlink{class_fbx_global_camera_settings_a1024ebc19b9641163a74a4cc457f8c0d}{Restore\+Default\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Restores the default settings. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_global_camera_settings_a15790cd057733254a0e82b172b644122}{Set\+Default\+Viewing\+Mode} (\hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}{E\+Viewing\+Mode} p\+Viewing\+Mode)
+\item 
+\hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}{E\+Viewing\+Mode} \hyperlink{class_fbx_global_camera_settings_a458ad62da44fe9f580550162832edbb9}{Get\+Default\+Viewing\+Mode} () const
+\end{DoxyCompactItemize}
+\subsection*{Producer Cameras}
+\label{_amgrpdf8c7ffb8bdef1e4f35722221c5ded0f}%
+Producer cameras are global cameras in Motion\+Builder you use to view the scene. You cannot animate Producer cameras but you can specify their default positions. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_global_camera_settings_a2b2e508928ea3b21b25574635089f025}{Create\+Producer\+Cameras} ()
+\item 
+void \hyperlink{class_fbx_global_camera_settings_a083cbc9ad5466346559025508aed6dc6}{Destroy\+Producer\+Cameras} ()
+\item 
+bool \hyperlink{class_fbx_global_camera_settings_abcabe0a434ecb96f58711e16f6f7abc5}{Is\+Producer\+Camera} (\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$p\+Camera) const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_a4353a05481d6dad14fbd6f3fdaf8541c}{Get\+Camera\+Producer\+Perspective} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_afb4ff79f5f970e8b86e68b56a40f3116}{Get\+Camera\+Producer\+Front} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_ad11a62b3c4249a802f4a4e9c98d8b966}{Get\+Camera\+Producer\+Back} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_a5541de057d1ce39e712c42f5913d8ee7}{Get\+Camera\+Producer\+Left} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_a0166b7f6aac53c8a9b3f6deabf77a09e}{Get\+Camera\+Producer\+Right} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_a24d688c9385c1393c552bd05e124f104}{Get\+Camera\+Producer\+Top} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_global_camera_settings_a6a24f852c638f6a599f5b63078454112}{Get\+Camera\+Producer\+Bottom} () const
+\item 
+\hyperlink{class_fbx_camera_switcher}{Fbx\+Camera\+Switcher} $\ast$ \hyperlink{class_fbx_global_camera_settings_ab581e270145dfa36b239171811cc35b9}{Get\+Camera\+Switcher} () const
+\item 
+void \hyperlink{class_fbx_global_camera_settings_ac5828573eccccf2e76529ad21f77ff3c}{Set\+Camera\+Switcher} (\hyperlink{class_fbx_camera_switcher}{Fbx\+Camera\+Switcher} $\ast$p\+Switcher)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class contains the global camera settings.
+
+\begin{DoxyRemark}{注釈}
+This class exists for F\+BX version 6.\+x and earlier. The new F\+BX v7.\+x file format that is now the default no longer uses it. The relevant data (a subset of this class) has been moved to the \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings} object and should be used instead. 
+\end{DoxyRemark}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}\label{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!E\+Viewing\+Mode@{E\+Viewing\+Mode}}
+\index{E\+Viewing\+Mode@{E\+Viewing\+Mode}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{E\+Viewing\+Mode}{EViewingMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}{Fbx\+Global\+Camera\+Settings\+::\+E\+Viewing\+Mode}}
+
+Viewing modes. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Standard@{e\+Standard}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!e\+Standard@{e\+Standard}}}\mbox{\Hypertarget{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858a0336e82bb15b3eac5b9b60501aa3cb45}\label{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858a0336e82bb15b3eac5b9b60501aa3cb45}} 
+e\+Standard&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+X\+Ray@{e\+X\+Ray}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!e\+X\+Ray@{e\+X\+Ray}}}\mbox{\Hypertarget{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858adecac3c5b557d7f8c27d88ee72ca48ab}\label{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858adecac3c5b557d7f8c27d88ee72ca48ab}} 
+e\+X\+Ray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Models\+Only@{e\+Models\+Only}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!e\+Models\+Only@{e\+Models\+Only}}}\mbox{\Hypertarget{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858a30be58e2817cc1fd6e68574cb6ba27f1}\label{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858a30be58e2817cc1fd6e68574cb6ba27f1}} 
+e\+Models\+Only&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_ad69790f22bd872818ac9d86731833f4f}\label{class_fbx_global_camera_settings_ad69790f22bd872818ac9d86731833f4f}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Copy\+Producer\+Camera@{Copy\+Producer\+Camera}}
+\index{Copy\+Producer\+Camera@{Copy\+Producer\+Camera}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Copy\+Producer\+Camera()}{CopyProducerCamera()}}
+{\footnotesize\ttfamily bool Fbx\+Global\+Camera\+Settings\+::\+Copy\+Producer\+Camera (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Camera\+Name,  }\item[{const \hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$}]{p\+Camera }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a2b2e508928ea3b21b25574635089f025}\label{class_fbx_global_camera_settings_a2b2e508928ea3b21b25574635089f025}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Create\+Producer\+Cameras@{Create\+Producer\+Cameras}}
+\index{Create\+Producer\+Cameras@{Create\+Producer\+Cameras}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Create\+Producer\+Cameras()}{CreateProducerCameras()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Camera\+Settings\+::\+Create\+Producer\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates the default Producer cameras. \mbox{\Hypertarget{class_fbx_global_camera_settings_a083cbc9ad5466346559025508aed6dc6}\label{class_fbx_global_camera_settings_a083cbc9ad5466346559025508aed6dc6}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Destroy\+Producer\+Cameras@{Destroy\+Producer\+Cameras}}
+\index{Destroy\+Producer\+Cameras@{Destroy\+Producer\+Cameras}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Destroy\+Producer\+Cameras()}{DestroyProducerCameras()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Camera\+Settings\+::\+Destroy\+Producer\+Cameras (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the default Producer cameras. \mbox{\Hypertarget{class_fbx_global_camera_settings_ad11a62b3c4249a802f4a4e9c98d8b966}\label{class_fbx_global_camera_settings_ad11a62b3c4249a802f4a4e9c98d8b966}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Back@{Get\+Camera\+Producer\+Back}}
+\index{Get\+Camera\+Producer\+Back@{Get\+Camera\+Producer\+Back}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Back()}{GetCameraProducerBack()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer back camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Back camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a6a24f852c638f6a599f5b63078454112}\label{class_fbx_global_camera_settings_a6a24f852c638f6a599f5b63078454112}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Bottom@{Get\+Camera\+Producer\+Bottom}}
+\index{Get\+Camera\+Producer\+Bottom@{Get\+Camera\+Producer\+Bottom}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Bottom()}{GetCameraProducerBottom()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer bottom camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Bottom camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_afb4ff79f5f970e8b86e68b56a40f3116}\label{class_fbx_global_camera_settings_afb4ff79f5f970e8b86e68b56a40f3116}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Front@{Get\+Camera\+Producer\+Front}}
+\index{Get\+Camera\+Producer\+Front@{Get\+Camera\+Producer\+Front}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Front()}{GetCameraProducerFront()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer front camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Front camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a5541de057d1ce39e712c42f5913d8ee7}\label{class_fbx_global_camera_settings_a5541de057d1ce39e712c42f5913d8ee7}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Left@{Get\+Camera\+Producer\+Left}}
+\index{Get\+Camera\+Producer\+Left@{Get\+Camera\+Producer\+Left}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Left()}{GetCameraProducerLeft()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer left camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Left camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a4353a05481d6dad14fbd6f3fdaf8541c}\label{class_fbx_global_camera_settings_a4353a05481d6dad14fbd6f3fdaf8541c}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Perspective@{Get\+Camera\+Producer\+Perspective}}
+\index{Get\+Camera\+Producer\+Perspective@{Get\+Camera\+Producer\+Perspective}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Perspective()}{GetCameraProducerPerspective()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Perspective (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer perspective camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Perspective camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a0166b7f6aac53c8a9b3f6deabf77a09e}\label{class_fbx_global_camera_settings_a0166b7f6aac53c8a9b3f6deabf77a09e}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Right@{Get\+Camera\+Producer\+Right}}
+\index{Get\+Camera\+Producer\+Right@{Get\+Camera\+Producer\+Right}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Right()}{GetCameraProducerRight()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer right camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Right camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a24d688c9385c1393c552bd05e124f104}\label{class_fbx_global_camera_settings_a24d688c9385c1393c552bd05e124f104}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Producer\+Top@{Get\+Camera\+Producer\+Top}}
+\index{Get\+Camera\+Producer\+Top@{Get\+Camera\+Producer\+Top}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Producer\+Top()}{GetCameraProducerTop()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Producer\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a reference to the Producer top camera. \begin{DoxyReturn}{戻り値}
+The reference to the internal Top camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_ab581e270145dfa36b239171811cc35b9}\label{class_fbx_global_camera_settings_ab581e270145dfa36b239171811cc35b9}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Camera\+Switcher@{Get\+Camera\+Switcher}}
+\index{Get\+Camera\+Switcher@{Get\+Camera\+Switcher}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Switcher()}{GetCameraSwitcher()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera_switcher}{Fbx\+Camera\+Switcher}$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Camera\+Switcher (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the Camera Switcher. \begin{DoxyReturn}{戻り値}
+A pointer to the Camera Switcher. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This node has a {\ttfamily \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa6fb598a32379261ed00d4695863a58fc}{Fbx\+Node\+Attribute\+::e\+Camera\+Switcher}} node attribute type. This node is not saved when there is no camera in the scene. Nodes inserted below are never saved. Camera indices start at 1. Out of range indices are clamped between 1 and the number of cameras in the scene. The index of a camera refers to its order of appearance when searching the node tree depth first. If a camera is added or removed after camera indices have been set, the camera indices must be updated. It is easier to set camera indices once every camera have been set. Camera index keys must be set using constant interpolation to ensure that camera switches occur exactly at key time. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_ab2f43528a6d09862bc735d7695af9868}\label{class_fbx_global_camera_settings_ab2f43528a6d09862bc735d7695af9868}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Default\+Camera@{Get\+Default\+Camera}}
+\index{Get\+Default\+Camera@{Get\+Default\+Camera}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Default\+Camera()}{GetDefaultCamera()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Global\+Camera\+Settings\+::\+Get\+Default\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the default camera name. \begin{DoxyReturn}{戻り値}
+The default camera name, or returns an empty string if no camera name has been specified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a458ad62da44fe9f580550162832edbb9}\label{class_fbx_global_camera_settings_a458ad62da44fe9f580550162832edbb9}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Get\+Default\+Viewing\+Mode@{Get\+Default\+Viewing\+Mode}}
+\index{Get\+Default\+Viewing\+Mode@{Get\+Default\+Viewing\+Mode}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Default\+Viewing\+Mode()}{GetDefaultViewingMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}{E\+Viewing\+Mode} Fbx\+Global\+Camera\+Settings\+::\+Get\+Default\+Viewing\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the default viewing mode. \begin{DoxyReturn}{戻り値}
+The currently set Viewing mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_abcabe0a434ecb96f58711e16f6f7abc5}\label{class_fbx_global_camera_settings_abcabe0a434ecb96f58711e16f6f7abc5}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Is\+Producer\+Camera@{Is\+Producer\+Camera}}
+\index{Is\+Producer\+Camera@{Is\+Producer\+Camera}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Is\+Producer\+Camera()}{IsProducerCamera()}}
+{\footnotesize\ttfamily bool Fbx\+Global\+Camera\+Settings\+::\+Is\+Producer\+Camera (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$}]{p\+Camera }\end{DoxyParamCaption}) const}
+
+Checks if the camera is a Producer camera. 
+\begin{DoxyParams}{引数}
+{\em p\+Camera} & The camera to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it is a producer camera, returns {\ttfamily false} if it is not a producer camera. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_aaee942061eedeb6b7e1bae058b1d3ddd}\label{class_fbx_global_camera_settings_aaee942061eedeb6b7e1bae058b1d3ddd}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings}\& Fbx\+Global\+Camera\+Settings\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings} \&}]{p\+Global\+Camera\+Settings }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Global\+Camera\+Settings} & \hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings} object assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a1024ebc19b9641163a74a4cc457f8c0d}\label{class_fbx_global_camera_settings_a1024ebc19b9641163a74a4cc457f8c0d}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Restore\+Default\+Settings@{Restore\+Default\+Settings}}
+\index{Restore\+Default\+Settings@{Restore\+Default\+Settings}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Restore\+Default\+Settings()}{RestoreDefaultSettings()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Camera\+Settings\+::\+Restore\+Default\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restores the default settings. 
+
+\mbox{\Hypertarget{class_fbx_global_camera_settings_ac5828573eccccf2e76529ad21f77ff3c}\label{class_fbx_global_camera_settings_ac5828573eccccf2e76529ad21f77ff3c}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Set\+Camera\+Switcher@{Set\+Camera\+Switcher}}
+\index{Set\+Camera\+Switcher@{Set\+Camera\+Switcher}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Camera\+Switcher()}{SetCameraSwitcher()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Camera\+Settings\+::\+Set\+Camera\+Switcher (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_camera_switcher}{Fbx\+Camera\+Switcher} $\ast$}]{p\+Switcher }\end{DoxyParamCaption})}
+
+Sets the Camera Switcher. 
+\begin{DoxyParams}{引数}
+{\em p\+Switcher} & The Camera Switcher to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a6069976325cb9983f6ed75e1884f1981}\label{class_fbx_global_camera_settings_a6069976325cb9983f6ed75e1884f1981}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Set\+Default\+Camera@{Set\+Default\+Camera}}
+\index{Set\+Default\+Camera@{Set\+Default\+Camera}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Default\+Camera()}{SetDefaultCamera()}}
+{\footnotesize\ttfamily bool Fbx\+Global\+Camera\+Settings\+::\+Set\+Default\+Camera (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Camera\+Name,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Sets the default camera. 
+\begin{DoxyParams}{引数}
+{\em p\+Camera\+Name} & Name of the default camera. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if camera name is valid, returns {\ttfamily false} if it is not valid. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+A valid camera name must be either one of the defined tokens (F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+VE, F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+T\+OP, F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+B\+O\+T\+T\+OM, F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+F\+R\+O\+NT, F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+B\+A\+CK, F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+R\+I\+G\+HT, F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+L\+E\+FT and F\+B\+X\+S\+D\+K\+\_\+\+C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+ER) or the name of a camera that is inserted in the node tree under the scene\textquotesingle{}s root node. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_camera_settings_a15790cd057733254a0e82b172b644122}\label{class_fbx_global_camera_settings_a15790cd057733254a0e82b172b644122}} 
+\index{Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}!Set\+Default\+Viewing\+Mode@{Set\+Default\+Viewing\+Mode}}
+\index{Set\+Default\+Viewing\+Mode@{Set\+Default\+Viewing\+Mode}!Fbx\+Global\+Camera\+Settings@{Fbx\+Global\+Camera\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Default\+Viewing\+Mode()}{SetDefaultViewingMode()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Camera\+Settings\+::\+Set\+Default\+Viewing\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_global_camera_settings_aaa674f8b39e4cd57d7cc07f381f11858}{E\+Viewing\+Mode}}]{p\+Viewing\+Mode }\end{DoxyParamCaption})}
+
+Sets the default viewing mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Viewing\+Mode} & Viewing mode to set(e\+Standard, e\+X\+Ray or e\+Models\+Only). \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxglobalcamerasettings_8h}{fbxglobalcamerasettings.\+h}\end{DoxyCompactItemize}

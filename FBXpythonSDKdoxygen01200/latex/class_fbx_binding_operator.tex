@@ -1,0 +1,361 @@
+\hypertarget{class_fbx_binding_operator}{}\section{Fbx\+Binding\+Operator クラス}
+\label{class_fbx_binding_operator}\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+
+
+{\ttfamily \#include $<$fbxbindingoperator.\+h$>$}
+
+
+
+Fbx\+Binding\+Operator の継承関係図
+% FIG 0
+
+
+Fbx\+Binding\+Operator 連携図
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_binding_operator_1_1_function}{Function}
+\item 
+class \hyperlink{class_fbx_binding_operator_1_1_function_creator}{Function\+Creator}
+\item 
+class \hyperlink{class_fbx_binding_operator_1_1_function_creator_base}{Function\+Creator\+Base}
+\item 
+class \hyperlink{class_fbx_binding_operator_1_1_function_registry}{Function\+Registry}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class F\+B\+X\+T\+Y\+PE $>$ }\\bool \hyperlink{class_fbx_binding_operator_a1487485be07b04ef755f8831912d2709}{Evaluate} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, F\+B\+X\+T\+Y\+PE $\ast$p\+Result) const
+\item 
+{\footnotesize template$<$class F\+B\+X\+T\+Y\+PE $>$ }\\bool \hyperlink{class_fbx_binding_operator_ac7e93e46c1aea6fa49dca09d3f2df342}{Reverse\+Evaluation} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, F\+B\+X\+T\+Y\+PE $\ast$p\+In\+Out, bool set\+Obj=false, int index=0) const
+\item 
+{\footnotesize template$<$class F\+B\+X\+T\+Y\+PE $>$ }\\bool \hyperlink{class_fbx_binding_operator_ab649606ddda104b1ab6b329fde618654}{Evaluate\+Entry} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Entry\+Destination\+Name, F\+B\+X\+T\+Y\+PE $\ast$p\+Result) const
+\item 
+bool \hyperlink{class_fbx_binding_operator_a00fe9d445d7ffd44b4da764af49e0d9d}{Evaluate\+Entry} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Entry\+Destination\+Name, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$p\+Result\+Type, void $\ast$$\ast$p\+Result) const
+\item 
+bool \hyperlink{class_fbx_binding_operator_a9201bfc345f36627b6bace7fa3ccb319}{Get\+Entry\+Property} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Entry\+Destination\+Name, \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop) const
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_fbx_binding_operator_a228cdd04bfe2e075533f2af0db26ea91}{Register\+Functions} ()
+\item 
+static void \hyperlink{class_fbx_binding_operator_ac1243bdbc2a34d225b5a33c3c16fe2d8}{Unregister\+Functions} ()
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_binding_operator_a2dba5cfe05b72b6a46b2195872a93005}{Function\+Name}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_binding_operator_a6c1e84a9019ff0fa80424439fa745ee1}{Target\+Name}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_binding_operator_ac905ce728f7bfb5bd7becf78af8a5c4d}{s\+Function\+Name}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_fbx_binding_operator_1_1_function}{Function} name. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_binding_operator_ac53f7653f20364486e319b64b275ed4b}{s\+Target\+Name}
+\begin{DoxyCompactList}\small\item\em Target name. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_binding_operator_aea467026528b679f7a8edc9862895f63}{s\+Default\+Function\+Name}
+\begin{DoxyCompactList}\small\item\em Default value for function name. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_binding_operator_adba0167e90625ae94b159146b5e13b13}{s\+Default\+Target\+Name}
+\begin{DoxyCompactList}\small\item\em Default value for target name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_binding_operator_addee18722d7806245f10a1c873bafaac}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_binding_operator_a183d8593f526ca03661506ad1aedf412}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_binding_operator_ab7e4a678475a62b3bf36b1171860c17e}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+void \hyperlink{class_fbx_binding_operator_aba1f55d1c5458713779fc2bdfc272b3e}{Instantiate\+Function} ()
+\item 
+bool \hyperlink{class_fbx_binding_operator_a46e67c6d662013ae83cd239648d85630}{Evaluate} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$p\+Result\+Type, void $\ast$$\ast$p\+Result) const
+\item 
+bool \hyperlink{class_fbx_binding_operator_a7528f0c6f942433c0c5c78fc5e803bbc}{Reverse\+Evaluate} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Target, const void $\ast$p\+In, void $\ast$$\ast$p\+Out, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$p\+Out\+Type, bool set\+Obj, int index) const
+\item 
+void \hyperlink{class_fbx_binding_operator_af7e8559f61c34efa27b1562d386efd2c}{Free\+Evaluation\+Result} (\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Result\+Type, void $\ast$p\+Result) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_binding_operator_1_1_function}{Function} $\ast$ \hyperlink{class_fbx_binding_operator_a677a0ed0b5782978a21c8a4b371821f5}{m\+Function}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This object represents a binding operation on a \hyperlink{class_fbx_object}{Fbx\+Object} or \hyperlink{class_fbx_property}{Fbx\+Property}. For example, \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} can be used to bind a light object to a parameter of shader via \hyperlink{class_fbx_node_direction_b_o_f}{Fbx\+Node\+Direction\+B\+OF} or \hyperlink{class_fbx_node_position_b_o_f}{Fbx\+Node\+Position\+B\+OF}. 
+\begin{DoxyCode}
+\textcolor{comment}{//Create an entry lEntry of binding table lTable.}
+\hyperlink{class_fbx_binding_table_entry}{FbxBindingTableEntry}& lEntry = lTable->AddNewEntry();
+
+\textcolor{comment}{//Create a NodePositionConvert binding operator and add it as source of the lEntry.}
+\hyperlink{class_fbx_operator_entry_view}{FbxOperatorEntryView} lSrc(&lEntry, \textcolor{keyword}{true}, \textcolor{keyword}{true});
+lSrc.SetOperatorName( \textcolor{stringliteral}{"NodePositionConvert"});
+\hyperlink{class_fbx_binding_operator}{FbxBindingOperator}* lOp = pImpl.AddNewBindingOperator( \textcolor{stringliteral}{"NodePositionConvert"}, 
+      \hyperlink{class_fbx_node_position_b_o_f_aaa0c4610384d1dbb4e566bad44c356ee}{FbxNodePositionBOF::FunctionName});
+
+\textcolor{comment}{//Add a property entry to the binding operator.}
+\hyperlink{class_fbx_binding_table_entry}{FbxBindingTableEntry}& lEntryPropParam = lOp->\hyperlink{class_fbx_binding_table_base_a2ebf180e80538abf0e6512a8ca30ee10}{AddNewEntry}();
+\hyperlink{class_fbx_property_entry_view}{FbxPropertyEntryView} lPropSrc(&lEntryPropParam, \textcolor{keyword}{true}, \textcolor{keyword}{true});
+\textcolor{comment}{//Set the shader parameter (the property's name) as source of the lEntryPropParam.}
+lPropSrc.SetProperty(lProp.GetHierarchicalName());
+\textcolor{comment}{//Set the operator function FbxNodePositionBOF as destination of the lEntryPropParam.}
+lEntryPropParam.\hyperlink{class_fbx_binding_table_entry_aaa49a62bd197febfb6052f3efa50eaf3}{SetDestination}( \hyperlink{class_fbx_node_position_b_o_f_aaa0c4610384d1dbb4e566bad44c356ee}{FbxNodePositionBOF::FunctionName}
+       );
+
+\textcolor{comment}{//Set the shader parameter as destination of the lEntry.}
+\hyperlink{class_fbx_semantic_entry_view}{FbxSemanticEntryView} lDst( &lEntry, \textcolor{keyword}{false}, \textcolor{keyword}{true} );
+lDst.SetSemantic( lProp.GetName() );
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_operator_entry_view}{Fbx\+Operator\+Entry\+View}, \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry}, \hyperlink{class_fbx_property_entry_view}{Fbx\+Property\+Entry\+View} 
+\end{DoxySeeAlso}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_binding_operator_addee18722d7806245f10a1c873bafaac}\label{class_fbx_binding_operator_addee18722d7806245f10a1c873bafaac}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Binding\+Operator\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_binding_operator_ab7e4a678475a62b3bf36b1171860c17e}\label{class_fbx_binding_operator_ab7e4a678475a62b3bf36b1171860c17e}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Binding\+Operator\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_binding_operator_a183d8593f526ca03661506ad1aedf412}\label{class_fbx_binding_operator_a183d8593f526ca03661506ad1aedf412}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Binding\+Operator\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_binding_operator_a1487485be07b04ef755f8831912d2709}\label{class_fbx_binding_operator_a1487485be07b04ef755f8831912d2709}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Evaluate()}{Evaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class F\+B\+X\+T\+Y\+PE $>$ \\
+bool Fbx\+Binding\+Operator\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{F\+B\+X\+T\+Y\+PE $\ast$}]{p\+Result }\end{DoxyParamCaption}) const}
+
+Run the operator on the given object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object that will be evaluated. \\
+\hline
+{\em p\+Result} & A pointer to a buffer to hold the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_binding_operator_a46e67c6d662013ae83cd239648d85630}\label{class_fbx_binding_operator_a46e67c6d662013ae83cd239648d85630}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Evaluate()}{Evaluate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Binding\+Operator\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$}]{p\+Result\+Type,  }\item[{void $\ast$$\ast$}]{p\+Result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_ab649606ddda104b1ab6b329fde618654}\label{class_fbx_binding_operator_ab649606ddda104b1ab6b329fde618654}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Evaluate\+Entry@{Evaluate\+Entry}}
+\index{Evaluate\+Entry@{Evaluate\+Entry}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Evaluate\+Entry()}{EvaluateEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class F\+B\+X\+T\+Y\+PE $>$ \\
+bool Fbx\+Binding\+Operator\+::\+Evaluate\+Entry (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Entry\+Destination\+Name,  }\item[{F\+B\+X\+T\+Y\+PE $\ast$}]{p\+Result }\end{DoxyParamCaption}) const}
+
+Evaluate the value of an operator parameter. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object that will be evaluated. \\
+\hline
+{\em p\+Entry\+Destination\+Name} & The name of the parameter. This is used to get the property or operator that is related to this parameter, then to evaluate the property or operator. \\
+\hline
+{\em p\+Result} & A pointer to the result. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method can handle different types of entries. For property entry and constant entry, this method will find out the property via the p\+Entry\+Destination\+Name and then evaluate its value; for operator entry, this method will find out the operator via the p\+Entry\+Destination\+Name and evaluate the operator function to get the property\textquotesingle{}s value; for any other types of entry, this method is meaningless. 
+\end{DoxyRemark}
+呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_binding_operator_a00fe9d445d7ffd44b4da764af49e0d9d}\label{class_fbx_binding_operator_a00fe9d445d7ffd44b4da764af49e0d9d}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Evaluate\+Entry@{Evaluate\+Entry}}
+\index{Evaluate\+Entry@{Evaluate\+Entry}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Evaluate\+Entry()}{EvaluateEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Binding\+Operator\+::\+Evaluate\+Entry (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Entry\+Destination\+Name,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$}]{p\+Result\+Type,  }\item[{void $\ast$$\ast$}]{p\+Result }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_af7e8559f61c34efa27b1562d386efd2c}\label{class_fbx_binding_operator_af7e8559f61c34efa27b1562d386efd2c}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Free\+Evaluation\+Result@{Free\+Evaluation\+Result}}
+\index{Free\+Evaluation\+Result@{Free\+Evaluation\+Result}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Free\+Evaluation\+Result()}{FreeEvaluationResult()}}
+{\footnotesize\ttfamily void Fbx\+Binding\+Operator\+::\+Free\+Evaluation\+Result (\begin{DoxyParamCaption}\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Result\+Type,  }\item[{void $\ast$}]{p\+Result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_a9201bfc345f36627b6bace7fa3ccb319}\label{class_fbx_binding_operator_a9201bfc345f36627b6bace7fa3ccb319}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Get\+Entry\+Property@{Get\+Entry\+Property}}
+\index{Get\+Entry\+Property@{Get\+Entry\+Property}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Get\+Entry\+Property()}{GetEntryProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Binding\+Operator\+::\+Get\+Entry\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Entry\+Destination\+Name,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_aba1f55d1c5458713779fc2bdfc272b3e}\label{class_fbx_binding_operator_aba1f55d1c5458713779fc2bdfc272b3e}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Instantiate\+Function@{Instantiate\+Function}}
+\index{Instantiate\+Function@{Instantiate\+Function}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Instantiate\+Function()}{InstantiateFunction()}}
+{\footnotesize\ttfamily void Fbx\+Binding\+Operator\+::\+Instantiate\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_a228cdd04bfe2e075533f2af0db26ea91}\label{class_fbx_binding_operator_a228cdd04bfe2e075533f2af0db26ea91}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Register\+Functions@{Register\+Functions}}
+\index{Register\+Functions@{Register\+Functions}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Register\+Functions()}{RegisterFunctions()}}
+{\footnotesize\ttfamily static void Fbx\+Binding\+Operator\+::\+Register\+Functions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_a7528f0c6f942433c0c5c78fc5e803bbc}\label{class_fbx_binding_operator_a7528f0c6f942433c0c5c78fc5e803bbc}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Reverse\+Evaluate@{Reverse\+Evaluate}}
+\index{Reverse\+Evaluate@{Reverse\+Evaluate}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Reverse\+Evaluate()}{ReverseEvaluate()}}
+{\footnotesize\ttfamily bool Fbx\+Binding\+Operator\+::\+Reverse\+Evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Target,  }\item[{const void $\ast$}]{p\+In,  }\item[{void $\ast$$\ast$}]{p\+Out,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$}]{p\+Out\+Type,  }\item[{bool}]{set\+Obj,  }\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_ac7e93e46c1aea6fa49dca09d3f2df342}\label{class_fbx_binding_operator_ac7e93e46c1aea6fa49dca09d3f2df342}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Reverse\+Evaluation@{Reverse\+Evaluation}}
+\index{Reverse\+Evaluation@{Reverse\+Evaluation}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Reverse\+Evaluation()}{ReverseEvaluation()}}
+{\footnotesize\ttfamily template$<$class F\+B\+X\+T\+Y\+PE $>$ \\
+bool Fbx\+Binding\+Operator\+::\+Reverse\+Evaluation (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{F\+B\+X\+T\+Y\+PE $\ast$}]{p\+In\+Out,  }\item[{bool}]{set\+Obj = {\ttfamily false},  }\item[{int}]{index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Run the inverse operator on the given object, assigning the result directly to the object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object that will be evaluated. \\
+\hline
+{\em p\+In\+Out} & Type of value being reversed. \\
+\hline
+{\em set\+Obj} & Control to set the property (only to query by the default ). \\
+\hline
+{\em index} & Used only in \hyperlink{class_fbx_multiply_dist_b_o_f}{Fbx\+Multiply\+Dist\+B\+OF}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_binding_operator_ac1243bdbc2a34d225b5a33c3c16fe2d8}\label{class_fbx_binding_operator_ac1243bdbc2a34d225b5a33c3c16fe2d8}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Unregister\+Functions@{Unregister\+Functions}}
+\index{Unregister\+Functions@{Unregister\+Functions}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Unregister\+Functions()}{UnregisterFunctions()}}
+{\footnotesize\ttfamily static void Fbx\+Binding\+Operator\+::\+Unregister\+Functions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_binding_operator_a2dba5cfe05b72b6a46b2195872a93005}\label{class_fbx_binding_operator_a2dba5cfe05b72b6a46b2195872a93005}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Function\+Name@{Function\+Name}}
+\index{Function\+Name@{Function\+Name}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Function\+Name}{FunctionName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Binding\+Operator\+::\+Function\+Name}
+
+This property stores the name of function.
+
+Default value is \char`\"{}\char`\"{}. \mbox{\Hypertarget{class_fbx_binding_operator_a677a0ed0b5782978a21c8a4b371821f5}\label{class_fbx_binding_operator_a677a0ed0b5782978a21c8a4b371821f5}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!m\+Function@{m\+Function}}
+\index{m\+Function@{m\+Function}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{m\+Function}{mFunction}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_operator_1_1_function}{Function}$\ast$ Fbx\+Binding\+Operator\+::m\+Function\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_binding_operator_aea467026528b679f7a8edc9862895f63}\label{class_fbx_binding_operator_aea467026528b679f7a8edc9862895f63}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!s\+Default\+Function\+Name@{s\+Default\+Function\+Name}}
+\index{s\+Default\+Function\+Name@{s\+Default\+Function\+Name}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{s\+Default\+Function\+Name}{sDefaultFunctionName}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Operator\+::s\+Default\+Function\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default value for function name. 
+
+\mbox{\Hypertarget{class_fbx_binding_operator_adba0167e90625ae94b159146b5e13b13}\label{class_fbx_binding_operator_adba0167e90625ae94b159146b5e13b13}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!s\+Default\+Target\+Name@{s\+Default\+Target\+Name}}
+\index{s\+Default\+Target\+Name@{s\+Default\+Target\+Name}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{s\+Default\+Target\+Name}{sDefaultTargetName}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Operator\+::s\+Default\+Target\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default value for target name. 
+
+\mbox{\Hypertarget{class_fbx_binding_operator_ac905ce728f7bfb5bd7becf78af8a5c4d}\label{class_fbx_binding_operator_ac905ce728f7bfb5bd7becf78af8a5c4d}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!s\+Function\+Name@{s\+Function\+Name}}
+\index{s\+Function\+Name@{s\+Function\+Name}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{s\+Function\+Name}{sFunctionName}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Operator\+::s\+Function\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_fbx_binding_operator_1_1_function}{Function} name. 
+
+\mbox{\Hypertarget{class_fbx_binding_operator_ac53f7653f20364486e319b64b275ed4b}\label{class_fbx_binding_operator_ac53f7653f20364486e319b64b275ed4b}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!s\+Target\+Name@{s\+Target\+Name}}
+\index{s\+Target\+Name@{s\+Target\+Name}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{s\+Target\+Name}{sTargetName}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Operator\+::s\+Target\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Target name. 
+
+\mbox{\Hypertarget{class_fbx_binding_operator_a6c1e84a9019ff0fa80424439fa745ee1}\label{class_fbx_binding_operator_a6c1e84a9019ff0fa80424439fa745ee1}} 
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Target\+Name@{Target\+Name}}
+\index{Target\+Name@{Target\+Name}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\subsubsection{\texorpdfstring{Target\+Name}{TargetName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Binding\+Operator\+::\+Target\+Name}
+
+This property stores the name of target.
+
+Default value is \char`\"{}\char`\"{}. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxbindingoperator_8h}{fbxbindingoperator.\+h}\end{DoxyCompactItemize}

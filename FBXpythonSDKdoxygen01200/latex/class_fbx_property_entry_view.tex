@@ -1,0 +1,136 @@
+\hypertarget{class_fbx_property_entry_view}{}\section{Fbx\+Property\+Entry\+View クラス}
+\label{class_fbx_property_entry_view}\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+
+
+{\ttfamily \#include $<$fbxpropertyentryview.\+h$>$}
+
+
+
+Fbx\+Property\+Entry\+View の継承関係図
+% FIG 0
+
+
+Fbx\+Property\+Entry\+View 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{class_fbx_property_entry_view_a22f4b61845256d48885dc873c7341edc}{Get\+Property} () const
+\item 
+void \hyperlink{class_fbx_property_entry_view_adcf0a92938e634f1bcedaaf31281de61}{Set\+Property} (const char $\ast$p\+Property\+Name)
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_property_entry_view_a36affcd0bce8be2a4b5f94ccd60fa462}{Entry\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_property_entry_view_a862b7d0e633c2cb246b5b63a48ffd706}{s\+Entry\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_entry_view_ac1d9bbc86521ef0f3d8a1761568bc19c}{Fbx\+Property\+Entry\+View} (\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$p\+Entry, bool p\+As\+Source, bool p\+Create=false)
+\item 
+\hyperlink{class_fbx_property_entry_view_a9c6c4f93cb0a12ba2f2251e773892a56}{$\sim$\+Fbx\+Property\+Entry\+View} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_property_entry_view}{Fbx\+Property\+Entry\+View} represents property entry in entry tables. The property can be used as source or destination for the binding entry. Use this class to manipulate binding table\textquotesingle{}s attributes.
+
+
+\begin{DoxyCode}
+ Here is a code snippet to show how it used.
+FbxProperty lProp;
+\hyperlink{class_fbx_binding_table}{FbxBindingTable} lTable;
+\hyperlink{class_fbx_binding_table_entry}{FbxBindingTableEntry}& lEntry = lBindingTable.AddNewEntry();
+\hyperlink{class_fbx_property_entry_view}{FbxPropertyEntryView} lView( lEntry, \textcolor{keyword}{true}, \textcolor{keyword}{true});
+lView.SetProperty( lProp.GetName());
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} and \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}. 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_property_entry_view_ac1d9bbc86521ef0f3d8a1761568bc19c}\label{class_fbx_property_entry_view_ac1d9bbc86521ef0f3d8a1761568bc19c}} 
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\subsubsection{\texorpdfstring{Fbx\+Property\+Entry\+View()}{FbxPropertyEntryView()}}
+{\footnotesize\ttfamily Fbx\+Property\+Entry\+View\+::\+Fbx\+Property\+Entry\+View (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$}]{p\+Entry,  }\item[{bool}]{p\+As\+Source,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry} & The binding table entry to create the entry view for. \\
+\hline
+{\em p\+As\+Source} & {\ttfamily true} to create the entry view as source, {\ttfamily false} as destination. \\
+\hline
+{\em p\+Create} & {\ttfamily true} to create the entry view, {\ttfamily false} otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_entry_view_a9c6c4f93cb0a12ba2f2251e773892a56}\label{class_fbx_property_entry_view_a9c6c4f93cb0a12ba2f2251e773892a56}} 
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!````~Fbx\+Property\+Entry\+View@{$\sim$\+Fbx\+Property\+Entry\+View}}
+\index{````~Fbx\+Property\+Entry\+View@{$\sim$\+Fbx\+Property\+Entry\+View}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Property\+Entry\+View()}{~FbxPropertyEntryView()}}
+{\footnotesize\ttfamily Fbx\+Property\+Entry\+View\+::$\sim$\+Fbx\+Property\+Entry\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_property_entry_view_a36affcd0bce8be2a4b5f94ccd60fa462}\label{class_fbx_property_entry_view_a36affcd0bce8be2a4b5f94ccd60fa462}} 
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!Entry\+Type@{Entry\+Type}}
+\index{Entry\+Type@{Entry\+Type}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\subsubsection{\texorpdfstring{Entry\+Type()}{EntryType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Property\+Entry\+View\+::\+Entry\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the entry type. \begin{DoxyReturn}{戻り値}
+Entry type as string \char`\"{}\+Fbx\+Property\+Entry\char`\"{}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Always use \hyperlink{class_fbx_property_entry_view_a36affcd0bce8be2a4b5f94ccd60fa462}{Entry\+Type()} to get the right entry type. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_entry_view_a83ee50482b441ba8b0e6d7c2dba5432f}{Fbx\+Entry\+View}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_property_entry_view_a22f4b61845256d48885dc873c7341edc}\label{class_fbx_property_entry_view_a22f4b61845256d48885dc873c7341edc}} 
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!Get\+Property@{Get\+Property}}
+\index{Get\+Property@{Get\+Property}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\subsubsection{\texorpdfstring{Get\+Property()}{GetProperty()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+Entry\+View\+::\+Get\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the property name from the binding entry. \begin{DoxyReturn}{戻り値}
+The property name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_entry_view_adcf0a92938e634f1bcedaaf31281de61}\label{class_fbx_property_entry_view_adcf0a92938e634f1bcedaaf31281de61}} 
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!Set\+Property@{Set\+Property}}
+\index{Set\+Property@{Set\+Property}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\subsubsection{\texorpdfstring{Set\+Property()}{SetProperty()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Entry\+View\+::\+Set\+Property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Property\+Name }\end{DoxyParamCaption})}
+
+Set the property name to the binding entry. 
+\begin{DoxyParams}{引数}
+{\em p\+Property\+Name} & The property name to set. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_property_entry_view_a862b7d0e633c2cb246b5b63a48ffd706}\label{class_fbx_property_entry_view_a862b7d0e633c2cb246b5b63a48ffd706}} 
+\index{Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}!s\+Entry\+Type@{s\+Entry\+Type}}
+\index{s\+Entry\+Type@{s\+Entry\+Type}!Fbx\+Property\+Entry\+View@{Fbx\+Property\+Entry\+View}}
+\subsubsection{\texorpdfstring{s\+Entry\+Type}{sEntryType}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+Entry\+View\+::s\+Entry\+Type\hspace{0.3cm}{\ttfamily [static]}}
+
+Name of the entry type used in the binding entry. It should be \char`\"{}\+Fbx\+Property\+Entry\char`\"{} in this case. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxpropertyentryview_8h}{fbxpropertyentryview.\+h}\end{DoxyCompactItemize}

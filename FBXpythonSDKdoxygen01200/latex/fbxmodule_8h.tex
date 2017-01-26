@@ -1,0 +1,85 @@
+\hypertarget{fbxmodule_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/core/fbxmodule.h ファイル}
+\label{fbxmodule_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/fbxmodule.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/fbxmodule.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+fbxmodule.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} \hyperlink{fbxmodule_8h_a5d3fef57146f76b0d4049730dc9918ae}{Fbx\+Module\+Load} (const char $\ast$p\+File\+Path)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void $\ast$ \hyperlink{fbxmodule_8h_a2e893135f0f9ebee0ad5ffecb2b1cd19}{Fbx\+Module\+Get\+Proc} (\hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} p\+Module\+Handle, const char $\ast$p\+Proc\+Name)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} bool \hyperlink{fbxmodule_8h_a8f1d9816706d1a47669a5a411e9570f6}{Fbx\+Module\+Free} (\hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} p\+Module\+Handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{型定義詳解}
+\mbox{\Hypertarget{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}\label{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}} 
+\index{fbxmodule.\+h@{fbxmodule.\+h}!Fbx\+Module@{Fbx\+Module}}
+\index{Fbx\+Module@{Fbx\+Module}!fbxmodule.\+h@{fbxmodule.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Module}{FbxModule}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxmodule_8h_a8f1d9816706d1a47669a5a411e9570f6}\label{fbxmodule_8h_a8f1d9816706d1a47669a5a411e9570f6}} 
+\index{fbxmodule.\+h@{fbxmodule.\+h}!Fbx\+Module\+Free@{Fbx\+Module\+Free}}
+\index{Fbx\+Module\+Free@{Fbx\+Module\+Free}!fbxmodule.\+h@{fbxmodule.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Module\+Free()}{FbxModuleFree()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} bool Fbx\+Module\+Free (\begin{DoxyParamCaption}\item[{\hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module}}]{p\+Module\+Handle }\end{DoxyParamCaption})}
+
+Frees the loaded module and, if necessary, decrements its reference count. 
+\begin{DoxyParams}{引数}
+{\em p\+Module\+Handle} & A valid module handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When the reference count reaches zero, the module is unloaded from the address space of the calling process and the handle is no longer valid. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{fbxmodule_8h_a2e893135f0f9ebee0ad5ffecb2b1cd19}\label{fbxmodule_8h_a2e893135f0f9ebee0ad5ffecb2b1cd19}} 
+\index{fbxmodule.\+h@{fbxmodule.\+h}!Fbx\+Module\+Get\+Proc@{Fbx\+Module\+Get\+Proc}}
+\index{Fbx\+Module\+Get\+Proc@{Fbx\+Module\+Get\+Proc}!fbxmodule.\+h@{fbxmodule.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Module\+Get\+Proc()}{FbxModuleGetProc()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void$\ast$ Fbx\+Module\+Get\+Proc (\begin{DoxyParamCaption}\item[{\hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module}}]{p\+Module\+Handle,  }\item[{const char $\ast$}]{p\+Proc\+Name }\end{DoxyParamCaption})}
+
+Retrieves the address of an exported function or variable from the specified module. 
+\begin{DoxyParams}{引数}
+{\em p\+Module\+Handle} & A valid module handle. \\
+\hline
+{\em p\+Proc\+Name} & The procedure name to search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The procedure handle if valid, otherwise N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fbxmodule_8h_a5d3fef57146f76b0d4049730dc9918ae}\label{fbxmodule_8h_a5d3fef57146f76b0d4049730dc9918ae}} 
+\index{fbxmodule.\+h@{fbxmodule.\+h}!Fbx\+Module\+Load@{Fbx\+Module\+Load}}
+\index{Fbx\+Module\+Load@{Fbx\+Module\+Load}!fbxmodule.\+h@{fbxmodule.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Module\+Load()}{FbxModuleLoad()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} Fbx\+Module\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Path }\end{DoxyParamCaption})}
+
+Loads the specified module into the address space of the calling process. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Path} & The full file path name of the module to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The module handle if it successfully loaded, otherwise N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The specified module may cause other modules to be loaded. 
+\end{DoxyRemark}

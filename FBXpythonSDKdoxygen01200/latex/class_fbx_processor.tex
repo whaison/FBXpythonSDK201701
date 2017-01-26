@@ -1,0 +1,104 @@
+\hypertarget{class_fbx_processor}{}\section{Fbx\+Processor クラス}
+\label{class_fbx_processor}\index{Fbx\+Processor@{Fbx\+Processor}}
+
+
+{\ttfamily \#include $<$fbxprocessor.\+h$>$}
+
+
+
+Fbx\+Processor の継承関係図
+% FIG 0
+
+
+Fbx\+Processor 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{Indent}\textbf{ Processor management}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_processor_acb7f2a7c80e823b16d2639d7293fefb3}{Process\+Collection} (\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$p\+Collection=0)
+\item 
+bool \hyperlink{class_fbx_processor_adb5587b39465b31d968f1ba7dd2b2d5f}{Process\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Collection=0)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_processor_aae65d06b0e0f7865eaaa803a4009d536}{internal\+\_\+\+Process\+Collection\+Begin} (\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$p\+Collection)
+\item 
+virtual bool \hyperlink{class_fbx_processor_ae578a3b99db2133b967b0ed29ce37e96}{internal\+\_\+\+Process\+Collection\+End} (\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$p\+Collection)
+\item 
+virtual bool \hyperlink{class_fbx_processor_ac549e7e8c678383831be8789a7c4ccdb}{internal\+\_\+\+Process\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+virtual bool \hyperlink{class_fbx_processor_a0b0b24fc89c90b8cc6149df1360fbcbd}{internal\+\_\+\+Process\+Collection} (\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$p\+Collection)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+The class and its derived classes(e.\+g. \hyperlink{class_fbx_processor_x_ref_copy}{Fbx\+Processor\+X\+Ref\+Copy}, \hyperlink{class_fbx_processor_x_ref_copy_user_library}{Fbx\+Processor\+X\+Ref\+Copy\+User\+Library}, etc.) are used to process shader, library, asset, etc. For example, you could update object property and its value via \hyperlink{class_fbx_processor_adb5587b39465b31d968f1ba7dd2b2d5f}{Fbx\+Processor\+::\+Process\+Object()}, \hyperlink{class_fbx_processor_ac549e7e8c678383831be8789a7c4ccdb}{Fbx\+Processor\+::internal\+\_\+\+Process\+Object()}, etc. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_processor_a0b0b24fc89c90b8cc6149df1360fbcbd}\label{class_fbx_processor_a0b0b24fc89c90b8cc6149df1360fbcbd}} 
+\index{Fbx\+Processor@{Fbx\+Processor}!internal\+\_\+\+Process\+Collection@{internal\+\_\+\+Process\+Collection}}
+\index{internal\+\_\+\+Process\+Collection@{internal\+\_\+\+Process\+Collection}!Fbx\+Processor@{Fbx\+Processor}}
+\subsubsection{\texorpdfstring{internal\+\_\+\+Process\+Collection()}{internal\_ProcessCollection()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+::internal\+\_\+\+Process\+Collection (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$}]{p\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_processor_aae65d06b0e0f7865eaaa803a4009d536}\label{class_fbx_processor_aae65d06b0e0f7865eaaa803a4009d536}} 
+\index{Fbx\+Processor@{Fbx\+Processor}!internal\+\_\+\+Process\+Collection\+Begin@{internal\+\_\+\+Process\+Collection\+Begin}}
+\index{internal\+\_\+\+Process\+Collection\+Begin@{internal\+\_\+\+Process\+Collection\+Begin}!Fbx\+Processor@{Fbx\+Processor}}
+\subsubsection{\texorpdfstring{internal\+\_\+\+Process\+Collection\+Begin()}{internal\_ProcessCollectionBegin()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+::internal\+\_\+\+Process\+Collection\+Begin (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$}]{p\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_processor_x_ref_copy_ada78e119a176edb65c40cbb787699d83}{Fbx\+Processor\+X\+Ref\+Copy}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_processor_ae578a3b99db2133b967b0ed29ce37e96}\label{class_fbx_processor_ae578a3b99db2133b967b0ed29ce37e96}} 
+\index{Fbx\+Processor@{Fbx\+Processor}!internal\+\_\+\+Process\+Collection\+End@{internal\+\_\+\+Process\+Collection\+End}}
+\index{internal\+\_\+\+Process\+Collection\+End@{internal\+\_\+\+Process\+Collection\+End}!Fbx\+Processor@{Fbx\+Processor}}
+\subsubsection{\texorpdfstring{internal\+\_\+\+Process\+Collection\+End()}{internal\_ProcessCollectionEnd()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+::internal\+\_\+\+Process\+Collection\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$}]{p\+Collection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_processor_x_ref_copy_ab85bf2d36c443dff93731836493cdfdf}{Fbx\+Processor\+X\+Ref\+Copy}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_processor_ac549e7e8c678383831be8789a7c4ccdb}\label{class_fbx_processor_ac549e7e8c678383831be8789a7c4ccdb}} 
+\index{Fbx\+Processor@{Fbx\+Processor}!internal\+\_\+\+Process\+Object@{internal\+\_\+\+Process\+Object}}
+\index{internal\+\_\+\+Process\+Object@{internal\+\_\+\+Process\+Object}!Fbx\+Processor@{Fbx\+Processor}}
+\subsubsection{\texorpdfstring{internal\+\_\+\+Process\+Object()}{internal\_ProcessObject()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+::internal\+\_\+\+Process\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_processor_x_ref_copy_a268311daf5a2a29fc7bd2097d8346e5f}{Fbx\+Processor\+X\+Ref\+Copy}, \hyperlink{class_fbx_processor_shader_dependency_a4e6d8ee3e0abd220aeeba254f848f147}{Fbx\+Processor\+Shader\+Dependency}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_processor_acb7f2a7c80e823b16d2639d7293fefb3}\label{class_fbx_processor_acb7f2a7c80e823b16d2639d7293fefb3}} 
+\index{Fbx\+Processor@{Fbx\+Processor}!Process\+Collection@{Process\+Collection}}
+\index{Process\+Collection@{Process\+Collection}!Fbx\+Processor@{Fbx\+Processor}}
+\subsubsection{\texorpdfstring{Process\+Collection()}{ProcessCollection()}}
+{\footnotesize\ttfamily bool Fbx\+Processor\+::\+Process\+Collection (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_collection}{Fbx\+Collection} $\ast$}]{p\+Collection = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Process the specified collection. 
+\begin{DoxyParams}{引数}
+{\em p\+Collection} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_processor_adb5587b39465b31d968f1ba7dd2b2d5f}\label{class_fbx_processor_adb5587b39465b31d968f1ba7dd2b2d5f}} 
+\index{Fbx\+Processor@{Fbx\+Processor}!Process\+Object@{Process\+Object}}
+\index{Process\+Object@{Process\+Object}!Fbx\+Processor@{Fbx\+Processor}}
+\subsubsection{\texorpdfstring{Process\+Object()}{ProcessObject()}}
+{\footnotesize\ttfamily bool Fbx\+Processor\+::\+Process\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Collection = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Process the specified object. 
+\begin{DoxyParams}{引数}
+{\em p\+Collection} & \hyperlink{class_fbx_object}{Fbx\+Object} to process \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxprocessor_8h}{fbxprocessor.\+h}\end{DoxyCompactItemize}

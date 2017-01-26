@@ -1,0 +1,225 @@
+\hypertarget{class_fbx_constraint_position}{}\section{Fbx\+Constraint\+Position クラス}
+\label{class_fbx_constraint_position}\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+
+
+This constraint class contains methods for accessing the properties of a position constraint. A position constraint lets you constrain the position of an object based on the position of one or more sources.  
+
+
+
+
+{\ttfamily \#include $<$fbxconstraintposition.\+h$>$}
+
+
+
+Fbx\+Constraint\+Position の継承関係図
+% FIG 0
+
+
+Fbx\+Constraint\+Position 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_constraint_position_a887955c9fefa271dcabb46e2c61ca9e1}{Add\+Constraint\+Source} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, double p\+Weight=100)
+\item 
+bool \hyperlink{class_fbx_constraint_position_a7d496553504b797425ca2a055212f2ad}{Remove\+Constraint\+Source} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+int \hyperlink{class_fbx_constraint_position_a5f6c49200df6a7a1fe704084c2b56e09}{Get\+Constraint\+Source\+Count} () const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_position_a0024d10c8464eba13d5f3c3037e973cf}{Get\+Constraint\+Source} (int p\+Index) const
+\item 
+void \hyperlink{class_fbx_constraint_position_a7a2604a668ec7cc7d0c04fd9cf29a01a}{Set\+Constrained\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_position_a2722540075ef79aa2d14e7e838afaf79}{Get\+Constrained\+Object} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_constraint_position_adb2f3e784d01313ecc859b7cda16c182}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} \hyperlink{class_fbx_constraint_position_a79f710b1fec4b1285b53dec13ea68824}{Get\+Constraint\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_position_a2488e70c6bd35dd13cafa4234a21ca5c}{AffectX}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_position_afa5910286c656a2e87398645e3e3114d}{AffectY}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_position_a4d99852028aff66edc99d669d2f1bbae}{AffectZ}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_constraint_position_a90906bf60f276cd04cb1afebce8b9816}{Translation}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_position_a52d5190a6c10807e4f52383d05ceae38}{Constraint\+Sources}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_position_a5b6779be7ae7e754c31aac3552990df3}{Constrained\+Object}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This constraint class contains methods for accessing the properties of a position constraint. A position constraint lets you constrain the position of an object based on the position of one or more sources. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_constraint_position_a887955c9fefa271dcabb46e2c61ca9e1}\label{class_fbx_constraint_position_a887955c9fefa271dcabb46e2c61ca9e1}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Add\+Constraint\+Source@{Add\+Constraint\+Source}}
+\index{Add\+Constraint\+Source@{Add\+Constraint\+Source}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Add\+Constraint\+Source()}{AddConstraintSource()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Position\+::\+Add\+Constraint\+Source (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{double}]{p\+Weight = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Add a source to the constraint. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & New source object. \\
+\hline
+{\em p\+Weight} & Weight of the source object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_position_adb2f3e784d01313ecc859b7cda16c182}\label{class_fbx_constraint_position_adb2f3e784d01313ecc859b7cda16c182}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Constraint\+Position\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_position_a2722540075ef79aa2d14e7e838afaf79}\label{class_fbx_constraint_position_a2722540075ef79aa2d14e7e838afaf79}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Get\+Constrained\+Object@{Get\+Constrained\+Object}}
+\index{Get\+Constrained\+Object@{Get\+Constrained\+Object}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Get\+Constrained\+Object()}{GetConstrainedObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Position\+::\+Get\+Constrained\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constrained object. \begin{DoxyReturn}{戻り値}
+Current constrained object. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_a7f587d5db9685b5ee925a85354263edc}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_position_a0024d10c8464eba13d5f3c3037e973cf}\label{class_fbx_constraint_position_a0024d10c8464eba13d5f3c3037e973cf}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Get\+Constraint\+Source@{Get\+Constraint\+Source}}
+\index{Get\+Constraint\+Source@{Get\+Constraint\+Source}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source()}{GetConstraintSource()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Position\+::\+Get\+Constraint\+Source (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve a constraint source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Current source at the specified index. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_a5ff6fe6fc98af1e33e8b297bc1cea007}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_position_a5f6c49200df6a7a1fe704084c2b56e09}\label{class_fbx_constraint_position_a5f6c49200df6a7a1fe704084c2b56e09}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}}
+\index{Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source\+Count()}{GetConstraintSourceCount()}}
+{\footnotesize\ttfamily int Fbx\+Constraint\+Position\+::\+Get\+Constraint\+Source\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constraint source count. \begin{DoxyReturn}{戻り値}
+Current constraint source count. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_aa702f86c6a1832ce3b4905911e66c58f}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_position_a79f710b1fec4b1285b53dec13ea68824}\label{class_fbx_constraint_position_a79f710b1fec4b1285b53dec13ea68824}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Get\+Constraint\+Type@{Get\+Constraint\+Type}}
+\index{Get\+Constraint\+Type@{Get\+Constraint\+Type}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Type()}{GetConstraintType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} Fbx\+Constraint\+Position\+::\+Get\+Constraint\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Access the type of the constraint. \begin{DoxyReturn}{戻り値}
+This type of the constraint. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_position_a7d496553504b797425ca2a055212f2ad}\label{class_fbx_constraint_position_a7d496553504b797425ca2a055212f2ad}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Remove\+Constraint\+Source@{Remove\+Constraint\+Source}}
+\index{Remove\+Constraint\+Source@{Remove\+Constraint\+Source}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Remove\+Constraint\+Source()}{RemoveConstraintSource()}}
+{\footnotesize\ttfamily bool Fbx\+Constraint\+Position\+::\+Remove\+Constraint\+Source (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Remove a source from the constraint. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & Source object to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_position_a7a2604a668ec7cc7d0c04fd9cf29a01a}\label{class_fbx_constraint_position_a7a2604a668ec7cc7d0c04fd9cf29a01a}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Set\+Constrained\+Object@{Set\+Constrained\+Object}}
+\index{Set\+Constrained\+Object@{Set\+Constrained\+Object}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Set\+Constrained\+Object()}{SetConstrainedObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Position\+::\+Set\+Constrained\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set the constrained object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The constrained object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_position_a2488e70c6bd35dd13cafa4234a21ca5c}\label{class_fbx_constraint_position_a2488e70c6bd35dd13cafa4234a21ca5c}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!AffectX@{AffectX}}
+\index{AffectX@{AffectX}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{AffectX}{AffectX}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Position\+::\+AffectX}
+
+This property handles whether to affect x axis.
+
+Default value is true. \mbox{\Hypertarget{class_fbx_constraint_position_afa5910286c656a2e87398645e3e3114d}\label{class_fbx_constraint_position_afa5910286c656a2e87398645e3e3114d}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!AffectY@{AffectY}}
+\index{AffectY@{AffectY}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{AffectY}{AffectY}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Position\+::\+AffectY}
+
+This property handles whether to affect y axis.
+
+Default value is true. \mbox{\Hypertarget{class_fbx_constraint_position_a4d99852028aff66edc99d669d2f1bbae}\label{class_fbx_constraint_position_a4d99852028aff66edc99d669d2f1bbae}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!AffectZ@{AffectZ}}
+\index{AffectZ@{AffectZ}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{AffectZ}{AffectZ}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Position\+::\+AffectZ}
+
+This property handles whether to affect z axis.
+
+Default value is true. \mbox{\Hypertarget{class_fbx_constraint_position_a5b6779be7ae7e754c31aac3552990df3}\label{class_fbx_constraint_position_a5b6779be7ae7e754c31aac3552990df3}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Constrained\+Object@{Constrained\+Object}}
+\index{Constrained\+Object@{Constrained\+Object}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Constrained\+Object}{ConstrainedObject}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Position\+::\+Constrained\+Object}
+
+This property handles constraint target objects. \mbox{\Hypertarget{class_fbx_constraint_position_a52d5190a6c10807e4f52383d05ceae38}\label{class_fbx_constraint_position_a52d5190a6c10807e4f52383d05ceae38}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Constraint\+Sources@{Constraint\+Sources}}
+\index{Constraint\+Sources@{Constraint\+Sources}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Constraint\+Sources}{ConstraintSources}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Position\+::\+Constraint\+Sources}
+
+This property handles constraint source objects. \mbox{\Hypertarget{class_fbx_constraint_position_a90906bf60f276cd04cb1afebce8b9816}\label{class_fbx_constraint_position_a90906bf60f276cd04cb1afebce8b9816}} 
+\index{Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}!Translation@{Translation}}
+\index{Translation@{Translation}!Fbx\+Constraint\+Position@{Fbx\+Constraint\+Position}}
+\subsubsection{\texorpdfstring{Translation}{Translation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Constraint\+Position\+::\+Translation}
+
+This property handles translation offset.
+
+Default value is (0, 0, 0). 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxconstraintposition_8h}{fbxconstraintposition.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,237 @@
+\hypertarget{class_fbx_anim_curve_filter_scale_by_curve}{}\section{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve クラス}
+\label{class_fbx_anim_curve_filter_scale_by_curve}\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+
+
+{\ttfamily \#include $<$fbxanimcurvefilters.\+h$>$}
+
+
+
+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve の継承関係図
+% FIG 0
+
+
+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a88a350e3639a1fcb3aa29a071fe0fa71}{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a400e5f8cc518a9facd7b2ba452e55a78}{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a99e99cf6db71774d394010c4cd295fdb}{Get\+Name} () const
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_ac27bdff4d17273d2a767d188436e53f8}{Apply} (\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} \&p\+Curve\+Node, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a3914c0e65233ce6f2177d5d7e65c15ea}{Apply} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} \&p\+Curve, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_afa7aab42520287edf327d78dcbbb0d01}{Reset} ()
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a966f86d57bd088700341223a85fe27a0}{Get\+Scale} () const
+\item 
+void \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_afe876ca9b9d674e62b9b7a3839adeef0}{Set\+Scale} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+Scale)
+\end{DoxyCompactItemize}
+\subsection*{Exposed parent class methods.}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a6a1c172a82c4e5e2263d388c74ec9dba}{Apply} (\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$p\+Anim\+Stack, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a7212a7c70bb1c0ae8f7c82c25de17745}{Apply} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Obj, \hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$p\+Anim\+Stack, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_scale_by_curve_a8fc0bda8ff0cabcd9a424e06ca646581}{Apply} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$$\ast$p\+Curve, int p\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Key scale filter. Instead of scaling by a constant float value, we will scale by using another anim curve Use a single channel curve only to scale
+
+Filter to scale the keys of a set of animation curves. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a88a350e3639a1fcb3aa29a071fe0fa71}\label{class_fbx_anim_curve_filter_scale_by_curve_a88a350e3639a1fcb3aa29a071fe0fa71}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve()}{FbxAnimCurveFilterScaleByCurve()}}
+{\footnotesize\ttfamily Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a400e5f8cc518a9facd7b2ba452e55a78}\label{class_fbx_anim_curve_filter_scale_by_curve_a400e5f8cc518a9facd7b2ba452e55a78}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!````~Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\index{````~Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve()}{~FbxAnimCurveFilterScaleByCurve()}}
+{\footnotesize\ttfamily virtual Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::$\sim$\+Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+呼び出し関係図\+:
+% FIG 2
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a6a1c172a82c4e5e2263d388c74ec9dba}\label{class_fbx_anim_curve_filter_scale_by_curve_a6a1c172a82c4e5e2263d388c74ec9dba}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$}]{p\+Anim\+Stack,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter to all the curves stored in the animation stack. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Stack} & Animation stack where to retrieve the animation curves \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_aef3900e6180e05661c27ee484ae939c3}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a7212a7c70bb1c0ae8f7c82c25de17745}\label{class_fbx_anim_curve_filter_scale_by_curve_a7212a7c70bb1c0ae8f7c82c25de17745}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Obj,  }\item[{\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$}]{p\+Anim\+Stack,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter to all the animated properties of the object. 
+\begin{DoxyParams}{引数}
+{\em p\+Obj} & Object containing the animated properties to which the filter is applied. \\
+\hline
+{\em p\+Anim\+Stack} & Animation stack where to retrieve the animation curves \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_a009498a65af4995bf5e5908f17837531}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a8fc0bda8ff0cabcd9a424e06ca646581}\label{class_fbx_anim_curve_filter_scale_by_curve_a8fc0bda8ff0cabcd9a424e06ca646581}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$$\ast$}]{p\+Curve,  }\item[{int}]{p\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter on an array of animation curves. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & Array of curves to which the filter is applied. \\
+\hline
+{\em p\+Count} & Number of curves in the array. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_aca6a41fbc4d9019b20df7adccfa6ed3c}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_ac27bdff4d17273d2a767d188436e53f8}\label{class_fbx_anim_curve_filter_scale_by_curve_ac27bdff4d17273d2a767d188436e53f8}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} \&}]{p\+Curve\+Node,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter on all the curves of an animation curve node. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve\+Node} & Curve node to which the filter is applied. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method collects all the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} objects connected to the curve node and calls Apply(\+Fbx\+Anim\+Curve$\ast$$\ast$, int) 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_filter_ad042b45c0675278fa49e61739b0825c2}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a3914c0e65233ce6f2177d5d7e65c15ea}\label{class_fbx_anim_curve_filter_scale_by_curve_a3914c0e65233ce6f2177d5d7e65c15ea}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} \&}]{p\+Curve,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter on an animation curve. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & Curve to which the filter is applied. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_a6a69996c47c0e6f63a0f8b0d5fa806a0}{Fbx\+Anim\+Curve\+Filter}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a99e99cf6db71774d394010c4cd295fdb}\label{class_fbx_anim_curve_filter_scale_by_curve_a99e99cf6db71774d394010c4cd295fdb}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the name of the filter. \begin{DoxyReturn}{戻り値}
+Pointer to name. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_abd559d5052fbb072042e59241940a35c}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_a966f86d57bd088700341223a85fe27a0}\label{class_fbx_anim_curve_filter_scale_by_curve_a966f86d57bd088700341223a85fe27a0}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Get\+Scale@{Get\+Scale}}
+\index{Get\+Scale@{Get\+Scale}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Get\+Scale()}{GetScale()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Get\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the scale factor. \begin{DoxyReturn}{戻り値}
+The current scale factor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_afa7aab42520287edf327d78dcbbb0d01}\label{class_fbx_anim_curve_filter_scale_by_curve_afa7aab42520287edf327d78dcbbb0d01}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reset the filter to its default parameters. (null curve) 
+
+\hyperlink{class_fbx_anim_curve_filter_a57fb35baaaa85adb08946383cf40e811}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_scale_by_curve_afe876ca9b9d674e62b9b7a3839adeef0}\label{class_fbx_anim_curve_filter_scale_by_curve_afe876ca9b9d674e62b9b7a3839adeef0}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}!Set\+Scale@{Set\+Scale}}
+\index{Set\+Scale@{Set\+Scale}!Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve@{Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve}}
+\subsubsection{\texorpdfstring{Set\+Scale()}{SetScale()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Filter\+Scale\+By\+Curve\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+Scale }\end{DoxyParamCaption})}
+
+Set the scale factor. 
+\begin{DoxyParams}{引数}
+{\em p\+Scale} & The new scale factor to set. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimcurvefilters_8h}{fbxanimcurvefilters.\+h}\end{DoxyCompactItemize}

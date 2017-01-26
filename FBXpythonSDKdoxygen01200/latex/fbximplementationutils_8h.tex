@@ -1,0 +1,66 @@
+\hypertarget{fbximplementationutils_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/scene/shading/fbximplementationutils.h ファイル}
+\label{fbximplementationutils_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/fbximplementationutils.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/fbximplementationutils.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/scene/shading/fbximplementation.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/scene/shading/fbxbindingoperator.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/scene/shading/fbxoperatorentryview.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/scene/shading/fbxpropertyentryview.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+fbximplementationutils.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} const \hyperlink{class_fbx_implementation}{Fbx\+Implementation} $\ast$ \hyperlink{fbximplementationutils_8h_ac10d54b20571271090ad94f9e68fdaaa}{Get\+Implementation} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Implementation\+Target)
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{fbximplementationutils_8h_a096e79a1c0fe368971a2e2eea8031a37}{Get\+Bound\+Property\+Value} (const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$p\+Binding\+Table, const char $\ast$p\+Entry\+Name, const \hyperlink{class_fbx_implementation}{Fbx\+Implementation} $\ast$p\+Implementation, const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Bound\+Object, T \&p\+Value)
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbximplementationutils_8h_a096e79a1c0fe368971a2e2eea8031a37}\label{fbximplementationutils_8h_a096e79a1c0fe368971a2e2eea8031a37}} 
+\index{fbximplementationutils.\+h@{fbximplementationutils.\+h}!Get\+Bound\+Property\+Value@{Get\+Bound\+Property\+Value}}
+\index{Get\+Bound\+Property\+Value@{Get\+Bound\+Property\+Value}!fbximplementationutils.\+h@{fbximplementationutils.\+h}}
+\subsubsection{\texorpdfstring{Get\+Bound\+Property\+Value()}{GetBoundPropertyValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool Get\+Bound\+Property\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$}]{p\+Binding\+Table,  }\item[{const char $\ast$}]{p\+Entry\+Name,  }\item[{const \hyperlink{class_fbx_implementation}{Fbx\+Implementation} $\ast$}]{p\+Implementation,  }\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Bound\+Object,  }\item[{T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Get bound property value from \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}. 
+\begin{DoxyParams}{引数}
+{\em p\+Binding\+Table} & \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} to get bound property value. \\
+\hline
+{\em p\+Entry\+Name} & Name of the Entry type to get. \\
+\hline
+{\em p\+Implementation} & \hyperlink{class_fbx_implementation}{Fbx\+Implementation} of the bound property value to get if the Entry type is \hyperlink{class_fbx_operator_entry_view_aff3745ef35e5025550d54e7c2343ea95}{Fbx\+Operator\+Entry\+View\+::s\+Entry\+Type}. \\
+\hline
+{\em p\+Bound\+Object} & \hyperlink{class_fbx_object}{Fbx\+Object} of the bound property value to get if the Entry type is \hyperlink{class_fbx_property_entry_view_a862b7d0e633c2cb246b5b63a48ffd706}{Fbx\+Property\+Entry\+View\+::s\+Entry\+Type}. \\
+\hline
+{\em p\+Value} & Pointer to bound property value from \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Whether get bound property value success or not. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{fbximplementationutils_8h_ac10d54b20571271090ad94f9e68fdaaa}\label{fbximplementationutils_8h_ac10d54b20571271090ad94f9e68fdaaa}} 
+\index{fbximplementationutils.\+h@{fbximplementationutils.\+h}!Get\+Implementation@{Get\+Implementation}}
+\index{Get\+Implementation@{Get\+Implementation}!fbximplementationutils.\+h@{fbximplementationutils.\+h}}
+\subsubsection{\texorpdfstring{Get\+Implementation()}{GetImplementation()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} const \hyperlink{class_fbx_implementation}{Fbx\+Implementation}$\ast$ Get\+Implementation (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Implementation\+Target }\end{DoxyParamCaption})}
+
+Get \hyperlink{class_fbx_implementation}{Fbx\+Implementation} from \hyperlink{class_fbx_object}{Fbx\+Object}. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & \hyperlink{class_fbx_object}{Fbx\+Object} to get \hyperlink{class_fbx_implementation}{Fbx\+Implementation}. \\
+\hline
+{\em p\+Implementation\+Target} & Name of the implementation property to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+\hyperlink{class_fbx_implementation}{Fbx\+Implementation} Pointer to \hyperlink{class_fbx_implementation}{Fbx\+Implementation}. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 3

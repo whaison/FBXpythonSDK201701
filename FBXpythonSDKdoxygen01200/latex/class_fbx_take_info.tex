@@ -1,0 +1,242 @@
+\hypertarget{class_fbx_take_info}{}\section{Fbx\+Take\+Info クラス}
+\label{class_fbx_take_info}\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+
+
+{\ttfamily \#include $<$fbxtakeinfo.\+h$>$}
+
+
+
+Fbx\+Take\+Info 連携図
+% FIG 0
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dc}{E\+Import\+Offset\+Type} \{ \hyperlink{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dca51c6f34964217ede4adc8c0975517f57}{e\+Absolute}, 
+\hyperlink{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dcad4ae9cdb8f45343878006508a84546df}{e\+Relative}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_take_info_a0c99af4f277140834959403672643869}{Fbx\+Take\+Info} ()
+\item 
+virtual \hyperlink{class_fbx_take_info_aab3be12b6326df91b6dea9601e9f079f}{$\sim$\+Fbx\+Take\+Info} ()
+\item 
+\hyperlink{class_fbx_take_info_a5789a72ffbcf99bc3501f6d52ff3912e}{Fbx\+Take\+Info} (const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \&p\+Take\+Info)
+\item 
+\hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \& \hyperlink{class_fbx_take_info_abbce118f64f716e965162ddcaacc024b}{operator=} (const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \&p\+Take\+Info)
+\item 
+void \hyperlink{class_fbx_take_info_ac8e073b31c0de56fc7dbfcdd006d4f3f}{Copy\+Layers} (const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \&p\+Take\+Info)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_take_info_ac505b495f047d57eda55340f699f583e}{m\+Name}
+\begin{DoxyCompactList}\small\item\em Take name. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_take_info_ac767c10374a8759594b16aedafae83f9}{m\+Import\+Name}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_take_info_a1104cb914ad2cf041aa6b9cdd956e739}{m\+Description}
+\begin{DoxyCompactList}\small\item\em Take description. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_take_info_a0e239e6f052b3d5cbccbeb85669d9a63}{m\+Select}
+\item 
+\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \hyperlink{class_fbx_take_info_a5cbdcdad5fb1b692703784f6d8b6bc51}{m\+Local\+Time\+Span}
+\begin{DoxyCompactList}\small\item\em Local time span, set to animation interval if it is left at the default value. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \hyperlink{class_fbx_take_info_a26d1e723fc0e32e88b38a1aafbdf8665}{m\+Reference\+Time\+Span}
+\begin{DoxyCompactList}\small\item\em Reference time span, set to animation interval if it is left at the default value. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_take_info_a710e53c9ae01db3c19d895aee1d5b6cc}{m\+Import\+Offset}
+\item 
+\hyperlink{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dc}{E\+Import\+Offset\+Type} \hyperlink{class_fbx_take_info_a91754fee6b84796e781b532661cfb2bd}{m\+Import\+Offset\+Type}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{struct_fbx_take_layer_info}{Fbx\+Take\+Layer\+Info} $\ast$ $>$ \hyperlink{class_fbx_take_info_a5e71a2f2ecb6d90473d7a2b63c91b175}{m\+Layer\+Info\+List}
+\begin{DoxyCompactList}\small\item\em List of each layer\textquotesingle{}s information. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_take_info_a77d4856b8de2b91d9f84baaa97529240}{m\+Current\+Layer}
+\begin{DoxyCompactList}\small\item\em Current Layer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class contains take information from an imported file or exported to an output file.
+
+A \char`\"{}take\char`\"{} is in fact a group of animation data grouped by name, so the F\+BX file format can support many \char`\"{}animation takes\char`\"{} in an F\+BX file to mimic how a movie is produced by making many takes of the same scene.
+
+The most used data is the \char`\"{}take name\char`\"{}, other data are rarely used. Example of use\+: to get the list of all animation take names of F\+BX file without loading all the scene content. When a \hyperlink{class_fbx_importer}{Fbx\+Importer} is initialized, the take information can be read and can be available before the long Import() step, this way, we can get the take info data very fast since we don\textquotesingle{}t need to load all the animation scene data. 
+\begin{DoxyCode}
+\textcolor{comment}{// Ex: to get all take names in a FBX file}
+\textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} lAnimStackCount=0; lAnimStackCount < lImporter->\hyperlink{class_fbx_importer_a08165aec1a0ae0ff5f88c5ee8244bd9d}{GetAnimStackCount}(); 
+      lAnimStackCount++) 
+\{
+  \hyperlink{class_fbx_take_info}{FbxTakeInfo}* lTakeInfo = lImporter->\hyperlink{class_fbx_importer_a6733de02d09423cfc5cdabd808954e62}{GetTakeInfo}(lAnimStackCount);
+  \hyperlink{class_fbx_string}{FbxString} lTakeName = lTakeInfo->\hyperlink{class_fbx_take_info_ac505b495f047d57eda55340f699f583e}{mName};
+\}
+\end{DoxyCode}
+ 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dc}\label{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dc}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!E\+Import\+Offset\+Type@{E\+Import\+Offset\+Type}}
+\index{E\+Import\+Offset\+Type@{E\+Import\+Offset\+Type}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{E\+Import\+Offset\+Type}{EImportOffsetType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dc}{Fbx\+Take\+Info\+::\+E\+Import\+Offset\+Type}}
+
+Import offset types.
+\begin{DoxyItemize}
+\item {\itshape e\+Absolute} 
+\item {\itshape e\+Relative} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Absolute@{e\+Absolute}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!e\+Absolute@{e\+Absolute}}}\mbox{\Hypertarget{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dca51c6f34964217ede4adc8c0975517f57}\label{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dca51c6f34964217ede4adc8c0975517f57}} 
+e\+Absolute&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Relative@{e\+Relative}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!e\+Relative@{e\+Relative}}}\mbox{\Hypertarget{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dcad4ae9cdb8f45343878006508a84546df}\label{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dcad4ae9cdb8f45343878006508a84546df}} 
+e\+Relative&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_take_info_a0c99af4f277140834959403672643869}\label{class_fbx_take_info_a0c99af4f277140834959403672643869}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{Fbx\+Take\+Info()}{FbxTakeInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Take\+Info\+::\+Fbx\+Take\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_fbx_take_info_aab3be12b6326df91b6dea9601e9f079f}\label{class_fbx_take_info_aab3be12b6326df91b6dea9601e9f079f}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!````~Fbx\+Take\+Info@{$\sim$\+Fbx\+Take\+Info}}
+\index{````~Fbx\+Take\+Info@{$\sim$\+Fbx\+Take\+Info}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Take\+Info()}{~FbxTakeInfo()}}
+{\footnotesize\ttfamily virtual Fbx\+Take\+Info\+::$\sim$\+Fbx\+Take\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. \mbox{\Hypertarget{class_fbx_take_info_a5789a72ffbcf99bc3501f6d52ff3912e}\label{class_fbx_take_info_a5789a72ffbcf99bc3501f6d52ff3912e}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{Fbx\+Take\+Info()}{FbxTakeInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Take\+Info\+::\+Fbx\+Take\+Info (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \&}]{p\+Take\+Info }\end{DoxyParamCaption})}
+
+Copy Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Take\+Info} & The take information to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_take_info_ac8e073b31c0de56fc7dbfcdd006d4f3f}\label{class_fbx_take_info_ac8e073b31c0de56fc7dbfcdd006d4f3f}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!Copy\+Layers@{Copy\+Layers}}
+\index{Copy\+Layers@{Copy\+Layers}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{Copy\+Layers()}{CopyLayers()}}
+{\footnotesize\ttfamily void Fbx\+Take\+Info\+::\+Copy\+Layers (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \&}]{p\+Take\+Info }\end{DoxyParamCaption})}
+
+Copies the layer information from the take information. 
+\begin{DoxyParams}{引数}
+{\em p\+Take\+Info} & The take information to be copied. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_take_info_abbce118f64f716e965162ddcaacc024b}\label{class_fbx_take_info_abbce118f64f716e965162ddcaacc024b}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info}\& Fbx\+Take\+Info\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} \&}]{p\+Take\+Info }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Take\+Info} & The take information to be assigned. . \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_take_info_a77d4856b8de2b91d9f84baaa97529240}\label{class_fbx_take_info_a77d4856b8de2b91d9f84baaa97529240}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Current\+Layer@{m\+Current\+Layer}}
+\index{m\+Current\+Layer@{m\+Current\+Layer}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Current\+Layer}{mCurrentLayer}}
+{\footnotesize\ttfamily int Fbx\+Take\+Info\+::m\+Current\+Layer}
+
+
+
+Current Layer. 
+
+\mbox{\Hypertarget{class_fbx_take_info_a1104cb914ad2cf041aa6b9cdd956e739}\label{class_fbx_take_info_a1104cb914ad2cf041aa6b9cdd956e739}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Description@{m\+Description}}
+\index{m\+Description@{m\+Description}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Description}{mDescription}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Take\+Info\+::m\+Description}
+
+
+
+Take description. 
+
+\mbox{\Hypertarget{class_fbx_take_info_ac767c10374a8759594b16aedafae83f9}\label{class_fbx_take_info_ac767c10374a8759594b16aedafae83f9}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Import\+Name@{m\+Import\+Name}}
+\index{m\+Import\+Name@{m\+Import\+Name}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Import\+Name}{mImportName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Take\+Info\+::m\+Import\+Name}
+
+The take name once it is imported in a scene. You can modify it if it must be different from the take name in the imported file. \begin{DoxyRemark}{注釈}
+This field is only used when importing a scene. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_take_info_a710e53c9ae01db3c19d895aee1d5b6cc}\label{class_fbx_take_info_a710e53c9ae01db3c19d895aee1d5b6cc}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Import\+Offset@{m\+Import\+Offset}}
+\index{m\+Import\+Offset@{m\+Import\+Offset}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Import\+Offset}{mImportOffset}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+Take\+Info\+::m\+Import\+Offset}
+
+Time value for offsetting the animation keys once they are imported in a scene. You can modify it if you need the animation of a take to be offset. The effect depends on the state of {\ttfamily m\+Import\+Offset\+Type}. \begin{DoxyRemark}{注釈}
+This field is only used when importing a scene. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_take_info_a91754fee6b84796e781b532661cfb2bd}\label{class_fbx_take_info_a91754fee6b84796e781b532661cfb2bd}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Import\+Offset\+Type@{m\+Import\+Offset\+Type}}
+\index{m\+Import\+Offset\+Type@{m\+Import\+Offset\+Type}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Import\+Offset\+Type}{mImportOffsetType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_take_info_a64a38a536155104dfa7bc79ffb7ef8dc}{E\+Import\+Offset\+Type} Fbx\+Take\+Info\+::m\+Import\+Offset\+Type}
+
+Import offset type. If set to {\ttfamily e\+Absolute}, {\ttfamily m\+Import\+Offset} gives the absolute time of the first animation key and the appropriate time shift is applied to all of the other animation keys. If set to {\ttfamily e\+Relative}, {\ttfamily m\+Import\+Offset} gives the relative time shift applied to all animation keys. \mbox{\Hypertarget{class_fbx_take_info_a5e71a2f2ecb6d90473d7a2b63c91b175}\label{class_fbx_take_info_a5e71a2f2ecb6d90473d7a2b63c91b175}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Layer\+Info\+List@{m\+Layer\+Info\+List}}
+\index{m\+Layer\+Info\+List@{m\+Layer\+Info\+List}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Layer\+Info\+List}{mLayerInfoList}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{struct_fbx_take_layer_info}{Fbx\+Take\+Layer\+Info}$\ast$$>$ Fbx\+Take\+Info\+::m\+Layer\+Info\+List}
+
+
+
+List of each layer\textquotesingle{}s information. 
+
+\mbox{\Hypertarget{class_fbx_take_info_a5cbdcdad5fb1b692703784f6d8b6bc51}\label{class_fbx_take_info_a5cbdcdad5fb1b692703784f6d8b6bc51}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Local\+Time\+Span@{m\+Local\+Time\+Span}}
+\index{m\+Local\+Time\+Span@{m\+Local\+Time\+Span}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Local\+Time\+Span}{mLocalTimeSpan}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} Fbx\+Take\+Info\+::m\+Local\+Time\+Span}
+
+
+
+Local time span, set to animation interval if it is left at the default value. 
+
+\mbox{\Hypertarget{class_fbx_take_info_ac505b495f047d57eda55340f699f583e}\label{class_fbx_take_info_ac505b495f047d57eda55340f699f583e}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Name@{m\+Name}}
+\index{m\+Name@{m\+Name}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Name}{mName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Take\+Info\+::m\+Name}
+
+
+
+Take name. 
+
+\mbox{\Hypertarget{class_fbx_take_info_a26d1e723fc0e32e88b38a1aafbdf8665}\label{class_fbx_take_info_a26d1e723fc0e32e88b38a1aafbdf8665}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Reference\+Time\+Span@{m\+Reference\+Time\+Span}}
+\index{m\+Reference\+Time\+Span@{m\+Reference\+Time\+Span}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Reference\+Time\+Span}{mReferenceTimeSpan}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} Fbx\+Take\+Info\+::m\+Reference\+Time\+Span}
+
+
+
+Reference time span, set to animation interval if it is left at the default value. 
+
+\mbox{\Hypertarget{class_fbx_take_info_a0e239e6f052b3d5cbccbeb85669d9a63}\label{class_fbx_take_info_a0e239e6f052b3d5cbccbeb85669d9a63}} 
+\index{Fbx\+Take\+Info@{Fbx\+Take\+Info}!m\+Select@{m\+Select}}
+\index{m\+Select@{m\+Select}!Fbx\+Take\+Info@{Fbx\+Take\+Info}}
+\subsubsection{\texorpdfstring{m\+Select}{mSelect}}
+{\footnotesize\ttfamily bool Fbx\+Take\+Info\+::m\+Select}
+
+Import/export flag. Set to {\ttfamily true} by default, set to {\ttfamily false} if the take must not be imported or exported. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxtakeinfo_8h}{fbxtakeinfo.\+h}\end{DoxyCompactItemize}

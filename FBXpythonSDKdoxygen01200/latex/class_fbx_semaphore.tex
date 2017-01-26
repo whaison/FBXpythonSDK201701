@@ -1,0 +1,82 @@
+\hypertarget{class_fbx_semaphore}{}\section{Fbx\+Semaphore クラス}
+\label{class_fbx_semaphore}\index{Fbx\+Semaphore@{Fbx\+Semaphore}}
+
+
+{\ttfamily \#include $<$fbxsync.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_semaphore_a4c1d63129606a43f25d00cebe24eb239}{Fbx\+Semaphore} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_semaphore_aea00e26f6b9452107104eaf2f2e49f1b}{$\sim$\+Fbx\+Semaphore} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_semaphore_a05d7cdaa49c89691f22a26851be1f885}{Wait} (unsigned int p\+Count=1)
+\item 
+bool \hyperlink{class_fbx_semaphore_a56bdff92c29ea31a57003f207e52c672}{Signal} (unsigned int p\+Count=1)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Mutually excluding thread waiting mechanism with a counter. Semaphore are generally used in situations when the current thread needs to wait for other threads before proceeding to the next step. In other words, that thread waits a number of signals from other threads. This is the best mechanism to use to synchronize threads since it doesn\textquotesingle{}t require an heavy critical section. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_semaphore_a4c1d63129606a43f25d00cebe24eb239}\label{class_fbx_semaphore_a4c1d63129606a43f25d00cebe24eb239}} 
+\index{Fbx\+Semaphore@{Fbx\+Semaphore}!Fbx\+Semaphore@{Fbx\+Semaphore}}
+\index{Fbx\+Semaphore@{Fbx\+Semaphore}!Fbx\+Semaphore@{Fbx\+Semaphore}}
+\subsubsection{\texorpdfstring{Fbx\+Semaphore()}{FbxSemaphore()}}
+{\footnotesize\ttfamily Fbx\+Semaphore\+::\+Fbx\+Semaphore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor 
+
+\mbox{\Hypertarget{class_fbx_semaphore_aea00e26f6b9452107104eaf2f2e49f1b}\label{class_fbx_semaphore_aea00e26f6b9452107104eaf2f2e49f1b}} 
+\index{Fbx\+Semaphore@{Fbx\+Semaphore}!````~Fbx\+Semaphore@{$\sim$\+Fbx\+Semaphore}}
+\index{````~Fbx\+Semaphore@{$\sim$\+Fbx\+Semaphore}!Fbx\+Semaphore@{Fbx\+Semaphore}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Semaphore()}{~FbxSemaphore()}}
+{\footnotesize\ttfamily virtual Fbx\+Semaphore\+::$\sim$\+Fbx\+Semaphore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_semaphore_a56bdff92c29ea31a57003f207e52c672}\label{class_fbx_semaphore_a56bdff92c29ea31a57003f207e52c672}} 
+\index{Fbx\+Semaphore@{Fbx\+Semaphore}!Signal@{Signal}}
+\index{Signal@{Signal}!Fbx\+Semaphore@{Fbx\+Semaphore}}
+\subsubsection{\texorpdfstring{Signal()}{Signal()}}
+{\footnotesize\ttfamily bool Fbx\+Semaphore\+::\+Signal (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Signal the semaphore as many times as specified. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of signal to send to the semaphore. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the semaphore was signaled without errors. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_semaphore_a05d7cdaa49c89691f22a26851be1f885}\label{class_fbx_semaphore_a05d7cdaa49c89691f22a26851be1f885}} 
+\index{Fbx\+Semaphore@{Fbx\+Semaphore}!Wait@{Wait}}
+\index{Wait@{Wait}!Fbx\+Semaphore@{Fbx\+Semaphore}}
+\subsubsection{\texorpdfstring{Wait()}{Wait()}}
+{\footnotesize\ttfamily bool Fbx\+Semaphore\+::\+Wait (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Wait indefinitely until the semaphore as been signaled as many times as specified. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & Number of signal to wait before this function returns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the wait exit without errors. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If p\+Count is set to zero, this function returns immediately without waiting. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/sync/\hyperlink{fbxsync_8h}{fbxsync.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXpythonSDKdoxygen01100: FbxSemaphore クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXpythonSDKdoxygen01100
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_fbx_semaphore-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxSemaphore クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fbxsync_8h_source.html">fbxsync.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4c1d63129606a43f25d00cebe24eb239"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_semaphore.html#a4c1d63129606a43f25d00cebe24eb239">FbxSemaphore</a> ()</td></tr>
+<tr class="memdesc:a4c1d63129606a43f25d00cebe24eb239"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor  <a href="#a4c1d63129606a43f25d00cebe24eb239">[詳解]</a><br /></td></tr>
+<tr class="separator:a4c1d63129606a43f25d00cebe24eb239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea00e26f6b9452107104eaf2f2e49f1b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_semaphore.html#aea00e26f6b9452107104eaf2f2e49f1b">~FbxSemaphore</a> ()</td></tr>
+<tr class="memdesc:aea00e26f6b9452107104eaf2f2e49f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <a href="#aea00e26f6b9452107104eaf2f2e49f1b">[詳解]</a><br /></td></tr>
+<tr class="separator:aea00e26f6b9452107104eaf2f2e49f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d7cdaa49c89691f22a26851be1f885"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_semaphore.html#a05d7cdaa49c89691f22a26851be1f885">Wait</a> (unsigned int pCount=1)</td></tr>
+<tr class="separator:a05d7cdaa49c89691f22a26851be1f885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56bdff92c29ea31a57003f207e52c672"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_semaphore.html#a56bdff92c29ea31a57003f207e52c672">Signal</a> (unsigned int pCount=1)</td></tr>
+<tr class="separator:a56bdff92c29ea31a57003f207e52c672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Mutually excluding thread waiting mechanism with a counter. Semaphore are generally used in situations when the current thread needs to wait for other threads before proceeding to the next step. In other words, that thread waits a number of signals from other threads. This is the best mechanism to use to synchronize threads since it doesn't require an heavy critical section. </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="a4c1d63129606a43f25d00cebe24eb239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1d63129606a43f25d00cebe24eb239">&#9670;&nbsp;</a></span>FbxSemaphore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxSemaphore::FbxSemaphore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor </p>
+
+</div>
+</div>
+<a id="aea00e26f6b9452107104eaf2f2e49f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea00e26f6b9452107104eaf2f2e49f1b">&#9670;&nbsp;</a></span>~FbxSemaphore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual FbxSemaphore::~FbxSemaphore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="a56bdff92c29ea31a57003f207e52c672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56bdff92c29ea31a57003f207e52c672">&#9670;&nbsp;</a></span>Signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxSemaphore::Signal </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>pCount</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Signal the semaphore as many times as specified. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCount</td><td>The number of signal to send to the semaphore. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>True if the semaphore was signaled without errors. </dd></dl>
+
+</div>
+</div>
+<a id="a05d7cdaa49c89691f22a26851be1f885"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05d7cdaa49c89691f22a26851be1f885">&#9670;&nbsp;</a></span>Wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxSemaphore::Wait </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>pCount</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Wait indefinitely until the semaphore as been signaled as many times as specified. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCount</td><td>Number of signal to wait before this function returns. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>True if the wait exit without errors. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>If pCount is set to zero, this function returns immediately without waiting. </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/github/FBXpythonSDK201701/FBXpythonSDK201701/2017.1/include/fbxsdk/core/sync/<a class="el" href="fbxsync_8h_source.html">fbxsync.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

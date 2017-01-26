@@ -1,0 +1,500 @@
+\hypertarget{class_fbx_red_black_tree}{}\section{Fbx\+Red\+Black\+Tree$<$ Type, Compare, Allocator $>$ クラステンプレート}
+\label{class_fbx_red_black_tree}\index{Fbx\+Red\+Black\+Tree$<$ Type, Compare, Allocator $>$@{Fbx\+Red\+Black\+Tree$<$ Type, Compare, Allocator $>$}}
+
+
+Implements an efficient ordered data storage.  
+
+
+
+
+{\ttfamily \#include $<$fbxredblacktree.\+h$>$}
+
+
+
+Fbx\+Red\+Black\+Tree$<$ Type, Compare, Allocator $>$ 連携図
+% FIG 0
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef Type \hyperlink{class_fbx_red_black_tree_a9bd3feb4c82e7d105bc475f01a9a199d}{Data\+Type}
+\item 
+typedef Type\+::\+Key\+Type \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type}
+\item 
+typedef Type\+::\+Const\+Key\+Type \hyperlink{class_fbx_red_black_tree_ad0aa82c0fd952b04edb550fc1fb36a32}{Const\+Key\+Type}
+\item 
+typedef Type\+::\+Value\+Type \hyperlink{class_fbx_red_black_tree_a178e34888fa8c0fab5a7527ab30a663c}{Value\+Type}
+\item 
+typedef Type\+::\+Const\+Value\+Type \hyperlink{class_fbx_red_black_tree_a60ce913af196ee4cf886585363c4b0ca}{Const\+Value\+Type}
+\item 
+typedef Allocator \hyperlink{class_fbx_red_black_tree_a62c49ab2e7d602aac98a9413e490ca90}{Allocator\+Type}
+\item 
+typedef \hyperlink{class_fbx_red_black_const_iterator}{Fbx\+Red\+Black\+Const\+Iterator}$<$ \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $>$ \hyperlink{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}{Const\+Iterator\+Type}
+\item 
+typedef \hyperlink{class_fbx_red_black_iterator}{Fbx\+Red\+Black\+Iterator}$<$ \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $>$ \hyperlink{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}{Iterator\+Type}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_red_black_tree_a53f5ee11b3aa618b7ebc7b2ff1654d40}{Fbx\+Red\+Black\+Tree} ()
+\item 
+\hyperlink{class_fbx_red_black_tree_a2c4ff0fca7f156a399bc83d3e8822485}{Fbx\+Red\+Black\+Tree} (const \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} \&p\+Tree)
+\item 
+\hyperlink{class_fbx_red_black_tree_ae12987fd6ad76bbb3b65bb3aeebb449c}{$\sim$\+Fbx\+Red\+Black\+Tree} ()
+\item 
+\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} \& \hyperlink{class_fbx_red_black_tree_aad39327aec57c013f40b53e5613ecb5b}{operator=} (const \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} \&p\+Tree)
+\item 
+bool \hyperlink{class_fbx_red_black_tree_a40aebf09d104a56e1e6724ac7acb66b9}{operator==} (const \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} \&p\+Tree) const
+\item 
+void \hyperlink{class_fbx_red_black_tree_a707730fca6c73fea996c8354a0a6ead2}{Reserve} (unsigned int p\+Record\+Count)
+\item 
+int \hyperlink{class_fbx_red_black_tree_a99b4a611074bfd7b5a5165ca9cd9b14b}{Get\+Size} () const
+\item 
+bool \hyperlink{class_fbx_red_black_tree_ab885c9a32cffb04da71d5dccb70bc945}{Empty} () const
+\item 
+\hyperlink{class_fbx_pair}{Fbx\+Pair}$<$ \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$, bool $>$ \hyperlink{class_fbx_red_black_tree_ab5f48f09ad534b7a11a45a4abe461b87}{Insert} (const \hyperlink{class_fbx_red_black_tree_a9bd3feb4c82e7d105bc475f01a9a199d}{Data\+Type} \&p\+Data)
+\item 
+bool \hyperlink{class_fbx_red_black_tree_a432f0ed569c5ccb0273c583e59414b0b}{Remove} (const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&p\+Key)
+\item 
+void \hyperlink{class_fbx_red_black_tree_aa762c1d9c1b533045066f713def691e2}{Clear} ()
+\item 
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a9a4565bfb7656d449804fca9a8e56fa1}{Minimum} () const
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_abc02bb7015d4966b5bba54f5e29120da}{Minimum} ()
+\item 
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_ab4cbb7bbe5fab913a8296708a5b222ed}{Maximum} () const
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a03b6f025d8466c40949f87a65c24e92e}{Maximum} ()
+\item 
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a08a08c8b1a259c5d5bba01558198e4cb}{Find} (const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&p\+Key) const
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a10d0f431d89e767bee24812cc4be9f3f}{Find} (const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&p\+Key)
+\item 
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a42a816012df609184b4cef2889ac868a}{Upper\+Bound} (const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&p\+Key) const
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a90138895586387a60eb91306888a2ab6}{Upper\+Bound} (const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&p\+Key)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a11fd717eeb71ff16ef10114a00cc7888}{Duplicate\+Sub\+Tree} (const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_ac553d028cbea6ac90b0b42d161b5843c}{Fix\+Nodes\+After\+Insertion} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_a91db157ad267d601b364522e823bb435}{Left\+Rotate} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_a390eaccc303de294803e1fd2272cbc73}{Right\+Rotate} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_af0e3ffcca91f083d958bec08fbd20100}{Remove\+Node} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_a80886c4cbd8f7a9f492f9b52effbdfa9}{Replace\+Node} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node\+To\+Replace, \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Replacement)
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a634b41949b2cdef5488abcb444f896c6}{Sibling} (const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Parent, const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node) const
+\item 
+bool \hyperlink{class_fbx_red_black_tree_ab737a7f1323fcfce74268072f266ea28}{Is\+Black} (const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_a3324d8304143f4d05160eab2aee1c6fa}{Fix\+Nodes\+After\+Removal} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Parent, \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_red_black_tree_af958bdb74b133aff94c460e956b78859}{Clear\+Sub\+Tree} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node)
+\item 
+int \hyperlink{class_fbx_red_black_tree_a1eacc00900b47600528a379ed8882d0c}{Get\+Sub\+Tree\+Size} (\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$p\+Node) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$ \hyperlink{class_fbx_red_black_tree_a1c8e942b25077e380f93a61aaadd8679}{m\+Root}
+\item 
+int \hyperlink{class_fbx_red_black_tree_a45b29bfeaffd897c186440fef29b6dfe}{m\+Size}
+\item 
+\hyperlink{class_fbx_red_black_tree_a62c49ab2e7d602aac98a9413e490ca90}{Allocator\+Type} \hyperlink{class_fbx_red_black_tree_aefc2938bd74cea7e072d344d5b038af1}{m\+Allocator}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename Type, typename Compare, typename Allocator$>$\newline
+class Fbx\+Red\+Black\+Tree$<$ Type, Compare, Allocator $>$}
+
+Implements an efficient ordered data storage. 
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_red_black_tree_a62c49ab2e7d602aac98a9413e490ca90}\label{class_fbx_red_black_tree_a62c49ab2e7d602aac98a9413e490ca90}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Allocator\+Type@{Allocator\+Type}}
+\index{Allocator\+Type@{Allocator\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Allocator\+Type}{AllocatorType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef Allocator \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_a62c49ab2e7d602aac98a9413e490ca90}{Allocator\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}\label{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Const\+Iterator\+Type@{Const\+Iterator\+Type}}
+\index{Const\+Iterator\+Type@{Const\+Iterator\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Const\+Iterator\+Type}{ConstIteratorType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_const_iterator}{Fbx\+Red\+Black\+Const\+Iterator}$<$\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$>$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}{Const\+Iterator\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_ad0aa82c0fd952b04edb550fc1fb36a32}\label{class_fbx_red_black_tree_ad0aa82c0fd952b04edb550fc1fb36a32}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Const\+Key\+Type@{Const\+Key\+Type}}
+\index{Const\+Key\+Type@{Const\+Key\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Const\+Key\+Type}{ConstKeyType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef Type\+::\+Const\+Key\+Type \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_ad0aa82c0fd952b04edb550fc1fb36a32}{Const\+Key\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a60ce913af196ee4cf886585363c4b0ca}\label{class_fbx_red_black_tree_a60ce913af196ee4cf886585363c4b0ca}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Const\+Value\+Type@{Const\+Value\+Type}}
+\index{Const\+Value\+Type@{Const\+Value\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Const\+Value\+Type}{ConstValueType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef Type\+::\+Const\+Value\+Type \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_a60ce913af196ee4cf886585363c4b0ca}{Const\+Value\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a9bd3feb4c82e7d105bc475f01a9a199d}\label{class_fbx_red_black_tree_a9bd3feb4c82e7d105bc475f01a9a199d}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Data\+Type@{Data\+Type}}
+\index{Data\+Type@{Data\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Data\+Type}{DataType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef Type \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_a9bd3feb4c82e7d105bc475f01a9a199d}{Data\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}\label{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Iterator\+Type@{Iterator\+Type}}
+\index{Iterator\+Type@{Iterator\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Iterator\+Type}{IteratorType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_iterator}{Fbx\+Red\+Black\+Iterator}$<$\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$>$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}{Iterator\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}\label{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Key\+Type}{KeyType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef Type\+::\+Key\+Type \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a178e34888fa8c0fab5a7527ab30a663c}\label{class_fbx_red_black_tree_a178e34888fa8c0fab5a7527ab30a663c}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Value\+Type}{ValueType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+typedef Type\+::\+Value\+Type \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree_a178e34888fa8c0fab5a7527ab30a663c}{Value\+Type}}
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_red_black_tree_a53f5ee11b3aa618b7ebc7b2ff1654d40}\label{class_fbx_red_black_tree_a53f5ee11b3aa618b7ebc7b2ff1654d40}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Fbx\+Red\+Black\+Tree()}{FbxRedBlackTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a2c4ff0fca7f156a399bc83d3e8822485}\label{class_fbx_red_black_tree_a2c4ff0fca7f156a399bc83d3e8822485}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Fbx\+Red\+Black\+Tree()}{FbxRedBlackTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$ \&}]{p\+Tree }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_ae12987fd6ad76bbb3b65bb3aeebb449c}\label{class_fbx_red_black_tree_ae12987fd6ad76bbb3b65bb3aeebb449c}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!````~Fbx\+Red\+Black\+Tree@{$\sim$\+Fbx\+Red\+Black\+Tree}}
+\index{````~Fbx\+Red\+Black\+Tree@{$\sim$\+Fbx\+Red\+Black\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Red\+Black\+Tree()}{~FbxRedBlackTree()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::$\sim$\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_red_black_tree_aa762c1d9c1b533045066f713def691e2}\label{class_fbx_red_black_tree_aa762c1d9c1b533045066f713def691e2}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove all elements from the tree. Takes O(n) time. Recursive. 被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{class_fbx_red_black_tree_af958bdb74b133aff94c460e956b78859}\label{class_fbx_red_black_tree_af958bdb74b133aff94c460e956b78859}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Clear\+Sub\+Tree@{Clear\+Sub\+Tree}}
+\index{Clear\+Sub\+Tree@{Clear\+Sub\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Clear\+Sub\+Tree()}{ClearSubTree()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Clear\+Sub\+Tree (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_red_black_tree_a11fd717eeb71ff16ef10114a00cc7888}\label{class_fbx_red_black_tree_a11fd717eeb71ff16ef10114a00cc7888}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Duplicate\+Sub\+Tree@{Duplicate\+Sub\+Tree}}
+\index{Duplicate\+Sub\+Tree@{Duplicate\+Sub\+Tree}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Duplicate\+Sub\+Tree()}{DuplicateSubTree()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Duplicate\+Sub\+Tree (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_red_black_tree_ab885c9a32cffb04da71d5dccb70bc945}\label{class_fbx_red_black_tree_ab885c9a32cffb04da71d5dccb70bc945}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Empty@{Empty}}
+\index{Empty@{Empty}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+bool \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a08a08c8b1a259c5d5bba01558198e4cb}\label{class_fbx_red_black_tree_a08a08c8b1a259c5d5bba01558198e4cb}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption}) const}
+
+Find the key-\/value pair with key p\+Key. Takes O(log n) time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key to look for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_red_black_tree_a10d0f431d89e767bee24812cc4be9f3f}\label{class_fbx_red_black_tree_a10d0f431d89e767bee24812cc4be9f3f}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})}
+
+Find the key-\/value pair with key p\+Key. Takes O(log n) time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key to look for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_red_black_tree_ac553d028cbea6ac90b0b42d161b5843c}\label{class_fbx_red_black_tree_ac553d028cbea6ac90b0b42d161b5843c}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Fix\+Nodes\+After\+Insertion@{Fix\+Nodes\+After\+Insertion}}
+\index{Fix\+Nodes\+After\+Insertion@{Fix\+Nodes\+After\+Insertion}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Fix\+Nodes\+After\+Insertion()}{FixNodesAfterInsertion()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Fix\+Nodes\+After\+Insertion (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_red_black_tree_a3324d8304143f4d05160eab2aee1c6fa}\label{class_fbx_red_black_tree_a3324d8304143f4d05160eab2aee1c6fa}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Fix\+Nodes\+After\+Removal@{Fix\+Nodes\+After\+Removal}}
+\index{Fix\+Nodes\+After\+Removal@{Fix\+Nodes\+After\+Removal}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Fix\+Nodes\+After\+Removal()}{FixNodesAfterRemoval()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Fix\+Nodes\+After\+Removal (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Parent,  }\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_red_black_tree_a99b4a611074bfd7b5a5165ca9cd9b14b}\label{class_fbx_red_black_tree_a99b4a611074bfd7b5a5165ca9cd9b14b}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+int \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of elements in the tree. Takes O(1) time. \begin{DoxyReturn}{戻り値}
+The number of elements in the tree. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{class_fbx_red_black_tree_a1eacc00900b47600528a379ed8882d0c}\label{class_fbx_red_black_tree_a1eacc00900b47600528a379ed8882d0c}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Get\+Sub\+Tree\+Size@{Get\+Sub\+Tree\+Size}}
+\index{Get\+Sub\+Tree\+Size@{Get\+Sub\+Tree\+Size}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Get\+Sub\+Tree\+Size()}{GetSubTreeSize()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+int \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Get\+Sub\+Tree\+Size (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{class_fbx_red_black_tree_ab5f48f09ad534b7a11a45a4abe461b87}\label{class_fbx_red_black_tree_ab5f48f09ad534b7a11a45a4abe461b87}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Insert@{Insert}}
+\index{Insert@{Insert}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_pair}{Fbx\+Pair}$<$\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$, bool$>$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Insert (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_a9bd3feb4c82e7d105bc475f01a9a199d}{Data\+Type} \&}]{p\+Data }\end{DoxyParamCaption})}
+
+Insert a new element in the tree. Takes O(log n) time. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & The element to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If p\+Data.\+Get\+Key() is already present in the tree, returns the existing record and false; else returns the new record and true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_red_black_tree_ab737a7f1323fcfce74268072f266ea28}\label{class_fbx_red_black_tree_ab737a7f1323fcfce74268072f266ea28}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Is\+Black@{Is\+Black}}
+\index{Is\+Black@{Is\+Black}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Is\+Black()}{IsBlack()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+bool \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Is\+Black (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{class_fbx_red_black_tree_a91db157ad267d601b364522e823bb435}\label{class_fbx_red_black_tree_a91db157ad267d601b364522e823bb435}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Left\+Rotate@{Left\+Rotate}}
+\index{Left\+Rotate@{Left\+Rotate}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Left\+Rotate()}{LeftRotate()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Left\+Rotate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{class_fbx_red_black_tree_ab4cbb7bbe5fab913a8296708a5b222ed}\label{class_fbx_red_black_tree_ab4cbb7bbe5fab913a8296708a5b222ed}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Maximum()}{Maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Find the largest element in the tree. Takes O(log n) time. \mbox{\Hypertarget{class_fbx_red_black_tree_a03b6f025d8466c40949f87a65c24e92e}\label{class_fbx_red_black_tree_a03b6f025d8466c40949f87a65c24e92e}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Maximum()}{Maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Find the largest element in the tree. Takes O(log n) time. \mbox{\Hypertarget{class_fbx_red_black_tree_a9a4565bfb7656d449804fca9a8e56fa1}\label{class_fbx_red_black_tree_a9a4565bfb7656d449804fca9a8e56fa1}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Minimum()}{Minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Find the smallest element in the tree. Takes O(log n) time. 被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{class_fbx_red_black_tree_abc02bb7015d4966b5bba54f5e29120da}\label{class_fbx_red_black_tree_abc02bb7015d4966b5bba54f5e29120da}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Minimum()}{Minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Find the smallest element in the tree. Takes O(log n) time. \mbox{\Hypertarget{class_fbx_red_black_tree_aad39327aec57c013f40b53e5613ecb5b}\label{class_fbx_red_black_tree_aad39327aec57c013f40b53e5613ecb5b}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}\& \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$ \&}]{p\+Tree }\end{DoxyParamCaption})}
+
+Deep copy p\+Tree in this. 
+\begin{DoxyParams}{引数}
+{\em p\+Tree} & The tree to copy in this tree. \\
+\hline
+\end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{class_fbx_red_black_tree_a40aebf09d104a56e1e6724ac7acb66b9}\label{class_fbx_red_black_tree_a40aebf09d104a56e1e6724ac7acb66b9}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+bool \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$ \&}]{p\+Tree }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a432f0ed569c5ccb0273c583e59414b0b}\label{class_fbx_red_black_tree_a432f0ed569c5ccb0273c583e59414b0b}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+bool \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Remove (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})}
+
+Remove an element identified by a key from the tree. Takes O(log n) time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key identifying the element to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_red_black_tree_af0e3ffcca91f083d958bec08fbd20100}\label{class_fbx_red_black_tree_af0e3ffcca91f083d958bec08fbd20100}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Remove\+Node@{Remove\+Node}}
+\index{Remove\+Node@{Remove\+Node}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Remove\+Node()}{RemoveNode()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Remove\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{class_fbx_red_black_tree_a80886c4cbd8f7a9f492f9b52effbdfa9}\label{class_fbx_red_black_tree_a80886c4cbd8f7a9f492f9b52effbdfa9}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Replace\+Node@{Replace\+Node}}
+\index{Replace\+Node@{Replace\+Node}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Replace\+Node()}{ReplaceNode()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Replace\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node\+To\+Replace,  }\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Replacement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 13
+\mbox{\Hypertarget{class_fbx_red_black_tree_a707730fca6c73fea996c8354a0a6ead2}\label{class_fbx_red_black_tree_a707730fca6c73fea996c8354a0a6ead2}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Reserve()}{Reserve()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Reserve (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Record\+Count }\end{DoxyParamCaption})}
+
+Ask Allocator to reserve space to hold p\+Record\+Count elements. 
+\begin{DoxyParams}{引数}
+{\em p\+Record\+Count} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_red_black_tree_a390eaccc303de294803e1fd2272cbc73}\label{class_fbx_red_black_tree_a390eaccc303de294803e1fd2272cbc73}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Right\+Rotate@{Right\+Rotate}}
+\index{Right\+Rotate@{Right\+Rotate}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Right\+Rotate()}{RightRotate()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+void \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Right\+Rotate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{class_fbx_red_black_tree_a634b41949b2cdef5488abcb444f896c6}\label{class_fbx_red_black_tree_a634b41949b2cdef5488abcb444f896c6}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Sibling@{Sibling}}
+\index{Sibling@{Sibling}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Sibling()}{Sibling()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Sibling (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Parent,  }\item[{const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type} $\ast$}]{p\+Node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 15
+\mbox{\Hypertarget{class_fbx_red_black_tree_a42a816012df609184b4cef2889ac868a}\label{class_fbx_red_black_tree_a42a816012df609184b4cef2889ac868a}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Upper\+Bound@{Upper\+Bound}}
+\index{Upper\+Bound@{Upper\+Bound}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Upper\+Bound()}{UpperBound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+const \hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Upper\+Bound (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption}) const}
+
+Find the key-\/value pair with the smallest key greater than p\+Key. Takes O(log n) time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key to look for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_red_black_tree_a90138895586387a60eb91306888a2ab6}\label{class_fbx_red_black_tree_a90138895586387a60eb91306888a2ab6}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!Upper\+Bound@{Upper\+Bound}}
+\index{Upper\+Bound@{Upper\+Bound}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{Upper\+Bound()}{UpperBound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::Upper\+Bound (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_red_black_tree_a241b31c6972995417d193458b7bb27e2}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})}
+
+Find the key-\/value pair with the smallest key greater than p\+Key. Takes O(log n) time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key to look for. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_red_black_tree_aefc2938bd74cea7e072d344d5b038af1}\label{class_fbx_red_black_tree_aefc2938bd74cea7e072d344d5b038af1}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!m\+Allocator@{m\+Allocator}}
+\index{m\+Allocator@{m\+Allocator}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{m\+Allocator}{mAllocator}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_a62c49ab2e7d602aac98a9413e490ca90}{Allocator\+Type} \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::m\+Allocator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a1c8e942b25077e380f93a61aaadd8679}\label{class_fbx_red_black_tree_a1c8e942b25077e380f93a61aaadd8679}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!m\+Root@{m\+Root}}
+\index{m\+Root@{m\+Root}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{m\+Root}{mRoot}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+\hyperlink{class_fbx_red_black_tree_1_1_record_type}{Record\+Type}$\ast$ \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::m\+Root\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_red_black_tree_a45b29bfeaffd897c186440fef29b6dfe}\label{class_fbx_red_black_tree_a45b29bfeaffd897c186440fef29b6dfe}} 
+\index{Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}!m\+Size@{m\+Size}}
+\index{m\+Size@{m\+Size}!Fbx\+Red\+Black\+Tree@{Fbx\+Red\+Black\+Tree}}
+\subsubsection{\texorpdfstring{m\+Size}{mSize}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare, typename Allocator$>$ \\
+int \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ Type, Compare, Allocator $>$\+::m\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxredblacktree_8h}{fbxredblacktree.\+h}\end{DoxyCompactItemize}

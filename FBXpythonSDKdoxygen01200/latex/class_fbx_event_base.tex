@@ -1,0 +1,92 @@
+\hypertarget{class_fbx_event_base}{}\section{Fbx\+Event\+Base クラス}
+\label{class_fbx_event_base}\index{Fbx\+Event\+Base@{Fbx\+Event\+Base}}
+
+
+{\ttfamily \#include $<$fbxevent.\+h$>$}
+
+
+
+Fbx\+Event\+Base の継承関係図
+% FIG 0
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_fbx_event_base_ac7a558ec38bc899bd705786620582b8b}{Get\+Type\+Id} () const =0
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_event_base_a94c1acf878d522042b327abf0c129f10}{Get\+Event\+Name} () const =0
+\end{DoxyCompactItemize}
+\subsection*{静的限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_fbx_event_base_a57cde15f6d1c6567bc8dbafc1658bcc5}{Get\+Static\+Type\+Id} (const char $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_event_base_aa95657834201b514cb515cf60d371938}{$\sim$\+Fbx\+Event\+Base} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+F\+BX S\+DK event base class. An event is something that is emitted by an emitter, with the goal of being filled by the listener that listen to it. You can see that like a form that you send to some people. If those people know how to fill the form, they fill it and return it to you with the right information in it. F\+BX object could be used as emitter, since \hyperlink{class_fbx_object}{Fbx\+Object} is derived from \hyperlink{class_fbx_emitter}{Fbx\+Emitter}. Meanwhile, plug-\/in could be used as listener, since \hyperlink{class_fbx_plugin}{Fbx\+Plugin} is derived from \hyperlink{class_fbx_listener}{Fbx\+Listener}. The derived class of \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} contains a type ID to distinguish different types of events. F\+BX object can emit different types of F\+BX events at different conditions. \begin{DoxyParagraph}{The whole process of event is\+:}
+\begin{DoxyItemize}
+\item 1. Create an emitter and a listener, then bind them together via the same event handler. \item 2. Emitter can emit an event at certain conditions. The event could be handled by event handler. \item 3. Once an event is emitted, the listener to this event will receive a signal. \item 4. And then the listener could process the event data according to the types of event, by calling event handler. \end{DoxyItemize}
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{覚え書き}
+The event data is process by the callback function of event handler. For example, if a certain property of a F\+BX object is changed, the F\+BX object(emitter) can emit an event which type is \hyperlink{class_fbx_object_property_changed}{Fbx\+Object\+Property\+Changed}. The plug-\/in(listener) who are listening to \hyperlink{class_fbx_object_property_changed}{Fbx\+Object\+Property\+Changed}, will receive a signal and take action to process the event data.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_event}{Fbx\+Event} \hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \hyperlink{class_fbx_listener}{Fbx\+Listener} \hyperlink{class_fbx_emitter}{Fbx\+Emitter} 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_event_base_aa95657834201b514cb515cf60d371938}\label{class_fbx_event_base_aa95657834201b514cb515cf60d371938}} 
+\index{Fbx\+Event\+Base@{Fbx\+Event\+Base}!````~Fbx\+Event\+Base@{$\sim$\+Fbx\+Event\+Base}}
+\index{````~Fbx\+Event\+Base@{$\sim$\+Fbx\+Event\+Base}!Fbx\+Event\+Base@{Fbx\+Event\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Event\+Base()}{~FbxEventBase()}}
+{\footnotesize\ttfamily virtual Fbx\+Event\+Base\+::$\sim$\+Fbx\+Event\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_event_base_a94c1acf878d522042b327abf0c129f10}\label{class_fbx_event_base_a94c1acf878d522042b327abf0c129f10}} 
+\index{Fbx\+Event\+Base@{Fbx\+Event\+Base}!Get\+Event\+Name@{Get\+Event\+Name}}
+\index{Get\+Event\+Name@{Get\+Event\+Name}!Fbx\+Event\+Base@{Fbx\+Event\+Base}}
+\subsubsection{\texorpdfstring{Get\+Event\+Name()}{GetEventName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Event\+Base\+::\+Get\+Event\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Force events to give us a name \begin{DoxyReturn}{戻り値}
+event name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_event_base_a57cde15f6d1c6567bc8dbafc1658bcc5}\label{class_fbx_event_base_a57cde15f6d1c6567bc8dbafc1658bcc5}} 
+\index{Fbx\+Event\+Base@{Fbx\+Event\+Base}!Get\+Static\+Type\+Id@{Get\+Static\+Type\+Id}}
+\index{Get\+Static\+Type\+Id@{Get\+Static\+Type\+Id}!Fbx\+Event\+Base@{Fbx\+Event\+Base}}
+\subsubsection{\texorpdfstring{Get\+Static\+Type\+Id()}{GetStaticTypeId()}}
+{\footnotesize\ttfamily static int Fbx\+Event\+Base\+::\+Get\+Static\+Type\+Id (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{class_fbx_event_base_ac7a558ec38bc899bd705786620582b8b}\label{class_fbx_event_base_ac7a558ec38bc899bd705786620582b8b}} 
+\index{Fbx\+Event\+Base@{Fbx\+Event\+Base}!Get\+Type\+Id@{Get\+Type\+Id}}
+\index{Get\+Type\+Id@{Get\+Type\+Id}!Fbx\+Event\+Base@{Fbx\+Event\+Base}}
+\subsubsection{\texorpdfstring{Get\+Type\+Id()}{GetTypeId()}}
+{\footnotesize\ttfamily virtual int Fbx\+Event\+Base\+::\+Get\+Type\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Retrieve the event type ID \begin{DoxyReturn}{戻り値}
+type id 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ T $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Write\+Localization $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Post\+Export $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Update\+System\+Library $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Pre\+Export $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Referenced\+Document $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Populate\+System\+Library $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Pre\+Import $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Post\+Import $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Object\+Property\+Changed $>$}, \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Fbx\+Event$<$ Fbx\+Event\+Map\+Asset\+File\+To\+Asset\+Object $>$}で実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxevent_8h}{fbxevent.\+h}\end{DoxyCompactItemize}

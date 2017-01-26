@@ -1,0 +1,502 @@
+\hypertarget{class_fbx_i_o_plugin_registry}{}\section{Fbx\+I\+O\+Plugin\+Registry クラス}
+\label{class_fbx_i_o_plugin_registry}\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+
+
+This class serves as the registrar for file formats. A file format must be registered when it is used by the F\+BX S\+DK.  
+
+
+
+
+{\ttfamily \#include $<$fbxiopluginregistry.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_i_o_plugin_registry_a126c1065aa202f7469a54ad465195f9e}{Fbx\+I\+O\+Plugin\+Registry} ()
+\item 
+virtual \hyperlink{class_fbx_i_o_plugin_registry_a0feb5b0aeb86e2f7c981aeb97576c83f}{$\sim$\+Fbx\+I\+O\+Plugin\+Registry} ()
+\item 
+void \hyperlink{class_fbx_i_o_plugin_registry_ae10f86ccbad4d0c3eac81f98c1d880ac}{Register\+Reader} (const char $\ast$p\+Plugin\+Path, int \&p\+First\+Plugin\+ID, int \&p\+Registered\+Count, bool p\+Override=false)
+\item 
+void \hyperlink{class_fbx_i_o_plugin_registry_a3ae89a412d7d44ddea5ef3d26105c37d}{Register\+Reader} (\hyperlink{class_fbx_reader_a83acaa910ced3876e5e232ff17f62c45}{Fbx\+Reader\+::\+Create\+Func\+Type} p\+CreateF, \hyperlink{class_fbx_reader_a86477804a6ed54e7f99a1887aa50f256}{Fbx\+Reader\+::\+Get\+Info\+Func\+Type} p\+InfoF, int \&p\+First\+Plugin\+ID, int \&p\+Registered\+Count, \hyperlink{class_fbx_reader_aa8d17b6ac89ea7229a3a1510fbccec73}{Fbx\+Reader\+::\+I\+O\+Settings\+Filler\+Func\+Type} p\+I\+O\+Settings\+FillerF=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, bool p\+Override=false)
+\item 
+void \hyperlink{class_fbx_i_o_plugin_registry_ad3c828b59a5ed63b1d4e37ef8657639d}{Register\+Writer} (const char $\ast$p\+Plugin\+Path, int \&p\+First\+Plugin\+ID, int \&p\+Registered\+Count, bool p\+Override=false)
+\item 
+void \hyperlink{class_fbx_i_o_plugin_registry_a41cfa9410a68bcd77d1fa8181df05703}{Register\+Writer} (\hyperlink{class_fbx_writer_aa634a7d29a01f8197f814437644e845b}{Fbx\+Writer\+::\+Create\+Func\+Type} p\+CreateF, \hyperlink{class_fbx_writer_a6c13529045946d474e1e69fa0a6b9305}{Fbx\+Writer\+::\+Get\+Info\+Func\+Type} p\+InfoF, int \&p\+First\+Plugin\+ID, int \&p\+Registered\+Count, \hyperlink{class_fbx_writer_a43eb86f1aae1a6a424c54bcf294553c5}{Fbx\+Writer\+::\+I\+O\+Settings\+Filler\+Func\+Type} p\+I\+O\+Settings\+FillerF=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, bool p\+Override=false)
+\item 
+\hyperlink{class_fbx_reader}{Fbx\+Reader} $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_ab7960a51f7036080668313f6144e4ccd}{Create\+Reader} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, \hyperlink{class_fbx_importer}{Fbx\+Importer} \&p\+Importer, int p\+Plugin\+ID) const
+\item 
+\hyperlink{class_fbx_writer}{Fbx\+Writer} $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_a2b713ba7dd4315e3ebdd2fecba66ac87}{Create\+Writer} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, \hyperlink{class_fbx_exporter}{Fbx\+Exporter} \&p\+Exporter, int p\+Plugin\+ID) const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_a49fd69a6818279573cdab5cf86861ca3}{Find\+Reader\+I\+D\+By\+Extension} (const char $\ast$p\+Ext) const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_ad9495307df7b5dc61ceb34d940f6d619}{Find\+Writer\+I\+D\+By\+Extension} (const char $\ast$p\+Ext) const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_afe4efa15bdb7a8963b77527453222811}{Find\+Reader\+I\+D\+By\+Description} (const char $\ast$p\+Desc) const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_afb8a3db5c0234b9a275be784b75e5748}{Find\+Writer\+I\+D\+By\+Description} (const char $\ast$p\+Desc) const
+\item 
+bool \hyperlink{class_fbx_i_o_plugin_registry_a05eaf29eea6f7b72fd250796dd026791}{Reader\+Is\+F\+BX} (int p\+File\+Format) const
+\item 
+bool \hyperlink{class_fbx_i_o_plugin_registry_ab944fef5c7714d9e0996155bfbe18dc6}{Writer\+Is\+F\+BX} (int p\+File\+Format) const
+\item 
+bool \hyperlink{class_fbx_i_o_plugin_registry_af737d254762b26d85dab9022c4c41986}{Reader\+Is\+Genuine} (int p\+File\+Format) const
+\item 
+bool \hyperlink{class_fbx_i_o_plugin_registry_a97b8717732f20dff6eb8a6c8ae3b29ad}{Writer\+Is\+Genuine} (int p\+File\+Format) const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_a179517469d70cc8736339275b1e8a379}{Get\+Reader\+Format\+Count} () const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_a2699c35cb6a8c2f8abab2167b1faa8fb}{Get\+Writer\+Format\+Count} () const
+\item 
+const char $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_a2663a4ab5c9f0726bb0196497426bf22}{Get\+Reader\+Format\+Description} (int p\+File\+Format) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_ae9b071a85a7f1738b813357b07618747}{Get\+Writer\+Format\+Description} (int p\+File\+Format) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_aa7637c8cdebd8b808487d569d2639a3e}{Get\+Reader\+Format\+Extension} (int p\+File\+Format) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_abe5b3d6fef71707f13e4a1ded04a2285}{Get\+Writer\+Format\+Extension} (int p\+File\+Format) const
+\item 
+char const  $\ast$const  $\ast$ \hyperlink{class_fbx_i_o_plugin_registry_a37b01e6dc7991d69eb26dbfbd6e25e61}{Get\+Writable\+Versions} (int p\+File\+Format) const
+\item 
+bool \hyperlink{class_fbx_i_o_plugin_registry_ae5fe6282bafb2d5dca00b39ad97ee0e7}{Detect\+Reader\+File\+Format} (const char $\ast$p\+File\+Name, int \&p\+File\+Format) const
+\item 
+bool \hyperlink{class_fbx_i_o_plugin_registry_adcb5757258905fc61f574b877aa55b54}{Detect\+Writer\+File\+Format} (const char $\ast$p\+File\+Name, int \&p\+File\+Format) const
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_a327774f480239422e9fb51a15eee99ce}{Get\+Native\+Reader\+Format} ()
+\item 
+int \hyperlink{class_fbx_i_o_plugin_registry_a846db4ae58c80f28d8fd48c6af93ea3e}{Get\+Native\+Writer\+Format} ()
+\item 
+void \hyperlink{class_fbx_i_o_plugin_registry_a92c7a20e1eb9948e83c4915c47fd63dc}{Fill\+I\+O\+Settings\+For\+Readers\+Registered} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&p\+I\+OS)
+\item 
+void \hyperlink{class_fbx_i_o_plugin_registry_adbb47a3ba26c90c49988f11cd30b21d8}{Fill\+I\+O\+Settings\+For\+Writers\+Registered} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&p\+I\+OS)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class serves as the registrar for file formats. A file format must be registered when it is used by the F\+BX S\+DK. 
+
+This class also lets you create and read formats other than F\+BX S\+DK native formats. Users of F\+BX S\+DK can write their own plug-\/ins to read or write arbitrary file formats. Once their plug-\/ins are registered in this class, F\+BX S\+DK is able to read or write these file formats.
+
+Each \hyperlink{class_fbx_manager}{Fbx\+Manager} has a unique \hyperlink{class_fbx_i_o_plugin_registry}{Fbx\+I\+O\+Plugin\+Registry}. To get an instance of this class\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_i_o_plugin_registry}{FbxIOPluginRegistry}* registry = manager->GetIOPluginRegistry();
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_manager_ae6cc5dd81a15ec63c7c8102d349231d8}{Fbx\+Manager\+::\+Get\+I\+O\+Plugin\+Registry()} 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a126c1065aa202f7469a54ad465195f9e}\label{class_fbx_i_o_plugin_registry_a126c1065aa202f7469a54ad465195f9e}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Fbx\+I\+O\+Plugin\+Registry()}{FbxIOPluginRegistry()}}
+{\footnotesize\ttfamily Fbx\+I\+O\+Plugin\+Registry\+::\+Fbx\+I\+O\+Plugin\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor. \mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a0feb5b0aeb86e2f7c981aeb97576c83f}\label{class_fbx_i_o_plugin_registry_a0feb5b0aeb86e2f7c981aeb97576c83f}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!````~Fbx\+I\+O\+Plugin\+Registry@{$\sim$\+Fbx\+I\+O\+Plugin\+Registry}}
+\index{````~Fbx\+I\+O\+Plugin\+Registry@{$\sim$\+Fbx\+I\+O\+Plugin\+Registry}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+I\+O\+Plugin\+Registry()}{~FbxIOPluginRegistry()}}
+{\footnotesize\ttfamily virtual Fbx\+I\+O\+Plugin\+Registry\+::$\sim$\+Fbx\+I\+O\+Plugin\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ab7960a51f7036080668313f6144e4ccd}\label{class_fbx_i_o_plugin_registry_ab7960a51f7036080668313f6144e4ccd}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Create\+Reader@{Create\+Reader}}
+\index{Create\+Reader@{Create\+Reader}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Create\+Reader()}{CreateReader()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_reader}{Fbx\+Reader}$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Create\+Reader (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{\hyperlink{class_fbx_importer}{Fbx\+Importer} \&}]{p\+Importer,  }\item[{int}]{p\+Plugin\+ID }\end{DoxyParamCaption}) const}
+
+Creates a Reader. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & The S\+DK Manager where the Reader is created. \\
+\hline
+{\em p\+Importer} & The importer that holds the created Reader. \\
+\hline
+{\em p\+Plugin\+ID} & The Reader ID. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a2b713ba7dd4315e3ebdd2fecba66ac87}\label{class_fbx_i_o_plugin_registry_a2b713ba7dd4315e3ebdd2fecba66ac87}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Create\+Writer@{Create\+Writer}}
+\index{Create\+Writer@{Create\+Writer}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Create\+Writer()}{CreateWriter()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_writer}{Fbx\+Writer}$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Create\+Writer (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{\hyperlink{class_fbx_exporter}{Fbx\+Exporter} \&}]{p\+Exporter,  }\item[{int}]{p\+Plugin\+ID }\end{DoxyParamCaption}) const}
+
+Creates a Writer. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & The S\+DK Manager where the Writer is created. \\
+\hline
+{\em p\+Exporter} & The exporter that holds the created Writer. \\
+\hline
+{\em p\+Plugin\+ID} & The Writer ID. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ae5fe6282bafb2d5dca00b39ad97ee0e7}\label{class_fbx_i_o_plugin_registry_ae5fe6282bafb2d5dca00b39ad97ee0e7}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Detect\+Reader\+File\+Format@{Detect\+Reader\+File\+Format}}
+\index{Detect\+Reader\+File\+Format@{Detect\+Reader\+File\+Format}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Detect\+Reader\+File\+Format()}{DetectReaderFileFormat()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Plugin\+Registry\+::\+Detect\+Reader\+File\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name,  }\item[{int \&}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Detects the import (reader) file format specified for the file. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & The file whose file format is to be determined. \\
+\hline
+{\em p\+File\+Format} & It equals the file format identifier if this function returns {\ttfamily true}. If this function returns {\ttfamily false}, it is unmodified. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the file has been determined successfully, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function attempts to detect the specified file\textquotesingle{}s file format based on the file extension and, in some cases, its content. This function may not be able to determine all file formats. Use this function as a helper before calling {\ttfamily Set\+File\+Format()}. 
+\end{DoxyRemark}
+\begin{DoxyNote}{覚え書き}
+The file must be unlocked (already open) for this function to succeed. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_adcb5757258905fc61f574b877aa55b54}\label{class_fbx_i_o_plugin_registry_adcb5757258905fc61f574b877aa55b54}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Detect\+Writer\+File\+Format@{Detect\+Writer\+File\+Format}}
+\index{Detect\+Writer\+File\+Format@{Detect\+Writer\+File\+Format}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Detect\+Writer\+File\+Format()}{DetectWriterFileFormat()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Plugin\+Registry\+::\+Detect\+Writer\+File\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name,  }\item[{int \&}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Detects the export (writer) file format specified for the file. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & The file whose file format is to be determined. \\
+\hline
+{\em p\+File\+Format} & It equals the file format identifier if this function returns {\ttfamily true}. If this function returns {\ttfamily false}, it is unmodified. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the file has been determined successfully, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function attempts to detect the specified file\textquotesingle{}s file format based on the file extension and, in some cases, its content. This function may not be able to determine all file formats. Use this function as a helper before calling {\ttfamily Set\+File\+Format()}. 
+\end{DoxyRemark}
+\begin{DoxyNote}{覚え書き}
+The file must be unlocked (already open) for this function to succeed. 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a92c7a20e1eb9948e83c4915c47fd63dc}\label{class_fbx_i_o_plugin_registry_a92c7a20e1eb9948e83c4915c47fd63dc}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Fill\+I\+O\+Settings\+For\+Readers\+Registered@{Fill\+I\+O\+Settings\+For\+Readers\+Registered}}
+\index{Fill\+I\+O\+Settings\+For\+Readers\+Registered@{Fill\+I\+O\+Settings\+For\+Readers\+Registered}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Fill\+I\+O\+Settings\+For\+Readers\+Registered()}{FillIOSettingsForReadersRegistered()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Plugin\+Registry\+::\+Fill\+I\+O\+Settings\+For\+Readers\+Registered (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&}]{p\+I\+OS }\end{DoxyParamCaption})}
+
+Fills the IO Settings for all registered readers. 
+\begin{DoxyParams}{引数}
+{\em p\+I\+OS} & The IO settings to be filled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_adbb47a3ba26c90c49988f11cd30b21d8}\label{class_fbx_i_o_plugin_registry_adbb47a3ba26c90c49988f11cd30b21d8}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Fill\+I\+O\+Settings\+For\+Writers\+Registered@{Fill\+I\+O\+Settings\+For\+Writers\+Registered}}
+\index{Fill\+I\+O\+Settings\+For\+Writers\+Registered@{Fill\+I\+O\+Settings\+For\+Writers\+Registered}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Fill\+I\+O\+Settings\+For\+Writers\+Registered()}{FillIOSettingsForWritersRegistered()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Plugin\+Registry\+::\+Fill\+I\+O\+Settings\+For\+Writers\+Registered (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&}]{p\+I\+OS }\end{DoxyParamCaption})}
+
+Fills the IO Settings for all registered writers. 
+\begin{DoxyParams}{引数}
+{\em p\+I\+OS} & The IO settings to be filled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_afe4efa15bdb7a8963b77527453222811}\label{class_fbx_i_o_plugin_registry_afe4efa15bdb7a8963b77527453222811}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Find\+Reader\+I\+D\+By\+Description@{Find\+Reader\+I\+D\+By\+Description}}
+\index{Find\+Reader\+I\+D\+By\+Description@{Find\+Reader\+I\+D\+By\+Description}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Find\+Reader\+I\+D\+By\+Description()}{FindReaderIDByDescription()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Find\+Reader\+I\+D\+By\+Description (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Desc }\end{DoxyParamCaption}) const}
+
+Searches for the Reader ID by the file format description. 
+\begin{DoxyParams}{引数}
+{\em p\+Desc} & The file format description. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The Reader ID if found, if not found, returns -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a49fd69a6818279573cdab5cf86861ca3}\label{class_fbx_i_o_plugin_registry_a49fd69a6818279573cdab5cf86861ca3}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Find\+Reader\+I\+D\+By\+Extension@{Find\+Reader\+I\+D\+By\+Extension}}
+\index{Find\+Reader\+I\+D\+By\+Extension@{Find\+Reader\+I\+D\+By\+Extension}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Find\+Reader\+I\+D\+By\+Extension()}{FindReaderIDByExtension()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Find\+Reader\+I\+D\+By\+Extension (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Ext }\end{DoxyParamCaption}) const}
+
+Searches for the Reader ID by the file extension. 
+\begin{DoxyParams}{引数}
+{\em p\+Ext} & The file extension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The Reader ID if found, if not found, returns -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_afb8a3db5c0234b9a275be784b75e5748}\label{class_fbx_i_o_plugin_registry_afb8a3db5c0234b9a275be784b75e5748}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Find\+Writer\+I\+D\+By\+Description@{Find\+Writer\+I\+D\+By\+Description}}
+\index{Find\+Writer\+I\+D\+By\+Description@{Find\+Writer\+I\+D\+By\+Description}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Find\+Writer\+I\+D\+By\+Description()}{FindWriterIDByDescription()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Find\+Writer\+I\+D\+By\+Description (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Desc }\end{DoxyParamCaption}) const}
+
+Searches for the Writer ID by the file format description. 
+\begin{DoxyParams}{引数}
+{\em p\+Desc} & The file format description. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The Writer ID if found, if not found, returns -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ad9495307df7b5dc61ceb34d940f6d619}\label{class_fbx_i_o_plugin_registry_ad9495307df7b5dc61ceb34d940f6d619}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Find\+Writer\+I\+D\+By\+Extension@{Find\+Writer\+I\+D\+By\+Extension}}
+\index{Find\+Writer\+I\+D\+By\+Extension@{Find\+Writer\+I\+D\+By\+Extension}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Find\+Writer\+I\+D\+By\+Extension()}{FindWriterIDByExtension()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Find\+Writer\+I\+D\+By\+Extension (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Ext }\end{DoxyParamCaption}) const}
+
+Searches for the Writer ID by the file extension. 
+\begin{DoxyParams}{引数}
+{\em p\+Ext} & The file extension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The Writer ID if found, if not found, returns -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a327774f480239422e9fb51a15eee99ce}\label{class_fbx_i_o_plugin_registry_a327774f480239422e9fb51a15eee99ce}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Native\+Reader\+Format@{Get\+Native\+Reader\+Format}}
+\index{Get\+Native\+Reader\+Format@{Get\+Native\+Reader\+Format}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Native\+Reader\+Format()}{GetNativeReaderFormat()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Native\+Reader\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the file format of the native Reader. \begin{DoxyReturn}{戻り値}
+The ID of the native Reader\textquotesingle{}s file format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a846db4ae58c80f28d8fd48c6af93ea3e}\label{class_fbx_i_o_plugin_registry_a846db4ae58c80f28d8fd48c6af93ea3e}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Native\+Writer\+Format@{Get\+Native\+Writer\+Format}}
+\index{Get\+Native\+Writer\+Format@{Get\+Native\+Writer\+Format}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Native\+Writer\+Format()}{GetNativeWriterFormat()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Native\+Writer\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the file format of the native Writer. \begin{DoxyReturn}{戻り値}
+The ID of the native Writer\textquotesingle{}s file format. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a179517469d70cc8736339275b1e8a379}\label{class_fbx_i_o_plugin_registry_a179517469d70cc8736339275b1e8a379}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Reader\+Format\+Count@{Get\+Reader\+Format\+Count}}
+\index{Get\+Reader\+Format\+Count@{Get\+Reader\+Format\+Count}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Reader\+Format\+Count()}{GetReaderFormatCount()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Reader\+Format\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of file formats that can be imported. \begin{DoxyReturn}{戻り値}
+The number of importable formats. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a2663a4ab5c9f0726bb0196497426bf22}\label{class_fbx_i_o_plugin_registry_a2663a4ab5c9f0726bb0196497426bf22}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Reader\+Format\+Description@{Get\+Reader\+Format\+Description}}
+\index{Get\+Reader\+Format\+Description@{Get\+Reader\+Format\+Description}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Reader\+Format\+Description()}{GetReaderFormatDescription()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Reader\+Format\+Description (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Returns the description of an importable file format. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the character representation of the description. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_aa7637c8cdebd8b808487d569d2639a3e}\label{class_fbx_i_o_plugin_registry_aa7637c8cdebd8b808487d569d2639a3e}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Reader\+Format\+Extension@{Get\+Reader\+Format\+Extension}}
+\index{Get\+Reader\+Format\+Extension@{Get\+Reader\+Format\+Extension}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Reader\+Format\+Extension()}{GetReaderFormatExtension()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Reader\+Format\+Extension (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Returns an importable file format\textquotesingle{}s file extension. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the character representation of the file extension. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a37b01e6dc7991d69eb26dbfbd6e25e61}\label{class_fbx_i_o_plugin_registry_a37b01e6dc7991d69eb26dbfbd6e25e61}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Writable\+Versions@{Get\+Writable\+Versions}}
+\index{Get\+Writable\+Versions@{Get\+Writable\+Versions}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Writable\+Versions()}{GetWritableVersions()}}
+{\footnotesize\ttfamily char const$\ast$ const$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Writable\+Versions (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Returns a list of the writable file format versions. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to a list of user-\/readable strings that represent the versions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a2699c35cb6a8c2f8abab2167b1faa8fb}\label{class_fbx_i_o_plugin_registry_a2699c35cb6a8c2f8abab2167b1faa8fb}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Writer\+Format\+Count@{Get\+Writer\+Format\+Count}}
+\index{Get\+Writer\+Format\+Count@{Get\+Writer\+Format\+Count}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Writer\+Format\+Count()}{GetWriterFormatCount()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Writer\+Format\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of file formats that can be exported. \begin{DoxyReturn}{戻り値}
+The number of exportable formats. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Multiple identifiers for the same format count as different file formats. For example, e\+F\+B\+X\+\_\+\+B\+I\+N\+A\+RY, e\+F\+B\+X\+\_\+\+A\+S\+C\+II and e\+F\+B\+X\+\_\+\+E\+N\+C\+R\+Y\+P\+T\+ED are counted as three separate file formats. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ae9b071a85a7f1738b813357b07618747}\label{class_fbx_i_o_plugin_registry_ae9b071a85a7f1738b813357b07618747}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Writer\+Format\+Description@{Get\+Writer\+Format\+Description}}
+\index{Get\+Writer\+Format\+Description@{Get\+Writer\+Format\+Description}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Writer\+Format\+Description()}{GetWriterFormatDescription()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Writer\+Format\+Description (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Returns the description of an exportable file format. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the character representation of the description. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_abe5b3d6fef71707f13e4a1ded04a2285}\label{class_fbx_i_o_plugin_registry_abe5b3d6fef71707f13e4a1ded04a2285}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Get\+Writer\+Format\+Extension@{Get\+Writer\+Format\+Extension}}
+\index{Get\+Writer\+Format\+Extension@{Get\+Writer\+Format\+Extension}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Get\+Writer\+Format\+Extension()}{GetWriterFormatExtension()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+I\+O\+Plugin\+Registry\+::\+Get\+Writer\+Format\+Extension (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Returns an exportable file format\textquotesingle{}s file extension. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the character representation of the file extension. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a05eaf29eea6f7b72fd250796dd026791}\label{class_fbx_i_o_plugin_registry_a05eaf29eea6f7b72fd250796dd026791}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Reader\+Is\+F\+BX@{Reader\+Is\+F\+BX}}
+\index{Reader\+Is\+F\+BX@{Reader\+Is\+F\+BX}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Reader\+Is\+F\+B\+X()}{ReaderIsFBX()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Plugin\+Registry\+::\+Reader\+Is\+F\+BX (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Verifies if the file format of the Reader is F\+BX. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the file format of the Reader is F\+BX, return {\ttfamily false} otherwise.. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_af737d254762b26d85dab9022c4c41986}\label{class_fbx_i_o_plugin_registry_af737d254762b26d85dab9022c4c41986}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Reader\+Is\+Genuine@{Reader\+Is\+Genuine}}
+\index{Reader\+Is\+Genuine@{Reader\+Is\+Genuine}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Reader\+Is\+Genuine()}{ReaderIsGenuine()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Plugin\+Registry\+::\+Reader\+Is\+Genuine (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Verifies if the file format of the Reader is genuine (internal). 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the file format of the Reader is F\+BX, D\+XF, 3\+DS, O\+BJ and D\+AE, return {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ae10f86ccbad4d0c3eac81f98c1d880ac}\label{class_fbx_i_o_plugin_registry_ae10f86ccbad4d0c3eac81f98c1d880ac}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Register\+Reader@{Register\+Reader}}
+\index{Register\+Reader@{Register\+Reader}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Register\+Reader()}{RegisterReader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Plugin\+Registry\+::\+Register\+Reader (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Plugin\+Path,  }\item[{int \&}]{p\+First\+Plugin\+ID,  }\item[{int \&}]{p\+Registered\+Count,  }\item[{bool}]{p\+Override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Registers a Reader from a plug-\/in path. 
+\begin{DoxyParams}{引数}
+{\em p\+Plugin\+Path} & The plug-\/in path. \\
+\hline
+{\em p\+First\+Plugin\+ID} & Contains the ID of the first plug-\/in found. \\
+\hline
+{\em p\+Registered\+Count} & Contains the number of registered Readers. \\
+\hline
+{\em p\+Override} & Override any existing writer that is using the same extension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a3ae89a412d7d44ddea5ef3d26105c37d}\label{class_fbx_i_o_plugin_registry_a3ae89a412d7d44ddea5ef3d26105c37d}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Register\+Reader@{Register\+Reader}}
+\index{Register\+Reader@{Register\+Reader}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Register\+Reader()}{RegisterReader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Plugin\+Registry\+::\+Register\+Reader (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_reader_a83acaa910ced3876e5e232ff17f62c45}{Fbx\+Reader\+::\+Create\+Func\+Type}}]{p\+CreateF,  }\item[{\hyperlink{class_fbx_reader_a86477804a6ed54e7f99a1887aa50f256}{Fbx\+Reader\+::\+Get\+Info\+Func\+Type}}]{p\+InfoF,  }\item[{int \&}]{p\+First\+Plugin\+ID,  }\item[{int \&}]{p\+Registered\+Count,  }\item[{\hyperlink{class_fbx_reader_aa8d17b6ac89ea7229a3a1510fbccec73}{Fbx\+Reader\+::\+I\+O\+Settings\+Filler\+Func\+Type}}]{p\+I\+O\+Settings\+FillerF = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{bool}]{p\+Override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Registers a Reader. 
+\begin{DoxyParams}{引数}
+{\em p\+CreateF} & The function that creates the Reader to be registered. \\
+\hline
+{\em p\+InfoF} & The function that provides information about the Reader file format, such as the file extension and description. \\
+\hline
+{\em p\+First\+Plugin\+ID} & Contains the ID of the first plug-\/in found. \\
+\hline
+{\em p\+Registered\+Count} & Contains the number of registered Readers. \\
+\hline
+{\em p\+I\+O\+Settings\+FillerF} & The function that fills the IO settings for the Reader. \\
+\hline
+{\em p\+Override} & Override any existing writer that is using the same extension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ad3c828b59a5ed63b1d4e37ef8657639d}\label{class_fbx_i_o_plugin_registry_ad3c828b59a5ed63b1d4e37ef8657639d}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Register\+Writer@{Register\+Writer}}
+\index{Register\+Writer@{Register\+Writer}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Register\+Writer()}{RegisterWriter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Plugin\+Registry\+::\+Register\+Writer (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Plugin\+Path,  }\item[{int \&}]{p\+First\+Plugin\+ID,  }\item[{int \&}]{p\+Registered\+Count,  }\item[{bool}]{p\+Override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Registers a Writer from a plug-\/in path 
+\begin{DoxyParams}{引数}
+{\em p\+Plugin\+Path} & The plug-\/in path. \\
+\hline
+{\em p\+First\+Plugin\+ID} & Contains the ID of the first plug-\/in found. \\
+\hline
+{\em p\+Registered\+Count} & Contains the number of registered Writers. \\
+\hline
+{\em p\+Override} & Override any existing writer that is using the same extension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a41cfa9410a68bcd77d1fa8181df05703}\label{class_fbx_i_o_plugin_registry_a41cfa9410a68bcd77d1fa8181df05703}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Register\+Writer@{Register\+Writer}}
+\index{Register\+Writer@{Register\+Writer}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Register\+Writer()}{RegisterWriter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Plugin\+Registry\+::\+Register\+Writer (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_writer_aa634a7d29a01f8197f814437644e845b}{Fbx\+Writer\+::\+Create\+Func\+Type}}]{p\+CreateF,  }\item[{\hyperlink{class_fbx_writer_a6c13529045946d474e1e69fa0a6b9305}{Fbx\+Writer\+::\+Get\+Info\+Func\+Type}}]{p\+InfoF,  }\item[{int \&}]{p\+First\+Plugin\+ID,  }\item[{int \&}]{p\+Registered\+Count,  }\item[{\hyperlink{class_fbx_writer_a43eb86f1aae1a6a424c54bcf294553c5}{Fbx\+Writer\+::\+I\+O\+Settings\+Filler\+Func\+Type}}]{p\+I\+O\+Settings\+FillerF = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{bool}]{p\+Override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Registers a Writer. 
+\begin{DoxyParams}{引数}
+{\em p\+CreateF} & The function that creates the Writer to be registered. \\
+\hline
+{\em p\+InfoF} & The function that provides information about the Writer file format, such as the file extension, description and version. \\
+\hline
+{\em p\+First\+Plugin\+ID} & Contains the ID of the first plug-\/in found. \\
+\hline
+{\em p\+Registered\+Count} & Contains the number of registered Writers. \\
+\hline
+{\em p\+I\+O\+Settings\+FillerF} & The function that fills the IO settings for the Writer. \\
+\hline
+{\em p\+Override} & Override any existing writer that is using the same extension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_ab944fef5c7714d9e0996155bfbe18dc6}\label{class_fbx_i_o_plugin_registry_ab944fef5c7714d9e0996155bfbe18dc6}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Writer\+Is\+F\+BX@{Writer\+Is\+F\+BX}}
+\index{Writer\+Is\+F\+BX@{Writer\+Is\+F\+BX}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Writer\+Is\+F\+B\+X()}{WriterIsFBX()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Plugin\+Registry\+::\+Writer\+Is\+F\+BX (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Verifies if the file format of the Writer is F\+BX. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the file format of the Writer is F\+BX, return {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_plugin_registry_a97b8717732f20dff6eb8a6c8ae3b29ad}\label{class_fbx_i_o_plugin_registry_a97b8717732f20dff6eb8a6c8ae3b29ad}} 
+\index{Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}!Writer\+Is\+Genuine@{Writer\+Is\+Genuine}}
+\index{Writer\+Is\+Genuine@{Writer\+Is\+Genuine}!Fbx\+I\+O\+Plugin\+Registry@{Fbx\+I\+O\+Plugin\+Registry}}
+\subsubsection{\texorpdfstring{Writer\+Is\+Genuine()}{WriterIsGenuine()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Plugin\+Registry\+::\+Writer\+Is\+Genuine (\begin{DoxyParamCaption}\item[{int}]{p\+File\+Format }\end{DoxyParamCaption}) const}
+
+Verifies if the file format of the Writer is genuine (internal). 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & The file format identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the file format of the Writer is F\+BX, D\+XF, 3\+DS, O\+BJ and D\+AE, return {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxiopluginregistry_8h}{fbxiopluginregistry.\+h}\end{DoxyCompactItemize}

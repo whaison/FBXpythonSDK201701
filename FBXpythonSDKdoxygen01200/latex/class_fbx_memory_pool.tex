@@ -1,0 +1,93 @@
+\hypertarget{class_fbx_memory_pool}{}\section{Fbx\+Memory\+Pool クラス}
+\label{class_fbx_memory_pool}\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+
+
+Class to create a simple fixed-\/size-\/blocks memory pool to allocate memory dynamically.  
+
+
+
+
+{\ttfamily \#include $<$fbxmemorypool.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_memory_pool_a588f08af0ec9cb4f1338490d06444d51}{Fbx\+Memory\+Pool} (size\+\_\+t p\+Block\+Size, \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} p\+Block\+Count=0, bool p\+Resizable=true, bool p\+Concurrent=true)
+\item 
+\hyperlink{class_fbx_memory_pool_a8674dda6c327078479eb19174b75c142}{$\sim$\+Fbx\+Memory\+Pool} ()
+\item 
+void \hyperlink{class_fbx_memory_pool_a9bd2739def7e1af783a5b97b83c3e8ff}{Reset} ()
+\item 
+void $\ast$ \hyperlink{class_fbx_memory_pool_aeccd6cbfc4f43a28fa16744a52ea877a}{Allocate} ()
+\item 
+void \hyperlink{class_fbx_memory_pool_adcac349666eea1d48455cfed673e4144}{Release} (void $\ast$p\+Mem\+Block)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Class to create a simple fixed-\/size-\/blocks memory pool to allocate memory dynamically. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_memory_pool_a588f08af0ec9cb4f1338490d06444d51}\label{class_fbx_memory_pool_a588f08af0ec9cb4f1338490d06444d51}} 
+\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}!Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}!Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+\subsubsection{\texorpdfstring{Fbx\+Memory\+Pool()}{FbxMemoryPool()}}
+{\footnotesize\ttfamily Fbx\+Memory\+Pool\+::\+Fbx\+Memory\+Pool (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p\+Block\+Size,  }\item[{\hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64}}]{p\+Block\+Count = {\ttfamily 0},  }\item[{bool}]{p\+Resizable = {\ttfamily true},  }\item[{bool}]{p\+Concurrent = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Memory pool constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Block\+Size} & The size of one memory block. \\
+\hline
+{\em p\+Block\+Count} & The count of block that should be pre-\/allocated. \\
+\hline
+{\em p\+Resizable} & Whether memory pool can grow if no block are availalbe upon calling Allocate. \\
+\hline
+{\em p\+Concurrent} & Whether the pool supports concurrent allocation and release operations. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+All memory blocks must be released before the memory pool is destroyed, otherwise a memory leak will occur. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_memory_pool_a8674dda6c327078479eb19174b75c142}\label{class_fbx_memory_pool_a8674dda6c327078479eb19174b75c142}} 
+\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}!````~Fbx\+Memory\+Pool@{$\sim$\+Fbx\+Memory\+Pool}}
+\index{````~Fbx\+Memory\+Pool@{$\sim$\+Fbx\+Memory\+Pool}!Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Memory\+Pool()}{~FbxMemoryPool()}}
+{\footnotesize\ttfamily Fbx\+Memory\+Pool\+::$\sim$\+Fbx\+Memory\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Memory pool destructor. Upon destruction, all memory blocks of the pool will be de-\/allocated. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_memory_pool_aeccd6cbfc4f43a28fa16744a52ea877a}\label{class_fbx_memory_pool_aeccd6cbfc4f43a28fa16744a52ea877a}} 
+\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+\subsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Memory\+Pool\+::\+Allocate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Allocate or lock a memory block for usage. \begin{DoxyReturn}{戻り値}
+An memory block pointer that can be N\+U\+LL if the memory pool cannot grow in size and no blocks are available. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_memory_pool_adcac349666eea1d48455cfed673e4144}\label{class_fbx_memory_pool_adcac349666eea1d48455cfed673e4144}} 
+\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Fbx\+Memory\+Pool\+::\+Release (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Mem\+Block }\end{DoxyParamCaption})}
+
+Dispose or unlock a memory block. 
+\begin{DoxyParams}{引数}
+{\em p\+Mem\+Block} & A pointer to the memory block to release. This will not free the block\textquotesingle{}s memory, instead simply putting it back in the available stack. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_memory_pool_a9bd2739def7e1af783a5b97b83c3e8ff}\label{class_fbx_memory_pool_a9bd2739def7e1af783a5b97b83c3e8ff}} 
+\index{Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Memory\+Pool@{Fbx\+Memory\+Pool}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Memory\+Pool\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free memory of all memory blocks from this memory pool, also effectively resetting the block count to zero. \begin{DoxyRemark}{注釈}
+The block size and alignment/resize/concurrent support will remain unchanged. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxmemorypool_8h}{fbxmemorypool.\+h}\end{DoxyCompactItemize}

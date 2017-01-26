@@ -1,0 +1,169 @@
+\hypertarget{class_fbx_progress}{}\section{Fbx\+Progress クラス}
+\label{class_fbx_progress}\index{Fbx\+Progress@{Fbx\+Progress}}
+
+
+{\ttfamily \#include $<$fbxprogress.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_progress_a8d165798c9c75bdf2498d7a6840220aa}{Set\+Progress\+Callback} (\hyperlink{fbxprogress_8h_a3765040904b462fb1f2673caba3488db}{Fbx\+Progress\+Callback} p\+Callback, void $\ast$p\+Args=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_progress_a5a704be350a16f935729750888644040}{Set\+Total} (float p\+Total)
+\item 
+void \hyperlink{class_fbx_progress_a0f2eeea6d21c0917acde3e9c08a5a649}{Set\+Threshold} (float p\+Threshold)
+\item 
+void \hyperlink{class_fbx_progress_ac67f9c160f7ffc09e9c7454b3bfa6b06}{Update} (float p\+Delta, const char $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_progress_a5f7149e7ac9e7dd29eae9f3ebada5418}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the progress status percentage and status string. \end{DoxyCompactList}\item 
+float \hyperlink{class_fbx_progress_a63376b77e48aaaaf6ff86924132572b1}{Get\+Progress} (\hyperlink{class_fbx_string}{Fbx\+String} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_progress_a90e010980f9db7fd525ef8a2e0a9a471}{Complete} (const char $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_progress_a6d335a5a18efc63d4a73d5eeedf78516}{Cancel} ()
+\begin{DoxyCompactList}\small\item\em Cancel this progress. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_progress_a01a1707ca7bdb12250642661ac1a3a31}{Is\+Canceled} () const
+\begin{DoxyCompactList}\small\item\em Query whether user canceled this progress. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_progress_a9e3cb1977c2e11039314cc2be1020378}{Fbx\+Progress} ()
+\item 
+\hyperlink{class_fbx_progress_acb4d530f0f495e13e8db3bfb2382d9b7}{$\sim$\+Fbx\+Progress} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Class for progress reporting 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_progress_a9e3cb1977c2e11039314cc2be1020378}\label{class_fbx_progress_a9e3cb1977c2e11039314cc2be1020378}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Fbx\+Progress@{Fbx\+Progress}}
+\index{Fbx\+Progress@{Fbx\+Progress}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Fbx\+Progress()}{FbxProgress()}}
+{\footnotesize\ttfamily Fbx\+Progress\+::\+Fbx\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_progress_acb4d530f0f495e13e8db3bfb2382d9b7}\label{class_fbx_progress_acb4d530f0f495e13e8db3bfb2382d9b7}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!````~Fbx\+Progress@{$\sim$\+Fbx\+Progress}}
+\index{````~Fbx\+Progress@{$\sim$\+Fbx\+Progress}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Progress()}{~FbxProgress()}}
+{\footnotesize\ttfamily Fbx\+Progress\+::$\sim$\+Fbx\+Progress (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_progress_a6d335a5a18efc63d4a73d5eeedf78516}\label{class_fbx_progress_a6d335a5a18efc63d4a73d5eeedf78516}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Cancel@{Cancel}}
+\index{Cancel@{Cancel}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Cancel()}{Cancel()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cancel this progress. 
+
+\mbox{\Hypertarget{class_fbx_progress_a90e010980f9db7fd525ef8a2e0a9a471}\label{class_fbx_progress_a90e010980f9db7fd525ef8a2e0a9a471}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Complete@{Complete}}
+\index{Complete@{Complete}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Complete()}{Complete()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Complete (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Set the progress status to completed. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & Optional current progress status string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_progress_a63376b77e48aaaaf6ff86924132572b1}\label{class_fbx_progress_a63376b77e48aaaaf6ff86924132572b1}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Get\+Progress@{Get\+Progress}}
+\index{Get\+Progress@{Get\+Progress}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Get\+Progress()}{GetProgress()}}
+{\footnotesize\ttfamily float Fbx\+Progress\+::\+Get\+Progress (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Retrieve the progress status. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & Optional current progress status string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The current progress percentage. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_progress_a01a1707ca7bdb12250642661ac1a3a31}\label{class_fbx_progress_a01a1707ca7bdb12250642661ac1a3a31}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Is\+Canceled@{Is\+Canceled}}
+\index{Is\+Canceled@{Is\+Canceled}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Is\+Canceled()}{IsCanceled()}}
+{\footnotesize\ttfamily bool Fbx\+Progress\+::\+Is\+Canceled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Query whether user canceled this progress. 
+
+\mbox{\Hypertarget{class_fbx_progress_a5f7149e7ac9e7dd29eae9f3ebada5418}\label{class_fbx_progress_a5f7149e7ac9e7dd29eae9f3ebada5418}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the progress status percentage and status string. 
+
+\mbox{\Hypertarget{class_fbx_progress_a8d165798c9c75bdf2498d7a6840220aa}\label{class_fbx_progress_a8d165798c9c75bdf2498d7a6840220aa}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Set\+Progress\+Callback@{Set\+Progress\+Callback}}
+\index{Set\+Progress\+Callback@{Set\+Progress\+Callback}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Set\+Progress\+Callback()}{SetProgressCallback()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Set\+Progress\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{fbxprogress_8h_a3765040904b462fb1f2673caba3488db}{Fbx\+Progress\+Callback}}]{p\+Callback,  }\item[{void $\ast$}]{p\+Args = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Register a callback function for progress reporting in single thread mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Callback} & Pointer of the callback function. \\
+\hline
+{\em p\+Args} & Pointer to the optional arguments passed to the callback function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_progress_a0f2eeea6d21c0917acde3e9c08a5a649}\label{class_fbx_progress_a0f2eeea6d21c0917acde3e9c08a5a649}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Set\+Threshold@{Set\+Threshold}}
+\index{Set\+Threshold@{Set\+Threshold}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Set\+Threshold()}{SetThreshold()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Set\+Threshold (\begin{DoxyParamCaption}\item[{float}]{p\+Threshold }\end{DoxyParamCaption})}
+
+Set the threshold at which the progress callback should be called. 
+\begin{DoxyParams}{引数}
+{\em p\+Threshold} & The threshold value, between 0.\+0 and 100.\+0, that triggers the callback. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The default threshold is 1.\+0, meaning that every 1\% the callback is triggered. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_progress_a5a704be350a16f935729750888644040}\label{class_fbx_progress_a5a704be350a16f935729750888644040}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Set\+Total@{Set\+Total}}
+\index{Set\+Total@{Set\+Total}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Set\+Total()}{SetTotal()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Set\+Total (\begin{DoxyParamCaption}\item[{float}]{p\+Total }\end{DoxyParamCaption})}
+
+Set the total amount of workload needed to complete the progress. 
+\begin{DoxyParams}{引数}
+{\em p\+Total} & Total amount of workload. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The default total is 100.\+0. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_progress_ac67f9c160f7ffc09e9c7454b3bfa6b06}\label{class_fbx_progress_ac67f9c160f7ffc09e9c7454b3bfa6b06}} 
+\index{Fbx\+Progress@{Fbx\+Progress}!Update@{Update}}
+\index{Update@{Update}!Fbx\+Progress@{Fbx\+Progress}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Fbx\+Progress\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{p\+Delta,  }\item[{const char $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Update current progress with recent workload. 
+\begin{DoxyParams}{引数}
+{\em p\+Delta} & Delta amount of workload progressed so far. \\
+\hline
+{\em p\+Status} & Optional current progress status string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If a callback is set, it will be called upon caling this function. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxprogress_8h}{fbxprogress.\+h}\end{DoxyCompactItemize}

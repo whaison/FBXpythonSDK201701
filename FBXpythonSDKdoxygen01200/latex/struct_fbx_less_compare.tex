@@ -1,0 +1,62 @@
+\hypertarget{struct_fbx_less_compare}{}\section{Fbx\+Less\+Compare$<$ Type $>$ 構造体テンプレート}
+\label{struct_fbx_less_compare}\index{Fbx\+Less\+Compare$<$ Type $>$@{Fbx\+Less\+Compare$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$fbxmap.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_fbx_less_compare_ae928c1cd53fbd36a8ed7497b4d6accc9}{operator()} (const Type \&p\+Left, const Type \&p\+Right) const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename Type$>$\newline
+struct Fbx\+Less\+Compare$<$ Type $>$}
+
+Default compare functor for \hyperlink{class_fbx_map}{Fbx\+Map} and \hyperlink{class_fbx_set}{Fbx\+Set}, which assumes operator $<$ is defined. Here is examples of different compare class implementations\+: With Key = int 
+\begin{DoxyCode}
+\textcolor{keyword}{class }IntCompare
+\{
+    \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \hyperlink{struct_fbx_less_compare_ae928c1cd53fbd36a8ed7497b4d6accc9}{operator()}(\textcolor{keywordtype}{int} pKeyA, \textcolor{keywordtype}{int} pKeyB)\textcolor{keyword}{ const}
+\textcolor{keyword}{    }\{
+        \textcolor{keywordflow}{return} pKeyA < pKeyB ? -1 : (pKeyA > pKeyB ? 1 : 0);
+    \}
+\};
+\end{DoxyCode}
+ With Key = Class 
+\begin{DoxyCode}
+\textcolor{keyword}{class }ClassCompare
+\{
+    \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \hyperlink{struct_fbx_less_compare_ae928c1cd53fbd36a8ed7497b4d6accc9}{operator()}(\textcolor{keyword}{const} Class& pKeyA, \textcolor{keyword}{const} Class& pKeyB)\textcolor{keyword}{ const}
+\textcolor{keyword}{    }\{
+        \textcolor{keywordflow}{return} pKeyA < pKeyB ? -1 : (pKeyA > pKeyB ? 1 : 0);
+    \}
+\};
+\end{DoxyCode}
+ With Key = char$\ast$ 
+\begin{DoxyCode}
+\textcolor{keyword}{class }StrCompare
+\{
+    \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \hyperlink{struct_fbx_less_compare_ae928c1cd53fbd36a8ed7497b4d6accc9}{operator()}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* pKeyA, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pKeyB)\textcolor{keyword}{ const}
+\textcolor{keyword}{    }\{
+        \textcolor{keywordflow}{return} strcmp(pKeyA, pKeyB);
+    \}
+\};
+\end{DoxyCode}
+ 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{struct_fbx_less_compare_ae928c1cd53fbd36a8ed7497b4d6accc9}\label{struct_fbx_less_compare_ae928c1cd53fbd36a8ed7497b4d6accc9}} 
+\index{Fbx\+Less\+Compare@{Fbx\+Less\+Compare}!operator()@{operator()}}
+\index{operator()@{operator()}!Fbx\+Less\+Compare@{Fbx\+Less\+Compare}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+int \hyperlink{struct_fbx_less_compare}{Fbx\+Less\+Compare}$<$ Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{const Type \&}]{p\+Left,  }\item[{const Type \&}]{p\+Right }\end{DoxyParamCaption}) const}
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxmap_8h}{fbxmap.\+h}\end{DoxyCompactItemize}

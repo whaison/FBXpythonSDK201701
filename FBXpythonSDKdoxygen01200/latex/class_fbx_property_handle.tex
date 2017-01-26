@@ -1,0 +1,1576 @@
+\hypertarget{class_fbx_property_handle}{}\section{Fbx\+Property\+Handle クラス}
+\label{class_fbx_property_handle}\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+
+
+Class to manage property handle.  
+
+
+
+
+{\ttfamily \#include $<$fbxpropertyhandle.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{Indent}\textbf{ Assignment and basic info}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \& \hyperlink{class_fbx_property_handle_a23a41629f6fe1629b9752ea42615b010}{operator=} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle)
+\item 
+bool \hyperlink{class_fbx_property_handle_aee6f973f1c78f4dbd6f98fd4f3766016}{operator==} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a551b2ce6d554279f23f11a1a1bbdc935}{operator!=} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a6035a62865028477a5352726c6682f79}{operator$<$} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle) const
+\item 
+bool \hyperlink{class_fbx_property_handle_add1ef2cecd4a73e427d8d8713d776ccd}{operator$>$} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle) const
+\item 
+bool \hyperlink{class_fbx_property_handle_ab709acfb7bc25ce784c4453b3004a730}{Is} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle) const
+\item 
+bool \hyperlink{class_fbx_property_handle_ae9e85fda97a40a94361ed91c6127f5a1}{Valid} () const
+\begin{DoxyCompactList}\small\item\em Judge validity \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_fbx_property_handle_a38a846122c8564c62fb58426235b12e6}{Get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Get the property name \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_fbx_property_handle_a2ae2817fc9113f00ad3b212de3acfad7}{Get\+Label} () const
+\begin{DoxyCompactList}\small\item\em Get the property label \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_property_handle_a501ee2ee91a27619728afeb7d69b5936}{Set\+Label} (const char $\ast$p\+Label)
+\item 
+\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \hyperlink{class_fbx_property_handle_a4f2ce11ebf2828418cb1d3d65feb341f}{Get\+Type} () const
+\begin{DoxyCompactList}\small\item\em Get the property type \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a84818af34da6e4d496e2d7e787c5a758}{Get\+Type\+Info} () const
+\begin{DoxyCompactList}\small\item\em Get the property type info \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} \hyperlink{class_fbx_property_handle_a3283a9c3b0cca5cdb058751a90d794c2}{Get\+Flags} () const
+\begin{DoxyCompactList}\small\item\em Get the property attribute state \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} \hyperlink{class_fbx_property_handle_a90978a4383e1fc31bca8944dc35e39cd}{Get\+Flags\+Inherit\+Type} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flags, bool p\+Check\+References) const
+\item 
+bool \hyperlink{class_fbx_property_handle_aa5f4add93321ecbb6afb016bbf9ecc21}{Modify\+Flags} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flags, bool p\+Value)
+\item 
+bool \hyperlink{class_fbx_property_handle_af26f5ca742328a6894bd89ae80ef9c86}{Set\+Flags\+Inherit\+Type} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flags, \hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} p\+Type)
+\item 
+void $\ast$ \hyperlink{class_fbx_property_handle_a6e6c699c0fc80977bb746198e41708cd}{Get\+User\+Data} () const
+\begin{DoxyCompactList}\small\item\em Get the property user data. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_property_handle_ac8ae1291fa5e34f1eb1373a42e8245c8}{Set\+User\+Data} (const void $\ast$p\+User\+Data)
+\item 
+int \hyperlink{class_fbx_property_handle_a9ce046fde2818e1e90782fea7b3294c9}{Get\+User\+Tag} () const
+\begin{DoxyCompactList}\small\item\em Get the property user tag \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_property_handle_a41eff619689a61cf283d9913429a6221}{Set\+User\+Tag} (int p\+User\+Data)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Enum management}\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_property_handle_acae1f5d8ca9ae53a6a926179913bea07}{Add\+Enum\+Value} (const char $\ast$p\+String\+Value)
+\item 
+void \hyperlink{class_fbx_property_handle_ab7e634de872eec9ff5fa59e88a000f79}{Insert\+Enum\+Value} (int p\+Index, const char $\ast$p\+String\+Value)
+\item 
+int \hyperlink{class_fbx_property_handle_a2402b4e7a56046ebb4f1b941a447b197}{Get\+Enum\+Count} ()
+\item 
+void \hyperlink{class_fbx_property_handle_aa558ce3c342afbf4331fa941dc4fcd32}{Set\+Enum\+Value} (int p\+Index, const char $\ast$p\+String\+Value)
+\item 
+void \hyperlink{class_fbx_property_handle_ad57e9833aa4c0815954b0a87d1c83fae}{Remove\+Enum\+Value} (int p\+Index)
+\item 
+char $\ast$ \hyperlink{class_fbx_property_handle_a0c80a68745b75cb46ca742603506f75b}{Get\+Enum\+Value} (int p\+Index)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Child and Struct management}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_property_handle_a1845e4c188e4557e44a1052c5d03d08f}{Begin\+Create\+Or\+Find\+Property} ()
+\begin{DoxyCompactList}\small\item\em Create the map for find property in the property page \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_property_handle_a05f9bc5dcbb93bbde02ffc6c7b640632}{End\+Create\+Or\+Find\+Property} ()
+\begin{DoxyCompactList}\small\item\em Clear the map which created for find property. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_property_handle_ab1da9089aefb10740cdb3aad0754d200}{Is\+Root} () const
+\item 
+bool \hyperlink{class_fbx_property_handle_a8181cf2b414e45cb3fd0cdef8d60fb33}{Is\+Child\+Of} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Parent) const
+\item 
+bool \hyperlink{class_fbx_property_handle_af6d512f55181fbaf2f973aa33ebd1a34}{Is\+Descendent\+Of} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Parent) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a4ce451166cd44ea838b4e4f1b5a8e8ad}{Set\+Parent} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Other)
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_afcbe2140bff2342bc216f392d6132bb6}{Add} (const char $\ast$p\+Name, const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Type\+Info)
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a10599909c3fc0a5bdfba5b7dc05f8ec6}{Get\+Parent} () const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a6160671cde8bff49fe5552ea9bdde1cd}{Get\+Child} () const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a216afaae427671182799347b99a1eb12}{Get\+Sibling} () const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a89892765ba818c194c4615bb84ea0c8c}{Get\+First\+Descendent} () const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a9285a1cf6dbf3854335a0a05eaf1d95f}{Get\+Next\+Descendent} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Handle) const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a51b81ef0ee996b87dd832c6f99122437}{Find} (const char $\ast$p\+Name, bool p\+Case\+Sensitive) const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_acda982c21cb2db55366500ff9da43322}{Find} (const char $\ast$p\+Name, const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Type\+Info, bool p\+Case\+Sensitive) const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_aa5206f41665802f16347ba4907e16519}{Find} (const char $\ast$p\+Name, const char $\ast$p\+Children\+Separator, bool p\+Case\+Sensitive) const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a9607ca887e5b2f7b369770fab746b7e0}{Find} (const char $\ast$p\+Name, const char $\ast$p\+Children\+Separator, const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Type\+Info, bool p\+Case\+Sensitive) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Connection management}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_handle_a9682cef8ffadfe43c594a9cf787879b1}{Connect\+Src} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Src, const \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type} p\+Type=\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}{Fbx\+Connection\+::e\+Default})
+\item 
+int \hyperlink{class_fbx_property_handle_a10398afdaf865adc314f65ed0e689638}{Get\+Src\+Count} (\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$p\+Filter=0) const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a989f15be760ea7608b8db6f9090f1235}{Get\+Src} (\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$p\+Filter=0, int p\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a1e7e6be842dac23fce8708f182e9e8c3}{Disconnect\+Src} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Src)
+\item 
+bool \hyperlink{class_fbx_property_handle_acf4c1984ce8574d2cb6e1300d4d3d1d6}{Is\+Connected\+Src} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Src)
+\item 
+bool \hyperlink{class_fbx_property_handle_aae1fece6b331a3d0550df3258a89ac82}{Connect\+Dst} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Dst, const \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type} p\+Type=\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}{Fbx\+Connection\+::e\+Default})
+\item 
+int \hyperlink{class_fbx_property_handle_a68e17d22df7c1a31bf4314ecef210b8b}{Get\+Dst\+Count} (\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$p\+Filter=0) const
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a2e08af666df12d6e0a9e246fd67724b4}{Get\+Dst} (\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$p\+Filter=0, int p\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a896af2c51a9e9b1c9cc45c20b0c17801}{Disconnect\+Dst} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Dst)
+\item 
+bool \hyperlink{class_fbx_property_handle_adf42d55aa7e6ce3f4389c73fe45f4adc}{Is\+Connected\+Dst} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Dst)
+\item 
+void \hyperlink{class_fbx_property_handle_a7c7d33409675381ba019ac3a2d67c372}{Clear\+Connect\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Clear connect cache \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_property_handle_abac85431f7a869fe1cf8a8cb1e8097ec}{Wipe\+All\+Connections} ()
+\begin{DoxyCompactList}\small\item\em Clear all connect without sending any notification (Internal use O\+N\+LY) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Limits Functions}\par
+{\em Minimum and maximum value limits can be associated with properties, but F\+BX will not verify that these limits are respected. F\+BX however will store and retrieve limits from files, and will assure that they are persistent in memory while the property handle object exists.
+
+Soft minimums and maximums values are specifying a second set of limits that can be used for UI objects such as sliders. F\+BX will handle them the same way it does with the normal limits. }\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_handle_a08cf85e6eda102f161bcb3c578e6c17b}{Has\+Min} () const
+\item 
+bool \hyperlink{class_fbx_property_handle_a722440b0f9ee5b206e38fe06c375ec4d}{Get\+Min} (void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a699f3d09a345e575b75ebe97c089b82c}{Set\+Min} (const void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_handle_ab37a7e2831a4ca20879d4b8b57877361}{Set\+Min} (const T \&p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_handle_a82ce751c67e19e87294a0083f09133c6}{Get\+Min} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+PE) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a487afcc8d481a7a64b0087e2bf313c94}{Has\+Soft\+Min} () const
+\item 
+bool \hyperlink{class_fbx_property_handle_a879e886ad129d780a9343def15bead82}{Get\+Soft\+Min} (void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_handle_af70fa8b28c77e394928d4e1e7cabe50d}{Set\+Soft\+Min} (const void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_handle_a636d40ff360385c71587813842f6d004}{Set\+Soft\+Min} (const T \&p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_handle_a1f2a64b0088928db88a25dccb7c7d190}{Get\+Soft\+Min} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+PE) const
+\item 
+bool \hyperlink{class_fbx_property_handle_ac14373e76b24b0b6ba5d99f9fef10a5f}{Has\+Max} () const
+\item 
+bool \hyperlink{class_fbx_property_handle_a4752eebe7303b15577355b8fbecd4c6b}{Get\+Max} (void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a5e41a6d59cd7a1b1c0325b7cf4476285}{Set\+Max} (const void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_handle_abda2411b3b6fb98963c1009b3c2e1425}{Set\+Max} (const T \&p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_handle_a170bbeb8c9dc5a4a1a1de93a9328f897}{Get\+Max} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+PE) const
+\item 
+bool \hyperlink{class_fbx_property_handle_ad89e57bd3b7cfe2758d8b95f252b8b9f}{Has\+Soft\+Max} () const
+\item 
+bool \hyperlink{class_fbx_property_handle_a2cc9715f192ec19f46f4baaef4baf075}{Get\+Soft\+Max} (void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_handle_ad4303ec2be34fb9d619fc98e68486784}{Set\+Soft\+Max} (const void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_handle_a2581fff85d3c2e73c99d16f2b9c1a66e}{Set\+Soft\+Max} (const T \&p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_handle_a302beaa7745f9f5f3cd92e7b4f42d576}{Get\+Soft\+Max} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+PE) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Value}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} \hyperlink{class_fbx_property_handle_a899c4594086890878626f4755da6c690}{Get\+Value\+Inherit\+Type} (bool p\+Check\+References) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a3f03d6a87ab11bffdd30923485272f4a}{Set\+Value\+Inherit\+Type} (\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} p\+Type)
+\item 
+bool \hyperlink{class_fbx_property_handle_a921ee7d24d875d04ae00037b7e9fb4dc}{Get\+Default\+Value} (void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a0fe268c3bc03617fda8f7ab33830f5c4}{Get} (void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a9beb20c6080c4f51fb01a547cc53807f}{Set} (const void $\ast$p\+Value, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type, bool p\+Check\+Value\+Equality)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_handle_adb42ced01547310727f58275d2a9463c}{Set} (const T \&p\+Value)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_handle_af67a0926e9905c19cc7b2a60b4d89adb}{Get} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+PE) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Page settings}\par
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_property_handle_ac980bb1090ea5fd32c9587e3f0b9ac9b}{Set\+Page\+Data\+Ptr} (void $\ast$p\+Data)
+\item 
+void $\ast$ \hyperlink{class_fbx_property_handle_a477ba4c610b36333701547d8aff9fa48}{Get\+Page\+Data\+Ptr} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Page Internal Entry Management}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_handle_a94d8590ac684a0a0895e399396b79c52}{Push\+Properties\+To\+Parent\+Instance} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Reference Management}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_handle_ae33624da8a0ccfd5bb44a5f12f6f0a81}{Is\+A\+Reference\+To} (void) const
+\item 
+void $\ast$ \hyperlink{class_fbx_property_handle_af9780300940a75d036215b70e67698ac}{Get\+Reference\+To} (void) const
+\item 
+bool \hyperlink{class_fbx_property_handle_a832e6f2916497d538658f6eddc56dbc7}{Is\+Referenced\+By} (void) const
+\item 
+int \hyperlink{class_fbx_property_handle_ac5fb2c38abc682f2151960ed4286f3ca}{Get\+Referenced\+By\+Count} (void) const
+\item 
+void $\ast$ \hyperlink{class_fbx_property_handle_a94151c3aa9e0b6f1881bbec6ca389d0a}{Get\+Referenced\+By} (int p\+Index) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Constructor and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a347190a2078177d88598a7cd898eb811}{Create} ()
+\begin{DoxyCompactList}\small\item\em Create an instance \end{DoxyCompactList}\item 
+static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a0bd5893a117b68102c6ce852c6910859}{Create} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Instance\+Of)
+\item 
+static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_abaec4c3b07728510a42c9205fcdb2f53}{Create} (const char $\ast$p\+Name, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Type=\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92a150b400dddd0f8b5c7e22a1bba0721d8}{e\+Fbx\+Undefined})
+\item 
+static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \hyperlink{class_fbx_property_handle_a4f3c6191091b367a05d58984a49e8229}{Create} (const char $\ast$p\+Name, \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} p\+Type\+Info)
+\item 
+bool \hyperlink{class_fbx_property_handle_ae7c07b84a008fbf8395375856a2b303a}{Destroy} ()
+\item 
+\hyperlink{class_fbx_property_handle_a6353ed814add637287bf3a86a4d097be}{Fbx\+Property\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_handle_ad95e794ff4c44aed3b73c6dabd4475da}{Fbx\+Property\+Handle} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Address)
+\item 
+\hyperlink{class_fbx_property_handle_aaec3772d479b172d41c4b7585393fb14}{$\sim$\+Fbx\+Property\+Handle} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_handle_adabd811d9e65f311dbbd5852abac7062}{Fbx\+Property\+Handle} (\hyperlink{class_fbx_property_page}{Fbx\+Property\+Page} $\ast$p\+Page, \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} p\+Id=\hyperlink{fbxpropertydef_8h_a291bdb6d8428dce8463143fa3aba2c34}{F\+B\+X\+S\+D\+K\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+D\+\_\+\+R\+O\+OT})
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Class to manage property handle. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_property_handle_a6353ed814add637287bf3a86a4d097be}\label{class_fbx_property_handle_a6353ed814add637287bf3a86a4d097be}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Fbx\+Property\+Handle()}{FbxPropertyHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Fbx\+Property\+Handle\+::\+Fbx\+Property\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_fbx_property_handle_ad95e794ff4c44aed3b73c6dabd4475da}\label{class_fbx_property_handle_ad95e794ff4c44aed3b73c6dabd4475da}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Fbx\+Property\+Handle()}{FbxPropertyHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Fbx\+Property\+Handle\+::\+Fbx\+Property\+Handle (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Address }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Address} & \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_aaec3772d479b172d41c4b7585393fb14}\label{class_fbx_property_handle_aaec3772d479b172d41c4b7585393fb14}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!````~Fbx\+Property\+Handle@{$\sim$\+Fbx\+Property\+Handle}}
+\index{````~Fbx\+Property\+Handle@{$\sim$\+Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Property\+Handle()}{~FbxPropertyHandle()}}
+{\footnotesize\ttfamily Fbx\+Property\+Handle\+::$\sim$\+Fbx\+Property\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor 
+
+\mbox{\Hypertarget{class_fbx_property_handle_adabd811d9e65f311dbbd5852abac7062}\label{class_fbx_property_handle_adabd811d9e65f311dbbd5852abac7062}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Fbx\+Property\+Handle()}{FbxPropertyHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Fbx\+Property\+Handle\+::\+Fbx\+Property\+Handle (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_page}{Fbx\+Property\+Page} $\ast$}]{p\+Page,  }\item[{\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}}]{p\+Id = {\ttfamily \hyperlink{fbxpropertydef_8h_a291bdb6d8428dce8463143fa3aba2c34}{F\+B\+X\+S\+D\+K\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+I\+D\+\_\+\+R\+O\+OT}} }\end{DoxyParamCaption})}
+
+Character constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Page} & \\
+\hline
+{\em p\+Id} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_property_handle_afcbe2140bff2342bc216f392d6132bb6}\label{class_fbx_property_handle_afcbe2140bff2342bc216f392d6132bb6}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Add@{Add}}
+\index{Add@{Add}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Add (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Type\+Info }\end{DoxyParamCaption})}
+
+Add a property to the property page. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of property. \\
+\hline
+{\em p\+Type\+Info} & The added property\textquotesingle{}s type info. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The handle of the new added property 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_acae1f5d8ca9ae53a6a926179913bea07}\label{class_fbx_property_handle_acae1f5d8ca9ae53a6a926179913bea07}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Add\+Enum\+Value@{Add\+Enum\+Value}}
+\index{Add\+Enum\+Value@{Add\+Enum\+Value}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Add\+Enum\+Value()}{AddEnumValue()}}
+{\footnotesize\ttfamily int Fbx\+Property\+Handle\+::\+Add\+Enum\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String\+Value }\end{DoxyParamCaption})}
+
+Add new value at the end of the enum list in the property. 
+\begin{DoxyParams}{引数}
+{\em p\+String\+Value} & The given new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a1845e4c188e4557e44a1052c5d03d08f}\label{class_fbx_property_handle_a1845e4c188e4557e44a1052c5d03d08f}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Begin\+Create\+Or\+Find\+Property@{Begin\+Create\+Or\+Find\+Property}}
+\index{Begin\+Create\+Or\+Find\+Property@{Begin\+Create\+Or\+Find\+Property}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Begin\+Create\+Or\+Find\+Property()}{BeginCreateOrFindProperty()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Begin\+Create\+Or\+Find\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create the map for find property in the property page 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a7c7d33409675381ba019ac3a2d67c372}\label{class_fbx_property_handle_a7c7d33409675381ba019ac3a2d67c372}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Clear\+Connect\+Cache@{Clear\+Connect\+Cache}}
+\index{Clear\+Connect\+Cache@{Clear\+Connect\+Cache}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Clear\+Connect\+Cache()}{ClearConnectCache()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Clear\+Connect\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear connect cache 
+
+\mbox{\Hypertarget{class_fbx_property_handle_aae1fece6b331a3d0550df3258a89ac82}\label{class_fbx_property_handle_aae1fece6b331a3d0550df3258a89ac82}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Connect\+Dst@{Connect\+Dst}}
+\index{Connect\+Dst@{Connect\+Dst}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Connect\+Dst()}{ConnectDst()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Connect\+Dst (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Dst,  }\item[{const \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type}}]{p\+Type = {\ttfamily \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}{Fbx\+Connection\+::e\+Default}} }\end{DoxyParamCaption})}
+
+Connect destination property. 
+\begin{DoxyParams}{引数}
+{\em p\+Dst} & The given destination property \\
+\hline
+{\em p\+Type} & The given property type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If connect successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a9682cef8ffadfe43c594a9cf787879b1}\label{class_fbx_property_handle_a9682cef8ffadfe43c594a9cf787879b1}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Connect\+Src@{Connect\+Src}}
+\index{Connect\+Src@{Connect\+Src}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Connect\+Src()}{ConnectSrc()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Connect\+Src (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Src,  }\item[{const \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type}}]{p\+Type = {\ttfamily \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}{Fbx\+Connection\+::e\+Default}} }\end{DoxyParamCaption})}
+
+Connect source property. 
+\begin{DoxyParams}{引数}
+{\em p\+Src} & The given source property \\
+\hline
+{\em p\+Type} & The given property type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If connect successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a347190a2078177d88598a7cd898eb811}\label{class_fbx_property_handle_a347190a2078177d88598a7cd898eb811}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an instance 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a0bd5893a117b68102c6ce852c6910859}\label{class_fbx_property_handle_a0bd5893a117b68102c6ce852c6910859}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Create (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Instance\+Of }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an instance with given instance. 
+\begin{DoxyParams}{引数}
+{\em p\+Instance\+Of} & The given instance. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_abaec4c3b07728510a42c9205fcdb2f53}\label{class_fbx_property_handle_abaec4c3b07728510a42c9205fcdb2f53}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Type = {\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92a150b400dddd0f8b5c7e22a1bba0721d8}{e\+Fbx\+Undefined}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an instance with given name and type. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Property name. \\
+\hline
+{\em p\+Type} & Property type. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_a4f3c6191091b367a05d58984a49e8229}\label{class_fbx_property_handle_a4f3c6191091b367a05d58984a49e8229}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Create (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle}}]{p\+Type\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create an instance with given name and type info. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Type\+Info} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_ae7c07b84a008fbf8395375856a2b303a}\label{class_fbx_property_handle_ae7c07b84a008fbf8395375856a2b303a}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+If this property is root property, delete the property page, otherwise delete the property. \begin{DoxyReturn}{戻り値}
+If succeed, return true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a896af2c51a9e9b1c9cc45c20b0c17801}\label{class_fbx_property_handle_a896af2c51a9e9b1c9cc45c20b0c17801}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Disconnect\+Dst@{Disconnect\+Dst}}
+\index{Disconnect\+Dst@{Disconnect\+Dst}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Disconnect\+Dst()}{DisconnectDst()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Disconnect\+Dst (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Dst }\end{DoxyParamCaption})}
+
+Disconnect destination property. 
+\begin{DoxyParams}{引数}
+{\em p\+Dst} & The given destination property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If disconnect successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a1e7e6be842dac23fce8708f182e9e8c3}\label{class_fbx_property_handle_a1e7e6be842dac23fce8708f182e9e8c3}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Disconnect\+Src@{Disconnect\+Src}}
+\index{Disconnect\+Src@{Disconnect\+Src}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Disconnect\+Src()}{DisconnectSrc()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Disconnect\+Src (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Src }\end{DoxyParamCaption})}
+
+Disconnect source property. 
+\begin{DoxyParams}{引数}
+{\em p\+Src} & The given source property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If disconnect successfully, return true, otherwise return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a05f9bc5dcbb93bbde02ffc6c7b640632}\label{class_fbx_property_handle_a05f9bc5dcbb93bbde02ffc6c7b640632}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!End\+Create\+Or\+Find\+Property@{End\+Create\+Or\+Find\+Property}}
+\index{End\+Create\+Or\+Find\+Property@{End\+Create\+Or\+Find\+Property}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{End\+Create\+Or\+Find\+Property()}{EndCreateOrFindProperty()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+End\+Create\+Or\+Find\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the map which created for find property. 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a51b81ef0ee996b87dd832c6f99122437}\label{class_fbx_property_handle_a51b81ef0ee996b87dd832c6f99122437}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool}]{p\+Case\+Sensitive }\end{DoxyParamCaption}) const}
+
+Find the property with given name 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The given property name \\
+\hline
+{\em p\+Case\+Sensitive} & Decide if the given property name is case sensitive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return a property handle which be created with the found property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_acda982c21cb2db55366500ff9da43322}\label{class_fbx_property_handle_acda982c21cb2db55366500ff9da43322}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Type\+Info,  }\item[{bool}]{p\+Case\+Sensitive }\end{DoxyParamCaption}) const}
+
+Find the property with given name and type info. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The given property name \\
+\hline
+{\em p\+Type\+Info} & The given property type info \\
+\hline
+{\em p\+Case\+Sensitive} & Decide if the given property name is case sensitive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return a property handle which be created with the found property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_aa5206f41665802f16347ba4907e16519}\label{class_fbx_property_handle_aa5206f41665802f16347ba4907e16519}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Children\+Separator,  }\item[{bool}]{p\+Case\+Sensitive }\end{DoxyParamCaption}) const}
+
+Separate the given name by children separator string and then find the property.\+The step is strip the first part of the name and search, if the property can be found, strip the second part of the name and continue search, until no property be found,then return the last found property. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The given property name \\
+\hline
+{\em p\+Children\+Separator} & The given children separator string \\
+\hline
+{\em p\+Case\+Sensitive} & Decide if the given property name is case sensitive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return a property handle which be created with the found property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a9607ca887e5b2f7b369770fab746b7e0}\label{class_fbx_property_handle_a9607ca887e5b2f7b369770fab746b7e0}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Children\+Separator,  }\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Type\+Info,  }\item[{bool}]{p\+Case\+Sensitive }\end{DoxyParamCaption}) const}
+
+Separate the given name by children separator string and then find the property.\+The step is strip the first part of the name and search, if the property can be found, strip the second part of the name and continue search, until no property be found,then return the last found property. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The given property name \\
+\hline
+{\em p\+Children\+Separator} & The given children separator string \\
+\hline
+{\em p\+Type\+Info} & The given property type info \\
+\hline
+{\em p\+Case\+Sensitive} & Decide if the given property name is case sensitive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return a property handle which be created with the found property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a0fe268c3bc03617fda8f7ab33830f5c4}\label{class_fbx_property_handle_a0fe268c3bc03617fda8f7ab33830f5c4}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Get (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Get value and value type of this property . 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The gotten value of this property. \\
+\hline
+{\em p\+Value\+Type} & The gotten value type of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If value be gotten successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_af67a0926e9905c19cc7b2a60b4d89adb}\label{class_fbx_property_handle_af67a0926e9905c19cc7b2a60b4d89adb}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+Handle\+::\+Get (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption}) const}
+
+get property value. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+PE} & Not be used. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The gotten property value. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 0
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{class_fbx_property_handle_a6160671cde8bff49fe5552ea9bdde1cd}\label{class_fbx_property_handle_a6160671cde8bff49fe5552ea9bdde1cd}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Child@{Get\+Child}}
+\index{Get\+Child@{Get\+Child}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Child()}{GetChild()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get child property \begin{DoxyReturn}{戻り値}
+If the child property is exist, return the property handle,otherwise return -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a921ee7d24d875d04ae00037b7e9fb4dc}\label{class_fbx_property_handle_a921ee7d24d875d04ae00037b7e9fb4dc}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Default\+Value@{Get\+Default\+Value}}
+\index{Get\+Default\+Value@{Get\+Default\+Value}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Default\+Value()}{GetDefaultValue()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Get\+Default\+Value (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Get default value and value type of this property . 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The gotten default value of this property. \\
+\hline
+{\em p\+Value\+Type} & The gotten default value type of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If default value be gotten successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a2e08af666df12d6e0a9e246fd67724b4}\label{class_fbx_property_handle_a2e08af666df12d6e0a9e246fd67724b4}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Dst@{Get\+Dst}}
+\index{Get\+Dst@{Get\+Dst}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Dst()}{GetDst()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Dst (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$}]{p\+Filter = {\ttfamily 0},  }\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Get destination property with the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Filter} & The filter used to get sub connection point.\+If it is not zero,return the destination property of the sub connection point. Otherwise, return the destination property of this property. \\
+\hline
+{\em p\+Index} & The given index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination property handle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a68e17d22df7c1a31bf4314ecef210b8b}\label{class_fbx_property_handle_a68e17d22df7c1a31bf4314ecef210b8b}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Dst\+Count@{Get\+Dst\+Count}}
+\index{Get\+Dst\+Count@{Get\+Dst\+Count}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Count()}{GetDstCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+Handle\+::\+Get\+Dst\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$}]{p\+Filter = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Get destination properties\textquotesingle{} count. 
+\begin{DoxyParams}{引数}
+{\em p\+Filter} & The filter used to get sub connection point.\+If it is not zero,return the destination count of the sub connection point. Otherwise, return the destination count of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The count of destination properties 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a2402b4e7a56046ebb4f1b941a447b197}\label{class_fbx_property_handle_a2402b4e7a56046ebb4f1b941a447b197}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Enum\+Count@{Get\+Enum\+Count}}
+\index{Get\+Enum\+Count@{Get\+Enum\+Count}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Count()}{GetEnumCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+Handle\+::\+Get\+Enum\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the enum count of enum list in property \begin{DoxyReturn}{戻り値}
+The enum count of enum list in property 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a0c80a68745b75cb46ca742603506f75b}\label{class_fbx_property_handle_a0c80a68745b75cb46ca742603506f75b}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Enum\+Value@{Get\+Enum\+Value}}
+\index{Get\+Enum\+Value@{Get\+Enum\+Value}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Value()}{GetEnumValue()}}
+{\footnotesize\ttfamily char$\ast$ Fbx\+Property\+Handle\+::\+Get\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the value at the index of enum list in the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value at the given index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a89892765ba818c194c4615bb84ea0c8c}\label{class_fbx_property_handle_a89892765ba818c194c4615bb84ea0c8c}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+First\+Descendent@{Get\+First\+Descendent}}
+\index{Get\+First\+Descendent@{Get\+First\+Descendent}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+First\+Descendent()}{GetFirstDescendent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+First\+Descendent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get first descendent property \begin{DoxyReturn}{戻り値}
+If the descendent property is exist, return the first descendent property handle,otherwise return -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a3283a9c3b0cca5cdb058751a90d794c2}\label{class_fbx_property_handle_a3283a9c3b0cca5cdb058751a90d794c2}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Flags@{Get\+Flags}}
+\index{Get\+Flags@{Get\+Flags}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Flags()}{GetFlags()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} Fbx\+Property\+Handle\+::\+Get\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property attribute state 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a90978a4383e1fc31bca8944dc35e39cd}\label{class_fbx_property_handle_a90978a4383e1fc31bca8944dc35e39cd}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Flags\+Inherit\+Type@{Get\+Flags\+Inherit\+Type}}
+\index{Get\+Flags\+Inherit\+Type@{Get\+Flags\+Inherit\+Type}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Flags\+Inherit\+Type()}{GetFlagsInheritType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} Fbx\+Property\+Handle\+::\+Get\+Flags\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flags,  }\item[{bool}]{p\+Check\+References }\end{DoxyParamCaption}) const}
+
+Gets the inheritance type for the given flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Flags} & The flag to query \\
+\hline
+{\em p\+Check\+References} & Decide whether check instance. If it is true, check instance. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The inheritance type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a2ae2817fc9113f00ad3b212de3acfad7}\label{class_fbx_property_handle_a2ae2817fc9113f00ad3b212de3acfad7}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Label@{Get\+Label}}
+\index{Get\+Label@{Get\+Label}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Label()}{GetLabel()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+Handle\+::\+Get\+Label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property label 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a4752eebe7303b15577355b8fbecd4c6b}\label{class_fbx_property_handle_a4752eebe7303b15577355b8fbecd4c6b}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Max@{Get\+Max}}
+\index{Get\+Max@{Get\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Max()}{GetMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Get\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Get the maximum value and value type of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The maximum value of this property. \\
+\hline
+{\em p\+Value\+Type} & The value type of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the maximum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a170bbeb8c9dc5a4a1a1de93a9328f897}\label{class_fbx_property_handle_a170bbeb8c9dc5a4a1a1de93a9328f897}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Max@{Get\+Max}}
+\index{Get\+Max@{Get\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Max()}{GetMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+Handle\+::\+Get\+Max (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption}) const}
+
+Get the maximum value of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+PE} & Not used in this function. This is a dummy argument for the correct instantiation of the templated function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The maximum value of this property 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_property_handle_a722440b0f9ee5b206e38fe06c375ec4d}\label{class_fbx_property_handle_a722440b0f9ee5b206e38fe06c375ec4d}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Min@{Get\+Min}}
+\index{Get\+Min@{Get\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Min()}{GetMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Get\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Get the minimum value and value type of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The minimum value of this property. \\
+\hline
+{\em p\+Value\+Type} & The value type of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the minimum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a82ce751c67e19e87294a0083f09133c6}\label{class_fbx_property_handle_a82ce751c67e19e87294a0083f09133c6}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Min@{Get\+Min}}
+\index{Get\+Min@{Get\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Min()}{GetMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+Handle\+::\+Get\+Min (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption}) const}
+
+Get the minimum value of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+PE} & Not used in this function. This is a dummy argument for the correct instantiation of the templated function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The minimum value of this property 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_property_handle_a38a846122c8564c62fb58426235b12e6}\label{class_fbx_property_handle_a38a846122c8564c62fb58426235b12e6}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+Handle\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property name 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a9285a1cf6dbf3854335a0a05eaf1d95f}\label{class_fbx_property_handle_a9285a1cf6dbf3854335a0a05eaf1d95f}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Next\+Descendent@{Get\+Next\+Descendent}}
+\index{Get\+Next\+Descendent@{Get\+Next\+Descendent}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Next\+Descendent()}{GetNextDescendent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Next\+Descendent (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption}) const}
+
+Get first descendent property which after the given property 
+\begin{DoxyParams}{引数}
+{\em p\+Handle} & The given property handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the descendent property can be found after the given property, return the first found property handle,otherwise return -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a477ba4c610b36333701547d8aff9fa48}\label{class_fbx_property_handle_a477ba4c610b36333701547d8aff9fa48}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Page\+Data\+Ptr@{Get\+Page\+Data\+Ptr}}
+\index{Get\+Page\+Data\+Ptr@{Get\+Page\+Data\+Ptr}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Page\+Data\+Ptr()}{GetPageDataPtr()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Property\+Handle\+::\+Get\+Page\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get property page data pointer. \begin{DoxyReturn}{戻り値}
+The gotten property page data pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a10599909c3fc0a5bdfba5b7dc05f8ec6}\label{class_fbx_property_handle_a10599909c3fc0a5bdfba5b7dc05f8ec6}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get parent property \begin{DoxyReturn}{戻り値}
+If the parent property exists, return the property handle,otherwise return -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a94151c3aa9e0b6f1881bbec6ca389d0a}\label{class_fbx_property_handle_a94151c3aa9e0b6f1881bbec6ca389d0a}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Referenced\+By@{Get\+Referenced\+By}}
+\index{Get\+Referenced\+By@{Get\+Referenced\+By}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Referenced\+By()}{GetReferencedBy()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Property\+Handle\+::\+Get\+Referenced\+By (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+According the given index,get the property page which make reference to this property page. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The pointer to the property page which reference to this property page and be found by index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ac5fb2c38abc682f2151960ed4286f3ca}\label{class_fbx_property_handle_ac5fb2c38abc682f2151960ed4286f3ca}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Referenced\+By\+Count@{Get\+Referenced\+By\+Count}}
+\index{Get\+Referenced\+By\+Count@{Get\+Referenced\+By\+Count}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Referenced\+By\+Count()}{GetReferencedByCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+Handle\+::\+Get\+Referenced\+By\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Get the count of property pages which make reference to this property page. \begin{DoxyReturn}{戻り値}
+The count of property pages which make reference to this property page. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_af9780300940a75d036215b70e67698ac}\label{class_fbx_property_handle_af9780300940a75d036215b70e67698ac}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Reference\+To@{Get\+Reference\+To}}
+\index{Get\+Reference\+To@{Get\+Reference\+To}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Reference\+To()}{GetReferenceTo()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Property\+Handle\+::\+Get\+Reference\+To (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Get the property page which this property page make reference to \begin{DoxyReturn}{戻り値}
+The property page which this property page make reference to 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a216afaae427671182799347b99a1eb12}\label{class_fbx_property_handle_a216afaae427671182799347b99a1eb12}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Sibling@{Get\+Sibling}}
+\index{Get\+Sibling@{Get\+Sibling}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Sibling()}{GetSibling()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get sibling property \begin{DoxyReturn}{戻り値}
+If the sibling property is exist, return the property handle,otherwise return -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a2cc9715f192ec19f46f4baaef4baf075}\label{class_fbx_property_handle_a2cc9715f192ec19f46f4baaef4baf075}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Soft\+Max@{Get\+Soft\+Max}}
+\index{Get\+Soft\+Max@{Get\+Soft\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Soft\+Max()}{GetSoftMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Get\+Soft\+Max (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Get the soft maximum value and value type of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The soft maximum value of this property. \\
+\hline
+{\em p\+Value\+Type} & The value type of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the soft maximum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a302beaa7745f9f5f3cd92e7b4f42d576}\label{class_fbx_property_handle_a302beaa7745f9f5f3cd92e7b4f42d576}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Soft\+Max@{Get\+Soft\+Max}}
+\index{Get\+Soft\+Max@{Get\+Soft\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Soft\+Max()}{GetSoftMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+Handle\+::\+Get\+Soft\+Max (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption}) const}
+
+Get the soft maximum value of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+PE} & Not used in this function. This is a dummy argument for the correct instantiation of the templated function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The soft maximum value of this property 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{class_fbx_property_handle_a879e886ad129d780a9343def15bead82}\label{class_fbx_property_handle_a879e886ad129d780a9343def15bead82}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Soft\+Min@{Get\+Soft\+Min}}
+\index{Get\+Soft\+Min@{Get\+Soft\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Soft\+Min()}{GetSoftMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Get\+Soft\+Min (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Get the soft minimum value and value type of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The soft minimum value of this property. \\
+\hline
+{\em p\+Value\+Type} & The value type of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the soft minimum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a1f2a64b0088928db88a25dccb7c7d190}\label{class_fbx_property_handle_a1f2a64b0088928db88a25dccb7c7d190}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Soft\+Min@{Get\+Soft\+Min}}
+\index{Get\+Soft\+Min@{Get\+Soft\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Soft\+Min()}{GetSoftMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+Handle\+::\+Get\+Soft\+Min (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+PE }\end{DoxyParamCaption}) const}
+
+Get the soft minimum value of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+PE} & Not used in this function. This is a dummy argument for the correct instantiation of the templated function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The soft minimum value of this property 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{class_fbx_property_handle_a989f15be760ea7608b8db6f9090f1235}\label{class_fbx_property_handle_a989f15be760ea7608b8db6f9090f1235}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Src@{Get\+Src}}
+\index{Get\+Src@{Get\+Src}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Src()}{GetSrc()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Src (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$}]{p\+Filter = {\ttfamily 0},  }\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Get source property with the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Filter} & The filter used to get sub connection point. If it is not zero, return the source property of the sub connection point. Otherwise, return the source property of this property. \\
+\hline
+{\em p\+Index} & The given index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source property handle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a10398afdaf865adc314f65ed0e689638}\label{class_fbx_property_handle_a10398afdaf865adc314f65ed0e689638}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Src\+Count@{Get\+Src\+Count}}
+\index{Get\+Src\+Count@{Get\+Src\+Count}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Src\+Count()}{GetSrcCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+Handle\+::\+Get\+Src\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connection_point_filter}{Fbx\+Connection\+Point\+Filter} $\ast$}]{p\+Filter = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Get source properties\textquotesingle{} count. 
+\begin{DoxyParams}{引数}
+{\em p\+Filter} & The filter used to get sub connection point. If it is not zero, return the source count of the sub connection point. Otherwise, return the src count of this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The count of source properties 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a4f2ce11ebf2828418cb1d3d65feb341f}\label{class_fbx_property_handle_a4f2ce11ebf2828418cb1d3d65feb341f}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Type@{Get\+Type}}
+\index{Get\+Type@{Get\+Type}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Type()}{GetType()}}
+{\footnotesize\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} Fbx\+Property\+Handle\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property type 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a84818af34da6e4d496e2d7e787c5a758}\label{class_fbx_property_handle_a84818af34da6e4d496e2d7e787c5a758}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Type\+Info@{Get\+Type\+Info}}
+\index{Get\+Type\+Info@{Get\+Type\+Info}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Type\+Info()}{GetTypeInfo()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} Fbx\+Property\+Handle\+::\+Get\+Type\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property type info 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a6e6c699c0fc80977bb746198e41708cd}\label{class_fbx_property_handle_a6e6c699c0fc80977bb746198e41708cd}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+User\+Data@{Get\+User\+Data}}
+\index{Get\+User\+Data@{Get\+User\+Data}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+User\+Data()}{GetUserData()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Property\+Handle\+::\+Get\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property user data. 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a9ce046fde2818e1e90782fea7b3294c9}\label{class_fbx_property_handle_a9ce046fde2818e1e90782fea7b3294c9}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+User\+Tag@{Get\+User\+Tag}}
+\index{Get\+User\+Tag@{Get\+User\+Tag}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+User\+Tag()}{GetUserTag()}}
+{\footnotesize\ttfamily int Fbx\+Property\+Handle\+::\+Get\+User\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the property user tag 
+
+\mbox{\Hypertarget{class_fbx_property_handle_a899c4594086890878626f4755da6c690}\label{class_fbx_property_handle_a899c4594086890878626f4755da6c690}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Get\+Value\+Inherit\+Type@{Get\+Value\+Inherit\+Type}}
+\index{Get\+Value\+Inherit\+Type@{Get\+Value\+Inherit\+Type}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Value\+Inherit\+Type()}{GetValueInheritType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} Fbx\+Property\+Handle\+::\+Get\+Value\+Inherit\+Type (\begin{DoxyParamCaption}\item[{bool}]{p\+Check\+References }\end{DoxyParamCaption}) const}
+
+Get value inherit type of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Check\+References} & If it is true,check instance of this property page,otherwise,only check this page. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value inherit type of this property 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ac14373e76b24b0b6ba5d99f9fef10a5f}\label{class_fbx_property_handle_ac14373e76b24b0b6ba5d99f9fef10a5f}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Has\+Max@{Has\+Max}}
+\index{Has\+Max@{Has\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Has\+Max()}{HasMax()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Has\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judge if this property has maximum value. \begin{DoxyReturn}{戻り値}
+If the maximum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a08cf85e6eda102f161bcb3c578e6c17b}\label{class_fbx_property_handle_a08cf85e6eda102f161bcb3c578e6c17b}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Has\+Min@{Has\+Min}}
+\index{Has\+Min@{Has\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Has\+Min()}{HasMin()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Has\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judge if this property has a minimum value. \begin{DoxyReturn}{戻り値}
+If the minimum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ad89e57bd3b7cfe2758d8b95f252b8b9f}\label{class_fbx_property_handle_ad89e57bd3b7cfe2758d8b95f252b8b9f}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Has\+Soft\+Max@{Has\+Soft\+Max}}
+\index{Has\+Soft\+Max@{Has\+Soft\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Has\+Soft\+Max()}{HasSoftMax()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Has\+Soft\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judge if this property has soft maximum value. \begin{DoxyReturn}{戻り値}
+If the soft maximum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a487afcc8d481a7a64b0087e2bf313c94}\label{class_fbx_property_handle_a487afcc8d481a7a64b0087e2bf313c94}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Has\+Soft\+Min@{Has\+Soft\+Min}}
+\index{Has\+Soft\+Min@{Has\+Soft\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Has\+Soft\+Min()}{HasSoftMin()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Has\+Soft\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judge if this property has soft minimum value. \begin{DoxyReturn}{戻り値}
+If the soft minimum value exist, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ab7e634de872eec9ff5fa59e88a000f79}\label{class_fbx_property_handle_ab7e634de872eec9ff5fa59e88a000f79}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Insert\+Enum\+Value@{Insert\+Enum\+Value}}
+\index{Insert\+Enum\+Value@{Insert\+Enum\+Value}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Insert\+Enum\+Value()}{InsertEnumValue()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Insert\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$}]{p\+String\+Value }\end{DoxyParamCaption})}
+
+Insert new value at the given index of the enum list in property. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index \\
+\hline
+{\em p\+String\+Value} & The given new value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_ab709acfb7bc25ce784c4453b3004a730}\label{class_fbx_property_handle_ab709acfb7bc25ce784c4453b3004a730}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is@{Is}}
+\index{Is@{Is}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is()}{Is()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption}) const}
+
+Compare type info together 
+\begin{DoxyParams}{引数}
+{\em p\+Handle} & \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} compared with this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ae33624da8a0ccfd5bb44a5f12f6f0a81}\label{class_fbx_property_handle_ae33624da8a0ccfd5bb44a5f12f6f0a81}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+A\+Reference\+To@{Is\+A\+Reference\+To}}
+\index{Is\+A\+Reference\+To@{Is\+A\+Reference\+To}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+A\+Reference\+To()}{IsAReferenceTo()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+A\+Reference\+To (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Judge if this property page is a instance of other page. \begin{DoxyReturn}{戻り値}
+If this property page is a instance of other page, return true,otherwise,return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a8181cf2b414e45cb3fd0cdef8d60fb33}\label{class_fbx_property_handle_a8181cf2b414e45cb3fd0cdef8d60fb33}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+Child\+Of@{Is\+Child\+Of}}
+\index{Is\+Child\+Of@{Is\+Child\+Of}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+Child\+Of()}{IsChildOf()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+Child\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Parent }\end{DoxyParamCaption}) const}
+
+Judge if the property is the child property of the given parent property. 
+\begin{DoxyParams}{引数}
+{\em p\+Parent} & The given parent property handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if this property is child of given property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_adf42d55aa7e6ce3f4389c73fe45f4adc}\label{class_fbx_property_handle_adf42d55aa7e6ce3f4389c73fe45f4adc}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+Connected\+Dst@{Is\+Connected\+Dst}}
+\index{Is\+Connected\+Dst@{Is\+Connected\+Dst}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+Connected\+Dst()}{IsConnectedDst()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+Connected\+Dst (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Dst }\end{DoxyParamCaption})}
+
+Judge if it is connected with the given destination property. 
+\begin{DoxyParams}{引数}
+{\em p\+Dst} & The given destination property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it is connected, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_acf4c1984ce8574d2cb6e1300d4d3d1d6}\label{class_fbx_property_handle_acf4c1984ce8574d2cb6e1300d4d3d1d6}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+Connected\+Src@{Is\+Connected\+Src}}
+\index{Is\+Connected\+Src@{Is\+Connected\+Src}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+Connected\+Src()}{IsConnectedSrc()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+Connected\+Src (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Src }\end{DoxyParamCaption})}
+
+Judge if it is connected with the given source property. 
+\begin{DoxyParams}{引数}
+{\em p\+Src} & The given source property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it is connected, return true, otherwise return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_af6d512f55181fbaf2f973aa33ebd1a34}\label{class_fbx_property_handle_af6d512f55181fbaf2f973aa33ebd1a34}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+Descendent\+Of@{Is\+Descendent\+Of}}
+\index{Is\+Descendent\+Of@{Is\+Descendent\+Of}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+Descendent\+Of()}{IsDescendentOf()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+Descendent\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Parent }\end{DoxyParamCaption}) const}
+
+Judge if the property is descendent property of the given property. 
+\begin{DoxyParams}{引数}
+{\em p\+Parent} & The given parent property handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if this property is descendant of given property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a832e6f2916497d538658f6eddc56dbc7}\label{class_fbx_property_handle_a832e6f2916497d538658f6eddc56dbc7}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+Referenced\+By@{Is\+Referenced\+By}}
+\index{Is\+Referenced\+By@{Is\+Referenced\+By}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+Referenced\+By()}{IsReferencedBy()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+Referenced\+By (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+Judge if this property page is referenced by other pages. \begin{DoxyReturn}{戻り値}
+If this property page is referenced by other pages, return true,otherwise,return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ab1da9089aefb10740cdb3aad0754d200}\label{class_fbx_property_handle_ab1da9089aefb10740cdb3aad0754d200}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Is\+Root@{Is\+Root}}
+\index{Is\+Root@{Is\+Root}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Is\+Root()}{IsRoot()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Is\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judge if the property is the root property. \begin{DoxyReturn}{戻り値}
+Return true if this property is root property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_aa5f4add93321ecbb6afb016bbf9ecc21}\label{class_fbx_property_handle_aa5f4add93321ecbb6afb016bbf9ecc21}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Modify\+Flags@{Modify\+Flags}}
+\index{Modify\+Flags@{Modify\+Flags}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Modify\+Flags()}{ModifyFlags()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Modify\+Flags (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flags,  }\item[{bool}]{p\+Value }\end{DoxyParamCaption})}
+
+According the given parameter Change the attributes of the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Flags} & The given flags used as mask. \\
+\hline
+{\em p\+Value} & If p\+Value is true, set mask with given flags, otherwise unset mask with given flags. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If succeed, return true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a551b2ce6d554279f23f11a1a1bbdc935}\label{class_fbx_property_handle_a551b2ce6d554279f23f11a1a1bbdc935}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption}) const}
+
+Inequality operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Handle} & \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} compared with this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if unequal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a6035a62865028477a5352726c6682f79}\label{class_fbx_property_handle_a6035a62865028477a5352726c6682f79}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption}) const}
+
+Lesser operator, used to sort property handle in map. 
+\begin{DoxyParams}{引数}
+{\em p\+Handle} & The property handle compared to this property handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if less, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a23a41629f6fe1629b9752ea42615b010}\label{class_fbx_property_handle_a23a41629f6fe1629b9752ea42615b010}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle}\& Fbx\+Property\+Handle\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption})}
+
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Handle} & \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_aee6f973f1c78f4dbd6f98fd4f3766016}\label{class_fbx_property_handle_aee6f973f1c78f4dbd6f98fd4f3766016}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption}) const}
+
+Equality operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Handle} & \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} compared with this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_add1ef2cecd4a73e427d8d8713d776ccd}\label{class_fbx_property_handle_add1ef2cecd4a73e427d8d8713d776ccd}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Handle }\end{DoxyParamCaption}) const}
+
+Greater operator, used to sort property handle in map. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property handle compared to this property handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if greater, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a94d8590ac684a0a0895e399396b79c52}\label{class_fbx_property_handle_a94d8590ac684a0a0895e399396b79c52}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Push\+Properties\+To\+Parent\+Instance@{Push\+Properties\+To\+Parent\+Instance}}
+\index{Push\+Properties\+To\+Parent\+Instance@{Push\+Properties\+To\+Parent\+Instance}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Push\+Properties\+To\+Parent\+Instance()}{PushPropertiesToParentInstance()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Push\+Properties\+To\+Parent\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Push properties to parent instance. \begin{DoxyReturn}{戻り値}
+If push successful return true,otherwise,return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ad57e9833aa4c0815954b0a87d1c83fae}\label{class_fbx_property_handle_ad57e9833aa4c0815954b0a87d1c83fae}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Remove\+Enum\+Value@{Remove\+Enum\+Value}}
+\index{Remove\+Enum\+Value@{Remove\+Enum\+Value}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Remove\+Enum\+Value()}{RemoveEnumValue()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Remove\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Remove the value at the index of the enum list in the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_a9beb20c6080c4f51fb01a547cc53807f}\label{class_fbx_property_handle_a9beb20c6080c4f51fb01a547cc53807f}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type,  }\item[{bool}]{p\+Check\+Value\+Equality }\end{DoxyParamCaption})}
+
+Set property value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given property value . \\
+\hline
+{\em p\+Value\+Type} & The given property value type \\
+\hline
+{\em p\+Check\+Value\+Equality} & If it is true, when the given value is equal with the property value, the property value will not be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the property value be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_adb42ced01547310727f58275d2a9463c}\label{class_fbx_property_handle_adb42ced01547310727f58275d2a9463c}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+Handle\+::\+Set (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Set property value with the given value . 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given value . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{class_fbx_property_handle_aa558ce3c342afbf4331fa941dc4fcd32}\label{class_fbx_property_handle_aa558ce3c342afbf4331fa941dc4fcd32}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Enum\+Value@{Set\+Enum\+Value}}
+\index{Set\+Enum\+Value@{Set\+Enum\+Value}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Enum\+Value()}{SetEnumValue()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Set\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$}]{p\+String\+Value }\end{DoxyParamCaption})}
+
+Set value at the given index of the enum list in the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index \\
+\hline
+{\em p\+String\+Value} & The given new value used to instead the old value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_af26f5ca742328a6894bd89ae80ef9c86}\label{class_fbx_property_handle_af26f5ca742328a6894bd89ae80ef9c86}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Flags\+Inherit\+Type@{Set\+Flags\+Inherit\+Type}}
+\index{Set\+Flags\+Inherit\+Type@{Set\+Flags\+Inherit\+Type}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Flags\+Inherit\+Type()}{SetFlagsInheritType()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Flags\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flags,  }\item[{\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Sets the inheritance type for the given flag 
+\begin{DoxyParams}{引数}
+{\em p\+Flags} & The flag to set \\
+\hline
+{\em p\+Type} & The inheritance type to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If succeed, return true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a501ee2ee91a27619728afeb7d69b5936}\label{class_fbx_property_handle_a501ee2ee91a27619728afeb7d69b5936}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Label@{Set\+Label}}
+\index{Set\+Label@{Set\+Label}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Label()}{SetLabel()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Label (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Label }\end{DoxyParamCaption})}
+
+Set a label to the property 
+\begin{DoxyParams}{引数}
+{\em p\+Label} & The given label string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a5e41a6d59cd7a1b1c0325b7cf4476285}\label{class_fbx_property_handle_a5e41a6d59cd7a1b1c0325b7cf4476285}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Max@{Set\+Max}}
+\index{Set\+Max@{Set\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Max()}{SetMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Max (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Set the maximum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given maximum value . \\
+\hline
+{\em p\+Value\+Type} & The given value type . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_abda2411b3b6fb98963c1009b3c2e1425}\label{class_fbx_property_handle_abda2411b3b6fb98963c1009b3c2e1425}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Max@{Set\+Max}}
+\index{Set\+Max@{Set\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Max()}{SetMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+Handle\+::\+Set\+Max (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+According the given value and its value type, set the maximum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given value . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 12
+被呼び出し関係図\+:
+% FIG 13
+\mbox{\Hypertarget{class_fbx_property_handle_a699f3d09a345e575b75ebe97c089b82c}\label{class_fbx_property_handle_a699f3d09a345e575b75ebe97c089b82c}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Min@{Set\+Min}}
+\index{Set\+Min@{Set\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Min()}{SetMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Min (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Set the minimum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given minimum value . \\
+\hline
+{\em p\+Value\+Type} & The given value type . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ab37a7e2831a4ca20879d4b8b57877361}\label{class_fbx_property_handle_ab37a7e2831a4ca20879d4b8b57877361}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Min@{Set\+Min}}
+\index{Set\+Min@{Set\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Min()}{SetMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+Handle\+::\+Set\+Min (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+According the given value and its value type, set the minimum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given value . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 14
+被呼び出し関係図\+:
+% FIG 15
+\mbox{\Hypertarget{class_fbx_property_handle_ac980bb1090ea5fd32c9587e3f0b9ac9b}\label{class_fbx_property_handle_ac980bb1090ea5fd32c9587e3f0b9ac9b}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Page\+Data\+Ptr@{Set\+Page\+Data\+Ptr}}
+\index{Set\+Page\+Data\+Ptr@{Set\+Page\+Data\+Ptr}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Page\+Data\+Ptr()}{SetPageDataPtr()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Set\+Page\+Data\+Ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Data }\end{DoxyParamCaption})}
+
+Set the property page data pointer. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & The given page data pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_handle_a4ce451166cd44ea838b4e4f1b5a8e8ad}\label{class_fbx_property_handle_a4ce451166cd44ea838b4e4f1b5a8e8ad}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Parent@{Set\+Parent}}
+\index{Set\+Parent@{Set\+Parent}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Parent()}{SetParent()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Parent (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Other }\end{DoxyParamCaption})}
+
+Set parent property handle.\+No matter what enters,the result is always false. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ad4303ec2be34fb9d619fc98e68486784}\label{class_fbx_property_handle_ad4303ec2be34fb9d619fc98e68486784}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Soft\+Max@{Set\+Soft\+Max}}
+\index{Set\+Soft\+Max@{Set\+Soft\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Soft\+Max()}{SetSoftMax()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Soft\+Max (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Set the soft maximum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given soft maximum value . \\
+\hline
+{\em p\+Value\+Type} & The given value type . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a2581fff85d3c2e73c99d16f2b9c1a66e}\label{class_fbx_property_handle_a2581fff85d3c2e73c99d16f2b9c1a66e}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Soft\+Max@{Set\+Soft\+Max}}
+\index{Set\+Soft\+Max@{Set\+Soft\+Max}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Soft\+Max()}{SetSoftMax()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+Handle\+::\+Set\+Soft\+Max (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+According the given value and its value type, set the soft maximum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given value . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 16
+被呼び出し関係図\+:
+% FIG 17
+\mbox{\Hypertarget{class_fbx_property_handle_af70fa8b28c77e394928d4e1e7cabe50d}\label{class_fbx_property_handle_af70fa8b28c77e394928d4e1e7cabe50d}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Soft\+Min@{Set\+Soft\+Min}}
+\index{Set\+Soft\+Min@{Set\+Soft\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Soft\+Min()}{SetSoftMin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Soft\+Min (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Value,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Set the soft minimum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given soft minimum value . \\
+\hline
+{\em p\+Value\+Type} & The given value type . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a636d40ff360385c71587813842f6d004}\label{class_fbx_property_handle_a636d40ff360385c71587813842f6d004}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Soft\+Min@{Set\+Soft\+Min}}
+\index{Set\+Soft\+Min@{Set\+Soft\+Min}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Soft\+Min()}{SetSoftMin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+Handle\+::\+Set\+Soft\+Min (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+According the given value and its value type, set the soft minimum value and value type for this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The given value . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If it be set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 18
+被呼び出し関係図\+:
+% FIG 19
+\mbox{\Hypertarget{class_fbx_property_handle_ac8ae1291fa5e34f1eb1373a42e8245c8}\label{class_fbx_property_handle_ac8ae1291fa5e34f1eb1373a42e8245c8}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+User\+Data@{Set\+User\+Data}}
+\index{Set\+User\+Data@{Set\+User\+Data}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+User\+Data()}{SetUserData()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+User\+Data (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+User\+Data }\end{DoxyParamCaption})}
+
+Set user data to the property 
+\begin{DoxyParams}{引数}
+{\em p\+User\+Data} & The given user data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If succeed, return true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a41eff619689a61cf283d9913429a6221}\label{class_fbx_property_handle_a41eff619689a61cf283d9913429a6221}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+User\+Tag@{Set\+User\+Tag}}
+\index{Set\+User\+Tag@{Set\+User\+Tag}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+User\+Tag()}{SetUserTag()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+User\+Tag (\begin{DoxyParamCaption}\item[{int}]{p\+User\+Data }\end{DoxyParamCaption})}
+
+Set user tag to the property 
+\begin{DoxyParams}{引数}
+{\em p\+User\+Data} & The given user tag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If succeed, return true. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_a3f03d6a87ab11bffdd30923485272f4a}\label{class_fbx_property_handle_a3f03d6a87ab11bffdd30923485272f4a}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Set\+Value\+Inherit\+Type@{Set\+Value\+Inherit\+Type}}
+\index{Set\+Value\+Inherit\+Type@{Set\+Value\+Inherit\+Type}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Set\+Value\+Inherit\+Type()}{SetValueInheritType()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Set\+Value\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Set value inherit type for this property . 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The given value inherit type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If set successfully, return true,otherwise, return false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_handle_ae9e85fda97a40a94361ed91c6127f5a1}\label{class_fbx_property_handle_ae9e85fda97a40a94361ed91c6127f5a1}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Valid@{Valid}}
+\index{Valid@{Valid}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Valid()}{Valid()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+Handle\+::\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Judge validity 
+
+\mbox{\Hypertarget{class_fbx_property_handle_abac85431f7a869fe1cf8a8cb1e8097ec}\label{class_fbx_property_handle_abac85431f7a869fe1cf8a8cb1e8097ec}} 
+\index{Fbx\+Property\+Handle@{Fbx\+Property\+Handle}!Wipe\+All\+Connections@{Wipe\+All\+Connections}}
+\index{Wipe\+All\+Connections@{Wipe\+All\+Connections}!Fbx\+Property\+Handle@{Fbx\+Property\+Handle}}
+\subsubsection{\texorpdfstring{Wipe\+All\+Connections()}{WipeAllConnections()}}
+{\footnotesize\ttfamily void Fbx\+Property\+Handle\+::\+Wipe\+All\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear all connect without sending any notification (Internal use O\+N\+LY) 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxpropertyhandle_8h}{fbxpropertyhandle.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,402 @@
+\hypertarget{class_fbx_layer_element_user_data}{}\section{Fbx\+Layer\+Element\+User\+Data クラス}
+\label{class_fbx_layer_element_user_data}\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+
+
+Layer element for mapping custom user data to a geometry. This layer element is different from the other types of layer elements in that it has multiple direct arrays. There is one array for each user data attribute. Each array is indexed by the index array.  
+
+
+
+
+{\ttfamily \#include $<$fbxlayer.\+h$>$}
+
+
+
+Fbx\+Layer\+Element\+User\+Data の継承関係図
+% FIG 0
+
+
+Fbx\+Layer\+Element\+User\+Data 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_user_data_a74d02ad7467ab2f2af089d3fad83f617}{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW} ()
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ void $\ast$ $>$ $\ast$ \hyperlink{class_fbx_layer_element_user_data_a8e1bfcb6d75d16a53275f69b1636d737}{Get\+Direct\+Array\+Void} (int p\+Index, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+const \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ void $\ast$ $>$ $\ast$ \hyperlink{class_fbx_layer_element_user_data_a271bf5d91c8de1a35ffaef1404dd31db}{Get\+Direct\+Array\+Void} (int p\+Index, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ void $\ast$ $>$ $\ast$ \hyperlink{class_fbx_layer_element_user_data_aefbd9aaf1002ca95053801db3f6dec53}{Get\+Direct\+Array\+Void} (const char $\ast$p\+Name, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+const \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ void $\ast$ $>$ $\ast$ \hyperlink{class_fbx_layer_element_user_data_a3dc62d940655a5afbf1e8893dba620a3}{Get\+Direct\+Array\+Void} (const char $\ast$p\+Name, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \hyperlink{class_fbx_layer_element_user_data_ace571a6982892b8b200c660589d22847}{Get\+Data\+Type} (int p\+Index) const
+\item 
+\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \hyperlink{class_fbx_layer_element_user_data_ac1d9a921886ec4840fa7472f7fd72b28}{Get\+Data\+Type} (const char $\ast$p\+Name) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_layer_element_user_data_aba84f0175d90bd9e5b775391299e44fc}{Get\+Data\+Name} (int p\+Index) const
+\item 
+void \hyperlink{class_fbx_layer_element_user_data_a8d6ab3a926c28cc793dbfabde35ab598}{Resize\+All\+Direct\+Arrays} (int p\+Size)
+\item 
+void \hyperlink{class_fbx_layer_element_user_data_a2a086bdb717ea023b9bfb6cab66f23d4}{Remove\+From\+All\+Direct\+Arrays} (int p\+Index)
+\item 
+int \hyperlink{class_fbx_layer_element_user_data_a6b36419283440b8f63c5af36ffb27d3a}{Get\+Array\+Count} (int p\+Index) const
+\item 
+int \hyperlink{class_fbx_layer_element_user_data_a6a7133826a8e21dc296e44109902e717}{Get\+Id} () const
+\item 
+int \hyperlink{class_fbx_layer_element_user_data_a5f7f18cd0b66e1868f9307129f45f51d}{Get\+Direct\+Array\+Count} () const
+\item 
+\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} \& \hyperlink{class_fbx_layer_element_user_data_ae4e7b6fca22ea7dc404251bfea061e8d}{operator=} (\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const \&p\+Other)
+\item 
+bool \hyperlink{class_fbx_layer_element_user_data_aa945631c932f3c811013c903e5ecf55e}{Clear} ()
+\item 
+virtual int \hyperlink{class_fbx_layer_element_user_data_aa02fc5861dec4da68293f9660d4ff13b}{Memory\+Size} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} $\ast$ \hyperlink{class_fbx_layer_element_user_data_ab0a2546165cae14c62143352a32c5dbc}{Create} (\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$p\+Owner, const char $\ast$p\+Name, int p\+Id, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $>$ \&p\+Data\+Types, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ const char $\ast$$>$ \&p\+Data\+Names)
+\item 
+static \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} $\ast$ \hyperlink{class_fbx_layer_element_user_data_a9088500171dca2a09a3f1b87dea28975}{Create} (\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$p\+Owner, \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const \&p\+Other)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_layer_element_user_data_afd9b9cec3547a1a5ccde15f274128d2a}{Allocate\+Arrays} ()
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_user_data_a5f39fe7e33c61558f7b92b79c4c3f81b}{Fbx\+Layer\+Element\+User\+Data} (int p\+Id, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $>$ \&p\+Data\+Types, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ const char $\ast$$>$ \&p\+Data\+Names)
+\item 
+\hyperlink{class_fbx_layer_element_user_data_aa64b5222f1e7cb1091b92317b7516969}{Fbx\+Layer\+Element\+User\+Data} (\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const \&p\+Other)
+\item 
+\hyperlink{class_fbx_layer_element_user_data_a77cda3570c8b9d92d8c5360c008bdca2}{$\sim$\+Fbx\+Layer\+Element\+User\+Data} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Layer element for mapping custom user data to a geometry. This layer element is different from the other types of layer elements in that it has multiple direct arrays. There is one array for each user data attribute. Each array is indexed by the index array. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a5f39fe7e33c61558f7b92b79c4c3f81b}\label{class_fbx_layer_element_user_data_a5f39fe7e33c61558f7b92b79c4c3f81b}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element\+User\+Data()}{FbxLayerElementUserData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+User\+Data\+::\+Fbx\+Layer\+Element\+User\+Data (\begin{DoxyParamCaption}\item[{int}]{p\+Id,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $>$ \&}]{p\+Data\+Types,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ const char $\ast$$>$ \&}]{p\+Data\+Names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Constructs a user data layer element. 
+\begin{DoxyParams}{引数}
+{\em p\+Id} & An identifier for this User\+Data layer element \\
+\hline
+{\em p\+Data\+Types} & Attribute data types for this layer element \\
+\hline
+{\em p\+Data\+Names} & Attribute names for this layer element \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_aa64b5222f1e7cb1091b92317b7516969}\label{class_fbx_layer_element_user_data_aa64b5222f1e7cb1091b92317b7516969}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element\+User\+Data()}{FbxLayerElementUserData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+User\+Data\+::\+Fbx\+Layer\+Element\+User\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const \&}]{p\+Other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copy constructor. A deep copy is made. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Another \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} object to be copied. \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a77cda3570c8b9d92d8c5360c008bdca2}\label{class_fbx_layer_element_user_data_a77cda3570c8b9d92d8c5360c008bdca2}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!````~Fbx\+Layer\+Element\+User\+Data@{$\sim$\+Fbx\+Layer\+Element\+User\+Data}}
+\index{````~Fbx\+Layer\+Element\+User\+Data@{$\sim$\+Fbx\+Layer\+Element\+User\+Data}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Layer\+Element\+User\+Data()}{~FbxLayerElementUserData()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+User\+Data\+::$\sim$\+Fbx\+Layer\+Element\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_afd9b9cec3547a1a5ccde15f274128d2a}\label{class_fbx_layer_element_user_data_afd9b9cec3547a1a5ccde15f274128d2a}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Allocate\+Arrays@{Allocate\+Arrays}}
+\index{Allocate\+Arrays@{Allocate\+Arrays}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Allocate\+Arrays()}{AllocateArrays()}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+User\+Data\+::\+Allocate\+Arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_template_aa6d432c5865fcda1b58376119f1fcaa8}{Fbx\+Layer\+Element\+Template$<$ void $\ast$$>$}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_aa945631c932f3c811013c903e5ecf55e}\label{class_fbx_layer_element_user_data_aa945631c932f3c811013c903e5ecf55e}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+User\+Data\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Removes all data from this layer element. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} always 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_layer_element_a6ab41d0a26802a359efbbc3b2b12dd3d}{Fbx\+Layer\+Element}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_ab0a2546165cae14c62143352a32c5dbc}\label{class_fbx_layer_element_user_data_ab0a2546165cae14c62143352a32c5dbc}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data}$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$}]{p\+Owner,  }\item[{const char $\ast$}]{p\+Name,  }\item[{int}]{p\+Id,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $>$ \&}]{p\+Data\+Types,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ const char $\ast$$>$ \&}]{p\+Data\+Names }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Allocation method. 
+\begin{DoxyParams}{引数}
+{\em p\+Owner} & The owner of this layer element. \\
+\hline
+{\em p\+Name} & The layer element name. \\
+\hline
+{\em p\+Id} & The layer element ID. \\
+\hline
+{\em p\+Data\+Types} & Attribute data types of this layer element, one direct array is allocated for each Attribute data type. \\
+\hline
+{\em p\+Data\+Names} & Attribute names of this layer element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the layer element or {\ttfamily N\+U\+LL} if creation fails. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Only \char`\"{}bool\char`\"{}, \char`\"{}int\char`\"{}, \char`\"{}float\char`\"{} and \char`\"{}double\char`\"{} are supported. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a9088500171dca2a09a3f1b87dea28975}\label{class_fbx_layer_element_user_data_a9088500171dca2a09a3f1b87dea28975}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data}$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$}]{p\+Owner,  }\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const \&}]{p\+Other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Allocation method. 
+\begin{DoxyParams}{引数}
+{\em p\+Owner} & The owner of this layer element. \\
+\hline
+{\em p\+Other} & Other layer element from which to copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the layer element or {\ttfamily N\+U\+LL} if creation fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a74d02ad7467ab2f2af089d3fad83f617}\label{class_fbx_layer_element_user_data_a74d02ad7467ab2f2af089d3fad83f617}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW@{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW@{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+E\+W()}{FBXSDK\_FRIEND\_NEW()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+User\+Data\+::\+F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a6b36419283440b8f63c5af36ffb27d3a}\label{class_fbx_layer_element_user_data_a6b36419283440b8f63c5af36ffb27d3a}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Array\+Count@{Get\+Array\+Count}}
+\index{Get\+Array\+Count@{Get\+Array\+Count}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Array\+Count()}{GetArrayCount()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Array\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the direct array count for the attribute at p\+Index 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The attribute index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The specified attribute\textquotesingle{}s direct array count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_aba84f0175d90bd9e5b775391299e44fc}\label{class_fbx_layer_element_user_data_aba84f0175d90bd9e5b775391299e44fc}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Data\+Name@{Get\+Data\+Name}}
+\index{Get\+Data\+Name@{Get\+Data\+Name}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Data\+Name()}{GetDataName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Data\+Name (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the attribute name at the specified index 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Attribute index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The name, or {\ttfamily N\+U\+LL} if p\+Index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_ace571a6982892b8b200c660589d22847}\label{class_fbx_layer_element_user_data_ace571a6982892b8b200c660589d22847}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Data\+Type@{Get\+Data\+Type}}
+\index{Get\+Data\+Type@{Get\+Data\+Type}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Data\+Type()}{GetDataType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Data\+Type (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the data type for the specified index 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the attribute being queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The data type, or Fbx\+Undefined\+DT if p\+Index is out of range 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_ac1d9a921886ec4840fa7472f7fd72b28}\label{class_fbx_layer_element_user_data_ac1d9a921886ec4840fa7472f7fd72b28}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Data\+Type@{Get\+Data\+Type}}
+\index{Get\+Data\+Type@{Get\+Data\+Type}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Data\+Type()}{GetDataType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Data\+Type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const}
+
+Returns the specified attribute data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the attribute being queried \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The data type, or Fbx\+Undefined\+DT if no attribute has the given name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a5f7f18cd0b66e1868f9307129f45f51d}\label{class_fbx_layer_element_user_data_a5f7f18cd0b66e1868f9307129f45f51d}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Direct\+Array\+Count@{Get\+Direct\+Array\+Count}}
+\index{Get\+Direct\+Array\+Count@{Get\+Direct\+Array\+Count}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array\+Count()}{GetDirectArrayCount()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Direct\+Array\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns this layer element\textquotesingle{}s direct array count. \begin{DoxyReturn}{戻り値}
+The direct array count expressed as an int. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This count should be equal to the count of user data attributes. 
+\end{DoxyRemark}
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a8e1bfcb6d75d16a53275f69b1636d737}\label{class_fbx_layer_element_user_data_a8e1bfcb6d75d16a53275f69b1636d737}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}}
+\index{Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array\+Void()}{GetDirectArrayVoid()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$void$\ast$$>$$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Direct\+Array\+Void (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{bool $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Returns the direct array with the specified attribute index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Specified attribute index. \\
+\hline
+{\em p\+Status} & A flag to indicate whether the direct array is returned successfully or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The specified attribute\textquotesingle{}s direct array. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a271bf5d91c8de1a35ffaef1404dd31db}\label{class_fbx_layer_element_user_data_a271bf5d91c8de1a35ffaef1404dd31db}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}}
+\index{Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array\+Void()}{GetDirectArrayVoid()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$void$\ast$$>$$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Direct\+Array\+Void (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{bool $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the direct array with the specified attribute index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Specified attribute index. \\
+\hline
+{\em p\+Status} & A flag to indicate whether the direct array is returned successfully or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The specified attribute\textquotesingle{}s direct array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_aefbd9aaf1002ca95053801db3f6dec53}\label{class_fbx_layer_element_user_data_aefbd9aaf1002ca95053801db3f6dec53}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}}
+\index{Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array\+Void()}{GetDirectArrayVoid()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$void $\ast$$>$$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Direct\+Array\+Void (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Returns the direct array with the specified attribute name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Specified attribute name. \\
+\hline
+{\em p\+Status} & A flag to indicate whether the direct array is returned successfully or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The specified attribute\textquotesingle{}s direct array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a3dc62d940655a5afbf1e8893dba620a3}\label{class_fbx_layer_element_user_data_a3dc62d940655a5afbf1e8893dba620a3}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}}
+\index{Get\+Direct\+Array\+Void@{Get\+Direct\+Array\+Void}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array\+Void()}{GetDirectArrayVoid()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$void$\ast$$>$$\ast$ Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Direct\+Array\+Void (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the direct array with the specified attribute name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Specified attribute name. \\
+\hline
+{\em p\+Status} & A flag to indicate whether the direct array is returned successfully or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The specified attribute\textquotesingle{}s direct array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a6a7133826a8e21dc296e44109902e717}\label{class_fbx_layer_element_user_data_a6a7133826a8e21dc296e44109902e717}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Get\+Id@{Get\+Id}}
+\index{Get\+Id@{Get\+Id}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Get\+Id()}{GetId()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+User\+Data\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Queries the this layer element\textquotesingle{}s ID. \begin{DoxyReturn}{戻り値}
+The ID expressed as an int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_aa02fc5861dec4da68293f9660d4ff13b}\label{class_fbx_layer_element_user_data_aa02fc5861dec4da68293f9660d4ff13b}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Memory\+Size@{Memory\+Size}}
+\index{Memory\+Size@{Memory\+Size}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Memory\+Size()}{MemorySize()}}
+{\footnotesize\ttfamily virtual int Fbx\+Layer\+Element\+User\+Data\+::\+Memory\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Queries the amount of memory used by this object as well as its content. It does not consider the content pointed. \begin{DoxyReturn}{戻り値}
+The amount of memory used. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ void $\ast$$>$}を再実装しています。
+
+呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_ae4e7b6fca22ea7dc404251bfea061e8d}\label{class_fbx_layer_element_user_data_ae4e7b6fca22ea7dc404251bfea061e8d}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data}\& Fbx\+Layer\+Element\+User\+Data\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const \&}]{p\+Other }\end{DoxyParamCaption})}
+
+Assignment operator which performs a deep copy. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Other \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} from which to perform a deep copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+This \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data}. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a2a086bdb717ea023b9bfb6cab66f23d4}\label{class_fbx_layer_element_user_data_a2a086bdb717ea023b9bfb6cab66f23d4}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Remove\+From\+All\+Direct\+Arrays@{Remove\+From\+All\+Direct\+Arrays}}
+\index{Remove\+From\+All\+Direct\+Arrays@{Remove\+From\+All\+Direct\+Arrays}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Remove\+From\+All\+Direct\+Arrays()}{RemoveFromAllDirectArrays()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+User\+Data\+::\+Remove\+From\+All\+Direct\+Arrays (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Removes a single element at p\+Index from every direct array. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the element to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_element_user_data_a8d6ab3a926c28cc793dbfabde35ab598}\label{class_fbx_layer_element_user_data_a8d6ab3a926c28cc793dbfabde35ab598}} 
+\index{Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}!Resize\+All\+Direct\+Arrays@{Resize\+All\+Direct\+Arrays}}
+\index{Resize\+All\+Direct\+Arrays@{Resize\+All\+Direct\+Arrays}!Fbx\+Layer\+Element\+User\+Data@{Fbx\+Layer\+Element\+User\+Data}}
+\subsubsection{\texorpdfstring{Resize\+All\+Direct\+Arrays()}{ResizeAllDirectArrays()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+User\+Data\+::\+Resize\+All\+Direct\+Arrays (\begin{DoxyParamCaption}\item[{int}]{p\+Size }\end{DoxyParamCaption})}
+
+Resizes all direct arrays to the specified size. 
+\begin{DoxyParams}{引数}
+{\em p\+Size} & The new size of the direct arrays. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxlayer_8h}{fbxlayer.\+h}\end{DoxyCompactItemize}

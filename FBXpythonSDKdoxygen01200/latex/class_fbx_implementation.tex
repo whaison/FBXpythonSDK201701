@@ -1,0 +1,505 @@
+\hypertarget{class_fbx_implementation}{}\section{Fbx\+Implementation クラス}
+\label{class_fbx_implementation}\index{Fbx\+Implementation@{Fbx\+Implementation}}
+
+
+{\ttfamily \#include $<$fbximplementation.\+h$>$}
+
+
+
+Fbx\+Implementation の継承関係図
+% FIG 0
+
+
+Fbx\+Implementation 連携図
+% FIG 1
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_implementation_aba2d4d41452596b51bbb74efb21e863c}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Target Name.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_implementation_a1c5e1e5480c227977a92668d77c13ce8}{Render\+Name}
+\end{DoxyCompactItemize}
+\subsection*{Shader Language and A\+PI descriptions.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_implementation_acda7f6c31ffe13c69bd3dbfa972a6fac}{Language}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_implementation_aebb544e23225701b6e92cd058bc09bab}{Language\+Version}
+\begin{DoxyCompactList}\small\item\em Shader Language version. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_implementation_ac127174c10e30bdf28d2e276c7818302}{Render\+A\+PI}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_implementation_a66ac67e482f39a4e71389f33f1c69648}{Render\+A\+P\+I\+Version}
+\begin{DoxyCompactList}\small\item\em Render A\+PI version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Binding description}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_implementation_a80df4effca2446b00f8925634c3d26aa}{Root\+Binding\+Name}
+\begin{DoxyCompactList}\small\item\em Name of root binding table. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_implementation_a6b8a6fd6e27dbd2707dc8264b24ab5c9}{Get\+Constants} () const
+\begin{DoxyCompactList}\small\item\em Property to store the shader parameters(constants) values in this implementation. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_af84aa8a3ee2de64fb485fec5079495c1}{Add\+New\+Table} (const char $\ast$p\+Target\+Name, const char $\ast$p\+Target\+Type)
+\item 
+const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_a627e85260da5dd853a7a0a0660229254}{Get\+Root\+Table} () const
+\item 
+\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_afc289e50527a2dfa6c977080721a8217}{Get\+Root\+Table} ()
+\item 
+int \hyperlink{class_fbx_implementation_a36f67aeee13d4cc5d1523b9c36a44a50}{Get\+Table\+Count} () const
+\item 
+const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_a0cbdb7d46ba4a42cdea6336ef859cc0a}{Get\+Table} (int p\+Index) const
+\item 
+\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_a854d69db6f3a3d262f5b61ca6bed1817}{Get\+Table} (int p\+Index)
+\item 
+const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_a45821c1d329404af513665d9809bab69}{Get\+Table\+By\+Target\+Name} (const char $\ast$p\+Name) const
+\item 
+\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_af50ff5315cb37e8e8ac0f8fb2b145e2e}{Get\+Table\+By\+Target\+Name} (const char $\ast$p\+Name)
+\item 
+const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_a9a8f103f0b874ff491c7f31b8b8555b4}{Get\+Table\+By\+Target\+Type} (const char $\ast$p\+Target\+Name) const
+\item 
+\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$ \hyperlink{class_fbx_implementation_af8fa4603b3a3226997504f4ca518f1c4}{Get\+Table\+By\+Target\+Type} (const char $\ast$p\+Target\+Name)
+\item 
+\hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} $\ast$ \hyperlink{class_fbx_implementation_abc8cd44b869458fd075729c26efcafd9}{Add\+New\+Binding\+Operator} (const char $\ast$p\+Target\+Name, const char $\ast$p\+Function\+Name)
+\item 
+int \hyperlink{class_fbx_implementation_aa84f7f2dc9fa201ce6e3cc230bb327e0}{Get\+Binding\+Operator\+Count} () const
+\item 
+const \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} $\ast$ \hyperlink{class_fbx_implementation_aa38e6cb27a349e77f3137e2f09c9ffde}{Get\+Operator\+By\+Target\+Name} (const char $\ast$p\+Target\+Name) const
+\end{DoxyCompactItemize}
+\subsection*{Static values}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a41bf4828ad34699046cf66d915a9a01b}{s\+Language}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_aef3358d9d9f6e48d7d1f806ec7999298}{s\+Language\+Version}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a6c5b03fd6433bbe70f3cd1868d52fdd1}{s\+Render\+A\+PI}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_aa1ca5cd4df0e11b8f3df06eeb6650627}{s\+Render\+A\+P\+I\+Version}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a9590713869bf7ee6b320ff49df12e5e5}{s\+Root\+Binding\+Name}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a16188a40d70a73622c093ba3143fedac}{s\+Constants}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a69479c45473cfe7ad7dc66a3fdf39c23}{s\+Default\+Type}
+\begin{DoxyCompactList}\small\item\em default value for implementation type. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a41d0841fb6321eb5a01447e7effde11f}{s\+Default\+Language}
+\begin{DoxyCompactList}\small\item\em default value for shader language. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_ac2aab3ea236712a7884780d6a8b4dbd7}{s\+Default\+Language\+Version}
+\begin{DoxyCompactList}\small\item\em default value for shader language version. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_a8b6d58d53aab505dfee054b60333f14b}{s\+Default\+Render\+A\+PI}
+\begin{DoxyCompactList}\small\item\em default value for shader render A\+PI. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_ac472bad7f7c8705a857f511a189cecf6}{s\+Default\+Render\+A\+P\+I\+Version}
+\begin{DoxyCompactList}\small\item\em default value for shader render A\+PI version. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_implementation_ab219e209feeb125961c36ff732ab121b}{s\+Default\+Root\+Binding\+Name}
+\begin{DoxyCompactList}\small\item\em default value for root binding table name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This object represents the shading node implementation. It defines basic information about the shader and the binding table(\+Fbx\+Binding\+Table). For example, you can create a new \hyperlink{class_fbx_implementation}{Fbx\+Implementation} like this\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_implementation}{FbxImplementation}* lImpl = FbxImplementation::Create( &pMyScene, \textcolor{stringliteral}{"MyImplementation"} );
+pMyObject.AddImplementation( lImpl );
+pMyObject.SetDefaultImplementation( lImpl );
+lImpl->\hyperlink{class_fbx_implementation_ac127174c10e30bdf28d2e276c7818302}{RenderAPI} = \hyperlink{fbxshadingconventions_8h_a5f0c28ccf711fb886ff3c69e91691ffe}{FBXSDK\_RENDERING\_API\_DIRECTX}; \textcolor{comment}{//
+      FBXSDK\_RENDERING\_API\_DIRECTX, FBXSDK\_RENDERING\_API\_OPENGL, FBXSDK\_RENDERING\_API\_MENTALRAY or FBXSDK\_RENDERING\_API\_PREVIEW}
+lImpl->\hyperlink{class_fbx_implementation_a66ac67e482f39a4e71389f33f1c69648}{RenderAPIVersion} = \textcolor{stringliteral}{"9.0"}; \textcolor{comment}{//API Version}
+
+lImpl->\hyperlink{class_fbx_implementation_acda7f6c31ffe13c69bd3dbfa972a6fac}{Language} = \hyperlink{fbxshadingconventions_8h_ac10b54a713e5562fe6572d1a2594288f}{FBXSDK\_SHADING\_LANGUAGE\_HLSL}; \textcolor{comment}{//
+      FBXSDK\_SHADING\_LANGUAGE\_HLSL, FBXSDK\_SHADING\_LANGUAGE\_GLSL, FBXSDK\_SHADING\_LANGUAGE\_CGFX or FBXSDK\_SHADING\_LANGUAGE\_MRSL}
+lImpl->\hyperlink{class_fbx_implementation_aebb544e23225701b6e92cd058bc09bab}{LanguageVersion} = \textcolor{stringliteral}{"1.0"};  \textcolor{comment}{//Language Version}
+\end{DoxyCode}
+
+
+After the new \hyperlink{class_fbx_implementation}{Fbx\+Implementation} is created, you can access \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} like this\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_binding_table}{FbxBindingTable}* lTable = lImpl->\hyperlink{class_fbx_implementation_a45821c1d329404af513665d9809bab69}{GetTableByTargetName}(\textcolor{stringliteral}{"root"});
+\end{DoxyCode}
+ Also, you can access the exist \hyperlink{class_fbx_implementation}{Fbx\+Implementation} in \hyperlink{class_fbx_object}{Fbx\+Object} by this\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{const} \hyperlink{class_fbx_implementation}{FbxImplementation}* lImpl = \hyperlink{class_fbx_object_a396d7a8496c2eef786ce73bac59ab55a}{GetImplementation}( pMyObject, 
+      \hyperlink{fbxshadingconventions_8h_aa61dfbcf9b694b8a4f189c6a77c2c2b6}{FBXSDK\_IMPLEMENTATION\_CGFX} ); \textcolor{comment}{// FBXSDK\_IMPLEMENTATION\_PREVIEW,
+       FBXSDK\_IMPLEMENTATION\_MENTALRAY, FBXSDK\_IMPLEMENTATION\_CGFX, FBXSDK\_IMPLEMENTATION\_HLSL, FBXSDK\_IMPLEMENTATION\_OGS or
+       FBXSDK\_IMPLEMENTATION\_NONE}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_filter}{Fbx\+Implementation\+Filter} 
+\end{DoxySeeAlso}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_implementation_abc8cd44b869458fd075729c26efcafd9}\label{class_fbx_implementation_abc8cd44b869458fd075729c26efcafd9}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Add\+New\+Binding\+Operator@{Add\+New\+Binding\+Operator}}
+\index{Add\+New\+Binding\+Operator@{Add\+New\+Binding\+Operator}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Add\+New\+Binding\+Operator()}{AddNewBindingOperator()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator}$\ast$ Fbx\+Implementation\+::\+Add\+New\+Binding\+Operator (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Target\+Name,  }\item[{const char $\ast$}]{p\+Function\+Name }\end{DoxyParamCaption})}
+
+Add a new binding operator to the operator list. 
+\begin{DoxyParams}{引数}
+{\em p\+Target\+Name} & The target name for the binding operator. \\
+\hline
+{\em p\+Function\+Name} & The function name for the binding operator. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new operator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_af84aa8a3ee2de64fb485fec5079495c1}\label{class_fbx_implementation_af84aa8a3ee2de64fb485fec5079495c1}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Add\+New\+Table@{Add\+New\+Table}}
+\index{Add\+New\+Table@{Add\+New\+Table}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Add\+New\+Table()}{AddNewTable()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Add\+New\+Table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Target\+Name,  }\item[{const char $\ast$}]{p\+Target\+Type }\end{DoxyParamCaption})}
+
+Add a new binding table to the table list. 
+\begin{DoxyParams}{引数}
+{\em p\+Target\+Name} & The target name for the binding table. \\
+\hline
+{\em p\+Target\+Type} & The target type for the binding table. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the new binding table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_aba2d4d41452596b51bbb74efb21e863c}\label{class_fbx_implementation_aba2d4d41452596b51bbb74efb21e863c}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Implementation\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_implementation_aa84f7f2dc9fa201ce6e3cc230bb327e0}\label{class_fbx_implementation_aa84f7f2dc9fa201ce6e3cc230bb327e0}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Binding\+Operator\+Count@{Get\+Binding\+Operator\+Count}}
+\index{Get\+Binding\+Operator\+Count@{Get\+Binding\+Operator\+Count}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Binding\+Operator\+Count()}{GetBindingOperatorCount()}}
+{\footnotesize\ttfamily int Fbx\+Implementation\+::\+Get\+Binding\+Operator\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the number of binding operators. \begin{DoxyReturn}{戻り値}
+the number of binding operators. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_a6b8a6fd6e27dbd2707dc8264b24ab5c9}\label{class_fbx_implementation_a6b8a6fd6e27dbd2707dc8264b24ab5c9}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Constants@{Get\+Constants}}
+\index{Get\+Constants@{Get\+Constants}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Constants()}{GetConstants()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Implementation\+::\+Get\+Constants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Property to store the shader parameters(constants) values in this implementation. 
+
+\mbox{\Hypertarget{class_fbx_implementation_aa38e6cb27a349e77f3137e2f09c9ffde}\label{class_fbx_implementation_aa38e6cb27a349e77f3137e2f09c9ffde}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Operator\+By\+Target\+Name@{Get\+Operator\+By\+Target\+Name}}
+\index{Get\+Operator\+By\+Target\+Name@{Get\+Operator\+By\+Target\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Operator\+By\+Target\+Name()}{GetOperatorByTargetName()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator}$\ast$ Fbx\+Implementation\+::\+Get\+Operator\+By\+Target\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Target\+Name }\end{DoxyParamCaption}) const}
+
+Returns the binding operator that has the given name. 
+\begin{DoxyParams}{引数}
+{\em p\+Target\+Name} & The target name of the binding operator to look for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the binding operator with the given name, or N\+U\+LL if there is no such binding table. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_implementation_a627e85260da5dd853a7a0a0660229254}\label{class_fbx_implementation_a627e85260da5dd853a7a0a0660229254}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Root\+Table@{Get\+Root\+Table}}
+\index{Get\+Root\+Table@{Get\+Root\+Table}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Root\+Table()}{GetRootTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Root\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieves a handle on the root binding table. \begin{DoxyReturn}{戻り値}
+A const pointer to the root table or N\+U\+LL if it does not exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_afc289e50527a2dfa6c977080721a8217}\label{class_fbx_implementation_afc289e50527a2dfa6c977080721a8217}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Root\+Table@{Get\+Root\+Table}}
+\index{Get\+Root\+Table@{Get\+Root\+Table}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Root\+Table()}{GetRootTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Root\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves a handle on the root binding table. \begin{DoxyReturn}{戻り値}
+A pointer to the root table or N\+U\+LL if it does not exist. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_a0cbdb7d46ba4a42cdea6336ef859cc0a}\label{class_fbx_implementation_a0cbdb7d46ba4a42cdea6336ef859cc0a}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table@{Get\+Table}}
+\index{Get\+Table@{Get\+Table}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table()}{GetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Table (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Retrieves a handle on the (p\+Index)th binding table. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the table to retrieve. Valid values are \mbox{[} 0, \hyperlink{class_fbx_implementation_a36f67aeee13d4cc5d1523b9c36a44a50}{Get\+Table\+Count()} ). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the p\+Index-\/th table or N\+U\+LL if p\+Index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_a854d69db6f3a3d262f5b61ca6bed1817}\label{class_fbx_implementation_a854d69db6f3a3d262f5b61ca6bed1817}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table@{Get\+Table}}
+\index{Get\+Table@{Get\+Table}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table()}{GetTable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Table (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Retrieves a handle on the (p\+Index)th binding table. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the table to retrieve. Valid values are \mbox{[} 0, \hyperlink{class_fbx_implementation_a36f67aeee13d4cc5d1523b9c36a44a50}{Get\+Table\+Count()} ). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the p\+Index-\/th table or N\+U\+LL if p\+Index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_a45821c1d329404af513665d9809bab69}\label{class_fbx_implementation_a45821c1d329404af513665d9809bab69}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table\+By\+Target\+Name@{Get\+Table\+By\+Target\+Name}}
+\index{Get\+Table\+By\+Target\+Name@{Get\+Table\+By\+Target\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table\+By\+Target\+Name()}{GetTableByTargetName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Table\+By\+Target\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const}
+
+Returns the binding table that has the given target name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The target name of the table to look for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the binding table with the given target name, or N\+U\+LL if there is no such binding table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_af50ff5315cb37e8e8ac0f8fb2b145e2e}\label{class_fbx_implementation_af50ff5315cb37e8e8ac0f8fb2b145e2e}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table\+By\+Target\+Name@{Get\+Table\+By\+Target\+Name}}
+\index{Get\+Table\+By\+Target\+Name@{Get\+Table\+By\+Target\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table\+By\+Target\+Name()}{GetTableByTargetName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Table\+By\+Target\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Returns the binding table that has the given target name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The target name of the table to look for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the binding table with the given target name, or N\+U\+LL if there is no such binding table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_a9a8f103f0b874ff491c7f31b8b8555b4}\label{class_fbx_implementation_a9a8f103f0b874ff491c7f31b8b8555b4}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table\+By\+Target\+Type@{Get\+Table\+By\+Target\+Type}}
+\index{Get\+Table\+By\+Target\+Type@{Get\+Table\+By\+Target\+Type}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table\+By\+Target\+Type()}{GetTableByTargetType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Table\+By\+Target\+Type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Target\+Name }\end{DoxyParamCaption}) const}
+
+Returns the binding table that has the given target type. 
+\begin{DoxyParams}{引数}
+{\em p\+Target\+Name} & The target type to look for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the binding table with the given target type, or N\+U\+LL if there is no such binding table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_af8fa4603b3a3226997504f4ca518f1c4}\label{class_fbx_implementation_af8fa4603b3a3226997504f4ca518f1c4}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table\+By\+Target\+Type@{Get\+Table\+By\+Target\+Type}}
+\index{Get\+Table\+By\+Target\+Type@{Get\+Table\+By\+Target\+Type}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table\+By\+Target\+Type()}{GetTableByTargetType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}$\ast$ Fbx\+Implementation\+::\+Get\+Table\+By\+Target\+Type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Target\+Name }\end{DoxyParamCaption})}
+
+Returns the binding table that has the given target type. 
+\begin{DoxyParams}{引数}
+{\em p\+Target\+Name} & The target type to look for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the binding table with the given target type, or N\+U\+LL if there is no such binding table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_implementation_a36f67aeee13d4cc5d1523b9c36a44a50}\label{class_fbx_implementation_a36f67aeee13d4cc5d1523b9c36a44a50}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Get\+Table\+Count@{Get\+Table\+Count}}
+\index{Get\+Table\+Count@{Get\+Table\+Count}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Get\+Table\+Count()}{GetTableCount()}}
+{\footnotesize\ttfamily int Fbx\+Implementation\+::\+Get\+Table\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the number of binding tables. \begin{DoxyReturn}{戻り値}
+the number of binding tables. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_implementation_acda7f6c31ffe13c69bd3dbfa972a6fac}\label{class_fbx_implementation_acda7f6c31ffe13c69bd3dbfa972a6fac}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Language@{Language}}
+\index{Language@{Language}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Language}{Language}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Implementation\+::\+Language}
+
+Shader Language. \begin{DoxySeeAlso}{参照}
+\hyperlink{fbxshadingconventions_8h_ac10b54a713e5562fe6572d1a2594288f}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+L\+SL}, \hyperlink{fbxshadingconventions_8h_a52222f21db3187bf9ed4986f053aa44f}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+G\+L\+SL}, \hyperlink{fbxshadingconventions_8h_a0551f4268e3fc2e0fcd9464297b31b6f}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+C\+G\+FX} and \hyperlink{fbxshadingconventions_8h_a7941affa96f6fc8d3345dac506c71ea2}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+M\+R\+SL} in conventions.\+h 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_aebb544e23225701b6e92cd058bc09bab}\label{class_fbx_implementation_aebb544e23225701b6e92cd058bc09bab}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Language\+Version@{Language\+Version}}
+\index{Language\+Version@{Language\+Version}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Language\+Version}{LanguageVersion}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Implementation\+::\+Language\+Version}
+
+
+
+Shader Language version. 
+
+\mbox{\Hypertarget{class_fbx_implementation_ac127174c10e30bdf28d2e276c7818302}\label{class_fbx_implementation_ac127174c10e30bdf28d2e276c7818302}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Render\+A\+PI@{Render\+A\+PI}}
+\index{Render\+A\+PI@{Render\+A\+PI}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Render\+A\+PI}{RenderAPI}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Implementation\+::\+Render\+A\+PI}
+
+Render A\+PI. \begin{DoxySeeAlso}{参照}
+\hyperlink{fbxshadingconventions_8h_ac10b54a713e5562fe6572d1a2594288f}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+H\+L\+SL}, \hyperlink{fbxshadingconventions_8h_a52222f21db3187bf9ed4986f053aa44f}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+G\+L\+SL}, \hyperlink{fbxshadingconventions_8h_a0551f4268e3fc2e0fcd9464297b31b6f}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+C\+G\+FX} and \hyperlink{fbxshadingconventions_8h_a7941affa96f6fc8d3345dac506c71ea2}{F\+B\+X\+S\+D\+K\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+M\+R\+SL} in conventions.\+h 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_a66ac67e482f39a4e71389f33f1c69648}\label{class_fbx_implementation_a66ac67e482f39a4e71389f33f1c69648}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Render\+A\+P\+I\+Version@{Render\+A\+P\+I\+Version}}
+\index{Render\+A\+P\+I\+Version@{Render\+A\+P\+I\+Version}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Render\+A\+P\+I\+Version}{RenderAPIVersion}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Implementation\+::\+Render\+A\+P\+I\+Version}
+
+
+
+Render A\+PI version. 
+
+\mbox{\Hypertarget{class_fbx_implementation_a1c5e1e5480c227977a92668d77c13ce8}\label{class_fbx_implementation_a1c5e1e5480c227977a92668d77c13ce8}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Render\+Name@{Render\+Name}}
+\index{Render\+Name@{Render\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Render\+Name}{RenderName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Implementation\+::\+Render\+Name}
+
+\mbox{\Hypertarget{class_fbx_implementation_a80df4effca2446b00f8925634c3d26aa}\label{class_fbx_implementation_a80df4effca2446b00f8925634c3d26aa}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!Root\+Binding\+Name@{Root\+Binding\+Name}}
+\index{Root\+Binding\+Name@{Root\+Binding\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{Root\+Binding\+Name}{RootBindingName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Implementation\+::\+Root\+Binding\+Name}
+
+
+
+Name of root binding table. 
+
+\mbox{\Hypertarget{class_fbx_implementation_a16188a40d70a73622c093ba3143fedac}\label{class_fbx_implementation_a16188a40d70a73622c093ba3143fedac}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Constants@{s\+Constants}}
+\index{s\+Constants@{s\+Constants}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Constants}{sConstants}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Constants\hspace{0.3cm}{\ttfamily [static]}}
+
+Name of property to store the shader parameters(constants) values in this implementation. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_a6b8a6fd6e27dbd2707dc8264b24ab5c9}{Get\+Constants} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_a41d0841fb6321eb5a01447e7effde11f}\label{class_fbx_implementation_a41d0841fb6321eb5a01447e7effde11f}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Default\+Language@{s\+Default\+Language}}
+\index{s\+Default\+Language@{s\+Default\+Language}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Default\+Language}{sDefaultLanguage}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Default\+Language\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+default value for shader language. 
+
+\mbox{\Hypertarget{class_fbx_implementation_ac2aab3ea236712a7884780d6a8b4dbd7}\label{class_fbx_implementation_ac2aab3ea236712a7884780d6a8b4dbd7}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Default\+Language\+Version@{s\+Default\+Language\+Version}}
+\index{s\+Default\+Language\+Version@{s\+Default\+Language\+Version}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Default\+Language\+Version}{sDefaultLanguageVersion}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Default\+Language\+Version\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+default value for shader language version. 
+
+\mbox{\Hypertarget{class_fbx_implementation_a8b6d58d53aab505dfee054b60333f14b}\label{class_fbx_implementation_a8b6d58d53aab505dfee054b60333f14b}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Default\+Render\+A\+PI@{s\+Default\+Render\+A\+PI}}
+\index{s\+Default\+Render\+A\+PI@{s\+Default\+Render\+A\+PI}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Default\+Render\+A\+PI}{sDefaultRenderAPI}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Default\+Render\+A\+PI\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+default value for shader render A\+PI. 
+
+\mbox{\Hypertarget{class_fbx_implementation_ac472bad7f7c8705a857f511a189cecf6}\label{class_fbx_implementation_ac472bad7f7c8705a857f511a189cecf6}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Default\+Render\+A\+P\+I\+Version@{s\+Default\+Render\+A\+P\+I\+Version}}
+\index{s\+Default\+Render\+A\+P\+I\+Version@{s\+Default\+Render\+A\+P\+I\+Version}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Default\+Render\+A\+P\+I\+Version}{sDefaultRenderAPIVersion}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Default\+Render\+A\+P\+I\+Version\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+default value for shader render A\+PI version. 
+
+\mbox{\Hypertarget{class_fbx_implementation_ab219e209feeb125961c36ff732ab121b}\label{class_fbx_implementation_ab219e209feeb125961c36ff732ab121b}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Default\+Root\+Binding\+Name@{s\+Default\+Root\+Binding\+Name}}
+\index{s\+Default\+Root\+Binding\+Name@{s\+Default\+Root\+Binding\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Default\+Root\+Binding\+Name}{sDefaultRootBindingName}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Default\+Root\+Binding\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+default value for root binding table name. 
+
+\mbox{\Hypertarget{class_fbx_implementation_a69479c45473cfe7ad7dc66a3fdf39c23}\label{class_fbx_implementation_a69479c45473cfe7ad7dc66a3fdf39c23}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Default\+Type@{s\+Default\+Type}}
+\index{s\+Default\+Type@{s\+Default\+Type}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Default\+Type}{sDefaultType}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Default\+Type\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+default value for implementation type. 
+
+\mbox{\Hypertarget{class_fbx_implementation_a41bf4828ad34699046cf66d915a9a01b}\label{class_fbx_implementation_a41bf4828ad34699046cf66d915a9a01b}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Language@{s\+Language}}
+\index{s\+Language@{s\+Language}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Language}{sLanguage}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Language\hspace{0.3cm}{\ttfamily [static]}}
+
+Shader Language name. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_acda7f6c31ffe13c69bd3dbfa972a6fac}{Language} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_aef3358d9d9f6e48d7d1f806ec7999298}\label{class_fbx_implementation_aef3358d9d9f6e48d7d1f806ec7999298}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Language\+Version@{s\+Language\+Version}}
+\index{s\+Language\+Version@{s\+Language\+Version}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Language\+Version}{sLanguageVersion}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Language\+Version\hspace{0.3cm}{\ttfamily [static]}}
+
+Shader Language version. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_aebb544e23225701b6e92cd058bc09bab}{Language\+Version} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_a6c5b03fd6433bbe70f3cd1868d52fdd1}\label{class_fbx_implementation_a6c5b03fd6433bbe70f3cd1868d52fdd1}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Render\+A\+PI@{s\+Render\+A\+PI}}
+\index{s\+Render\+A\+PI@{s\+Render\+A\+PI}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Render\+A\+PI}{sRenderAPI}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Render\+A\+PI\hspace{0.3cm}{\ttfamily [static]}}
+
+Shader render A\+PI. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_ac127174c10e30bdf28d2e276c7818302}{Render\+A\+PI} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_aa1ca5cd4df0e11b8f3df06eeb6650627}\label{class_fbx_implementation_aa1ca5cd4df0e11b8f3df06eeb6650627}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Render\+A\+P\+I\+Version@{s\+Render\+A\+P\+I\+Version}}
+\index{s\+Render\+A\+P\+I\+Version@{s\+Render\+A\+P\+I\+Version}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Render\+A\+P\+I\+Version}{sRenderAPIVersion}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Render\+A\+P\+I\+Version\hspace{0.3cm}{\ttfamily [static]}}
+
+Shader render A\+PI version. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_a66ac67e482f39a4e71389f33f1c69648}{Render\+A\+P\+I\+Version} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_implementation_a9590713869bf7ee6b320ff49df12e5e5}\label{class_fbx_implementation_a9590713869bf7ee6b320ff49df12e5e5}} 
+\index{Fbx\+Implementation@{Fbx\+Implementation}!s\+Root\+Binding\+Name@{s\+Root\+Binding\+Name}}
+\index{s\+Root\+Binding\+Name@{s\+Root\+Binding\+Name}!Fbx\+Implementation@{Fbx\+Implementation}}
+\subsubsection{\texorpdfstring{s\+Root\+Binding\+Name}{sRootBindingName}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Implementation\+::s\+Root\+Binding\+Name\hspace{0.3cm}{\ttfamily [static]}}
+
+Name of root binding table. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_implementation_a80df4effca2446b00f8925634c3d26aa}{Root\+Binding\+Name} 
+\end{DoxySeeAlso}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbximplementation_8h}{fbximplementation.\+h}\end{DoxyCompactItemize}

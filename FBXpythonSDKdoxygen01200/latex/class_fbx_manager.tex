@@ -1,0 +1,986 @@
+\hypertarget{class_fbx_manager}{}\section{Fbx\+Manager クラス}
+\label{class_fbx_manager}\index{Fbx\+Manager@{Fbx\+Manager}}
+
+
+{\ttfamily \#include $<$fbxmanager.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_manager_a989f88125a683f5c137e00cf126d53c6}{Get\+Document\+Count} ()
+\item 
+\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$ \hyperlink{class_fbx_manager_ac9d6e93d2730ef5f4da5a5b99591b99d}{Get\+Document} (int p\+Index)
+\item 
+void \hyperlink{class_fbx_manager_a835e4e738e31eafa937b6fbd4b548804}{Create\+Missing\+Bind\+Poses} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+int \hyperlink{class_fbx_manager_acf3fa4db57a5c7cb0134179aa1885309}{Get\+Bind\+Pose\+Count} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene) const
+\item 
+int \hyperlink{class_fbx_manager_a402614ab76c557ac064ae8bbea28d119}{Get\+Fbx\+Class\+Count} () const
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_manager_a979014d6621deb83e5f310b9e5be5a41}{Get\+Next\+Fbx\+Class} (\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} p\+Class\+Id) const
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_manager_ad4998934540803131a74f21041979826}{Prefix\+Name} (const char $\ast$p\+Prefix, const char $\ast$p\+Name)
+\item 
+static \hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$ \hyperlink{class_fbx_manager_acfe6f36b0029e3be94c210ad7bde7547}{Get\+Default\+Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_manager_ab7b188ec0c92172140883e2be38e1a4a}{Fbx\+Manager} ()
+\item 
+virtual \hyperlink{class_fbx_manager_a37045bda50435f908719b9e45b79ddbd}{$\sim$\+Fbx\+Manager} ()
+\item 
+void \hyperlink{class_fbx_manager_a110cd4d52da8804bb9f0cda0319790b8}{Clear} ()
+\item 
+void \hyperlink{class_fbx_manager_a76c35582c17ecbba6745a9a9a7ed8c95}{Class\+Init} ()
+\item 
+void \hyperlink{class_fbx_manager_a950d348e320856f56dc0166267a4e09f}{Class\+Release} ()
+\item 
+void \hyperlink{class_fbx_manager_a6d1162c88f894bc99b05e9849c3b9423}{Data\+Type\+Init} ()
+\item 
+void \hyperlink{class_fbx_manager_a4013385ed5a48933da6ddbdc0078d9cf}{Data\+Type\+Release} ()
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_manager_a7ea6fa004b54d9c3cd5b85fd33328078}{Fbx\+Object}
+\item 
+class \hyperlink{class_fbx_manager_a5d7018830479ec28905f28575480f88f}{Fbx\+Property}
+\item 
+class \hyperlink{class_fbx_manager_a7b27a89b3d5b45cd1a28960c77e4880b}{Fbx\+Node}
+\item 
+class \hyperlink{class_fbx_manager_abcc807c3523609e1c734764de626facc}{Fbx\+Scene}
+\item 
+class \hyperlink{class_fbx_manager_af7d13209ce85d4c6e85c1012ccba1a71}{Fbx\+Anim\+Evaluator}
+\end{DoxyCompactItemize}
+\subsection*{F\+BX S\+DK Manager Creation/\+Destruction}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$ \hyperlink{class_fbx_manager_af51cafc0f34f17d497f7921d847a4dd4}{Create} ()
+\item 
+virtual void \hyperlink{class_fbx_manager_aea778b97b3f0d13578ed0653a9e1212c}{Destroy} ()
+\end{DoxyCompactItemize}
+\subsection*{Versions Queries}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_manager_ac137167b0408326c6dbe1ce14004e800}{Get\+Version} (bool p\+Full=true)
+\item 
+static void \hyperlink{class_fbx_manager_a059da48febc59c5dfc2626355c0dadbb}{Get\+File\+Format\+Version} (int \&p\+Major, int \&p\+Minor, int \&p\+Revision)
+\end{DoxyCompactItemize}
+\subsection*{Object Registration, Definition and Management}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_manager_aa1caacb212a16e40652f98331fd94500}{Register\+Fbx\+Class} (const char $\ast$p\+Name, const T1 $\ast$, const T2 $\ast$, const char $\ast$p\+Fbx\+File\+Type\+Name=0, const char $\ast$p\+Fbx\+File\+Sub\+Type\+Name=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_manager_ae7669c6398bfbe4bbf3fcb3206df17b0}{Register\+Runtime\+Fbx\+Class} (const char $\ast$p\+Name, const T $\ast$, const char $\ast$p\+Fbx\+File\+Type\+Name=0, const char $\ast$p\+Fbx\+File\+Sub\+Type\+Name=0)
+\item 
+void \hyperlink{class_fbx_manager_ab46a3ccf9aa7cf28f8b2b18223baeedb}{Unregister\+Runtime\+Fbx\+Class} (const char $\ast$p\+Name)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_manager_ab97e0e9c93a1f545ed814ece12bcad59}{Override\+Fbx\+Class} (const T1 $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Class, const T2 $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Overriden\+Class)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_manager_a8e89142d374a3a06c406c62d6a204415}{Create\+New\+Object\+From\+Class\+Id} (\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} p\+Class\+Id, const char $\ast$p\+Name, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Clone\+From=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_manager_a680992a09352225efbda1f3d76c9d495}{Find\+Class} (const char $\ast$p\+Class\+Name) const
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_manager_af3ef43f7605e2f29a49b86fdbf740364}{Find\+Fbx\+File\+Class} (const char $\ast$p\+Fbx\+File\+Type\+Name, const char $\ast$p\+Fbx\+File\+Sub\+Type\+Name) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_fbx_manager_acaa996fbb60c38c9d015f18c91fa81be}{Unregister\+Fbx\+Class} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Class)
+\end{DoxyCompactItemize}
+\subsection*{Data Type Management}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \hyperlink{class_fbx_manager_a832d8b98c57a7781bc736bb49c131bb6}{Create\+Data\+Type} (const char $\ast$p\+Name, const \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Type)
+\item 
+int \hyperlink{class_fbx_manager_a1215bb7d42c38e3e9948564b04d3dc1b}{Get\+Data\+Type\+Count} () const
+\item 
+\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \& \hyperlink{class_fbx_manager_a714bbbf19e0bb8b488ffc34b689984e7}{Get\+Data\+Type} (const int p\+Index) const
+\item 
+\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \& \hyperlink{class_fbx_manager_acdb2f1edb399a590ef97e06221c4764a}{Get\+Data\+Type\+From\+Name} (const char $\ast$p\+Data\+Type) const
+\end{DoxyCompactItemize}
+\subsection*{User Notification Object}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} $\ast$ \hyperlink{class_fbx_manager_a9ab42b94660c722ec957188c0f5c0cbe}{Get\+User\+Notification} () const
+\item 
+void \hyperlink{class_fbx_manager_aa44b61ecaa5294df62a21726ed112c75}{Set\+User\+Notification} (\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} $\ast$p\+UN)
+\end{DoxyCompactItemize}
+\subsection*{I\+O\+Settings Object}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$ \hyperlink{class_fbx_manager_a26d18bc3dd9d4665dec13040fd5d1eb7}{Get\+I\+O\+Settings} () const
+\item 
+virtual void \hyperlink{class_fbx_manager_ad28f1773813b9856a1415a50d73ad437}{Set\+I\+O\+Settings} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$p\+I\+O\+Settings)
+\end{DoxyCompactItemize}
+\subsection*{Message Emitter (for Message Logging)}
+\begin{DoxyCompactItemize}
+\item 
+Fbx\+Message\+Emitter \& \hyperlink{class_fbx_manager_a0803b7fc85be2911a75423e64ccafb4a}{Get\+Message\+Emitter} ()
+\item 
+bool \hyperlink{class_fbx_manager_abd21131f9e68869f0f575ea177c337e8}{Set\+Message\+Emitter} (Fbx\+Message\+Emitter $\ast$p\+Message\+Emitter)
+\end{DoxyCompactItemize}
+\subsection*{Localization Hierarchy}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_manager_adf2f27440cd29bed880f944a0f83831b}{Add\+Localization} (Fbx\+Localization\+Manager $\ast$p\+Loc\+Manager)
+\item 
+void \hyperlink{class_fbx_manager_aa1210548acce876de3a8ed42fba54a46}{Remove\+Localization} (Fbx\+Localization\+Manager $\ast$p\+Loc\+Manager)
+\item 
+bool \hyperlink{class_fbx_manager_a3a0c4e7cf1ad942b6af60e0a67eda9f5}{Set\+Locale} (const char $\ast$p\+Locale)
+\item 
+const char $\ast$ \hyperlink{class_fbx_manager_abfc32a6436a410dbc2db564a73462c03}{Localize} (const char $\ast$p\+ID, const char $\ast$p\+Default=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\end{DoxyCompactItemize}
+\subsection*{X\+Ref Manager}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_x_ref_manager}{Fbx\+X\+Ref\+Manager} \& \hyperlink{class_fbx_manager_a36bfe163f5c00634de9e102600a71f8d}{Get\+X\+Ref\+Manager} ()
+\end{DoxyCompactItemize}
+\subsection*{Library Management}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$ \hyperlink{class_fbx_manager_abc14fc10d71fedc5932bc44cc1b63312}{Get\+Root\+Library} () const
+\item 
+\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$ \hyperlink{class_fbx_manager_a4b1aa7141334ae101be5405f406c644f}{Get\+System\+Libraries} () const
+\item 
+\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$ \hyperlink{class_fbx_manager_a9eda0b9c72884386d1dedfd80d34735a}{Get\+User\+Libraries} () const
+\end{DoxyCompactItemize}
+\subsection*{Plug-\/in Registry Object}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_i_o_plugin_registry}{Fbx\+I\+O\+Plugin\+Registry} $\ast$ \hyperlink{class_fbx_manager_ae6cc5dd81a15ec63c7c8102d349231d8}{Get\+I\+O\+Plugin\+Registry} () const
+\end{DoxyCompactItemize}
+\subsection*{Fbx Generic Plugins Management}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_manager_a86e610934144baea58ef98f4b4968e2e}{Load\+Plugins\+Directory} (const char $\ast$p\+Filename, const char $\ast$p\+Extensions=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_manager_ae6c88deb7290a59dcf93ef6aaecd9a1c}{Load\+Plugin} (const char $\ast$p\+Filename)
+\item 
+bool \hyperlink{class_fbx_manager_ac088e1b925b4576e9221f48533edee98}{Unload\+Plugins} ()
+\item 
+bool \hyperlink{class_fbx_manager_a82145985af0000ad13ff22e4e28e29a3}{Emit\+Plugins\+Event} (const \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} \&p\+Event)
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ const \hyperlink{class_fbx_plugin}{Fbx\+Plugin} $\ast$ $>$ \hyperlink{class_fbx_manager_a0b53702773e0a9b9bf283a315f7f2dce}{Get\+Plugins} () const
+\begin{DoxyCompactList}\small\item\em Get plugins. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_manager_a580c44f170d7e41060891fccb3710d21}{Get\+Plugin\+Count} () const
+\item 
+\hyperlink{class_fbx_plugin}{Fbx\+Plugin} $\ast$ \hyperlink{class_fbx_manager_accc3ab301611096bdce88b9fd6b9cb57}{Find\+Plugin} (const char $\ast$p\+Name, const char $\ast$p\+Version) const
+\end{DoxyCompactItemize}
+\subsection*{IO Settings}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_manager_a5af734dedf7cb2c21fc04cfba2265ff3}{Fill\+I\+O\+Settings\+For\+Readers\+Registered} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&p\+I\+OS)
+\item 
+void \hyperlink{class_fbx_manager_aa2cd6f7b73641743427db129ac67d575}{Fill\+I\+O\+Settings\+For\+Writers\+Registered} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&p\+I\+OS)
+\item 
+void \hyperlink{class_fbx_manager_a5d255c3afca682167094c1e78ac1c9aa}{Fill\+Common\+I\+O\+Settings} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&p\+I\+OS, bool p\+Import)
+\end{DoxyCompactItemize}
+\subsection*{Global Object Management}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_manager_a10a8b61fb5b1ba8442c22b5d21a5de53}{Register\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+void \hyperlink{class_fbx_manager_a489bd5a18d410b98fcfd87be401c9347}{Unregister\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+void \hyperlink{class_fbx_manager_a7a70ec14ac20b239d4fa5e440f70209e}{Register\+Objects} (const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&p\+Array)
+\item 
+void \hyperlink{class_fbx_manager_ad0efea934848eb58488905b51aa91b38}{Unregister\+Objects} (const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&p\+Array)
+\item 
+void \hyperlink{class_fbx_manager_ad0c6b924a178ca43748a4e2ee3d6462a}{Increase\+Destroying\+Scene\+Flag} ()
+\item 
+void \hyperlink{class_fbx_manager_a8967a8b28f427bee9e0737ae8d81cbe2}{Decrease\+Destroying\+Scene\+Flag} ()
+\end{DoxyCompactItemize}
+\subsection*{Reference Management}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_manager_a361483c46708f864cfdf800ef1e3976e}{Get\+Reference\+Count} () const
+\item 
+\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$ \hyperlink{class_fbx_manager_a2c99b023b62bfa5fee82328d1826762f}{Get\+Reference} (int p\+Index) const
+\item 
+int \hyperlink{class_fbx_manager_a955d69c7508979a9faec8d370a13cb8f}{Add\+Reference} (\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$p\+Reference)
+\item 
+bool \hyperlink{class_fbx_manager_af69e9a08609d602bf5366f8a8cc4fdd3}{Remove\+Reference} (\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$p\+Reference)
+\item 
+bool \hyperlink{class_fbx_manager_af3ae8fe5d18209a6101d4fab7565d273}{Clear\+Reference} (\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$p\+Reference)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+S\+DK object manager. The S\+DK manager is in charge of\+: \begin{DoxyItemize}
+\item scene element allocation, for example, Fbx\+Scene\+::\+Create(p\+Sdk\+Manager, \char`\"{}\char`\"{}). \item scene element deallocation, call \hyperlink{class_fbx_manager_aea778b97b3f0d13578ed0653a9e1212c}{Fbx\+Manager\+::\+Destroy()} to deallocates all object created by the S\+DK manager. \item scene element search and access, please see Global\+Object\+Management section.\end{DoxyItemize}
+It is possible to override memory allocation functions throughout the F\+BX S\+DK by providing system memory allocation functions using the handler set functions below. It must be done before the first \hyperlink{class_fbx_manager}{Fbx\+Manager} creation.
+
+\hyperlink{fbxalloc_8h_a2ad37389ed00ea52453f9bbdfbe21bf1}{Fbx\+Set\+Malloc\+Handler()}; \hyperlink{fbxalloc_8h_a1b129342da0077e10c027a6d7a1e5eeb}{Fbx\+Set\+Calloc\+Handler()}; \hyperlink{fbxalloc_8h_ae387334c73ede7effa5d05c3812a9b5c}{Fbx\+Set\+Realloc\+Handler()}; \hyperlink{fbxalloc_8h_a70cb4a74c71e880d8e87916aa40c7724}{Fbx\+Set\+Free\+Handler()};
+
+Upon destruction, all objects allocated by the S\+DK manager and not explicitly destroyed are destroyed as well. A derived class can be defined to allocate and deallocate specialized scene elements. \begin{DoxyRemark}{注釈}
+You could create more than one S\+DK manager. However, it\textquotesingle{}s better to N\+OT share the same object among different managers. 
+\end{DoxyRemark}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_manager_ab7b188ec0c92172140883e2be38e1a4a}\label{class_fbx_manager_ab7b188ec0c92172140883e2be38e1a4a}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Manager@{Fbx\+Manager}}
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+Manager()}{FbxManager()}}
+{\footnotesize\ttfamily Fbx\+Manager\+::\+Fbx\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a37045bda50435f908719b9e45b79ddbd}\label{class_fbx_manager_a37045bda50435f908719b9e45b79ddbd}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!````~Fbx\+Manager@{$\sim$\+Fbx\+Manager}}
+\index{````~Fbx\+Manager@{$\sim$\+Fbx\+Manager}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Manager()}{~FbxManager()}}
+{\footnotesize\ttfamily virtual Fbx\+Manager\+::$\sim$\+Fbx\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_manager_adf2f27440cd29bed880f944a0f83831b}\label{class_fbx_manager_adf2f27440cd29bed880f944a0f83831b}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Add\+Localization@{Add\+Localization}}
+\index{Add\+Localization@{Add\+Localization}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Localization()}{AddLocalization()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Add\+Localization (\begin{DoxyParamCaption}\item[{Fbx\+Localization\+Manager $\ast$}]{p\+Loc\+Manager }\end{DoxyParamCaption})}
+
+Add a localization object to the known localization providers. 
+\begin{DoxyParams}{引数}
+{\em p\+Loc\+Manager} & the localization object to register. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a955d69c7508979a9faec8d370a13cb8f}\label{class_fbx_manager_a955d69c7508979a9faec8d370a13cb8f}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Add\+Reference@{Add\+Reference}}
+\index{Add\+Reference@{Add\+Reference}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Reference()}{AddReference()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Add\+Reference (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$}]{p\+Reference }\end{DoxyParamCaption})}
+
+Add a reference. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference} & The reference to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the reference is correctly added to the scene, return {\ttfamily true} otherwise, if the reference is already there, returns {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a76c35582c17ecbba6745a9a9a7ed8c95}\label{class_fbx_manager_a76c35582c17ecbba6745a9a9a7ed8c95}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Class\+Init@{Class\+Init}}
+\index{Class\+Init@{Class\+Init}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Class\+Init()}{ClassInit()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Class\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a950d348e320856f56dc0166267a4e09f}\label{class_fbx_manager_a950d348e320856f56dc0166267a4e09f}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Class\+Release@{Class\+Release}}
+\index{Class\+Release@{Class\+Release}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Class\+Release()}{ClassRelease()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Class\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a110cd4d52da8804bb9f0cda0319790b8}\label{class_fbx_manager_a110cd4d52da8804bb9f0cda0319790b8}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_manager_af3ae8fe5d18209a6101d4fab7565d273}\label{class_fbx_manager_af3ae8fe5d18209a6101d4fab7565d273}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Clear\+Reference@{Clear\+Reference}}
+\index{Clear\+Reference@{Clear\+Reference}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Clear\+Reference()}{ClearReference()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Clear\+Reference (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$}]{p\+Reference }\end{DoxyParamCaption})}
+
+Clear the specified reference from the S\+DK manager. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference} & The reference to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the reference was successfully cleared from the S\+DK manager, return {\ttfamily true} otherwise, if the reference could not be found returns {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_af51cafc0f34f17d497f7921d847a4dd4}\label{class_fbx_manager_af51cafc0f34f17d497f7921d847a4dd4}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_manager}{Fbx\+Manager}$\ast$ Fbx\+Manager\+::\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+S\+DK manager allocation method. \begin{DoxyReturn}{戻り値}
+A pointer to the S\+DK manager or {\ttfamily N\+U\+LL} if this is an evaluation copy of the F\+BX S\+DK and it is expired. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 0
+\mbox{\Hypertarget{class_fbx_manager_a832d8b98c57a7781bc736bb49c131bb6}\label{class_fbx_manager_a832d8b98c57a7781bc736bb49c131bb6}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Create\+Data\+Type@{Create\+Data\+Type}}
+\index{Create\+Data\+Type@{Create\+Data\+Type}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Create\+Data\+Type()}{CreateDataType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} Fbx\+Manager\+::\+Create\+Data\+Type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Register a new data type to the manager 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The type name. \\
+\hline
+{\em p\+Type} & The data type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The newly created \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a835e4e738e31eafa937b6fbd4b548804}\label{class_fbx_manager_a835e4e738e31eafa937b6fbd4b548804}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Create\+Missing\+Bind\+Poses@{Create\+Missing\+Bind\+Poses}}
+\index{Create\+Missing\+Bind\+Poses@{Create\+Missing\+Bind\+Poses}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Create\+Missing\+Bind\+Poses()}{CreateMissingBindPoses()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Create\+Missing\+Bind\+Poses (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_manager_a8e89142d374a3a06c406c62d6a204415}\label{class_fbx_manager_a8e89142d374a3a06c406c62d6a204415}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Create\+New\+Object\+From\+Class\+Id@{Create\+New\+Object\+From\+Class\+Id}}
+\index{Create\+New\+Object\+From\+Class\+Id@{Create\+New\+Object\+From\+Class\+Id}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Create\+New\+Object\+From\+Class\+Id()}{CreateNewObjectFromClassId()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Manager\+::\+Create\+New\+Object\+From\+Class\+Id (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id}}]{p\+Class\+Id,  }\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Clone\+From = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Create a new object of the specified Class\+Id. 
+\begin{DoxyParams}{引数}
+{\em p\+Class\+Id} & The Class\+Id of the object to be created. \\
+\hline
+{\em p\+Name} & The name given to the newly created object. \\
+\hline
+{\em p\+Container} & An optional parameter to specify which object will \char`\"{}contain\char`\"{} the new object. By contain, we mean the new object will become a source to the container, connection-\/wise. \\
+\hline
+{\em p\+Clone\+From} & A valid object pointer to use as the reference for cloning the object upon construction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If not null, a new instance of the specified class. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function will return N\+U\+LL if the Class\+Id used is invalid. New Class\+Id can be registered using the function \hyperlink{class_fbx_manager_aa1caacb212a16e40652f98331fd94500}{Register\+Fbx\+Class()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_manager_a6d1162c88f894bc99b05e9849c3b9423}\label{class_fbx_manager_a6d1162c88f894bc99b05e9849c3b9423}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Data\+Type\+Init@{Data\+Type\+Init}}
+\index{Data\+Type\+Init@{Data\+Type\+Init}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Data\+Type\+Init()}{DataTypeInit()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Data\+Type\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a4013385ed5a48933da6ddbdc0078d9cf}\label{class_fbx_manager_a4013385ed5a48933da6ddbdc0078d9cf}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Data\+Type\+Release@{Data\+Type\+Release}}
+\index{Data\+Type\+Release@{Data\+Type\+Release}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Data\+Type\+Release()}{DataTypeRelease()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Data\+Type\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a8967a8b28f427bee9e0737ae8d81cbe2}\label{class_fbx_manager_a8967a8b28f427bee9e0737ae8d81cbe2}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Decrease\+Destroying\+Scene\+Flag@{Decrease\+Destroying\+Scene\+Flag}}
+\index{Decrease\+Destroying\+Scene\+Flag@{Decrease\+Destroying\+Scene\+Flag}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Decrease\+Destroying\+Scene\+Flag()}{DecreaseDestroyingSceneFlag()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Decrease\+Destroying\+Scene\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Shrink the object list and decrements the scene destroying counter. \begin{DoxyRemark}{注釈}
+Call this function after the destroying is changed. Use Increas\+Destroying\+Scene\+Flag() and \hyperlink{class_fbx_manager_a8967a8b28f427bee9e0737ae8d81cbe2}{Decrease\+Destroying\+Scene\+Flag()} in pairs. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_manager_aea778b97b3f0d13578ed0653a9e1212c}\label{class_fbx_manager_aea778b97b3f0d13578ed0653a9e1212c}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily virtual void Fbx\+Manager\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. Deallocates all object previously created by the S\+DK manager. \mbox{\Hypertarget{class_fbx_manager_a82145985af0000ad13ff22e4e28e29a3}\label{class_fbx_manager_a82145985af0000ad13ff22e4e28e29a3}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Emit\+Plugins\+Event@{Emit\+Plugins\+Event}}
+\index{Emit\+Plugins\+Event@{Emit\+Plugins\+Event}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Emit\+Plugins\+Event()}{EmitPluginsEvent()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Emit\+Plugins\+Event (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} \&}]{p\+Event }\end{DoxyParamCaption})}
+
+Emit plugins event. 
+\begin{DoxyParams}{引数}
+{\em p\+Event} & The event to be emitted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a5d255c3afca682167094c1e78ac1c9aa}\label{class_fbx_manager_a5d255c3afca682167094c1e78ac1c9aa}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fill\+Common\+I\+O\+Settings@{Fill\+Common\+I\+O\+Settings}}
+\index{Fill\+Common\+I\+O\+Settings@{Fill\+Common\+I\+O\+Settings}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fill\+Common\+I\+O\+Settings()}{FillCommonIOSettings()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Fill\+Common\+I\+O\+Settings (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&}]{p\+I\+OS,  }\item[{bool}]{p\+Import }\end{DoxyParamCaption})}
+
+Fill common IO Settings 
+\begin{DoxyParams}{引数}
+{\em p\+I\+OS} & The properties hierarchies to fill. \\
+\hline
+{\em p\+Import} & If {\ttfamily true}, import properties are set, otherwise export properties are set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a5af734dedf7cb2c21fc04cfba2265ff3}\label{class_fbx_manager_a5af734dedf7cb2c21fc04cfba2265ff3}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fill\+I\+O\+Settings\+For\+Readers\+Registered@{Fill\+I\+O\+Settings\+For\+Readers\+Registered}}
+\index{Fill\+I\+O\+Settings\+For\+Readers\+Registered@{Fill\+I\+O\+Settings\+For\+Readers\+Registered}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fill\+I\+O\+Settings\+For\+Readers\+Registered()}{FillIOSettingsForReadersRegistered()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Fill\+I\+O\+Settings\+For\+Readers\+Registered (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&}]{p\+I\+OS }\end{DoxyParamCaption})}
+
+Fill IO Settings for registered readers. 
+\begin{DoxyParams}{引数}
+{\em p\+I\+OS} & The properties hierarchies to fill. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_aa2cd6f7b73641743427db129ac67d575}\label{class_fbx_manager_aa2cd6f7b73641743427db129ac67d575}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fill\+I\+O\+Settings\+For\+Writers\+Registered@{Fill\+I\+O\+Settings\+For\+Writers\+Registered}}
+\index{Fill\+I\+O\+Settings\+For\+Writers\+Registered@{Fill\+I\+O\+Settings\+For\+Writers\+Registered}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fill\+I\+O\+Settings\+For\+Writers\+Registered()}{FillIOSettingsForWritersRegistered()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Fill\+I\+O\+Settings\+For\+Writers\+Registered (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&}]{p\+I\+OS }\end{DoxyParamCaption})}
+
+Fill IO Settings for registered writers. 
+\begin{DoxyParams}{引数}
+{\em p\+I\+OS} & The properties hierarchies to fill. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a680992a09352225efbda1f3d76c9d495}\label{class_fbx_manager_a680992a09352225efbda1f3d76c9d495}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Find\+Class@{Find\+Class}}
+\index{Find\+Class@{Find\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Find\+Class()}{FindClass()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Manager\+::\+Find\+Class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Class\+Name }\end{DoxyParamCaption}) const}
+
+Find class by the specified name. 
+\begin{DoxyParams}{引数}
+{\em p\+Class\+Name} & Class Name to find. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_af3ef43f7605e2f29a49b86fdbf740364}\label{class_fbx_manager_af3ef43f7605e2f29a49b86fdbf740364}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Find\+Fbx\+File\+Class@{Find\+Fbx\+File\+Class}}
+\index{Find\+Fbx\+File\+Class@{Find\+Fbx\+File\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Find\+Fbx\+File\+Class()}{FindFbxFileClass()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Manager\+::\+Find\+Fbx\+File\+Class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Fbx\+File\+Type\+Name,  }\item[{const char $\ast$}]{p\+Fbx\+File\+Sub\+Type\+Name }\end{DoxyParamCaption}) const}
+
+Find file class. 
+\begin{DoxyParams}{引数}
+{\em p\+Fbx\+File\+Type\+Name} & Specify the type name in F\+BX file to find. \\
+\hline
+{\em p\+Fbx\+File\+Sub\+Type\+Name} & Specify by The sub type name in F\+BX file to find. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_accc3ab301611096bdce88b9fd6b9cb57}\label{class_fbx_manager_accc3ab301611096bdce88b9fd6b9cb57}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Find\+Plugin@{Find\+Plugin}}
+\index{Find\+Plugin@{Find\+Plugin}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Find\+Plugin()}{FindPlugin()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_plugin}{Fbx\+Plugin}$\ast$ Fbx\+Manager\+::\+Find\+Plugin (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Version }\end{DoxyParamCaption}) const}
+
+Find plug in. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The plug in name. \\
+\hline
+{\em p\+Version} & The plug in version. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The plugin, {\ttfamily null} if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_acf3fa4db57a5c7cb0134179aa1885309}\label{class_fbx_manager_acf3fa4db57a5c7cb0134179aa1885309}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Bind\+Pose\+Count@{Get\+Bind\+Pose\+Count}}
+\index{Get\+Bind\+Pose\+Count@{Get\+Bind\+Pose\+Count}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Bind\+Pose\+Count()}{GetBindPoseCount()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Get\+Bind\+Pose\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_manager_a714bbbf19e0bb8b488ffc34b689984e7}\label{class_fbx_manager_a714bbbf19e0bb8b488ffc34b689984e7}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Data\+Type@{Get\+Data\+Type}}
+\index{Get\+Data\+Type@{Get\+Data\+Type}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Data\+Type()}{GetDataType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}\& Fbx\+Manager\+::\+Get\+Data\+Type (\begin{DoxyParamCaption}\item[{const int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Find a data types at p\+Index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The data type index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the found datatype. return null if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a1215bb7d42c38e3e9948564b04d3dc1b}\label{class_fbx_manager_a1215bb7d42c38e3e9948564b04d3dc1b}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Data\+Type\+Count@{Get\+Data\+Type\+Count}}
+\index{Get\+Data\+Type\+Count@{Get\+Data\+Type\+Count}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Data\+Type\+Count()}{GetDataTypeCount()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Get\+Data\+Type\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+List the data types \begin{DoxyReturn}{戻り値}
+the number of registered datatypes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_acdb2f1edb399a590ef97e06221c4764a}\label{class_fbx_manager_acdb2f1edb399a590ef97e06221c4764a}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Data\+Type\+From\+Name@{Get\+Data\+Type\+From\+Name}}
+\index{Get\+Data\+Type\+From\+Name@{Get\+Data\+Type\+From\+Name}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Data\+Type\+From\+Name()}{GetDataTypeFromName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}\& Fbx\+Manager\+::\+Get\+Data\+Type\+From\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Data\+Type }\end{DoxyParamCaption}) const}
+
+Find a data type from the type name. 
+\begin{DoxyParams}{引数}
+{\em p\+Data\+Type} & The type name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the found datatype. return null if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_acfe6f36b0029e3be94c210ad7bde7547}\label{class_fbx_manager_acfe6f36b0029e3be94c210ad7bde7547}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Default\+Manager@{Get\+Default\+Manager}}
+\index{Get\+Default\+Manager@{Get\+Default\+Manager}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Default\+Manager()}{GetDefaultManager()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_manager}{Fbx\+Manager}$\ast$ Fbx\+Manager\+::\+Get\+Default\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_manager_ac9d6e93d2730ef5f4da5a5b99591b99d}\label{class_fbx_manager_ac9d6e93d2730ef5f4da5a5b99591b99d}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Document@{Get\+Document}}
+\index{Get\+Document@{Get\+Document}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Document()}{GetDocument()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_document}{Fbx\+Document}$\ast$ Fbx\+Manager\+::\+Get\+Document (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the document at p\+Index in the manager\textquotesingle{}s list. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the document to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The document at the specified index. Will return N\+U\+LL if index is invalid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a989f88125a683f5c137e00cf126d53c6}\label{class_fbx_manager_a989f88125a683f5c137e00cf126d53c6}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Document\+Count@{Get\+Document\+Count}}
+\index{Get\+Document\+Count@{Get\+Document\+Count}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Document\+Count()}{GetDocumentCount()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Get\+Document\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the count of document available in this manager \begin{DoxyReturn}{戻り値}
+The count of document owned by this manager. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a402614ab76c557ac064ae8bbea28d119}\label{class_fbx_manager_a402614ab76c557ac064ae8bbea28d119}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Fbx\+Class\+Count@{Get\+Fbx\+Class\+Count}}
+\index{Get\+Fbx\+Class\+Count@{Get\+Fbx\+Class\+Count}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Fbx\+Class\+Count()}{GetFbxClassCount()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Get\+Fbx\+Class\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_manager_a059da48febc59c5dfc2626355c0dadbb}\label{class_fbx_manager_a059da48febc59c5dfc2626355c0dadbb}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+File\+Format\+Version@{Get\+File\+Format\+Version}}
+\index{Get\+File\+Format\+Version@{Get\+File\+Format\+Version}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+File\+Format\+Version()}{GetFileFormatVersion()}}
+{\footnotesize\ttfamily static void Fbx\+Manager\+::\+Get\+File\+Format\+Version (\begin{DoxyParamCaption}\item[{int \&}]{p\+Major,  }\item[{int \&}]{p\+Minor,  }\item[{int \&}]{p\+Revision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the current default F\+BX file format version number for this version of the F\+BX S\+DK. 
+\begin{DoxyParams}{引数}
+{\em p\+Major} & Version major number. \\
+\hline
+{\em p\+Minor} & Version minor number. \\
+\hline
+{\em p\+Revision} & Version revision number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_ae6cc5dd81a15ec63c7c8102d349231d8}\label{class_fbx_manager_ae6cc5dd81a15ec63c7c8102d349231d8}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+I\+O\+Plugin\+Registry@{Get\+I\+O\+Plugin\+Registry}}
+\index{Get\+I\+O\+Plugin\+Registry@{Get\+I\+O\+Plugin\+Registry}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+I\+O\+Plugin\+Registry()}{GetIOPluginRegistry()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_plugin_registry}{Fbx\+I\+O\+Plugin\+Registry}$\ast$ Fbx\+Manager\+::\+Get\+I\+O\+Plugin\+Registry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Access to the unique \hyperlink{class_fbx_i_o_plugin_registry}{Fbx\+I\+O\+Plugin\+Registry} object. \begin{DoxyReturn}{戻り値}
+The pointer to the user \hyperlink{class_fbx_i_o_plugin_registry}{Fbx\+I\+O\+Plugin\+Registry} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a26d18bc3dd9d4665dec13040fd5d1eb7}\label{class_fbx_manager_a26d18bc3dd9d4665dec13040fd5d1eb7}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+I\+O\+Settings@{Get\+I\+O\+Settings}}
+\index{Get\+I\+O\+Settings@{Get\+I\+O\+Settings}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+I\+O\+Settings()}{GetIOSettings()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings}$\ast$ Fbx\+Manager\+::\+Get\+I\+O\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Access to a I\+O\+Settings object. \begin{DoxyReturn}{戻り値}
+The pointer to I\+O\+Settings or {\ttfamily N\+U\+LL} {\ttfamily if} the object has not been allocated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a0803b7fc85be2911a75423e64ccafb4a}\label{class_fbx_manager_a0803b7fc85be2911a75423e64ccafb4a}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Message\+Emitter@{Get\+Message\+Emitter}}
+\index{Get\+Message\+Emitter@{Get\+Message\+Emitter}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Message\+Emitter()}{GetMessageEmitter()}}
+{\footnotesize\ttfamily Fbx\+Message\+Emitter\& Fbx\+Manager\+::\+Get\+Message\+Emitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Access to the unique Fbx\+Message\+Emitter object. \begin{DoxyReturn}{戻り値}
+The pointer to the message emitter. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a979014d6621deb83e5f310b9e5be5a41}\label{class_fbx_manager_a979014d6621deb83e5f310b9e5be5a41}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Next\+Fbx\+Class@{Get\+Next\+Fbx\+Class}}
+\index{Get\+Next\+Fbx\+Class@{Get\+Next\+Fbx\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Next\+Fbx\+Class()}{GetNextFbxClass()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Manager\+::\+Get\+Next\+Fbx\+Class (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id}}]{p\+Class\+Id }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_manager_a580c44f170d7e41060891fccb3710d21}\label{class_fbx_manager_a580c44f170d7e41060891fccb3710d21}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Plugin\+Count@{Get\+Plugin\+Count}}
+\index{Get\+Plugin\+Count@{Get\+Plugin\+Count}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Plugin\+Count()}{GetPluginCount()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Get\+Plugin\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get plugins count \begin{DoxyReturn}{戻り値}
+The number of plugins. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a0b53702773e0a9b9bf283a315f7f2dce}\label{class_fbx_manager_a0b53702773e0a9b9bf283a315f7f2dce}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Plugins@{Get\+Plugins}}
+\index{Get\+Plugins@{Get\+Plugins}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Plugins()}{GetPlugins()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$const \hyperlink{class_fbx_plugin}{Fbx\+Plugin}$\ast$$>$ Fbx\+Manager\+::\+Get\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get plugins. 
+
+\mbox{\Hypertarget{class_fbx_manager_a2c99b023b62bfa5fee82328d1826762f}\label{class_fbx_manager_a2c99b023b62bfa5fee82328d1826762f}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Reference@{Get\+Reference}}
+\index{Get\+Reference@{Get\+Reference}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Reference()}{GetReference()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference}$\ast$ Fbx\+Manager\+::\+Get\+Reference (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Get reference at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of references. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the reference or {\ttfamily N\+U\+LL} if index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a361483c46708f864cfdf800ef1e3976e}\label{class_fbx_manager_a361483c46708f864cfdf800ef1e3976e}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Reference\+Count@{Get\+Reference\+Count}}
+\index{Get\+Reference\+Count@{Get\+Reference\+Count}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Reference\+Count()}{GetReferenceCount()}}
+{\footnotesize\ttfamily int Fbx\+Manager\+::\+Get\+Reference\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of references. \begin{DoxyReturn}{戻り値}
+Number of references. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_abc14fc10d71fedc5932bc44cc1b63312}\label{class_fbx_manager_abc14fc10d71fedc5932bc44cc1b63312}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Root\+Library@{Get\+Root\+Library}}
+\index{Get\+Root\+Library@{Get\+Root\+Library}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Root\+Library()}{GetRootLibrary()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_library}{Fbx\+Library}$\ast$ Fbx\+Manager\+::\+Get\+Root\+Library (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the main object Libraries \begin{DoxyReturn}{戻り値}
+The Root library 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a4b1aa7141334ae101be5405f406c644f}\label{class_fbx_manager_a4b1aa7141334ae101be5405f406c644f}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+System\+Libraries@{Get\+System\+Libraries}}
+\index{Get\+System\+Libraries@{Get\+System\+Libraries}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+System\+Libraries()}{GetSystemLibraries()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_library}{Fbx\+Library}$\ast$ Fbx\+Manager\+::\+Get\+System\+Libraries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_manager_a9eda0b9c72884386d1dedfd80d34735a}\label{class_fbx_manager_a9eda0b9c72884386d1dedfd80d34735a}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+User\+Libraries@{Get\+User\+Libraries}}
+\index{Get\+User\+Libraries@{Get\+User\+Libraries}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+User\+Libraries()}{GetUserLibraries()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_library}{Fbx\+Library}$\ast$ Fbx\+Manager\+::\+Get\+User\+Libraries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_manager_a9ab42b94660c722ec957188c0f5c0cbe}\label{class_fbx_manager_a9ab42b94660c722ec957188c0f5c0cbe}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+User\+Notification@{Get\+User\+Notification}}
+\index{Get\+User\+Notification@{Get\+User\+Notification}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+User\+Notification()}{GetUserNotification()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification}$\ast$ Fbx\+Manager\+::\+Get\+User\+Notification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Access to the unique User\+Notification object. \begin{DoxyReturn}{戻り値}
+The pointer to the user notification or {\ttfamily N\+U\+LL} {\ttfamily if} the object has not been allocated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_ac137167b0408326c6dbe1ce14004e800}\label{class_fbx_manager_ac137167b0408326c6dbe1ce14004e800}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+Version@{Get\+Version}}
+\index{Get\+Version@{Get\+Version}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Version()}{GetVersion()}}
+{\footnotesize\ttfamily static const char$\ast$ Fbx\+Manager\+::\+Get\+Version (\begin{DoxyParamCaption}\item[{bool}]{p\+Full = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get F\+BX S\+DK version string. 
+\begin{DoxyParams}{引数}
+{\em p\+Full} & If true, the complete version string including revision number and release date will be returned, otherwise only the version numbering is returned. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a36bfe163f5c00634de9e102600a71f8d}\label{class_fbx_manager_a36bfe163f5c00634de9e102600a71f8d}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Get\+X\+Ref\+Manager@{Get\+X\+Ref\+Manager}}
+\index{Get\+X\+Ref\+Manager@{Get\+X\+Ref\+Manager}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Get\+X\+Ref\+Manager()}{GetXRefManager()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_x_ref_manager}{Fbx\+X\+Ref\+Manager}\& Fbx\+Manager\+::\+Get\+X\+Ref\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the manager responsible for managing object X\+Ref resolution. \begin{DoxyReturn}{戻り値}
+The X\+Ref manager for this S\+DK manager. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_ad0c6b924a178ca43748a4e2ee3d6462a}\label{class_fbx_manager_ad0c6b924a178ca43748a4e2ee3d6462a}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Increase\+Destroying\+Scene\+Flag@{Increase\+Destroying\+Scene\+Flag}}
+\index{Increase\+Destroying\+Scene\+Flag@{Increase\+Destroying\+Scene\+Flag}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Increase\+Destroying\+Scene\+Flag()}{IncreaseDestroyingSceneFlag()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Increase\+Destroying\+Scene\+Flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Increment the scene destroying counter. \begin{DoxyRemark}{注釈}
+Call this function before the destroying list is changed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_manager_ae6c88deb7290a59dcf93ef6aaecd9a1c}\label{class_fbx_manager_ae6c88deb7290a59dcf93ef6aaecd9a1c}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Load\+Plugin@{Load\+Plugin}}
+\index{Load\+Plugin@{Load\+Plugin}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Load\+Plugin()}{LoadPlugin()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Load\+Plugin (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename }\end{DoxyParamCaption})}
+
+Load plug-\/in 
+\begin{DoxyParams}{引数}
+{\em p\+Filename} & The file name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a86e610934144baea58ef98f4b4968e2e}\label{class_fbx_manager_a86e610934144baea58ef98f4b4968e2e}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Load\+Plugins\+Directory@{Load\+Plugins\+Directory}}
+\index{Load\+Plugins\+Directory@{Load\+Plugins\+Directory}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Load\+Plugins\+Directory()}{LoadPluginsDirectory()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Load\+Plugins\+Directory (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Filename,  }\item[{const char $\ast$}]{p\+Extensions = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Load plug-\/ins directory 
+\begin{DoxyParams}{引数}
+{\em p\+Filename} & The directory path. \\
+\hline
+{\em p\+Extensions} & The plug in extension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_abfc32a6436a410dbc2db564a73462c03}\label{class_fbx_manager_abfc32a6436a410dbc2db564a73462c03}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Localize@{Localize}}
+\index{Localize@{Localize}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Localize()}{Localize()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Manager\+::\+Localize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+ID,  }\item[{const char $\ast$}]{p\+Default = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Localization helper function. Calls each registered localization manager until one can localizes the text. 
+\begin{DoxyParams}{引数}
+{\em p\+ID} & the identifier for the text to localize. \\
+\hline
+{\em p\+Default} & the default text. Uses p\+ID if N\+U\+LL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the potentially localized text. May return the parameter passed in. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_ab97e0e9c93a1f545ed814ece12bcad59}\label{class_fbx_manager_ab97e0e9c93a1f545ed814ece12bcad59}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Override\+Fbx\+Class@{Override\+Fbx\+Class}}
+\index{Override\+Fbx\+Class@{Override\+Fbx\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Override\+Fbx\+Class()}{OverrideFbxClass()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Manager\+::\+Override\+Fbx\+Class (\begin{DoxyParamCaption}\item[{const T1 $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Class,  }\item[{const T2 $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Overriden\+Class }\end{DoxyParamCaption})}
+
+Override class. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Class} & F\+BX type of class. \\
+\hline
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Overriden\+Class} & F\+BX type of overridden class. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The class Id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_ad4998934540803131a74f21041979826}\label{class_fbx_manager_ad4998934540803131a74f21041979826}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Prefix\+Name@{Prefix\+Name}}
+\index{Prefix\+Name@{Prefix\+Name}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Prefix\+Name()}{PrefixName()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Manager\+::\+Prefix\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Prefix,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Add a prefix to a name. 
+\begin{DoxyParams}{引数}
+{\em p\+Prefix} & The prefix to be added to the {\ttfamily p\+Name}. This string must contain the \char`\"{}\+::\char`\"{} characters in order to be considered as a prefix. \\
+\hline
+{\em p\+Name} & The name to be prefix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The prefixed string 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If a prefix already exists, it is removed before adding {\ttfamily p\+Prefix}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_manager_aa1caacb212a16e40652f98331fd94500}\label{class_fbx_manager_aa1caacb212a16e40652f98331fd94500}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Register\+Fbx\+Class@{Register\+Fbx\+Class}}
+\index{Register\+Fbx\+Class@{Register\+Fbx\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Fbx\+Class()}{RegisterFbxClass()}}
+{\footnotesize\ttfamily template$<$typename T1 , typename T2 $>$ \\
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Manager\+::\+Register\+Fbx\+Class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const T1 $\ast$}]{,  }\item[{const T2 $\ast$}]{,  }\item[{const char $\ast$}]{p\+Fbx\+File\+Type\+Name = {\ttfamily 0},  }\item[{const char $\ast$}]{p\+Fbx\+File\+Sub\+Type\+Name = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Class registration. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The class name. For example, \char`\"{}\+Fbx\+Mesh\char`\"{} for \hyperlink{class_fbx_mesh}{Fbx\+Mesh} class. \\
+\hline
+{\em T1} & F\+BX type of the specified class. \\
+\hline
+{\em T2} & F\+BX type of parent class. \\
+\hline
+{\em p\+Fbx\+File\+Type\+Name} & The type name of the class in F\+BX file. \\
+\hline
+{\em p\+Fbx\+File\+Sub\+Type\+Name} & The sub type name of the class in F\+BX file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The class Id of the newly register class. Such as\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_manager_aa1caacb212a16e40652f98331fd94500}{RegisterFbxClass}(\textcolor{stringliteral}{"FbxCamera"}, \hyperlink{fbxobject_8h_a5d7afc748adbd02b6e42e01ec252f29e}{FBX\_TYPE}(\hyperlink{class_fbx_camera}{FbxCamera}), 
+      \hyperlink{fbxobject_8h_a5d7afc748adbd02b6e42e01ec252f29e}{FBX\_TYPE}(\hyperlink{class_fbx_node_attribute}{FbxNodeAttribute})); 
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_a10a8b61fb5b1ba8442c22b5d21a5de53}\label{class_fbx_manager_a10a8b61fb5b1ba8442c22b5d21a5de53}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Register\+Object@{Register\+Object}}
+\index{Register\+Object@{Register\+Object}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Object()}{RegisterObject()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Register\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Register object with the manager. \mbox{\Hypertarget{class_fbx_manager_a7a70ec14ac20b239d4fa5e440f70209e}\label{class_fbx_manager_a7a70ec14ac20b239d4fa5e440f70209e}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Register\+Objects@{Register\+Objects}}
+\index{Register\+Objects@{Register\+Objects}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Objects()}{RegisterObjects()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Register\+Objects (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&}]{p\+Array }\end{DoxyParamCaption})}
+
+Register a list of objects with the manager. \mbox{\Hypertarget{class_fbx_manager_ae7669c6398bfbe4bbf3fcb3206df17b0}\label{class_fbx_manager_ae7669c6398bfbe4bbf3fcb3206df17b0}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Register\+Runtime\+Fbx\+Class@{Register\+Runtime\+Fbx\+Class}}
+\index{Register\+Runtime\+Fbx\+Class@{Register\+Runtime\+Fbx\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Runtime\+Fbx\+Class()}{RegisterRuntimeFbxClass()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Manager\+::\+Register\+Runtime\+Fbx\+Class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const T $\ast$}]{,  }\item[{const char $\ast$}]{p\+Fbx\+File\+Type\+Name = {\ttfamily 0},  }\item[{const char $\ast$}]{p\+Fbx\+File\+Sub\+Type\+Name = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Runtime class registration. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The class name. For example, \char`\"{}\+Fbx\+U\+I\+Widget\+Boolean\char`\"{}. \\
+\hline
+{\em T} & F\+BX type of parent class. \\
+\hline
+{\em p\+Fbx\+File\+Type\+Name} & The type name of the class in F\+BX file. \\
+\hline
+{\em p\+Fbx\+File\+Sub\+Type\+Name} & The sub type name of the class in F\+BX file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The class Id of the newly register class. Such as\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_manager_ae7669c6398bfbe4bbf3fcb3206df17b0}{RegisterRuntimeFbxClass}( \textcolor{stringliteral}{"FbxUIWidgetBoolean"}, \hyperlink{fbxobject_8h_a5d7afc748adbd02b6e42e01ec252f29e}{FBX\_TYPE}(
+      FbxUIWidgetDefinition), \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}, \textcolor{stringliteral}{"FbxUIWidgetBoolean"}); 
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_aa1210548acce876de3a8ed42fba54a46}\label{class_fbx_manager_aa1210548acce876de3a8ed42fba54a46}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Remove\+Localization@{Remove\+Localization}}
+\index{Remove\+Localization@{Remove\+Localization}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+Localization()}{RemoveLocalization()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Remove\+Localization (\begin{DoxyParamCaption}\item[{Fbx\+Localization\+Manager $\ast$}]{p\+Loc\+Manager }\end{DoxyParamCaption})}
+
+Remove a localization object from the known localization providers. 
+\begin{DoxyParams}{引数}
+{\em p\+Loc\+Manager} & the localization object to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_af69e9a08609d602bf5366f8a8cc4fdd3}\label{class_fbx_manager_af69e9a08609d602bf5366f8a8cc4fdd3}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Remove\+Reference@{Remove\+Reference}}
+\index{Remove\+Reference@{Remove\+Reference}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+Reference()}{RemoveReference()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Remove\+Reference (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene_reference}{Fbx\+Scene\+Reference} $\ast$}]{p\+Reference }\end{DoxyParamCaption})}
+
+Remove the specified reference from reference list. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference} & The reference to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the reference was successfully removed, return {\ttfamily true} otherwise, if the reference could not be found returns {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_manager_ad28f1773813b9856a1415a50d73ad437}\label{class_fbx_manager_ad28f1773813b9856a1415a50d73ad437}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Set\+I\+O\+Settings@{Set\+I\+O\+Settings}}
+\index{Set\+I\+O\+Settings@{Set\+I\+O\+Settings}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Set\+I\+O\+Settings()}{SetIOSettings()}}
+{\footnotesize\ttfamily virtual void Fbx\+Manager\+::\+Set\+I\+O\+Settings (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$}]{p\+I\+O\+Settings }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Set the I\+O\+Settings pointer 
+\begin{DoxyParams}{引数}
+{\em p\+I\+O\+Settings} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a3a0c4e7cf1ad942b6af60e0a67eda9f5}\label{class_fbx_manager_a3a0c4e7cf1ad942b6af60e0a67eda9f5}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Set\+Locale@{Set\+Locale}}
+\index{Set\+Locale@{Set\+Locale}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Locale()}{SetLocale()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Set\+Locale (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Locale }\end{DoxyParamCaption})}
+
+Select the current locale for localization. 
+\begin{DoxyParams}{引数}
+{\em p\+Locale} & the locale name, for example \char`\"{}fr\char`\"{} or \char`\"{}en-\/\+U\+S\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_abd21131f9e68869f0f575ea177c337e8}\label{class_fbx_manager_abd21131f9e68869f0f575ea177c337e8}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Set\+Message\+Emitter@{Set\+Message\+Emitter}}
+\index{Set\+Message\+Emitter@{Set\+Message\+Emitter}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Message\+Emitter()}{SetMessageEmitter()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Set\+Message\+Emitter (\begin{DoxyParamCaption}\item[{Fbx\+Message\+Emitter $\ast$}]{p\+Message\+Emitter }\end{DoxyParamCaption})}
+
+Sets to the unique Fbx\+Message\+Emitter object. 
+\begin{DoxyParams}{引数}
+{\em p\+Message\+Emitter} & the emitter to use, passing N\+U\+LL will reset to the default emitter. The object will be deleted when the S\+DK manager is destroyed, thus ownership is transfered. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_aa44b61ecaa5294df62a21726ed112c75}\label{class_fbx_manager_aa44b61ecaa5294df62a21726ed112c75}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Set\+User\+Notification@{Set\+User\+Notification}}
+\index{Set\+User\+Notification@{Set\+User\+Notification}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Set\+User\+Notification()}{SetUserNotification()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Set\+User\+Notification (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} $\ast$}]{p\+UN }\end{DoxyParamCaption})}
+
+Set the user notification 
+\begin{DoxyParams}{引数}
+{\em p\+UN} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_ac088e1b925b4576e9221f48533edee98}\label{class_fbx_manager_ac088e1b925b4576e9221f48533edee98}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Unload\+Plugins@{Unload\+Plugins}}
+\index{Unload\+Plugins@{Unload\+Plugins}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Unload\+Plugins()}{UnloadPlugins()}}
+{\footnotesize\ttfamily bool Fbx\+Manager\+::\+Unload\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Unload all plug-\/ins \mbox{\Hypertarget{class_fbx_manager_acaa996fbb60c38c9d015f18c91fa81be}\label{class_fbx_manager_acaa996fbb60c38c9d015f18c91fa81be}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Unregister\+Fbx\+Class@{Unregister\+Fbx\+Class}}
+\index{Unregister\+Fbx\+Class@{Unregister\+Fbx\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Unregister\+Fbx\+Class()}{UnregisterFbxClass()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Fbx\+Manager\+::\+Unregister\+Fbx\+Class (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Class }\end{DoxyParamCaption})}
+
+Class unregistration. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+P\+E\+\_\+\+Class} & F\+BX type of unregistered class. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_manager_a489bd5a18d410b98fcfd87be401c9347}\label{class_fbx_manager_a489bd5a18d410b98fcfd87be401c9347}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Unregister\+Object@{Unregister\+Object}}
+\index{Unregister\+Object@{Unregister\+Object}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Unregister\+Object()}{UnregisterObject()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Unregister\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Unregister object with the manager. \mbox{\Hypertarget{class_fbx_manager_ad0efea934848eb58488905b51aa91b38}\label{class_fbx_manager_ad0efea934848eb58488905b51aa91b38}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Unregister\+Objects@{Unregister\+Objects}}
+\index{Unregister\+Objects@{Unregister\+Objects}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Unregister\+Objects()}{UnregisterObjects()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Unregister\+Objects (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&}]{p\+Array }\end{DoxyParamCaption})}
+
+Unregister a list of objects with the manager. \mbox{\Hypertarget{class_fbx_manager_ab46a3ccf9aa7cf28f8b2b18223baeedb}\label{class_fbx_manager_ab46a3ccf9aa7cf28f8b2b18223baeedb}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Unregister\+Runtime\+Fbx\+Class@{Unregister\+Runtime\+Fbx\+Class}}
+\index{Unregister\+Runtime\+Fbx\+Class@{Unregister\+Runtime\+Fbx\+Class}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Unregister\+Runtime\+Fbx\+Class()}{UnregisterRuntimeFbxClass()}}
+{\footnotesize\ttfamily void Fbx\+Manager\+::\+Unregister\+Runtime\+Fbx\+Class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Runtime class unregistration. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The class name. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_manager_af7d13209ce85d4c6e85c1012ccba1a71}\label{class_fbx_manager_af7d13209ce85d4c6e85c1012ccba1a71}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Anim\+Evaluator@{Fbx\+Anim\+Evaluator}}
+\index{Fbx\+Anim\+Evaluator@{Fbx\+Anim\+Evaluator}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Evaluator}{FbxAnimEvaluator}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a7b27a89b3d5b45cd1a28960c77e4880b}\label{class_fbx_manager_a7b27a89b3d5b45cd1a28960c77e4880b}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Node@{Fbx\+Node}}
+\index{Fbx\+Node@{Fbx\+Node}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+Node}{FbxNode}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_node}{Fbx\+Node}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a7ea6fa004b54d9c3cd5b85fd33328078}\label{class_fbx_manager_a7ea6fa004b54d9c3cd5b85fd33328078}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Object@{Fbx\+Object}}
+\index{Fbx\+Object@{Fbx\+Object}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+Object}{FbxObject}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_object}{Fbx\+Object}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_manager_a5d7018830479ec28905f28575480f88f}\label{class_fbx_manager_a5d7018830479ec28905f28575480f88f}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+Property}{FbxProperty}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_property}{Fbx\+Property}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_manager_abcc807c3523609e1c734764de626facc}\label{class_fbx_manager_abcc807c3523609e1c734764de626facc}} 
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Scene@{Fbx\+Scene}}
+\index{Fbx\+Scene@{Fbx\+Scene}!Fbx\+Manager@{Fbx\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+Scene}{FbxScene}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_scene}{Fbx\+Scene}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxmanager_8h}{fbxmanager.\+h}\end{DoxyCompactItemize}

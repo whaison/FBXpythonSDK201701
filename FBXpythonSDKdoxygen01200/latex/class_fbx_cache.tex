@@ -1,0 +1,1220 @@
+\hypertarget{class_fbx_cache}{}\section{Fbx\+Cache クラス}
+\label{class_fbx_cache}\index{Fbx\+Cache@{Fbx\+Cache}}
+
+
+{\ttfamily \#include $<$fbxcache.\+h$>$}
+
+
+
+Fbx\+Cache の継承関係図
+% FIG 0
+
+
+Fbx\+Cache 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139}{E\+Open\+Flag} \{ \hyperlink{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139acfeade2d8bab8a3b915f8064991cc007}{e\+Read\+Only}, 
+\hyperlink{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139af48325666196336ed9c672386686ef63}{e\+Write\+Only}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{Indent}\textbf{ e\+Max\+Point\+Cache\+V2 Format Specific Functions.}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_cache_a94fc2a702ee5c53cd41938c54cd4befd}{Open\+File\+For\+Write} (double p\+Frame\+Start\+Offset, double p\+Sampling\+Frame\+Rate, unsigned int p\+Sample\+Count, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+unsigned int \hyperlink{class_fbx_cache_a1aaeb41671716ea531a0b6402c59c878}{Get\+Sample\+Count} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+unsigned int \hyperlink{class_fbx_cache_a944e876d22843e5aec776cf9c11d80ad}{Get\+Point\+Count} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+double \hyperlink{class_fbx_cache_a73f12c006cfc12b696785c00df3fee58}{Get\+Frame\+Start\+Offset} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a91700888943ba42ce063617516f1159d}{Read} (unsigned int p\+Frame\+Index, double $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_ac83fc721f7eb4dbcb09dbb13efea76ce}{Write} (unsigned int p\+Frame\+Index, double $\ast$p\+Buffer, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ File conversion Functions.}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_cache_a6ead5beab13a47d8ccfbc3730a6fb2fa}{Convert\+From\+P\+C2\+To\+MC} (\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count} p\+File\+Count, double p\+Sampling\+Frame\+Rate, \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format} p\+Binary\+Format, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a2710bc7d786f60e90d54c192c02af938}{Convert\+From\+M\+C\+To\+P\+C2} (double p\+Sampling\+Frame\+Rate, unsigned int p\+Channel\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_cache_a224ab00ed0b4ead88a95a8c71f9c2575}{Open\+File} (\hyperlink{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139}{E\+Open\+Flag} p\+Flag, \hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count} p\+File\+Count, double p\+Sampling\+Frame\+Rate, const char $\ast$p\+Channel\+Name, const char $\ast$p\+Interpretation, unsigned int p\+Sample\+Count, unsigned int p\+Point\+Count, double p\+Frame\+Start\+Offset, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status, \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type} p\+M\+C\+Data\+Type=\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}{e\+Double\+Vector\+Array}, \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format} p\+Binary\+Format=\hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829a9f9f7cbd770451b48ea473902dd04568}{e\+M\+CX})
+\item 
+virtual void \hyperlink{class_fbx_cache_a9d648bdc0a19f84e8d8fc7c4660c02ae}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_cache_af5858468e7fe97ab7731ade2bc99ff78}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual void \hyperlink{class_fbx_cache_a0a020ee44ebdaf00433a492618f06ee4}{Destruct} (bool p\+Recursive)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Fbx\+Cache\+\_\+internal $\ast$ \hyperlink{class_fbx_cache_aa06daa79fd67613e9bfc1811f4fd84e8}{m\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Format Independent Functions.}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}{E\+File\+Format} \{ \hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a0a10dbb146bdcf65a3ac98a03b3b4e48}{e\+Unknown\+File\+Format}, 
+\hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a8ea5aa8db1a5a30035f4bb1bee8ff3a7}{e\+Max\+Point\+Cache\+V2}, 
+\hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a71f041c2c787346355e8ced9c3f29127}{e\+Maya\+Cache}, 
+\hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a1d9f43b0ddf3da5ec418c50f1d1b5549}{e\+Alembic}
+ \}
+\item 
+void \hyperlink{class_fbx_cache_a334522b228cbf7b5eb488e15606bf622}{Set\+Cache\+File\+Format} (\hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}{E\+File\+Format} p\+File\+Format, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}{E\+File\+Format} \hyperlink{class_fbx_cache_adabf432059b20e05cda5f3ddfab8f767}{Get\+Cache\+File\+Format} () const
+\item 
+void \hyperlink{class_fbx_cache_a4adc82174046fe9bce5b0a415b6e6963}{Set\+Cache\+File\+Name} (const char $\ast$p\+Relative\+File\+Name\+\_\+\+U\+T\+F8, const char $\ast$p\+Absolute\+File\+Name\+\_\+\+U\+T\+F8, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_cache_af1eb7de2d7a8ccb387d37f1c6da55c51}{Get\+Cache\+File\+Name} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+Relative\+File\+Name\+\_\+\+U\+T\+F8, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Absolute\+File\+Name\+\_\+\+U\+T\+F8) const
+\item 
+bool \hyperlink{class_fbx_cache_afb4370a1e87dbf36b92f0fa61ea64db8}{Open\+File\+For\+Read} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_af2ca87b431feef6ad4e106271f774672}{Is\+Open} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+bool \hyperlink{class_fbx_cache_a077130baffaab6448fbc984fec82f338}{Read} (float $\ast$$\ast$p\+Buffer, unsigned int \&p\+Buffer\+Length, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, unsigned int p\+Channel=0)
+\item 
+bool \hyperlink{class_fbx_cache_a5964ea31f7b94da6ece571748da74d95}{Close\+File} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+double \hyperlink{class_fbx_cache_a2b18922a125946be8ff89940f21ee3f2}{Get\+Sampling\+Frame\+Rate} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_cache_ab4407b29da65a695454e04731ba04200}{Get\+Cache\+Time\+Per\+Frame} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+int \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a9a9f0069551a1445ea4856580123ea9a}{Get\+Channel\+Name} (int p\+Channel\+Index, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Channel\+Name, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{e\+Maya\+Cache Format Specific Functions.}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count} \{ \hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36accc8c423e169fc778550575dcbd79bcc}{e\+M\+C\+One\+File}, 
+\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36a443acbc8142a8e4fa3eeb2e4c3fea327}{e\+M\+C\+One\+File\+Per\+Frame}
+ \}\begin{DoxyCompactList}\small\item\em Number of files used to store the animation. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type} \{ \newline
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a8b26bb731da16a3dbab5e918598872b8}{e\+Unknown\+Data}, 
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a09e5d7151cf86e037c15b41af0d65e9d}{e\+Double}, 
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3ae39b52564972de1cdcfde5ee56c5d4f2}{e\+Double\+Array}, 
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}{e\+Double\+Vector\+Array}, 
+\newline
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a0d06622346b6fc69daf634a1233217c7}{e\+Int32\+Array}, 
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3ae331b4603d8eea0b4917d022530f7d07}{e\+Float\+Array}, 
+\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a67596d008f526a50a8f0d888d3f5dd6a}{e\+Float\+Vector\+Array}
+ \}\begin{DoxyCompactList}\small\item\em Data types in the MC cache file. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format} \{ \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829af019bf2bf0ab0788673f38da0364570c}{e\+M\+CC}, 
+\hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829a9f9f7cbd770451b48ea473902dd04568}{e\+M\+CX}
+ \}\begin{DoxyCompactList}\small\item\em Binary cache format. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173}{E\+M\+C\+Sampling\+Type} \{ \hyperlink{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173ab7d871fa76cb0e28a77bfa48858637f2}{e\+Sampling\+Regular}, 
+\hyperlink{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173afa23e18952e41deafe9237381018d023}{e\+Sampling\+Irregular}
+ \}\begin{DoxyCompactList}\small\item\em Cache channel sampling types. \end{DoxyCompactList}
+\item 
+bool \hyperlink{class_fbx_cache_a430c418e921a876f442c064b301418be}{Open\+File\+For\+Write} (\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count} p\+File\+Count, double p\+Sampling\+Frame\+Rate, const char $\ast$p\+Channel\+Name, \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format} p\+Binary\+Format, \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type} p\+M\+C\+Data\+Type=\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}{e\+Double\+Vector\+Array}, const char $\ast$p\+Interpretation=\char`\"{}Points\char`\"{}, Fbx\+Status $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a5cc3311b704a1405aae637cd8a30e1c8}{Add\+Channel} (const char $\ast$p\+Channel\+Name, \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type} p\+M\+C\+Data\+Type, const char $\ast$p\+Interpretation, unsigned int \&p\+Channel\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a9d9df7b63fda0e41676187395c325b9b}{Get\+Channel\+Data\+Type} (int p\+Channel\+Index, \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type} \&p\+Channel\+Type, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+int \hyperlink{class_fbx_cache_a1fb8b5cea553cd7e03278700279efc90}{Get\+Channel\+Index} (const char $\ast$p\+Channel\+Name, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_ac31fdd1b306da04cebdb51a6b1fd8521}{Read} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, double $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a518383cfd39385e077ffc53be85aa728}{Read} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, float $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a513dbb2b726eaf353528c8c6900ec77b}{Read} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, int $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At} (\hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a9144c3dfd8441a1e73c759259fe1b9d9}{Write} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, double $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a6a8522f9c661337e4a458c67bcf1f659}{Write} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, float $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a4d1a6dbd1d65fa381ded138b7edbc219}{Write} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, int $\ast$p\+Buffer, unsigned int p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a3df95a880da51b2ad2a957f212d76ba6}{End\+Write\+At} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a974f809c072c4e71c4ff506259474aed}{Get\+Animation\+Range} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time\+Start, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time\+End, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a587ab185d45dbd55ed042f5f0a01f30b}{Get\+Cache\+Type} (\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count} \&p\+File\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a7eaddf9e8f0f583c4573f7f3203e226d}{Get\+Channel\+Interpretation} (int p\+Channel\+Index, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Interpretation, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a5a2763e150c2687f989f1cf69a08cbc8}{Get\+Channel\+Sampling\+Type} (int p\+Channel\+Index, \hyperlink{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173}{E\+M\+C\+Sampling\+Type} \&p\+Sampling\+Type, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a31d16dc4cc821fe13021991579632002}{Get\+Channel\+Sampling\+Rate} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Sampling\+Rate, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a2d0d0bd08638ef945a2e3aadcb26dee8}{Get\+Channel\+Sample\+Count} (int p\+Channel\+Index, unsigned int \&p\+Sample\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a347e4b40780ae2ae0511d62350a806f7}{Get\+Channel\+Point\+Count} (int p\+Channel\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, unsigned int \&p\+Point\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+int \hyperlink{class_fbx_cache_ab7f00992af7a2f0179184cba81d890a2}{Get\+Cache\+Data\+File\+Count} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+bool \hyperlink{class_fbx_cache_aa4e5178a3f2a3b76ca96fcf24e326d3b}{Get\+Cache\+Data\+File\+Name} (int p\+Index, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Relative\+File\+Name, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Absolute\+File\+Name, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a7dadad5c92261dc4a87638385b49b921}{Enable\+Multi\+Channel\+Fetching} (bool p\+Multi\+Channel\+Fetching, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_ae79158c3d2966623035e6cb27f5f17fe}{Get\+Next\+Time\+With\+Data} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Cur\+Time, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Next\+Time, int p\+Channel\+Index=-\/1, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+int \hyperlink{class_fbx_cache_a983233fa5f9e457651e3bc0f6dfde219}{Get\+Data\+Count} (int p\+Channel\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_cache_a75e249b339bf5a2b1d4f713ee6697e2a}{Get\+Data\+Time} (int p\+Channel\+Index, unsigned int p\+Data\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This object contains methods for accessing point animation in a cache file. The F\+BX S\+DK supports three point cache file formats \+:
+\begin{DoxyItemize}
+\item {\itshape e\+Max\+Point\+Cache\+V2\+:} the 3ds Max Point Cache 2 file format.
+\item {\itshape e\+Maya\+Cache\+:} the Maya Cache file format.
+\item {\itshape e\+Alembic\+:} Alembic Cache file format.
+\end{DoxyItemize}
+
+Accessing cache data using these formats differs significantly. To address this difference, several sets of methods have been created. Use the \hyperlink{class_fbx_cache_adabf432059b20e05cda5f3ddfab8f767}{Get\+Cache\+File\+Format()} function to determine which set of methods to use. 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}\label{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!E\+File\+Format@{E\+File\+Format}}
+\index{E\+File\+Format@{E\+File\+Format}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{E\+File\+Format}{EFileFormat}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}{Fbx\+Cache\+::\+E\+File\+Format}}
+
+Supported cache file formats. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown\+File\+Format@{e\+Unknown\+File\+Format}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Unknown\+File\+Format@{e\+Unknown\+File\+Format}}}\mbox{\Hypertarget{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a0a10dbb146bdcf65a3ac98a03b3b4e48}\label{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a0a10dbb146bdcf65a3ac98a03b3b4e48}} 
+e\+Unknown\+File\+Format&Unknown cache file format. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Max\+Point\+Cache\+V2@{e\+Max\+Point\+Cache\+V2}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Max\+Point\+Cache\+V2@{e\+Max\+Point\+Cache\+V2}}}\mbox{\Hypertarget{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a8ea5aa8db1a5a30035f4bb1bee8ff3a7}\label{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a8ea5aa8db1a5a30035f4bb1bee8ff3a7}} 
+e\+Max\+Point\+Cache\+V2&3ds Max Point Cache 2 file format. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Maya\+Cache@{e\+Maya\+Cache}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Maya\+Cache@{e\+Maya\+Cache}}}\mbox{\Hypertarget{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a71f041c2c787346355e8ced9c3f29127}\label{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a71f041c2c787346355e8ced9c3f29127}} 
+e\+Maya\+Cache&Maya Cache file format. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Alembic@{e\+Alembic}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Alembic@{e\+Alembic}}}\mbox{\Hypertarget{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a1d9f43b0ddf3da5ec418c50f1d1b5549}\label{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7a1d9f43b0ddf3da5ec418c50f1d1b5549}} 
+e\+Alembic&Alembic Cache file format. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}\label{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!E\+M\+C\+Binary\+Format@{E\+M\+C\+Binary\+Format}}
+\index{E\+M\+C\+Binary\+Format@{E\+M\+C\+Binary\+Format}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{E\+M\+C\+Binary\+Format}{EMCBinaryFormat}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{Fbx\+Cache\+::\+E\+M\+C\+Binary\+Format}}
+
+
+
+Binary cache format. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+CC@{e\+M\+CC}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+M\+CC@{e\+M\+CC}}}\mbox{\Hypertarget{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829af019bf2bf0ab0788673f38da0364570c}\label{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829af019bf2bf0ab0788673f38da0364570c}} 
+e\+M\+CC&M\+CC cache file format, 32bit (older format) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+CX@{e\+M\+CX}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+M\+CX@{e\+M\+CX}}}\mbox{\Hypertarget{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829a9f9f7cbd770451b48ea473902dd04568}\label{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829a9f9f7cbd770451b48ea473902dd04568}} 
+e\+M\+CX&M\+CX cache file format, 64bit (newer format) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!E\+M\+C\+Data\+Type@{E\+M\+C\+Data\+Type}}
+\index{E\+M\+C\+Data\+Type@{E\+M\+C\+Data\+Type}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{E\+M\+C\+Data\+Type}{EMCDataType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{Fbx\+Cache\+::\+E\+M\+C\+Data\+Type}}
+
+
+
+Data types in the MC cache file. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown\+Data@{e\+Unknown\+Data}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Unknown\+Data@{e\+Unknown\+Data}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a8b26bb731da16a3dbab5e918598872b8}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a8b26bb731da16a3dbab5e918598872b8}} 
+e\+Unknown\+Data&Unknown data. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Double@{e\+Double}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Double@{e\+Double}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a09e5d7151cf86e037c15b41af0d65e9d}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a09e5d7151cf86e037c15b41af0d65e9d}} 
+e\+Double&No use but has to be defined for consistency reasons. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Double\+Array@{e\+Double\+Array}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Double\+Array@{e\+Double\+Array}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3ae39b52564972de1cdcfde5ee56c5d4f2}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3ae39b52564972de1cdcfde5ee56c5d4f2}} 
+e\+Double\+Array&double$\ast$ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Double\+Vector\+Array@{e\+Double\+Vector\+Array}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Double\+Vector\+Array@{e\+Double\+Vector\+Array}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}} 
+e\+Double\+Vector\+Array&double$\ast$ \mbox{[}3\mbox{]} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Int32\+Array@{e\+Int32\+Array}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Int32\+Array@{e\+Int32\+Array}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a0d06622346b6fc69daf634a1233217c7}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a0d06622346b6fc69daf634a1233217c7}} 
+e\+Int32\+Array&int$\ast$ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Float\+Array@{e\+Float\+Array}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Float\+Array@{e\+Float\+Array}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3ae331b4603d8eea0b4917d022530f7d07}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3ae331b4603d8eea0b4917d022530f7d07}} 
+e\+Float\+Array&float$\ast$ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Float\+Vector\+Array@{e\+Float\+Vector\+Array}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Float\+Vector\+Array@{e\+Float\+Vector\+Array}}}\mbox{\Hypertarget{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a67596d008f526a50a8f0d888d3f5dd6a}\label{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a67596d008f526a50a8f0d888d3f5dd6a}} 
+e\+Float\+Vector\+Array&float$\ast$ \mbox{[}3\mbox{]} \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}\label{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!E\+M\+C\+File\+Count@{E\+M\+C\+File\+Count}}
+\index{E\+M\+C\+File\+Count@{E\+M\+C\+File\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{E\+M\+C\+File\+Count}{EMCFileCount}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{Fbx\+Cache\+::\+E\+M\+C\+File\+Count}}
+
+
+
+Number of files used to store the animation. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+C\+One\+File@{e\+M\+C\+One\+File}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+M\+C\+One\+File@{e\+M\+C\+One\+File}}}\mbox{\Hypertarget{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36accc8c423e169fc778550575dcbd79bcc}\label{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36accc8c423e169fc778550575dcbd79bcc}} 
+e\+M\+C\+One\+File&One file is used for all the frames of animation. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+M\+C\+One\+File\+Per\+Frame@{e\+M\+C\+One\+File\+Per\+Frame}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+M\+C\+One\+File\+Per\+Frame@{e\+M\+C\+One\+File\+Per\+Frame}}}\mbox{\Hypertarget{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36a443acbc8142a8e4fa3eeb2e4c3fea327}\label{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36a443acbc8142a8e4fa3eeb2e4c3fea327}} 
+e\+M\+C\+One\+File\+Per\+Frame&For every frame of animation, a cache file is used. The number of the frames is the number of the cache files. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173}\label{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!E\+M\+C\+Sampling\+Type@{E\+M\+C\+Sampling\+Type}}
+\index{E\+M\+C\+Sampling\+Type@{E\+M\+C\+Sampling\+Type}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{E\+M\+C\+Sampling\+Type}{EMCSamplingType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173}{Fbx\+Cache\+::\+E\+M\+C\+Sampling\+Type}}
+
+
+
+Cache channel sampling types. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Sampling\+Regular@{e\+Sampling\+Regular}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Sampling\+Regular@{e\+Sampling\+Regular}}}\mbox{\Hypertarget{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173ab7d871fa76cb0e28a77bfa48858637f2}\label{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173ab7d871fa76cb0e28a77bfa48858637f2}} 
+e\+Sampling\+Regular&Regular sampling. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Sampling\+Irregular@{e\+Sampling\+Irregular}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Sampling\+Irregular@{e\+Sampling\+Irregular}}}\mbox{\Hypertarget{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173afa23e18952e41deafe9237381018d023}\label{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173afa23e18952e41deafe9237381018d023}} 
+e\+Sampling\+Irregular&Irregular sampling. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139}\label{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!E\+Open\+Flag@{E\+Open\+Flag}}
+\index{E\+Open\+Flag@{E\+Open\+Flag}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{E\+Open\+Flag}{EOpenFlag}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139}{Fbx\+Cache\+::\+E\+Open\+Flag}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Read\+Only@{e\+Read\+Only}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Read\+Only@{e\+Read\+Only}}}\mbox{\Hypertarget{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139acfeade2d8bab8a3b915f8064991cc007}\label{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139acfeade2d8bab8a3b915f8064991cc007}} 
+e\+Read\+Only&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Write\+Only@{e\+Write\+Only}!Fbx\+Cache@{Fbx\+Cache}}\index{Fbx\+Cache@{Fbx\+Cache}!e\+Write\+Only@{e\+Write\+Only}}}\mbox{\Hypertarget{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139af48325666196336ed9c672386686ef63}\label{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139af48325666196336ed9c672386686ef63}} 
+e\+Write\+Only&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_cache_a5cc3311b704a1405aae637cd8a30e1c8}\label{class_fbx_cache_a5cc3311b704a1405aae637cd8a30e1c8}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Add\+Channel@{Add\+Channel}}
+\index{Add\+Channel@{Add\+Channel}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Add\+Channel()}{AddChannel()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Add\+Channel (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Channel\+Name,  }\item[{\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type}}]{p\+M\+C\+Data\+Type,  }\item[{const char $\ast$}]{p\+Interpretation,  }\item[{unsigned int \&}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Creates a new channel in the cache. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Name} & The name of the channel of animation to create. \\
+\hline
+{\em p\+M\+C\+Data\+Type} & The MC Data\+Type of the cache. \\
+\hline
+{\em p\+Interpretation} & A piece of meta data to help users of the cache understand how to interpret the data. \\
+\hline
+{\em p\+Channel\+Index} & The index of the new animation channel. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+{\bfseries p\+Channel\+Name} must be unique within the cache. 
+
+{\bfseries p\+Channel\+Name} and {\bfseries p\+Interpretation} cannot be N\+U\+LL pointers. 
+
+This method must be called before adding any data to the cache but after the Open\+File\+For\+Write. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_ade715322780a6993e218251092f3c5c8}\label{class_fbx_cache_ade715322780a6993e218251092f3c5c8}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Begin\+Write\+At@{Begin\+Write\+At}}
+\index{Begin\+Write\+At@{Begin\+Write\+At}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Begin\+Write\+At()}{BeginWriteAt()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Begin\+Write\+At (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Instruct the cache system that data is about to be written to it. This call must appear before any calls to the \hyperlink{class_fbx_cache_a9144c3dfd8441a1e73c759259fe1b9d9}{Write()} methods on any channel and terminated by a call to \hyperlink{class_fbx_cache_a3df95a880da51b2ad2a957f212d76ba6}{End\+Write\+At()}. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time at which the point animation must be inserted. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a5964ea31f7b94da6ece571748da74d95}\label{class_fbx_cache_a5964ea31f7b94da6ece571748da74d95}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Close\+File@{Close\+File}}
+\index{Close\+File@{Close\+File}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Close\+File()}{CloseFile()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Close\+File (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Close the cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the cache file is closed successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a9d648bdc0a19f84e8d8fc7c4660c02ae}\label{class_fbx_cache_a9d648bdc0a19f84e8d8fc7c4660c02ae}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Cache\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cache_af5858468e7fe97ab7731ade2bc99ff78}\label{class_fbx_cache_af5858468e7fe97ab7731ade2bc99ff78}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Cache\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cache_a2710bc7d786f60e90d54c192c02af938}\label{class_fbx_cache_a2710bc7d786f60e90d54c192c02af938}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Convert\+From\+M\+C\+To\+P\+C2@{Convert\+From\+M\+C\+To\+P\+C2}}
+\index{Convert\+From\+M\+C\+To\+P\+C2@{Convert\+From\+M\+C\+To\+P\+C2}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Convert\+From\+M\+C\+To\+P\+C2()}{ConvertFromMCToPC2()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Convert\+From\+M\+C\+To\+P\+C2 (\begin{DoxyParamCaption}\item[{double}]{p\+Sampling\+Frame\+Rate,  }\item[{unsigned int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Create a P\+C2 cache file from an MC cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Sampling\+Frame\+Rate} & Number of frames per second to re-\/sample the point animation. \\
+\hline
+{\em p\+Channel\+Index} & Index of the channel of animation to read from. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created point cache file will be located in the \+\_\+fpc folder associate with the F\+BX file. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_a6ead5beab13a47d8ccfbc3730a6fb2fa}\label{class_fbx_cache_a6ead5beab13a47d8ccfbc3730a6fb2fa}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Convert\+From\+P\+C2\+To\+MC@{Convert\+From\+P\+C2\+To\+MC}}
+\index{Convert\+From\+P\+C2\+To\+MC@{Convert\+From\+P\+C2\+To\+MC}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Convert\+From\+P\+C2\+To\+M\+C()}{ConvertFromPC2ToMC()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Convert\+From\+P\+C2\+To\+MC (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count}}]{p\+File\+Count,  }\item[{double}]{p\+Sampling\+Frame\+Rate,  }\item[{\hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format}}]{p\+Binary\+Format,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Create an MC cache file from an P\+C2 cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Count} & Create one file for each frame of animation, or one file for all the frames. \\
+\hline
+{\em p\+Sampling\+Frame\+Rate} & Number of frames per second used to re-\/sample the point animation. \\
+\hline
+{\em p\+Binary\+Format} & Binary format type (32 bit=e\+M\+CC or 64bit=e\+M\+CX) \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created point cache file will be located in the \+\_\+fpc folder associate with the F\+BX file. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_a0a020ee44ebdaf00433a492618f06ee4}\label{class_fbx_cache_a0a020ee44ebdaf00433a492618f06ee4}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Cache\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_cache_a7dadad5c92261dc4a87638385b49b921}\label{class_fbx_cache_a7dadad5c92261dc4a87638385b49b921}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Enable\+Multi\+Channel\+Fetching@{Enable\+Multi\+Channel\+Fetching}}
+\index{Enable\+Multi\+Channel\+Fetching@{Enable\+Multi\+Channel\+Fetching}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Enable\+Multi\+Channel\+Fetching()}{EnableMultiChannelFetching()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Enable\+Multi\+Channel\+Fetching (\begin{DoxyParamCaption}\item[{bool}]{p\+Multi\+Channel\+Fetching,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Enable multi-\/channel fetching. 
+\begin{DoxyParams}{引数}
+{\em p\+Multi\+Channel\+Fetching} & Enable/disable multi-\/channel fetching. When multi-\/channel is enabled, any load of data on a channel at a specific time will pre-\/fetch data from all channels, for that specific time. This can reduce disk access, and increase performance (but requires more memory). \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a3df95a880da51b2ad2a957f212d76ba6}\label{class_fbx_cache_a3df95a880da51b2ad2a957f212d76ba6}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!End\+Write\+At@{End\+Write\+At}}
+\index{End\+Write\+At@{End\+Write\+At}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{End\+Write\+At()}{EndWriteAt()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+End\+Write\+At (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Instruct the cache system that all the data on all the channels has been written to it for the given time (specified by the \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()} call). The call to this method must be made after all the \hyperlink{class_fbx_cache_a9144c3dfd8441a1e73c759259fe1b9d9}{Write()} for every channel defined. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a974f809c072c4e71c4ff506259474aed}\label{class_fbx_cache_a974f809c072c4e71c4ff506259474aed}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Animation\+Range@{Get\+Animation\+Range}}
+\index{Get\+Animation\+Range@{Get\+Animation\+Range}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Animation\+Range()}{GetAnimationRange()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Animation\+Range (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time\+Start,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time\+End,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the Animation Range of the specified channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the channel. \\
+\hline
+{\em p\+Time\+Start} & The start time of the channel\textquotesingle{}s animation. \\
+\hline
+{\em p\+Time\+End} & The end time of the channel\textquotesingle{}s animation. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_ab7f00992af7a2f0179184cba81d890a2}\label{class_fbx_cache_ab7f00992af7a2f0179184cba81d890a2}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Cache\+Data\+File\+Count@{Get\+Cache\+Data\+File\+Count}}
+\index{Get\+Cache\+Data\+File\+Count@{Get\+Cache\+Data\+File\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Cache\+Data\+File\+Count()}{GetCacheDataFileCount()}}
+{\footnotesize\ttfamily int Fbx\+Cache\+::\+Get\+Cache\+Data\+File\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the number of cache data files. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The count returned does not include the main cache file, and depends on the cache type. Will return -\/1 if point cache support is not enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_aa4e5178a3f2a3b76ca96fcf24e326d3b}\label{class_fbx_cache_aa4e5178a3f2a3b76ca96fcf24e326d3b}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Cache\+Data\+File\+Name@{Get\+Cache\+Data\+File\+Name}}
+\index{Get\+Cache\+Data\+File\+Name@{Get\+Cache\+Data\+File\+Name}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Cache\+Data\+File\+Name()}{GetCacheDataFileName()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Cache\+Data\+File\+Name (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Relative\+File\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Absolute\+File\+Name,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the nth cache file name. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the cache file to return; index is zero-\/based, and must be less than \hyperlink{class_fbx_cache_ab7f00992af7a2f0179184cba81d890a2}{Get\+Cache\+Data\+File\+Count()}. \\
+\hline
+{\em p\+Relative\+File\+Name} & Return the point cache file name, relative to the F\+BX File name. \\
+\hline
+{\em p\+Absolute\+File\+Name} & Return the point cache file absolute path. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. See the error management functions for error details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_adabf432059b20e05cda5f3ddfab8f767}\label{class_fbx_cache_adabf432059b20e05cda5f3ddfab8f767}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Cache\+File\+Format@{Get\+Cache\+File\+Format}}
+\index{Get\+Cache\+File\+Format@{Get\+Cache\+File\+Format}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Cache\+File\+Format()}{GetCacheFileFormat()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}{E\+File\+Format} Fbx\+Cache\+::\+Get\+Cache\+File\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the cache file format. \begin{DoxyReturn}{戻り値}
+The current cache file format, or {\itshape e\+Unknown} if it is not set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_af1eb7de2d7a8ccb387d37f1c6da55c51}\label{class_fbx_cache_af1eb7de2d7a8ccb387d37f1c6da55c51}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Cache\+File\+Name@{Get\+Cache\+File\+Name}}
+\index{Get\+Cache\+File\+Name@{Get\+Cache\+File\+Name}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Cache\+File\+Name()}{GetCacheFileName()}}
+{\footnotesize\ttfamily void Fbx\+Cache\+::\+Get\+Cache\+File\+Name (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Relative\+File\+Name\+\_\+\+U\+T\+F8,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Absolute\+File\+Name\+\_\+\+U\+T\+F8 }\end{DoxyParamCaption}) const}
+
+Get the cache file name. 
+\begin{DoxyParams}{引数}
+{\em p\+Relative\+File\+Name\+\_\+\+U\+T\+F8} & Return the point cache file name, relative to the F\+BX File name. \\
+\hline
+{\em p\+Absolute\+File\+Name\+\_\+\+U\+T\+F8} & Return the point cache file absolute path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_cache_ab4407b29da65a695454e04731ba04200}\label{class_fbx_cache_ab4407b29da65a695454e04731ba04200}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Cache\+Time\+Per\+Frame@{Get\+Cache\+Time\+Per\+Frame}}
+\index{Get\+Cache\+Time\+Per\+Frame@{Get\+Cache\+Time\+Per\+Frame}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Cache\+Time\+Per\+Frame()}{GetCacheTimePerFrame()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+Cache\+::\+Get\+Cache\+Time\+Per\+Frame (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the sampling frame rate of the cache file, as a \hyperlink{class_fbx_time}{Fbx\+Time} object. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The sampling frame rate of the cache file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a587ab185d45dbd55ed042f5f0a01f30b}\label{class_fbx_cache_a587ab185d45dbd55ed042f5f0a01f30b}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Cache\+Type@{Get\+Cache\+Type}}
+\index{Get\+Cache\+Type@{Get\+Cache\+Type}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Cache\+Type()}{GetCacheType()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Cache\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count} \&}]{p\+File\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the cache type. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Count} & The cache type. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}\label{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Count@{Get\+Channel\+Count}}
+\index{Get\+Channel\+Count@{Get\+Channel\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Count()}{GetChannelCount()}}
+{\footnotesize\ttfamily int Fbx\+Cache\+::\+Get\+Channel\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of channels in the cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of animation channels in the cache file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a9d9df7b63fda0e41676187395c325b9b}\label{class_fbx_cache_a9d9df7b63fda0e41676187395c325b9b}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Data\+Type@{Get\+Channel\+Data\+Type}}
+\index{Get\+Channel\+Data\+Type@{Get\+Channel\+Data\+Type}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Data\+Type()}{GetChannelDataType()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Data\+Type (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type} \&}]{p\+Channel\+Type,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the data type of the specified channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the channel. \\
+\hline
+{\em p\+Channel\+Type} & The channel\textquotesingle{}s data type. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a1fb8b5cea553cd7e03278700279efc90}\label{class_fbx_cache_a1fb8b5cea553cd7e03278700279efc90}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Index@{Get\+Channel\+Index}}
+\index{Get\+Channel\+Index@{Get\+Channel\+Index}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Index()}{GetChannelIndex()}}
+{\footnotesize\ttfamily int Fbx\+Cache\+::\+Get\+Channel\+Index (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Channel\+Name,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the index of the specified channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Name} & The name of the channel. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the channel in the cache file, or -\/1 if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a7eaddf9e8f0f583c4573f7f3203e226d}\label{class_fbx_cache_a7eaddf9e8f0f583c4573f7f3203e226d}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Interpretation@{Get\+Channel\+Interpretation}}
+\index{Get\+Channel\+Interpretation@{Get\+Channel\+Interpretation}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Interpretation()}{GetChannelInterpretation()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Interpretation (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Interpretation,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the cache channel interpretation. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Interpretation} & The channel interpretation, user-\/defined. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a9a9f0069551a1445ea4856580123ea9a}\label{class_fbx_cache_a9a9f0069551a1445ea4856580123ea9a}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Name@{Get\+Channel\+Name}}
+\index{Get\+Channel\+Name@{Get\+Channel\+Name}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Name()}{GetChannelName()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Name (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Channel\+Name,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the channel name for a specific channel index. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Channel\+Name} & Returns the name of the requested channel. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a347e4b40780ae2ae0511d62350a806f7}\label{class_fbx_cache_a347e4b40780ae2ae0511d62350a806f7}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Point\+Count@{Get\+Channel\+Point\+Count}}
+\index{Get\+Channel\+Point\+Count@{Get\+Channel\+Point\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Point\+Count()}{GetChannelPointCount()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Point\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{unsigned int \&}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of points animated in the cache file, for a channel, for a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Reference time; must be within the boundaries of the animation. \\
+\hline
+{\em p\+Point\+Count} & Number of available points. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a2d0d0bd08638ef945a2e3aadcb26dee8}\label{class_fbx_cache_a2d0d0bd08638ef945a2e3aadcb26dee8}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Sample\+Count@{Get\+Channel\+Sample\+Count}}
+\index{Get\+Channel\+Sample\+Count@{Get\+Channel\+Sample\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Sample\+Count()}{GetChannelSampleCount()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Sample\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{unsigned int \&}]{p\+Sample\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of data points for a channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Sample\+Count} & Number of available samples. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a31d16dc4cc821fe13021991579632002}\label{class_fbx_cache_a31d16dc4cc821fe13021991579632002}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Sampling\+Rate@{Get\+Channel\+Sampling\+Rate}}
+\index{Get\+Channel\+Sampling\+Rate@{Get\+Channel\+Sampling\+Rate}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Sampling\+Rate()}{GetChannelSamplingRate()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Sampling\+Rate (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Sampling\+Rate,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the cache channel sampling rate, in frames per second. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Sampling\+Rate} & The sampling rate of the channel. The channel must have a regular sampling type. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a5a2763e150c2687f989f1cf69a08cbc8}\label{class_fbx_cache_a5a2763e150c2687f989f1cf69a08cbc8}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Channel\+Sampling\+Type@{Get\+Channel\+Sampling\+Type}}
+\index{Get\+Channel\+Sampling\+Type@{Get\+Channel\+Sampling\+Type}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Sampling\+Type()}{GetChannelSamplingType()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Channel\+Sampling\+Type (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_cache_a9d4d8e73c5e2f510b7884ceaee13a173}{E\+M\+C\+Sampling\+Type} \&}]{p\+Sampling\+Type,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the cache channel sampling type. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Sampling\+Type} & The sampling type of the channel. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a983233fa5f9e457651e3bc0f6dfde219}\label{class_fbx_cache_a983233fa5f9e457651e3bc0f6dfde219}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Data\+Count@{Get\+Data\+Count}}
+\index{Get\+Data\+Count@{Get\+Data\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Data\+Count()}{GetDataCount()}}
+{\footnotesize\ttfamily int Fbx\+Cache\+::\+Get\+Data\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of data points the channel contains. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of the channel\textquotesingle{}s data points. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a75e249b339bf5a2b1d4f713ee6697e2a}\label{class_fbx_cache_a75e249b339bf5a2b1d4f713ee6697e2a}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Data\+Time@{Get\+Data\+Time}}
+\index{Get\+Data\+Time@{Get\+Data\+Time}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Data\+Time()}{GetDataTime()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Data\+Time (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{unsigned int}]{p\+Data\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the time of the specified data point. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Data\+Index} & Index of the data point. \\
+\hline
+{\em p\+Time} & Time of the data point (filled if the function is successful). \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a73f12c006cfc12b696785c00df3fee58}\label{class_fbx_cache_a73f12c006cfc12b696785c00df3fee58}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Frame\+Start\+Offset@{Get\+Frame\+Start\+Offset}}
+\index{Get\+Frame\+Start\+Offset@{Get\+Frame\+Start\+Offset}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Frame\+Start\+Offset()}{GetFrameStartOffset()}}
+{\footnotesize\ttfamily double Fbx\+Cache\+::\+Get\+Frame\+Start\+Offset (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the start time of the animation 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The start time of the animation, in frames. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_ae79158c3d2966623035e6cb27f5f17fe}\label{class_fbx_cache_ae79158c3d2966623035e6cb27f5f17fe}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Next\+Time\+With\+Data@{Get\+Next\+Time\+With\+Data}}
+\index{Get\+Next\+Time\+With\+Data@{Get\+Next\+Time\+With\+Data}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Next\+Time\+With\+Data()}{GetNextTimeWithData()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Get\+Next\+Time\+With\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Cur\+Time,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Next\+Time,  }\item[{int}]{p\+Channel\+Index = {\ttfamily -\/1},  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the next time where data is stored. 
+\begin{DoxyParams}{引数}
+{\em p\+Cur\+Time} & Current time; must be within the boundaries of the animation time. \\
+\hline
+{\em p\+Next\+Time} & Next time (filled if the function is successful). \\
+\hline
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. If p\+Channel is left at -\/1, get the next time for any channel. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a944e876d22843e5aec776cf9c11d80ad}\label{class_fbx_cache_a944e876d22843e5aec776cf9c11d80ad}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Point\+Count@{Get\+Point\+Count}}
+\index{Get\+Point\+Count@{Get\+Point\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Point\+Count()}{GetPointCount()}}
+{\footnotesize\ttfamily unsigned int Fbx\+Cache\+::\+Get\+Point\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of points animated in the cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of points. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a1aaeb41671716ea531a0b6402c59c878}\label{class_fbx_cache_a1aaeb41671716ea531a0b6402c59c878}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Sample\+Count@{Get\+Sample\+Count}}
+\index{Get\+Sample\+Count@{Get\+Sample\+Count}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Sample\+Count()}{GetSampleCount()}}
+{\footnotesize\ttfamily unsigned int Fbx\+Cache\+::\+Get\+Sample\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the number of frames of animation found in the point cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of frames of animation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a2b18922a125946be8ff89940f21ee3f2}\label{class_fbx_cache_a2b18922a125946be8ff89940f21ee3f2}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Get\+Sampling\+Frame\+Rate@{Get\+Sampling\+Frame\+Rate}}
+\index{Get\+Sampling\+Frame\+Rate@{Get\+Sampling\+Frame\+Rate}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Get\+Sampling\+Frame\+Rate()}{GetSamplingFrameRate()}}
+{\footnotesize\ttfamily double Fbx\+Cache\+::\+Get\+Sampling\+Frame\+Rate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the sampling frame rate of the cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The sampling frame rate of the cache file, in frames per second. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_af2ca87b431feef6ad4e106271f774672}\label{class_fbx_cache_af2ca87b431feef6ad4e106271f774672}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Is\+Open@{Is\+Open}}
+\index{Is\+Open@{Is\+Open}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Is\+Open()}{IsOpen()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Is\+Open (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Get the open state of the cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the cache file is currently open, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a224ab00ed0b4ead88a95a8c71f9c2575}\label{class_fbx_cache_a224ab00ed0b4ead88a95a8c71f9c2575}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Open\+File@{Open\+File}}
+\index{Open\+File@{Open\+File}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Open\+File()}{OpenFile()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Open\+File (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cache_a92f455159736ec2cdc0c282af9dbd139}{E\+Open\+Flag}}]{p\+Flag,  }\item[{\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count}}]{p\+File\+Count,  }\item[{double}]{p\+Sampling\+Frame\+Rate,  }\item[{const char $\ast$}]{p\+Channel\+Name,  }\item[{const char $\ast$}]{p\+Interpretation,  }\item[{unsigned int}]{p\+Sample\+Count,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{double}]{p\+Frame\+Start\+Offset,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status,  }\item[{\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type}}]{p\+M\+C\+Data\+Type = {\ttfamily \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}{e\+Double\+Vector\+Array}},  }\item[{\hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format}}]{p\+Binary\+Format = {\ttfamily \hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829a9f9f7cbd770451b48ea473902dd04568}{e\+M\+CX}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_cache_afb4370a1e87dbf36b92f0fa61ea64db8}\label{class_fbx_cache_afb4370a1e87dbf36b92f0fa61ea64db8}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Open\+File\+For\+Read@{Open\+File\+For\+Read}}
+\index{Open\+File\+For\+Read@{Open\+File\+For\+Read}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Open\+File\+For\+Read()}{OpenFileForRead()}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Open\+File\+For\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Open the cache file for reading. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the file is successfully opened, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a430c418e921a876f442c064b301418be}\label{class_fbx_cache_a430c418e921a876f442c064b301418be}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Open\+File\+For\+Write@{Open\+File\+For\+Write}}
+\index{Open\+File\+For\+Write@{Open\+File\+For\+Write}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Open\+File\+For\+Write()}{OpenFileForWrite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Open\+File\+For\+Write (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cache_afa5d133385fbd74b59e619c692a9cc36}{E\+M\+C\+File\+Count}}]{p\+File\+Count,  }\item[{double}]{p\+Sampling\+Frame\+Rate,  }\item[{const char $\ast$}]{p\+Channel\+Name,  }\item[{\hyperlink{class_fbx_cache_af3afea849dd371f0b5ecbe135d34b829}{E\+M\+C\+Binary\+Format}}]{p\+Binary\+Format,  }\item[{\hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3}{E\+M\+C\+Data\+Type}}]{p\+M\+C\+Data\+Type = {\ttfamily \hyperlink{class_fbx_cache_a80f82fa5f485ff6c46565ffb151998b3a650d3bda5d6886776bee42118f711cb3}{e\+Double\+Vector\+Array}},  }\item[{const char $\ast$}]{p\+Interpretation = {\ttfamily \char`\"{}Points\char`\"{}},  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Open a cache file for writing. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Count} & Create one file for each frame of animation, or one file for all the frames. \\
+\hline
+{\em p\+Sampling\+Frame\+Rate} & Number of frames per second. \\
+\hline
+{\em p\+Channel\+Name} & The name of the channel of animation to create. \\
+\hline
+{\em p\+Binary\+Format} & Binary format type (32 bit=e\+M\+CC or 64bit=e\+M\+CX) \\
+\hline
+{\em p\+M\+C\+Data\+Type} & The data type of the MC cache file. \\
+\hline
+{\em p\+Interpretation} & A piece of meta data to help users of the cache understand how to interpret the data. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_cache_a94fc2a702ee5c53cd41938c54cd4befd}\label{class_fbx_cache_a94fc2a702ee5c53cd41938c54cd4befd}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Open\+File\+For\+Write@{Open\+File\+For\+Write}}
+\index{Open\+File\+For\+Write@{Open\+File\+For\+Write}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Open\+File\+For\+Write()}{OpenFileForWrite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Open\+File\+For\+Write (\begin{DoxyParamCaption}\item[{double}]{p\+Frame\+Start\+Offset,  }\item[{double}]{p\+Sampling\+Frame\+Rate,  }\item[{unsigned int}]{p\+Sample\+Count,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Open a cache file for writing. 
+\begin{DoxyParams}{引数}
+{\em p\+Frame\+Start\+Offset} & Start time of the animation, in frames. \\
+\hline
+{\em p\+Sampling\+Frame\+Rate} & Number of frames per second. \\
+\hline
+{\em p\+Sample\+Count} & The number of samples to write to the file. \\
+\hline
+{\em p\+Point\+Count} & The number of points to write in the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. See the error management functions for error details. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a077130baffaab6448fbc984fec82f338}\label{class_fbx_cache_a077130baffaab6448fbc984fec82f338}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Read (\begin{DoxyParamCaption}\item[{float $\ast$$\ast$}]{p\+Buffer,  }\item[{unsigned int \&}]{p\+Buffer\+Length,  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{unsigned int}]{p\+Channel = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Read data from the cache file. 
+\begin{DoxyParams}{引数}
+{\em p\+Buffer} & The buffer containing the data from the cache file. This parameter can be N\+U\+LL if interested to get buffer length only. \\
+\hline
+{\em p\+Buffer\+Length} & The length of the buffer (N\+OT in bytes). \\
+\hline
+{\em p\+Time} & The time at which the data should be read. \\
+\hline
+{\em p\+Channel} & The cache file channel to read, when multiple channels are available. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the cache data was successfully read, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The buffer will be allocated by \hyperlink{class_fbx_cache}{Fbx\+Cache} and will be returned if read successful. The buffer will be freed by \hyperlink{class_fbx_cache}{Fbx\+Cache} upon its destruction. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_ac31fdd1b306da04cebdb51a6b1fd8521}\label{class_fbx_cache_ac31fdd1b306da04cebdb51a6b1fd8521}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Read (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{double $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Read a sample at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Time at which the point animation must be evaluated. \\
+\hline
+{\em p\+Buffer} & The place where the point value will be copied. If the channel\textquotesingle{}s data type is Double\+Vector\+Array this buffer must be of size 3$\ast$p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to read from the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a518383cfd39385e077ffc53be85aa728}\label{class_fbx_cache_a518383cfd39385e077ffc53be85aa728}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Read (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{float $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Read a sample at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Time at which the point animation must be evaluated. \\
+\hline
+{\em p\+Buffer} & The place where the point value will be copied. If the channel\textquotesingle{}s data type is Float\+Vector\+Array this buffer must be of size 3$\ast$p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to read from the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a513dbb2b726eaf353528c8c6900ec77b}\label{class_fbx_cache_a513dbb2b726eaf353528c8c6900ec77b}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Read (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{int $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Read a sample at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Time at which the point animation must be evaluated. \\
+\hline
+{\em p\+Buffer} & The place where the point value will be copied. This buffer must be of size p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to read from the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a91700888943ba42ce063617516f1159d}\label{class_fbx_cache_a91700888943ba42ce063617516f1159d}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Read (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Frame\+Index,  }\item[{double $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Read a sample at a given frame index. 
+\begin{DoxyParams}{引数}
+{\em p\+Frame\+Index} & The index of the animation frame, between 0 and \hyperlink{class_fbx_cache_a1aaeb41671716ea531a0b6402c59c878}{Get\+Sample\+Count()}. \\
+\hline
+{\em p\+Buffer} & The place where the point value will be copied. This buffer must be of size 3 $\ast$ p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to read from the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_cache_a334522b228cbf7b5eb488e15606bf622}\label{class_fbx_cache_a334522b228cbf7b5eb488e15606bf622}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Set\+Cache\+File\+Format@{Set\+Cache\+File\+Format}}
+\index{Set\+Cache\+File\+Format@{Set\+Cache\+File\+Format}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Set\+Cache\+File\+Format()}{SetCacheFileFormat()}}
+{\footnotesize\ttfamily void Fbx\+Cache\+::\+Set\+Cache\+File\+Format (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cache_ab8202edfb74969539e92a4d1734df3e7}{E\+File\+Format}}]{p\+File\+Format,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Set the cache file format. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Format} & Valid values are {\itshape e\+Max\+Point\+Cache\+V2} or {\itshape e\+Maya\+Cache}. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_cache_a4adc82174046fe9bce5b0a415b6e6963}\label{class_fbx_cache_a4adc82174046fe9bce5b0a415b6e6963}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Set\+Cache\+File\+Name@{Set\+Cache\+File\+Name}}
+\index{Set\+Cache\+File\+Name@{Set\+Cache\+File\+Name}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Set\+Cache\+File\+Name()}{SetCacheFileName()}}
+{\footnotesize\ttfamily void Fbx\+Cache\+::\+Set\+Cache\+File\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Relative\+File\+Name\+\_\+\+U\+T\+F8,  }\item[{const char $\ast$}]{p\+Absolute\+File\+Name\+\_\+\+U\+T\+F8,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Set the cache file name. 
+\begin{DoxyParams}{引数}
+{\em p\+Relative\+File\+Name\+\_\+\+U\+T\+F8} & The point cache file, relative to the F\+BX file name. \\
+\hline
+{\em p\+Absolute\+File\+Name\+\_\+\+U\+T\+F8} & The point cache file absolute path. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_cache_a9144c3dfd8441a1e73c759259fe1b9d9}\label{class_fbx_cache_a9144c3dfd8441a1e73c759259fe1b9d9}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Write@{Write}}
+\index{Write@{Write}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Write (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{double $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Write a sample at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Time at which the point animation must be inserted. \\
+\hline
+{\em p\+Buffer} & Point to the values to be copied. If the channel\textquotesingle{}s data type is Double\+Vector\+Array this buffer must be of size 3$\ast$p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to write in the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method will fail if the time {\itshape p\+Time} is different from the time set using the call \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()}. 
+
+For backward compatibility reasons you can still call this method without the prior call to \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()} only if this cachedsystem has been defined with one channel. Any other configuration will result in a failure. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_a6a8522f9c661337e4a458c67bcf1f659}\label{class_fbx_cache_a6a8522f9c661337e4a458c67bcf1f659}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Write@{Write}}
+\index{Write@{Write}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Write (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{float $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Write a sample at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Time at which the point animation must be inserted. \\
+\hline
+{\em p\+Buffer} & Point to the values to be copied. If the channel\textquotesingle{}s data type is Float\+Vector\+Array this buffer must be of size 3$\ast$p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to write in the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method will fail if the time {\itshape p\+Time} is different from the time set using the call \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()}. 
+
+For backward compatibility reasons you can still call this method without the prior call to \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()} only if this cached system has been defined with one channel. Any other configuration will result in a failure. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_a4d1a6dbd1d65fa381ded138b7edbc219}\label{class_fbx_cache_a4d1a6dbd1d65fa381ded138b7edbc219}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Write@{Write}}
+\index{Write@{Write}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Write (\begin{DoxyParamCaption}\item[{int}]{p\+Channel\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{int $\ast$}]{p\+Buffer,  }\item[{unsigned int}]{p\+Point\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Write a sample at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Channel\+Index} & The index of the animation channel, between 0 and \hyperlink{class_fbx_cache_a1e2a07637eec39ae1eefb85fa29bc552}{Get\+Channel\+Count()}. \\
+\hline
+{\em p\+Time} & Time at which the point animation must be inserted. \\
+\hline
+{\em p\+Buffer} & Point to the values to be copied. This buffer must be of size p\+Point\+Count. \\
+\hline
+{\em p\+Point\+Count} & The number of points to write in the point cache file. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method will fail if the time {\itshape p\+Time} is different from the time set using the call \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()}. 
+
+For backward compatibility reasons you can still call this method without the prior call to \hyperlink{class_fbx_cache_ade715322780a6993e218251092f3c5c8}{Begin\+Write\+At()} only if this cached system has been defined with one channel. Any other configuration will result in a failure. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_cache_ac83fc721f7eb4dbcb09dbb13efea76ce}\label{class_fbx_cache_ac83fc721f7eb4dbcb09dbb13efea76ce}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!Write@{Write}}
+\index{Write@{Write}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Fbx\+Cache\+::\+Write (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Frame\+Index,  }\item[{double $\ast$}]{p\+Buffer,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Write a sample at a given frame index. 
+\begin{DoxyParams}{引数}
+{\em p\+Frame\+Index} & The index of the animation frame. \\
+\hline
+{\em p\+Buffer} & Point to the values to be copied. This buffer must be of size 3 $\ast$ p\+Point\+Count, as passed to the function \hyperlink{class_fbx_cache_a430c418e921a876f442c064b301418be}{Open\+File\+For\+Write()}. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Successive calls to \hyperlink{class_fbx_cache_a9144c3dfd8441a1e73c759259fe1b9d9}{Write()} must use successive index. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_cache_aa06daa79fd67613e9bfc1811f4fd84e8}\label{class_fbx_cache_aa06daa79fd67613e9bfc1811f4fd84e8}} 
+\index{Fbx\+Cache@{Fbx\+Cache}!m\+Data@{m\+Data}}
+\index{m\+Data@{m\+Data}!Fbx\+Cache@{Fbx\+Cache}}
+\subsubsection{\texorpdfstring{m\+Data}{mData}}
+{\footnotesize\ttfamily Fbx\+Cache\+\_\+internal$\ast$ Fbx\+Cache\+::m\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxcache_8h}{fbxcache.\+h}\end{DoxyCompactItemize}

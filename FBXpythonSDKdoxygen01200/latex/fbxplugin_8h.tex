@@ -1,0 +1,65 @@
+\hypertarget{fbxplugin_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/core/fbxplugin.h ファイル}
+\label{fbxplugin_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/fbxplugin.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/fbxplugin.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxobject.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxmodule.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxlistener.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+fbxplugin.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_plugin_def}{Fbx\+Plugin\+Def}
+\item 
+struct \hyperlink{struct_fbx_plugin_data}{Fbx\+Plugin\+Data}
+\item 
+class \hyperlink{class_fbx_plugin}{Fbx\+Plugin}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxplugin_8h_a82867e434a2a4a1b8f16632928649b07}{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE}(Plugin)
+\begin{DoxyCompactList}\small\item\em Plug-\/in declaration macro that must to be used when defining new \hyperlink{class_fbx_plugin}{Fbx\+Plugin} objects. \end{DoxyCompactList}\item 
+\#define \hyperlink{fbxplugin_8h_a94a72a1e3b950d4d488f036a4f7f35bb}{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}(Plugin)
+\begin{DoxyCompactList}\small\item\em Plug-\/in implementation macro that must be used when implementing new \hyperlink{class_fbx_plugin}{Fbx\+Plugin} objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxplugin_8h_a82867e434a2a4a1b8f16632928649b07}\label{fbxplugin_8h_a82867e434a2a4a1b8f16632928649b07}} 
+\index{fbxplugin.\+h@{fbxplugin.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxplugin.\+h@{fbxplugin.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_PLUGIN\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Plugin }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{fbxnew_8h_a4c4a21bb14cb4509efd5113b1b9d372c}{FBXSDK\_FRIEND\_NEW}();\(\backslash\)
+public:\(\backslash\)
+    static Plugin * Create(\textcolor{keyword}{const} \hyperlink{struct_fbx_plugin_def}{FbxPluginDef}& pDefinition, 
+      \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{FbxModule} pModuleHandle);\(\backslash\)
+    void Destroy();
+\end{DoxyCode}
+
+
+Plug-\/in declaration macro that must to be used when defining new \hyperlink{class_fbx_plugin}{Fbx\+Plugin} objects. 
+
+\mbox{\Hypertarget{fbxplugin_8h_a94a72a1e3b950d4d488f036a4f7f35bb}\label{fbxplugin_8h_a94a72a1e3b950d4d488f036a4f7f35bb}} 
+\index{fbxplugin.\+h@{fbxplugin.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT@{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT@{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}!fbxplugin.\+h@{fbxplugin.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}{FBXSDK\_PLUGIN\_IMPLEMENT}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT(\begin{DoxyParamCaption}\item[{}]{Plugin }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+Plugin* Plugin::Create(\textcolor{keyword}{const} \hyperlink{struct_fbx_plugin_def}{FbxPluginDef}& pDefinition, \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{FbxModule} pModuleHandle)\{ \textcolor{keywordflow}{
+      return} FbxNew<Plugin>(pDefinition, pModuleHandle); \}\(\backslash\)
+    void Plugin::Destroy()\{ \hyperlink{fbxalloc_8h_a55138f34ac93c519a78f624178c128d6}{FbxDelete}(\textcolor{keyword}{this}); \}
+\end{DoxyCode}
+
+
+Plug-\/in implementation macro that must be used when implementing new \hyperlink{class_fbx_plugin}{Fbx\+Plugin} objects. 
+

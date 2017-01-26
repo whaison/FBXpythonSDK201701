@@ -1,0 +1,296 @@
+\hypertarget{class_fbx_anim_layer}{}\section{Fbx\+Anim\+Layer クラス}
+\label{class_fbx_anim_layer}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+
+
+{\ttfamily \#include $<$fbxanimlayer.\+h$>$}
+
+
+
+Fbx\+Anim\+Layer の継承関係図
+% FIG 0
+
+
+Fbx\+Anim\+Layer 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_anim_layer_abb1e650203e91ff090773239994e802a}{E\+Blend\+Mode} \{ \hyperlink{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aae60dd39593c8806694f8cedb0c14b09b}{e\+Blend\+Additive}, 
+\hyperlink{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aaf8232b445a780774bcb8b76ee37291e5}{e\+Blend\+Override}, 
+\hyperlink{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aa9551a7380fccde36fd35f532aa826a7a}{e\+Blend\+Override\+Passthrough}
+ \}
+\item 
+enum \hyperlink{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38}{E\+Rotation\+Accumulation\+Mode} \{ \hyperlink{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38a51036262864495602654d22f83f101da}{e\+Rotation\+By\+Layer}, 
+\hyperlink{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38a5212817a9e2cfdd21688930bd5fc167a}{e\+Rotation\+By\+Channel}
+ \}
+\item 
+enum \hyperlink{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0}{E\+Scale\+Accumulation\+Mode} \{ \hyperlink{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0af962df864ef1dead2f88ade13f4262d0}{e\+Scale\+Multiply}, 
+\hyperlink{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0a0d79b9c4219c50d434746d7062046123}{e\+Scale\+Additive}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_anim_layer_acd87646f48b6387952fd3ca257133774}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset this object properties to their default value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_anim_layer_a6ab882a24bdf15c3448d064955bf0535}{Weight}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_anim_layer_ae8f8f6db5f57e41d42935720b4e8d582}{Mute}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_anim_layer_a0e002d0db3b5998a4c016cffb7f5c252}{Solo}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_anim_layer_ade773868b910bcfcedf4818b96da9233}{Lock}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_anim_layer_a9eb1d3e6e4bcfc59122fe6261eb529bc}{Color}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum} $>$ \hyperlink{class_fbx_anim_layer_a7e4d4d009aa2c248d19781e9d31f1f89}{Blend\+Mode}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum} $>$ \hyperlink{class_fbx_anim_layer_ae8d47b5fabab90773e9a40aeef934945}{Rotation\+Accumulation\+Mode}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum} $>$ \hyperlink{class_fbx_anim_layer_a50ec8bebaa1241cc168fae6bcf5c670f}{Scale\+Accumulation\+Mode}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_layer_a24afc26df98e56c965c0c60e637ed888}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$ \hyperlink{class_fbx_anim_layer_ab031a979290c44d59ae3ba25a4ab2169}{Get\+Anim\+Layer} ()
+\end{DoxyCompactItemize}
+\subsection*{Blend\+Mode bypass functions}
+\label{_amgrp69dcbe1ac0f20ac1568a8b5ca4119588}%
+This section provides methods to bypass the current layer blend mode by data type. When the state is {\ttfamily true}, the evaluators that are processing the layer will need to consider that, for the given data type, the blend mode is forced to be Overwrite. If the state is left to its default {\ttfamily false} value, then the layer blend mode applies. \begin{DoxyRemark}{注釈}
+This section only supports the basic types defined in the \hyperlink{fbxtypes_8h}{fbxtypes.\+h} header file. 
+\end{DoxyRemark}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_anim_layer_a8be5d3511971847c8f8d88c0a9fe2158}{Set\+Blend\+Mode\+Bypass} (\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Type, bool p\+State)
+\item 
+bool \hyperlink{class_fbx_anim_layer_a3f16ece7c4506b8d72c2b77db5e81586}{Get\+Blend\+Mode\+Bypass} (\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Type)
+\end{DoxyCompactItemize}
+\subsection*{Curve\+Node management}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_anim_layer_a634a9dd8c4a0a7457a15d50f9643d4e0}{Create\+Curve\+Node} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+The animation layer is a collection of animation curve nodes. Its purpose is to store a variable number of \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}. The class provides different states flags (bool properties), an animatable weight, and the blending mode flag to indicate how the data on this layer is interacting with the data of the other layers during the evaluation. 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_anim_layer_abb1e650203e91ff090773239994e802a}\label{class_fbx_anim_layer_abb1e650203e91ff090773239994e802a}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!E\+Blend\+Mode@{E\+Blend\+Mode}}
+\index{E\+Blend\+Mode@{E\+Blend\+Mode}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{E\+Blend\+Mode}{EBlendMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_layer_abb1e650203e91ff090773239994e802a}{Fbx\+Anim\+Layer\+::\+E\+Blend\+Mode}}
+
+Blend mode type between animation layers. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend\+Additive@{e\+Blend\+Additive}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Blend\+Additive@{e\+Blend\+Additive}}}\mbox{\Hypertarget{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aae60dd39593c8806694f8cedb0c14b09b}\label{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aae60dd39593c8806694f8cedb0c14b09b}} 
+e\+Blend\+Additive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend\+Override@{e\+Blend\+Override}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Blend\+Override@{e\+Blend\+Override}}}\mbox{\Hypertarget{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aaf8232b445a780774bcb8b76ee37291e5}\label{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aaf8232b445a780774bcb8b76ee37291e5}} 
+e\+Blend\+Override&The layer \char`\"{}adds\char`\"{} its animation to layers that precede it in the stack and affect the same attributes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend\+Override\+Passthrough@{e\+Blend\+Override\+Passthrough}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Blend\+Override\+Passthrough@{e\+Blend\+Override\+Passthrough}}}\mbox{\Hypertarget{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aa9551a7380fccde36fd35f532aa826a7a}\label{class_fbx_anim_layer_abb1e650203e91ff090773239994e802aa9551a7380fccde36fd35f532aa826a7a}} 
+e\+Blend\+Override\+Passthrough&The layer \char`\"{}overrides\char`\"{} the animation of any layer that shares the same attributes and precedes it in the stack. This mode is like the e\+Override but the Weight value influence how much animation from the preceding layers is allowed to pass-\/through. When using this mode with a Weight of 100.\+0, this layer is completely opaque and it masks any animation from the preceding layers for the same attribute. If the Weight is 50.\+0, half of this layer animation is mixed with half of the animation of the preceding layers for the same attribute. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38}\label{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!E\+Rotation\+Accumulation\+Mode@{E\+Rotation\+Accumulation\+Mode}}
+\index{E\+Rotation\+Accumulation\+Mode@{E\+Rotation\+Accumulation\+Mode}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{E\+Rotation\+Accumulation\+Mode}{ERotationAccumulationMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38}{Fbx\+Anim\+Layer\+::\+E\+Rotation\+Accumulation\+Mode}}
+
+Rotation accumulation mode of animation layer. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rotation\+By\+Layer@{e\+Rotation\+By\+Layer}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Rotation\+By\+Layer@{e\+Rotation\+By\+Layer}}}\mbox{\Hypertarget{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38a51036262864495602654d22f83f101da}\label{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38a51036262864495602654d22f83f101da}} 
+e\+Rotation\+By\+Layer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rotation\+By\+Channel@{e\+Rotation\+By\+Channel}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Rotation\+By\+Channel@{e\+Rotation\+By\+Channel}}}\mbox{\Hypertarget{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38a5212817a9e2cfdd21688930bd5fc167a}\label{class_fbx_anim_layer_a11bad6dbac61cc3965624a0622e90b38a5212817a9e2cfdd21688930bd5fc167a}} 
+e\+Rotation\+By\+Channel&Rotation values are weighted per layer and the result rotation curves are calculated using concatenated quaternion values. Rotation values are weighted per component and the result rotation curves are calculated by adding each independent Euler X\+YZ value. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0}\label{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!E\+Scale\+Accumulation\+Mode@{E\+Scale\+Accumulation\+Mode}}
+\index{E\+Scale\+Accumulation\+Mode@{E\+Scale\+Accumulation\+Mode}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{E\+Scale\+Accumulation\+Mode}{EScaleAccumulationMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0}{Fbx\+Anim\+Layer\+::\+E\+Scale\+Accumulation\+Mode}}
+
+Scale accumulation mode of animation layer. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Scale\+Multiply@{e\+Scale\+Multiply}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Scale\+Multiply@{e\+Scale\+Multiply}}}\mbox{\Hypertarget{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0af962df864ef1dead2f88ade13f4262d0}\label{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0af962df864ef1dead2f88ade13f4262d0}} 
+e\+Scale\+Multiply&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Scale\+Additive@{e\+Scale\+Additive}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!e\+Scale\+Additive@{e\+Scale\+Additive}}}\mbox{\Hypertarget{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0a0d79b9c4219c50d434746d7062046123}\label{class_fbx_anim_layer_aec9cfaa528bee6739ba4317964d123b0a0d79b9c4219c50d434746d7062046123}} 
+e\+Scale\+Additive&Independent X\+YZ scale values per layer are calculated using the layer weight value as an exponent, and result scale curves are calculated by multiplying each independent X\+YZ scale value. Result scale curves are calculated by adding each independent X\+YZ value. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_anim_layer_a24afc26df98e56c965c0c60e637ed888}\label{class_fbx_anim_layer_a24afc26df98e56c965c0c60e637ed888}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Layer\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_layer_a634a9dd8c4a0a7457a15d50f9643d4e0}\label{class_fbx_anim_layer_a634a9dd8c4a0a7457a15d50f9643d4e0}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Create\+Curve\+Node@{Create\+Curve\+Node}}
+\index{Create\+Curve\+Node@{Create\+Curve\+Node}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Create\+Curve\+Node()}{CreateCurveNode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Anim\+Layer\+::\+Create\+Curve\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Create a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} based on the property data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property that the created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} will be connected to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}, or N\+U\+LL if an error occurred. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function will fail if the property \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} flag is not set. 
+
+This function sets the e\+Animated flag of the property. 
+
+The newly created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} is automatically connected to both this object and the property. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_layer_ab031a979290c44d59ae3ba25a4ab2169}\label{class_fbx_anim_layer_ab031a979290c44d59ae3ba25a4ab2169}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Get\+Anim\+Layer@{Get\+Anim\+Layer}}
+\index{Get\+Anim\+Layer@{Get\+Anim\+Layer}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Anim\+Layer()}{GetAnimLayer()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer}$\ast$ Fbx\+Anim\+Layer\+::\+Get\+Anim\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_anim_layer_a3f16ece7c4506b8d72c2b77db5e81586}\label{class_fbx_anim_layer_a3f16ece7c4506b8d72c2b77db5e81586}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Get\+Blend\+Mode\+Bypass@{Get\+Blend\+Mode\+Bypass}}
+\index{Get\+Blend\+Mode\+Bypass@{Get\+Blend\+Mode\+Bypass}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Get\+Blend\+Mode\+Bypass()}{GetBlendModeBypass()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Layer\+::\+Get\+Blend\+Mode\+Bypass (\begin{DoxyParamCaption}\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Get the current state of the bypass flag for the given data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The fbx\+Type identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The current state of the flag for a valid p\+Type value and {\ttfamily false} in any other case. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_layer_acd87646f48b6387952fd3ca257133774}\label{class_fbx_anim_layer_acd87646f48b6387952fd3ca257133774}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Layer\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset this object properties to their default value. 
+
+\mbox{\Hypertarget{class_fbx_anim_layer_a8be5d3511971847c8f8d88c0a9fe2158}\label{class_fbx_anim_layer_a8be5d3511971847c8f8d88c0a9fe2158}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Set\+Blend\+Mode\+Bypass@{Set\+Blend\+Mode\+Bypass}}
+\index{Set\+Blend\+Mode\+Bypass@{Set\+Blend\+Mode\+Bypass}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Set\+Blend\+Mode\+Bypass()}{SetBlendModeBypass()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Layer\+::\+Set\+Blend\+Mode\+Bypass (\begin{DoxyParamCaption}\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Type,  }\item[{bool}]{p\+State }\end{DoxyParamCaption})}
+
+Set the bypass flag for the given data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The fbx\+Type identifier. \\
+\hline
+{\em p\+State} & The new state of the bypass flag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If p\+Type is e\+Fbx\+Type\+Count, then p\+State is applied to all the data types. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_anim_layer_a7e4d4d009aa2c248d19781e9d31f1f89}\label{class_fbx_anim_layer_a7e4d4d009aa2c248d19781e9d31f1f89}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Blend\+Mode@{Blend\+Mode}}
+\index{Blend\+Mode@{Blend\+Mode}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Blend\+Mode}{BlendMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum}$>$ Fbx\+Anim\+Layer\+::\+Blend\+Mode}
+
+This property stores the blend mode. The blend mode is used to specify how this layer influences the animation evaluation. See the Blend\+Mode enumeration for the description of the modes.
+
+Default value is {\ttfamily e\+Mode\+Additive} \mbox{\Hypertarget{class_fbx_anim_layer_a9eb1d3e6e4bcfc59122fe6261eb529bc}\label{class_fbx_anim_layer_a9eb1d3e6e4bcfc59122fe6261eb529bc}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Color@{Color}}
+\index{Color@{Color}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Anim\+Layer\+::\+Color}
+
+This property stores the display color. This color can be used by applications if they display a graphical representation of the layer. The F\+BX S\+DK does not use it but guarantees that the value is saved to the F\+BX file and retrieved from it.
+
+Default value is {\ttfamily }(0.\+8, 0.\+8, 0.\+8) \mbox{\Hypertarget{class_fbx_anim_layer_ade773868b910bcfcedf4818b96da9233}\label{class_fbx_anim_layer_ade773868b910bcfcedf4818b96da9233}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Lock@{Lock}}
+\index{Lock@{Lock}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Anim\+Layer\+::\+Lock}
+
+This property stores the lock state. The lock state indicates that this layer has been \char`\"{}locked\char`\"{} from editing operations and should no longer receive keyframes.
+
+Default value is {\ttfamily false} \mbox{\Hypertarget{class_fbx_anim_layer_ae8f8f6db5f57e41d42935720b4e8d582}\label{class_fbx_anim_layer_ae8f8f6db5f57e41d42935720b4e8d582}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Mute@{Mute}}
+\index{Mute@{Mute}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Mute}{Mute}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Anim\+Layer\+::\+Mute}
+
+This property stores the mute state. The mute state indicates that this layer should be excluded from the evaluation.
+
+Default value is {\ttfamily false} \mbox{\Hypertarget{class_fbx_anim_layer_ae8d47b5fabab90773e9a40aeef934945}\label{class_fbx_anim_layer_ae8d47b5fabab90773e9a40aeef934945}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Rotation\+Accumulation\+Mode@{Rotation\+Accumulation\+Mode}}
+\index{Rotation\+Accumulation\+Mode@{Rotation\+Accumulation\+Mode}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Rotation\+Accumulation\+Mode}{RotationAccumulationMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum}$>$ Fbx\+Anim\+Layer\+::\+Rotation\+Accumulation\+Mode}
+
+This property stores the rotation accumulation mode. This option indicates how the rotation curves on this layer combine with any preceding layers that share the same attributes. See the Rotation\+Accumulation\+Mode enumeration for the description of the modes.
+
+Default value is {\ttfamily e\+Rotation\+By\+Layer} \mbox{\Hypertarget{class_fbx_anim_layer_a50ec8bebaa1241cc168fae6bcf5c670f}\label{class_fbx_anim_layer_a50ec8bebaa1241cc168fae6bcf5c670f}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Scale\+Accumulation\+Mode@{Scale\+Accumulation\+Mode}}
+\index{Scale\+Accumulation\+Mode@{Scale\+Accumulation\+Mode}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Scale\+Accumulation\+Mode}{ScaleAccumulationMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum}$>$ Fbx\+Anim\+Layer\+::\+Scale\+Accumulation\+Mode}
+
+This property stores the scale accumulation mode. This option indicates how the scale curves on this layer combine with any preceding layers that share the same attributes. See the Scale\+Accumulation\+Mode enumeration for the description of the modes.
+
+Default value is {\ttfamily e\+Scale\+Multiply} \mbox{\Hypertarget{class_fbx_anim_layer_a0e002d0db3b5998a4c016cffb7f5c252}\label{class_fbx_anim_layer_a0e002d0db3b5998a4c016cffb7f5c252}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Solo@{Solo}}
+\index{Solo@{Solo}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Solo}{Solo}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Anim\+Layer\+::\+Solo}
+
+This property stores the solo state. The solo state indicates that this layer is the only one that should be processed during the evaluation.
+
+Default value is {\ttfamily false} \mbox{\Hypertarget{class_fbx_anim_layer_a6ab882a24bdf15c3448d064955bf0535}\label{class_fbx_anim_layer_a6ab882a24bdf15c3448d064955bf0535}} 
+\index{Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}!Weight@{Weight}}
+\index{Weight@{Weight}!Fbx\+Anim\+Layer@{Fbx\+Anim\+Layer}}
+\subsubsection{\texorpdfstring{Weight}{Weight}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Anim\+Layer\+::\+Weight}
+
+This property stores the weight factor. The weight factor is the percentage of influence this layer has during the evaluation.
+
+Default value is {\ttfamily 100.\+0} 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimlayer_8h}{fbxanimlayer.\+h}\end{DoxyCompactItemize}

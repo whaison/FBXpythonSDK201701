@@ -1,0 +1,64 @@
+\hypertarget{class_fbx_sync_stack}{}\section{Fbx\+Sync\+Stack クラス}
+\label{class_fbx_sync_stack}\index{Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}}
+
+
+{\ttfamily \#include $<$fbxsync.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_sync_stack_1_1_item}{Item}
+\begin{DoxyCompactList}\small\item\em A single link item to be used to construct the stack \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_sync_stack_a39058f505817e4a4739323b3daa8fafe}{Fbx\+Sync\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_sync_stack_a1412ced243b15737a27bb4a3b30bd40b}{Push} (\hyperlink{struct_fbx_sync_stack_1_1_item}{Item} $\ast$p\+Item)
+\item 
+\hyperlink{struct_fbx_sync_stack_1_1_item}{Item} $\ast$ \hyperlink{class_fbx_sync_stack_a13b7a3879bf1dab796985893597d443f}{Pop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A simple stack of linked items that is multi-\/thread safe, protected by a spinlock. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_sync_stack_a39058f505817e4a4739323b3daa8fafe}\label{class_fbx_sync_stack_a39058f505817e4a4739323b3daa8fafe}} 
+\index{Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}!Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}}
+\index{Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}!Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}}
+\subsubsection{\texorpdfstring{Fbx\+Sync\+Stack()}{FbxSyncStack()}}
+{\footnotesize\ttfamily Fbx\+Sync\+Stack\+::\+Fbx\+Sync\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_sync_stack_a13b7a3879bf1dab796985893597d443f}\label{class_fbx_sync_stack_a13b7a3879bf1dab796985893597d443f}} 
+\index{Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}!Pop@{Pop}}
+\index{Pop@{Pop}!Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}}
+\subsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily \hyperlink{struct_fbx_sync_stack_1_1_item}{Item}$\ast$ Fbx\+Sync\+Stack\+::\+Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove the item on the top of the stack. \begin{DoxyReturn}{戻り値}
+Returns the item on top of the stack, otherwise N\+U\+LL if stack empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_sync_stack_a1412ced243b15737a27bb4a3b30bd40b}\label{class_fbx_sync_stack_a1412ced243b15737a27bb4a3b30bd40b}} 
+\index{Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}!Push@{Push}}
+\index{Push@{Push}!Fbx\+Sync\+Stack@{Fbx\+Sync\+Stack}}
+\subsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily void Fbx\+Sync\+Stack\+::\+Push (\begin{DoxyParamCaption}\item[{\hyperlink{struct_fbx_sync_stack_1_1_item}{Item} $\ast$}]{p\+Item }\end{DoxyParamCaption})}
+
+Add an item on the top of the stack. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The item to add on top of the stack. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/sync/\hyperlink{fbxsync_8h}{fbxsync.\+h}\end{DoxyCompactItemize}

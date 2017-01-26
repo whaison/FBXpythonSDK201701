@@ -1,0 +1,226 @@
+\hypertarget{class_fbx_iterator_src_base}{}\section{Fbx\+Iterator\+Src\+Base クラス}
+\label{class_fbx_iterator_src_base}\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+
+
+{\ttfamily \#include $<$fbxobject.\+h$>$}
+
+
+
+Fbx\+Iterator\+Src\+Base の継承関係図
+% FIG 0
+
+
+Fbx\+Iterator\+Src\+Base 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_iterator_src_base_a98ce94a7c69a7e7bac6e01901a0a7500}{Fbx\+Iterator\+Src\+Base} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property, \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} p\+Class\+Id)
+\item 
+\hyperlink{class_fbx_iterator_src_base_a17e8eab0754f02a28ca18b0e176f1533}{Fbx\+Iterator\+Src\+Base} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} p\+Class\+Id)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_src_base_a19eea19f9f5fe3e94cc4a9fc626404c4}{Get\+First} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_src_base_a640019fa81262dd57ac07bba9efc47e6}{Get\+Next} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_src_base_ad0bb49ec584418f0325bc4f05a21ed04}{Get\+Safe\+Next} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_src_base_a84d527f63d0b2953318bfcaac25b9b4a}{Get\+Last} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_src_base_a953061817a99a4440f964ae584dcb0b5}{Get\+Previous} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_src_base_a9ddd3ce318c6db15ec02ede17541f9ef}{Get\+Safe\+Previous} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_iterator_src_base_af425474061cfa1a1ae0714dfedd6ddbb}{Reset\+To\+Begin} ()
+\item 
+void \hyperlink{class_fbx_iterator_src_base_a9d56b32e28d26a8eb96cfa0ebbf8ed06}{Reset\+To\+End} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_iterator_src_base_aa07b855d779bd7b3383ef7a41dbab232}{m\+Property}
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_iterator_src_base_a3afdc4502fd7d4c2424ad3e99bd8e7a4}{m\+Class\+Id}
+\begin{DoxyCompactList}\small\item\em The property to iterate. If iterate an object, this is the root property of the object. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_iterator_src_base_a267938478933f2405b32bf9722648d36}{m\+Size}
+\begin{DoxyCompactList}\small\item\em The class ID specifies the type of the source objects to be retrieved. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_iterator_src_base_adfb8404f7244dfdbe9e40cfc4d9e53b6}{m\+Index}
+\begin{DoxyCompactList}\small\item\em The number of source objects whose type is specified by m\+Class\+Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A utility class for iterating over source objects that connect to property (\hyperlink{class_fbx_property}{Fbx\+Property}) or object (\hyperlink{class_fbx_object}{Fbx\+Object}). 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a98ce94a7c69a7e7bac6e01901a0a7500}\label{class_fbx_iterator_src_base_a98ce94a7c69a7e7bac6e01901a0a7500}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Fbx\+Iterator\+Src\+Base()}{FbxIteratorSrcBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Iterator\+Src\+Base\+::\+Fbx\+Iterator\+Src\+Base (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property,  }\item[{\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id}}]{p\+Class\+Id }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & Property object. The iterator will iterate source objects that connect to it. \\
+\hline
+{\em p\+Class\+Id} & The class ID specifies the type of the source objects. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a17e8eab0754f02a28ca18b0e176f1533}\label{class_fbx_iterator_src_base_a17e8eab0754f02a28ca18b0e176f1533}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Fbx\+Iterator\+Src\+Base()}{FbxIteratorSrcBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Iterator\+Src\+Base\+::\+Fbx\+Iterator\+Src\+Base (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id}}]{p\+Class\+Id }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & F\+BX object. The iterator will iterate source objects that connect to it. \\
+\hline
+{\em p\+Class\+Id} & The class ID specifies the type of the source objects. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a19eea19f9f5fe3e94cc4a9fc626404c4}\label{class_fbx_iterator_src_base_a19eea19f9f5fe3e94cc4a9fc626404c4}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Get\+First@{Get\+First}}
+\index{Get\+First@{Get\+First}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Get\+First()}{GetFirst()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Src\+Base\+::\+Get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the first source object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The first source object. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a84d527f63d0b2953318bfcaac25b9b4a}\label{class_fbx_iterator_src_base_a84d527f63d0b2953318bfcaac25b9b4a}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Get\+Last@{Get\+Last}}
+\index{Get\+Last@{Get\+Last}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Get\+Last()}{GetLast()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Src\+Base\+::\+Get\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the last source object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The last source object. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a640019fa81262dd57ac07bba9efc47e6}\label{class_fbx_iterator_src_base_a640019fa81262dd57ac07bba9efc47e6}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Get\+Next()}{GetNext()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Src\+Base\+::\+Get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get next source object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The next source object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a953061817a99a4440f964ae584dcb0b5}\label{class_fbx_iterator_src_base_a953061817a99a4440f964ae584dcb0b5}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Get\+Previous@{Get\+Previous}}
+\index{Get\+Previous@{Get\+Previous}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Get\+Previous()}{GetPrevious()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Src\+Base\+::\+Get\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get previous source object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The previous source object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{class_fbx_iterator_src_base_ad0bb49ec584418f0325bc4f05a21ed04}\label{class_fbx_iterator_src_base_ad0bb49ec584418f0325bc4f05a21ed04}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Get\+Safe\+Next@{Get\+Safe\+Next}}
+\index{Get\+Safe\+Next@{Get\+Safe\+Next}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Get\+Safe\+Next()}{GetSafeNext()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Src\+Base\+::\+Get\+Safe\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get next source object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The next source object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method makes sure the iterate index is not out of bounds. 
+\end{DoxyRemark}
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a9ddd3ce318c6db15ec02ede17541f9ef}\label{class_fbx_iterator_src_base_a9ddd3ce318c6db15ec02ede17541f9ef}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Get\+Safe\+Previous@{Get\+Safe\+Previous}}
+\index{Get\+Safe\+Previous@{Get\+Safe\+Previous}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Get\+Safe\+Previous()}{GetSafePrevious()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Src\+Base\+::\+Get\+Safe\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get previous source object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The previous source object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method makes sure the iterate index is not out of bounds. If the iterate index is out of bounds, the last source object is returned. 
+\end{DoxyRemark}
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{class_fbx_iterator_src_base_af425474061cfa1a1ae0714dfedd6ddbb}\label{class_fbx_iterator_src_base_af425474061cfa1a1ae0714dfedd6ddbb}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Reset\+To\+Begin@{Reset\+To\+Begin}}
+\index{Reset\+To\+Begin@{Reset\+To\+Begin}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Reset\+To\+Begin()}{ResetToBegin()}}
+{\footnotesize\ttfamily void Fbx\+Iterator\+Src\+Base\+::\+Reset\+To\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reset the iterate index to the beginning. 呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a9d56b32e28d26a8eb96cfa0ebbf8ed06}\label{class_fbx_iterator_src_base_a9d56b32e28d26a8eb96cfa0ebbf8ed06}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!Reset\+To\+End@{Reset\+To\+End}}
+\index{Reset\+To\+End@{Reset\+To\+End}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{Reset\+To\+End()}{ResetToEnd()}}
+{\footnotesize\ttfamily void Fbx\+Iterator\+Src\+Base\+::\+Reset\+To\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reset the iterate index to the end. 呼び出し関係図\+:
+% FIG 13
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a3afdc4502fd7d4c2424ad3e99bd8e7a4}\label{class_fbx_iterator_src_base_a3afdc4502fd7d4c2424ad3e99bd8e7a4}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!m\+Class\+Id@{m\+Class\+Id}}
+\index{m\+Class\+Id@{m\+Class\+Id}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{m\+Class\+Id}{mClassId}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Iterator\+Src\+Base\+::m\+Class\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The property to iterate. If iterate an object, this is the root property of the object. 
+
+\mbox{\Hypertarget{class_fbx_iterator_src_base_adfb8404f7244dfdbe9e40cfc4d9e53b6}\label{class_fbx_iterator_src_base_adfb8404f7244dfdbe9e40cfc4d9e53b6}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!m\+Index@{m\+Index}}
+\index{m\+Index@{m\+Index}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{m\+Index}{mIndex}}
+{\footnotesize\ttfamily int Fbx\+Iterator\+Src\+Base\+::m\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The number of source objects whose type is specified by m\+Class\+Id. 
+
+\mbox{\Hypertarget{class_fbx_iterator_src_base_aa07b855d779bd7b3383ef7a41dbab232}\label{class_fbx_iterator_src_base_aa07b855d779bd7b3383ef7a41dbab232}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!m\+Property@{m\+Property}}
+\index{m\+Property@{m\+Property}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{m\+Property}{mProperty}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Iterator\+Src\+Base\+::m\+Property\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_iterator_src_base_a267938478933f2405b32bf9722648d36}\label{class_fbx_iterator_src_base_a267938478933f2405b32bf9722648d36}} 
+\index{Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}!m\+Size@{m\+Size}}
+\index{m\+Size@{m\+Size}!Fbx\+Iterator\+Src\+Base@{Fbx\+Iterator\+Src\+Base}}
+\subsubsection{\texorpdfstring{m\+Size}{mSize}}
+{\footnotesize\ttfamily int Fbx\+Iterator\+Src\+Base\+::m\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The class ID specifies the type of the source objects to be retrieved. 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxobject_8h}{fbxobject.\+h}\end{DoxyCompactItemize}

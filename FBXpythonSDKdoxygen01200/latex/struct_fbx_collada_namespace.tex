@@ -1,0 +1,100 @@
+\hypertarget{struct_fbx_collada_namespace}{}\section{Fbx\+Collada\+Namespace 構造体}
+\label{struct_fbx_collada_namespace}\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+
+
+{\ttfamily \#include $<$fbxcolladanamespace.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{struct_fbx_collada_namespace_a844aeced65709b23349ed14e444c862b}{Push} (xml\+Node $\ast$p\+Element)
+\item 
+void \hyperlink{struct_fbx_collada_namespace_ae1748532010af20d42578135ba8fab6e}{Pop} ()
+\item 
+xml\+Node $\ast$ \hyperlink{struct_fbx_collada_namespace_a63ad15d7dec6e1a8095427f04dce860f}{Find\+Param\+Definition} (const char $\ast$p\+S\+ID) const
+\item 
+xml\+Node $\ast$ \hyperlink{struct_fbx_collada_namespace_a6061a9a88eecad58d7909ac84d7c0e73}{Find\+Param\+Modification} (const char $\ast$p\+S\+ID) const
+\item 
+int \hyperlink{struct_fbx_collada_namespace_a0f8447e3228c77bca4f9a1ad2f759e1d}{Get\+Param\+Modification\+Count} () const
+\item 
+xml\+Node $\ast$ \hyperlink{struct_fbx_collada_namespace_a5bf3b2e91505df6ef9621e79349a14d7}{Get\+Param\+Modification} (int p\+Index) const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Containing the valid parameter definition and modification in local scope. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{struct_fbx_collada_namespace_a63ad15d7dec6e1a8095427f04dce860f}\label{struct_fbx_collada_namespace_a63ad15d7dec6e1a8095427f04dce860f}} 
+\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}!Find\+Param\+Definition@{Find\+Param\+Definition}}
+\index{Find\+Param\+Definition@{Find\+Param\+Definition}!Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+\subsubsection{\texorpdfstring{Find\+Param\+Definition()}{FindParamDefinition()}}
+{\footnotesize\ttfamily xml\+Node$\ast$ Fbx\+Collada\+Namespace\+::\+Find\+Param\+Definition (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+S\+ID }\end{DoxyParamCaption}) const}
+
+Find the specific newparam element with given S\+ID. 
+\begin{DoxyParams}{引数}
+{\em p\+S\+ID} & The given S\+ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return the found element or N\+U\+LL if fail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_fbx_collada_namespace_a6061a9a88eecad58d7909ac84d7c0e73}\label{struct_fbx_collada_namespace_a6061a9a88eecad58d7909ac84d7c0e73}} 
+\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}!Find\+Param\+Modification@{Find\+Param\+Modification}}
+\index{Find\+Param\+Modification@{Find\+Param\+Modification}!Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+\subsubsection{\texorpdfstring{Find\+Param\+Modification()}{FindParamModification()}}
+{\footnotesize\ttfamily xml\+Node$\ast$ Fbx\+Collada\+Namespace\+::\+Find\+Param\+Modification (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+S\+ID }\end{DoxyParamCaption}) const}
+
+Find the specific setparam element with given S\+ID. 
+\begin{DoxyParams}{引数}
+{\em p\+S\+ID} & The given S\+ID. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return the found element or N\+U\+LL if fail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_fbx_collada_namespace_a5bf3b2e91505df6ef9621e79349a14d7}\label{struct_fbx_collada_namespace_a5bf3b2e91505df6ef9621e79349a14d7}} 
+\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}!Get\+Param\+Modification@{Get\+Param\+Modification}}
+\index{Get\+Param\+Modification@{Get\+Param\+Modification}!Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+\subsubsection{\texorpdfstring{Get\+Param\+Modification()}{GetParamModification()}}
+{\footnotesize\ttfamily xml\+Node$\ast$ Fbx\+Collada\+Namespace\+::\+Get\+Param\+Modification (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Get the setparam element with given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_fbx_collada_namespace_a0f8447e3228c77bca4f9a1ad2f759e1d}\label{struct_fbx_collada_namespace_a0f8447e3228c77bca4f9a1ad2f759e1d}} 
+\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}!Get\+Param\+Modification\+Count@{Get\+Param\+Modification\+Count}}
+\index{Get\+Param\+Modification\+Count@{Get\+Param\+Modification\+Count}!Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+\subsubsection{\texorpdfstring{Get\+Param\+Modification\+Count()}{GetParamModificationCount()}}
+{\footnotesize\ttfamily int Fbx\+Collada\+Namespace\+::\+Get\+Param\+Modification\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the count of all the setparam elements in local scope. \begin{DoxyReturn}{戻り値}
+The count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_fbx_collada_namespace_ae1748532010af20d42578135ba8fab6e}\label{struct_fbx_collada_namespace_ae1748532010af20d42578135ba8fab6e}} 
+\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}!Pop@{Pop}}
+\index{Pop@{Pop}!Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+\subsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily void Fbx\+Collada\+Namespace\+::\+Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Pop the newparam and setparam elements found in this element. Call this method at the end of importing an element. \mbox{\Hypertarget{struct_fbx_collada_namespace_a844aeced65709b23349ed14e444c862b}\label{struct_fbx_collada_namespace_a844aeced65709b23349ed14e444c862b}} 
+\index{Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}!Push@{Push}}
+\index{Push@{Push}!Fbx\+Collada\+Namespace@{Fbx\+Collada\+Namespace}}
+\subsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily void Fbx\+Collada\+Namespace\+::\+Push (\begin{DoxyParamCaption}\item[{xml\+Node $\ast$}]{p\+Element }\end{DoxyParamCaption})}
+
+Push the newparam and setparam elements found in this element. Call this method at the beginning of importing an element. 
+\begin{DoxyParams}{引数}
+{\em p\+Element} & The specific element. \\
+\hline
+\end{DoxyParams}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/collada/\hyperlink{fbxcolladanamespace_8h}{fbxcolladanamespace.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,177 @@
+\hypertarget{class_fbx_scene_reference}{}\section{Fbx\+Scene\+Reference クラス}
+\label{class_fbx_scene_reference}\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+
+
+{\ttfamily \#include $<$fbxreference.\+h$>$}
+
+
+
+Fbx\+Scene\+Reference の継承関係図
+% FIG 0
+
+
+Fbx\+Scene\+Reference 連携図
+% FIG 1
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_scene_reference_a93aabe2339dc932673dacb8be72eb813}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Basic properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_scene_reference_a782b9db13deb9ab4b1f5b1b48c4dbb0a}{Reference\+File\+Path}
+\begin{DoxyCompactList}\small\item\em Path to the referenced file. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_scene_reference_aa29e70b4a27c20a537c4daa567624821}{Reference\+Name\+Space}
+\begin{DoxyCompactList}\small\item\em Referenced file\textquotesingle{}s namespace. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_scene_reference_a322d144d3a3e9d641132c7f65c924c2b}{Reference\+Node\+Name}
+\begin{DoxyCompactList}\small\item\em Referenced file\textquotesingle{}s node name. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_scene_reference_a66ad8666d23493dc9e20cb7fa411963b}{Reference\+Depth}
+\begin{DoxyCompactList}\small\item\em Referenced file\textquotesingle{}s node depth. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_scene_reference_a971731e9c034714443001ee94de52562}{Is\+Loaded}
+\begin{DoxyCompactList}\small\item\em {\ttfamily True} if referenced file is loaded. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_scene_reference_a5b7de2086b4f2999c7473329e8887168}{Is\+Locked}
+\begin{DoxyCompactList}\small\item\em {\ttfamily True} if referenced file is locked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Proxy related properties.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_scene_reference_a5bf9c05304a408f9436a0677c3b4acef}{Is\+Original\+Proxy}
+\begin{DoxyCompactList}\small\item\em {\ttfamily True} if referenced file is the original proxy. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_scene_reference_aab3571ac4fd553d5f3fbb3710c39adac}{Is\+Active\+Proxy}
+\begin{DoxyCompactList}\small\item\em {\ttfamily True} if referenced file is active. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_scene_reference_aac92c29ead8f25eea0dbaf0649b49c96}{Proxy\+Manager\+Name}
+\begin{DoxyCompactList}\small\item\em The name of proxy manager where the referenced file\textquotesingle{}s proxy can be found. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_scene_reference_a0ced8e6b90ec7d085b82c194188d89bb}{Proxy\+Tag}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Contains information about a referenced file. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_scene_reference_a93aabe2339dc932673dacb8be72eb813}\label{class_fbx_scene_reference_a93aabe2339dc932673dacb8be72eb813}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Scene\+Reference\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_scene_reference_aab3571ac4fd553d5f3fbb3710c39adac}\label{class_fbx_scene_reference_aab3571ac4fd553d5f3fbb3710c39adac}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Is\+Active\+Proxy@{Is\+Active\+Proxy}}
+\index{Is\+Active\+Proxy@{Is\+Active\+Proxy}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Is\+Active\+Proxy}{IsActiveProxy}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ Fbx\+Scene\+Reference\+::\+Is\+Active\+Proxy}
+
+
+
+{\ttfamily True} if referenced file is active. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_a971731e9c034714443001ee94de52562}\label{class_fbx_scene_reference_a971731e9c034714443001ee94de52562}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Is\+Loaded@{Is\+Loaded}}
+\index{Is\+Loaded@{Is\+Loaded}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Is\+Loaded}{IsLoaded}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ Fbx\+Scene\+Reference\+::\+Is\+Loaded}
+
+
+
+{\ttfamily True} if referenced file is loaded. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_a5b7de2086b4f2999c7473329e8887168}\label{class_fbx_scene_reference_a5b7de2086b4f2999c7473329e8887168}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Is\+Locked@{Is\+Locked}}
+\index{Is\+Locked@{Is\+Locked}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Is\+Locked}{IsLocked}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ Fbx\+Scene\+Reference\+::\+Is\+Locked}
+
+
+
+{\ttfamily True} if referenced file is locked. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_a5bf9c05304a408f9436a0677c3b4acef}\label{class_fbx_scene_reference_a5bf9c05304a408f9436a0677c3b4acef}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Is\+Original\+Proxy@{Is\+Original\+Proxy}}
+\index{Is\+Original\+Proxy@{Is\+Original\+Proxy}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Is\+Original\+Proxy}{IsOriginalProxy}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ Fbx\+Scene\+Reference\+::\+Is\+Original\+Proxy}
+
+
+
+{\ttfamily True} if referenced file is the original proxy. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_aac92c29ead8f25eea0dbaf0649b49c96}\label{class_fbx_scene_reference_aac92c29ead8f25eea0dbaf0649b49c96}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Proxy\+Manager\+Name@{Proxy\+Manager\+Name}}
+\index{Proxy\+Manager\+Name@{Proxy\+Manager\+Name}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Proxy\+Manager\+Name}{ProxyManagerName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ Fbx\+Scene\+Reference\+::\+Proxy\+Manager\+Name}
+
+
+
+The name of proxy manager where the referenced file\textquotesingle{}s proxy can be found. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_a0ced8e6b90ec7d085b82c194188d89bb}\label{class_fbx_scene_reference_a0ced8e6b90ec7d085b82c194188d89bb}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Proxy\+Tag@{Proxy\+Tag}}
+\index{Proxy\+Tag@{Proxy\+Tag}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Proxy\+Tag}{ProxyTag}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ Fbx\+Scene\+Reference\+::\+Proxy\+Tag}
+
+Referenced file\textquotesingle{}s proxy tag. \begin{DoxyRemark}{注釈}
+Proxy tags are unique names assigned to proxy references to more easily manage those references in Maya. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_reference_a66ad8666d23493dc9e20cb7fa411963b}\label{class_fbx_scene_reference_a66ad8666d23493dc9e20cb7fa411963b}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Reference\+Depth@{Reference\+Depth}}
+\index{Reference\+Depth@{Reference\+Depth}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Reference\+Depth}{ReferenceDepth}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Scene\+Reference\+::\+Reference\+Depth}
+
+
+
+Referenced file\textquotesingle{}s node depth. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_a782b9db13deb9ab4b1f5b1b48c4dbb0a}\label{class_fbx_scene_reference_a782b9db13deb9ab4b1f5b1b48c4dbb0a}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Reference\+File\+Path@{Reference\+File\+Path}}
+\index{Reference\+File\+Path@{Reference\+File\+Path}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Reference\+File\+Path}{ReferenceFilePath}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ Fbx\+Scene\+Reference\+::\+Reference\+File\+Path}
+
+
+
+Path to the referenced file. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_aa29e70b4a27c20a537c4daa567624821}\label{class_fbx_scene_reference_aa29e70b4a27c20a537c4daa567624821}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Reference\+Name\+Space@{Reference\+Name\+Space}}
+\index{Reference\+Name\+Space@{Reference\+Name\+Space}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Reference\+Name\+Space}{ReferenceNameSpace}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ Fbx\+Scene\+Reference\+::\+Reference\+Name\+Space}
+
+
+
+Referenced file\textquotesingle{}s namespace. 
+
+\mbox{\Hypertarget{class_fbx_scene_reference_a322d144d3a3e9d641132c7f65c924c2b}\label{class_fbx_scene_reference_a322d144d3a3e9d641132c7f65c924c2b}} 
+\index{Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}!Reference\+Node\+Name@{Reference\+Node\+Name}}
+\index{Reference\+Node\+Name@{Reference\+Node\+Name}!Fbx\+Scene\+Reference@{Fbx\+Scene\+Reference}}
+\subsubsection{\texorpdfstring{Reference\+Node\+Name}{ReferenceNodeName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ Fbx\+Scene\+Reference\+::\+Reference\+Node\+Name}
+
+
+
+Referenced file\textquotesingle{}s node name. 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxreference_8h}{fbxreference.\+h}\end{DoxyCompactItemize}

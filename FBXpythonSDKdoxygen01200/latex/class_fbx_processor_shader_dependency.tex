@@ -1,0 +1,165 @@
+\hypertarget{class_fbx_processor_shader_dependency}{}\section{Fbx\+Processor\+Shader\+Dependency クラス}
+\label{class_fbx_processor_shader_dependency}\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+
+
+{\ttfamily \#include $<$fbxprocessorshaderdependency.\+h$>$}
+
+
+
+Fbx\+Processor\+Shader\+Dependency の継承関係図
+% FIG 0
+
+
+Fbx\+Processor\+Shader\+Dependency 連携図
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_processor_shader_dependency_1_1_file_deleter}{File\+Deleter}
+\item 
+struct \hyperlink{struct_fbx_processor_shader_dependency_1_1_file_path_data}{File\+Path\+Data}
+\item 
+class \hyperlink{class_fbx_processor_shader_dependency_1_1_string_hash}{String\+Hash}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_processor_shader_dependency_a3c93c344271aa09caf870e35597a7b6a}{Clear\+Processed\+Files} ()
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_processor_shader_dependency_a2609315b13014fbba8003185c2e8a5f1}{Root\+Process\+Path}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_processor_shader_dependency_af0bbb628b8b548365fd7d4325f1d4589}{Cleanup\+On\+Destroy}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_processor_shader_dependency_a2ee0459a8761ec48aa6943cc90442b6a}{Additional\+Include\+Paths}
+\end{DoxyCompactItemize}
+\subsection*{限定公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_dynamic_array}{Fbx\+Dynamic\+Array}$<$ \hyperlink{struct_fbx_processor_shader_dependency_1_1_file_path_data}{File\+Path\+Data} $>$ \hyperlink{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}{File\+Path\+List}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_processor_shader_dependency_a077ea3e1c83d0a42e597c60153fa5e9a}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual void \hyperlink{class_fbx_processor_shader_dependency_aba3453491b05632a4972d32a04e8b283}{Destruct} (bool p\+Recursive)
+\item 
+virtual bool \hyperlink{class_fbx_processor_shader_dependency_a41473d93802b3f628bede8dad500d42c}{Get\+Include\+Paths} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+File, \hyperlink{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}{File\+Path\+List} \&p\+Paths, \hyperlink{class_fbx_x_ref_manager}{Fbx\+X\+Ref\+Manager} \&p\+Manager) const
+\item 
+virtual bool \hyperlink{class_fbx_processor_shader_dependency_a7b9462bad22d6a5c41474ea4761a2b0e}{Replace\+Urls} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+File\+Url, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+New\+File\+Url, const \hyperlink{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}{File\+Path\+List} \&p\+Paths) const
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Overridable internal function}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_processor_shader_dependency_a4e6d8ee3e0abd220aeeba254f848f147}{internal\+\_\+\+Process\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Crawls Cg\+Fx and H\+L\+SL shader files, copies them, and all dependent shader files into the location specified by Root\+Process\+Path. 
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}\label{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!File\+Path\+List@{File\+Path\+List}}
+\index{File\+Path\+List@{File\+Path\+List}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{File\+Path\+List}{FilePathList}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_dynamic_array}{Fbx\+Dynamic\+Array}$<$ \hyperlink{struct_fbx_processor_shader_dependency_1_1_file_path_data}{File\+Path\+Data} $>$ \hyperlink{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}{Fbx\+Processor\+Shader\+Dependency\+::\+File\+Path\+List}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a3c93c344271aa09caf870e35597a7b6a}\label{class_fbx_processor_shader_dependency_a3c93c344271aa09caf870e35597a7b6a}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Clear\+Processed\+Files@{Clear\+Processed\+Files}}
+\index{Clear\+Processed\+Files@{Clear\+Processed\+Files}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Clear\+Processed\+Files()}{ClearProcessedFiles()}}
+{\footnotesize\ttfamily void Fbx\+Processor\+Shader\+Dependency\+::\+Clear\+Processed\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a077ea3e1c83d0a42e597c60153fa5e9a}\label{class_fbx_processor_shader_dependency_a077ea3e1c83d0a42e597c60153fa5e9a}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Processor\+Shader\+Dependency\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_aba3453491b05632a4972d32a04e8b283}\label{class_fbx_processor_shader_dependency_aba3453491b05632a4972d32a04e8b283}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Processor\+Shader\+Dependency\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a41473d93802b3f628bede8dad500d42c}\label{class_fbx_processor_shader_dependency_a41473d93802b3f628bede8dad500d42c}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Get\+Include\+Paths@{Get\+Include\+Paths}}
+\index{Get\+Include\+Paths@{Get\+Include\+Paths}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Get\+Include\+Paths()}{GetIncludePaths()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+Shader\+Dependency\+::\+Get\+Include\+Paths (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+File,  }\item[{\hyperlink{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}{File\+Path\+List} \&}]{p\+Paths,  }\item[{\hyperlink{class_fbx_x_ref_manager}{Fbx\+X\+Ref\+Manager} \&}]{p\+Manager }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a4e6d8ee3e0abd220aeeba254f848f147}\label{class_fbx_processor_shader_dependency_a4e6d8ee3e0abd220aeeba254f848f147}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!internal\+\_\+\+Process\+Object@{internal\+\_\+\+Process\+Object}}
+\index{internal\+\_\+\+Process\+Object@{internal\+\_\+\+Process\+Object}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{internal\+\_\+\+Process\+Object()}{internal\_ProcessObject()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+Shader\+Dependency\+::internal\+\_\+\+Process\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_processor_ac549e7e8c678383831be8789a7c4ccdb}{Fbx\+Processor}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a7b9462bad22d6a5c41474ea4761a2b0e}\label{class_fbx_processor_shader_dependency_a7b9462bad22d6a5c41474ea4761a2b0e}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Replace\+Urls@{Replace\+Urls}}
+\index{Replace\+Urls@{Replace\+Urls}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Replace\+Urls()}{ReplaceUrls()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Processor\+Shader\+Dependency\+::\+Replace\+Urls (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+File\+Url,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+New\+File\+Url,  }\item[{const \hyperlink{class_fbx_processor_shader_dependency_a52e467804857e767f194d73000b08f39}{File\+Path\+List} \&}]{p\+Paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a2ee0459a8761ec48aa6943cc90442b6a}\label{class_fbx_processor_shader_dependency_a2ee0459a8761ec48aa6943cc90442b6a}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Additional\+Include\+Paths@{Additional\+Include\+Paths}}
+\index{Additional\+Include\+Paths@{Additional\+Include\+Paths}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Additional\+Include\+Paths}{AdditionalIncludePaths}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Processor\+Shader\+Dependency\+::\+Additional\+Include\+Paths}
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_af0bbb628b8b548365fd7d4325f1d4589}\label{class_fbx_processor_shader_dependency_af0bbb628b8b548365fd7d4325f1d4589}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Cleanup\+On\+Destroy@{Cleanup\+On\+Destroy}}
+\index{Cleanup\+On\+Destroy@{Cleanup\+On\+Destroy}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Cleanup\+On\+Destroy}{CleanupOnDestroy}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Processor\+Shader\+Dependency\+::\+Cleanup\+On\+Destroy}
+
+\mbox{\Hypertarget{class_fbx_processor_shader_dependency_a2609315b13014fbba8003185c2e8a5f1}\label{class_fbx_processor_shader_dependency_a2609315b13014fbba8003185c2e8a5f1}} 
+\index{Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}!Root\+Process\+Path@{Root\+Process\+Path}}
+\index{Root\+Process\+Path@{Root\+Process\+Path}!Fbx\+Processor\+Shader\+Dependency@{Fbx\+Processor\+Shader\+Dependency}}
+\subsubsection{\texorpdfstring{Root\+Process\+Path}{RootProcessPath}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Processor\+Shader\+Dependency\+::\+Root\+Process\+Path}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxprocessorshaderdependency_8h}{fbxprocessorshaderdependency.\+h}\end{DoxyCompactItemize}

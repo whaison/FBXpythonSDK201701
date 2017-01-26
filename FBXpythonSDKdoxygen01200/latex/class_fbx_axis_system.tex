@@ -1,0 +1,638 @@
+\hypertarget{class_fbx_axis_system}{}\section{Fbx\+Axis\+System クラス}
+\label{class_fbx_axis_system}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+
+
+{\ttfamily \#include $<$fbxaxissystem.\+h$>$}
+
+
+
+Fbx\+Axis\+System 連携図
+% FIG 0
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{E\+Up\+Vector} \{ \hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a16f5021a60fc8fe7d83224f9a3f7dab0}{e\+X\+Axis} = 1, 
+\hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a0744a596281fabdb16cd7151bdb25e32}{e\+Y\+Axis} = 2, 
+\hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a8d38edfa15833205ff173fc76461cbcd}{e\+Z\+Axis} = 3
+ \}
+\item 
+enum \hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{E\+Front\+Vector} \{ \hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87a60d99824537be50ebc6aa4169438da55}{e\+Parity\+Even} = 1, 
+\hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87a918bd8db749bc1ed4f2f176c27e67023}{e\+Parity\+Odd} = 2
+ \}
+\item 
+enum \hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{E\+Coord\+System} \{ \hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333abdf1da85a4ef5a2d65c8d6271e3acf6d}{e\+Right\+Handed}, 
+\hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333aecd32fe7557773b957f101f58840b387}{e\+Left\+Handed}
+ \}
+\item 
+enum \hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17}{E\+Pre\+Defined\+Axis\+System} \{ \newline
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ad5e9ac656bd6239774a5e42e4ba6d934}{e\+Maya\+Z\+Up}, 
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a50808e67e3328965897a009c4b50a31e}{e\+Maya\+Y\+Up}, 
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ab9b1fd4a0c7dd20253a1642bfaeea0c0}{e\+Max}, 
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a8920292b5d781bf132c1d80e9228d347}{e\+Motion\+Builder}, 
+\newline
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ac1fa0ca99895821578046b6c78f389e0}{e\+Open\+GL}, 
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a30702b7143f70669c4fd283836b2d2ce}{e\+DirectX}, 
+\hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17acb86800d6af93402f8c090f6603aff37}{e\+Lightwave}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \& \hyperlink{class_fbx_axis_system_a108da01b311416d5b60305ac170e5be5}{operator=} (const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+Axis\+System)
+\item 
+void \hyperlink{class_fbx_axis_system_abb9a361cd8d245c60e68b05868c67b4e}{Convert\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene) const
+\item 
+void \hyperlink{class_fbx_axis_system_a25f6f6ddb481f280bfecca5d39d14d4c}{Convert\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Fbx\+Root) const
+\item 
+\hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{E\+Front\+Vector} \hyperlink{class_fbx_axis_system_a523996d3b195bf6016ab7c0333a5d389}{Get\+Front\+Vector} (int \&p\+Sign) const
+\item 
+\hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{E\+Up\+Vector} \hyperlink{class_fbx_axis_system_a3ed72f373b701c5f7c108e93f23e0e73}{Get\+Up\+Vector} (int \&p\+Sign) const
+\item 
+\hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{E\+Coord\+System} \hyperlink{class_fbx_axis_system_a6ebdf99e9754d3bd83d3a8f98544b331}{Get\+Coor\+System} () const
+\item 
+void \hyperlink{class_fbx_axis_system_a2ee31cfe8c836f4abdbc939a0891a6a9}{Get\+Matrix} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Matrix)
+\item 
+void \hyperlink{class_fbx_axis_system_a3eff3d4a3b2270a5f3675f32b698e6e9}{Convert\+Children} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Root, const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+Src\+System) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_axis_system_a41956e32f21b9709f40efef34a6d6121}{Convert\+T\+Property} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ \&p\+Nodes, const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+From) const
+\item 
+void \hyperlink{class_fbx_axis_system_a39608f5f990b1ab304f13ee2b6df64ea}{Convert\+Curve\+Nodes} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$$>$ \&p\+Curve\+Nodes, const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+From) const
+\item 
+void \hyperlink{class_fbx_axis_system_af7afdf5273c5ca9130ee8996f6f846a3}{Adjust\+Pre\+Rotation} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_aab7c9d541191268942f8dbbc3f531150}{Adjust\+Pivots} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_ae365f46f757b83df6426e5469938e8a0}{Get\+Conversion\+Matrix} (const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+From, \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_a699d144078ae640f30de2230a03c468f}{Adjust\+Limits} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_a4547ae0ec09f1c6e15e171e8cb56a7f9}{Adjust\+Poses} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_ab51a2f8a7a77c1bfe77ba1da70d83cee}{Adjust\+Camera} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_a4b3ccc6e69b77974b3e5489cfefa2755}{Adjust\+Cluster} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Conversion\+RM) const
+\item 
+void \hyperlink{class_fbx_axis_system_aca4f4de94c2d604fa55c001c25c0c227}{Convert\+Children} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Root, const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+Src\+System, bool p\+Sub\+Children\+Only) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def} \hyperlink{class_fbx_axis_system_afdefd4d8b257567fe099e28dd1745cfe}{m\+Up\+Vector}
+\item 
+\hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def} \hyperlink{class_fbx_axis_system_a8d26e8fb0d5e47bc2e7f667a7b288a5b}{m\+Front\+Vector}
+\item 
+\hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def} \hyperlink{class_fbx_axis_system_ac6a0711045499b8e4f699019e3c7fe0e}{m\+Coor\+System}
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_axis_system_ac6f6b3953bf13718eb87110d614b3c9a}{Fbx\+Global\+Settings}
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_axis_system_a37136053617df840bae0347820f706a7}{Fbx\+Axis\+System} ()
+\item 
+\hyperlink{class_fbx_axis_system_a38f184b0d67eeb8578e25c800a0571a5}{Fbx\+Axis\+System} (\hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{E\+Up\+Vector} p\+Up\+Vector, \hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{E\+Front\+Vector} p\+Front\+Vector, \hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{E\+Coord\+System} p\+Coor\+System)
+\item 
+\hyperlink{class_fbx_axis_system_a3db4f8e0bc1a588cc8c7fc2fa29a532c}{Fbx\+Axis\+System} (const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+Axis\+System)
+\item 
+\hyperlink{class_fbx_axis_system_a8333ad188498e489a2bf065c2b5b1ad3}{Fbx\+Axis\+System} (const \hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17}{E\+Pre\+Defined\+Axis\+System} p\+Axis\+System)
+\item 
+virtual \hyperlink{class_fbx_axis_system_ae1c61cb9cf7208d0c4373d8c894bec8c}{$\sim$\+Fbx\+Axis\+System} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Boolean operation.}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_axis_system_a36933159c0730e52b918f9b52cb2ecc1}{operator==} (const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+Axis\+System) const
+\item 
+bool \hyperlink{class_fbx_axis_system_adf5cf05010b87ddde4bb158e274892b4}{operator!=} (const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&p\+Axis\+System) const
+\end{DoxyCompactItemize}
+\subsection*{Predefined axis systems.}
+\label{_amgrp8a063321b07f432f44f56214112969d8}%
+These static members define the axis system of the most popular applications. \begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_af6d2329b82cd505ae9816810f9d26bd6}{Maya\+Z\+Up}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: Maya\+Z\+Up (Up\+Vector = +Z, Front\+Vector = -\/Y, Coord\+System = +X (Right\+Handed)) \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_a898f6952538dbc23cead05b2a1e19d10}{Maya\+Y\+Up}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: Maya\+Y\+Up (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = +X (Right\+Handed)) \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_a3ac2db6cd471f8477a1d0b4a3ad22608}{Max}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: Max (Up\+Vector = +Z, Front\+Vector = -\/Y, Coord\+System = +X (Right\+Handed)) \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_af24f958db3b4147d22005984cd4cebb2}{Motionbuilder}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: Motionbuilder (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = +X (Right\+Handed)) \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_a30249cc37f848cdac27b77d3520f4e28}{Open\+GL}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: Open\+GL (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = +X (Right\+Handed)) \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_a2eddfe5afe7db5f56adee774c51559e9}{DirectX}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: DirectX (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = -\/X (Left\+Handed)) \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \hyperlink{class_fbx_axis_system_a45fc90ee125c8dafa7ca95f62e7485a8}{Lightwave}
+\begin{DoxyCompactList}\small\item\em Predefined axis system\+: Lightwave (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = -\/X (Left\+Handed)) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class represents the coordinate system of the scene and can convert scenes to other coordinate systems. By default the \hyperlink{class_fbx_scene}{Fbx\+Scene} uses a Y-\/\+Up axis system. If the calling application wishes to change the default axis it will need to define the new axis system and call the convert method with the scene as argument. The appropriate transforms will be applied to the first level objects of the scene only (objects whose parent is the scene itself). Child objects do not need to be transformed since they inherit from their parents. The adjustment will affect the translation animation curves and the objects pivots values (the rotation transformation is applied as a pre-\/rotation transform therefore the rotation animation curves do not need to be transformed). Once converted, the scene will have its axis definition changed to the new system.
+
+For example\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_scene}{FbxScene}* lScene = FbxScene::Create(sdkmanager, \textcolor{stringliteral}{"MyScene"});
+...
+\textcolor{comment}{// the scene is filled with objects}
+
+int dir;
+lScene->\hyperlink{class_fbx_scene_a0cb767181a743532c9e9be17f0348570}{GetGlobalSettings}().\hyperlink{class_fbx_global_settings_adf26f4742b088b497a5ecec8f458e47d}{GetAxisSystem}().
+      \hyperlink{class_fbx_axis_system_a3ed72f373b701c5f7c108e93f23e0e73}{GetUpVector}(dir); \textcolor{comment}{// this returns the equivalent of FbxAxisSystem::eYAxis}
+
+\hyperlink{class_fbx_axis_system}{FbxAxisSystem} max; \textcolor{comment}{// we desire to convert the scene from Y-Up to Z-Up}
+max.\hyperlink{class_fbx_axis_system_abb9a361cd8d245c60e68b05868c67b4e}{ConvertScene}(lScene);
+
+lScene->\hyperlink{class_fbx_scene_a0cb767181a743532c9e9be17f0348570}{GetGlobalSettings}().\hyperlink{class_fbx_global_settings_adf26f4742b088b497a5ecec8f458e47d}{GetAxisSystem}().
+      \hyperlink{class_fbx_axis_system_a3ed72f373b701c5f7c108e93f23e0e73}{GetUpVector}(dir); \textcolor{comment}{// this will now return the equivalent of FbxAxisSystem::eZAxis}
+\end{DoxyCode}
+
+
+No conversion will take place if the scene current axis system is equal to the new one.
+
+The E\+Up\+Vector specifies which axis has the up and down direction in the system (typically this is the Y or Z axis). The sign of the E\+Up\+Vector is applied to represent the direction (1 is up and -\/1 is down relative to the observer).
+
+The E\+Front\+Vector specifies which axis has the front and back direction in the system. It is not an independent variable, which means it depends on E\+Up\+Vector. The enum values Parity\+Even and Parity\+Odd denote the first one and the second one of the remain two axes in addition to the up axis.
+
+For example if the up axis is X, the remain two axes will be Y And Z, so the Parity\+Even is Y, and the Parity\+Odd is Z ; If the up axis is Y, the remain two axes will X And Z, so the Parity\+Even is X, and the Parity\+Odd is Z; If the up axis is Z, the remain two axes will X And Y, so the Parity\+Even is X, and the Parity\+Odd is Y.
+
+There still needs a parameter to denote the direction of the E\+Front\+Vector just as the E\+Up\+Vector. And the sign of the E\+Front\+Vector represents the direction (1 is front and -\/1 is back relative to observer).
+
+If the front axis and the up axis are determined, the third axis will be automatically determined as the left one. The E\+Coord\+System enum is a parameter to determine the direction of the third axis just as the E\+Up\+Vector sign. It determines if the axis system is right-\/handed or left-\/handed just as the enum values.
+
+Some code for reconstructing a \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} object from reference scene. 
+\begin{DoxyCode}
+\textcolor{comment}{//the reference scene}
+\hyperlink{class_fbx_scene}{FbxScene}* lSceneReference = FbxScene::Create(sdkmanager, \textcolor{stringliteral}{"ReferenceScene"});
+...
+\textcolor{comment}{// the scene is filled with objects}
+
+FbxAxisSystem lAxisSytemReference = lSceneReference->\hyperlink{class_fbx_scene_a0cb767181a743532c9e9be17f0348570}{GetGlobalSettings}().
+      \hyperlink{class_fbx_global_settings_adf26f4742b088b497a5ecec8f458e47d}{GetAxisSystem}();
+
+\textcolor{keywordtype}{int} lUpVectorSign = 1;
+\textcolor{keywordtype}{int} lFrontVectorSign = 1;
+
+\textcolor{comment}{//get upVector and its sign.}
+\hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{EUpVector} lUpVector = lAxisSsytemReference.getUpVector( lUpVectorSign );
+
+\textcolor{comment}{//get FrontVector and its sign.}
+\hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{EFrontVector} lFrontVector = lAxisSsytemReference.getFrontVector( lFrontVectorSign );
+
+\textcolor{comment}{//get uCoorSystem. }
+\hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{ECoordSystem} lCoorSystem = lAxisSsytemReference.GetCoorSystem();
+
+\textcolor{comment}{//The FbxAxisSystem object to reconstruct back by saved parameter}
+\hyperlink{class_fbx_axis_system}{FbxAxisSystem} lAxisSytemReconstruct( lUpVectorSign * lUpVector, 
+                                      lFrontVectorSign * lFrontVector,
+                                      lCoorSystem);
+\end{DoxyCode}
+ 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}\label{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!E\+Coord\+System@{E\+Coord\+System}}
+\index{E\+Coord\+System@{E\+Coord\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{E\+Coord\+System}{ECoordSystem}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{Fbx\+Axis\+System\+::\+E\+Coord\+System}}
+
+Specifies the third vector of the system. The \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} deduces the correct vector and direction based on this flag and the relationship with the up and front vectors. The E\+Pre\+Defined\+Axis\+System list the up-\/vector, parity and coordinate system values for the predefined systems. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Right\+Handed@{e\+Right\+Handed}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Right\+Handed@{e\+Right\+Handed}}}\mbox{\Hypertarget{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333abdf1da85a4ef5a2d65c8d6271e3acf6d}\label{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333abdf1da85a4ef5a2d65c8d6271e3acf6d}} 
+e\+Right\+Handed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Left\+Handed@{e\+Left\+Handed}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Left\+Handed@{e\+Left\+Handed}}}\mbox{\Hypertarget{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333aecd32fe7557773b957f101f58840b387}\label{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333aecd32fe7557773b957f101f58840b387}} 
+e\+Left\+Handed&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}\label{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!E\+Front\+Vector@{E\+Front\+Vector}}
+\index{E\+Front\+Vector@{E\+Front\+Vector}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{E\+Front\+Vector}{EFrontVector}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{Fbx\+Axis\+System\+::\+E\+Front\+Vector}}
+
+Vector with origin at the screen pointing toward the camera. This is a subset of enum E\+Up\+Vector because axis cannot be repeated. We use the system of \char`\"{}parity\char`\"{} to define this vector because its value (X,Y or Z axis) really depends on the up-\/vector. The E\+Pre\+Defined\+Axis\+System list the up-\/vector, parity and coordinate system values for the predefined systems. \begin{DoxySeeAlso}{参照}
+Detailed description of \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System}. 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Parity\+Even@{e\+Parity\+Even}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Parity\+Even@{e\+Parity\+Even}}}\mbox{\Hypertarget{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87a60d99824537be50ebc6aa4169438da55}\label{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87a60d99824537be50ebc6aa4169438da55}} 
+e\+Parity\+Even&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Parity\+Odd@{e\+Parity\+Odd}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Parity\+Odd@{e\+Parity\+Odd}}}\mbox{\Hypertarget{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87a918bd8db749bc1ed4f2f176c27e67023}\label{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87a918bd8db749bc1ed4f2f176c27e67023}} 
+e\+Parity\+Odd&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!E\+Pre\+Defined\+Axis\+System@{E\+Pre\+Defined\+Axis\+System}}
+\index{E\+Pre\+Defined\+Axis\+System@{E\+Pre\+Defined\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{E\+Pre\+Defined\+Axis\+System}{EPreDefinedAxisSystem}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17}{Fbx\+Axis\+System\+::\+E\+Pre\+Defined\+Axis\+System}}
+
+Enumeration that can be used to initialize a new instance of this class with predefined configurations (see the \char`\"{}\+Predefined axis systems\char`\"{} section). \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Maya\+Z\+Up@{e\+Maya\+Z\+Up}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Maya\+Z\+Up@{e\+Maya\+Z\+Up}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ad5e9ac656bd6239774a5e42e4ba6d934}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ad5e9ac656bd6239774a5e42e4ba6d934}} 
+e\+Maya\+Z\+Up&Up\+Vector = Z\+Axis, Front\+Vector = -\/\+Parity\+Odd, Coord\+System = Right\+Handed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Maya\+Y\+Up@{e\+Maya\+Y\+Up}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Maya\+Y\+Up@{e\+Maya\+Y\+Up}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a50808e67e3328965897a009c4b50a31e}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a50808e67e3328965897a009c4b50a31e}} 
+e\+Maya\+Y\+Up&Up\+Vector = Y\+Axis, Front\+Vector = Parity\+Odd, Coord\+System = Right\+Handed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Max@{e\+Max}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Max@{e\+Max}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ab9b1fd4a0c7dd20253a1642bfaeea0c0}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ab9b1fd4a0c7dd20253a1642bfaeea0c0}} 
+e\+Max&Up\+Vector = Z\+Axis, Front\+Vector = -\/\+Parity\+Odd, Coord\+System = Right\+Handed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Motion\+Builder@{e\+Motion\+Builder}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Motion\+Builder@{e\+Motion\+Builder}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a8920292b5d781bf132c1d80e9228d347}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a8920292b5d781bf132c1d80e9228d347}} 
+e\+Motion\+Builder&Up\+Vector = Y\+Axis, Front\+Vector = Parity\+Odd, Coord\+System = Right\+Handed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Open\+GL@{e\+Open\+GL}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Open\+GL@{e\+Open\+GL}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ac1fa0ca99895821578046b6c78f389e0}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17ac1fa0ca99895821578046b6c78f389e0}} 
+e\+Open\+GL&Up\+Vector = Y\+Axis, Front\+Vector = Parity\+Odd, Coord\+System = Right\+Handed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+DirectX@{e\+DirectX}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+DirectX@{e\+DirectX}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a30702b7143f70669c4fd283836b2d2ce}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17a30702b7143f70669c4fd283836b2d2ce}} 
+e\+DirectX&Up\+Vector = Y\+Axis, Front\+Vector = Parity\+Odd, Coord\+System = Left\+Handed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Lightwave@{e\+Lightwave}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Lightwave@{e\+Lightwave}}}\mbox{\Hypertarget{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17acb86800d6af93402f8c090f6603aff37}\label{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17acb86800d6af93402f8c090f6603aff37}} 
+e\+Lightwave&Up\+Vector = Y\+Axis, Front\+Vector = Parity\+Odd, Coord\+System = Left\+Handed \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}\label{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!E\+Up\+Vector@{E\+Up\+Vector}}
+\index{E\+Up\+Vector@{E\+Up\+Vector}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{E\+Up\+Vector}{EUpVector}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{Fbx\+Axis\+System\+::\+E\+Up\+Vector}}
+
+Specifies which canonical axis represents up in the system (typically Y or Z). \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+X\+Axis@{e\+X\+Axis}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+X\+Axis@{e\+X\+Axis}}}\mbox{\Hypertarget{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a16f5021a60fc8fe7d83224f9a3f7dab0}\label{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a16f5021a60fc8fe7d83224f9a3f7dab0}} 
+e\+X\+Axis&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Y\+Axis@{e\+Y\+Axis}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Y\+Axis@{e\+Y\+Axis}}}\mbox{\Hypertarget{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a0744a596281fabdb16cd7151bdb25e32}\label{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a0744a596281fabdb16cd7151bdb25e32}} 
+e\+Y\+Axis&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Z\+Axis@{e\+Z\+Axis}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!e\+Z\+Axis@{e\+Z\+Axis}}}\mbox{\Hypertarget{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a8d38edfa15833205ff173fc76461cbcd}\label{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00a8d38edfa15833205ff173fc76461cbcd}} 
+e\+Z\+Axis&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_axis_system_a37136053617df840bae0347820f706a7}\label{class_fbx_axis_system_a37136053617df840bae0347820f706a7}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Fbx\+Axis\+System()}{FbxAxisSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Fbx\+Axis\+System\+::\+Fbx\+Axis\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a38f184b0d67eeb8578e25c800a0571a5}\label{class_fbx_axis_system_a38f184b0d67eeb8578e25c800a0571a5}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Fbx\+Axis\+System()}{FbxAxisSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Fbx\+Axis\+System\+::\+Fbx\+Axis\+System (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{E\+Up\+Vector}}]{p\+Up\+Vector,  }\item[{\hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{E\+Front\+Vector}}]{p\+Front\+Vector,  }\item[{\hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{E\+Coord\+System}}]{p\+Coor\+System }\end{DoxyParamCaption})}
+
+Constructor! 
+\begin{DoxyParams}{引数}
+{\em p\+Up\+Vector} & Specify the up vector. \\
+\hline
+{\em p\+Front\+Vector} & Specify the front vector. \\
+\hline
+{\em p\+Coor\+System} & Specify Right\+Handed coordinate system or Left\+Handed coordinate system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_a3db4f8e0bc1a588cc8c7fc2fa29a532c}\label{class_fbx_axis_system_a3db4f8e0bc1a588cc8c7fc2fa29a532c}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Fbx\+Axis\+System()}{FbxAxisSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Fbx\+Axis\+System\+::\+Fbx\+Axis\+System (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+Axis\+System }\end{DoxyParamCaption})}
+
+Copy constructor! 
+\begin{DoxyParams}{引数}
+{\em p\+Axis\+System} & Another \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} object copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_a8333ad188498e489a2bf065c2b5b1ad3}\label{class_fbx_axis_system_a8333ad188498e489a2bf065c2b5b1ad3}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Fbx\+Axis\+System()}{FbxAxisSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Fbx\+Axis\+System\+::\+Fbx\+Axis\+System (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_axis_system_a0391b88959ec9ed790cb76eac9a6ed17}{E\+Pre\+Defined\+Axis\+System}}]{p\+Axis\+System }\end{DoxyParamCaption})}
+
+Constructor! 
+\begin{DoxyParams}{引数}
+{\em p\+Axis\+System} & Specify which predefined axis system to copy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_ae1c61cb9cf7208d0c4373d8c894bec8c}\label{class_fbx_axis_system_ae1c61cb9cf7208d0c4373d8c894bec8c}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!````~Fbx\+Axis\+System@{$\sim$\+Fbx\+Axis\+System}}
+\index{````~Fbx\+Axis\+System@{$\sim$\+Fbx\+Axis\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Axis\+System()}{~FbxAxisSystem()}}
+{\footnotesize\ttfamily virtual Fbx\+Axis\+System\+::$\sim$\+Fbx\+Axis\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_axis_system_ab51a2f8a7a77c1bfe77ba1da70d83cee}\label{class_fbx_axis_system_ab51a2f8a7a77c1bfe77ba1da70d83cee}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Adjust\+Camera@{Adjust\+Camera}}
+\index{Adjust\+Camera@{Adjust\+Camera}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Adjust\+Camera()}{AdjustCamera()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Adjust\+Camera (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a4b3ccc6e69b77974b3e5489cfefa2755}\label{class_fbx_axis_system_a4b3ccc6e69b77974b3e5489cfefa2755}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Adjust\+Cluster@{Adjust\+Cluster}}
+\index{Adjust\+Cluster@{Adjust\+Cluster}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Adjust\+Cluster()}{AdjustCluster()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Adjust\+Cluster (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a699d144078ae640f30de2230a03c468f}\label{class_fbx_axis_system_a699d144078ae640f30de2230a03c468f}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Adjust\+Limits@{Adjust\+Limits}}
+\index{Adjust\+Limits@{Adjust\+Limits}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Adjust\+Limits()}{AdjustLimits()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Adjust\+Limits (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_aab7c9d541191268942f8dbbc3f531150}\label{class_fbx_axis_system_aab7c9d541191268942f8dbbc3f531150}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Adjust\+Pivots@{Adjust\+Pivots}}
+\index{Adjust\+Pivots@{Adjust\+Pivots}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Adjust\+Pivots()}{AdjustPivots()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Adjust\+Pivots (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a4547ae0ec09f1c6e15e171e8cb56a7f9}\label{class_fbx_axis_system_a4547ae0ec09f1c6e15e171e8cb56a7f9}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Adjust\+Poses@{Adjust\+Poses}}
+\index{Adjust\+Poses@{Adjust\+Poses}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Adjust\+Poses()}{AdjustPoses()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Adjust\+Poses (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_af7afdf5273c5ca9130ee8996f6f846a3}\label{class_fbx_axis_system_af7afdf5273c5ca9130ee8996f6f846a3}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Adjust\+Pre\+Rotation@{Adjust\+Pre\+Rotation}}
+\index{Adjust\+Pre\+Rotation@{Adjust\+Pre\+Rotation}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Adjust\+Pre\+Rotation()}{AdjustPreRotation()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Adjust\+Pre\+Rotation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a3eff3d4a3b2270a5f3675f32b698e6e9}\label{class_fbx_axis_system_a3eff3d4a3b2270a5f3675f32b698e6e9}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Convert\+Children@{Convert\+Children}}
+\index{Convert\+Children@{Convert\+Children}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Convert\+Children()}{ConvertChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Convert\+Children (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Root,  }\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+Src\+System }\end{DoxyParamCaption}) const}
+
+Converts the children of the given node to this axis system. Unlike the \hyperlink{class_fbx_axis_system_abb9a361cd8d245c60e68b05868c67b4e}{Convert\+Scene()} method, this method does not set the axis system of the scene that the p\+Root node belongs, nor does it adjust \hyperlink{class_fbx_pose}{Fbx\+Pose} as they are not stored under the scene, and not under a particular node. 
+\begin{DoxyParams}{引数}
+{\em p\+Root} & The node whose children are converted. \\
+\hline
+{\em p\+Src\+System} & The source axis system. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_aca4f4de94c2d604fa55c001c25c0c227}\label{class_fbx_axis_system_aca4f4de94c2d604fa55c001c25c0c227}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Convert\+Children@{Convert\+Children}}
+\index{Convert\+Children@{Convert\+Children}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Convert\+Children()}{ConvertChildren()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Convert\+Children (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Root,  }\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+Src\+System,  }\item[{bool}]{p\+Sub\+Children\+Only }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a39608f5f990b1ab304f13ee2b6df64ea}\label{class_fbx_axis_system_a39608f5f990b1ab304f13ee2b6df64ea}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Convert\+Curve\+Nodes@{Convert\+Curve\+Nodes}}
+\index{Convert\+Curve\+Nodes@{Convert\+Curve\+Nodes}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Convert\+Curve\+Nodes()}{ConvertCurveNodes()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Convert\+Curve\+Nodes (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$$>$ \&}]{p\+Curve\+Nodes,  }\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+From }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_abb9a361cd8d245c60e68b05868c67b4e}\label{class_fbx_axis_system_abb9a361cd8d245c60e68b05868c67b4e}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Convert\+Scene@{Convert\+Scene}}
+\index{Convert\+Scene@{Convert\+Scene}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Convert\+Scene()}{ConvertScene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Convert\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption}) const}
+
+Convert a scene to this axis system. Sets the axis system of the scene to this system unit. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to convert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_a25f6f6ddb481f280bfecca5d39d14d4c}\label{class_fbx_axis_system_a25f6f6ddb481f280bfecca5d39d14d4c}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Convert\+Scene@{Convert\+Scene}}
+\index{Convert\+Scene@{Convert\+Scene}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Convert\+Scene()}{ConvertScene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Convert\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Fbx\+Root }\end{DoxyParamCaption}) const}
+
+Convert a scene to this axis system by using the specified node as an Fbx\+\_\+\+Root. This is provided for backwards compatibility only and Convert\+Scene(\+Fbx\+Scene$\ast$ p\+Scene) should be used instead when possible. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to convert \\
+\hline
+{\em p\+Fbx\+Root} & The Fbx\+\_\+\+Root node that will be transformed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_a41956e32f21b9709f40efef34a6d6121}\label{class_fbx_axis_system_a41956e32f21b9709f40efef34a6d6121}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Convert\+T\+Property@{Convert\+T\+Property}}
+\index{Convert\+T\+Property@{Convert\+T\+Property}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Convert\+T\+Property()}{ConvertTProperty()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Convert\+T\+Property (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ \&}]{p\+Nodes,  }\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+From }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_ae365f46f757b83df6426e5469938e8a0}\label{class_fbx_axis_system_ae365f46f757b83df6426e5469938e8a0}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Get\+Conversion\+Matrix@{Get\+Conversion\+Matrix}}
+\index{Get\+Conversion\+Matrix@{Get\+Conversion\+Matrix}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Get\+Conversion\+Matrix()}{GetConversionMatrix()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Get\+Conversion\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+From,  }\item[{\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Conversion\+RM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a6ebdf99e9754d3bd83d3a8f98544b331}\label{class_fbx_axis_system_a6ebdf99e9754d3bd83d3a8f98544b331}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Get\+Coor\+System@{Get\+Coor\+System}}
+\index{Get\+Coor\+System@{Get\+Coor\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Get\+Coor\+System()}{GetCoorSystem()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system_a7cf0485846b560fa34f86932c02ec333}{E\+Coord\+System} Fbx\+Axis\+System\+::\+Get\+Coor\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Accessor to the E\+Coord\+System of this object. \begin{DoxyReturn}{戻り値}
+The current coordinate axis system of this object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_axis_system_a523996d3b195bf6016ab7c0333a5d389}\label{class_fbx_axis_system_a523996d3b195bf6016ab7c0333a5d389}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Get\+Front\+Vector@{Get\+Front\+Vector}}
+\index{Get\+Front\+Vector@{Get\+Front\+Vector}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Get\+Front\+Vector()}{GetFrontVector()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system_a34bce1daad7ed6ae71916bb825d3ec87}{E\+Front\+Vector} Fbx\+Axis\+System\+::\+Get\+Front\+Vector (\begin{DoxyParamCaption}\item[{int \&}]{p\+Sign }\end{DoxyParamCaption}) const}
+
+Get the E\+Front\+Vector and its sign of this axis system. 
+\begin{DoxyParams}{引数}
+{\em p\+Sign} & The sign of the axis, 1 for front, -\/1 for back (relative to observer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The E\+Front\+Vector of this axis system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_axis_system_a2ee31cfe8c836f4abdbc939a0891a6a9}\label{class_fbx_axis_system_a2ee31cfe8c836f4abdbc939a0891a6a9}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Get\+Matrix@{Get\+Matrix}}
+\index{Get\+Matrix@{Get\+Matrix}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Get\+Matrix()}{GetMatrix()}}
+{\footnotesize\ttfamily void Fbx\+Axis\+System\+::\+Get\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption})}
+
+Represents the axis system as a 4x4 matrix \begin{DoxyReturn}{戻り値}
+The equivalent matrix of this axis system 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_axis_system_a3ed72f373b701c5f7c108e93f23e0e73}\label{class_fbx_axis_system_a3ed72f373b701c5f7c108e93f23e0e73}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Get\+Up\+Vector@{Get\+Up\+Vector}}
+\index{Get\+Up\+Vector@{Get\+Up\+Vector}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Get\+Up\+Vector()}{GetUpVector()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system_ad41a41f7ccd9167f54d09b65ad781d00}{E\+Up\+Vector} Fbx\+Axis\+System\+::\+Get\+Up\+Vector (\begin{DoxyParamCaption}\item[{int \&}]{p\+Sign }\end{DoxyParamCaption}) const}
+
+Get the E\+Up\+Vector and its sign of this axis system. 
+\begin{DoxyParams}{引数}
+{\em p\+Sign} & The sign of the axis, 1 for up, -\/1 for down (relative to observer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The E\+Up\+Vector of this axis system. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_axis_system_adf5cf05010b87ddde4bb158e274892b4}\label{class_fbx_axis_system_adf5cf05010b87ddde4bb158e274892b4}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+Axis\+System\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+Axis\+System }\end{DoxyParamCaption}) const}
+
+Non-\/equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Axis\+System} & The axis system to compare against this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if these two axis systems are unequal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_axis_system_a108da01b311416d5b60305ac170e5be5}\label{class_fbx_axis_system_a108da01b311416d5b60305ac170e5be5}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System}\& Fbx\+Axis\+System\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+Axis\+System }\end{DoxyParamCaption})}
+
+Assignment operation. 
+\begin{DoxyParams}{引数}
+{\em p\+Axis\+System} & Axis system assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_axis_system_a36933159c0730e52b918f9b52cb2ecc1}\label{class_fbx_axis_system_a36933159c0730e52b918f9b52cb2ecc1}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Axis\+System\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} \&}]{p\+Axis\+System }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Axis\+System} & The axis system to compare against this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if these two axis systems are equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_axis_system_ac6f6b3953bf13718eb87110d614b3c9a}\label{class_fbx_axis_system_ac6f6b3953bf13718eb87110d614b3c9a}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Fbx\+Global\+Settings@{Fbx\+Global\+Settings}}
+\index{Fbx\+Global\+Settings@{Fbx\+Global\+Settings}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Fbx\+Global\+Settings}{FbxGlobalSettings}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_axis_system_a2eddfe5afe7db5f56adee774c51559e9}\label{class_fbx_axis_system_a2eddfe5afe7db5f56adee774c51559e9}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!DirectX@{DirectX}}
+\index{DirectX@{DirectX}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{DirectX}{DirectX}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+DirectX\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: DirectX (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = -\/X (Left\+Handed)) 
+
+\mbox{\Hypertarget{class_fbx_axis_system_a45fc90ee125c8dafa7ca95f62e7485a8}\label{class_fbx_axis_system_a45fc90ee125c8dafa7ca95f62e7485a8}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Lightwave@{Lightwave}}
+\index{Lightwave@{Lightwave}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Lightwave}{Lightwave}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+Lightwave\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: Lightwave (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = -\/X (Left\+Handed)) 
+
+\mbox{\Hypertarget{class_fbx_axis_system_a3ac2db6cd471f8477a1d0b4a3ad22608}\label{class_fbx_axis_system_a3ac2db6cd471f8477a1d0b4a3ad22608}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Max@{Max}}
+\index{Max@{Max}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Max}{Max}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+Max\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: Max (Up\+Vector = +Z, Front\+Vector = -\/Y, Coord\+System = +X (Right\+Handed)) 
+
+\mbox{\Hypertarget{class_fbx_axis_system_a898f6952538dbc23cead05b2a1e19d10}\label{class_fbx_axis_system_a898f6952538dbc23cead05b2a1e19d10}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Maya\+Y\+Up@{Maya\+Y\+Up}}
+\index{Maya\+Y\+Up@{Maya\+Y\+Up}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Maya\+Y\+Up}{MayaYUp}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+Maya\+Y\+Up\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: Maya\+Y\+Up (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = +X (Right\+Handed)) 
+
+\mbox{\Hypertarget{class_fbx_axis_system_af6d2329b82cd505ae9816810f9d26bd6}\label{class_fbx_axis_system_af6d2329b82cd505ae9816810f9d26bd6}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Maya\+Z\+Up@{Maya\+Z\+Up}}
+\index{Maya\+Z\+Up@{Maya\+Z\+Up}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Maya\+Z\+Up}{MayaZUp}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+Maya\+Z\+Up\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: Maya\+Z\+Up (Up\+Vector = +Z, Front\+Vector = -\/Y, Coord\+System = +X (Right\+Handed)) 
+
+\mbox{\Hypertarget{class_fbx_axis_system_ac6a0711045499b8e4f699019e3c7fe0e}\label{class_fbx_axis_system_ac6a0711045499b8e4f699019e3c7fe0e}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!m\+Coor\+System@{m\+Coor\+System}}
+\index{m\+Coor\+System@{m\+Coor\+System}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{m\+Coor\+System}{mCoorSystem}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def} Fbx\+Axis\+System\+::m\+Coor\+System\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a8d26e8fb0d5e47bc2e7f667a7b288a5b}\label{class_fbx_axis_system_a8d26e8fb0d5e47bc2e7f667a7b288a5b}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!m\+Front\+Vector@{m\+Front\+Vector}}
+\index{m\+Front\+Vector@{m\+Front\+Vector}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{m\+Front\+Vector}{mFrontVector}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def} Fbx\+Axis\+System\+::m\+Front\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_af24f958db3b4147d22005984cd4cebb2}\label{class_fbx_axis_system_af24f958db3b4147d22005984cd4cebb2}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Motionbuilder@{Motionbuilder}}
+\index{Motionbuilder@{Motionbuilder}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Motionbuilder}{Motionbuilder}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+Motionbuilder\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: Motionbuilder (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = +X (Right\+Handed)) 
+
+\mbox{\Hypertarget{class_fbx_axis_system_afdefd4d8b257567fe099e28dd1745cfe}\label{class_fbx_axis_system_afdefd4d8b257567fe099e28dd1745cfe}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!m\+Up\+Vector@{m\+Up\+Vector}}
+\index{m\+Up\+Vector@{m\+Up\+Vector}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{m\+Up\+Vector}{mUpVector}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_axis_system_1_1_axis_def}{Axis\+Def} Fbx\+Axis\+System\+::m\+Up\+Vector\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_axis_system_a30249cc37f848cdac27b77d3520f4e28}\label{class_fbx_axis_system_a30249cc37f848cdac27b77d3520f4e28}} 
+\index{Fbx\+Axis\+System@{Fbx\+Axis\+System}!Open\+GL@{Open\+GL}}
+\index{Open\+GL@{Open\+GL}!Fbx\+Axis\+System@{Fbx\+Axis\+System}}
+\subsubsection{\texorpdfstring{Open\+GL}{OpenGL}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} Fbx\+Axis\+System\+::\+Open\+GL\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined axis system\+: Open\+GL (Up\+Vector = +Y, Front\+Vector = +Z, Coord\+System = +X (Right\+Handed)) 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxaxissystem_8h}{fbxaxissystem.\+h}\end{DoxyCompactItemize}

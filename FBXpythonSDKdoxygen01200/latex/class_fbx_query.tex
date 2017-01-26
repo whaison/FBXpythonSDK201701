@@ -1,0 +1,137 @@
+\hypertarget{class_fbx_query}{}\section{Fbx\+Query クラス}
+\label{class_fbx_query}\index{Fbx\+Query@{Fbx\+Query}}
+
+
+{\ttfamily \#include $<$fbxquery.\+h$>$}
+
+
+
+Fbx\+Query の継承関係図
+% FIG 0
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} \hyperlink{class_fbx_query_ac7daae8f6fa83cd97ae24e93d7b4dc29}{Get\+Unique\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get unique filter Id \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_query_a822776baf45a56d8e126e948ec25d920}{Is\+Valid} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\item 
+virtual bool \hyperlink{class_fbx_query_adfc24c7306ceed2fcfd8c67198e0c1dd}{Is\+Equal} (\hyperlink{class_fbx_query}{Fbx\+Query} $\ast$p\+Other\+Query) const
+\item 
+void \hyperlink{class_fbx_query_a0d945a2be30bcfe72a083f0af90d8252}{Ref} ()
+\begin{DoxyCompactList}\small\item\em Add one to ref count. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_query_a572e8b1922846020818adfbdc2a48f74}{Unref} ()
+\begin{DoxyCompactList}\small\item\em Minus one to ref count, if ref count is zero, delete this query object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_query_af8e81dde9b528978812388b9dc0d6d60}{Fbx\+Query} ()
+\item 
+virtual \hyperlink{class_fbx_query_a9e87c2a8fda32a157ed77b998aac954e}{$\sim$\+Fbx\+Query} ()
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_query_a5d7018830479ec28905f28575480f88f}{Fbx\+Property}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Base class to manage query. A query contains a filter and reference ID, which will be used to search and retrieve objects. The derived query classes are used to create \hyperlink{class_fbx_criteria}{Fbx\+Criteria}. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_query_af8e81dde9b528978812388b9dc0d6d60}\label{class_fbx_query_af8e81dde9b528978812388b9dc0d6d60}} 
+\index{Fbx\+Query@{Fbx\+Query}!Fbx\+Query@{Fbx\+Query}}
+\index{Fbx\+Query@{Fbx\+Query}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Fbx\+Query()}{FbxQuery()}}
+{\footnotesize\ttfamily Fbx\+Query\+::\+Fbx\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_query_a9e87c2a8fda32a157ed77b998aac954e}\label{class_fbx_query_a9e87c2a8fda32a157ed77b998aac954e}} 
+\index{Fbx\+Query@{Fbx\+Query}!````~Fbx\+Query@{$\sim$\+Fbx\+Query}}
+\index{````~Fbx\+Query@{$\sim$\+Fbx\+Query}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Query()}{~FbxQuery()}}
+{\footnotesize\ttfamily virtual Fbx\+Query\+::$\sim$\+Fbx\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_query_ac7daae8f6fa83cd97ae24e93d7b4dc29}\label{class_fbx_query_ac7daae8f6fa83cd97ae24e93d7b4dc29}} 
+\index{Fbx\+Query@{Fbx\+Query}!Get\+Unique\+Id@{Get\+Unique\+Id}}
+\index{Get\+Unique\+Id@{Get\+Unique\+Id}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Get\+Unique\+Id()}{GetUniqueId()}}
+{\footnotesize\ttfamily virtual \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} Fbx\+Query\+::\+Get\+Unique\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get unique filter Id 
+
+
+
+\hyperlink{class_fbx_query_is_property_a390fb64587424e7d16cb4966566aee80}{Fbx\+Query\+Is\+Property}, \hyperlink{class_fbx_query_is_a_acf42ad6bd28bf6543ab09642561ee73b}{Fbx\+Query\+IsA}, \hyperlink{class_fbx_query_class_id_a9460258f2525b83b7e81f87a3bcc2c61}{Fbx\+Query\+Class\+Id}, \hyperlink{class_fbx_query_operator_unary_ac2e7dbfc697aee51db49db2857ab2b7c}{Fbx\+Query\+Operator\+Unary}, \hyperlink{class_fbx_query_operator_a55d021e0103b5e7dc0f8a80e4b468314}{Fbx\+Query\+Operator}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_query_adfc24c7306ceed2fcfd8c67198e0c1dd}\label{class_fbx_query_adfc24c7306ceed2fcfd8c67198e0c1dd}} 
+\index{Fbx\+Query@{Fbx\+Query}!Is\+Equal@{Is\+Equal}}
+\index{Is\+Equal@{Is\+Equal}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Is\+Equal()}{IsEqual()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Query\+::\+Is\+Equal (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_query}{Fbx\+Query} $\ast$}]{p\+Other\+Query }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This compares whether two \hyperlink{class_fbx_query}{Fbx\+Query} are the same, N\+OT whether the query matches or not. It\textquotesingle{}s strictly the equivalent of an operator==, but virtual. 
+\begin{DoxyParams}{引数}
+{\em p\+Other\+Query} & The given \hyperlink{class_fbx_query}{Fbx\+Query} \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_query_is_property_ace0b3dd62cc2614acc88ad892849416b}{Fbx\+Query\+Is\+Property}, \hyperlink{class_fbx_query_is_a_a49b41a34152be44240671b8ae59a4d19}{Fbx\+Query\+IsA}, \hyperlink{class_fbx_query_class_id_ac20046270f87a7bb84fbf776980431af}{Fbx\+Query\+Class\+Id}, \hyperlink{class_fbx_query_operator_unary_a36c2fea0f42bd732d559375d64b0134e}{Fbx\+Query\+Operator\+Unary}, \hyperlink{class_fbx_query_operator_aa96734a4da59286a2cab2832f0529175}{Fbx\+Query\+Operator}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_query_a822776baf45a56d8e126e948ec25d920}\label{class_fbx_query_a822776baf45a56d8e126e948ec25d920}} 
+\index{Fbx\+Query@{Fbx\+Query}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Query\+::\+Is\+Valid (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Judge if the given property is valid. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The given property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} always, not implemented. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_query_is_property_a6f9680d513428cba6321203c9b3da71e}{Fbx\+Query\+Is\+Property}, \hyperlink{class_fbx_query_is_a_a6d3da2f05ab6e50346af8e9713168772}{Fbx\+Query\+IsA}, \hyperlink{class_fbx_query_class_id_aaa9990771cab43ddc199eaeac2b6d754}{Fbx\+Query\+Class\+Id}, \hyperlink{class_fbx_query_operator_unary_a4987590ec1680775240b813ec3b2ffb4}{Fbx\+Query\+Operator\+Unary}, \hyperlink{class_fbx_query_operator_a14dd8a653d1e802f43b60c13d137ccce}{Fbx\+Query\+Operator}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_query_a0d945a2be30bcfe72a083f0af90d8252}\label{class_fbx_query_a0d945a2be30bcfe72a083f0af90d8252}} 
+\index{Fbx\+Query@{Fbx\+Query}!Ref@{Ref}}
+\index{Ref@{Ref}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Ref()}{Ref()}}
+{\footnotesize\ttfamily void Fbx\+Query\+::\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add one to ref count. 
+
+\mbox{\Hypertarget{class_fbx_query_a572e8b1922846020818adfbdc2a48f74}\label{class_fbx_query_a572e8b1922846020818adfbdc2a48f74}} 
+\index{Fbx\+Query@{Fbx\+Query}!Unref@{Unref}}
+\index{Unref@{Unref}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Unref()}{Unref()}}
+{\footnotesize\ttfamily void Fbx\+Query\+::\+Unref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Minus one to ref count, if ref count is zero, delete this query object. 
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_query_a5d7018830479ec28905f28575480f88f}\label{class_fbx_query_a5d7018830479ec28905f28575480f88f}} 
+\index{Fbx\+Query@{Fbx\+Query}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Query@{Fbx\+Query}}
+\subsubsection{\texorpdfstring{Fbx\+Property}{FbxProperty}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_property}{Fbx\+Property}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxquery_8h}{fbxquery.\+h}\end{DoxyCompactItemize}

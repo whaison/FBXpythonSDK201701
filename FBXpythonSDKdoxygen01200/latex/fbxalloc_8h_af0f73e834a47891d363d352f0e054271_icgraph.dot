@@ -1,0 +1,25 @@
+digraph "FbxMalloc"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node101 [label="FbxMalloc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node101 -> Node102 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node102 [label="FbxSharedPtr\< Type,\l FbxDeletionPolicyObject\l\< Type \> \>::FbxSharedPtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_shared_ptr.html#a694b2cfd410b1e18b87d697f30518af8",tooltip="Construct from a pointer. "];
+  Node101 -> Node103 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node103 [label="FbxNew",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fbxnew_8h.html#a31302f981355f4b48ebc963ead1434f2"];
+  Node103 -> Node104 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node104 [label="FbxLayerElementUserData\l::AllocateArrays",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_layer_element_user_data.html#afd9b9cec3547a1a5ccde15f274128d2a"];
+  Node101 -> Node105 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node105 [label="FbxNewArray",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$fbxnew_8h.html#ab418b8784fa256dc8b0636be37b997c9"];
+  Node101 -> Node106 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node106 [label="FbxBaseAllocator::Allocate\lRecords",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_base_allocator.html#a3701773862fa1a808aaff72a3b541d8f"];
+  Node106 -> Node107 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node107 [label="FbxRedBlackTree\< KeyValue\lPair, Compare, FbxBaseAllocator\l \>::DuplicateSubTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_red_black_tree.html#a11fd717eeb71ff16ef10114a00cc7888"];
+  Node101 -> Node108 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node108 [label="FbxHungryAllocator\l::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_hungry_allocator.html#a692a8e4e268a60d82be5469e6e8c232f"];
+  Node101 -> Node109 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node109 [label="FbxPropertyInfo::SetMinMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_property_info.html#a9edba58ea8139407afbaf58d06ed03b4"];
+  Node109 -> Node110 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node110 [label="FbxPropertyPage::SetMinMax",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_fbx_property_page.html#a806d74ac95a70a176c235368e939c1e2"];
+}

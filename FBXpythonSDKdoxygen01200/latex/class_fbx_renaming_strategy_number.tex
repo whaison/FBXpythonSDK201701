@@ -1,0 +1,111 @@
+\hypertarget{class_fbx_renaming_strategy_number}{}\section{Fbx\+Renaming\+Strategy\+Number クラス}
+\label{class_fbx_renaming_strategy_number}\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+
+
+{\ttfamily \#include $<$fbxrenamingstrategy.\+h$>$}
+
+
+
+Fbx\+Renaming\+Strategy\+Number の継承関係図
+% FIG 0
+
+
+Fbx\+Renaming\+Strategy\+Number 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_renaming_strategy_number_a804b86f501a15158ce4c8b6b065e682d}{Fbx\+Renaming\+Strategy\+Number} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_renaming_strategy_number_a1ad543ecf2a3fe15324dd01f69c35ac1}{$\sim$\+Fbx\+Renaming\+Strategy\+Number} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_number_aaf762d4d2ab243e6868b5d77a3ed8040}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Resets internal state regarding assigned names. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_number_ae619f9e95e3fcb215a12728dfb739659}{Rename} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&p\+Name)
+\item 
+virtual \hyperlink{class_fbx_renaming_strategy_interface}{Fbx\+Renaming\+Strategy\+Interface} $\ast$ \hyperlink{class_fbx_renaming_strategy_number_a05a9960c25cbbabb79ab020930fed395}{Clone} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Implements a renaming strategy that resolves name clashes by adding number postfixes. For example, when there are three objects with the same names \char`\"{}\+My\+Object\char`\"{}, and they will be renamed to \char`\"{}\+My\+Object\char`\"{}, \char`\"{}\+My\+Object1\char`\"{} and \char`\"{}\+My\+Object2\char`\"{}.
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \hyperlink{class_fbx_renaming_strategy_base}{Fbx\+Renaming\+Strategy\+Base} 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_number_a804b86f501a15158ce4c8b6b065e682d}\label{class_fbx_renaming_strategy_number_a804b86f501a15158ce4c8b6b065e682d}} 
+\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}!Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}!Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+\subsubsection{\texorpdfstring{Fbx\+Renaming\+Strategy\+Number()}{FbxRenamingStrategyNumber()}}
+{\footnotesize\ttfamily Fbx\+Renaming\+Strategy\+Number\+::\+Fbx\+Renaming\+Strategy\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_number_a1ad543ecf2a3fe15324dd01f69c35ac1}\label{class_fbx_renaming_strategy_number_a1ad543ecf2a3fe15324dd01f69c35ac1}} 
+\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}!````~Fbx\+Renaming\+Strategy\+Number@{$\sim$\+Fbx\+Renaming\+Strategy\+Number}}
+\index{````~Fbx\+Renaming\+Strategy\+Number@{$\sim$\+Fbx\+Renaming\+Strategy\+Number}!Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Renaming\+Strategy\+Number()}{~FbxRenamingStrategyNumber()}}
+{\footnotesize\ttfamily virtual Fbx\+Renaming\+Strategy\+Number\+::$\sim$\+Fbx\+Renaming\+Strategy\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_number_aaf762d4d2ab243e6868b5d77a3ed8040}\label{class_fbx_renaming_strategy_number_aaf762d4d2ab243e6868b5d77a3ed8040}} 
+\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+Number\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets internal state regarding assigned names. 
+
+
+
+\hyperlink{class_fbx_renaming_strategy_interface_a2090b5ae43936b617ec5d75015923f69}{Fbx\+Renaming\+Strategy\+Interface}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_number_a05a9960c25cbbabb79ab020930fed395}\label{class_fbx_renaming_strategy_number_a05a9960c25cbbabb79ab020930fed395}} 
+\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}!Clone@{Clone}}
+\index{Clone@{Clone}!Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_renaming_strategy_interface}{Fbx\+Renaming\+Strategy\+Interface}$\ast$ Fbx\+Renaming\+Strategy\+Number\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a dynamic renaming strategy instance of the same type as the child class. \begin{DoxyReturn}{戻り値}
+New instance. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_interface_ab394ed8a9b5d3ec40334bc933af83907}{Fbx\+Renaming\+Strategy\+Interface}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_number_ae619f9e95e3fcb215a12728dfb739659}\label{class_fbx_renaming_strategy_number_ae619f9e95e3fcb215a12728dfb739659}} 
+\index{Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}!Rename@{Rename}}
+\index{Rename@{Rename}!Fbx\+Renaming\+Strategy\+Number@{Fbx\+Renaming\+Strategy\+Number}}
+\subsubsection{\texorpdfstring{Rename()}{Rename()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+Number\+::\+Rename (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Rename a name if necessary to avoid name-\/clash issues. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name to be renamed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return {\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_interface_a1b91016c68dd9c7031624026fd39638a}{Fbx\+Renaming\+Strategy\+Interface}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxrenamingstrategy_8h}{fbxrenamingstrategy.\+h}\end{DoxyCompactItemize}

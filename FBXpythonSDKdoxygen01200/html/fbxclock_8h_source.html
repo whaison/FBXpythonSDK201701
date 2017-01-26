@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXpythonSDKdoxygen01100: C:/github/FBXpythonSDK201701/FBXpythonSDK201701/2017.1/include/fbxsdk/core/sync/fbxclock.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXpythonSDKdoxygen01100
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_4baf1032ac90af4239d2eb090c1bbbaa.html">FBXpythonSDK201701</a></li><li class="navelem"><a class="el" href="dir_4a426b8e03fe3d7486f55cd786ec34a5.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_5150d3ec408cc88d4a430afaa310edb3.html">include</a></li><li class="navelem"><a class="el" href="dir_e7a7a586c60171c9c47f14bdba965fea.html">fbxsdk</a></li><li class="navelem"><a class="el" href="dir_dc5f68bdde303aff54e2a4c8ef8e1df0.html">core</a></li><li class="navelem"><a class="el" href="dir_613013198a140a99a9ced2cc06b107b9.html">sync</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fbxclock.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fbxclock_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">   Copyright (C) 2015 Autodesk, Inc.</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">   All rights reserved.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">   Use of this software is subject to the terms of the Autodesk license agreement</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">   provided at the time of installation or download, or which otherwise accompanies</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">   this software in either electronic or hard copy form.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">****************************************************************************************/</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef _FBXSDK_CORE_SYNC_CLOCK_H_</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define _FBXSDK_CORE_SYNC_CLOCK_H_</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__def_8h.html">fbxsdk/fbxsdk_def.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef FBXSDK_ENV_WINSTORE</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsbegin_8h.html">fbxsdk/fbxsdk_nsbegin.h</a>&gt;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a> <span class="keywordtype">void</span> <a class="code" href="fbxclock_8h.html#a693e90bbe70844052b885c7df0fe332b">FbxSleep</a>(<span class="keywordtype">int</span> pMilliseconds);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a> <a class="code" href="fbxtypes_8h.html#ac34da60c22b0a7e1156e5480da7d71f1">FbxLongLong</a> <a class="code" href="fbxclock_8h.html#a48e1e00e3af91ee198b963bd8d275613">FbxGetHighResCounter</a>();</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a> <a class="code" href="fbxtypes_8h.html#ac34da60c22b0a7e1156e5480da7d71f1">FbxLongLong</a> <a class="code" href="fbxclock_8h.html#ac79f90f3d50506f5bce740aa5ff6e993">FbxGetHighResFrequency</a>();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsend_8h.html">fbxsdk/fbxsdk_nsend.h</a>&gt;</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !FBXSDK_ENV_WINSTORE */</span><span class="preprocessor"></span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FBXSDK_CORE_SYNC_CLOCK_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="fbxsdk__def_8h_html"><div class="ttname"><a href="fbxsdk__def_8h.html">fbxsdk_def.h</a></div></div>
+<div class="ttc" id="fbxsdk__nsbegin_8h_html"><div class="ttname"><a href="fbxsdk__nsbegin_8h.html">fbxsdk_nsbegin.h</a></div></div>
+<div class="ttc" id="fbxclock_8h_html_a693e90bbe70844052b885c7df0fe332b"><div class="ttname"><a href="fbxclock_8h.html#a693e90bbe70844052b885c7df0fe332b">FbxSleep</a></div><div class="ttdeci">FBXSDK_DLL void FbxSleep(int pMilliseconds)</div></div>
+<div class="ttc" id="fbxclock_8h_html_ac79f90f3d50506f5bce740aa5ff6e993"><div class="ttname"><a href="fbxclock_8h.html#ac79f90f3d50506f5bce740aa5ff6e993">FbxGetHighResFrequency</a></div><div class="ttdeci">FBXSDK_DLL FbxLongLong FbxGetHighResFrequency()</div></div>
+<div class="ttc" id="fbxsdk__nsend_8h_html"><div class="ttname"><a href="fbxsdk__nsend_8h.html">fbxsdk_nsend.h</a></div></div>
+<div class="ttc" id="fbxarch_8h_html_a25d1298b33c31da5dbed969e0d4b4bc1"><div class="ttname"><a href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a></div><div class="ttdeci">#define FBXSDK_DLL</div><div class="ttdef"><b>Definition:</b> fbxarch.h:173</div></div>
+<div class="ttc" id="fbxclock_8h_html_a48e1e00e3af91ee198b963bd8d275613"><div class="ttname"><a href="fbxclock_8h.html#a48e1e00e3af91ee198b963bd8d275613">FbxGetHighResCounter</a></div><div class="ttdeci">FBXSDK_DLL FbxLongLong FbxGetHighResCounter()</div></div>
+<div class="ttc" id="fbxtypes_8h_html_ac34da60c22b0a7e1156e5480da7d71f1"><div class="ttname"><a href="fbxtypes_8h.html#ac34da60c22b0a7e1156e5480da7d71f1">FbxLongLong</a></div><div class="ttdeci">FbxInt64 FbxLongLong</div><div class="ttdef"><b>Definition:</b> fbxtypes.h:92</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

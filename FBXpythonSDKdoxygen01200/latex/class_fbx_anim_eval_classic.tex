@@ -1,0 +1,101 @@
+\hypertarget{class_fbx_anim_eval_classic}{}\section{Fbx\+Anim\+Eval\+Classic クラス}
+\label{class_fbx_anim_eval_classic}\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+
+
+{\ttfamily \#include $<$fbxanimevalclassic.\+h$>$}
+
+
+
+Fbx\+Anim\+Eval\+Classic の継承関係図
+% FIG 0
+
+
+Fbx\+Anim\+Eval\+Classic 連携図
+% FIG 1
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_eval_classic_a9b0ca916c170485271aa2ba23d38019a}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_anim_eval_classic_a308a42f3bd439a3e36f3b5171d5fc092}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_anim_eval_classic_a83f7c6d89964e4ff48e7ad2d325a1eac}{Evaluate\+Node\+Transform} (\hyperlink{class_fbx_node_eval_state}{Fbx\+Node\+Eval\+State} $\ast$p\+Result, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_node_ae62b7311ac4727654cdf1ebd5cbf7343}{Fbx\+Node\+::\+E\+Pivot\+Set} p\+Pivot\+Set, bool p\+Apply\+Target)
+\item 
+virtual void \hyperlink{class_fbx_anim_eval_classic_a3618b50c5fd35f18f5e6f873ca07cf2e}{Evaluate\+Property\+Value} (\hyperlink{class_fbx_property_eval_state}{Fbx\+Property\+Eval\+State} $\ast$p\+Result, \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+An evaluator implementation that behaves like the original F\+BX S\+DK (2010 and previous) evaluation system.
+
+It works by implementing the abstract class \hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator}, which is used as the main interface for evaluators. \begin{DoxyNote}{覚え書き}
+While this class can be instanced at any time, it is preferable to access the evaluator via the function Fbx\+Scene\+::\+Get\+Evaluator(), which will automatically return the default evaluator used in the current F\+BX S\+DK. This is very useful because it will allow the user to use the very same evaluator used by the F\+BX S\+DK internally. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator}, \hyperlink{class_fbx_scene}{Fbx\+Scene} 
+\end{DoxySeeAlso}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_anim_eval_classic_a9b0ca916c170485271aa2ba23d38019a}\label{class_fbx_anim_eval_classic_a9b0ca916c170485271aa2ba23d38019a}} 
+\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Eval\+Classic\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_evaluator_a9f167a7fd55aa593d191fdf014c1b3bd}{Fbx\+Anim\+Evaluator}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_eval_classic_a308a42f3bd439a3e36f3b5171d5fc092}\label{class_fbx_anim_eval_classic_a308a42f3bd439a3e36f3b5171d5fc092}} 
+\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Eval\+Classic\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_evaluator_ac425dd202ceb6c0e5adfc86d8c901dd0}{Fbx\+Anim\+Evaluator}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_eval_classic_a83f7c6d89964e4ff48e7ad2d325a1eac}\label{class_fbx_anim_eval_classic_a83f7c6d89964e4ff48e7ad2d325a1eac}} 
+\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}!Evaluate\+Node\+Transform@{Evaluate\+Node\+Transform}}
+\index{Evaluate\+Node\+Transform@{Evaluate\+Node\+Transform}!Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+\subsubsection{\texorpdfstring{Evaluate\+Node\+Transform()}{EvaluateNodeTransform()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Eval\+Classic\+::\+Evaluate\+Node\+Transform (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node_eval_state}{Fbx\+Node\+Eval\+State} $\ast$}]{p\+Result,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_node_ae62b7311ac4727654cdf1ebd5cbf7343}{Fbx\+Node\+::\+E\+Pivot\+Set}}]{p\+Pivot\+Set,  }\item[{bool}]{p\+Apply\+Target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_evaluator_a6de6ef5ab77169192cd39baf76f14037}{Fbx\+Anim\+Evaluator}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_eval_classic_a3618b50c5fd35f18f5e6f873ca07cf2e}\label{class_fbx_anim_eval_classic_a3618b50c5fd35f18f5e6f873ca07cf2e}} 
+\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}!Evaluate\+Property\+Value@{Evaluate\+Property\+Value}}
+\index{Evaluate\+Property\+Value@{Evaluate\+Property\+Value}!Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+\subsubsection{\texorpdfstring{Evaluate\+Property\+Value()}{EvaluatePropertyValue()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Eval\+Classic\+::\+Evaluate\+Property\+Value (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_eval_state}{Fbx\+Property\+Eval\+State} $\ast$}]{p\+Result,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property,  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_evaluator_aa29759ee76b1cbb0ced4fee1508d5d84}{Fbx\+Anim\+Evaluator}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimevalclassic_8h}{fbxanimevalclassic.\+h}\end{DoxyCompactItemize}

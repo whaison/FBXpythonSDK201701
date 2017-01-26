@@ -1,0 +1,147 @@
+\hypertarget{class_animation_element}{}\section{Animation\+Element クラス}
+\label{class_animation_element}\index{Animation\+Element@{Animation\+Element}}
+
+
+{\ttfamily \#include $<$fbxcolladaanimationelement.\+h$>$}
+
+
+
+Animation\+Element の継承関係図
+% FIG 0
+
+
+Animation\+Element 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_element_base}{Element\+Base} \hyperlink{class_animation_element_aaf3cccce84fd90fe8e08b1a45a5fc8a2}{base\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation_element_a1c52f1799ec9f0a64270aa0602bc036c}{Animation\+Element} ()
+\item 
+virtual \hyperlink{class_animation_element_ad8f5739e70502e9abaa7bc9e0c1384d2}{$\sim$\+Animation\+Element} ()
+\item 
+int \hyperlink{class_animation_element_a2c02d9a40137240eea5c3bc867c59fa3}{Get\+Channel\+Count} () const
+\item 
+bool \hyperlink{class_animation_element_ad0a36ae16945ef4a3027bb8f57452c45}{From\+C\+O\+L\+L\+A\+DA} (xml\+Node $\ast$p\+Element, const \hyperlink{fbxcolladautils_8h_a43e0f8079e4c5df7b8b0496de1f120c3}{Source\+Element\+Map\+Type} \&p\+Source\+Elements)
+\item 
+bool \hyperlink{class_animation_element_a44a774ba612fb2707dee931048231686}{From\+F\+BX} (const \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+Curve, double p\+Unit\+Conversion=1.\+0)
+\item 
+bool \hyperlink{class_animation_element_af26601574516e4a3d05a5e8a611b6ea5}{To\+F\+BX} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+F\+B\+X\+Curve, int p\+Channel\+Index, double p\+Unit\+Conversion=1.\+0) const
+\item 
+bool \hyperlink{class_animation_element_a97828e118006d28ad27aae3d3a668b66}{To\+F\+BX} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+F\+B\+X\+Node, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, double p\+Unit\+Conversion=1.\+0) const
+\item 
+bool \hyperlink{class_animation_element_ac697ab978aa85e18c65eaf651db69c6a}{To\+C\+O\+L\+L\+A\+DA} (xml\+Node $\ast$p\+Animation\+Library, const char $\ast$p\+Node\+ID, const char $\ast$p\+Attribute\+S\+ID)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Representing a C\+O\+L\+L\+A\+DA animation element. 
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_animation_element_aaf3cccce84fd90fe8e08b1a45a5fc8a2}\label{class_animation_element_aaf3cccce84fd90fe8e08b1a45a5fc8a2}} 
+\index{Animation\+Element@{Animation\+Element}!base\+\_\+type@{base\+\_\+type}}
+\index{base\+\_\+type@{base\+\_\+type}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{base\+\_\+type}{base\_type}}
+{\footnotesize\ttfamily typedef \hyperlink{class_element_base}{Element\+Base} \hyperlink{class_animation_element_aaf3cccce84fd90fe8e08b1a45a5fc8a2}{Animation\+Element\+::base\+\_\+type}}
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_animation_element_a1c52f1799ec9f0a64270aa0602bc036c}\label{class_animation_element_a1c52f1799ec9f0a64270aa0602bc036c}} 
+\index{Animation\+Element@{Animation\+Element}!Animation\+Element@{Animation\+Element}}
+\index{Animation\+Element@{Animation\+Element}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{Animation\+Element()}{AnimationElement()}}
+{\footnotesize\ttfamily Animation\+Element\+::\+Animation\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_animation_element_ad8f5739e70502e9abaa7bc9e0c1384d2}\label{class_animation_element_ad8f5739e70502e9abaa7bc9e0c1384d2}} 
+\index{Animation\+Element@{Animation\+Element}!````~Animation\+Element@{$\sim$\+Animation\+Element}}
+\index{````~Animation\+Element@{$\sim$\+Animation\+Element}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{$\sim$\+Animation\+Element()}{~AnimationElement()}}
+{\footnotesize\ttfamily virtual Animation\+Element\+::$\sim$\+Animation\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_animation_element_ad0a36ae16945ef4a3027bb8f57452c45}\label{class_animation_element_ad0a36ae16945ef4a3027bb8f57452c45}} 
+\index{Animation\+Element@{Animation\+Element}!From\+C\+O\+L\+L\+A\+DA@{From\+C\+O\+L\+L\+A\+DA}}
+\index{From\+C\+O\+L\+L\+A\+DA@{From\+C\+O\+L\+L\+A\+DA}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{From\+C\+O\+L\+L\+A\+D\+A()}{FromCOLLADA()}}
+{\footnotesize\ttfamily bool Animation\+Element\+::\+From\+C\+O\+L\+L\+A\+DA (\begin{DoxyParamCaption}\item[{xml\+Node $\ast$}]{p\+Element,  }\item[{const \hyperlink{fbxcolladautils_8h_a43e0f8079e4c5df7b8b0496de1f120c3}{Source\+Element\+Map\+Type} \&}]{p\+Source\+Elements }\end{DoxyParamCaption})}
+
+Initialize with the content of a C\+O\+L\+L\+A\+DA element. This method should be called before To\+F\+BX. \mbox{\Hypertarget{class_animation_element_a44a774ba612fb2707dee931048231686}\label{class_animation_element_a44a774ba612fb2707dee931048231686}} 
+\index{Animation\+Element@{Animation\+Element}!From\+F\+BX@{From\+F\+BX}}
+\index{From\+F\+BX@{From\+F\+BX}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{From\+F\+B\+X()}{FromFBX()}}
+{\footnotesize\ttfamily bool Animation\+Element\+::\+From\+F\+BX (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+Curve,  }\item[{double}]{p\+Unit\+Conversion = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Initialize with an animation curve. This method should be called before To\+C\+O\+L\+L\+A\+DA. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & The specific animation curve. \\
+\hline
+{\em p\+Unit\+Conversion} & The unit conversion for key value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_animation_element_a2c02d9a40137240eea5c3bc867c59fa3}\label{class_animation_element_a2c02d9a40137240eea5c3bc867c59fa3}} 
+\index{Animation\+Element@{Animation\+Element}!Get\+Channel\+Count@{Get\+Channel\+Count}}
+\index{Get\+Channel\+Count@{Get\+Channel\+Count}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{Get\+Channel\+Count()}{GetChannelCount()}}
+{\footnotesize\ttfamily int Animation\+Element\+::\+Get\+Channel\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the count of animation channels in the element. \begin{DoxyReturn}{戻り値}
+Return the channel count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_animation_element_ac697ab978aa85e18c65eaf651db69c6a}\label{class_animation_element_ac697ab978aa85e18c65eaf651db69c6a}} 
+\index{Animation\+Element@{Animation\+Element}!To\+C\+O\+L\+L\+A\+DA@{To\+C\+O\+L\+L\+A\+DA}}
+\index{To\+C\+O\+L\+L\+A\+DA@{To\+C\+O\+L\+L\+A\+DA}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{To\+C\+O\+L\+L\+A\+D\+A()}{ToCOLLADA()}}
+{\footnotesize\ttfamily bool Animation\+Element\+::\+To\+C\+O\+L\+L\+A\+DA (\begin{DoxyParamCaption}\item[{xml\+Node $\ast$}]{p\+Animation\+Library,  }\item[{const char $\ast$}]{p\+Node\+ID,  }\item[{const char $\ast$}]{p\+Attribute\+S\+ID }\end{DoxyParamCaption})}
+
+Add the content to C\+O\+L\+L\+A\+DA animation library. 
+\begin{DoxyParams}{引数}
+{\em p\+Animation\+Library} & The C\+O\+L\+L\+A\+DA animation library element. \\
+\hline
+{\em p\+Node\+ID} & The ID of the element to who this curve is belong. \\
+\hline
+{\em p\+Attribute\+S\+ID} & The ID the attribute to who this curve is belong. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_animation_element_af26601574516e4a3d05a5e8a611b6ea5}\label{class_animation_element_af26601574516e4a3d05a5e8a611b6ea5}} 
+\index{Animation\+Element@{Animation\+Element}!To\+F\+BX@{To\+F\+BX}}
+\index{To\+F\+BX@{To\+F\+BX}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{To\+F\+B\+X()}{ToFBX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Animation\+Element\+::\+To\+F\+BX (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+F\+B\+X\+Curve,  }\item[{int}]{p\+Channel\+Index,  }\item[{double}]{p\+Unit\+Conversion = {\ttfamily 1.0} }\end{DoxyParamCaption}) const}
+
+Copy the channel with specific index to the F\+BX animation curve. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+Curve} & The destination F\+BX animation curve. \\
+\hline
+{\em p\+Channel\+Index} & The index of the source channel. \\
+\hline
+{\em p\+Unit\+Conversion} & The unit conversion from local element to global. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_animation_element_a97828e118006d28ad27aae3d3a668b66}\label{class_animation_element_a97828e118006d28ad27aae3d3a668b66}} 
+\index{Animation\+Element@{Animation\+Element}!To\+F\+BX@{To\+F\+BX}}
+\index{To\+F\+BX@{To\+F\+BX}!Animation\+Element@{Animation\+Element}}
+\subsubsection{\texorpdfstring{To\+F\+B\+X()}{ToFBX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Animation\+Element\+::\+To\+F\+BX (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+F\+B\+X\+Node,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{double}]{p\+Unit\+Conversion = {\ttfamily 1.0} }\end{DoxyParamCaption}) const}
+
+Copy the matrix animation to the F\+BX node T\+RS properties. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+Node} & The destination F\+BX node. \\
+\hline
+{\em p\+Anim\+Layer} & The animation layer whose X, Y and Z curves will be set up. \\
+\hline
+{\em p\+Unit\+Conversion} & The unit conversion from local element to global. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/collada/\hyperlink{fbxcolladaanimationelement_8h}{fbxcolladaanimationelement.\+h}\end{DoxyCompactItemize}

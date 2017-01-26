@@ -1,0 +1,253 @@
+\hypertarget{class_fbx_boundary}{}\section{Fbx\+Boundary クラス}
+\label{class_fbx_boundary}\index{Fbx\+Boundary@{Fbx\+Boundary}}
+
+
+{\ttfamily \#include $<$fbxtrimnurbssurface.\+h$>$}
+
+
+
+Fbx\+Boundary の継承関係図
+% FIG 0
+
+
+Fbx\+Boundary 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_boundary_af94f173acd55d7d5f285f8539bbb48e4}{Add\+Curve} (\hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} $\ast$p\+Curve)
+\item 
+int \hyperlink{class_fbx_boundary_adcd0d41aa9a5804cd74ed14b6b8f6f8a}{Get\+Curve\+Count} () const
+\item 
+\hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} $\ast$ \hyperlink{class_fbx_boundary_acbf7b338d8b90d6cd52e7c39faa8b648}{Get\+Curve} (int p\+Index)
+\item 
+const \hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} $\ast$ \hyperlink{class_fbx_boundary_a1f9aac3b37beac6639afa97c79e45358}{Get\+Curve} (int p\+Index) const
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_boundary_a093be9c6c0c0f13a337e9b6815aed9d0}{Get\+Attribute\+Type} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of node attribute. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_boundary_ad319a0f4511c35710c24b543d30bbee2}{Is\+Point\+In\+Control\+Hull} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Point)
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_boundary_a615c36267401342800e00befefa50f6c}{Compute\+Point\+In\+Boundary} ()
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_boundary_a6fe59f45c17eeebbabaeff235058ac70}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+void \hyperlink{class_fbx_boundary_aa1c12f34cb325c5a337fa383f0860e06}{Clear\+Curves} ()
+\item 
+void \hyperlink{class_fbx_boundary_ae41addb147733da9216a785bc6d003c3}{Copy\+Curves} (\hyperlink{class_fbx_boundary}{Fbx\+Boundary} const \&p\+Other)
+\item 
+bool \hyperlink{class_fbx_boundary_a4ecaec2f4194b5ba045c14ec0549d10e}{Is\+Valid} (bool must\+Closed=true)
+\item 
+bool \hyperlink{class_fbx_boundary_a025f682e72db299620e30eeeebdd1ea7}{Is\+Counter\+Clockwise} ()
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_boundary_af9e27e491f466ca615bd247fa2b33826}{Outer\+Flag}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_boundary_a2a42aaddc584761f409ced017e6ddd35}{s\+Outer\+Flag}
+\begin{DoxyCompactList}\small\item\em Properties \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_boundary_acb50e021b1e9920026c975613a949537}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+void \hyperlink{class_fbx_boundary_a989aba9b8873dc0c8264879b75f86dee}{Reset} ()
+\item 
+bool \hyperlink{class_fbx_boundary_afdc24b2ebd724263f2a20a8159006e42}{Line\+Segment\+Intersect} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Start1, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+End1, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Start2, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+End2) const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_boundary}{Fbx\+Boundary} describes a trimming boundary for a trimmed N\+U\+R\+BS object. Note\+:Outer boundaries run counter-\/clockwise in UV space and inner boundaries run clockwise. An outer boundary represents the outer edges of the trimmed surface whereas the inner boundaries define \char`\"{}holes\char`\"{} in the surface. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_boundary_af94f173acd55d7d5f285f8539bbb48e4}\label{class_fbx_boundary_af94f173acd55d7d5f285f8539bbb48e4}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Add\+Curve@{Add\+Curve}}
+\index{Add\+Curve@{Add\+Curve}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Add\+Curve()}{AddCurve()}}
+{\footnotesize\ttfamily void Fbx\+Boundary\+::\+Add\+Curve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve} $\ast$}]{p\+Curve }\end{DoxyParamCaption})}
+
+Adds an edge to this boundary. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & The curve to be appended to the end of this boundary \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_boundary_aa1c12f34cb325c5a337fa383f0860e06}\label{class_fbx_boundary_aa1c12f34cb325c5a337fa383f0860e06}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Clear\+Curves@{Clear\+Curves}}
+\index{Clear\+Curves@{Clear\+Curves}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Clear\+Curves()}{ClearCurves()}}
+{\footnotesize\ttfamily void Fbx\+Boundary\+::\+Clear\+Curves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_boundary_a615c36267401342800e00befefa50f6c}\label{class_fbx_boundary_a615c36267401342800e00befefa50f6c}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Compute\+Point\+In\+Boundary@{Compute\+Point\+In\+Boundary}}
+\index{Compute\+Point\+In\+Boundary@{Compute\+Point\+In\+Boundary}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Compute\+Point\+In\+Boundary()}{ComputePointInBoundary()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Boundary\+::\+Compute\+Point\+In\+Boundary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes the origin point in the boundary \begin{DoxyReturn}{戻り値}
+The origin point. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_boundary_acb50e021b1e9920026c975613a949537}\label{class_fbx_boundary_acb50e021b1e9920026c975613a949537}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Boundary\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_a94ee142ac1d40be3aebb4d9441431921}{Fbx\+Geometry\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_boundary_a6fe59f45c17eeebbabaeff235058ac70}\label{class_fbx_boundary_a6fe59f45c17eeebbabaeff235058ac70}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Boundary\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_boundary_ae41addb147733da9216a785bc6d003c3}\label{class_fbx_boundary_ae41addb147733da9216a785bc6d003c3}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Copy\+Curves@{Copy\+Curves}}
+\index{Copy\+Curves@{Copy\+Curves}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Copy\+Curves()}{CopyCurves()}}
+{\footnotesize\ttfamily void Fbx\+Boundary\+::\+Copy\+Curves (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_boundary}{Fbx\+Boundary} const \&}]{p\+Other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_boundary_a093be9c6c0c0f13a337e9b6815aed9d0}\label{class_fbx_boundary_a093be9c6c0c0f13a337e9b6815aed9d0}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Boundary\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the type of node attribute. 
+
+
+
+\hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_boundary_acbf7b338d8b90d6cd52e7c39faa8b648}\label{class_fbx_boundary_acbf7b338d8b90d6cd52e7c39faa8b648}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Get\+Curve@{Get\+Curve}}
+\index{Get\+Curve@{Get\+Curve}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Get\+Curve()}{GetCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve}$\ast$ Fbx\+Boundary\+::\+Get\+Curve (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Returns the edge at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index, no bound checking is done. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The edge at the specified index if p\+Index is in the range \mbox{[}0, Get\+Edge\+Count() ), otherwise the return value is undefined. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_boundary_a1f9aac3b37beac6639afa97c79e45358}\label{class_fbx_boundary_a1f9aac3b37beac6639afa97c79e45358}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Get\+Curve@{Get\+Curve}}
+\index{Get\+Curve@{Get\+Curve}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Get\+Curve()}{GetCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_nurbs_curve}{Fbx\+Nurbs\+Curve}$\ast$ Fbx\+Boundary\+::\+Get\+Curve (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the edge at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index, no bound checking is done. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The edge at the specified index if p\+Index is in the range \mbox{[}0, Get\+Edge\+Count() ), otherwise, the return value is undefined. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_boundary_adcd0d41aa9a5804cd74ed14b6b8f6f8a}\label{class_fbx_boundary_adcd0d41aa9a5804cd74ed14b6b8f6f8a}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Get\+Curve\+Count@{Get\+Curve\+Count}}
+\index{Get\+Curve\+Count@{Get\+Curve\+Count}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Get\+Curve\+Count()}{GetCurveCount()}}
+{\footnotesize\ttfamily int Fbx\+Boundary\+::\+Get\+Curve\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of edges within this boundary. \begin{DoxyReturn}{戻り値}
+The number of edges within this boundary 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_boundary_a025f682e72db299620e30eeeebdd1ea7}\label{class_fbx_boundary_a025f682e72db299620e30eeeebdd1ea7}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Is\+Counter\+Clockwise@{Is\+Counter\+Clockwise}}
+\index{Is\+Counter\+Clockwise@{Is\+Counter\+Clockwise}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Is\+Counter\+Clockwise()}{IsCounterClockwise()}}
+{\footnotesize\ttfamily bool Fbx\+Boundary\+::\+Is\+Counter\+Clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_boundary_ad319a0f4511c35710c24b543d30bbee2}\label{class_fbx_boundary_ad319a0f4511c35710c24b543d30bbee2}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Is\+Point\+In\+Control\+Hull@{Is\+Point\+In\+Control\+Hull}}
+\index{Is\+Point\+In\+Control\+Hull@{Is\+Point\+In\+Control\+Hull}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Is\+Point\+In\+Control\+Hull()}{IsPointInControlHull()}}
+{\footnotesize\ttfamily bool Fbx\+Boundary\+::\+Is\+Point\+In\+Control\+Hull (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Point }\end{DoxyParamCaption})}
+
+Detects if the point is in the boundary\textquotesingle{}s control hull. 
+\begin{DoxyParams}{引数}
+{\em p\+Point} & The point to be detected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the point is in the boundary\textquotesingle{}s control hull, returns {\ttfamily false} if it is not in the control hull. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_boundary_a4ecaec2f4194b5ba045c14ec0549d10e}\label{class_fbx_boundary_a4ecaec2f4194b5ba045c14ec0549d10e}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily bool Fbx\+Boundary\+::\+Is\+Valid (\begin{DoxyParamCaption}\item[{bool}]{must\+Closed = {\ttfamily true} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_boundary_afdc24b2ebd724263f2a20a8159006e42}\label{class_fbx_boundary_afdc24b2ebd724263f2a20a8159006e42}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Line\+Segment\+Intersect@{Line\+Segment\+Intersect}}
+\index{Line\+Segment\+Intersect@{Line\+Segment\+Intersect}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Line\+Segment\+Intersect()}{LineSegmentIntersect()}}
+{\footnotesize\ttfamily bool Fbx\+Boundary\+::\+Line\+Segment\+Intersect (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Start1,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+End1,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Start2,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+End2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_boundary_a989aba9b8873dc0c8264879b75f86dee}\label{class_fbx_boundary_a989aba9b8873dc0c8264879b75f86dee}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Boundary\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_boundary_af9e27e491f466ca615bd247fa2b33826}\label{class_fbx_boundary_af9e27e491f466ca615bd247fa2b33826}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!Outer\+Flag@{Outer\+Flag}}
+\index{Outer\+Flag@{Outer\+Flag}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{Outer\+Flag}{OuterFlag}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Boundary\+::\+Outer\+Flag}
+
+This property handles outer flag.
+
+Default value is false. \mbox{\Hypertarget{class_fbx_boundary_a2a42aaddc584761f409ced017e6ddd35}\label{class_fbx_boundary_a2a42aaddc584761f409ced017e6ddd35}} 
+\index{Fbx\+Boundary@{Fbx\+Boundary}!s\+Outer\+Flag@{s\+Outer\+Flag}}
+\index{s\+Outer\+Flag@{s\+Outer\+Flag}!Fbx\+Boundary@{Fbx\+Boundary}}
+\subsubsection{\texorpdfstring{s\+Outer\+Flag}{sOuterFlag}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Boundary\+::s\+Outer\+Flag\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Properties 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxtrimnurbssurface_8h}{fbxtrimnurbssurface.\+h}\end{DoxyCompactItemize}

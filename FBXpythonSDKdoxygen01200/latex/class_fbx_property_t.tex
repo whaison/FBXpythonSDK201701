@@ -1,0 +1,225 @@
+\hypertarget{class_fbx_property_t}{}\section{Fbx\+PropertyT$<$ T $>$ クラステンプレート}
+\label{class_fbx_property_t}\index{Fbx\+Property\+T$<$ T $>$@{Fbx\+Property\+T$<$ T $>$}}
+
+
+This template class is used to contain user properties of specific data types.  
+
+
+
+
+{\ttfamily \#include $<$fbxproperty.\+h$>$}
+
+
+
+Fbx\+PropertyT$<$ T $>$ の継承関係図
+% FIG 0
+
+
+Fbx\+PropertyT$<$ T $>$ 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t_a60e994b93527d29bf782be402dfe430f}{Fbx\+PropertyT} ()
+\item 
+\hyperlink{class_fbx_property_t_afa5d35b87d71aa68d84f12fb39de89e4}{Fbx\+PropertyT} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+\hyperlink{class_fbx_property_t_a26fa61ca6f7ef315a7121d0190080622}{$\sim$\+Fbx\+PropertyT} ()
+\end{DoxyCompactItemize}
+\subsection*{Static initialization.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \& \hyperlink{class_fbx_property_t_a02493c4d2553aea533bcca9ee6e0c935}{Static\+Init} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Name, const T \&p\+Value, bool p\+Force\+Set, \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flags=\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ac1b9aab93d40af76eb419be426de17b1}{Fbx\+Property\+Flags\+::e\+None})
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \& \hyperlink{class_fbx_property_t_a713fb50a6ca1f7b52f3a24447b2542a2}{Static\+Init} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, const T \&p\+Value, bool p\+Force\+Set, \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flags=\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ac1b9aab93d40af76eb419be426de17b1}{Fbx\+Property\+Flags\+::e\+None})
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \& \hyperlink{class_fbx_property_t_a54243e267cf06b3a7bd4b7144f8b2cef}{Static\+Init} (\hyperlink{class_fbx_property}{Fbx\+Property} p\+Compound, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, const T \&p\+Value, bool p\+Force\+Set=true, \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flags=\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ac1b9aab93d40af76eb419be426de17b1}{Fbx\+Property\+Flags\+::e\+None})
+\end{DoxyCompactItemize}
+\subsection*{Value Management}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT} \& \hyperlink{class_fbx_property_t_a7245e9041d26955a5c2f31fc40b63228}{Set} (const T \&p\+Value)
+\item 
+T \hyperlink{class_fbx_property_t_aed683fb109a3a7b1fa4eacd648ae2478}{Get} () const
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT} \& \hyperlink{class_fbx_property_t_a6334bf20dd8536b5a275c9cfabfa1a67}{operator=} (const T \&p\+Value)
+\item 
+\hyperlink{class_fbx_property_t_aa4794cefd88b587963f0021c1ec32835}{operator T} () const
+\end{DoxyCompactItemize}
+\subsection*{Animation Evaluation}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{class_fbx_property_t_a07f3d2e638b5f65838338eb03296c3f9}{Evaluate\+Value} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}, bool p\+Force\+Eval=false)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class T$>$\newline
+class Fbx\+Property\+T$<$ T $>$}
+
+This template class is used to contain user properties of specific data types. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_property_t_a60e994b93527d29bf782be402dfe430f}\label{class_fbx_property_t_a60e994b93527d29bf782be402dfe430f}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Fbx\+Property\+T()}{FbxPropertyT()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::\hyperlink{class_fbx_property_t}{Fbx\+PropertyT} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_property_t_afa5d35b87d71aa68d84f12fb39de89e4}\label{class_fbx_property_t_afa5d35b87d71aa68d84f12fb39de89e4}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Fbx\+Property\+T()}{FbxPropertyT()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::\hyperlink{class_fbx_property_t}{Fbx\+PropertyT} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_property_t_a26fa61ca6f7ef315a7121d0190080622}\label{class_fbx_property_t_a26fa61ca6f7ef315a7121d0190080622}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!````~Fbx\+PropertyT@{$\sim$\+Fbx\+PropertyT}}
+\index{````~Fbx\+PropertyT@{$\sim$\+Fbx\+PropertyT}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Property\+T()}{~FbxPropertyT()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::$\sim$\hyperlink{class_fbx_property_t}{Fbx\+PropertyT} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_property_t_a07f3d2e638b5f65838338eb03296c3f9}\label{class_fbx_property_t_a07f3d2e638b5f65838338eb03296c3f9}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Evaluate\+Value@{Evaluate\+Value}}
+\index{Evaluate\+Value@{Evaluate\+Value}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Evaluate\+Value()}{EvaluateValue()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::Evaluate\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}},  }\item[{bool}]{p\+Force\+Eval = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Evaluate the value of a property if it has animation and return the result. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & The time used for evaluate. \\
+\hline
+{\em p\+Force\+Eval} & Force the evaluator to refresh the evaluation state cache even if its already up-\/to-\/date. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The property value at the specified time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_t_aed683fb109a3a7b1fa4eacd648ae2478}\label{class_fbx_property_t_aed683fb109a3a7b1fa4eacd648ae2478}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Get@{Get}}
+\index{Get@{Get}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve function \begin{DoxyReturn}{戻り値}
+The value of the property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_t_aa4794cefd88b587963f0021c1ec32835}\label{class_fbx_property_t_aa4794cefd88b587963f0021c1ec32835}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!operator T@{operator T}}
+\index{operator T@{operator T}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::operator T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Type cast operator \begin{DoxyReturn}{戻り値}
+The value of the property of type T. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_t_a6334bf20dd8536b5a275c9cfabfa1a67}\label{class_fbx_property_t_a6334bf20dd8536b5a275c9cfabfa1a67}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}\& \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Assignment operator 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value of type T assigned to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+This property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_t_a7245e9041d26955a5c2f31fc40b63228}\label{class_fbx_property_t_a7245e9041d26955a5c2f31fc40b63228}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Set@{Set}}
+\index{Set@{Set}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}\& \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Assignment function 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value assigned to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+This property. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_property_t_a02493c4d2553aea533bcca9ee6e0c935}\label{class_fbx_property_t_a02493c4d2553aea533bcca9ee6e0c935}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Static\+Init@{Static\+Init}}
+\index{Static\+Init@{Static\+Init}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Static\+Init()}{StaticInit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property}{Fbx\+Property}\& \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::Static\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const T \&}]{p\+Value,  }\item[{bool}]{p\+Force\+Set,  }\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flags = {\ttfamily \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ac1b9aab93d40af76eb419be426de17b1}{Fbx\+Property\+Flags\+::e\+None}} }\end{DoxyParamCaption})}
+
+Creates a property and initializes it using a specific value and flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object that contains this property. \\
+\hline
+{\em p\+Name} & The name of the property. \\
+\hline
+{\em p\+Value} & The value of the property. \\
+\hline
+{\em p\+Force\+Set} & If {\ttfamily true}, the value is forcibly set, if {\ttfamily false} the value is not set when it equals the default value. \\
+\hline
+{\em p\+Flags} & The property flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_t_a713fb50a6ca1f7b52f3a24447b2542a2}\label{class_fbx_property_t_a713fb50a6ca1f7b52f3a24447b2542a2}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Static\+Init@{Static\+Init}}
+\index{Static\+Init@{Static\+Init}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Static\+Init()}{StaticInit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property}{Fbx\+Property}\& \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::Static\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{const T \&}]{p\+Value,  }\item[{bool}]{p\+Force\+Set,  }\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flags = {\ttfamily \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ac1b9aab93d40af76eb419be426de17b1}{Fbx\+Property\+Flags\+::e\+None}} }\end{DoxyParamCaption})}
+
+Creates a property and initializes it using a specific value and flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object that contains this property. \\
+\hline
+{\em p\+Name} & The name of the property. \\
+\hline
+{\em p\+Data\+Type} & The property data type. \\
+\hline
+{\em p\+Value} & The property value. \\
+\hline
+{\em p\+Force\+Set} & If {\ttfamily true}, the value is forcibly set, if {\ttfamily false} the value is not set when it equals the default value. \\
+\hline
+{\em p\+Flags} & The property flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_t_a54243e267cf06b3a7bd4b7144f8b2cef}\label{class_fbx_property_t_a54243e267cf06b3a7bd4b7144f8b2cef}} 
+\index{Fbx\+PropertyT@{Fbx\+PropertyT}!Static\+Init@{Static\+Init}}
+\index{Static\+Init@{Static\+Init}!Fbx\+PropertyT@{Fbx\+PropertyT}}
+\subsubsection{\texorpdfstring{Static\+Init()}{StaticInit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\hyperlink{class_fbx_property}{Fbx\+Property}\& \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ T $>$\+::Static\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property}}]{p\+Compound,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{const T \&}]{p\+Value,  }\item[{bool}]{p\+Force\+Set = {\ttfamily true},  }\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flags = {\ttfamily \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ac1b9aab93d40af76eb419be426de17b1}{Fbx\+Property\+Flags\+::e\+None}} }\end{DoxyParamCaption})}
+
+Creates a property and initializes it using a specific value and flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Compound} & The parent property of this property. \\
+\hline
+{\em p\+Name} & The name of the property. \\
+\hline
+{\em p\+Data\+Type} & The property data type. \\
+\hline
+{\em p\+Value} & The property value. \\
+\hline
+{\em p\+Force\+Set} & If {\ttfamily true}, the value is forcibly set, if {\ttfamily false} the value is not set when it equals to the default value. \\
+\hline
+{\em p\+Flags} & The property flag. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxproperty_8h}{fbxproperty.\+h}\end{DoxyCompactItemize}

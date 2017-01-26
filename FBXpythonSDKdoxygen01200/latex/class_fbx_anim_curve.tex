@@ -1,0 +1,1244 @@
+\hypertarget{class_fbx_anim_curve}{}\section{Fbx\+Anim\+Curve クラス}
+\label{class_fbx_anim_curve}\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+
+
+{\ttfamily \#include $<$fbxanimcurve.\+h$>$}
+
+
+
+Fbx\+Anim\+Curve の継承関係図
+% FIG 0
+
+
+Fbx\+Anim\+Curve 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual K\+F\+Curve $\ast$ \hyperlink{class_fbx_anim_curve_a7c7cbe48da39fa57af9f32acc68a0ba5}{Get\+K\+F\+Curve} ()=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a0ef3229e43aaca33ab50161235541060}{Store} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+File\+Object, bool p\+Legacy\+Version=false)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a17087752d3a28d373b2aaa66d1755f62}{Retrieve} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+File\+Object)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a8982eaf744608ac38457fd6f87990044}{Extrapolation\+Sync\+Callback} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Animation curve creation.}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_anim_curve_ab0faf2c8c4a3d0fa8535da4a3eacb74a}{Create} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Container, const char $\ast$p\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Key management.}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_ad116802320381f4217d32dde6006643b}{Resize\+Key\+Buffer} (int p\+Key\+Count)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_ac75a9aaa2edc08635c0a9fadbd628923}{Key\+Modify\+Begin} ()=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_ae8776e18ed1933e258774ba44f64fe5d}{Key\+Modify\+End} ()=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a202883ab5e1844beb60d40137464afd8}{Key\+Clear} ()=0
+\begin{DoxyCompactList}\small\item\em Remove all the keys of the animation curve and free buffer memory. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_fbx_anim_curve_a08de74d6ef6469be37abd1df0836eac9}{Key\+Get\+Count} () const =0
+\item 
+virtual int \hyperlink{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}{Key\+Add} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, \hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&p\+Key, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual int \hyperlink{class_fbx_anim_curve_a96e4e0437fc18712b785e7370ab5184e}{Key\+Add} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a8f36f89bd5fbaa4f180789f4d9faf84f}{Key\+Set} (int p\+Index, \hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&p\+Key)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a083206eda111aa4c6803410427a4645c}{Key\+Remove} (int p\+Index)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a7b4fe494d1ca4575bb253ec89f867df1}{Key\+Remove} (int p\+Start\+Index, int p\+End\+Index)=0
+\item 
+virtual int \hyperlink{class_fbx_anim_curve_aaad0086794bde7063d868956c6fc6b3f}{Key\+Insert} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual double \hyperlink{class_fbx_anim_curve_a19b276335ead40663ccf4c16d6ff5e27}{Key\+Find} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a5422351a86bda5b21e6ed5ce6658477e}{Key\+Scale\+Value} (float p\+Mult\+Value)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a2f09fd7ebeb68f8aa34f53926daf538b}{Key\+Scale\+Value\+And\+Tangent} (float p\+Mult\+Value)=0
+\end{DoxyCompactItemize}
+\subsection*{Key Manipulation}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a70bb71da0c56a32be961384c015bb812}{Key\+Set} (int p\+Key\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, float p\+Value, \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type} p\+Interpolation=\hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae}{Fbx\+Anim\+Curve\+Def\+::e\+Interpolation\+Cubic}, \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode} p\+Tangent\+Mode=\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Auto}, float p\+Data0=0.\+0, float p\+Data1=0.\+0, \hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990e}{Fbx\+Anim\+Curve\+Def\+::\+E\+Weighted\+Mode} p\+Tangent\+Weight\+Mode=\hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3}{Fbx\+Anim\+Curve\+Def\+::e\+Weighted\+None}, float p\+Weight0=\hyperlink{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}, float p\+Weight1=\hyperlink{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}, float p\+Velocity0=\hyperlink{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}, float p\+Velocity1=\hyperlink{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY})=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_af5319507799c6eea17c6550465065f8f}{Key\+Set\+T\+CB} (int p\+Key\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, float p\+Value, float p\+Data0=0.\+0f, float p\+Data1=0.\+0f, float p\+Data2=0.\+0f)=0
+\item 
+virtual \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type} \hyperlink{class_fbx_anim_curve_a14158288d26a4fc08c6ae7b2ff8d6638}{Key\+Get\+Interpolation} (int p\+Key\+Index) const =0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_aa9de6c77c7d81def717ff34f01a660fb}{Key\+Set\+Interpolation} (int p\+Key\+Index, \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type} p\+Interpolation)=0
+\item 
+virtual \hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}{Fbx\+Anim\+Curve\+Def\+::\+E\+Constant\+Mode} \hyperlink{class_fbx_anim_curve_a990e2b6b948eec3562abc2c74b6d0ef2}{Key\+Get\+Constant\+Mode} (int p\+Key\+Index) const =0
+\item 
+virtual \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode} \hyperlink{class_fbx_anim_curve_a5672d86518e0ceb21c4bcaf78f7f5bf6}{Key\+Get\+Tangent\+Mode} (int p\+Key\+Index, bool p\+Include\+Overrides=false) const =0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a195063224af388d7064dc13910a89cb9}{Key\+Set\+Constant\+Mode} (int p\+Key\+Index, \hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}{Fbx\+Anim\+Curve\+Def\+::\+E\+Constant\+Mode} p\+Mode)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a13fa9ecd9e09a39f734cf5a3265ea0ff}{Key\+Set\+Tangent\+Mode} (int p\+Key\+Index, \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode} p\+Tangent)=0
+\item 
+virtual \hyperlink{class_fbx_anim_curve_key}{Fbx\+Anim\+Curve\+Key} \hyperlink{class_fbx_anim_curve_aec10e4a71979bd990d98cd002f29e82c}{Key\+Get} (int p\+Index) const =0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a1d0a4728a6c8c1c0260fd368ba64ccb6}{Key\+Get\+Value} (int p\+Key\+Index) const =0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_aa974a3bbece0cd63fa4c4d3a7ad7fd99}{Key\+Set\+Value} (int p\+Key\+Index, float p\+Value)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a38cdb5a33a9d7195f9e74b0fb4aa3261}{Key\+Inc\+Value} (int p\+Key\+Index, float p\+Value)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a73262cd3affc5c9d098fda9a35a37779}{Key\+Mult\+Value} (int p\+Key\+Index, float p\+Value)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a743514eebf5845d6bc13145e082a8ae5}{Key\+Mult\+Tangent} (int p\+Key\+Index, float p\+Value)=0
+\item 
+virtual \hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_anim_curve_a547f7842ea7bae5b5ed048d15b8b0d07}{Key\+Get\+Time} (int p\+Key\+Index) const =0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a5ce2130d0cea4de2fc42fa3683f01162}{Key\+Set\+Time} (int p\+Key\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_ae0137873a7e2c36679e9e747908b8317}{Key\+Set\+Break} (int p\+Key\+Index, bool p\+Val)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_a401621f086458975b39fcbcef8e9be77}{Key\+Get\+Break} (int p\+Key\+Index) const =0
+\end{DoxyCompactItemize}
+\subsection*{Key Tangent Management}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a9ccab8818487ccaaaf908c5367e3f9e9}{Key\+Get\+Left\+Derivative} (int p\+Index)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_afbec5f6b274395cb1a3d8d1eb379982f}{Key\+Set\+Left\+Derivative} (int p\+Index, float p\+Value)=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a1bd66bdbb3e7e798d70695dc97f71dc7}{Key\+Get\+Left\+Auto} (int p\+Index, bool p\+Apply\+Overshoot\+Protection=false)=0
+\item 
+virtual \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} \hyperlink{class_fbx_anim_curve_a28398566658955d12824942635ee45ab}{Key\+Get\+Left\+Derivative\+Info} (int p\+Index)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a8fa694edd4fb27b9b61739efa9e27083}{Key\+Set\+Left\+Derivative\+Info} (int p\+Index, const \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} \&p\+Value, bool p\+Force\+Derivative=false)=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a8fb62fd9043cccbc129fad343d1610ba}{Key\+Get\+Right\+Derivative} (int p\+Index)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a1de09a5f76f6eb12d0170cbd36fe6a78}{Key\+Set\+Right\+Derivative} (int p\+Index, float p\+Value)=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a55a43ce2a48ceccd753cdb10a7acf77e}{Key\+Get\+Right\+Auto} (int p\+Index, bool p\+Apply\+Overshoot\+Protection=false)=0
+\item 
+virtual \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} \hyperlink{class_fbx_anim_curve_a3c586d4f3cdcfbccc9fadf99bce03fd5}{Key\+Get\+Right\+Derivative\+Info} (int p\+Index)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a609a6e5f3ee69b04e46e75597cc5e1cf}{Key\+Set\+Right\+Derivative\+Info} (int p\+Index, const \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} \&p\+Value, bool p\+Force\+Derivative=false)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_af73a0bbb95ba2c7516438b68de733f1a}{Key\+Is\+Left\+Tangent\+Weighted} (int p\+Index) const =0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_af82ac790cdd052063e2c8dbd45ea54ca}{Key\+Is\+Right\+Tangent\+Weighted} (int p\+Index) const =0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a9828bb0aa421a390a8bccdf161500e5a}{Key\+Get\+Left\+Tangent\+Weight} (int p\+Index) const =0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a82f1cd10ca027ec52eb0facf47b9c9f4}{Key\+Get\+Right\+Tangent\+Weight} (int p\+Index) const =0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a8733d2c8ebbb4e5d367dba81363fbf17}{Key\+Set\+Left\+Tangent\+Weight} (int p\+Index, float p\+Weight, bool p\+Adjust\+Tan=false)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_acf1994ed3720f3d3e98cfca8bf31ce25}{Key\+Set\+Right\+Tangent\+Weight} (int p\+Index, float p\+Weight, bool p\+Adjust\+Tan=false)=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_ad51bde65942e896c8fb7619ef4a4d149}{Key\+Get\+Left\+Tangent\+Velocity} (int p\+Index) const =0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a85a44ed49cc90f3c7dc53ca5da5107b3}{Key\+Get\+Right\+Tangent\+Velocity} (int p\+Index) const =0
+\end{DoxyCompactItemize}
+\subsection*{Evaluation and Analysis}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a74a3ea7a22a69fe69141722adff7f01b}{Evaluate} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_ad26cbb4cd0360aa8697a2601f8540a21}{Evaluate\+Index} (double p\+Index)=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a31c932aa6ca57749591a70f86498be5f}{Evaluate\+Left\+Derivative} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_a02a8c8629fafa6a97b37a37fd2e77331}{Evaluate\+Right\+Derivative} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\end{DoxyCompactItemize}
+\subsection*{Utility functions.}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_aa547431c44acd9eb28aebdec1a142501}{Get\+Time\+Interval} (\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&p\+Time\+Interval)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_a8e5b647af7ed54b53189fd9488e12f77}{Copy\+From} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} \&p\+Source, bool p\+With\+Keys=true)=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_ada5c523e08c9a1e4407dfce8697babdc}{Get\+Value} (int p\+Curve\+Node\+Index=0)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_abcb5d65afda70282d312be4f58b7d9cd}{Set\+Value} (float p\+Value, int p\+Curve\+Node\+Index=0)=0
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+An animation curve, defined by a collection of keys (\hyperlink{class_fbx_anim_curve_key}{Fbx\+Anim\+Curve\+Key}), and indicating how a value changes over time. Since an animation curve is a function, on a given animation curve, only one key per time is allowed. The keys are sorted in time order. They can be accessed by their index on the curve, from 0 to \hyperlink{class_fbx_anim_curve_a08de74d6ef6469be37abd1df0836eac9}{Fbx\+Anim\+Curve\+::\+Key\+Get\+Count}-\/1. The time unit in F\+BX (\hyperlink{class_fbx_time}{Fbx\+Time}) is 1/46186158000 of one second.
+
+Each key defines tangents and interpolation that modify the animation curve. Tangents control the way the animation curve enters and exits the keys. Interpolation indicates the animation curve\textquotesingle{}s behavior between keys.
+
+Interpolation modes are \begin{DoxyItemize}
+\item Constant -\/ Curve value stays the same until next key \item Linear -\/ Animation curve is a straight line \item Cubic -\/ Animation curve is a Bezier spline\end{DoxyItemize}
+Tangent modes are \begin{DoxyItemize}
+\item Auto (Spline cardinal) \item Spline T\+CB (Tension, Continuity, Bias) \item User (Next slope at the left equal to slope at the right)\end{DoxyItemize}
+Tangent modes can be overridden by more tangent options\+: \begin{DoxyItemize}
+\item Break (Independent left and right slopes) \item Clamp (Key should be flat if next or previous key has the same value) \item Time independent\end{DoxyItemize}
+Tangent can be modified some more by adding weights and velocity. By default, the weights are 0.\+333 on either side of the key, and there is no velocity. Velocity settings speed up or slow down animation on either side of a key without changing the trajectory of the animation. Unlike Auto and Weight settings, Velocity changes the animation in time, but not in space.
+
+\begin{DoxyRemark}{注釈}
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} is now the main animation animation curve object of the S\+DK. Users should always use this class to handle animation curve.
+\end{DoxyRemark}
+\begin{DoxyNote}{覚え書き}
+When adding keys to an animation curve, use \hyperlink{class_fbx_anim_curve_ac75a9aaa2edc08635c0a9fadbd628923}{Fbx\+Anim\+Curve\+::\+Key\+Modify\+Begin} and \hyperlink{class_fbx_anim_curve_ae8776e18ed1933e258774ba44f64fe5d}{Fbx\+Anim\+Curve\+::\+Key\+Modify\+End}. please refer to the following sample code\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_time}{FbxTime} lTime;
+\textcolor{keywordtype}{int} lKeyIndex = 0;
+
+\textcolor{comment}{// Create curve}
+\hyperlink{class_fbx_anim_curve}{FbxAnimCurve}* lAnimCurve = \hyperlink{class_fbx_anim_curve_ab0faf2c8c4a3d0fa8535da4a3eacb74a}{FbxAnimCurve::Create}(pScene, \textcolor{stringliteral}{"Cube Animation"});
+
+\textcolor{comment}{// Add keys to the curve}
+lAnimCurve->\hyperlink{class_fbx_anim_curve_ac75a9aaa2edc08635c0a9fadbd628923}{KeyModifyBegin}();
+
+\textcolor{comment}{// First key: time 0, value 0}
+lTime.\hyperlink{class_fbx_time_aa67980a4f73f7914d0c457384754da0c}{SetSecondDouble}(0.0);
+lKeyIndex = lAnimCurve->\hyperlink{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}{KeyAdd}(lTime);
+lAnimCurve->\hyperlink{class_fbx_anim_curve_a8f36f89bd5fbaa4f180789f4d9faf84f}{KeySet}(lKeyIndex, lTime, 0.0, 
+      \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20}{FbxAnimCurveDef::eInterpolationLinear});
+
+\textcolor{comment}{// Second key: time 20s, value -3600}
+\textcolor{comment}{// Since this curve will describe rotation, each cube will rotate 10 times around itself during 20 seconds.}
+lTime.\hyperlink{class_fbx_time_aa67980a4f73f7914d0c457384754da0c}{SetSecondDouble}(20.0);
+lKeyIndex = lAnimCurve->\hyperlink{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}{KeyAdd}(lTime);
+lAnimCurve->\hyperlink{class_fbx_anim_curve_a8f36f89bd5fbaa4f180789f4d9faf84f}{KeySet}(lKeyIndex, lTime, -3600, 
+      \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20}{FbxAnimCurveDef::eInterpolationLinear});
+
+\textcolor{comment}{// Done adding keys.}
+lAnimCurve->\hyperlink{class_fbx_anim_curve_ae8776e18ed1933e258774ba44f64fe5d}{KeyModifyEnd}();
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_a8e5b647af7ed54b53189fd9488e12f77}\label{class_fbx_anim_curve_a8e5b647af7ed54b53189fd9488e12f77}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Copy\+From@{Copy\+From}}
+\index{Copy\+From@{Copy\+From}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Copy\+From()}{CopyFrom()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Copy\+From (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} \&}]{p\+Source,  }\item[{bool}]{p\+With\+Keys = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Copy animation curve content into current animation curve. 
+\begin{DoxyParams}{引数}
+{\em p\+Source} & Animation curve to be copied (which will not be modified). \\
+\hline
+{\em p\+With\+Keys} & If {\ttfamily true}, clear keys in current animation curve and copy keys from source animation curve. If {\ttfamily false}, keys in current animation curve are left as is. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_ab0faf2c8c4a3d0fa8535da4a3eacb74a}\label{class_fbx_anim_curve_ab0faf2c8c4a3d0fa8535da4a3eacb74a}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Anim\+Curve\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Container,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create a \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. 
+\begin{DoxyParams}{引数}
+{\em p\+Container} & Scene to which the created animation curve belongs. \\
+\hline
+{\em p\+Name} & Name of the animation curve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Newly created animation curve 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a74a3ea7a22a69fe69141722adff7f01b}\label{class_fbx_anim_curve_a74a3ea7a22a69fe69141722adff7f01b}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Evaluate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluate animation curve value at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of evaluation. If time falls between two keys, animation curve value is interpolated according to previous key interpolation type and tangent mode if relevant. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Animation curve value on given time, or animation curve\textquotesingle{}s default value if animation curve has no key. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function takes extrapolation into account. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_base_a6d31c045a3733067fc7b4e6416d2fe06}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_ad26cbb4cd0360aa8697a2601f8540a21}\label{class_fbx_anim_curve_ad26cbb4cd0360aa8697a2601f8540a21}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Evaluate\+Index@{Evaluate\+Index}}
+\index{Evaluate\+Index@{Evaluate\+Index}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Evaluate\+Index()}{EvaluateIndex()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Evaluate\+Index (\begin{DoxyParamCaption}\item[{double}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluate animation curve value at a given key index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Any value from 0 to \hyperlink{class_fbx_anim_curve_a08de74d6ef6469be37abd1df0836eac9}{Fbx\+Anim\+Curve\+::\+Key\+Get\+Count()} -\/ 1. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Animation curve value, or default value if animation curve has no key.
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If key index is not an integer value, animation curve value is interpolated according to previous key interpolation type and tangent mode, if relevant. This function does not take extrapolation into account. Result is undetermined if index is out of bounds. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_base_aa54f5c0c77e553be03ba888448dc1818}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a31c932aa6ca57749591a70f86498be5f}\label{class_fbx_anim_curve_a31c932aa6ca57749591a70f86498be5f}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Evaluate\+Left\+Derivative@{Evaluate\+Left\+Derivative}}
+\index{Evaluate\+Left\+Derivative@{Evaluate\+Left\+Derivative}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Evaluate\+Left\+Derivative()}{EvaluateLeftDerivative()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Evaluate\+Left\+Derivative (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluate function left derivative at given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of evaluation. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Left derivative at given time. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function does not take extrapolation into account. Result is undetermined if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a02a8c8629fafa6a97b37a37fd2e77331}\label{class_fbx_anim_curve_a02a8c8629fafa6a97b37a37fd2e77331}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Evaluate\+Right\+Derivative@{Evaluate\+Right\+Derivative}}
+\index{Evaluate\+Right\+Derivative@{Evaluate\+Right\+Derivative}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Evaluate\+Right\+Derivative()}{EvaluateRightDerivative()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Evaluate\+Right\+Derivative (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluate function right derivative at given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of evaluation. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Right derivative at given time. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function does not take extrapolation into account. Result is undetermined if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a8982eaf744608ac38457fd6f87990044}\label{class_fbx_anim_curve_a8982eaf744608ac38457fd6f87990044}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Extrapolation\+Sync\+Callback@{Extrapolation\+Sync\+Callback}}
+\index{Extrapolation\+Sync\+Callback@{Extrapolation\+Sync\+Callback}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Extrapolation\+Sync\+Callback()}{ExtrapolationSyncCallback()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Extrapolation\+Sync\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_curve_base_aab573e42ece898c2c1e61a295adbb610}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a7c7cbe48da39fa57af9f32acc68a0ba5}\label{class_fbx_anim_curve_a7c7cbe48da39fa57af9f32acc68a0ba5}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Get\+K\+F\+Curve@{Get\+K\+F\+Curve}}
+\index{Get\+K\+F\+Curve@{Get\+K\+F\+Curve}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Get\+K\+F\+Curve()}{GetKFCurve()}}
+{\footnotesize\ttfamily virtual K\+F\+Curve$\ast$ Fbx\+Anim\+Curve\+::\+Get\+K\+F\+Curve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_fbx_anim_curve_aa547431c44acd9eb28aebdec1a142501}\label{class_fbx_anim_curve_aa547431c44acd9eb28aebdec1a142501}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Get\+Time\+Interval@{Get\+Time\+Interval}}
+\index{Get\+Time\+Interval@{Get\+Time\+Interval}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Get\+Time\+Interval()}{GetTimeInterval()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Get\+Time\+Interval (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&}]{p\+Time\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Find out start and end time of the animation animation curve. This function retrieves the animation curve\textquotesingle{}s time span. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Interval} & Reference to receive start and end time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_base_a4d259319e514c5371ff184b0cc7f7cd6}{Fbx\+Anim\+Curve\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_ada5c523e08c9a1e4407dfce8697babdc}\label{class_fbx_anim_curve_ada5c523e08c9a1e4407dfce8697babdc}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Get\+Value@{Get\+Value}}
+\index{Get\+Value@{Get\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Get\+Value()}{GetValue()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Get\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Curve\+Node\+Index = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Retrieve the value of the parent curve node channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve\+Node\+Index} & The index of the parent curve node, if more than one exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value of the parent curve node channel of this curve. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+In most case, the curve will have a single curve node channel as destination. However, it is possible that more are connected, hence why we provide the curve node index parameter. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}\label{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Add@{Key\+Add}}
+\index{Key\+Add@{Key\+Add}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Add()}{KeyAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int Fbx\+Anim\+Curve\+::\+Key\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{\hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&}]{p\+Key,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Add a given key at given time. The new key is appended after all the other animation curve\textquotesingle{}s keys. Function \hyperlink{class_fbx_anim_curve_aaad0086794bde7063d868956c6fc6b3f}{Fbx\+Anim\+Curve\+::\+Key\+Insert()} should be used instead if the key is to be added in the curve and not at the end. This function does not respect the interpolation type and tangents of the neighboring keys. If there is already a key at the given time, the key is modified and no new key is added.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of the new key. \\
+\hline
+{\em p\+Key} & Key to add. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of the key at given time, no matter if it was added or already present.
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Key value, interpolation type and tangent mode must be set explicitly afterwards. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_base_a3e502968be213bd5cfde287f66f97cf5}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a96e4e0437fc18712b785e7370ab5184e}\label{class_fbx_anim_curve_a96e4e0437fc18712b785e7370ab5184e}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Add@{Key\+Add}}
+\index{Key\+Add@{Key\+Add}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Add()}{KeyAdd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int Fbx\+Anim\+Curve\+::\+Key\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Add a key at given time. The new key is appended after all the other animation curve\textquotesingle{}s keys. Function \hyperlink{class_fbx_anim_curve_aaad0086794bde7063d868956c6fc6b3f}{Fbx\+Anim\+Curve\+::\+Key\+Insert()} should be used instead if the key is to be added in the curve and not at the end. This function does not respect of the interpolation type and tangents of the neighboring keys. If there is already a key a the given time, no key is added.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of the new key. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of the key at given time, no matter if it was added or already present. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Key value, interpolation type and tangent mode must be set explicitly afterwards. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a202883ab5e1844beb60d40137464afd8}\label{class_fbx_anim_curve_a202883ab5e1844beb60d40137464afd8}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Clear@{Key\+Clear}}
+\index{Key\+Clear@{Key\+Clear}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Clear()}{KeyClear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove all the keys of the animation curve and free buffer memory. 
+
+
+
+\hyperlink{class_fbx_anim_curve_base_abe693d293087fad223770430ec79d65d}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a19b276335ead40663ccf4c16d6ff5e27}\label{class_fbx_anim_curve_a19b276335ead40663ccf4c16d6ff5e27}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Find@{Key\+Find}}
+\index{Key\+Find@{Key\+Find}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Find()}{KeyFind()}}
+{\footnotesize\ttfamily virtual double Fbx\+Anim\+Curve\+::\+Key\+Find (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Find key index for a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of the key looked for. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Key index. The integer part of the key index gives the index of the closest key with a smaller time. The decimals give the relative position of given time compared to previous and next key times. Returns -\/1 if animation curve has no key.
+\end{DoxyReturn}
+For example (using seconds for clarity), if there is a key at time 10s with index 5, and a key at time 11s with index 6, Key\+Find(10.\+3s) would return 5.\+3. \mbox{\Hypertarget{class_fbx_anim_curve_aec10e4a71979bd990d98cd002f29e82c}\label{class_fbx_anim_curve_aec10e4a71979bd990d98cd002f29e82c}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get@{Key\+Get}}
+\index{Key\+Get@{Key\+Get}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get()}{KeyGet()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_anim_curve_key}{Fbx\+Anim\+Curve\+Key} Fbx\+Anim\+Curve\+::\+Key\+Get (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get key at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key on the animation curve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The key at the given index. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a401621f086458975b39fcbcef8e9be77}\label{class_fbx_anim_curve_a401621f086458975b39fcbcef8e9be77}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Break@{Key\+Get\+Break}}
+\index{Key\+Get\+Break@{Key\+Get\+Break}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Break()}{KeyGetBreak()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Get\+Break (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get if the tangent has a break. When this flag is set (\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break}), the key\textquotesingle{}s left and right slopes are independent. When this flag is off, the key\textquotesingle{}s left and right slope are equal. This method is relevant for User (\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User}) and Auto (\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Auto}) tangent modes only. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Break flag ({\ttfamily true} or {\ttfamily false}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a990e2b6b948eec3562abc2c74b6d0ef2}\label{class_fbx_anim_curve_a990e2b6b948eec3562abc2c74b6d0ef2}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Constant\+Mode@{Key\+Get\+Constant\+Mode}}
+\index{Key\+Get\+Constant\+Mode@{Key\+Get\+Constant\+Mode}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Constant\+Mode()}{KeyGetConstantMode()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}{Fbx\+Anim\+Curve\+Def\+::\+E\+Constant\+Mode} Fbx\+Anim\+Curve\+::\+Key\+Get\+Constant\+Mode (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get key\textquotesingle{}s constant mode. \begin{DoxyNote}{覚え書き}
+This method is only relevant if the key\textquotesingle{}s interpolation type is constant (e\+Interpolation\+Constant). Using this method on a key with an other interpolation type will return unpredictable value. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Key constant mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a08de74d6ef6469be37abd1df0836eac9}\label{class_fbx_anim_curve_a08de74d6ef6469be37abd1df0836eac9}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Count@{Key\+Get\+Count}}
+\index{Key\+Get\+Count@{Key\+Get\+Count}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Count()}{KeyGetCount()}}
+{\footnotesize\ttfamily virtual int Fbx\+Anim\+Curve\+::\+Key\+Get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the number of keys. \begin{DoxyReturn}{戻り値}
+Key count. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_base_a36fcc14d1c1944341da57085956a3f59}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a14158288d26a4fc08c6ae7b2ff8d6638}\label{class_fbx_anim_curve_a14158288d26a4fc08c6ae7b2ff8d6638}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Interpolation@{Key\+Get\+Interpolation}}
+\index{Key\+Get\+Interpolation@{Key\+Get\+Interpolation}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Interpolation()}{KeyGetInterpolation()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type} Fbx\+Anim\+Curve\+::\+Key\+Get\+Interpolation (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get key\textquotesingle{}s interpolation type. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Interpolation type of the queried key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a1bd66bdbb3e7e798d70695dc97f71dc7}\label{class_fbx_anim_curve_a1bd66bdbb3e7e798d70695dc97f71dc7}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Left\+Auto@{Key\+Get\+Left\+Auto}}
+\index{Key\+Get\+Left\+Auto@{Key\+Get\+Left\+Auto}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Left\+Auto()}{KeyGetLeftAuto()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Left\+Auto (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{bool}]{p\+Apply\+Overshoot\+Protection = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the left auto parametric of a key. This is used to compute the slope of Auto and User keys. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Apply\+Overshoot\+Protection} & Clamp flag (e\+G\+E\+N\+E\+R\+I\+C\+\_\+\+C\+L\+A\+MP) is taken into account. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Left auto parametric. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a9ccab8818487ccaaaf908c5367e3f9e9}\label{class_fbx_anim_curve_a9ccab8818487ccaaaf908c5367e3f9e9}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Left\+Derivative@{Key\+Get\+Left\+Derivative}}
+\index{Key\+Get\+Left\+Derivative@{Key\+Get\+Left\+Derivative}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Left\+Derivative()}{KeyGetLeftDerivative()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Left\+Derivative (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the left derivative of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Left derivative (Value over time (s)). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a28398566658955d12824942635ee45ab}\label{class_fbx_anim_curve_a28398566658955d12824942635ee45ab}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Left\+Derivative\+Info@{Key\+Get\+Left\+Derivative\+Info}}
+\index{Key\+Get\+Left\+Derivative\+Info@{Key\+Get\+Left\+Derivative\+Info}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Left\+Derivative\+Info()}{KeyGetLeftDerivativeInfo()}}
+{\footnotesize\ttfamily virtual \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} Fbx\+Anim\+Curve\+::\+Key\+Get\+Left\+Derivative\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the left derivative info (of type \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info}) of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Left derivative info. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_ad51bde65942e896c8fb7619ef4a4d149}\label{class_fbx_anim_curve_ad51bde65942e896c8fb7619ef4a4d149}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Left\+Tangent\+Velocity@{Key\+Get\+Left\+Tangent\+Velocity}}
+\index{Key\+Get\+Left\+Tangent\+Velocity@{Key\+Get\+Left\+Tangent\+Velocity}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Left\+Tangent\+Velocity()}{KeyGetLeftTangentVelocity()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Left\+Tangent\+Velocity (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the velocity value component of the left tangent of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Tangent velocity of the left tangent. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only relevant if key interpolation type is e\+Interpolation\+Cubic 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a9828bb0aa421a390a8bccdf161500e5a}\label{class_fbx_anim_curve_a9828bb0aa421a390a8bccdf161500e5a}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Left\+Tangent\+Weight@{Key\+Get\+Left\+Tangent\+Weight}}
+\index{Key\+Get\+Left\+Tangent\+Weight@{Key\+Get\+Left\+Tangent\+Weight}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Left\+Tangent\+Weight()}{KeyGetLeftTangentWeight()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Left\+Tangent\+Weight (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the weight value component of the left tangent of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Left tangent weight, or e\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT (0.\+333...) if left tangent is not weighted. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only relevant if key interpolation type is e\+Interpolation\+Cubic. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a55a43ce2a48ceccd753cdb10a7acf77e}\label{class_fbx_anim_curve_a55a43ce2a48ceccd753cdb10a7acf77e}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Right\+Auto@{Key\+Get\+Right\+Auto}}
+\index{Key\+Get\+Right\+Auto@{Key\+Get\+Right\+Auto}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Right\+Auto()}{KeyGetRightAuto()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Right\+Auto (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{bool}]{p\+Apply\+Overshoot\+Protection = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the right auto parametric of a key. This is used to compute the slope of Auto and User keys. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Apply\+Overshoot\+Protection} & Clamp flag (e\+G\+E\+N\+E\+R\+I\+C\+\_\+\+C\+L\+A\+MP) is taken into account. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Right auto parametric. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a8fb62fd9043cccbc129fad343d1610ba}\label{class_fbx_anim_curve_a8fb62fd9043cccbc129fad343d1610ba}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Right\+Derivative@{Key\+Get\+Right\+Derivative}}
+\index{Key\+Get\+Right\+Derivative@{Key\+Get\+Right\+Derivative}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Right\+Derivative()}{KeyGetRightDerivative()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Right\+Derivative (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the right derivative of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Right derivative (Value over time (s)). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a3c586d4f3cdcfbccc9fadf99bce03fd5}\label{class_fbx_anim_curve_a3c586d4f3cdcfbccc9fadf99bce03fd5}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Right\+Derivative\+Info@{Key\+Get\+Right\+Derivative\+Info}}
+\index{Key\+Get\+Right\+Derivative\+Info@{Key\+Get\+Right\+Derivative\+Info}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Right\+Derivative\+Info()}{KeyGetRightDerivativeInfo()}}
+{\footnotesize\ttfamily virtual \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} Fbx\+Anim\+Curve\+::\+Key\+Get\+Right\+Derivative\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the right derivative info (of type \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info}) of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Right derivative info. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a85a44ed49cc90f3c7dc53ca5da5107b3}\label{class_fbx_anim_curve_a85a44ed49cc90f3c7dc53ca5da5107b3}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Right\+Tangent\+Velocity@{Key\+Get\+Right\+Tangent\+Velocity}}
+\index{Key\+Get\+Right\+Tangent\+Velocity@{Key\+Get\+Right\+Tangent\+Velocity}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Right\+Tangent\+Velocity()}{KeyGetRightTangentVelocity()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Right\+Tangent\+Velocity (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the velocity value component of the right tangent of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Tangent velocity of the right tangent. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only relevant if key interpolation type is e\+Interpolation\+Cubic 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a82f1cd10ca027ec52eb0facf47b9c9f4}\label{class_fbx_anim_curve_a82f1cd10ca027ec52eb0facf47b9c9f4}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Right\+Tangent\+Weight@{Key\+Get\+Right\+Tangent\+Weight}}
+\index{Key\+Get\+Right\+Tangent\+Weight@{Key\+Get\+Right\+Tangent\+Weight}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Right\+Tangent\+Weight()}{KeyGetRightTangentWeight()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Right\+Tangent\+Weight (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the weight value component of the right tangent of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Right tangent weight, or e\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT (0.\+333...) if right tangent is not weighted. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only relevant if key interpolation type is e\+Interpolation\+Cubic. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a5672d86518e0ceb21c4bcaf78f7f5bf6}\label{class_fbx_anim_curve_a5672d86518e0ceb21c4bcaf78f7f5bf6}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Tangent\+Mode@{Key\+Get\+Tangent\+Mode}}
+\index{Key\+Get\+Tangent\+Mode@{Key\+Get\+Tangent\+Mode}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Tangent\+Mode()}{KeyGetTangentMode()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode} Fbx\+Anim\+Curve\+::\+Key\+Get\+Tangent\+Mode (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{bool}]{p\+Include\+Overrides = {\ttfamily false} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get key\textquotesingle{}s tangent mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Include\+Overrides} & Include override flags\+: Break, Clamp, Time-\/\+Independent. This method is meaningful for cubic interpolation only. Using this method for non cubic interpolated key will return unpredictable value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Key tangent mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a547f7842ea7bae5b5ed048d15b8b0d07}\label{class_fbx_anim_curve_a547f7842ea7bae5b5ed048d15b8b0d07}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Time@{Key\+Get\+Time}}
+\index{Key\+Get\+Time@{Key\+Get\+Time}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Time()}{KeyGetTime()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+Anim\+Curve\+::\+Key\+Get\+Time (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get key time 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Key time (time at which this key is occurring). 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_base_a9db34dd56ce9822d0d6723ce7d50c4a3}{Fbx\+Anim\+Curve\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a1d0a4728a6c8c1c0260fd368ba64ccb6}\label{class_fbx_anim_curve_a1d0a4728a6c8c1c0260fd368ba64ccb6}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Get\+Value@{Key\+Get\+Value}}
+\index{Key\+Get\+Value@{Key\+Get\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Get\+Value()}{KeyGetValue()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+::\+Key\+Get\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get key value. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Key value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a38cdb5a33a9d7195f9e74b0fb4aa3261}\label{class_fbx_anim_curve_a38cdb5a33a9d7195f9e74b0fb4aa3261}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Inc\+Value@{Key\+Inc\+Value}}
+\index{Key\+Inc\+Value@{Key\+Inc\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Inc\+Value()}{KeyIncValue()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Inc\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{float}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Increment key value. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Term added to the key value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_aaad0086794bde7063d868956c6fc6b3f}\label{class_fbx_anim_curve_aaad0086794bde7063d868956c6fc6b3f}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Insert@{Key\+Insert}}
+\index{Key\+Insert@{Key\+Insert}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Insert()}{KeyInsert()}}
+{\footnotesize\ttfamily virtual int Fbx\+Anim\+Curve\+::\+Key\+Insert (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Insert a key at given time. This function should be used instead of \hyperlink{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}{Fbx\+Anim\+Curve\+::\+Key\+Add()} if the key is to be added in the curve and not at the end. It inserts the key in respect to the interpolation type and tangents of the neighboring keys. If there is already a key a the given time, the key is modified and no new key is added. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of the new key. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of the key at given time, no matter if it was inserted or already present. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Key value must be set explicitly afterwards. The interpolation type and tangent mode are copied from the previous key. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_af73a0bbb95ba2c7516438b68de733f1a}\label{class_fbx_anim_curve_af73a0bbb95ba2c7516438b68de733f1a}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Is\+Left\+Tangent\+Weighted@{Key\+Is\+Left\+Tangent\+Weighted}}
+\index{Key\+Is\+Left\+Tangent\+Weighted@{Key\+Is\+Left\+Tangent\+Weighted}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Is\+Left\+Tangent\+Weighted()}{KeyIsLeftTangentWeighted()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Is\+Left\+Tangent\+Weighted (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the left tangent weight mode of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the key is left weighted (Weight mode is e\+W\+E\+I\+G\+H\+T\+\_\+\+W\+E\+I\+G\+H\+T\+E\+D\+\_\+\+R\+I\+G\+HT or e\+Weighted\+All). {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_af82ac790cdd052063e2c8dbd45ea54ca}\label{class_fbx_anim_curve_af82ac790cdd052063e2c8dbd45ea54ca}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Is\+Right\+Tangent\+Weighted@{Key\+Is\+Right\+Tangent\+Weighted}}
+\index{Key\+Is\+Right\+Tangent\+Weighted@{Key\+Is\+Right\+Tangent\+Weighted}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Is\+Right\+Tangent\+Weighted()}{KeyIsRightTangentWeighted()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Is\+Right\+Tangent\+Weighted (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the right tangent weight mode of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of queried key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the key is right weighted (Weight mode is e\+Weighted\+Right or e\+Weighted\+All). {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_ac75a9aaa2edc08635c0a9fadbd628923}\label{class_fbx_anim_curve_ac75a9aaa2edc08635c0a9fadbd628923}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Modify\+Begin@{Key\+Modify\+Begin}}
+\index{Key\+Modify\+Begin@{Key\+Modify\+Begin}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Modify\+Begin()}{KeyModifyBegin()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Modify\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Call this function prior to adding, removing or editing keys of an animation curve. Call function \hyperlink{class_fbx_anim_curve_ae8776e18ed1933e258774ba44f64fe5d}{Fbx\+Anim\+Curve\+::\+Key\+Modify\+End()} after modification. \mbox{\Hypertarget{class_fbx_anim_curve_ae8776e18ed1933e258774ba44f64fe5d}\label{class_fbx_anim_curve_ae8776e18ed1933e258774ba44f64fe5d}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Modify\+End@{Key\+Modify\+End}}
+\index{Key\+Modify\+End@{Key\+Modify\+End}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Modify\+End()}{KeyModifyEnd()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Modify\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Call this function after adding, removing or editing keys of an animation curve. Function \hyperlink{class_fbx_anim_curve_ac75a9aaa2edc08635c0a9fadbd628923}{Fbx\+Anim\+Curve\+::\+Key\+Modify\+Begin()} must have been called prior to modify the keys. \mbox{\Hypertarget{class_fbx_anim_curve_a743514eebf5845d6bc13145e082a8ae5}\label{class_fbx_anim_curve_a743514eebf5845d6bc13145e082a8ae5}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Mult\+Tangent@{Key\+Mult\+Tangent}}
+\index{Key\+Mult\+Tangent@{Key\+Mult\+Tangent}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Mult\+Tangent()}{KeyMultTangent()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Mult\+Tangent (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{float}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Multiply key tangents. \begin{DoxyRemark}{注釈}
+When multiplying a key value, tangents must be multiplied to conserve the same topology. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Factor multiplying the key tangents. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_a73262cd3affc5c9d098fda9a35a37779}\label{class_fbx_anim_curve_a73262cd3affc5c9d098fda9a35a37779}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Mult\+Value@{Key\+Mult\+Value}}
+\index{Key\+Mult\+Value@{Key\+Mult\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Mult\+Value()}{KeyMultValue()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Mult\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{float}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Multiply key value. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Factor multiplying the key value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_anim_curve_a743514eebf5845d6bc13145e082a8ae5}{Fbx\+Anim\+Curve\+::\+Key\+Mult\+Tangent}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_anim_curve_a083206eda111aa4c6803410427a4645c}\label{class_fbx_anim_curve_a083206eda111aa4c6803410427a4645c}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Remove@{Key\+Remove}}
+\index{Key\+Remove@{Key\+Remove}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Remove()}{KeyRemove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Remove (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Remove key at given index. Other key indices are updated automatically. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of key to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_base_a4d7d1bbd3d40020469aafd7c023f80d5}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a7b4fe494d1ca4575bb253ec89f867df1}\label{class_fbx_anim_curve_a7b4fe494d1ca4575bb253ec89f867df1}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Remove@{Key\+Remove}}
+\index{Key\+Remove@{Key\+Remove}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Remove()}{KeyRemove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Remove (\begin{DoxyParamCaption}\item[{int}]{p\+Start\+Index,  }\item[{int}]{p\+End\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Remove all the keys in the given range. 
+\begin{DoxyParams}{引数}
+{\em p\+Start\+Index} & Index of the first key to remove (inclusive). \\
+\hline
+{\em p\+End\+Index} & Index of the last key to remove (inclusive). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_base_a2813321af80c66758eb9fbe025fd52ea}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a5422351a86bda5b21e6ed5ce6658477e}\label{class_fbx_anim_curve_a5422351a86bda5b21e6ed5ce6658477e}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Scale\+Value@{Key\+Scale\+Value}}
+\index{Key\+Scale\+Value@{Key\+Scale\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Scale\+Value()}{KeyScaleValue()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Scale\+Value (\begin{DoxyParamCaption}\item[{float}]{p\+Mult\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Scale value of all keys. 
+\begin{DoxyParams}{引数}
+{\em p\+Mult\+Value} & Scale applied on key values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a2f09fd7ebeb68f8aa34f53926daf538b}\label{class_fbx_anim_curve_a2f09fd7ebeb68f8aa34f53926daf538b}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Scale\+Value\+And\+Tangent@{Key\+Scale\+Value\+And\+Tangent}}
+\index{Key\+Scale\+Value\+And\+Tangent@{Key\+Scale\+Value\+And\+Tangent}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Scale\+Value\+And\+Tangent()}{KeyScaleValueAndTangent()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Scale\+Value\+And\+Tangent (\begin{DoxyParamCaption}\item[{float}]{p\+Mult\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Scale value and tangent of all keys. 
+\begin{DoxyParams}{引数}
+{\em p\+Mult\+Value} & Scale applied on key values and tangents. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_a8f36f89bd5fbaa4f180789f4d9faf84f}\label{class_fbx_anim_curve_a8f36f89bd5fbaa4f180789f4d9faf84f}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set@{Key\+Set}}
+\index{Key\+Set@{Key\+Set}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set()}{KeySet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Key\+Set (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set (or replace) key at given index with given key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key to be set or replaced. \\
+\hline
+{\em p\+Key} & New key at this index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if key time is superior to previous key time and inferior to next key time, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_base_a1a66d683a6013b5eb41d128dcbbccd4a}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_a70bb71da0c56a32be961384c015bb812}\label{class_fbx_anim_curve_a70bb71da0c56a32be961384c015bb812}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set@{Key\+Set}}
+\index{Key\+Set@{Key\+Set}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set()}{KeySet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{float}]{p\+Value,  }\item[{\hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type}}]{p\+Interpolation = {\ttfamily \hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae}{Fbx\+Anim\+Curve\+Def\+::e\+Interpolation\+Cubic}},  }\item[{\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode}}]{p\+Tangent\+Mode = {\ttfamily \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Auto}},  }\item[{float}]{p\+Data0 = {\ttfamily 0.0},  }\item[{float}]{p\+Data1 = {\ttfamily 0.0},  }\item[{\hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990e}{Fbx\+Anim\+Curve\+Def\+::\+E\+Weighted\+Mode}}]{p\+Tangent\+Weight\+Mode = {\ttfamily \hyperlink{class_fbx_anim_curve_def_aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3}{Fbx\+Anim\+Curve\+Def\+::e\+Weighted\+None}},  }\item[{float}]{p\+Weight0 = {\ttfamily \hyperlink{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}},  }\item[{float}]{p\+Weight1 = {\ttfamily \hyperlink{class_fbx_anim_curve_def_a6fd6b3907962eba0b1e71f28b55fad9d}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+E\+I\+G\+HT}},  }\item[{float}]{p\+Velocity0 = {\ttfamily \hyperlink{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}},  }\item[{float}]{p\+Velocity1 = {\ttfamily \hyperlink{class_fbx_anim_curve_def_abebd0a6078f18802836059fdefb36862}{Fbx\+Anim\+Curve\+Def\+::s\+D\+E\+F\+A\+U\+L\+T\+\_\+\+V\+E\+L\+O\+C\+I\+TY}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+General function to set key properties. The key at index p\+Key\+Index is retrieved and modified according to the other parameters. The key must have been previously created, for example using Key\+Add. Use Fbx\+Anim\+Curve\+::\+Set\+T\+C\+B() in the specific case of setting a key with cubic interpolation and T\+CB tangent mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Time} & Key time. \\
+\hline
+{\em p\+Value} & Key value. \\
+\hline
+{\em p\+Interpolation} & Key interpolation type. \\
+\hline
+{\em p\+Tangent\+Mode} & Key tangent mode (meaningful for cubic interpolation only). \\
+\hline
+{\em p\+Data0} & Value of right slope. \\
+\hline
+{\em p\+Data1} & Value of next left slope. \\
+\hline
+{\em p\+Tangent\+Weight\+Mode} & Weight mode, if used. \\
+\hline
+{\em p\+Weight0} & Weight for right slope, if tangent weight mode is e\+Weighted\+Right or e\+Weighted\+All. \\
+\hline
+{\em p\+Weight1} & Weight for next left slope, if tangent weight mode is e\+Weighted\+Next\+Left or e\+Weighted\+All. \\
+\hline
+{\em p\+Velocity0} & Velocity for right slope, if tangent velocity mode is e\+Velocity\+Right or e\+Velocity\+All. \\
+\hline
+{\em p\+Velocity1} & Velocity for next left slope, if tangent velocity mode is e\+Velocity\+Next\+Left or e\+Velocity\+All. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_ae0137873a7e2c36679e9e747908b8317}\label{class_fbx_anim_curve_ae0137873a7e2c36679e9e747908b8317}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Break@{Key\+Set\+Break}}
+\index{Key\+Set\+Break@{Key\+Set\+Break}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Break()}{KeySetBreak()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Break (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{bool}]{p\+Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set or unset the tangent break. When this flag is set (\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break}), the key\textquotesingle{}s left and right slopes are independent. When this flag is off, the key\textquotesingle{}s left and right slope are equal. This method is relevant for User (\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User}) and Auto (\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Auto}) tangent modes only. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Val} & Break flag ({\ttfamily true} or {\ttfamily false}). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_a195063224af388d7064dc13910a89cb9}\label{class_fbx_anim_curve_a195063224af388d7064dc13910a89cb9}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Constant\+Mode@{Key\+Set\+Constant\+Mode}}
+\index{Key\+Set\+Constant\+Mode@{Key\+Set\+Constant\+Mode}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Constant\+Mode()}{KeySetConstantMode()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Constant\+Mode (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_anim_curve_def_a52885abd392ac8ac3da94bafc5fddd64}{Fbx\+Anim\+Curve\+Def\+::\+E\+Constant\+Mode}}]{p\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key\textquotesingle{}s constant mode. This method is meaningful for constant interpolation only. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Mode} & Key constant mode. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_aa9de6c77c7d81def717ff34f01a660fb}\label{class_fbx_anim_curve_aa9de6c77c7d81def717ff34f01a660fb}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Interpolation@{Key\+Set\+Interpolation}}
+\index{Key\+Set\+Interpolation@{Key\+Set\+Interpolation}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Interpolation()}{KeySetInterpolation()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Interpolation (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_anim_curve_def_add2ab7d10d856ab0868cc9b143d59ea5}{Fbx\+Anim\+Curve\+Def\+::\+E\+Interpolation\+Type}}]{p\+Interpolation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key\textquotesingle{}s interpolation type. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Interpolation} & Key interpolation type. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_afbec5f6b274395cb1a3d8d1eb379982f}\label{class_fbx_anim_curve_afbec5f6b274395cb1a3d8d1eb379982f}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Left\+Derivative@{Key\+Set\+Left\+Derivative}}
+\index{Key\+Set\+Left\+Derivative@{Key\+Set\+Left\+Derivative}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Left\+Derivative()}{KeySetLeftDerivative()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Left\+Derivative (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{float}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the left derivative of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Left derivative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. This function is only relevant if previous key interpolation type is e\+Interpolation\+Cubic and tangent mode is \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User}, \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break} or \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Auto}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a8fa694edd4fb27b9b61739efa9e27083}\label{class_fbx_anim_curve_a8fa694edd4fb27b9b61739efa9e27083}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Left\+Derivative\+Info@{Key\+Set\+Left\+Derivative\+Info}}
+\index{Key\+Set\+Left\+Derivative\+Info@{Key\+Set\+Left\+Derivative\+Info}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Left\+Derivative\+Info()}{KeySetLeftDerivativeInfo()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Left\+Derivative\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} \&}]{p\+Value,  }\item[{bool}]{p\+Force\+Derivative = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the left derivative info (of type \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info}) of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Left derivative info. \\
+\hline
+{\em p\+Force\+Derivative} & If {\ttfamily true}, assign the tangent info\textquotesingle{}s derivative value to the key derivative. If {\ttfamily false}, use the tangent info\textquotesingle{}s auto parametric value to recompute the key derivative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. This function is only relevant if previous key interpolation type is e\+Interpolation\+Cubic and tangent mode is \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User} or \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a8733d2c8ebbb4e5d367dba81363fbf17}\label{class_fbx_anim_curve_a8733d2c8ebbb4e5d367dba81363fbf17}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Left\+Tangent\+Weight@{Key\+Set\+Left\+Tangent\+Weight}}
+\index{Key\+Set\+Left\+Tangent\+Weight@{Key\+Set\+Left\+Tangent\+Weight}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Left\+Tangent\+Weight()}{KeySetLeftTangentWeight()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Left\+Tangent\+Weight (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{float}]{p\+Weight,  }\item[{bool}]{p\+Adjust\+Tan = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the left tangent weight of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Weight} & Weight to set on the left tangent. \\
+\hline
+{\em p\+Adjust\+Tan} & If true, recompute the tangent height to compensate for very small weights. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only relevant if previous key interpolation type is e\+Interpolation\+Cubic and tangent mode is \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User} or \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break}. The tangent is automatically set in weighted mode. The p\+Adjust\+Tan option will only produce correct results provided that the tangent has already been set before calling this function. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a1de09a5f76f6eb12d0170cbd36fe6a78}\label{class_fbx_anim_curve_a1de09a5f76f6eb12d0170cbd36fe6a78}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Right\+Derivative@{Key\+Set\+Right\+Derivative}}
+\index{Key\+Set\+Right\+Derivative@{Key\+Set\+Right\+Derivative}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Right\+Derivative()}{KeySetRightDerivative()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Right\+Derivative (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{float}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the right derivative of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Right derivative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. This function is only relevant if previous key interpolation type is e\+Interpolation\+Cubic and tangent mode is \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User}, \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break} or \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Auto}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a609a6e5f3ee69b04e46e75597cc5e1cf}\label{class_fbx_anim_curve_a609a6e5f3ee69b04e46e75597cc5e1cf}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Right\+Derivative\+Info@{Key\+Set\+Right\+Derivative\+Info}}
+\index{Key\+Set\+Right\+Derivative\+Info@{Key\+Set\+Right\+Derivative\+Info}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Right\+Derivative\+Info()}{KeySetRightDerivativeInfo()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Right\+Derivative\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info} \&}]{p\+Value,  }\item[{bool}]{p\+Force\+Derivative = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the right derivative info (of type \hyperlink{struct_fbx_anim_curve_tangent_info}{Fbx\+Anim\+Curve\+Tangent\+Info}) of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & Right derivative info. \\
+\hline
+{\em p\+Force\+Derivative} & If {\ttfamily true}, assign the tangent info\textquotesingle{}s derivative value to the key derivative. If {\ttfamily false}, use the tangent info\textquotesingle{}s auto parametric value to recompute the key derivative. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if animation curve has no key or if index is out of bounds. This function is only relevant if previous key interpolation type is e\+Interpolation\+Cubic and tangent mode is \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User} or \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_acf1994ed3720f3d3e98cfca8bf31ce25}\label{class_fbx_anim_curve_acf1994ed3720f3d3e98cfca8bf31ce25}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Right\+Tangent\+Weight@{Key\+Set\+Right\+Tangent\+Weight}}
+\index{Key\+Set\+Right\+Tangent\+Weight@{Key\+Set\+Right\+Tangent\+Weight}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Right\+Tangent\+Weight()}{KeySetRightTangentWeight()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Right\+Tangent\+Weight (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{float}]{p\+Weight,  }\item[{bool}]{p\+Adjust\+Tan = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the right tangent weight of a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the key. \\
+\hline
+{\em p\+Weight} & Weight to set on the right tangent. \\
+\hline
+{\em p\+Adjust\+Tan} & If true, recompute the tangent height to compensate for very small weights. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only relevant if key interpolation type is e\+Interpolation\+Cubic and tangent mode is \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+User} or \hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847}{Fbx\+Anim\+Curve\+Def\+::e\+Tangent\+Break}. The tangent is automatically set in weighted mode. The p\+Adjust\+Tan option will only produce correct results provided that the tangent has already been set before calling this function. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a13fa9ecd9e09a39f734cf5a3265ea0ff}\label{class_fbx_anim_curve_a13fa9ecd9e09a39f734cf5a3265ea0ff}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Tangent\+Mode@{Key\+Set\+Tangent\+Mode}}
+\index{Key\+Set\+Tangent\+Mode@{Key\+Set\+Tangent\+Mode}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Tangent\+Mode()}{KeySetTangentMode()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Tangent\+Mode (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_anim_curve_def_ac810ccc5ca0527704ab5175479964b87}{Fbx\+Anim\+Curve\+Def\+::\+E\+Tangent\+Mode}}]{p\+Tangent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key\textquotesingle{}s tangent mode. This method is meaningful for cubic interpolation only. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Tangent} & Key tangent mode. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_af5319507799c6eea17c6550465065f8f}\label{class_fbx_anim_curve_af5319507799c6eea17c6550465065f8f}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+T\+CB@{Key\+Set\+T\+CB}}
+\index{Key\+Set\+T\+CB@{Key\+Set\+T\+CB}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+T\+C\+B()}{KeySetTCB()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+T\+CB (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{float}]{p\+Value,  }\item[{float}]{p\+Data0 = {\ttfamily 0.0f},  }\item[{float}]{p\+Data1 = {\ttfamily 0.0f},  }\item[{float}]{p\+Data2 = {\ttfamily 0.0f} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set a key with cubic interpolation, T\+CB tangent mode. The key at index p\+Key\+Index is retrieved and modified according to the other parameters. The T\+CB mode controls the tension, continuity, and bias of the curve. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Time} & Key time. \\
+\hline
+{\em p\+Value} & Key value. \\
+\hline
+{\em p\+Data0} & Tension. Controls the amount of curvature in the animation curve. The higher the tension is, the more linear the curve looks. When the tension is low, the curve looks rounder or wider. \\
+\hline
+{\em p\+Data1} & Continuity. Controls the smoothness or singularity of the curve on the key. \\
+\hline
+{\em p\+Data2} & Bias. Controls if the effect of tension and continuity affect the curve before or after the key. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_a5ce2130d0cea4de2fc42fa3683f01162}\label{class_fbx_anim_curve_a5ce2130d0cea4de2fc42fa3683f01162}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Time@{Key\+Set\+Time}}
+\index{Key\+Set\+Time@{Key\+Set\+Time}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Time()}{KeySetTime()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Time (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Time} & Key time (time at which this key is occurring). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The new key time might modify the key index. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_base_afce0ede7336b9639c1e7ac08adf3e6df}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_aa974a3bbece0cd63fa4c4d3a7ad7fd99}\label{class_fbx_anim_curve_aa974a3bbece0cd63fa4c4d3a7ad7fd99}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Key\+Set\+Value@{Key\+Set\+Value}}
+\index{Key\+Set\+Value@{Key\+Set\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Key\+Set\+Value()}{KeySetValue()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Key\+Set\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{float}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key value. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Index of the key. \\
+\hline
+{\em p\+Value} & The value to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_ad116802320381f4217d32dde6006643b}\label{class_fbx_anim_curve_ad116802320381f4217d32dde6006643b}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Resize\+Key\+Buffer@{Resize\+Key\+Buffer}}
+\index{Resize\+Key\+Buffer@{Resize\+Key\+Buffer}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Resize\+Key\+Buffer()}{ResizeKeyBuffer()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Resize\+Key\+Buffer (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Resize animation curve buffer to hold a certain number of keys. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Count} & Number of keys the animation curve will eventually hold. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_a17087752d3a28d373b2aaa66d1755f62}\label{class_fbx_anim_curve_a17087752d3a28d373b2aaa66d1755f62}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Retrieve@{Retrieve}}
+\index{Retrieve@{Retrieve}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Retrieve()}{Retrieve()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Retrieve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+File\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_curve_base_a58ba1ce28a08145795d95bb27e2db02f}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_abcb5d65afda70282d312be4f58b7d9cd}\label{class_fbx_anim_curve_abcb5d65afda70282d312be4f58b7d9cd}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Set\+Value@{Set\+Value}}
+\index{Set\+Value@{Set\+Value}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Set\+Value()}{SetValue()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+::\+Set\+Value (\begin{DoxyParamCaption}\item[{float}]{p\+Value,  }\item[{int}]{p\+Curve\+Node\+Index = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the value to the parent curve node channel. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to set to the parent curve node channel of this curve. \\
+\hline
+{\em p\+Curve\+Node\+Index} & The index of the parent curve node, if more than one exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In most case, the curve will have a single curve node channel as destination. However, it is possible that more are connected, hence why we provide the curve node index parameter. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_curve_a0ef3229e43aaca33ab50161235541060}\label{class_fbx_anim_curve_a0ef3229e43aaca33ab50161235541060}} 
+\index{Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}!Store@{Store}}
+\index{Store@{Store}!Fbx\+Anim\+Curve@{Fbx\+Anim\+Curve}}
+\subsubsection{\texorpdfstring{Store()}{Store()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+::\+Store (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+File\+Object,  }\item[{bool}]{p\+Legacy\+Version = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_curve_base_a82eba55521f1c0e792b71cb432dac170}{Fbx\+Anim\+Curve\+Base}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimcurve_8h}{fbxanimcurve.\+h}\end{DoxyCompactItemize}

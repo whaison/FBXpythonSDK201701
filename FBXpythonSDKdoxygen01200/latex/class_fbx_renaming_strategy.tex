@@ -1,0 +1,502 @@
+\hypertarget{class_fbx_renaming_strategy}{}\section{Fbx\+Renaming\+Strategy クラス}
+\label{class_fbx_renaming_strategy}\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+
+
+{\ttfamily \#include $<$fbxrenamingstrategy.\+h$>$}
+
+
+
+Fbx\+Renaming\+Strategy の継承関係図
+% FIG 0
+
+
+Fbx\+Renaming\+Strategy 連携図
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_renaming_strategy_1_1_name_cell}{Name\+Cell}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}{E\+Direction} \{ \hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423a5090bf661dd42c70207cef715cbcee56}{e\+To\+F\+BX}, 
+\hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423aa816a2056da21a8dedcffd502248d854}{e\+From\+F\+BX}
+ \}
+\item 
+enum \hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}{E\+Clash\+Type} \{ \hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57ddabf295c4337c8ee754ddda6386be6b4de}{e\+Name\+Clash\+Auto}, 
+\hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dda692c1d6475ff91b487d8221fe7949495}{e\+Name\+Clash\+Type1}, 
+\hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dda682028d5d582f5d5edf29fdb06a37803}{e\+Name\+Clash\+Type2}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_renaming_strategy_a9412da6dd0bb77ed4597b114173d5385}{Fbx\+Renaming\+Strategy} (\hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}{E\+Direction} p\+Mod, bool p\+On\+Creation\+Run=false)
+\item 
+virtual \hyperlink{class_fbx_renaming_strategy_a3d041932b649c5b69b29d156574bece1}{$\sim$\+Fbx\+Renaming\+Strategy} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_af21a13396dd6726e87b123f398ac79f2}{Rename} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&p\+Name)
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a87b1e89413d7b8c86a9d8a9f6fa6490f}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Resets internal state regarding assigned names. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_renaming_strategy_interface}{Fbx\+Renaming\+Strategy\+Interface} $\ast$ \hyperlink{class_fbx_renaming_strategy_a36d1f3cc01ea460ab97d95fc8d8dd136}{Clone} ()
+\item 
+void \hyperlink{class_fbx_renaming_strategy_a71f4af04239a7d159f4f049080616356}{Set\+Clash\+Solver\+Type} (\hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}{E\+Clash\+Type} p\+Type)
+\item 
+virtual char $\ast$ \hyperlink{class_fbx_renaming_strategy_a52dcb44dfa0ee8e965aa81b0b233611a}{Get\+Name\+Space} ()
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a7326723f421c3f81a2a2bbaa95f979fe}{Set\+In\+Name\+Space\+Symbol} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Name\+Space\+Symbol)
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a83507388cab84a8905861a8331d57092}{Set\+Out\+Name\+Space\+Symbol} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Name\+Space\+Symbol)
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a4ffe010b34e4040da2525db5fcaa4f45}{Set\+Case\+Sensibility} (bool p\+Is\+Case\+Sensitive)
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a64ccadd7f74e58d706548e6333721558}{Set\+Replace\+Non\+Alpha\+Num} (bool p\+Replace\+Non\+Alpha\+Num)
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a0786472d7eeef7b817eb8dacbaebafa6}{Set\+First\+Not\+Num} (bool p\+First\+Not\+Num)
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_abc91bd710f488bc42bac3e19b1b3eda2}{Rename\+Unparent\+Name\+Space} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, bool p\+Is\+Root=false)
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_a1c8eccfa6eb14363e6e9295033e66e7c}{Remove\+Import\+Name\+Space\+Clash} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_a4908d6495b3749742c7b23c85f35ad93}{Get\+Parents\+Name\+Space\+List} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$$>$ \&p\+Name\+Space\+List)
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_a7d9e1c1bd9ffb573a54cafbfe138f837}{Propagate\+Name\+Space\+Change} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_string}{Fbx\+String} Old\+NS, \hyperlink{class_fbx_string}{Fbx\+String} New\+NS)
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{class_fbx_renaming_strategy_a74785822c27882421fe5e827c3347786}{No\+Prefix\+Name} (const char $\ast$p\+Name)
+\item 
+static char $\ast$ \hyperlink{class_fbx_renaming_strategy_a82d239d3b92ac672fd6ea71617a5c8e1}{No\+Prefix\+Name} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_aa210a797aa92ff19ab61ce5a91c86228}{Rename\+To\+F\+BX} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&p\+Name)
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_aefd287925863f4cbf7c1416b4bd1b419}{Rename\+From\+F\+BX} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&p\+Name)
+\item 
+virtual \hyperlink{class_fbx_string}{Fbx\+String} \& \hyperlink{class_fbx_renaming_strategy_a1dfe24b0ef385ef1b4022fd140224a78}{Replace\+Non\+Alpha\+Num} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name, const char $\ast$p\+Replace, bool p\+Ignore\+Name\+Space)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}{E\+Direction} \hyperlink{class_fbx_renaming_strategy_a45b2d8a796225657612cd579f675eb63}{m\+Mode}
+\item 
+\hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}{E\+Clash\+Type} \hyperlink{class_fbx_renaming_strategy_a9871e311bddf13b0263f71e646f5b06d}{m\+Type}
+\item 
+\hyperlink{class_fbx_char_ptr_set}{Fbx\+Char\+Ptr\+Set} \hyperlink{class_fbx_renaming_strategy_aca7cf36d91294a0fe5bce55803c89e7e}{m\+String\+Name\+Array}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{struct_fbx_renaming_strategy_1_1_name_cell}{Name\+Cell} $\ast$ $>$ \hyperlink{class_fbx_renaming_strategy_a72b25f3cb4d18be1e8d5301fb27dad8b}{m\+Existing\+Ns\+List}
+\item 
+bool \hyperlink{class_fbx_renaming_strategy_adbe7f778a4619a416759f12d67df0496}{m\+On\+Creation\+Run}
+\item 
+bool \hyperlink{class_fbx_renaming_strategy_a6bce5341bf85474e9c3f0a891c18fc80}{m\+Case\+Sensitive}
+\item 
+bool \hyperlink{class_fbx_renaming_strategy_a894be493925c3dd2f7a6254c48eecde2}{m\+Replace\+Non\+Alpha\+Num}
+\item 
+bool \hyperlink{class_fbx_renaming_strategy_a5622ec5d07c1aa0151adffd81d760202}{m\+First\+Not\+Num}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_renaming_strategy_ac534ee7f8b50845f0850c237284f7ce4}{m\+Name\+Space}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_renaming_strategy_af1289c1ae1c96e8ad1ecde36c4e64edd}{m\+In\+Name\+Space\+Symbol}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_renaming_strategy_afcfc44febde7ce6eef47b632a070b4bf}{m\+Out\+Name\+Space\+Symbol}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+The \hyperlink{class_fbx_renaming_strategy}{Fbx\+Renaming\+Strategy} object can be set to rename all the objects in a scene. It can remove name clashing, remove illegal characters, manage namespaces and manage backward compatibility. It is better to choose \hyperlink{class_fbx_scene_renamer}{Fbx\+Scene\+Renamer} instead of this class to simplify the usage.
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_scene_renamer}{Fbx\+Scene\+Renamer} 
+\end{DoxySeeAlso}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}\label{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!E\+Clash\+Type@{E\+Clash\+Type}}
+\index{E\+Clash\+Type@{E\+Clash\+Type}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{E\+Clash\+Type}{EClashType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}{Fbx\+Renaming\+Strategy\+::\+E\+Clash\+Type}}
+
+
+\begin{DoxyItemize}
+\item {\itshape e\+Name\+Clash\+Auto} 
+\item {\itshape e\+Name\+Clash\+Type1} 
+\item {\itshape e\+Name\+Clash\+Type2} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Name\+Clash\+Auto@{e\+Name\+Clash\+Auto}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!e\+Name\+Clash\+Auto@{e\+Name\+Clash\+Auto}}}\mbox{\Hypertarget{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57ddabf295c4337c8ee754ddda6386be6b4de}\label{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57ddabf295c4337c8ee754ddda6386be6b4de}} 
+e\+Name\+Clash\+Auto&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Name\+Clash\+Type1@{e\+Name\+Clash\+Type1}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!e\+Name\+Clash\+Type1@{e\+Name\+Clash\+Type1}}}\mbox{\Hypertarget{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dda692c1d6475ff91b487d8221fe7949495}\label{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dda692c1d6475ff91b487d8221fe7949495}} 
+e\+Name\+Clash\+Type1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Name\+Clash\+Type2@{e\+Name\+Clash\+Type2}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!e\+Name\+Clash\+Type2@{e\+Name\+Clash\+Type2}}}\mbox{\Hypertarget{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dda682028d5d582f5d5edf29fdb06a37803}\label{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dda682028d5d582f5d5edf29fdb06a37803}} 
+e\+Name\+Clash\+Type2&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}\label{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!E\+Direction@{E\+Direction}}
+\index{E\+Direction@{E\+Direction}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{E\+Direction}{EDirection}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}{Fbx\+Renaming\+Strategy\+::\+E\+Direction}}
+
+The mode describing the convention direction, from F\+BX format or to F\+BX format.
+\begin{DoxyItemize}
+\item {\itshape e\+To\+F\+BX} Convert to F\+BX format from another format.
+\item {\itshape e\+From\+F\+BX} Convert from F\+BX format to another format. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+To\+F\+BX@{e\+To\+F\+BX}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!e\+To\+F\+BX@{e\+To\+F\+BX}}}\mbox{\Hypertarget{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423a5090bf661dd42c70207cef715cbcee56}\label{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423a5090bf661dd42c70207cef715cbcee56}} 
+e\+To\+F\+BX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+From\+F\+BX@{e\+From\+F\+BX}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!e\+From\+F\+BX@{e\+From\+F\+BX}}}\mbox{\Hypertarget{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423aa816a2056da21a8dedcffd502248d854}\label{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423aa816a2056da21a8dedcffd502248d854}} 
+e\+From\+F\+BX&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a9412da6dd0bb77ed4597b114173d5385}\label{class_fbx_renaming_strategy_a9412da6dd0bb77ed4597b114173d5385}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Fbx\+Renaming\+Strategy()}{FbxRenamingStrategy()}}
+{\footnotesize\ttfamily Fbx\+Renaming\+Strategy\+::\+Fbx\+Renaming\+Strategy (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}{E\+Direction}}]{p\+Mod,  }\item[{bool}]{p\+On\+Creation\+Run = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Mod} & The mode describing the convention direction, from F\+BX format or to F\+BX format. \\
+\hline
+{\em p\+On\+Creation\+Run} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a3d041932b649c5b69b29d156574bece1}\label{class_fbx_renaming_strategy_a3d041932b649c5b69b29d156574bece1}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!````~Fbx\+Renaming\+Strategy@{$\sim$\+Fbx\+Renaming\+Strategy}}
+\index{````~Fbx\+Renaming\+Strategy@{$\sim$\+Fbx\+Renaming\+Strategy}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Renaming\+Strategy()}{~FbxRenamingStrategy()}}
+{\footnotesize\ttfamily virtual Fbx\+Renaming\+Strategy\+::$\sim$\+Fbx\+Renaming\+Strategy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a87b1e89413d7b8c86a9d8a9f6fa6490f}\label{class_fbx_renaming_strategy_a87b1e89413d7b8c86a9d8a9f6fa6490f}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets internal state regarding assigned names. 
+
+
+
+\hyperlink{class_fbx_renaming_strategy_interface_a2090b5ae43936b617ec5d75015923f69}{Fbx\+Renaming\+Strategy\+Interface}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a36d1f3cc01ea460ab97d95fc8d8dd136}\label{class_fbx_renaming_strategy_a36d1f3cc01ea460ab97d95fc8d8dd136}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Clone@{Clone}}
+\index{Clone@{Clone}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_renaming_strategy_interface}{Fbx\+Renaming\+Strategy\+Interface}$\ast$ Fbx\+Renaming\+Strategy\+::\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a dynamic renaming strategy instance of the same type as the child class. \begin{DoxyReturn}{戻り値}
+New instance. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_interface_ab394ed8a9b5d3ec40334bc933af83907}{Fbx\+Renaming\+Strategy\+Interface}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a52dcb44dfa0ee8e965aa81b0b233611a}\label{class_fbx_renaming_strategy_a52dcb44dfa0ee8e965aa81b0b233611a}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Get\+Name\+Space@{Get\+Name\+Space}}
+\index{Get\+Name\+Space@{Get\+Name\+Space}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Get\+Name\+Space()}{GetNameSpace()}}
+{\footnotesize\ttfamily virtual char$\ast$ Fbx\+Renaming\+Strategy\+::\+Get\+Name\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the namespace of the last renamed object. \begin{DoxyReturn}{戻り値}
+Char pointer to the namespace. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a4908d6495b3749742c7b23c85f35ad93}\label{class_fbx_renaming_strategy_a4908d6495b3749742c7b23c85f35ad93}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Get\+Parents\+Name\+Space\+List@{Get\+Parents\+Name\+Space\+List}}
+\index{Get\+Parents\+Name\+Space\+List@{Get\+Parents\+Name\+Space\+List}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Get\+Parents\+Name\+Space\+List()}{GetParentsNameSpaceList()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Get\+Parents\+Name\+Space\+List (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$$>$ \&}]{p\+Name\+Space\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Recursively get all the namespace starting from this node\textquotesingle{}s parent. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Parent node. \\
+\hline
+{\em p\+Name\+Space\+List} & output the namespace list from p\+Node\textquotesingle{}s parent to the root node. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a74785822c27882421fe5e827c3347786}\label{class_fbx_renaming_strategy_a74785822c27882421fe5e827c3347786}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!No\+Prefix\+Name@{No\+Prefix\+Name}}
+\index{No\+Prefix\+Name@{No\+Prefix\+Name}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{No\+Prefix\+Name()}{NoPrefixName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static char$\ast$ Fbx\+Renaming\+Strategy\+::\+No\+Prefix\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a name with its prefix removed. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & A name containing a prefix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The part of p\+Name following the \char`\"{}\+::\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a82d239d3b92ac672fd6ea71617a5c8e1}\label{class_fbx_renaming_strategy_a82d239d3b92ac672fd6ea71617a5c8e1}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!No\+Prefix\+Name@{No\+Prefix\+Name}}
+\index{No\+Prefix\+Name@{No\+Prefix\+Name}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{No\+Prefix\+Name()}{NoPrefixName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static char$\ast$ Fbx\+Renaming\+Strategy\+::\+No\+Prefix\+Name (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a name with its prefix removed. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & A name containing a prefix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The part of p\+Name following the \char`\"{}\+::\char`\"{} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a7d9e1c1bd9ffb573a54cafbfe138f837}\label{class_fbx_renaming_strategy_a7d9e1c1bd9ffb573a54cafbfe138f837}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Propagate\+Name\+Space\+Change@{Propagate\+Name\+Space\+Change}}
+\index{Propagate\+Name\+Space\+Change@{Propagate\+Name\+Space\+Change}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Propagate\+Name\+Space\+Change()}{PropagateNameSpaceChange()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+::\+Propagate\+Name\+Space\+Change (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{Old\+NS,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{New\+NS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Recursively replace the namespace starting from this node to its children. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Current node. \\
+\hline
+{\em Old\+NS} & The old namespace to be replaced with the New\+Ns. \\
+\hline
+{\em New\+NS} & The new namespace to replace Old\+Ns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfull 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function only replaces the first occurence of Old\+NS with New\+NS. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a1c8eccfa6eb14363e6e9295033e66e7c}\label{class_fbx_renaming_strategy_a1c8eccfa6eb14363e6e9295033e66e7c}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Remove\+Import\+Name\+Space\+Clash@{Remove\+Import\+Name\+Space\+Clash}}
+\index{Remove\+Import\+Name\+Space\+Clash@{Remove\+Import\+Name\+Space\+Clash}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Remove\+Import\+Name\+Space\+Clash()}{RemoveImportNameSpaceClash()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+::\+Remove\+Import\+Name\+Space\+Clash (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Recursively removes all the unparented namespaced \char`\"{}key\char`\"{} starting from this node. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Parent node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully removed the \char`\"{}\+\_\+\+N\+Sclash\char`\"{} from one or more nodes. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function removes \char`\"{}\+\_\+\+N\+Sclash\char`\"{} when encountered. This is the opposite from Rename\+Unparent\+Name\+Space. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_af21a13396dd6726e87b123f398ac79f2}\label{class_fbx_renaming_strategy_af21a13396dd6726e87b123f398ac79f2}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Rename@{Rename}}
+\index{Rename@{Rename}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Rename()}{Rename()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+::\+Rename (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Rename a name if necessary. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name to be renamed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return {\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_interface_a1b91016c68dd9c7031624026fd39638a}{Fbx\+Renaming\+Strategy\+Interface}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_aefd287925863f4cbf7c1416b4bd1b419}\label{class_fbx_renaming_strategy_aefd287925863f4cbf7c1416b4bd1b419}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Rename\+From\+F\+BX@{Rename\+From\+F\+BX}}
+\index{Rename\+From\+F\+BX@{Rename\+From\+F\+BX}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Rename\+From\+F\+B\+X()}{RenameFromFBX()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+::\+Rename\+From\+F\+BX (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_aa210a797aa92ff19ab61ce5a91c86228}\label{class_fbx_renaming_strategy_aa210a797aa92ff19ab61ce5a91c86228}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Rename\+To\+F\+BX@{Rename\+To\+F\+BX}}
+\index{Rename\+To\+F\+BX@{Rename\+To\+F\+BX}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Rename\+To\+F\+B\+X()}{RenameToFBX()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+::\+Rename\+To\+F\+BX (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_abc91bd710f488bc42bac3e19b1b3eda2}\label{class_fbx_renaming_strategy_abc91bd710f488bc42bac3e19b1b3eda2}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Rename\+Unparent\+Name\+Space@{Rename\+Unparent\+Name\+Space}}
+\index{Rename\+Unparent\+Name\+Space@{Rename\+Unparent\+Name\+Space}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Rename\+Unparent\+Name\+Space()}{RenameUnparentNameSpace()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+::\+Rename\+Unparent\+Name\+Space (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{bool}]{p\+Is\+Root = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Recursively renames all the unparented namespaced objects (Prefix mode) starting from this node. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Parent node. \\
+\hline
+{\em p\+Is\+Root} & The root node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the \char`\"{}\+\_\+\+N\+Sclash\char`\"{} have been added to one or more node. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function adds \char`\"{}\+\_\+\+N\+Sclash\char`\"{} when it encounters an unparented namespaced object. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a1dfe24b0ef385ef1b4022fd140224a78}\label{class_fbx_renaming_strategy_a1dfe24b0ef385ef1b4022fd140224a78}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Replace\+Non\+Alpha\+Num@{Replace\+Non\+Alpha\+Num}}
+\index{Replace\+Non\+Alpha\+Num@{Replace\+Non\+Alpha\+Num}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Replace\+Non\+Alpha\+Num()}{ReplaceNonAlphaNum()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string}{Fbx\+String}\& Fbx\+Renaming\+Strategy\+::\+Replace\+Non\+Alpha\+Num (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name,  }\item[{const char $\ast$}]{p\+Replace,  }\item[{bool}]{p\+Ignore\+Name\+Space }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a4ffe010b34e4040da2525db5fcaa4f45}\label{class_fbx_renaming_strategy_a4ffe010b34e4040da2525db5fcaa4f45}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Set\+Case\+Sensibility@{Set\+Case\+Sensibility}}
+\index{Set\+Case\+Sensibility@{Set\+Case\+Sensibility}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Set\+Case\+Sensibility()}{SetCaseSensibility()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Set\+Case\+Sensibility (\begin{DoxyParamCaption}\item[{bool}]{p\+Is\+Case\+Sensitive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets case sensitivity for name clashing. 
+\begin{DoxyParams}{引数}
+{\em p\+Is\+Case\+Sensitive} & Set to {\ttfamily true} to make the name clashing case sensitive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a71f4af04239a7d159f4f049080616356}\label{class_fbx_renaming_strategy_a71f4af04239a7d159f4f049080616356}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Set\+Clash\+Solver\+Type@{Set\+Clash\+Solver\+Type}}
+\index{Set\+Clash\+Solver\+Type@{Set\+Clash\+Solver\+Type}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Set\+Clash\+Solver\+Type()}{SetClashSolverType()}}
+{\footnotesize\ttfamily void Fbx\+Renaming\+Strategy\+::\+Set\+Clash\+Solver\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}{E\+Clash\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Setup the strategy to perform this algorithm 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a0786472d7eeef7b817eb8dacbaebafa6}\label{class_fbx_renaming_strategy_a0786472d7eeef7b817eb8dacbaebafa6}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Set\+First\+Not\+Num@{Set\+First\+Not\+Num}}
+\index{Set\+First\+Not\+Num@{Set\+First\+Not\+Num}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Set\+First\+Not\+Num()}{SetFirstNotNum()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Set\+First\+Not\+Num (\begin{DoxyParamCaption}\item[{bool}]{p\+First\+Not\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the flag for first character acceptance during renaming. 
+\begin{DoxyParams}{引数}
+{\em p\+First\+Not\+Num} & Set to {\ttfamily true} to add an underscore to the name if the first character is a number. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a7326723f421c3f81a2a2bbaa95f979fe}\label{class_fbx_renaming_strategy_a7326723f421c3f81a2a2bbaa95f979fe}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Set\+In\+Name\+Space\+Symbol@{Set\+In\+Name\+Space\+Symbol}}
+\index{Set\+In\+Name\+Space\+Symbol@{Set\+In\+Name\+Space\+Symbol}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Set\+In\+Name\+Space\+Symbol()}{SetInNameSpaceSymbol()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Set\+In\+Name\+Space\+Symbol (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Name\+Space\+Symbol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the current scene namespace symbol. 
+\begin{DoxyParams}{引数}
+{\em p\+Name\+Space\+Symbol} & namespace symbol. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a83507388cab84a8905861a8331d57092}\label{class_fbx_renaming_strategy_a83507388cab84a8905861a8331d57092}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Set\+Out\+Name\+Space\+Symbol@{Set\+Out\+Name\+Space\+Symbol}}
+\index{Set\+Out\+Name\+Space\+Symbol@{Set\+Out\+Name\+Space\+Symbol}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Set\+Out\+Name\+Space\+Symbol()}{SetOutNameSpaceSymbol()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Set\+Out\+Name\+Space\+Symbol (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Name\+Space\+Symbol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the wanted scene namespace symbol. 
+\begin{DoxyParams}{引数}
+{\em p\+Name\+Space\+Symbol} & namespace symbol. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a64ccadd7f74e58d706548e6333721558}\label{class_fbx_renaming_strategy_a64ccadd7f74e58d706548e6333721558}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!Set\+Replace\+Non\+Alpha\+Num@{Set\+Replace\+Non\+Alpha\+Num}}
+\index{Set\+Replace\+Non\+Alpha\+Num@{Set\+Replace\+Non\+Alpha\+Num}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{Set\+Replace\+Non\+Alpha\+Num()}{SetReplaceNonAlphaNum()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+::\+Set\+Replace\+Non\+Alpha\+Num (\begin{DoxyParamCaption}\item[{bool}]{p\+Replace\+Non\+Alpha\+Num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the flag for character acceptance during renaming. 
+\begin{DoxyParams}{引数}
+{\em p\+Replace\+Non\+Alpha\+Num} & Set to {\ttfamily true} to replace illegal characters with an underscore (\char`\"{}\+\_\+\char`\"{}). \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a6bce5341bf85474e9c3f0a891c18fc80}\label{class_fbx_renaming_strategy_a6bce5341bf85474e9c3f0a891c18fc80}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Case\+Sensitive@{m\+Case\+Sensitive}}
+\index{m\+Case\+Sensitive@{m\+Case\+Sensitive}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Case\+Sensitive}{mCaseSensitive}}
+{\footnotesize\ttfamily bool Fbx\+Renaming\+Strategy\+::m\+Case\+Sensitive\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a72b25f3cb4d18be1e8d5301fb27dad8b}\label{class_fbx_renaming_strategy_a72b25f3cb4d18be1e8d5301fb27dad8b}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Existing\+Ns\+List@{m\+Existing\+Ns\+List}}
+\index{m\+Existing\+Ns\+List@{m\+Existing\+Ns\+List}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Existing\+Ns\+List}{mExistingNsList}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{struct_fbx_renaming_strategy_1_1_name_cell}{Name\+Cell}$\ast$$>$ Fbx\+Renaming\+Strategy\+::m\+Existing\+Ns\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a5622ec5d07c1aa0151adffd81d760202}\label{class_fbx_renaming_strategy_a5622ec5d07c1aa0151adffd81d760202}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+First\+Not\+Num@{m\+First\+Not\+Num}}
+\index{m\+First\+Not\+Num@{m\+First\+Not\+Num}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+First\+Not\+Num}{mFirstNotNum}}
+{\footnotesize\ttfamily bool Fbx\+Renaming\+Strategy\+::m\+First\+Not\+Num\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_af1289c1ae1c96e8ad1ecde36c4e64edd}\label{class_fbx_renaming_strategy_af1289c1ae1c96e8ad1ecde36c4e64edd}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+In\+Name\+Space\+Symbol@{m\+In\+Name\+Space\+Symbol}}
+\index{m\+In\+Name\+Space\+Symbol@{m\+In\+Name\+Space\+Symbol}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+In\+Name\+Space\+Symbol}{mInNameSpaceSymbol}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Renaming\+Strategy\+::m\+In\+Name\+Space\+Symbol\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a45b2d8a796225657612cd579f675eb63}\label{class_fbx_renaming_strategy_a45b2d8a796225657612cd579f675eb63}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Mode@{m\+Mode}}
+\index{m\+Mode@{m\+Mode}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Mode}{mMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_renaming_strategy_a68099d97d087f66edd2ea873e0dbf423}{E\+Direction} Fbx\+Renaming\+Strategy\+::m\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_ac534ee7f8b50845f0850c237284f7ce4}\label{class_fbx_renaming_strategy_ac534ee7f8b50845f0850c237284f7ce4}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Name\+Space@{m\+Name\+Space}}
+\index{m\+Name\+Space@{m\+Name\+Space}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Name\+Space}{mNameSpace}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Renaming\+Strategy\+::m\+Name\+Space\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_adbe7f778a4619a416759f12d67df0496}\label{class_fbx_renaming_strategy_adbe7f778a4619a416759f12d67df0496}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+On\+Creation\+Run@{m\+On\+Creation\+Run}}
+\index{m\+On\+Creation\+Run@{m\+On\+Creation\+Run}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+On\+Creation\+Run}{mOnCreationRun}}
+{\footnotesize\ttfamily bool Fbx\+Renaming\+Strategy\+::m\+On\+Creation\+Run\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_afcfc44febde7ce6eef47b632a070b4bf}\label{class_fbx_renaming_strategy_afcfc44febde7ce6eef47b632a070b4bf}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Out\+Name\+Space\+Symbol@{m\+Out\+Name\+Space\+Symbol}}
+\index{m\+Out\+Name\+Space\+Symbol@{m\+Out\+Name\+Space\+Symbol}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Out\+Name\+Space\+Symbol}{mOutNameSpaceSymbol}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Renaming\+Strategy\+::m\+Out\+Name\+Space\+Symbol\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a894be493925c3dd2f7a6254c48eecde2}\label{class_fbx_renaming_strategy_a894be493925c3dd2f7a6254c48eecde2}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Replace\+Non\+Alpha\+Num@{m\+Replace\+Non\+Alpha\+Num}}
+\index{m\+Replace\+Non\+Alpha\+Num@{m\+Replace\+Non\+Alpha\+Num}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Replace\+Non\+Alpha\+Num}{mReplaceNonAlphaNum}}
+{\footnotesize\ttfamily bool Fbx\+Renaming\+Strategy\+::m\+Replace\+Non\+Alpha\+Num\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_aca7cf36d91294a0fe5bce55803c89e7e}\label{class_fbx_renaming_strategy_aca7cf36d91294a0fe5bce55803c89e7e}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+String\+Name\+Array@{m\+String\+Name\+Array}}
+\index{m\+String\+Name\+Array@{m\+String\+Name\+Array}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+String\+Name\+Array}{mStringNameArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_char_ptr_set}{Fbx\+Char\+Ptr\+Set} Fbx\+Renaming\+Strategy\+::m\+String\+Name\+Array\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_a9871e311bddf13b0263f71e646f5b06d}\label{class_fbx_renaming_strategy_a9871e311bddf13b0263f71e646f5b06d}} 
+\index{Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}!m\+Type@{m\+Type}}
+\index{m\+Type@{m\+Type}!Fbx\+Renaming\+Strategy@{Fbx\+Renaming\+Strategy}}
+\subsubsection{\texorpdfstring{m\+Type}{mType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_renaming_strategy_aacebe214cec13a6cdbbc9e40d16c57dd}{E\+Clash\+Type} Fbx\+Renaming\+Strategy\+::m\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxrenamingstrategy_8h}{fbxrenamingstrategy.\+h}\end{DoxyCompactItemize}

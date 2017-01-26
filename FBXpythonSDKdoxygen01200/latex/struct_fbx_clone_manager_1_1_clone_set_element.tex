@@ -1,0 +1,104 @@
+\hypertarget{struct_fbx_clone_manager_1_1_clone_set_element}{}\section{Fbx\+Clone\+Manager\+:\+:Clone\+Set\+Element 構造体}
+\label{struct_fbx_clone_manager_1_1_clone_set_element}\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+
+
+{\ttfamily \#include $<$fbxclonemanager.\+h$>$}
+
+
+
+Fbx\+Clone\+Manager\+:\+:Clone\+Set\+Element 連携図
+% FIG 0
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_a28893cc8fb14daf0f134760a6d06a475}{Clone\+Set\+Element} (int p\+Src\+Policy=0, int p\+External\+Dst\+Policy=0, \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} p\+Clone\+Type=\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbae681cda4dccb3f5ccf260e5ccc47d88c}{Fbx\+Object\+::e\+Reference\+Clone})
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} \hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_a387497db4d5a0764a947835e5b234393}{m\+Type}
+\begin{DoxyCompactList}\small\item\em the type of cloning to perform \end{DoxyCompactList}\item 
+int \hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_a0619286ee827ce3e9adcb8914c4af9f1}{m\+Src\+Policy}
+\item 
+int \hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_aeb430f3dba7d9b522b707c564b04b31d}{m\+External\+Dst\+Policy}
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_a05f2720efbbcf01591be1f0c770d1004}{m\+Object\+Clone}
+\item 
+bool \hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_a496dc6c392d9e9db4ef65094bd03d0e5}{m\+Layer\+Element\+Processed}
+\item 
+bool \hyperlink{struct_fbx_clone_manager_1_1_clone_set_element_a5595fee76a6c3736d11b5c6b2702133b}{m\+Connections\+Processed}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This represents an element in \hyperlink{class_fbx_clone_manager_aeb8a9c04c9c36eb7e551186a0b18f10d}{Fbx\+Clone\+Manager\+::\+Clone\+Set} to be cloned. This class contains the option for specifying how connections are cloned and the cloned object. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_clone_manager}{Fbx\+Clone\+Manager} 
+
+\hyperlink{class_fbx_clone_manager_aeb8a9c04c9c36eb7e551186a0b18f10d}{Fbx\+Clone\+Manager\+::\+Clone\+Set} 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_a28893cc8fb14daf0f134760a6d06a475}\label{struct_fbx_clone_manager_1_1_clone_set_element_a28893cc8fb14daf0f134760a6d06a475}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!Clone\+Set\+Element@{Clone\+Set\+Element}}
+\index{Clone\+Set\+Element@{Clone\+Set\+Element}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{Clone\+Set\+Element()}{CloneSetElement()}}
+{\footnotesize\ttfamily Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::\+Clone\+Set\+Element (\begin{DoxyParamCaption}\item[{int}]{p\+Src\+Policy = {\ttfamily 0},  }\item[{int}]{p\+External\+Dst\+Policy = {\ttfamily 0},  }\item[{\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type}}]{p\+Clone\+Type = {\ttfamily \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbae681cda4dccb3f5ccf260e5ccc47d88c}{Fbx\+Object\+::e\+Reference\+Clone}} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Src\+Policy} & Specify how to handle source connections. Valid values are 0, s\+Connect\+To\+Original, s\+Connect\+To\+Clone or s\+Connect\+To\+Original$\vert$s\+Connect\+To\+Clone. \\
+\hline
+{\em p\+External\+Dst\+Policy} & Specify how to handle destination connections to objects N\+OT in the clone set. Valid values are 0 or s\+Connect\+To\+Original. \\
+\hline
+{\em p\+Clone\+Type} & Specify the type of cloning. \hyperlink{class_fbx_object_ad553a4262b09cb57c3171a93edadbab8}{Fbx\+Object\+::\+Clone} uses the same parameter. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_a5595fee76a6c3736d11b5c6b2702133b}\label{struct_fbx_clone_manager_1_1_clone_set_element_a5595fee76a6c3736d11b5c6b2702133b}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!m\+Connections\+Processed@{m\+Connections\+Processed}}
+\index{m\+Connections\+Processed@{m\+Connections\+Processed}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{m\+Connections\+Processed}{mConnectionsProcessed}}
+{\footnotesize\ttfamily bool Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::m\+Connections\+Processed}
+
+\mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_aeb430f3dba7d9b522b707c564b04b31d}\label{struct_fbx_clone_manager_1_1_clone_set_element_aeb430f3dba7d9b522b707c564b04b31d}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!m\+External\+Dst\+Policy@{m\+External\+Dst\+Policy}}
+\index{m\+External\+Dst\+Policy@{m\+External\+Dst\+Policy}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{m\+External\+Dst\+Policy}{mExternalDstPolicy}}
+{\footnotesize\ttfamily int Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::m\+External\+Dst\+Policy}
+
+policy on how to handle destination connections on the original object to objects N\+OT in the clone set. (Destination connections to objects in the set are handled by that object\textquotesingle{}s source policy) Valid values are 0 or s\+Connect\+To\+Original. \mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_a496dc6c392d9e9db4ef65094bd03d0e5}\label{struct_fbx_clone_manager_1_1_clone_set_element_a496dc6c392d9e9db4ef65094bd03d0e5}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!m\+Layer\+Element\+Processed@{m\+Layer\+Element\+Processed}}
+\index{m\+Layer\+Element\+Processed@{m\+Layer\+Element\+Processed}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{m\+Layer\+Element\+Processed}{mLayerElementProcessed}}
+{\footnotesize\ttfamily bool Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::m\+Layer\+Element\+Processed}
+
+Internal use. \mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_a05f2720efbbcf01591be1f0c770d1004}\label{struct_fbx_clone_manager_1_1_clone_set_element_a05f2720efbbcf01591be1f0c770d1004}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!m\+Object\+Clone@{m\+Object\+Clone}}
+\index{m\+Object\+Clone@{m\+Object\+Clone}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{m\+Object\+Clone}{mObjectClone}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::m\+Object\+Clone}
+
+This is a pointer to the newly created clone. It is set after the call to \hyperlink{class_fbx_clone_manager_a2fd72cbf71c6dd3105310445c1a7c2b1}{Fbx\+Clone\+Manager\+::\+Clone()} \mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_a0619286ee827ce3e9adcb8914c4af9f1}\label{struct_fbx_clone_manager_1_1_clone_set_element_a0619286ee827ce3e9adcb8914c4af9f1}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!m\+Src\+Policy@{m\+Src\+Policy}}
+\index{m\+Src\+Policy@{m\+Src\+Policy}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{m\+Src\+Policy}{mSrcPolicy}}
+{\footnotesize\ttfamily int Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::m\+Src\+Policy}
+
+Policy on how to handle source connections on the original object. Valid values are 0 or any bitwise OR\textquotesingle{}d combination of s\+Connect\+To\+Original, and s\+Connect\+To\+Clone. \mbox{\Hypertarget{struct_fbx_clone_manager_1_1_clone_set_element_a387497db4d5a0764a947835e5b234393}\label{struct_fbx_clone_manager_1_1_clone_set_element_a387497db4d5a0764a947835e5b234393}} 
+\index{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}!m\+Type@{m\+Type}}
+\index{m\+Type@{m\+Type}!Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element@{Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element}}
+\subsubsection{\texorpdfstring{m\+Type}{mType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} Fbx\+Clone\+Manager\+::\+Clone\+Set\+Element\+::m\+Type}
+
+
+
+the type of cloning to perform 
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxclonemanager_8h}{fbxclonemanager.\+h}\end{DoxyCompactItemize}

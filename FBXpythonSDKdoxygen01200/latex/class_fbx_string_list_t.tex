@@ -1,0 +1,445 @@
+\hypertarget{class_fbx_string_list_t}{}\section{Fbx\+String\+ListT$<$ Type $>$ クラステンプレート}
+\label{class_fbx_string_list_t}\index{Fbx\+String\+List\+T$<$ Type $>$@{Fbx\+String\+List\+T$<$ Type $>$}}
+
+
+Base class of \hyperlink{class_fbx_string_list}{Fbx\+String\+List}.  
+
+
+
+
+{\ttfamily \#include $<$fbxstringlist.\+h$>$}
+
+
+
+Fbx\+String\+ListT$<$ Type $>$ 連携図
+% FIG 0
+\subsection*{公開メンバ関数}
+\begin{Indent}\textbf{ Operation With The Array}\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_string_list_t_aa8dfd9f7ca27dafca1f2c80aa8590a19}{Add\+Item} (Type $\ast$p\+Item)
+\item 
+int \hyperlink{class_fbx_string_list_t_aa9bd662d4638b711c615e37a9038a038}{Insert\+Item\+At} (int p\+Index, Type $\ast$p\+Item)
+\item 
+Type $\ast$ \hyperlink{class_fbx_string_list_t_a86ee3c651fea2cb1fe50896bc93ef685}{Get\+Item\+At} (int p\+Index) const
+\begin{DoxyCompactList}\small\item\em Access item at given index. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_string_list_t_a9d903a2352e10982c18d3e37fcc58ef6}{Find\+Item} (Type $\ast$p\+Item) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Constructor and Destructor}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_string_list_t_a23b6c1e63569190855827463157c6e89}{Fbx\+String\+ListT} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_string_list_t_a15d3f55726d1d30f0f87d7ade9bcc2ab}{$\sim$\+Fbx\+String\+ListT} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_string_list_t_aa4a95c08fe634e37cf9ccc41b28a9d11}{Remove\+Last} ()
+\begin{DoxyCompactList}\small\item\em Remove the item at the end of the array and delete the associated object. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_string_list_t_a4b881e2791c4b9a8b1abf5c845c3ddb1}{Get\+Count} () const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \& \hyperlink{class_fbx_string_list_t_a40ae970b4cbfd3df9117db1c3218b062}{operator\mbox{[}$\,$\mbox{]}} (int p\+Index)
+\begin{DoxyCompactList}\small\item\em Access the string in the item at given index. \end{DoxyCompactList}\item 
+Fbx\+Handle \hyperlink{class_fbx_string_list_t_ae3987a28b37de829cbf0bed42b5b5091}{Get\+Reference\+At} (int p\+Index) const
+\begin{DoxyCompactList}\small\item\em Access the value of reference in the item at given index. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_string_list_t_a8ad989bfb74117a2bd948538ae1437ba}{Set\+Reference\+At} (int p\+Index, Fbx\+Handle p\+Ref)
+\begin{DoxyCompactList}\small\item\em Set the value of reference at given index. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_fbx_string_list_t_a9027620858ce83b4232cca2815b71047}{Get\+String\+At} (int p\+Index) const
+\begin{DoxyCompactList}\small\item\em Access the pointer of string at given index. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_string_list_t_a4b757a856d12717cfcf854e767af54f1}{Set\+String\+At} (int p\+Index, const char $\ast$p\+String)
+\begin{DoxyCompactList}\small\item\em Set string at given index. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_string_list_t_a537eb6d3e7568488280c9cf6fd37899f}{Find} (Type \&p\+Item) const
+\item 
+int \hyperlink{class_fbx_string_list_t_a96be804ab1570fc90a651cf6e40cda1f}{Find\+Index} (Fbx\+Handle p\+Reference) const
+\item 
+int \hyperlink{class_fbx_string_list_t_a50609bf493c67a131c531409cbfe8f8b}{Find\+Index} (const char $\ast$p\+String) const
+\item 
+Fbx\+Handle \hyperlink{class_fbx_string_list_t_acb79b34d154663f6f7478bfa823641b4}{Find\+Reference} (const char $\ast$p\+String) const
+\item 
+bool \hyperlink{class_fbx_string_list_t_aa9085a3f134422ecebbd406d0ce2025d}{Remove} (Type \&p\+Item)
+\begin{DoxyCompactList}\small\item\em Remove first matching item. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_string_list_t_ad8581d1b4206633b7c0ccfebe8bb3bdf}{Remove} (const char $\ast$p\+String)
+\begin{DoxyCompactList}\small\item\em Remove first matching item in array whose string address is the same as given pointer. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_string_list_t_a810bce1e1440e69c6e44a657cfe5d2a3}{Remove\+It} (Type \&p\+Item)
+\begin{DoxyCompactList}\small\item\em Remove first matching item. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_string_list_t_a2fc06dea6d617b78af117cc4b8d97e3b}{Sort} ()
+\begin{DoxyCompactList}\small\item\em Sort the array by the string of every item,not case sensitive. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{class_fbx_string_list_t_a476ea46cf72847c070af0868b187cef0}{Find\+Equal} (const char $\ast$p\+String) const
+\item 
+void $\ast$ \hyperlink{class_fbx_string_list_t_a3b5a6fa9a9e231c99f15b6493627663c}{Find\+Case\+Sensitive} (const char $\ast$p\+String) const
+\item 
+int \hyperlink{class_fbx_string_list_t_ace48eedb25e7393d546c914924355cd2}{Add} (const char $\ast$p\+String, Fbx\+Handle p\+Item=0)
+\begin{DoxyCompactList}\small\item\em Add a new item at the end of array. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_fbx_string_list_t_ad736ea0d13e3dd02874e8dff83ff41db}{Insert\+At} (int p\+Index, const char $\ast$p\+String, Fbx\+Handle p\+Item=0)
+\item 
+virtual void \hyperlink{class_fbx_string_list_t_afef2030e06b13d23e998cbc6ea6ff9a3}{Remove\+At} (int p\+Index)
+\item 
+virtual void \hyperlink{class_fbx_string_list_t_ac5bcede97ed831d4fe76f3087a63398e}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Delete the array. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_fbx_string_list_t_a3b88147898d42dd276a73ff380dbe8d8}{Get\+Text} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+Text) const
+\item 
+virtual int \hyperlink{class_fbx_string_list_t_a02f67be1bc4175ece4f9aa62efc17441}{Set\+Text} (const char $\ast$p\+List)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ Type $\ast$ $>$ \hyperlink{class_fbx_string_list_t_a4e123cd88e7d73c0ce3ff22cc5f6e2cc}{m\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type$>$\newline
+class Fbx\+String\+List\+T$<$ Type $>$}
+
+Base class of \hyperlink{class_fbx_string_list}{Fbx\+String\+List}. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_string_list_t_a23b6c1e63569190855827463157c6e89}\label{class_fbx_string_list_t_a23b6c1e63569190855827463157c6e89}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Fbx\+String\+List\+T()}{FbxStringListT()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::\hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a15d3f55726d1d30f0f87d7ade9bcc2ab}\label{class_fbx_string_list_t_a15d3f55726d1d30f0f87d7ade9bcc2ab}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!````~Fbx\+String\+ListT@{$\sim$\+Fbx\+String\+ListT}}
+\index{````~Fbx\+String\+ListT@{$\sim$\+Fbx\+String\+ListT}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+String\+List\+T()}{~FbxStringListT()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::$\sim$\hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_string_list_t_ace48eedb25e7393d546c914924355cd2}\label{class_fbx_string_list_t_ace48eedb25e7393d546c914924355cd2}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Add@{Add}}
+\index{Add@{Add}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Add (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String,  }\item[{Fbx\+Handle}]{p\+Item = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Add a new item at the end of array. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_aa8dfd9f7ca27dafca1f2c80aa8590a19}\label{class_fbx_string_list_t_aa8dfd9f7ca27dafca1f2c80aa8590a19}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Add\+Item@{Add\+Item}}
+\index{Add\+Item@{Add\+Item}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Add\+Item()}{AddItem()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Add\+Item (\begin{DoxyParamCaption}\item[{Type $\ast$}]{p\+Item }\end{DoxyParamCaption})}
+
+Append a item at the end of the array. \begin{DoxyReturn}{戻り値}
+Index of appended pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_ac5bcede97ed831d4fe76f3087a63398e}\label{class_fbx_string_list_t_ac5bcede97ed831d4fe76f3087a63398e}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual void \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delete the array. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a537eb6d3e7568488280c9cf6fd37899f}\label{class_fbx_string_list_t_a537eb6d3e7568488280c9cf6fd37899f}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find@{Find}}
+\index{Find@{Find}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find (\begin{DoxyParamCaption}\item[{Type \&}]{p\+Item }\end{DoxyParamCaption}) const}
+
+Find first matching item. \begin{DoxyReturn}{戻り値}
+Index of first matching item found or -\/1 if there is no matching element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_a3b5a6fa9a9e231c99f15b6493627663c}\label{class_fbx_string_list_t_a3b5a6fa9a9e231c99f15b6493627663c}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find\+Case\+Sensitive@{Find\+Case\+Sensitive}}
+\index{Find\+Case\+Sensitive@{Find\+Case\+Sensitive}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find\+Case\+Sensitive()}{FindCaseSensitive()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void$\ast$ \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find\+Case\+Sensitive (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String }\end{DoxyParamCaption}) const}
+
+Find first matching item which has the same string as given parameter, case sensitive. \begin{DoxyReturn}{戻り値}
+the pointer of matching item found or N\+U\+LL if there is no matching element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To cast the returned pointer to the \hyperlink{class_fbx_string_list_item}{Fbx\+String\+List\+Item} you need a double indirection\+: (Fbx\+String\+List\+Item$\ast$$\ast$) 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_string_list_t_a476ea46cf72847c070af0868b187cef0}\label{class_fbx_string_list_t_a476ea46cf72847c070af0868b187cef0}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find\+Equal@{Find\+Equal}}
+\index{Find\+Equal@{Find\+Equal}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find\+Equal()}{FindEqual()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void$\ast$ \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find\+Equal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String }\end{DoxyParamCaption}) const}
+
+Find first matching item which has the same string as given parameter,not case sensitive. \begin{DoxyReturn}{戻り値}
+the pointer of matching item found or N\+U\+LL if there is no matching element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To cast the returned pointer to the \hyperlink{class_fbx_string_list_item}{Fbx\+String\+List\+Item} you need a double indirection\+: (Fbx\+String\+List\+Item$\ast$$\ast$) 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_string_list_t_a96be804ab1570fc90a651cf6e40cda1f}\label{class_fbx_string_list_t_a96be804ab1570fc90a651cf6e40cda1f}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find\+Index@{Find\+Index}}
+\index{Find\+Index@{Find\+Index}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find\+Index()}{FindIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find\+Index (\begin{DoxyParamCaption}\item[{Fbx\+Handle}]{p\+Reference }\end{DoxyParamCaption}) const}
+
+Find first matching item which has the same reference as given parameter. \begin{DoxyReturn}{戻り値}
+Index of first matching item found or -\/1 if there is no matching element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_a50609bf493c67a131c531409cbfe8f8b}\label{class_fbx_string_list_t_a50609bf493c67a131c531409cbfe8f8b}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find\+Index@{Find\+Index}}
+\index{Find\+Index@{Find\+Index}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find\+Index()}{FindIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find\+Index (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String }\end{DoxyParamCaption}) const}
+
+Find first matching item in array whose string address is the same as given pointer. \begin{DoxyReturn}{戻り値}
+Index of first matching item found or -\/1 if there is no matching element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_a9d903a2352e10982c18d3e37fcc58ef6}\label{class_fbx_string_list_t_a9d903a2352e10982c18d3e37fcc58ef6}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find\+Item@{Find\+Item}}
+\index{Find\+Item@{Find\+Item}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find\+Item()}{FindItem()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find\+Item (\begin{DoxyParamCaption}\item[{Type $\ast$}]{p\+Item }\end{DoxyParamCaption}) const}
+
+Find first matching item. \begin{DoxyReturn}{戻り値}
+Index of first matching item found or -\/1 if there is no matching element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_acb79b34d154663f6f7478bfa823641b4}\label{class_fbx_string_list_t_acb79b34d154663f6f7478bfa823641b4}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Find\+Reference@{Find\+Reference}}
+\index{Find\+Reference@{Find\+Reference}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Find\+Reference()}{FindReference()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Fbx\+Handle \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Find\+Reference (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String }\end{DoxyParamCaption}) const}
+
+Access the value of reference of the first matching item in array whose string address is the same as given pointer. \begin{DoxyReturn}{戻り値}
+The value of reference of the first matching item found or N\+U\+LL if there is no matching element. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_a4b881e2791c4b9a8b1abf5c845c3ddb1}\label{class_fbx_string_list_t_a4b881e2791c4b9a8b1abf5c845c3ddb1}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Get\+Count@{Get\+Count}}
+\index{Get\+Count@{Get\+Count}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Get\+Count()}{GetCount()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of items in the array. \begin{DoxyReturn}{戻り値}
+The number of items in the array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_a86ee3c651fea2cb1fe50896bc93ef685}\label{class_fbx_string_list_t_a86ee3c651fea2cb1fe50896bc93ef685}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Get\+Item\+At@{Get\+Item\+At}}
+\index{Get\+Item\+At@{Get\+Item\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Get\+Item\+At()}{GetItemAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Get\+Item\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Access item at given index. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_ae3987a28b37de829cbf0bed42b5b5091}\label{class_fbx_string_list_t_ae3987a28b37de829cbf0bed42b5b5091}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Get\+Reference\+At@{Get\+Reference\+At}}
+\index{Get\+Reference\+At@{Get\+Reference\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Get\+Reference\+At()}{GetReferenceAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Fbx\+Handle \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Get\+Reference\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Access the value of reference in the item at given index. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a9027620858ce83b4232cca2815b71047}\label{class_fbx_string_list_t_a9027620858ce83b4232cca2815b71047}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Get\+String\+At@{Get\+String\+At}}
+\index{Get\+String\+At@{Get\+String\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Get\+String\+At()}{GetStringAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+char$\ast$ \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Get\+String\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Access the pointer of string at given index. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a3b88147898d42dd276a73ff380dbe8d8}\label{class_fbx_string_list_t_a3b88147898d42dd276a73ff380dbe8d8}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Get\+Text@{Get\+Text}}
+\index{Get\+Text@{Get\+Text}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Get\+Text()}{GetText()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual void \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Get\+Text (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Text }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the string of all the item. \begin{DoxyReturn}{戻り値}
+The text of string, each item\textquotesingle{}s string separated by \textquotesingle{}$\sim$\textquotesingle{}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_string_list_t_ad736ea0d13e3dd02874e8dff83ff41db}\label{class_fbx_string_list_t_ad736ea0d13e3dd02874e8dff83ff41db}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Insert\+At@{Insert\+At}}
+\index{Insert\+At@{Insert\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Insert\+At()}{InsertAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Insert\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$}]{p\+String,  }\item[{Fbx\+Handle}]{p\+Item = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_string_list_t_aa9bd662d4638b711c615e37a9038a038}\label{class_fbx_string_list_t_aa9bd662d4638b711c615e37a9038a038}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Insert\+Item\+At@{Insert\+Item\+At}}
+\index{Insert\+Item\+At@{Insert\+Item\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Insert\+Item\+At()}{InsertItemAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Insert\+Item\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{Type $\ast$}]{p\+Item }\end{DoxyParamCaption})}
+
+Insert a item in the array. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position where to insert the item. \\
+\hline
+{\em p\+Item} & Item to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Position of the inserted item in the array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the given index is out of range, the pointer is appended at the end of the array. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_string_list_t_a40ae970b4cbfd3df9117db1c3218b062}\label{class_fbx_string_list_t_a40ae970b4cbfd3df9117db1c3218b062}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_string}{Fbx\+String}\& \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+
+
+Access the string in the item at given index. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_aa9085a3f134422ecebbd406d0ce2025d}\label{class_fbx_string_list_t_aa9085a3f134422ecebbd406d0ce2025d}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+bool \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Remove (\begin{DoxyParamCaption}\item[{Type \&}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+Remove first matching item. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_ad8581d1b4206633b7c0ccfebe8bb3bdf}\label{class_fbx_string_list_t_ad8581d1b4206633b7c0ccfebe8bb3bdf}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+bool \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Remove (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String }\end{DoxyParamCaption})}
+
+
+
+Remove first matching item in array whose string address is the same as given pointer. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_afef2030e06b13d23e998cbc6ea6ff9a3}\label{class_fbx_string_list_t_afef2030e06b13d23e998cbc6ea6ff9a3}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Remove\+At@{Remove\+At}}
+\index{Remove\+At@{Remove\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Remove\+At()}{RemoveAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual void \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Remove\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Remove the item at the given position in the array and delete the associated object. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position of the item to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the index is not valid, nothing is performed. Otherwise, the item is removed from the array and the items are shifted to fill the empty slot. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_string_list_t_a810bce1e1440e69c6e44a657cfe5d2a3}\label{class_fbx_string_list_t_a810bce1e1440e69c6e44a657cfe5d2a3}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Remove\+It@{Remove\+It}}
+\index{Remove\+It@{Remove\+It}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Remove\+It()}{RemoveIt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+bool \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Remove\+It (\begin{DoxyParamCaption}\item[{Type \&}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+Remove first matching item. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_aa4a95c08fe634e37cf9ccc41b28a9d11}\label{class_fbx_string_list_t_aa4a95c08fe634e37cf9ccc41b28a9d11}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Remove\+Last@{Remove\+Last}}
+\index{Remove\+Last@{Remove\+Last}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Remove\+Last()}{RemoveLast()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Remove\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove the item at the end of the array and delete the associated object. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a8ad989bfb74117a2bd948538ae1437ba}\label{class_fbx_string_list_t_a8ad989bfb74117a2bd948538ae1437ba}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Set\+Reference\+At@{Set\+Reference\+At}}
+\index{Set\+Reference\+At@{Set\+Reference\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Set\+Reference\+At()}{SetReferenceAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Set\+Reference\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{Fbx\+Handle}]{p\+Ref }\end{DoxyParamCaption})}
+
+
+
+Set the value of reference at given index. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a4b757a856d12717cfcf854e767af54f1}\label{class_fbx_string_list_t_a4b757a856d12717cfcf854e767af54f1}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Set\+String\+At@{Set\+String\+At}}
+\index{Set\+String\+At@{Set\+String\+At}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Set\+String\+At()}{SetStringAt()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual bool \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Set\+String\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$}]{p\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set string at given index. 
+
+\mbox{\Hypertarget{class_fbx_string_list_t_a02f67be1bc4175ece4f9aa62efc17441}\label{class_fbx_string_list_t_a02f67be1bc4175ece4f9aa62efc17441}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Set\+Text@{Set\+Text}}
+\index{Set\+Text@{Set\+Text}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Set\+Text()}{SetText()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual int \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Set\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+List }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clear the array and set the array\textquotesingle{}s new items with the substring separated by \textquotesingle{}$\sim$\textquotesingle{} from the given string. 
+\begin{DoxyParams}{引数}
+{\em p\+List} & The string which used to generate the new items. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The last index of the item in the new array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The number of items in the new array is the same as the number of substrings, and the string of each item is decided by the content of each substring. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_string_list_t_a2fc06dea6d617b78af117cc4b8d97e3b}\label{class_fbx_string_list_t_a2fc06dea6d617b78af117cc4b8d97e3b}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!Sort@{Sort}}
+\index{Sort@{Sort}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sort the array by the string of every item,not case sensitive. 
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_string_list_t_a4e123cd88e7d73c0ce3ff22cc5f6e2cc}\label{class_fbx_string_list_t_a4e123cd88e7d73c0ce3ff22cc5f6e2cc}} 
+\index{Fbx\+String\+ListT@{Fbx\+String\+ListT}!m\+List@{m\+List}}
+\index{m\+List@{m\+List}!Fbx\+String\+ListT@{Fbx\+String\+ListT}}
+\subsubsection{\texorpdfstring{m\+List}{mList}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$Type$\ast$$>$ \hyperlink{class_fbx_string_list_t}{Fbx\+String\+ListT}$<$ Type $>$\+::m\+List\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxstringlist_8h}{fbxstringlist.\+h}\end{DoxyCompactItemize}

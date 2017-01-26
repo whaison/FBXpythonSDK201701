@@ -1,0 +1,1626 @@
+\hypertarget{class_fbx_geometry_base}{}\section{Fbx\+Geometry\+Base クラス}
+\label{class_fbx_geometry_base}\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+
+
+{\ttfamily \#include $<$fbxgeometrybase.\+h$>$}
+
+
+
+Fbx\+Geometry\+Base の継承関係図
+% FIG 0
+
+
+Fbx\+Geometry\+Base 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_fbx_geometry_base_a858cccba0c319e1ee9160c0d7209bacf}{Memory\+Usage} () const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_geometry_base_a2c3754831338327259c35caebbf379d3}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_a66146155ecad4e6f6f2e8cf52e0340f6}{Compact} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_ad30d8655b9606f653e9467bb07c8b1f3}{Get\+Normals} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ $\ast$$\ast$p\+Lockable\+Array) const
+\item 
+bool \hyperlink{class_fbx_geometry_base_ace44c4c25817ccabcf32e4c5b3b32936}{Get\+Normals\+Indices} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$p\+Lockable\+Array) const
+\item 
+bool \hyperlink{class_fbx_geometry_base_aa8b22c9380e8c8be64855a6409136210}{Get\+Tangents} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ $\ast$$\ast$p\+Lockable\+Array, const int p\+Layer\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_geometry_base_aa1da929bb1905386e98d8e1caff3556e}{Get\+Tangents\+Indices} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$p\+Lockable\+Array, const int p\+Layer\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_geometry_base_a935f60845a0b9a5d484a8540f52ee07d}{Get\+Binormals} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ $\ast$$\ast$p\+Lockable\+Array, const int p\+Layer\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_geometry_base_af3b46f6aaa0e79c91ad7a89977413f57}{Get\+Binormals\+Indices} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$p\+Lockable\+Array, const int p\+Layer\+Index=0) const
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ \hyperlink{class_fbx_geometry_base_a88c6c0552ceb07b3a638cc3175fbe867}{m\+Control\+Points}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_a94ee142ac1d40be3aebb4d9441431921}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_acf13ddd2717d2f1ca4dc57b5ea0801b1}{Content\+Clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Control Points, Normals, Binormals and Tangent Management.}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}{Init\+Control\+Points} (int p\+Count)
+\item 
+void \hyperlink{class_fbx_geometry_base_a4bab80d4a05c813ad635127612f43515}{Init\+Normals} (int p\+Count=0)
+\item 
+void \hyperlink{class_fbx_geometry_base_ab0eed06f53d189b6c81560b78905c9b0}{Init\+Normals} (\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} $\ast$p\+Src)
+\item 
+void \hyperlink{class_fbx_geometry_base_ac5b188a0deba5132de9805538f014799}{Init\+Tangents} (int p\+Count=0, const int p\+Layer\+Index=0, const char $\ast$p\+Name=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{class_fbx_geometry_base_ac6b469b25670b8a4c7a17042a96eb314}{Init\+Tangents} (\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} $\ast$p\+Src, const int p\+Layer\+Index=0)
+\item 
+void \hyperlink{class_fbx_geometry_base_abc912331f01b903dee155a1a3dbff0b8}{Init\+Binormals} (int p\+Count=0, const int p\+Layer\+Index=0, const char $\ast$p\+Name=\char`\"{}\char`\"{})
+\item 
+void \hyperlink{class_fbx_geometry_base_ac19b7cccc9249484196272c1df43b702}{Init\+Binormals} (\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} $\ast$p\+Src, const int p\+Layer\+Index=0)
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_a4f54256d4cbc5e7ae0ae533f7b77ace4}{Set\+Control\+Point\+At} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Ctrl\+Point, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Normal, int p\+Index, bool p\+I2\+D\+Search=false)
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_ab2d5567b073e6b9f4feb5bb428fa99e4}{Set\+Control\+Point\+At} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Ctrl\+Point, int p\+Index)
+\item 
+virtual \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_geometry_base_a16c45afeb6008d346593882b979f0ed7}{Get\+Control\+Point\+At} (int p\+Index) const
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_a219c072f0c9a67ddcc928ab3998f9494}{Set\+Control\+Point\+Normal\+At} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Normal, int p\+Index, bool p\+I2\+D\+Search=false)
+\item 
+virtual int \hyperlink{class_fbx_geometry_base_aa9f42ae6a958036722670143fabf3b17}{Get\+Control\+Points\+Count} () const
+\item 
+virtual \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$ \hyperlink{class_fbx_geometry_base_ad4db22a2f2e673c216cacdc9cd172d77}{Get\+Control\+Points} (\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+virtual void \hyperlink{class_fbx_geometry_base_aea3fc519575d88c430221b0e74040b0c}{Set\+Control\+Point\+Count} (int p\+Count)
+\end{DoxyCompactItemize}
+\subsection*{Public and fast access Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_geometry_base_a51e2206786ddb6a94a15be4a8fd9517f}{Primary\+Visibility}
+\begin{DoxyCompactList}\small\item\em Control the geometry render state. Geometry can still cast shadows even if this is turned off. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_geometry_base_a64d3184a3bf9bcd97f7069176b0ad4c1}{Cast\+Shadow}
+\begin{DoxyCompactList}\small\item\em If true, the geometry will produce shadows. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_geometry_base_a38e79ed34812e8b02828ebb5690f4ce8}{Receive\+Shadow}
+\begin{DoxyCompactList}\small\item\em If true, the geometry will receive shadows. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_geometry_base_a66d6d410709e83f4f4d0a17651fbb717}{B\+Box\+Min}
+\begin{DoxyCompactList}\small\item\em The minimum value of the control points bounding box. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_geometry_base_a462c10c0d41fe55413e41435e62128c9}{B\+Box\+Max}
+\begin{DoxyCompactList}\small\item\em The maximum value of the control points bounding box. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_geometry_base_a6c27b53ff81cdcbe4f6da4b1acfd4375}{Compute\+B\+Box} ()
+\end{DoxyCompactItemize}
+\subsection*{Geometry Element Management.}
+\label{_amgrp5c89d833850d940ed0bcf07e321db4e1}%
+ A Fbx\+Geometry\+Element describes how the geometry element (normals, U\+Vs and etc.) is mapped to a geometry surface and how the mapping information is arranged in memory. Fbx\+Geometry\+Element is exactly the same as \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} but does not expose the geometry\textquotesingle{}s layer information. Use the geometry element classes to decompose the geometry without dealing with layers. \begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal} $\ast$ \hyperlink{class_fbx_geometry_base_a13810d0c6ac68ab14be3f1316b977f7d}{Create\+Element\+Normal} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a9aadbaa3f50db80b67bd1b3bc9119c7b}{Remove\+Element\+Normal} (\hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal} $\ast$p\+Element\+Normal)
+\item 
+\hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal} $\ast$ \hyperlink{class_fbx_geometry_base_ab7486b08caa6e90923fbb194bd81a61e}{Get\+Element\+Normal} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal} $\ast$ \hyperlink{class_fbx_geometry_base_a33d41a1c8b2346aa73a2576225387fb4}{Get\+Element\+Normal} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_ae8cffdf94daa997de808328579c636c2}{Get\+Element\+Normal\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal} $\ast$ \hyperlink{class_fbx_geometry_base_aaac14a98782b9f68803462f033297d05}{Create\+Element\+Binormal} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a07a88ca035b8b21b407a88bef375831f}{Remove\+Element\+Binormal} (\hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal} $\ast$p\+Element\+Binormal)
+\item 
+\hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal} $\ast$ \hyperlink{class_fbx_geometry_base_a810b4a313e01bbaa41fe25ac753a8996}{Get\+Element\+Binormal} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal} $\ast$ \hyperlink{class_fbx_geometry_base_a12bc9aca7ec57790db96fa47219c559c}{Get\+Element\+Binormal} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a04500774d4c9bfc97418f45aff63404e}{Get\+Element\+Binormal\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent} $\ast$ \hyperlink{class_fbx_geometry_base_a88790830df691da97b5f027a66d98eec}{Create\+Element\+Tangent} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a9289899568d50f8b60c3a33761c92446}{Remove\+Element\+Tangent} (\hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent} $\ast$p\+Element\+Tangent)
+\item 
+\hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent} $\ast$ \hyperlink{class_fbx_geometry_base_a28cf260152f84ce031a3d2844b9895cc}{Get\+Element\+Tangent} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent} $\ast$ \hyperlink{class_fbx_geometry_base_a5fedf8c0a50736da2fa590cf1b922506}{Get\+Element\+Tangent} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_ac7a775211507bd51dd804d8e013f625c}{Get\+Element\+Tangent\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material} $\ast$ \hyperlink{class_fbx_geometry_base_a1c93bffeaa9af18fd7ab9c2eb68ca4ec}{Create\+Element\+Material} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a396c0e3be695dbca3724be1e47e9f7cb}{Remove\+Element\+Material} (\hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material} $\ast$p\+Element\+Material)
+\item 
+\hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material} $\ast$ \hyperlink{class_fbx_geometry_base_ac49c730d0f134f1aff416bc4be5ca4e5}{Get\+Element\+Material} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material} $\ast$ \hyperlink{class_fbx_geometry_base_acd0f6cd7ecaa99d15aab3e211857f462}{Get\+Element\+Material} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a443797935c203b51edb4004907613017}{Get\+Element\+Material\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group} $\ast$ \hyperlink{class_fbx_geometry_base_a94ad7ac87ced572287ee85460304eb09}{Create\+Element\+Polygon\+Group} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a0746664cececc19040a011ddbc7c7623}{Remove\+Element\+Polygon\+Group} (\hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group} $\ast$p\+Element\+Polygon\+Group)
+\item 
+\hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group} $\ast$ \hyperlink{class_fbx_geometry_base_ae54cbd4165026b82500d776a21e81e32}{Get\+Element\+Polygon\+Group} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group} $\ast$ \hyperlink{class_fbx_geometry_base_a11838aa5259cb37a3024a9eb654b705c}{Get\+Element\+Polygon\+Group} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a138cf34dd7162a7984a3317d0d4ff03b}{Get\+Element\+Polygon\+Group\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color} $\ast$ \hyperlink{class_fbx_geometry_base_a866f39f540f6bc9ca8e529f27d9ebee4}{Create\+Element\+Vertex\+Color} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a123d97fbece214d31199a63c90eb44e1}{Remove\+Element\+Vertex\+Color} (\hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color} $\ast$p\+Element\+Vertex\+Color)
+\item 
+\hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color} $\ast$ \hyperlink{class_fbx_geometry_base_a1b93a0dc9da34d479e5535d7d589fe0b}{Get\+Element\+Vertex\+Color} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color} $\ast$ \hyperlink{class_fbx_geometry_base_ac4748b1ed1007746aa7acf2f4c300d9f}{Get\+Element\+Vertex\+Color} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_ab0c36aa02e726e017f02802a42705f68}{Get\+Element\+Vertex\+Color\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing} $\ast$ \hyperlink{class_fbx_geometry_base_a998f217dc7383a3fdd5bd4269d424fe3}{Create\+Element\+Smoothing} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a55da601b539c3e1c933fb1b3f053e1ca}{Remove\+Element\+Smoothing} (\hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing} $\ast$p\+Element\+Smoothing)
+\item 
+\hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing} $\ast$ \hyperlink{class_fbx_geometry_base_a6ba008301dd152eef938f18fc87ff385}{Get\+Element\+Smoothing} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing} $\ast$ \hyperlink{class_fbx_geometry_base_a0a464128150ff6eee48b6913b22a1c49}{Get\+Element\+Smoothing} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a65ce50bb6548a0c1cc3a237b1f953242}{Get\+Element\+Smoothing\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$ \hyperlink{class_fbx_geometry_base_ac31ccf6da5d91b8df915bb1ace15e399}{Create\+Element\+Vertex\+Crease} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a01fe726448c9362a399148aceb051f71}{Remove\+Element\+Vertex\+Crease} (\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$p\+Element\+Crease)
+\item 
+\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$ \hyperlink{class_fbx_geometry_base_a2ba68cd342357a08aceae046aba944d4}{Get\+Element\+Vertex\+Crease} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$ \hyperlink{class_fbx_geometry_base_aa54ec0641f415576fd7e09753df8fa0d}{Get\+Element\+Vertex\+Crease} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_afc099f60d6c45cbac000b10d95c83377}{Get\+Element\+Vertex\+Crease\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$ \hyperlink{class_fbx_geometry_base_ae5475b4e64c7fa7a9c3c1edd3365d53f}{Create\+Element\+Edge\+Crease} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a91216359c824cc80d113e0760d59e9bb}{Remove\+Element\+Edge\+Crease} (\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$p\+Element\+Crease)
+\item 
+\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$ \hyperlink{class_fbx_geometry_base_acb7576ed7cf6011f456e6a3d30082058}{Get\+Element\+Edge\+Crease} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$ \hyperlink{class_fbx_geometry_base_af596440c20b05b92559190449803b8e8}{Get\+Element\+Edge\+Crease} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_aeafa5b8ecd4a424003624e2e35978033}{Get\+Element\+Edge\+Crease\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole} $\ast$ \hyperlink{class_fbx_geometry_base_a2c30734fb6ff6bb93adadd35978fc146}{Create\+Element\+Hole} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a26484bbcc3f5a76366fcbe7352c8fefa}{Remove\+Element\+Hole} (\hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole} $\ast$p\+Element\+Hole)
+\item 
+\hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole} $\ast$ \hyperlink{class_fbx_geometry_base_af4daaf3e4a61bfd482d70d41d0a9e350}{Get\+Element\+Hole} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole} $\ast$ \hyperlink{class_fbx_geometry_base_a503d850eaaed9c21457cf19b86080f14}{Get\+Element\+Hole} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a93f4c298785352d3a8e05596d31d0760}{Get\+Element\+Hole\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data} $\ast$ \hyperlink{class_fbx_geometry_base_a457a8982320b3637353051aaec987c90}{Create\+Element\+User\+Data} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_abf8c753f38229a2b076ec20a17da6807}{Remove\+Element\+User\+Data} (\hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data} $\ast$p\+Element\+User\+Data)
+\item 
+\hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data} $\ast$ \hyperlink{class_fbx_geometry_base_aaae41fe6881f55fb722cb9fae88c5bbf}{Get\+Element\+User\+Data} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data} $\ast$ \hyperlink{class_fbx_geometry_base_a40c905252aebb1ea71bd4d71a4c8704d}{Get\+Element\+User\+Data} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a8ea1964abcfde21f82d576ca07ac7f67}{Get\+Element\+User\+Data\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility} $\ast$ \hyperlink{class_fbx_geometry_base_a92af07a2d0739a8e27108838c5c7eac4}{Create\+Element\+Visibility} ()
+\item 
+bool \hyperlink{class_fbx_geometry_base_a5265ada1a14bc10a5be69719547827b5}{Remove\+Element\+Visibility} (\hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility} $\ast$p\+Element\+Visibility)
+\item 
+\hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility} $\ast$ \hyperlink{class_fbx_geometry_base_ad4efa742959f1ff9db49f67cebcc5779}{Get\+Element\+Visibility} (int p\+Index=0)
+\item 
+const \hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility} $\ast$ \hyperlink{class_fbx_geometry_base_a7354e0200f75665cbc4f3137cac53046}{Get\+Element\+Visibility} (int p\+Index=0) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a9f41f006fb1545c11e1a06c80312cda9}{Get\+Element\+Visibility\+Count} () const
+\item 
+\hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$ \hyperlink{class_fbx_geometry_base_ac2d647f718a69776037377e79dfc8c3e}{Create\+Element\+UV} (const char $\ast$p\+U\+V\+Set\+Name, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+bool \hyperlink{class_fbx_geometry_base_a0f571119663cc96a58d42e0e555a9be6}{Remove\+Element\+UV} (\hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$p\+Element\+UV)
+\item 
+\hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$ \hyperlink{class_fbx_geometry_base_a47702a12ebe438343757fbbe2ebd41d3}{Get\+Element\+UV} (int p\+Index=0, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{Fbx\+Layer\+Element\+::e\+Unknown})
+\item 
+const \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$ \hyperlink{class_fbx_geometry_base_aacf39d3a8ff304383999ffff1500598f}{Get\+Element\+UV} (int p\+Index=0, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{Fbx\+Layer\+Element\+::e\+Unknown}) const
+\item 
+int \hyperlink{class_fbx_geometry_base_a617a6e3bcbceb4489e2db1a386f9640b}{Get\+Element\+U\+V\+Count} (\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{Fbx\+Layer\+Element\+::e\+Unknown}) const
+\item 
+\hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$ \hyperlink{class_fbx_geometry_base_ac6fda0d204a28b5e67ef46b9bce6e288}{Get\+Element\+UV} (const char $\ast$p\+U\+V\+Set\+Name)
+\item 
+const \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$ \hyperlink{class_fbx_geometry_base_a31f84a19326288aa8315fdbbec39a90a}{Get\+Element\+UV} (const char $\ast$p\+U\+V\+Set\+Name) const
+\item 
+void \hyperlink{class_fbx_geometry_base_a65147440e2f577ab7f5b60e228881641}{Get\+U\+V\+Set\+Names} (\hyperlink{class_fbx_string_list}{Fbx\+String\+List} \&p\+U\+V\+Set\+Name\+List) const
+\end{DoxyCompactItemize}
+\subsection*{Off-\/loading Serialization section}
+\label{_amgrpe1aaec84f361fca191ade63ad8637b37}%
+ The methods in this section are typically called by a peripheral (\hyperlink{class_fbx_peripheral}{Fbx\+Peripheral}). There should be no real interest in calling them directly. The functions will write/read the memory dump of the data contained in this class. Each data block written/read will start with an (int) value representing the number of items in the array. If this value (v) is not zero, it will be followed by the array content. A block of data that is (v $\ast$ sizeof(array item size)) bytes big. The methods will also call the parent class ones to dump the \hyperlink{namespace_layers}{Layers} content. \begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_geometry_base_a7b80ccbcd2b15bbedbe7dd7e0739a3b3}{Content\+Write\+To} (\hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream) const
+\item 
+virtual bool \hyperlink{class_fbx_geometry_base_a6d34ab23d253b07cac24267177096c1a}{Content\+Read\+From} (const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class is the base class for geometric object such as meshes, N\+U\+R\+BS and patches. Use the \hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} class to manage the control points, normals, binormals and tangents of the geometries. The meaning of \char`\"{}control point\char`\"{} is dependent of the geometry object type. For meshes, the \char`\"{}control point\char`\"{} is the physical 3D coordinate of polygon vertices while, for N\+U\+R\+BS, it is the the actual control point on the curves defining the surface. This class also allow you to define normals, binormals and tangents regardless of the type of geometric object. However, in reality, applying such definitions to N\+U\+R\+BS and patches does not make much sense since these definitions would only exist at the control points and inbetween them, the interpolation would certainly not follow the curve.
+
+Geometric objects are using a system of layered data to extend their construction definition. For example, a typical layer for a Mesh contains Normals, U\+Vs and Materials but client applications can decide to define another set of Normals and U\+Vs and swap them during the rendering phase to produce some different results. The combinations are limitless and it would be impossible to discuss them all. This example has been presented to show one possible context where layers can be used. More information can be found in the \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} and \hyperlink{class_fbx_layer}{Fbx\+Layer} classes description. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_geometry_base_a66146155ecad4e6f6f2e8cf52e0340f6}\label{class_fbx_geometry_base_a66146155ecad4e6f6f2e8cf52e0340f6}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Compact@{Compact}}
+\index{Compact@{Compact}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Compact()}{Compact()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Compact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Compact the memory used by this object. \begin{DoxyRemark}{注釈}
+Note that this function might not result in saved memory because it depends if the sub-\/class implements it, or if any memory can actually be saved. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a2720f16a08150d162242b0c59f58c3dc}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_mesh_a05ca6a8fbd028777c91931ce6edf4b19}{Fbx\+Mesh}, \hyperlink{class_fbx_shape_a9c3c948d3646bf78472164860ad11d65}{Fbx\+Shape}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a6c27b53ff81cdcbe4f6da4b1acfd4375}\label{class_fbx_geometry_base_a6c27b53ff81cdcbe4f6da4b1acfd4375}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Compute\+B\+Box@{Compute\+B\+Box}}
+\index{Compute\+B\+Box@{Compute\+B\+Box}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Compute\+B\+Box()}{ComputeBBox()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Compute\+B\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes the control points Bounding box. \mbox{\Hypertarget{class_fbx_geometry_base_a94ee142ac1d40be3aebb4d9441431921}\label{class_fbx_geometry_base_a94ee142ac1d40be3aebb4d9441431921}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}{Fbx\+Node\+Attribute}を再実装しています。
+
+
+
+\hyperlink{class_fbx_line_a48df4b6cd889814d3fe7ca5bb09bcc78}{Fbx\+Line}, \hyperlink{class_fbx_boundary_acb50e021b1e9920026c975613a949537}{Fbx\+Boundary}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_base_acf13ddd2717d2f1ca4dc57b5ea0801b1}\label{class_fbx_geometry_base_acf13ddd2717d2f1ca4dc57b5ea0801b1}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Content\+Clear@{Content\+Clear}}
+\index{Content\+Clear@{Content\+Clear}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Content\+Clear()}{ContentClear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Content\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Clears this object\textquotesingle{}s content from memory. This method must be overridden in the derived classes. \begin{DoxyRemark}{注釈}
+This method is called by \hyperlink{class_fbx_object_ac28653a3c65e840498eebfb54276e483}{Content\+Unload()} if the object content\textquotesingle{}s unloading is successful. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a284f2a438579fcacd8bffd85f556dde2}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_mesh_aacd77ff7908d897c73983919c4aade72}{Fbx\+Mesh}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a6d34ab23d253b07cac24267177096c1a}\label{class_fbx_geometry_base_a6d34ab23d253b07cac24267177096c1a}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Content\+Read\+From@{Content\+Read\+From}}
+\index{Content\+Read\+From@{Content\+Read\+From}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Content\+Read\+From()}{ContentReadFrom()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Geometry\+Base\+::\+Content\+Read\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reads the content of the geometry object from the specified stream. 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & The source stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry object fills itself with the received data from the stream successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_object_aeb4255bda633e1986730748758a7cf6c}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_patch_ad1aac4a2e0e820f27ff9a0123ba5756e}{Fbx\+Patch}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_geometry_base_a7b80ccbcd2b15bbedbe7dd7e0739a3b3}\label{class_fbx_geometry_base_a7b80ccbcd2b15bbedbe7dd7e0739a3b3}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Content\+Write\+To@{Content\+Write\+To}}
+\index{Content\+Write\+To@{Content\+Write\+To}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Content\+Write\+To()}{ContentWriteTo()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Geometry\+Base\+::\+Content\+Write\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes the content of the geometry object to the specified stream. 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & The destination stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the content is successfully processed by the receiving stream, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_object_ab8a59df9233cdfeaae05e5b6d15f5101}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_patch_a2ecc16ad355ca521c921ec3731719585}{Fbx\+Patch}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_geometry_base_a2c3754831338327259c35caebbf379d3}\label{class_fbx_geometry_base_a2c3754831338327259c35caebbf379d3}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Geometry\+Base\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_layer_container_abb8c7ba2b201b4e4ff39b2c8db144769}{Fbx\+Layer\+Container}を再実装しています。
+
+
+
+\hyperlink{class_fbx_mesh_a0f041743536ee5ccbc9a086e3ef1c663}{Fbx\+Mesh}, \hyperlink{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}{Fbx\+Geometry}, \hyperlink{class_fbx_nurbs_surface_a1da47f75af4920a3fb4a94690d8ada8c}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_ac7c9a9018b4fdbe72b258a2fa0a3367d}{Fbx\+Nurbs}, \hyperlink{class_fbx_trim_nurbs_surface_a4407d30e83346ab3cb30ccf67d7bb289}{Fbx\+Trim\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_curve_ad48046242c0a63d929b5440563668f79}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_patch_a424542a42ec75d3c5236cc366adecd89}{Fbx\+Patch}, \hyperlink{class_fbx_line_aeb9e0c53cf02d3e4e206b25c87c06256}{Fbx\+Line}, \hyperlink{class_fbx_shape_ab9776a1c0ce41830bc6841ebba4c4a23}{Fbx\+Shape}, \hyperlink{class_fbx_boundary_a6fe59f45c17eeebbabaeff235058ac70}{Fbx\+Boundary}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_base_aaac14a98782b9f68803462f033297d05}\label{class_fbx_geometry_base_aaac14a98782b9f68803462f033297d05}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Binormal@{Create\+Element\+Binormal}}
+\index{Create\+Element\+Binormal@{Create\+Element\+Binormal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Binormal()}{CreateElementBinormal()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Binormal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a binormal geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ae5475b4e64c7fa7a9c3c1edd3365d53f}\label{class_fbx_geometry_base_ae5475b4e64c7fa7a9c3c1edd3365d53f}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Edge\+Crease@{Create\+Element\+Edge\+Crease}}
+\index{Create\+Element\+Edge\+Crease@{Create\+Element\+Edge\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Edge\+Crease()}{CreateElementEdgeCrease()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Edge\+Crease (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an edge crease geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a2c30734fb6ff6bb93adadd35978fc146}\label{class_fbx_geometry_base_a2c30734fb6ff6bb93adadd35978fc146}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Hole@{Create\+Element\+Hole}}
+\index{Create\+Element\+Hole@{Create\+Element\+Hole}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Hole()}{CreateElementHole()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Hole (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a hole geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a1c93bffeaa9af18fd7ab9c2eb68ca4ec}\label{class_fbx_geometry_base_a1c93bffeaa9af18fd7ab9c2eb68ca4ec}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Material@{Create\+Element\+Material}}
+\index{Create\+Element\+Material@{Create\+Element\+Material}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Material()}{CreateElementMaterial()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a material geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a13810d0c6ac68ab14be3f1316b977f7d}\label{class_fbx_geometry_base_a13810d0c6ac68ab14be3f1316b977f7d}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Normal@{Create\+Element\+Normal}}
+\index{Create\+Element\+Normal@{Create\+Element\+Normal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Normal()}{CreateElementNormal()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a normal geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a94ad7ac87ced572287ee85460304eb09}\label{class_fbx_geometry_base_a94ad7ac87ced572287ee85460304eb09}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Polygon\+Group@{Create\+Element\+Polygon\+Group}}
+\index{Create\+Element\+Polygon\+Group@{Create\+Element\+Polygon\+Group}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Polygon\+Group()}{CreateElementPolygonGroup()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Polygon\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a polygon group geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a998f217dc7383a3fdd5bd4269d424fe3}\label{class_fbx_geometry_base_a998f217dc7383a3fdd5bd4269d424fe3}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Smoothing@{Create\+Element\+Smoothing}}
+\index{Create\+Element\+Smoothing@{Create\+Element\+Smoothing}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Smoothing()}{CreateElementSmoothing()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Smoothing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a smoothing geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a88790830df691da97b5f027a66d98eec}\label{class_fbx_geometry_base_a88790830df691da97b5f027a66d98eec}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Tangent@{Create\+Element\+Tangent}}
+\index{Create\+Element\+Tangent@{Create\+Element\+Tangent}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Tangent()}{CreateElementTangent()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Tangent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a tangent geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a457a8982320b3637353051aaec987c90}\label{class_fbx_geometry_base_a457a8982320b3637353051aaec987c90}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+User\+Data@{Create\+Element\+User\+Data}}
+\index{Create\+Element\+User\+Data@{Create\+Element\+User\+Data}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+User\+Data()}{CreateElementUserData()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a user data geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac2d647f718a69776037377e79dfc8c3e}\label{class_fbx_geometry_base_ac2d647f718a69776037377e79dfc8c3e}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+UV@{Create\+Element\+UV}}
+\index{Create\+Element\+UV@{Create\+Element\+UV}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+U\+V()}{CreateElementUV()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+UV (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+U\+V\+Set\+Name,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Creates a UV geometry element for this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Name} & The UV geometry element name. \\
+\hline
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Index refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a866f39f540f6bc9ca8e529f27d9ebee4}\label{class_fbx_geometry_base_a866f39f540f6bc9ca8e529f27d9ebee4}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Vertex\+Color@{Create\+Element\+Vertex\+Color}}
+\index{Create\+Element\+Vertex\+Color@{Create\+Element\+Vertex\+Color}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Vertex\+Color()}{CreateElementVertexColor()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Vertex\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a vertex color geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac31ccf6da5d91b8df915bb1ace15e399}\label{class_fbx_geometry_base_ac31ccf6da5d91b8df915bb1ace15e399}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Vertex\+Crease@{Create\+Element\+Vertex\+Crease}}
+\index{Create\+Element\+Vertex\+Crease@{Create\+Element\+Vertex\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Vertex\+Crease()}{CreateElementVertexCrease()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Vertex\+Crease (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a vertex crease geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a92af07a2d0739a8e27108838c5c7eac4}\label{class_fbx_geometry_base_a92af07a2d0739a8e27108838c5c7eac4}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Create\+Element\+Visibility@{Create\+Element\+Visibility}}
+\index{Create\+Element\+Visibility@{Create\+Element\+Visibility}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Create\+Element\+Visibility()}{CreateElementVisibility()}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility}$\ast$ Fbx\+Geometry\+Base\+::\+Create\+Element\+Visibility (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a visibility geometry element for this geometry. \begin{DoxyReturn}{戻り値}
+A pointer to the newly created geometry element. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The created geometry element is associated with this geometry automatically. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a935f60845a0b9a5d484a8540f52ee07d}\label{class_fbx_geometry_base_a935f60845a0b9a5d484a8540f52ee07d}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Binormals@{Get\+Binormals}}
+\index{Get\+Binormals@{Get\+Binormals}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Binormals()}{GetBinormals()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Get\+Binormals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ $\ast$$\ast$}]{p\+Lockable\+Array,  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_af3b46f6aaa0e79c91ad7a89977413f57}\label{class_fbx_geometry_base_af3b46f6aaa0e79c91ad7a89977413f57}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Binormals\+Indices@{Get\+Binormals\+Indices}}
+\index{Get\+Binormals\+Indices@{Get\+Binormals\+Indices}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Binormals\+Indices()}{GetBinormalsIndices()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Get\+Binormals\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$}]{p\+Lockable\+Array,  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a16c45afeb6008d346593882b979f0ed7}\label{class_fbx_geometry_base_a16c45afeb6008d346593882b979f0ed7}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Control\+Point\+At@{Get\+Control\+Point\+At}}
+\index{Get\+Control\+Point\+At@{Get\+Control\+Point\+At}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Control\+Point\+At()}{GetControlPointAt()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Geometry\+Base\+::\+Get\+Control\+Point\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gets the control point at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index of the control point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value of the specific control point.
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If index is out of range, \hyperlink{class_fbx_vector4}{Fbx\+Vector4(0, 0, 0)} is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ad4db22a2f2e673c216cacdc9cd172d77}\label{class_fbx_geometry_base_ad4db22a2f2e673c216cacdc9cd172d77}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Control\+Points@{Get\+Control\+Points}}
+\index{Get\+Control\+Points@{Get\+Control\+Points}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Control\+Points()}{GetControlPoints()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_vector4}{Fbx\+Vector4}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Control\+Points (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns a pointer to the array of control points. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & Not used in the implementation of this class. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the array of control points, or {\ttfamily N\+U\+LL} if the array has not been allocated. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Use the function \hyperlink{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}{Fbx\+Geometry\+Base\+::\+Init\+Control\+Points()} to allocate the array. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_trim_nurbs_surface_aff21dc007688399ca91da1a9c9f6e584}{Fbx\+Trim\+Nurbs\+Surface}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_geometry_base_aa9f42ae6a958036722670143fabf3b17}\label{class_fbx_geometry_base_aa9f42ae6a958036722670143fabf3b17}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Control\+Points\+Count@{Get\+Control\+Points\+Count}}
+\index{Get\+Control\+Points\+Count@{Get\+Control\+Points\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Control\+Points\+Count()}{GetControlPointsCount()}}
+{\footnotesize\ttfamily virtual int Fbx\+Geometry\+Base\+::\+Get\+Control\+Points\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the number of control points. \begin{DoxyReturn}{戻り値}
+The number of control points allocated in the geometry. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_trim_nurbs_surface_a11c7260f31786dd8ace17769d0ccb302}{Fbx\+Trim\+Nurbs\+Surface}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_geometry_base_a810b4a313e01bbaa41fe25ac753a8996}\label{class_fbx_geometry_base_a810b4a313e01bbaa41fe25ac753a8996}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Binormal@{Get\+Element\+Binormal}}
+\index{Get\+Element\+Binormal@{Get\+Element\+Binormal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Binormal()}{GetElementBinormal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Binormal (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s binormal element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The binormal geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a12bc9aca7ec57790db96fa47219c559c}\label{class_fbx_geometry_base_a12bc9aca7ec57790db96fa47219c559c}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Binormal@{Get\+Element\+Binormal}}
+\index{Get\+Element\+Binormal@{Get\+Element\+Binormal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Binormal()}{GetElementBinormal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Binormal (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s binormal element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The binormal geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a04500774d4c9bfc97418f45aff63404e}\label{class_fbx_geometry_base_a04500774d4c9bfc97418f45aff63404e}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Binormal\+Count@{Get\+Element\+Binormal\+Count}}
+\index{Get\+Element\+Binormal\+Count@{Get\+Element\+Binormal\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Binormal\+Count()}{GetElementBinormalCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Binormal\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s binormal geometry element. \begin{DoxyReturn}{戻り値}
+Total number of binormal geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_acb7576ed7cf6011f456e6a3d30082058}\label{class_fbx_geometry_base_acb7576ed7cf6011f456e6a3d30082058}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Edge\+Crease@{Get\+Element\+Edge\+Crease}}
+\index{Get\+Element\+Edge\+Crease@{Get\+Element\+Edge\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Edge\+Crease()}{GetElementEdgeCrease()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Edge\+Crease (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s edge crease element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The edge crease geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_af596440c20b05b92559190449803b8e8}\label{class_fbx_geometry_base_af596440c20b05b92559190449803b8e8}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Edge\+Crease@{Get\+Element\+Edge\+Crease}}
+\index{Get\+Element\+Edge\+Crease@{Get\+Element\+Edge\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Edge\+Crease()}{GetElementEdgeCrease()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Edge\+Crease (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s edge crease element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The edge crease geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_aeafa5b8ecd4a424003624e2e35978033}\label{class_fbx_geometry_base_aeafa5b8ecd4a424003624e2e35978033}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Edge\+Crease\+Count@{Get\+Element\+Edge\+Crease\+Count}}
+\index{Get\+Element\+Edge\+Crease\+Count@{Get\+Element\+Edge\+Crease\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Edge\+Crease\+Count()}{GetElementEdgeCreaseCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Edge\+Crease\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s edge crease geometry element. \begin{DoxyReturn}{戻り値}
+Total number of edge crease geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_af4daaf3e4a61bfd482d70d41d0a9e350}\label{class_fbx_geometry_base_af4daaf3e4a61bfd482d70d41d0a9e350}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Hole@{Get\+Element\+Hole}}
+\index{Get\+Element\+Hole@{Get\+Element\+Hole}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Hole()}{GetElementHole()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Hole (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s hole element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The hole geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a503d850eaaed9c21457cf19b86080f14}\label{class_fbx_geometry_base_a503d850eaaed9c21457cf19b86080f14}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Hole@{Get\+Element\+Hole}}
+\index{Get\+Element\+Hole@{Get\+Element\+Hole}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Hole()}{GetElementHole()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Hole (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s hole element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The hole geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a93f4c298785352d3a8e05596d31d0760}\label{class_fbx_geometry_base_a93f4c298785352d3a8e05596d31d0760}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Hole\+Count@{Get\+Element\+Hole\+Count}}
+\index{Get\+Element\+Hole\+Count@{Get\+Element\+Hole\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Hole\+Count()}{GetElementHoleCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Hole\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s hole geometry element. \begin{DoxyReturn}{戻り値}
+Total number of hole geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac49c730d0f134f1aff416bc4be5ca4e5}\label{class_fbx_geometry_base_ac49c730d0f134f1aff416bc4be5ca4e5}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Material@{Get\+Element\+Material}}
+\index{Get\+Element\+Material@{Get\+Element\+Material}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Material()}{GetElementMaterial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Material (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s material element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The material geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_acd0f6cd7ecaa99d15aab3e211857f462}\label{class_fbx_geometry_base_acd0f6cd7ecaa99d15aab3e211857f462}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Material@{Get\+Element\+Material}}
+\index{Get\+Element\+Material@{Get\+Element\+Material}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Material()}{GetElementMaterial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Material (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s material element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The material geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a443797935c203b51edb4004907613017}\label{class_fbx_geometry_base_a443797935c203b51edb4004907613017}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Material\+Count@{Get\+Element\+Material\+Count}}
+\index{Get\+Element\+Material\+Count@{Get\+Element\+Material\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Material\+Count()}{GetElementMaterialCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Material\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s material geometry element. \begin{DoxyReturn}{戻り値}
+Total number of material geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ab7486b08caa6e90923fbb194bd81a61e}\label{class_fbx_geometry_base_ab7486b08caa6e90923fbb194bd81a61e}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Normal@{Get\+Element\+Normal}}
+\index{Get\+Element\+Normal@{Get\+Element\+Normal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Normal()}{GetElementNormal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Normal (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s normal element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The normal geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a33d41a1c8b2346aa73a2576225387fb4}\label{class_fbx_geometry_base_a33d41a1c8b2346aa73a2576225387fb4}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Normal@{Get\+Element\+Normal}}
+\index{Get\+Element\+Normal@{Get\+Element\+Normal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Normal()}{GetElementNormal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Normal (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s normal element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The normal geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ae8cffdf94daa997de808328579c636c2}\label{class_fbx_geometry_base_ae8cffdf94daa997de808328579c636c2}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Normal\+Count@{Get\+Element\+Normal\+Count}}
+\index{Get\+Element\+Normal\+Count@{Get\+Element\+Normal\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Normal\+Count()}{GetElementNormalCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Normal\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s normal geometry element. \begin{DoxyReturn}{戻り値}
+Total number of normal geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ae54cbd4165026b82500d776a21e81e32}\label{class_fbx_geometry_base_ae54cbd4165026b82500d776a21e81e32}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Polygon\+Group@{Get\+Element\+Polygon\+Group}}
+\index{Get\+Element\+Polygon\+Group@{Get\+Element\+Polygon\+Group}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Polygon\+Group()}{GetElementPolygonGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Polygon\+Group (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s polygon group element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The polygon group geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a11838aa5259cb37a3024a9eb654b705c}\label{class_fbx_geometry_base_a11838aa5259cb37a3024a9eb654b705c}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Polygon\+Group@{Get\+Element\+Polygon\+Group}}
+\index{Get\+Element\+Polygon\+Group@{Get\+Element\+Polygon\+Group}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Polygon\+Group()}{GetElementPolygonGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Polygon\+Group (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s polygon group element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The polygon group geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a138cf34dd7162a7984a3317d0d4ff03b}\label{class_fbx_geometry_base_a138cf34dd7162a7984a3317d0d4ff03b}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Polygon\+Group\+Count@{Get\+Element\+Polygon\+Group\+Count}}
+\index{Get\+Element\+Polygon\+Group\+Count@{Get\+Element\+Polygon\+Group\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Polygon\+Group\+Count()}{GetElementPolygonGroupCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Polygon\+Group\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s polygon group geometry element. \begin{DoxyReturn}{戻り値}
+Total number of polygon group geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a6ba008301dd152eef938f18fc87ff385}\label{class_fbx_geometry_base_a6ba008301dd152eef938f18fc87ff385}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Smoothing@{Get\+Element\+Smoothing}}
+\index{Get\+Element\+Smoothing@{Get\+Element\+Smoothing}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Smoothing()}{GetElementSmoothing()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Smoothing (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s smoothing element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The smoothing geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a0a464128150ff6eee48b6913b22a1c49}\label{class_fbx_geometry_base_a0a464128150ff6eee48b6913b22a1c49}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Smoothing@{Get\+Element\+Smoothing}}
+\index{Get\+Element\+Smoothing@{Get\+Element\+Smoothing}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Smoothing()}{GetElementSmoothing()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Smoothing (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s smoothing element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The smoothing geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a65ce50bb6548a0c1cc3a237b1f953242}\label{class_fbx_geometry_base_a65ce50bb6548a0c1cc3a237b1f953242}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Smoothing\+Count@{Get\+Element\+Smoothing\+Count}}
+\index{Get\+Element\+Smoothing\+Count@{Get\+Element\+Smoothing\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Smoothing\+Count()}{GetElementSmoothingCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Smoothing\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s smoothing geometry element. \begin{DoxyReturn}{戻り値}
+Total number of smoothing geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a28cf260152f84ce031a3d2844b9895cc}\label{class_fbx_geometry_base_a28cf260152f84ce031a3d2844b9895cc}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Tangent@{Get\+Element\+Tangent}}
+\index{Get\+Element\+Tangent@{Get\+Element\+Tangent}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Tangent()}{GetElementTangent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Tangent (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s tangent element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The tangent geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a5fedf8c0a50736da2fa590cf1b922506}\label{class_fbx_geometry_base_a5fedf8c0a50736da2fa590cf1b922506}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Tangent@{Get\+Element\+Tangent}}
+\index{Get\+Element\+Tangent@{Get\+Element\+Tangent}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Tangent()}{GetElementTangent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Tangent (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s tangent element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The tangent geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac7a775211507bd51dd804d8e013f625c}\label{class_fbx_geometry_base_ac7a775211507bd51dd804d8e013f625c}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Tangent\+Count@{Get\+Element\+Tangent\+Count}}
+\index{Get\+Element\+Tangent\+Count@{Get\+Element\+Tangent\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Tangent\+Count()}{GetElementTangentCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Tangent\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s tangent geometry element. \begin{DoxyReturn}{戻り値}
+Total number of tangent geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_aaae41fe6881f55fb722cb9fae88c5bbf}\label{class_fbx_geometry_base_aaae41fe6881f55fb722cb9fae88c5bbf}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+User\+Data@{Get\+Element\+User\+Data}}
+\index{Get\+Element\+User\+Data@{Get\+Element\+User\+Data}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+User\+Data()}{GetElementUserData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+User\+Data (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s user data element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The user data geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a40c905252aebb1ea71bd4d71a4c8704d}\label{class_fbx_geometry_base_a40c905252aebb1ea71bd4d71a4c8704d}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+User\+Data@{Get\+Element\+User\+Data}}
+\index{Get\+Element\+User\+Data@{Get\+Element\+User\+Data}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+User\+Data()}{GetElementUserData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+User\+Data (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s user data element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The user data geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a8ea1964abcfde21f82d576ca07ac7f67}\label{class_fbx_geometry_base_a8ea1964abcfde21f82d576ca07ac7f67}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+User\+Data\+Count@{Get\+Element\+User\+Data\+Count}}
+\index{Get\+Element\+User\+Data\+Count@{Get\+Element\+User\+Data\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+User\+Data\+Count()}{GetElementUserDataCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+User\+Data\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s user data geometry element. \begin{DoxyReturn}{戻り値}
+Total number of user data geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a47702a12ebe438343757fbbe2ebd41d3}\label{class_fbx_geometry_base_a47702a12ebe438343757fbbe2ebd41d3}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+UV@{Get\+Element\+UV}}
+\index{Get\+Element\+UV@{Get\+Element\+UV}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+U\+V()}{GetElementUV()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+UV (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0},  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{Fbx\+Layer\+Element\+::e\+Unknown}} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s UV element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The UV geometry element index. \\
+\hline
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Index refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If {\itshape p\+Type\+Identifier} is not specified, the function will return the geometry element regardless of its texture type. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_aacf39d3a8ff304383999ffff1500598f}\label{class_fbx_geometry_base_aacf39d3a8ff304383999ffff1500598f}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+UV@{Get\+Element\+UV}}
+\index{Get\+Element\+UV@{Get\+Element\+UV}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+U\+V()}{GetElementUV()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+UV (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0},  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{Fbx\+Layer\+Element\+::e\+Unknown}} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s UV element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The UV geometry element index. \\
+\hline
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Index refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If {\itshape p\+Type\+Identifier} is not specified, the function will return the geometry element regardless of its texture type. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac6fda0d204a28b5e67ef46b9bce6e288}\label{class_fbx_geometry_base_ac6fda0d204a28b5e67ef46b9bce6e288}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+UV@{Get\+Element\+UV}}
+\index{Get\+Element\+UV@{Get\+Element\+UV}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+U\+V()}{GetElementUV()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+UV (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+U\+V\+Set\+Name }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s UV element. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Name} & The UV set name of the UV geometry element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the UV geometry element or {\ttfamily N\+U\+LL} if no UV geometry element with this name exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a31f84a19326288aa8315fdbbec39a90a}\label{class_fbx_geometry_base_a31f84a19326288aa8315fdbbec39a90a}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+UV@{Get\+Element\+UV}}
+\index{Get\+Element\+UV@{Get\+Element\+UV}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+U\+V()}{GetElementUV()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+UV (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+U\+V\+Set\+Name }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s UV element. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Name} & The UV set name of the UV geometry element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the UV geometry element or {\ttfamily N\+U\+LL} if no UV geometry element with this name exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a617a6e3bcbceb4489e2db1a386f9640b}\label{class_fbx_geometry_base_a617a6e3bcbceb4489e2db1a386f9640b}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+U\+V\+Count@{Get\+Element\+U\+V\+Count}}
+\index{Get\+Element\+U\+V\+Count@{Get\+Element\+U\+V\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+U\+V\+Count()}{GetElementUVCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+U\+V\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{Fbx\+Layer\+Element\+::e\+Unknown}} }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s UV geometry element. 
+\begin{DoxyParams}{引数}
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Index refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Total number of UV geometry elements for this geometry. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If {\itshape p\+Type\+Identifier} is not specified, the function will return the geometry element regardless of its texture type. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a1b93a0dc9da34d479e5535d7d589fe0b}\label{class_fbx_geometry_base_a1b93a0dc9da34d479e5535d7d589fe0b}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Vertex\+Color@{Get\+Element\+Vertex\+Color}}
+\index{Get\+Element\+Vertex\+Color@{Get\+Element\+Vertex\+Color}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Vertex\+Color()}{GetElementVertexColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Vertex\+Color (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s vertex color element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The vertex color geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac4748b1ed1007746aa7acf2f4c300d9f}\label{class_fbx_geometry_base_ac4748b1ed1007746aa7acf2f4c300d9f}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Vertex\+Color@{Get\+Element\+Vertex\+Color}}
+\index{Get\+Element\+Vertex\+Color@{Get\+Element\+Vertex\+Color}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Vertex\+Color()}{GetElementVertexColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Vertex\+Color (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s vertex color element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The vertex color geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ab0c36aa02e726e017f02802a42705f68}\label{class_fbx_geometry_base_ab0c36aa02e726e017f02802a42705f68}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Vertex\+Color\+Count@{Get\+Element\+Vertex\+Color\+Count}}
+\index{Get\+Element\+Vertex\+Color\+Count@{Get\+Element\+Vertex\+Color\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Vertex\+Color\+Count()}{GetElementVertexColorCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Vertex\+Color\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s vertex color geometry element. \begin{DoxyReturn}{戻り値}
+Total number of vertex color geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a2ba68cd342357a08aceae046aba944d4}\label{class_fbx_geometry_base_a2ba68cd342357a08aceae046aba944d4}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Vertex\+Crease@{Get\+Element\+Vertex\+Crease}}
+\index{Get\+Element\+Vertex\+Crease@{Get\+Element\+Vertex\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Vertex\+Crease()}{GetElementVertexCrease()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Vertex\+Crease (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s vertex crease element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The vertex crease geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_aa54ec0641f415576fd7e09753df8fa0d}\label{class_fbx_geometry_base_aa54ec0641f415576fd7e09753df8fa0d}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Vertex\+Crease@{Get\+Element\+Vertex\+Crease}}
+\index{Get\+Element\+Vertex\+Crease@{Get\+Element\+Vertex\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Vertex\+Crease()}{GetElementVertexCrease()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Vertex\+Crease (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s vertex crease element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The vertex crease geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_afc099f60d6c45cbac000b10d95c83377}\label{class_fbx_geometry_base_afc099f60d6c45cbac000b10d95c83377}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Vertex\+Crease\+Count@{Get\+Element\+Vertex\+Crease\+Count}}
+\index{Get\+Element\+Vertex\+Crease\+Count@{Get\+Element\+Vertex\+Crease\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Vertex\+Crease\+Count()}{GetElementVertexCreaseCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Vertex\+Crease\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s vertex crease geometry element. \begin{DoxyReturn}{戻り値}
+Total number of vertex crease geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ad4efa742959f1ff9db49f67cebcc5779}\label{class_fbx_geometry_base_ad4efa742959f1ff9db49f67cebcc5779}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Visibility@{Get\+Element\+Visibility}}
+\index{Get\+Element\+Visibility@{Get\+Element\+Visibility}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Visibility()}{GetElementVisibility()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Visibility (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Returns this geometry\textquotesingle{}s visibility element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The visibility geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a7354e0200f75665cbc4f3137cac53046}\label{class_fbx_geometry_base_a7354e0200f75665cbc4f3137cac53046}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Visibility@{Get\+Element\+Visibility}}
+\index{Get\+Element\+Visibility@{Get\+Element\+Visibility}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Visibility()}{GetElementVisibility()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility}$\ast$ Fbx\+Geometry\+Base\+::\+Get\+Element\+Visibility (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s visibility element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The visibility geometry element index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A const pointer to the geometry element or {\ttfamily N\+U\+LL} if {\itshape p\+Index} is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a9f41f006fb1545c11e1a06c80312cda9}\label{class_fbx_geometry_base_a9f41f006fb1545c11e1a06c80312cda9}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Element\+Visibility\+Count@{Get\+Element\+Visibility\+Count}}
+\index{Get\+Element\+Visibility\+Count@{Get\+Element\+Visibility\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Element\+Visibility\+Count()}{GetElementVisibilityCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+Base\+::\+Get\+Element\+Visibility\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of this geometry\textquotesingle{}s visibility geometry element. \begin{DoxyReturn}{戻り値}
+Total number of visibility geometry elements for this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_ad30d8655b9606f653e9467bb07c8b1f3}\label{class_fbx_geometry_base_ad30d8655b9606f653e9467bb07c8b1f3}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Normals@{Get\+Normals}}
+\index{Get\+Normals@{Get\+Normals}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Normals()}{GetNormals()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Get\+Normals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ $\ast$$\ast$}]{p\+Lockable\+Array }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_ace44c4c25817ccabcf32e4c5b3b32936}\label{class_fbx_geometry_base_ace44c4c25817ccabcf32e4c5b3b32936}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Normals\+Indices@{Get\+Normals\+Indices}}
+\index{Get\+Normals\+Indices@{Get\+Normals\+Indices}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Normals\+Indices()}{GetNormalsIndices()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Get\+Normals\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$}]{p\+Lockable\+Array }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_aa8b22c9380e8c8be64855a6409136210}\label{class_fbx_geometry_base_aa8b22c9380e8c8be64855a6409136210}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Tangents@{Get\+Tangents}}
+\index{Get\+Tangents@{Get\+Tangents}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Tangents()}{GetTangents()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Get\+Tangents (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ $\ast$$\ast$}]{p\+Lockable\+Array,  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_aa1da929bb1905386e98d8e1caff3556e}\label{class_fbx_geometry_base_aa1da929bb1905386e98d8e1caff3556e}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+Tangents\+Indices@{Get\+Tangents\+Indices}}
+\index{Get\+Tangents\+Indices@{Get\+Tangents\+Indices}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+Tangents\+Indices()}{GetTangentsIndices()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Get\+Tangents\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$}]{p\+Lockable\+Array,  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a65147440e2f577ab7f5b60e228881641}\label{class_fbx_geometry_base_a65147440e2f577ab7f5b60e228881641}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Get\+U\+V\+Set\+Names@{Get\+U\+V\+Set\+Names}}
+\index{Get\+U\+V\+Set\+Names@{Get\+U\+V\+Set\+Names}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Get\+U\+V\+Set\+Names()}{GetUVSetNames()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Get\+U\+V\+Set\+Names (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string_list}{Fbx\+String\+List} \&}]{p\+U\+V\+Set\+Name\+List }\end{DoxyParamCaption}) const}
+
+Returns this geometry\textquotesingle{}s all UV set names. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Name\+List} & A reference to {\ttfamily \hyperlink{class_fbx_string_list}{Fbx\+String\+List}} that will be filled with this geometry\textquotesingle{}s all UV set names. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_geometry_base_abc912331f01b903dee155a1a3dbff0b8}\label{class_fbx_geometry_base_abc912331f01b903dee155a1a3dbff0b8}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Binormals@{Init\+Binormals}}
+\index{Init\+Binormals@{Init\+Binormals}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Binormals()}{InitBinormals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Init\+Binormals (\begin{DoxyParamCaption}\item[{int}]{p\+Count = {\ttfamily 0},  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0},  }\item[{const char $\ast$}]{p\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Allocates memory space for the array of binormals. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The desired size of the binormal array. If p\+Count is specified, the array will have the same size as p\+Count. If p\+Count is not specified, the array will be the same length as the array of control points. \\
+\hline
+{\em p\+Layer\+Index} & The specified layer index to allocate memory space for the array of binormals. \\
+\hline
+{\em p\+Name} & The specified name for the allocated binormals array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called after function Fbx\+Layer\+Container\+::\+Init\+Control\+Points(). The binormals initialized with this function will have the reference mode set to e\+Direct. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac19b7cccc9249484196272c1df43b702}\label{class_fbx_geometry_base_ac19b7cccc9249484196272c1df43b702}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Binormals@{Init\+Binormals}}
+\index{Init\+Binormals@{Init\+Binormals}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Binormals()}{InitBinormals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Init\+Binormals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} $\ast$}]{p\+Src,  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Allocates memory space for the array of binormals cloned from the p\+Src. 
+\begin{DoxyParams}{引数}
+{\em p\+Src} & The source geometry from which the binormals information is cloned. \\
+\hline
+{\em p\+Layer\+Index} & The specified layer index to allocate memory space for cloned array of binormals from the p\+Src. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called with the argument, otherwise it does not do anything. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}\label{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Control\+Points@{Init\+Control\+Points}}
+\index{Init\+Control\+Points@{Init\+Control\+Points}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Control\+Points()}{InitControlPoints()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Init\+Control\+Points (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allocates memory space for the array of control points. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of control points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Any previously allocated array of control points will be cleared. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_nurbs_surface_ab4ba96b12b96a6adc0f95f345e3f3abd}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_aa0ff0dd79f86ab4d6976b73d003fd6be}{Fbx\+Nurbs}, \hyperlink{class_fbx_nurbs_curve_ae6a6921bd7bbe88bcda86f14e9639df0}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_patch_a0f82daebd6307d417561b1d0a188f95d}{Fbx\+Patch}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a4bab80d4a05c813ad635127612f43515}\label{class_fbx_geometry_base_a4bab80d4a05c813ad635127612f43515}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Normals@{Init\+Normals}}
+\index{Init\+Normals@{Init\+Normals}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Normals()}{InitNormals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Init\+Normals (\begin{DoxyParamCaption}\item[{int}]{p\+Count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Allocates memory space for the array of normals. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The desired size for the normal array. If p\+Count is specified, the array will be the same size as p\+Count. If p\+Count is not specified, the array will be the same length as the array of control points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called after function Fbx\+Layer\+Container\+::\+Init\+Control\+Points(). 
+
+The normals initialized with this function will have the Reference\+Mode set to e\+Direct. Also, the array will always be defined on layer 0. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ab0eed06f53d189b6c81560b78905c9b0}\label{class_fbx_geometry_base_ab0eed06f53d189b6c81560b78905c9b0}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Normals@{Init\+Normals}}
+\index{Init\+Normals@{Init\+Normals}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Normals()}{InitNormals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Init\+Normals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} $\ast$}]{p\+Src }\end{DoxyParamCaption})}
+
+Allocates memory space for the array of normals cloned from the p\+Src. 
+\begin{DoxyParams}{引数}
+{\em p\+Src} & The source geometry from which the normals information is cloned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called with the argument, otherwise it does not do anything. Also, it will only process the normals array defined on layer 0 of the p\+Src. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac5b188a0deba5132de9805538f014799}\label{class_fbx_geometry_base_ac5b188a0deba5132de9805538f014799}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Tangents@{Init\+Tangents}}
+\index{Init\+Tangents@{Init\+Tangents}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Tangents()}{InitTangents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Init\+Tangents (\begin{DoxyParamCaption}\item[{int}]{p\+Count = {\ttfamily 0},  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0},  }\item[{const char $\ast$}]{p\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Allocates memory space for the array of tangents on specified layer. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The desired size of the tangent array. If p\+Count is specified, the array will be the same size as p\+Count. If p\+Count is not specified, the array will be the same length as the array of control points. \\
+\hline
+{\em p\+Layer\+Index} & The specified layer index to allocate memory space for the array of tangents. \\
+\hline
+{\em p\+Name} & The specified name for the allocated tangents array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called after function Fbx\+Layer\+Container\+::\+Init\+Control\+Points(). The tangents initialized with this function will have the reference mode set to e\+Direct. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_ac6b469b25670b8a4c7a17042a96eb314}\label{class_fbx_geometry_base_ac6b469b25670b8a4c7a17042a96eb314}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Init\+Tangents@{Init\+Tangents}}
+\index{Init\+Tangents@{Init\+Tangents}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Init\+Tangents()}{InitTangents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Base\+::\+Init\+Tangents (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} $\ast$}]{p\+Src,  }\item[{const int}]{p\+Layer\+Index = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Allocates memory space for the array of tangents cloned from the p\+Src on the specified layer. 
+\begin{DoxyParams}{引数}
+{\em p\+Src} & The source geometry from which the tangents information is cloned. \\
+\hline
+{\em p\+Layer\+Index} & The specified layer index to allocate memory space for cloned array of tangents from the p\+Src. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called with the argument, otherwise it does not do anything. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a858cccba0c319e1ee9160c0d7209bacf}\label{class_fbx_geometry_base_a858cccba0c319e1ee9160c0d7209bacf}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Memory\+Usage@{Memory\+Usage}}
+\index{Memory\+Usage@{Memory\+Usage}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Memory\+Usage()}{MemoryUsage()}}
+{\footnotesize\ttfamily virtual int Fbx\+Geometry\+Base\+::\+Memory\+Usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Calculate the actual amount of memory used by this geometry object. \begin{DoxyReturn}{戻り値}
+The memory size in bytes (includes the amount use by the data defined in the layers). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a07a88ca035b8b21b407a88bef375831f}\label{class_fbx_geometry_base_a07a88ca035b8b21b407a88bef375831f}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Binormal@{Remove\+Element\+Binormal}}
+\index{Remove\+Element\+Binormal@{Remove\+Element\+Binormal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Binormal()}{RemoveElementBinormal()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Binormal (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal} $\ast$}]{p\+Element\+Binormal }\end{DoxyParamCaption})}
+
+Remove the binormal geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Binormal} & A pointer to the binormal element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a91216359c824cc80d113e0760d59e9bb}\label{class_fbx_geometry_base_a91216359c824cc80d113e0760d59e9bb}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Edge\+Crease@{Remove\+Element\+Edge\+Crease}}
+\index{Remove\+Element\+Edge\+Crease@{Remove\+Element\+Edge\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Edge\+Crease()}{RemoveElementEdgeCrease()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Edge\+Crease (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$}]{p\+Element\+Crease }\end{DoxyParamCaption})}
+
+Remove the edge crease geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Crease} & A pointer to the edge crease element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a26484bbcc3f5a76366fcbe7352c8fefa}\label{class_fbx_geometry_base_a26484bbcc3f5a76366fcbe7352c8fefa}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Hole@{Remove\+Element\+Hole}}
+\index{Remove\+Element\+Hole@{Remove\+Element\+Hole}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Hole()}{RemoveElementHole()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Hole (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole} $\ast$}]{p\+Element\+Hole }\end{DoxyParamCaption})}
+
+Remove the hole geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Hole} & A pointer to the hole element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a396c0e3be695dbca3724be1e47e9f7cb}\label{class_fbx_geometry_base_a396c0e3be695dbca3724be1e47e9f7cb}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Material@{Remove\+Element\+Material}}
+\index{Remove\+Element\+Material@{Remove\+Element\+Material}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Material()}{RemoveElementMaterial()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material} $\ast$}]{p\+Element\+Material }\end{DoxyParamCaption})}
+
+Remove the material geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Material} & A pointer to the material element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a9aadbaa3f50db80b67bd1b3bc9119c7b}\label{class_fbx_geometry_base_a9aadbaa3f50db80b67bd1b3bc9119c7b}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Normal@{Remove\+Element\+Normal}}
+\index{Remove\+Element\+Normal@{Remove\+Element\+Normal}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Normal()}{RemoveElementNormal()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Normal (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal} $\ast$}]{p\+Element\+Normal }\end{DoxyParamCaption})}
+
+Remove the normal geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Normal} & A pointer to the normal element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a0746664cececc19040a011ddbc7c7623}\label{class_fbx_geometry_base_a0746664cececc19040a011ddbc7c7623}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Polygon\+Group@{Remove\+Element\+Polygon\+Group}}
+\index{Remove\+Element\+Polygon\+Group@{Remove\+Element\+Polygon\+Group}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Polygon\+Group()}{RemoveElementPolygonGroup()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Polygon\+Group (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group} $\ast$}]{p\+Element\+Polygon\+Group }\end{DoxyParamCaption})}
+
+Remove the polygon group geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Polygon\+Group} & A pointer to the polygon group element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a55da601b539c3e1c933fb1b3f053e1ca}\label{class_fbx_geometry_base_a55da601b539c3e1c933fb1b3f053e1ca}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Smoothing@{Remove\+Element\+Smoothing}}
+\index{Remove\+Element\+Smoothing@{Remove\+Element\+Smoothing}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Smoothing()}{RemoveElementSmoothing()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Smoothing (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing} $\ast$}]{p\+Element\+Smoothing }\end{DoxyParamCaption})}
+
+Remove the smoothing geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Smoothing} & A pointer to the smoothing element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a9289899568d50f8b60c3a33761c92446}\label{class_fbx_geometry_base_a9289899568d50f8b60c3a33761c92446}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Tangent@{Remove\+Element\+Tangent}}
+\index{Remove\+Element\+Tangent@{Remove\+Element\+Tangent}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Tangent()}{RemoveElementTangent()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Tangent (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent} $\ast$}]{p\+Element\+Tangent }\end{DoxyParamCaption})}
+
+Remove the tangent geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Tangent} & A pointer to the tangent element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_abf8c753f38229a2b076ec20a17da6807}\label{class_fbx_geometry_base_abf8c753f38229a2b076ec20a17da6807}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+User\+Data@{Remove\+Element\+User\+Data}}
+\index{Remove\+Element\+User\+Data@{Remove\+Element\+User\+Data}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+User\+Data()}{RemoveElementUserData()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+User\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data} $\ast$}]{p\+Element\+User\+Data }\end{DoxyParamCaption})}
+
+Remove the user data geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+User\+Data} & A pointer to the user data element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a0f571119663cc96a58d42e0e555a9be6}\label{class_fbx_geometry_base_a0f571119663cc96a58d42e0e555a9be6}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+UV@{Remove\+Element\+UV}}
+\index{Remove\+Element\+UV@{Remove\+Element\+UV}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+U\+V()}{RemoveElementUV()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+UV (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV} $\ast$}]{p\+Element\+UV }\end{DoxyParamCaption})}
+
+Remove the UV geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+UV} & A pointer to the UV element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a123d97fbece214d31199a63c90eb44e1}\label{class_fbx_geometry_base_a123d97fbece214d31199a63c90eb44e1}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Vertex\+Color@{Remove\+Element\+Vertex\+Color}}
+\index{Remove\+Element\+Vertex\+Color@{Remove\+Element\+Vertex\+Color}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Vertex\+Color()}{RemoveElementVertexColor()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Vertex\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color} $\ast$}]{p\+Element\+Vertex\+Color }\end{DoxyParamCaption})}
+
+Remove the vertex color geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Vertex\+Color} & A pointer to the vertex color element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a01fe726448c9362a399148aceb051f71}\label{class_fbx_geometry_base_a01fe726448c9362a399148aceb051f71}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Vertex\+Crease@{Remove\+Element\+Vertex\+Crease}}
+\index{Remove\+Element\+Vertex\+Crease@{Remove\+Element\+Vertex\+Crease}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Vertex\+Crease()}{RemoveElementVertexCrease()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Vertex\+Crease (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease} $\ast$}]{p\+Element\+Crease }\end{DoxyParamCaption})}
+
+Remove the vertex crease geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Crease} & A pointer to the vertex crease element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a5265ada1a14bc10a5be69719547827b5}\label{class_fbx_geometry_base_a5265ada1a14bc10a5be69719547827b5}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Remove\+Element\+Visibility@{Remove\+Element\+Visibility}}
+\index{Remove\+Element\+Visibility@{Remove\+Element\+Visibility}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Remove\+Element\+Visibility()}{RemoveElementVisibility()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Base\+::\+Remove\+Element\+Visibility (\begin{DoxyParamCaption}\item[{\hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility} $\ast$}]{p\+Element\+Visibility }\end{DoxyParamCaption})}
+
+Remove the visibility geometry element from this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Element\+Visibility} & A pointer to the visibility element to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the geometry element is removed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_base_a4f54256d4cbc5e7ae0ae533f7b77ace4}\label{class_fbx_geometry_base_a4f54256d4cbc5e7ae0ae533f7b77ace4}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Set\+Control\+Point\+At@{Set\+Control\+Point\+At}}
+\index{Set\+Control\+Point\+At@{Set\+Control\+Point\+At}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+At()}{SetControlPointAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Set\+Control\+Point\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Ctrl\+Point,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Normal,  }\item[{int}]{p\+Index,  }\item[{bool}]{p\+I2\+D\+Search = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the control point and the normal values at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Ctrl\+Point} & The value of the control point. \\
+\hline
+{\em p\+Normal} & The value of the normal. \\
+\hline
+{\em p\+Index} & The specified index of the control point/normal. \\
+\hline
+{\em p\+I2\+D\+Search} & When {\ttfamily true} A\+ND the normals array reference mode is e\+Index\+To\+Direct, search p\+Normal in the existing array to avoid inserting if it already exist. N\+O\+TE\+: This feature uses a linear search algorithm, therefore it can be time consuming if the D\+I\+R\+E\+CT array of normals contains a huge number of elements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the arrays (control points and normals) are not big enough to store the values at the specified index, they will be automatically resized to accommodate the new entries. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_trim_nurbs_surface_a8a42014521b0c91eba3554ecafe56814}{Fbx\+Trim\+Nurbs\+Surface}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{class_fbx_geometry_base_ab2d5567b073e6b9f4feb5bb428fa99e4}\label{class_fbx_geometry_base_ab2d5567b073e6b9f4feb5bb428fa99e4}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Set\+Control\+Point\+At@{Set\+Control\+Point\+At}}
+\index{Set\+Control\+Point\+At@{Set\+Control\+Point\+At}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+At()}{SetControlPointAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Set\+Control\+Point\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Ctrl\+Point,  }\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the control point at a specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Ctrl\+Point} & The value of the control point. \\
+\hline
+{\em p\+Index} & The specified index of the control point.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the array is not big enough to store the value at the specified index, it will be automatically resized to accommodate the new entry. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_nurbs_a46f56bfb4c6ffc90b79b2e0b81c89880}{Fbx\+Nurbs}, \hyperlink{class_fbx_nurbs_curve_a7313bcfe1a7b6d566f30e5395bf89877}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_trim_nurbs_surface_acec735094f0448ab58a48baf38c0c7ef}{Fbx\+Trim\+Nurbs\+Surface}, \hyperlink{class_fbx_patch_a43bd49dba561cff8f166b8f7a12816f6}{Fbx\+Patch}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_base_aea3fc519575d88c430221b0e74040b0c}\label{class_fbx_geometry_base_aea3fc519575d88c430221b0e74040b0c}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Set\+Control\+Point\+Count@{Set\+Control\+Point\+Count}}
+\index{Set\+Control\+Point\+Count@{Set\+Control\+Point\+Count}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+Count()}{SetControlPointCount()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Set\+Control\+Point\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allocates memory space for the array of control points. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of control points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Any previously allocated array of control points will N\+OT be cleared. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_base_a219c072f0c9a67ddcc928ab3998f9494}\label{class_fbx_geometry_base_a219c072f0c9a67ddcc928ab3998f9494}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Set\+Control\+Point\+Normal\+At@{Set\+Control\+Point\+Normal\+At}}
+\index{Set\+Control\+Point\+Normal\+At@{Set\+Control\+Point\+Normal\+At}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+Normal\+At()}{SetControlPointNormalAt()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+Base\+::\+Set\+Control\+Point\+Normal\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Normal,  }\item[{int}]{p\+Index,  }\item[{bool}]{p\+I2\+D\+Search = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Sets the control point normal value at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Normal} & The value of the normal. \\
+\hline
+{\em p\+Index} & The specified index of the normal. \\
+\hline
+{\em p\+I2\+D\+Search} & When {\ttfamily true} A\+ND the normals array reference mode is e\+Index\+To\+Direct, search p\+Normal in the existing array to avoid inserting it if it already exist. N\+O\+TE\+: this feature uses a linear search algorithm, therefore it can be time consuming if the D\+I\+R\+E\+CT array of normals contains a huge number of elements. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the array is not big enough to store the value at the specified index, it will be automatically resized to accommodate the new entry. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_geometry_base_a462c10c0d41fe55413e41435e62128c9}\label{class_fbx_geometry_base_a462c10c0d41fe55413e41435e62128c9}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!B\+Box\+Max@{B\+Box\+Max}}
+\index{B\+Box\+Max@{B\+Box\+Max}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{B\+Box\+Max}{BBoxMax}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Geometry\+Base\+::\+B\+Box\+Max}
+
+
+
+The maximum value of the control points bounding box. 
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a66d6d410709e83f4f4d0a17651fbb717}\label{class_fbx_geometry_base_a66d6d410709e83f4f4d0a17651fbb717}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!B\+Box\+Min@{B\+Box\+Min}}
+\index{B\+Box\+Min@{B\+Box\+Min}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{B\+Box\+Min}{BBoxMin}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Geometry\+Base\+::\+B\+Box\+Min}
+
+
+
+The minimum value of the control points bounding box. 
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a64d3184a3bf9bcd97f7069176b0ad4c1}\label{class_fbx_geometry_base_a64d3184a3bf9bcd97f7069176b0ad4c1}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Cast\+Shadow@{Cast\+Shadow}}
+\index{Cast\+Shadow@{Cast\+Shadow}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Cast\+Shadow}{CastShadow}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Geometry\+Base\+::\+Cast\+Shadow}
+
+
+
+If true, the geometry will produce shadows. 
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a88c6c0552ceb07b3a638cc3175fbe867}\label{class_fbx_geometry_base_a88c6c0552ceb07b3a638cc3175fbe867}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!m\+Control\+Points@{m\+Control\+Points}}
+\index{m\+Control\+Points@{m\+Control\+Points}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{m\+Control\+Points}{mControlPoints}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_vector4}{Fbx\+Vector4}$>$ Fbx\+Geometry\+Base\+::m\+Control\+Points}
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a51e2206786ddb6a94a15be4a8fd9517f}\label{class_fbx_geometry_base_a51e2206786ddb6a94a15be4a8fd9517f}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Primary\+Visibility@{Primary\+Visibility}}
+\index{Primary\+Visibility@{Primary\+Visibility}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Primary\+Visibility}{PrimaryVisibility}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Geometry\+Base\+::\+Primary\+Visibility}
+
+
+
+Control the geometry render state. Geometry can still cast shadows even if this is turned off. 
+
+\mbox{\Hypertarget{class_fbx_geometry_base_a38e79ed34812e8b02828ebb5690f4ce8}\label{class_fbx_geometry_base_a38e79ed34812e8b02828ebb5690f4ce8}} 
+\index{Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}!Receive\+Shadow@{Receive\+Shadow}}
+\index{Receive\+Shadow@{Receive\+Shadow}!Fbx\+Geometry\+Base@{Fbx\+Geometry\+Base}}
+\subsubsection{\texorpdfstring{Receive\+Shadow}{ReceiveShadow}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Geometry\+Base\+::\+Receive\+Shadow}
+
+
+
+If true, the geometry will receive shadows. 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxgeometrybase_8h}{fbxgeometrybase.\+h}\end{DoxyCompactItemize}

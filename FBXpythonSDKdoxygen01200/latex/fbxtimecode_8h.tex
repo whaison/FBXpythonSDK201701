@@ -1,0 +1,477 @@
+\hypertarget{fbxtimecode_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/core/base/fbxtimecode.h ファイル}
+\label{fbxtimecode_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/fbxtimecode.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/fbxtimecode.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+fbxtimecode.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxtimecode_8h_a9fae804d52d18c40a0ecac9a603d5403}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO}~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(0)
+\item 
+\#define \hyperlink{fbxtimecode_8h_afc4f630fd3603ad9150a9734cbb715ea}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON}~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(1)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a9a0f605afb2cca1afcbf75e9c75adae9}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY}~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(-\/0x7fffffffffffffff)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a870252df1314c84b2fa2dd559491d16f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY}~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(0x7fffffffffffffff)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(100000000)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a31017790fa923bf604549234066a2656}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(46186158)
+\item 
+\#define \hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a31017790fa923bf604549234066a2656}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}$\ast$1000)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a4cd8a1f8c95bafb8813a4a73962ba471}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}$\ast$60)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a8b2ae758402e61ddb3282eb98df33e4d}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a4cd8a1f8c95bafb8813a4a73962ba471}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE}$\ast$60)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a1579251c7281655aa65dde8ccb010755}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a8b2ae758402e61ddb3282eb98df33e4d}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR}$\ast$24)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a072d9c5ee4abcf93180b5e9860827f82}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/30/2)
+\item 
+\#define \hyperlink{fbxtimecode_8h_af1908fd70136690b32da01abe3a9b0c7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/30)
+\item 
+\#define \hyperlink{fbxtimecode_8h_aa7e7f3312f708fc001ddbe06759abcbd}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}/2)
+\item 
+\#define \hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/30$\ast$1001/1000)
+\item 
+\#define \hyperlink{fbxtimecode_8h_ae861f5ccc0675b33d5b1ee627f215671}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$2)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a73393e5f400930cbe4ba99318e70e2dc}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$30)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a058c2cce5db842a2781438bf7d0a29d3}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$1798)
+\item 
+\#define \hyperlink{fbxtimecode_8h_ae55a3c3677ed99558954e8a1ce367e36}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$1800)
+\item 
+\#define \hyperlink{fbxtimecode_8h_aeb4e4dabcf35670f866b7e2a9c7eb3d8}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$17982)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a972bf1877791608b1c39c15c1656288e}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$107892)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a948ab3598fc26113d42f3dc352db5bda}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$108000)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$30)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a8159ca6121228ae794e3c61c351313e8}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$60)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a8f3deecadf77db5e03bdfa35eba93dcc}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$3600)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a54faa4c1ead3d18e867ef0537bdaa6eb}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM}~\hyperlink{fbxtypes_8h_a90ed25197196e9196d00a150cabec75f}{Fbx\+U\+Long}(\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}$\ast$1000$\ast$30/1001)
+\item 
+\#define \hyperlink{fbxtimecode_8h_af10fbbf09946257dfb2ca4ecf60fba0c}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN}~\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}
+\item 
+\#define \hyperlink{fbxtimecode_8h_a77102a168301141ac9c05a91cf0392fb}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/25/2)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a8d66913087d2a1a40ad699d5a2616bf3}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/25)
+\item 
+\#define \hyperlink{fbxtimecode_8h_ae4155aef5bd2af831fbc4dddc52e9d3d}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/24)
+\item 
+\#define \hyperlink{fbxtimecode_8h_ac9529a41e984133a04fa1ea33dab16f9}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}/2)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/24$\ast$1001/1000)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}$\ast$24)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a8339497de5b37f5995855d93a0104b41}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$60)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a6cfbd6c342a81f2054f04fdb20b09cec}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR}~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$3600)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a34882691463a05bc9ee1f0197320ebca}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM}~\hyperlink{fbxtypes_8h_a90ed25197196e9196d00a150cabec75f}{Fbx\+U\+Long}(\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}$\ast$1000$\ast$24/1001)
+\item 
+\#define \hyperlink{fbxtimecode_8h_a6df1568e9233f7ca91decb48e626ba5f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN}~\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}
+\item 
+\#define \hyperlink{fbxtimecode_8h_af2a360896dc91cb770db7283cc808f3a}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM}(quot,  num,  den)~((quot) = (num) / (den), (quot) $\ast$ (den))
+\item 
+\#define \hyperlink{fbxtimecode_8h_adc3a1667f4a7f337bfd14c96d3ea64dd}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM}(quot,  num,  den)~((quot) = ((num -\/ (-\/\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(num $<$ 0) \& (den -\/ 1))) / (den)), (quot) $\ast$ (den))
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a9819ff4c30faa7887d38b69d5e87f1df}{Fbx\+T\+C\+Seconds} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a0b0846382d519e4155f765f80eaeb4f7}{Fbx\+T\+C\+Minutes} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a3cceee4d1c7598b069236e6c960479d6}{Fbx\+T\+C\+Hours} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_ab7b07f8ccc1cdcaff0f6fb8c9344be9d}{Fbx\+T\+C\+Set\+Rate} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Period)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a8c52cd357e5e5300f54bbd573d170fe0}{Fbx\+T\+C\+Get\+Rate} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Period)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a53746fa7297d647f09a93c9ae608963c}{Fbx\+T\+C\+Set\+N\+T\+SC} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, int p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_acc6b21630d54e99e4208a8a3d1e589f8}{Fbx\+T\+C\+Get\+N\+T\+SC} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, int \&p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a840a2e2026d420fd53fbfbdf985ed848}{Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, int p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a329f7bb453ca77fdc92ba439f06da01a}{Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, int \&p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_ab656133a6bb3262b94d5cc3646944dce}{Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, int p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_af49cfca1880b412ee3cfb5d096e2b403}{Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, int \&p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a4884e02fbc443e9825b298ef980073d7}{Fbx\+T\+C\+Set\+M\+N\+T\+SC} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, int p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a5e86af8b1194c421c3a8f74375a205dc}{Fbx\+T\+C\+Get\+M\+N\+T\+SC} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, int \&p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a9f06d3ae864071f4c9bedaa5df0b56af}{Fbx\+T\+C\+Set\+P\+AL} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, int p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a30a4a8083c3d4b519a3865ee146308a0}{Fbx\+T\+C\+Get\+P\+AL} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, int \&p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_af656547cfa2e3b0ef35b031680a4428f}{Fbx\+T\+C\+Set\+F\+I\+LM} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_a0d435b867bb5a921744ae63e12fc3096}{Fbx\+T\+C\+Get\+F\+I\+LM} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_aa4683d1beeded64cd03c02eafd771321}{Fbx\+T\+C\+Set\+F\+I\+L\+M\+ND} (int p\+Hour, int p\+Minute, int p\+Second, \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Frame, int p\+Field)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxtimecode_8h_ab89b05b42cb3d818a97dd02b5ae9e6f9}{Fbx\+T\+C\+Get\+F\+I\+L\+M\+ND} (\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} p\+Time, int \&p\+Hour, int \&p\+Minute, int \&p\+Second, int \&p\+Frame, int \&p\+Field)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxtimecode_8h_a1579251c7281655aa65dde8ccb010755}\label{fbxtimecode_8h_a1579251c7281655aa65dde8ccb010755}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY}{FBXSDK\_TC\_DAY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+D\+AY~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a8b2ae758402e61ddb3282eb98df33e4d}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR}$\ast$24)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_afc4f630fd3603ad9150a9734cbb715ea}\label{fbxtimecode_8h_afc4f630fd3603ad9150a9734cbb715ea}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON}{FBXSDK\_TC\_EPSILON}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+E\+P\+S\+I\+L\+ON~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(1)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ae4155aef5bd2af831fbc4dddc52e9d3d}\label{fbxtimecode_8h_ae4155aef5bd2af831fbc4dddc52e9d3d}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}{FBXSDK\_TC\_FILM\_FRAME}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/24)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}\label{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}{FBXSDK\_TC\_FIX\_DEN}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(100000000)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a8b2ae758402e61ddb3282eb98df33e4d}\label{fbxtimecode_8h_a8b2ae758402e61ddb3282eb98df33e4d}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR}{FBXSDK\_TC\_HOUR}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+UR~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a4cd8a1f8c95bafb8813a4a73962ba471}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE}$\ast$60)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_adc3a1667f4a7f337bfd14c96d3ea64dd}\label{fbxtimecode_8h_adc3a1667f4a7f337bfd14c96d3ea64dd}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM}{FBXSDK\_TC\_HOUR\_REM}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+H\+O\+U\+R\+\_\+\+R\+EM(\begin{DoxyParamCaption}\item[{}]{quot,  }\item[{}]{num,  }\item[{}]{den }\end{DoxyParamCaption})~((quot) = ((num -\/ (-\/\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(num $<$ 0) \& (den -\/ 1))) / (den)), (quot) $\ast$ (den))}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a870252df1314c84b2fa2dd559491d16f}\label{fbxtimecode_8h_a870252df1314c84b2fa2dd559491d16f}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY}{FBXSDK\_TC\_INFINITY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+I\+N\+F\+I\+N\+I\+TY~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(0x7fffffffffffffff)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a6cfbd6c342a81f2054f04fdb20b09cec}\label{fbxtimecode_8h_a6cfbd6c342a81f2054f04fdb20b09cec}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR}{FBXSDK\_TC\_MFILM\_1\_HOUR}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+H\+O\+UR~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$3600)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a8339497de5b37f5995855d93a0104b41}\label{fbxtimecode_8h_a8339497de5b37f5995855d93a0104b41}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}{FBXSDK\_TC\_MFILM\_1\_MINUTE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+M\+I\+N\+U\+TE~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$60)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}\label{fbxtimecode_8h_a5dbb4164111a627b4d0c47a4451e191f}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}{FBXSDK\_TC\_MFILM\_1\_SECOND}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+1\+\_\+\+S\+E\+C\+O\+ND~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}$\ast$24)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a6df1568e9233f7ca91decb48e626ba5f}\label{fbxtimecode_8h_a6df1568e9233f7ca91decb48e626ba5f}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN}{FBXSDK\_TC\_MFILM\_DEN}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+D\+EN~\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ac9529a41e984133a04fa1ea33dab16f9}\label{fbxtimecode_8h_ac9529a41e984133a04fa1ea33dab16f9}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD}{FBXSDK\_TC\_MFILM\_FIELD}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+I\+E\+LD~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}/2)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}\label{fbxtimecode_8h_a1ba46096042372b3b154719090effaa5}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME}{FBXSDK\_TC\_MFILM\_FRAME}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+F\+R\+A\+ME~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/24$\ast$1001/1000)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a34882691463a05bc9ee1f0197320ebca}\label{fbxtimecode_8h_a34882691463a05bc9ee1f0197320ebca}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM}{FBXSDK\_TC\_MFILM\_NUM}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+F\+I\+L\+M\+\_\+\+N\+UM~\hyperlink{fbxtypes_8h_a90ed25197196e9196d00a150cabec75f}{Fbx\+U\+Long}(\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}$\ast$1000$\ast$24/1001)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a31017790fa923bf604549234066a2656}\label{fbxtimecode_8h_a31017790fa923bf604549234066a2656}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}{FBXSDK\_TC\_MILLISECOND}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(46186158)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a9a0f605afb2cca1afcbf75e9c75adae9}\label{fbxtimecode_8h_a9a0f605afb2cca1afcbf75e9c75adae9}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY}{FBXSDK\_TC\_MINFINITY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+F\+I\+N\+I\+TY~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(-\/0x7fffffffffffffff)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a4cd8a1f8c95bafb8813a4a73962ba471}\label{fbxtimecode_8h_a4cd8a1f8c95bafb8813a4a73962ba471}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE}{FBXSDK\_TC\_MINUTE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+N\+U\+TE~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}$\ast$60)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a972bf1877791608b1c39c15c1656288e}\label{fbxtimecode_8h_a972bf1877791608b1c39c15c1656288e}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_107892\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+107892\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$107892)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a948ab3598fc26113d42f3dc352db5bda}\label{fbxtimecode_8h_a948ab3598fc26113d42f3dc352db5bda}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_108000\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+108000\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$108000)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_aeb4e4dabcf35670f866b7e2a9c7eb3d8}\label{fbxtimecode_8h_aeb4e4dabcf35670f866b7e2a9c7eb3d8}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_17982\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+17982\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$17982)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a058c2cce5db842a2781438bf7d0a29d3}\label{fbxtimecode_8h_a058c2cce5db842a2781438bf7d0a29d3}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_1798\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1798\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$1798)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ae55a3c3677ed99558954e8a1ce367e36}\label{fbxtimecode_8h_ae55a3c3677ed99558954e8a1ce367e36}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_1800\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1800\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$1800)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a8f3deecadf77db5e03bdfa35eba93dcc}\label{fbxtimecode_8h_a8f3deecadf77db5e03bdfa35eba93dcc}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR}{FBXSDK\_TC\_MNTSC\_1\_HOUR}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+H\+O\+UR~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$3600)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a8159ca6121228ae794e3c61c351313e8}\label{fbxtimecode_8h_a8159ca6121228ae794e3c61c351313e8}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE}{FBXSDK\_TC\_MNTSC\_1\_MINUTE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+M\+I\+N\+U\+TE~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}$\ast$60)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}\label{fbxtimecode_8h_a11b5c6ce3f626707bca9b8ec20c42994}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND}{FBXSDK\_TC\_MNTSC\_1\_SECOND}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+1\+\_\+\+S\+E\+C\+O\+ND~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$30)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ae861f5ccc0675b33d5b1ee627f215671}\label{fbxtimecode_8h_ae861f5ccc0675b33d5b1ee627f215671}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_2\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+2\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$2)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a73393e5f400930cbe4ba99318e70e2dc}\label{fbxtimecode_8h_a73393e5f400930cbe4ba99318e70e2dc}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES}{FBXSDK\_TC\_MNTSC\_30\_FRAMES}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+30\+\_\+\+F\+R\+A\+M\+ES~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}$\ast$30)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_af10fbbf09946257dfb2ca4ecf60fba0c}\label{fbxtimecode_8h_af10fbbf09946257dfb2ca4ecf60fba0c}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN}{FBXSDK\_TC\_MNTSC\_DEN}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+D\+EN~\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}}
+
+\mbox{\Hypertarget{fbxtimecode_8h_aa7e7f3312f708fc001ddbe06759abcbd}\label{fbxtimecode_8h_aa7e7f3312f708fc001ddbe06759abcbd}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}{FBXSDK\_TC\_MNTSC\_FIELD}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}/2)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}\label{fbxtimecode_8h_ad076d59c071b852e052a25a9e1399a25}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}{FBXSDK\_TC\_MNTSC\_FRAME}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/30$\ast$1001/1000)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a54faa4c1ead3d18e867ef0537bdaa6eb}\label{fbxtimecode_8h_a54faa4c1ead3d18e867ef0537bdaa6eb}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM}{FBXSDK\_TC\_MNTSC\_NUM}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+N\+T\+S\+C\+\_\+\+N\+UM~\hyperlink{fbxtypes_8h_a90ed25197196e9196d00a150cabec75f}{Fbx\+U\+Long}(\hyperlink{fbxtimecode_8h_a2f19e3072a4e995666abdd7acf6757b7}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+F\+I\+X\+\_\+\+D\+EN}$\ast$1000$\ast$30/1001)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a072d9c5ee4abcf93180b5e9860827f82}\label{fbxtimecode_8h_a072d9c5ee4abcf93180b5e9860827f82}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD}{FBXSDK\_TC\_NTSC\_FIELD}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+I\+E\+LD~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/30/2)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_af1908fd70136690b32da01abe3a9b0c7}\label{fbxtimecode_8h_af1908fd70136690b32da01abe3a9b0c7}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME}{FBXSDK\_TC\_NTSC\_FRAME}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+N\+T\+S\+C\+\_\+\+F\+R\+A\+ME~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/30)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a77102a168301141ac9c05a91cf0392fb}\label{fbxtimecode_8h_a77102a168301141ac9c05a91cf0392fb}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD}{FBXSDK\_TC\_PAL\_FIELD}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+I\+E\+LD~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/25/2)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a8d66913087d2a1a40ad699d5a2616bf3}\label{fbxtimecode_8h_a8d66913087d2a1a40ad699d5a2616bf3}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME}{FBXSDK\_TC\_PAL\_FRAME}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+P\+A\+L\+\_\+\+F\+R\+A\+ME~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}/25)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_af2a360896dc91cb770db7283cc808f3a}\label{fbxtimecode_8h_af2a360896dc91cb770db7283cc808f3a}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM}{FBXSDK\_TC\_REM}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+R\+EM(\begin{DoxyParamCaption}\item[{}]{quot,  }\item[{}]{num,  }\item[{}]{den }\end{DoxyParamCaption})~((quot) = (num) / (den), (quot) $\ast$ (den))}
+
+\mbox{\Hypertarget{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}\label{fbxtimecode_8h_aa1f34b73128e2c45d659f094661c8e10}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND}{FBXSDK\_TC\_SECOND}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+S\+E\+C\+O\+ND~\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}(\hyperlink{fbxtimecode_8h_a31017790fa923bf604549234066a2656}{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+M\+I\+L\+L\+I\+S\+E\+C\+O\+ND}$\ast$1000)}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a9fae804d52d18c40a0ecac9a603d5403}\label{fbxtimecode_8h_a9fae804d52d18c40a0ecac9a603d5403}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO@{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO}{FBXSDK\_TC\_ZERO}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+C\+\_\+\+Z\+E\+RO~\hyperlink{fbxtypes_8h_a1151cb2cee12fab1633d7f899548e99f}{F\+B\+X\+S\+D\+K\+\_\+\+L\+O\+N\+G\+L\+O\+NG}(0)}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxtimecode_8h_a0d435b867bb5a921744ae63e12fc3096}\label{fbxtimecode_8h_a0d435b867bb5a921744ae63e12fc3096}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+F\+I\+LM@{Fbx\+T\+C\+Get\+F\+I\+LM}}
+\index{Fbx\+T\+C\+Get\+F\+I\+LM@{Fbx\+T\+C\+Get\+F\+I\+LM}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+F\+I\+L\+M()}{FbxTCGetFILM()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+F\+I\+LM (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ab89b05b42cb3d818a97dd02b5ae9e6f9}\label{fbxtimecode_8h_ab89b05b42cb3d818a97dd02b5ae9e6f9}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+F\+I\+L\+M\+ND@{Fbx\+T\+C\+Get\+F\+I\+L\+M\+ND}}
+\index{Fbx\+T\+C\+Get\+F\+I\+L\+M\+ND@{Fbx\+T\+C\+Get\+F\+I\+L\+M\+ND}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+F\+I\+L\+M\+N\+D()}{FbxTCGetFILMND()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+F\+I\+L\+M\+ND (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{int \&}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a5e86af8b1194c421c3a8f74375a205dc}\label{fbxtimecode_8h_a5e86af8b1194c421c3a8f74375a205dc}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+M\+N\+T\+SC@{Fbx\+T\+C\+Get\+M\+N\+T\+SC}}
+\index{Fbx\+T\+C\+Get\+M\+N\+T\+SC@{Fbx\+T\+C\+Get\+M\+N\+T\+SC}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+M\+N\+T\+S\+C()}{FbxTCGetMNTSC()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+M\+N\+T\+SC (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{int \&}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_af49cfca1880b412ee3cfb5d096e2b403}\label{fbxtimecode_8h_af49cfca1880b412ee3cfb5d096e2b403}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd@{Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd}}
+\index{Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd@{Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd()}{FbxTCGetMNTSC\_2Xnd()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+M\+N\+T\+S\+C\+\_\+2\+Xnd (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{int \&}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a329f7bb453ca77fdc92ba439f06da01a}\label{fbxtimecode_8h_a329f7bb453ca77fdc92ba439f06da01a}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd@{Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd}}
+\index{Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd@{Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd()}{FbxTCGetMNTSCnd()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+M\+N\+T\+S\+Cnd (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{int \&}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_acc6b21630d54e99e4208a8a3d1e589f8}\label{fbxtimecode_8h_acc6b21630d54e99e4208a8a3d1e589f8}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+N\+T\+SC@{Fbx\+T\+C\+Get\+N\+T\+SC}}
+\index{Fbx\+T\+C\+Get\+N\+T\+SC@{Fbx\+T\+C\+Get\+N\+T\+SC}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+N\+T\+S\+C()}{FbxTCGetNTSC()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+N\+T\+SC (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{int \&}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a30a4a8083c3d4b519a3865ee146308a0}\label{fbxtimecode_8h_a30a4a8083c3d4b519a3865ee146308a0}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+P\+AL@{Fbx\+T\+C\+Get\+P\+AL}}
+\index{Fbx\+T\+C\+Get\+P\+AL@{Fbx\+T\+C\+Get\+P\+AL}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+P\+A\+L()}{FbxTCGetPAL()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+P\+AL (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{int \&}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a8c52cd357e5e5300f54bbd573d170fe0}\label{fbxtimecode_8h_a8c52cd357e5e5300f54bbd573d170fe0}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Get\+Rate@{Fbx\+T\+C\+Get\+Rate}}
+\index{Fbx\+T\+C\+Get\+Rate@{Fbx\+T\+C\+Get\+Rate}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Get\+Rate()}{FbxTCGetRate()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Get\+Rate (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time,  }\item[{int \&}]{p\+Hour,  }\item[{int \&}]{p\+Minute,  }\item[{int \&}]{p\+Second,  }\item[{int \&}]{p\+Frame,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Period }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a3cceee4d1c7598b069236e6c960479d6}\label{fbxtimecode_8h_a3cceee4d1c7598b069236e6c960479d6}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Hours@{Fbx\+T\+C\+Hours}}
+\index{Fbx\+T\+C\+Hours@{Fbx\+T\+C\+Hours}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Hours()}{FbxTCHours()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Hours (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a0b0846382d519e4155f765f80eaeb4f7}\label{fbxtimecode_8h_a0b0846382d519e4155f765f80eaeb4f7}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Minutes@{Fbx\+T\+C\+Minutes}}
+\index{Fbx\+T\+C\+Minutes@{Fbx\+T\+C\+Minutes}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Minutes()}{FbxTCMinutes()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Minutes (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a9819ff4c30faa7887d38b69d5e87f1df}\label{fbxtimecode_8h_a9819ff4c30faa7887d38b69d5e87f1df}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Seconds@{Fbx\+T\+C\+Seconds}}
+\index{Fbx\+T\+C\+Seconds@{Fbx\+T\+C\+Seconds}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Seconds()}{FbxTCSeconds()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Seconds (\begin{DoxyParamCaption}\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_af656547cfa2e3b0ef35b031680a4428f}\label{fbxtimecode_8h_af656547cfa2e3b0ef35b031680a4428f}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+F\+I\+LM@{Fbx\+T\+C\+Set\+F\+I\+LM}}
+\index{Fbx\+T\+C\+Set\+F\+I\+LM@{Fbx\+T\+C\+Set\+F\+I\+LM}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+F\+I\+L\+M()}{FbxTCSetFILM()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+F\+I\+LM (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_aa4683d1beeded64cd03c02eafd771321}\label{fbxtimecode_8h_aa4683d1beeded64cd03c02eafd771321}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+F\+I\+L\+M\+ND@{Fbx\+T\+C\+Set\+F\+I\+L\+M\+ND}}
+\index{Fbx\+T\+C\+Set\+F\+I\+L\+M\+ND@{Fbx\+T\+C\+Set\+F\+I\+L\+M\+ND}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+F\+I\+L\+M\+N\+D()}{FbxTCSetFILMND()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+F\+I\+L\+M\+ND (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{int}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a4884e02fbc443e9825b298ef980073d7}\label{fbxtimecode_8h_a4884e02fbc443e9825b298ef980073d7}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+M\+N\+T\+SC@{Fbx\+T\+C\+Set\+M\+N\+T\+SC}}
+\index{Fbx\+T\+C\+Set\+M\+N\+T\+SC@{Fbx\+T\+C\+Set\+M\+N\+T\+SC}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+M\+N\+T\+S\+C()}{FbxTCSetMNTSC()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+M\+N\+T\+SC (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{int}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ab656133a6bb3262b94d5cc3646944dce}\label{fbxtimecode_8h_ab656133a6bb3262b94d5cc3646944dce}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd@{Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd}}
+\index{Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd@{Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd()}{FbxTCSetMNTSC\_2Xnd()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+M\+N\+T\+S\+C\+\_\+2\+Xnd (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{int}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a840a2e2026d420fd53fbfbdf985ed848}\label{fbxtimecode_8h_a840a2e2026d420fd53fbfbdf985ed848}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd@{Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd}}
+\index{Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd@{Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd()}{FbxTCSetMNTSCnd()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+M\+N\+T\+S\+Cnd (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{int}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a53746fa7297d647f09a93c9ae608963c}\label{fbxtimecode_8h_a53746fa7297d647f09a93c9ae608963c}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+N\+T\+SC@{Fbx\+T\+C\+Set\+N\+T\+SC}}
+\index{Fbx\+T\+C\+Set\+N\+T\+SC@{Fbx\+T\+C\+Set\+N\+T\+SC}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+N\+T\+S\+C()}{FbxTCSetNTSC()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+N\+T\+SC (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{int}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_a9f06d3ae864071f4c9bedaa5df0b56af}\label{fbxtimecode_8h_a9f06d3ae864071f4c9bedaa5df0b56af}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+P\+AL@{Fbx\+T\+C\+Set\+P\+AL}}
+\index{Fbx\+T\+C\+Set\+P\+AL@{Fbx\+T\+C\+Set\+P\+AL}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+P\+A\+L()}{FbxTCSetPAL()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+P\+AL (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{int}]{p\+Field }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxtimecode_8h_ab7b07f8ccc1cdcaff0f6fb8c9344be9d}\label{fbxtimecode_8h_ab7b07f8ccc1cdcaff0f6fb8c9344be9d}} 
+\index{fbxtimecode.\+h@{fbxtimecode.\+h}!Fbx\+T\+C\+Set\+Rate@{Fbx\+T\+C\+Set\+Rate}}
+\index{Fbx\+T\+C\+Set\+Rate@{Fbx\+T\+C\+Set\+Rate}!fbxtimecode.\+h@{fbxtimecode.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+T\+C\+Set\+Rate()}{FbxTCSetRate()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+T\+C\+Set\+Rate (\begin{DoxyParamCaption}\item[{int}]{p\+Hour,  }\item[{int}]{p\+Minute,  }\item[{int}]{p\+Second,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Frame,  }\item[{\hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long}}]{p\+Period }\end{DoxyParamCaption})}
+

@@ -1,0 +1,309 @@
+\hypertarget{class_fbx_layer_element_template}{}\section{Fbx\+Layer\+Element\+Template$<$ Type $>$ クラステンプレート}
+\label{class_fbx_layer_element_template}\index{Fbx\+Layer\+Element\+Template$<$ Type $>$@{Fbx\+Layer\+Element\+Template$<$ Type $>$}}
+
+
+{\ttfamily \#include $<$fbxlayer.\+h$>$}
+
+
+
+Fbx\+Layer\+Element\+Template$<$ Type $>$ の継承関係図
+% FIG 0
+
+
+Fbx\+Layer\+Element\+Template$<$ Type $>$ 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef Type \hyperlink{class_fbx_layer_element_template_a24cfd1d513a54140bde996ccfa2bf2b6}{Array\+Element\+Type}
+\item 
+typedef \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ Type $>$ \hyperlink{class_fbx_layer_element_template_a1adf77aa24da5ff9786bb19286dcac13}{Direct\+Array\+Type}
+\item 
+typedef \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ \hyperlink{class_fbx_layer_element_template_ada80e444d13e2a73cb90551a712a58ed}{Index\+Array\+Type}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ Type $>$ \& \hyperlink{class_fbx_layer_element_template_a42afd6d78d902570d7b2724cb0336226}{Get\+Direct\+Array} () const
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ Type $>$ \& \hyperlink{class_fbx_layer_element_template_ad34f79d4abaa1d101cc756048a5f11b9}{Get\+Direct\+Array} ()
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ \& \hyperlink{class_fbx_layer_element_template_ab1494495d1944eb4b20c4c97abd6358c}{Get\+Index\+Array} () const
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ \& \hyperlink{class_fbx_layer_element_template_a299f160a392be9be520df2d0a1275fc8}{Get\+Index\+Array} ()
+\item 
+bool \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Clear} ()
+\item 
+bool \hyperlink{class_fbx_layer_element_template_a2519d2a629f652904ff64840e0c45780}{operator==} (const \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template} \& \hyperlink{class_fbx_layer_element_template_ab92b474682b154297b72188986684fd7}{operator=} (\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template} const \&p\+Other)
+\item 
+int \hyperlink{class_fbx_layer_element_template_a971c29199bb9f0674045d2510230010a}{Remap\+Index\+To} (\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} p\+New\+Mapping)
+\item 
+virtual int \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Memory\+Size} () const
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ Type $>$ $\ast$ \hyperlink{class_fbx_layer_element_template_a0c7242aa361d91031b5137fbece371f3}{m\+Direct\+Array}
+\item 
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$ \hyperlink{class_fbx_layer_element_template_a4aa88a6936b2ab08e150ff6336a91a7d}{m\+Index\+Array}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_template_a6a71830fc5470ac678678306dea4b550}{Fbx\+Layer\+Element\+Template} ()
+\item 
+\hyperlink{class_fbx_layer_element_template_a3d88304159752296aece120bb005e546}{$\sim$\+Fbx\+Layer\+Element\+Template} ()
+\item 
+virtual void \hyperlink{class_fbx_layer_element_template_aa6d432c5865fcda1b58376119f1fcaa8}{Allocate\+Arrays} ()
+\end{DoxyCompactItemize}
+\subsection*{Serialization section}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Content\+Write\+To} (\hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream) const
+\item 
+virtual bool \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Content\+Read\+From} (const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type$>$\newline
+class Fbx\+Layer\+Element\+Template$<$ Type $>$}
+
+This class complements the \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} class. It provides interfaces to access the direct array and index array of different layer elements. 
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_template_a24cfd1d513a54140bde996ccfa2bf2b6}\label{class_fbx_layer_element_template_a24cfd1d513a54140bde996ccfa2bf2b6}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Array\+Element\+Type@{Array\+Element\+Type}}
+\index{Array\+Element\+Type@{Array\+Element\+Type}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Array\+Element\+Type}{ArrayElementType}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+typedef Type \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::\hyperlink{class_fbx_layer_element_template_a24cfd1d513a54140bde996ccfa2bf2b6}{Array\+Element\+Type}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_template_a1adf77aa24da5ff9786bb19286dcac13}\label{class_fbx_layer_element_template_a1adf77aa24da5ff9786bb19286dcac13}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Direct\+Array\+Type@{Direct\+Array\+Type}}
+\index{Direct\+Array\+Type@{Direct\+Array\+Type}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Direct\+Array\+Type}{DirectArrayType}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+typedef \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$Type$>$ \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::\hyperlink{class_fbx_layer_element_template_a1adf77aa24da5ff9786bb19286dcac13}{Direct\+Array\+Type}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_template_ada80e444d13e2a73cb90551a712a58ed}\label{class_fbx_layer_element_template_ada80e444d13e2a73cb90551a712a58ed}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Index\+Array\+Type@{Index\+Array\+Type}}
+\index{Index\+Array\+Type@{Index\+Array\+Type}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Index\+Array\+Type}{IndexArrayType}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+typedef \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$int$>$ \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::\hyperlink{class_fbx_layer_element_template_ada80e444d13e2a73cb90551a712a58ed}{Index\+Array\+Type}}
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_layer_element_template_a6a71830fc5470ac678678306dea4b550}\label{class_fbx_layer_element_template_a6a71830fc5470ac678678306dea4b550}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element\+Template()}{FbxLayerElementTemplate()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_template_a3d88304159752296aece120bb005e546}\label{class_fbx_layer_element_template_a3d88304159752296aece120bb005e546}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!````~Fbx\+Layer\+Element\+Template@{$\sim$\+Fbx\+Layer\+Element\+Template}}
+\index{````~Fbx\+Layer\+Element\+Template@{$\sim$\+Fbx\+Layer\+Element\+Template}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Layer\+Element\+Template()}{~FbxLayerElementTemplate()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::$\sim$\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_template_aa6d432c5865fcda1b58376119f1fcaa8}\label{class_fbx_layer_element_template_aa6d432c5865fcda1b58376119f1fcaa8}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Allocate\+Arrays@{Allocate\+Arrays}}
+\index{Allocate\+Arrays@{Allocate\+Arrays}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Allocate\+Arrays()}{AllocateArrays()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual void \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Allocate\+Arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_user_data_afd9b9cec3547a1a5ccde15f274128d2a}{Fbx\+Layer\+Element\+User\+Data}, \hyperlink{class_fbx_layer_element_material_a5bf99bae72fa4a516eed88e04a66b7ff}{Fbx\+Layer\+Element\+Material}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}\label{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+bool \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Removes all elements from the direct and the index arrays. \begin{DoxyRemark}{注釈}
+This function fails if there is a lock on the arrays. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if successful, {\ttfamily false} if a lock is present. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_layer_element_a6ab41d0a26802a359efbbc3b2b12dd3d}{Fbx\+Layer\+Element}を再実装しています。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}\label{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Content\+Read\+From@{Content\+Read\+From}}
+\index{Content\+Read\+From@{Content\+Read\+From}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Content\+Read\+From()}{ContentReadFrom()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual bool \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Content\+Read\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_a407c679ef12336f2cf916f598053bf02}{Fbx\+Layer\+Element}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}\label{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Content\+Write\+To@{Content\+Write\+To}}
+\index{Content\+Write\+To@{Content\+Write\+To}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Content\+Write\+To()}{ContentWriteTo()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual bool \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Content\+Write\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_aa60d2178a7601f0e78a472fa7fd774aa}{Fbx\+Layer\+Element}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_layer_element_template_a42afd6d78d902570d7b2724cb0336226}\label{class_fbx_layer_element_template_a42afd6d78d902570d7b2724cb0336226}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Get\+Direct\+Array@{Get\+Direct\+Array}}
+\index{Get\+Direct\+Array@{Get\+Direct\+Array}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array()}{GetDirectArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$Type$>$\& \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Get\+Direct\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the direct array of Layer Elements. \begin{DoxyReturn}{戻り値}
+A reference to the Layer Elements direct array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+You cannot put elements in the direct array when the reference mode is set to e\+Index. 
+\end{DoxyRemark}
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_layer_element_template_ad34f79d4abaa1d101cc756048a5f11b9}\label{class_fbx_layer_element_template_ad34f79d4abaa1d101cc756048a5f11b9}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Get\+Direct\+Array@{Get\+Direct\+Array}}
+\index{Get\+Direct\+Array@{Get\+Direct\+Array}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Get\+Direct\+Array()}{GetDirectArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$Type$>$\& \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Get\+Direct\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the direct array of Layer Elements. \begin{DoxyReturn}{戻り値}
+A reference to the Layer Elements direct array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+You cannot put elements in the direct array when the reference mode is set to e\+Index. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_template_ab1494495d1944eb4b20c4c97abd6358c}\label{class_fbx_layer_element_template_ab1494495d1944eb4b20c4c97abd6358c}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Get\+Index\+Array@{Get\+Index\+Array}}
+\index{Get\+Index\+Array@{Get\+Index\+Array}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Get\+Index\+Array()}{GetIndexArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$int$>$\& \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Get\+Index\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the index array of Layer Elements. \begin{DoxyReturn}{戻り値}
+A reference to the index array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+You cannot put elements in the index array when the mapping mode is set to e\+Direct. 
+\end{DoxyRemark}
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_layer_element_template_a299f160a392be9be520df2d0a1275fc8}\label{class_fbx_layer_element_template_a299f160a392be9be520df2d0a1275fc8}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Get\+Index\+Array@{Get\+Index\+Array}}
+\index{Get\+Index\+Array@{Get\+Index\+Array}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Get\+Index\+Array()}{GetIndexArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$int$>$\& \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Get\+Index\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the index array of Layer Elements. \begin{DoxyReturn}{戻り値}
+A reference to the index array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+You cannot put elements in the index array when the mapping mode is set to e\+Direct. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}\label{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Memory\+Size@{Memory\+Size}}
+\index{Memory\+Size@{Memory\+Size}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Memory\+Size()}{MemorySize()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+virtual int \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Memory\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_a15654a170f2d2952bf1eafad65262b8b}{Fbx\+Layer\+Element}を再実装しています。
+
+
+
+\hyperlink{class_fbx_layer_element_texture_aa6ee4c7c56a71d1a3f70fa4e0806e1f5}{Fbx\+Layer\+Element\+Texture}, \hyperlink{class_fbx_layer_element_user_data_aa02fc5861dec4da68293f9660d4ff13b}{Fbx\+Layer\+Element\+User\+Data}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{class_fbx_layer_element_template_ab92b474682b154297b72188986684fd7}\label{class_fbx_layer_element_template_ab92b474682b154297b72188986684fd7}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}\& \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$ const \&}]{p\+Other }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Another element assigned to this one \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_element_template_a2519d2a629f652904ff64840e0c45780}\label{class_fbx_layer_element_template_a2519d2a629f652904ff64840e0c45780}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+bool \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$ \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Another element compared to this object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} if unequal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_template_a971c29199bb9f0674045d2510230010a}\label{class_fbx_layer_element_template_a971c29199bb9f0674045d2510230010a}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!Remap\+Index\+To@{Remap\+Index\+To}}
+\index{Remap\+Index\+To@{Remap\+Index\+To}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{Remap\+Index\+To()}{RemapIndexTo()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+int \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::Remap\+Index\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}]{p\+New\+Mapping }\end{DoxyParamCaption})}
+
+Changes the Mapping mode to the new one and re-\/computes the index array. 
+\begin{DoxyParams}{引数}
+{\em p\+New\+Mapping} & New mapping mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the remapping is successful, returns 1. If an error occurs, returns 0. In case the function cannot remap to the desired mode because of incompatible modes or unsupported modes, returns -\/1. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_template_a0c7242aa361d91031b5137fbece371f3}\label{class_fbx_layer_element_template_a0c7242aa361d91031b5137fbece371f3}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!m\+Direct\+Array@{m\+Direct\+Array}}
+\index{m\+Direct\+Array@{m\+Direct\+Array}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{m\+Direct\+Array}{mDirectArray}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$Type$>$$\ast$ \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::m\+Direct\+Array}
+
+\mbox{\Hypertarget{class_fbx_layer_element_template_a4aa88a6936b2ab08e150ff6336a91a7d}\label{class_fbx_layer_element_template_a4aa88a6936b2ab08e150ff6336a91a7d}} 
+\index{Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}!m\+Index\+Array@{m\+Index\+Array}}
+\index{m\+Index\+Array@{m\+Index\+Array}!Fbx\+Layer\+Element\+Template@{Fbx\+Layer\+Element\+Template}}
+\subsubsection{\texorpdfstring{m\+Index\+Array}{mIndexArray}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$int$>$$\ast$ \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ Type $>$\+::m\+Index\+Array}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxlayer_8h}{fbxlayer.\+h}\end{DoxyCompactItemize}

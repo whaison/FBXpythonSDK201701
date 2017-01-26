@@ -1,0 +1,220 @@
+\hypertarget{class_fbx_selection_node}{}\section{Fbx\+Selection\+Node クラス}
+\label{class_fbx_selection_node}\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+
+
+{\ttfamily \#include $<$fbxselectionnode.\+h$>$}
+
+
+
+Fbx\+Selection\+Node の継承関係図
+% FIG 0
+
+
+Fbx\+Selection\+Node 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78f}{E\+Select\+Type} \{ \newline
+\hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa4b0313e9b717470c120c183febb4cc18}{e\+Vertex\+Level}, 
+\hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78faa3159ebdf64f71125b01fbc012ffa57a}{e\+Edge\+Level}, 
+\hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa0a0a561141a2474c800b732fd42428cc}{e\+Face\+Level}, 
+\hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa5c26b8b56bfce101fe25c1b7f1bd9878}{e\+Object\+Level}, 
+\newline
+\hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa6f7e60aadbb76284e3352814a5a4f299}{e\+Select\+Type\+Count}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_selection_node_a6682d7ec3a7f7b9083962c212e7badd2}{Set\+Selection\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_selection_node_a1c78c8d31e14c7cb99e059963eee820c}{Get\+Selection\+Object} () const
+\item 
+bool \hyperlink{class_fbx_selection_node_a600d1609bd33e1453f082a971a9498f9}{Is\+Valid} () const
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_selection_node_abe086e3632a8526188a5c706f3edff0d}{m\+Is\+The\+Node\+In\+Set}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \hyperlink{class_fbx_selection_node_ad58af0a699e64661e138fc9c17cb33c2}{m\+Vertex\+Index\+Array}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \hyperlink{class_fbx_selection_node_a08402c700791599a3d025a55d52f725e}{m\+Edge\+Index\+Array}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \hyperlink{class_fbx_selection_node_a542b95a44b33e6b88af56e202612583f}{m\+Polygon\+Index\+Array}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ $\ast$ $>$ \hyperlink{class_fbx_selection_node_abb893b8d98420522d6bc2790780b54a3}{m\+Sub\+Type\+Select\+Array}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_selection_node_ad7174a58a6d0031ac615900251821fd5}{S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES} \mbox{[}(int) \hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa6f7e60aadbb76284e3352814a5a4f299}{e\+Select\+Type\+Count}\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_selection_node_aaef80cf95a8109fe5cc6263f18d7cb99}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+bool \hyperlink{class_fbx_selection_node_acf8e30df7df84c4fbff9c12f64a2b3fe}{Connect\+Notify} (\hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} const \&p\+Event)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_selection_node}{Fbx\+Selection\+Node} is an auxiliary class for Selection Set.
+
+Used to group objects with their components (e.\+g. vertex, edge, and face), when adding it to a selection set (\hyperlink{class_fbx_selection_set}{Fbx\+Selection\+Set}). \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_selection_set}{Fbx\+Selection\+Set} 
+\end{DoxySeeAlso}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78f}\label{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78f}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!E\+Select\+Type@{E\+Select\+Type}}
+\index{E\+Select\+Type@{E\+Select\+Type}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{E\+Select\+Type}{ESelectType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78f}{Fbx\+Selection\+Node\+::\+E\+Select\+Type}}
+
+Selection\+Node type identifier.
+\begin{DoxyItemize}
+\item {\itshape e\+Vertex\+Level} Vertex level selection.
+\item {\itshape e\+Edge\+Level} Edge level selection.
+\item {\itshape e\+Face\+Level} Face level selection.
+\item {\itshape e\+Object\+Level} Object level selection.
+\item {\itshape e\+Select\+Type\+Count} Number of Select Types. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Vertex\+Level@{e\+Vertex\+Level}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!e\+Vertex\+Level@{e\+Vertex\+Level}}}\mbox{\Hypertarget{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa4b0313e9b717470c120c183febb4cc18}\label{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa4b0313e9b717470c120c183febb4cc18}} 
+e\+Vertex\+Level&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Edge\+Level@{e\+Edge\+Level}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!e\+Edge\+Level@{e\+Edge\+Level}}}\mbox{\Hypertarget{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78faa3159ebdf64f71125b01fbc012ffa57a}\label{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78faa3159ebdf64f71125b01fbc012ffa57a}} 
+e\+Edge\+Level&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Face\+Level@{e\+Face\+Level}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!e\+Face\+Level@{e\+Face\+Level}}}\mbox{\Hypertarget{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa0a0a561141a2474c800b732fd42428cc}\label{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa0a0a561141a2474c800b732fd42428cc}} 
+e\+Face\+Level&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Object\+Level@{e\+Object\+Level}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!e\+Object\+Level@{e\+Object\+Level}}}\mbox{\Hypertarget{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa5c26b8b56bfce101fe25c1b7f1bd9878}\label{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa5c26b8b56bfce101fe25c1b7f1bd9878}} 
+e\+Object\+Level&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Select\+Type\+Count@{e\+Select\+Type\+Count}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!e\+Select\+Type\+Count@{e\+Select\+Type\+Count}}}\mbox{\Hypertarget{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa6f7e60aadbb76284e3352814a5a4f299}\label{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa6f7e60aadbb76284e3352814a5a4f299}} 
+e\+Select\+Type\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_selection_node_acf8e30df7df84c4fbff9c12f64a2b3fe}\label{class_fbx_selection_node_acf8e30df7df84c4fbff9c12f64a2b3fe}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!Connect\+Notify@{Connect\+Notify}}
+\index{Connect\+Notify@{Connect\+Notify}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{Connect\+Notify()}{ConnectNotify()}}
+{\footnotesize\ttfamily bool Fbx\+Selection\+Node\+::\+Connect\+Notify (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} const \&}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_ab7a400f3829d1f0da57d3d78c8168dd0}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_selection_node_aaef80cf95a8109fe5cc6263f18d7cb99}\label{class_fbx_selection_node_aaef80cf95a8109fe5cc6263f18d7cb99}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Selection\+Node\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_selection_node_a1c78c8d31e14c7cb99e059963eee820c}\label{class_fbx_selection_node_a1c78c8d31e14c7cb99e059963eee820c}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!Get\+Selection\+Object@{Get\+Selection\+Object}}
+\index{Get\+Selection\+Object@{Get\+Selection\+Object}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{Get\+Selection\+Object()}{GetSelectionObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Selection\+Node\+::\+Get\+Selection\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the object whose components or itself or both are contained in the Selection\+Node. \begin{DoxyReturn}{戻り値}
+The object whose components or itself or both are contained in the Selection\+Node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_selection_node_a600d1609bd33e1453f082a971a9498f9}\label{class_fbx_selection_node_a600d1609bd33e1453f082a971a9498f9}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily bool Fbx\+Selection\+Node\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+To detect if the Selection\+Node is valid. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if this is a valid Selection\+Node. {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Selection\+Node is valid if selection object is set. Selection\+Node is not valid if no selection object is set. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_selection_node_a6682d7ec3a7f7b9083962c212e7badd2}\label{class_fbx_selection_node_a6682d7ec3a7f7b9083962c212e7badd2}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!Set\+Selection\+Object@{Set\+Selection\+Object}}
+\index{Set\+Selection\+Object@{Set\+Selection\+Object}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{Set\+Selection\+Object()}{SetSelectionObject()}}
+{\footnotesize\ttfamily bool Fbx\+Selection\+Node\+::\+Set\+Selection\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set an object whose components or itself is contained in the Selection\+Node. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object whose components or itself is contained in the Selection\+Node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the object is set successfully. {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+It is possible a S\+DK user will try to set multiple objects to one Selection\+Node, but only the last one will be kept. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_selection_node_a08402c700791599a3d025a55d52f725e}\label{class_fbx_selection_node_a08402c700791599a3d025a55d52f725e}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!m\+Edge\+Index\+Array@{m\+Edge\+Index\+Array}}
+\index{m\+Edge\+Index\+Array@{m\+Edge\+Index\+Array}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{m\+Edge\+Index\+Array}{mEdgeIndexArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$ Fbx\+Selection\+Node\+::m\+Edge\+Index\+Array}
+
+Index array for selected edges. \mbox{\Hypertarget{class_fbx_selection_node_abe086e3632a8526188a5c706f3edff0d}\label{class_fbx_selection_node_abe086e3632a8526188a5c706f3edff0d}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!m\+Is\+The\+Node\+In\+Set@{m\+Is\+The\+Node\+In\+Set}}
+\index{m\+Is\+The\+Node\+In\+Set@{m\+Is\+The\+Node\+In\+Set}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{m\+Is\+The\+Node\+In\+Set}{mIsTheNodeInSet}}
+{\footnotesize\ttfamily bool Fbx\+Selection\+Node\+::m\+Is\+The\+Node\+In\+Set}
+
+{\ttfamily true} means the object itself is also in the selection set; {\ttfamily false} means only the object\textquotesingle{}s components are in the selection set, the object is not. \mbox{\Hypertarget{class_fbx_selection_node_a542b95a44b33e6b88af56e202612583f}\label{class_fbx_selection_node_a542b95a44b33e6b88af56e202612583f}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!m\+Polygon\+Index\+Array@{m\+Polygon\+Index\+Array}}
+\index{m\+Polygon\+Index\+Array@{m\+Polygon\+Index\+Array}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{m\+Polygon\+Index\+Array}{mPolygonIndexArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$ Fbx\+Selection\+Node\+::m\+Polygon\+Index\+Array}
+
+Index array for selected faces. \mbox{\Hypertarget{class_fbx_selection_node_abb893b8d98420522d6bc2790780b54a3}\label{class_fbx_selection_node_abb893b8d98420522d6bc2790780b54a3}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!m\+Sub\+Type\+Select\+Array@{m\+Sub\+Type\+Select\+Array}}
+\index{m\+Sub\+Type\+Select\+Array@{m\+Sub\+Type\+Select\+Array}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{m\+Sub\+Type\+Select\+Array}{mSubTypeSelectArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$$\ast$$>$ Fbx\+Selection\+Node\+::m\+Sub\+Type\+Select\+Array}
+
+\mbox{\Hypertarget{class_fbx_selection_node_ad58af0a699e64661e138fc9c17cb33c2}\label{class_fbx_selection_node_ad58af0a699e64661e138fc9c17cb33c2}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!m\+Vertex\+Index\+Array@{m\+Vertex\+Index\+Array}}
+\index{m\+Vertex\+Index\+Array@{m\+Vertex\+Index\+Array}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{m\+Vertex\+Index\+Array}{mVertexIndexArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$ Fbx\+Selection\+Node\+::m\+Vertex\+Index\+Array}
+
+Index array for selected vertices. \mbox{\Hypertarget{class_fbx_selection_node_ad7174a58a6d0031ac615900251821fd5}\label{class_fbx_selection_node_ad7174a58a6d0031ac615900251821fd5}} 
+\index{Fbx\+Selection\+Node@{Fbx\+Selection\+Node}!S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES@{S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES}}
+\index{S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES@{S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES}!Fbx\+Selection\+Node@{Fbx\+Selection\+Node}}
+\subsubsection{\texorpdfstring{S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES}{SELECT\_TYPE\_NAMES}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Selection\+Node\+::\+S\+E\+L\+E\+C\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+A\+M\+ES\mbox{[}(int) \hyperlink{class_fbx_selection_node_aa24cf47b60ff436a1cce9409da37e78fa6f7e60aadbb76284e3352814a5a4f299}{e\+Select\+Type\+Count}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxselectionnode_8h}{fbxselectionnode.\+h}\end{DoxyCompactItemize}

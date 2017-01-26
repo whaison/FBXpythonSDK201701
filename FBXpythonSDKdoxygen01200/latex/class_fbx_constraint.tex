@@ -1,0 +1,271 @@
+\hypertarget{class_fbx_constraint}{}\section{Fbx\+Constraint クラス}
+\label{class_fbx_constraint}\index{Fbx\+Constraint@{Fbx\+Constraint}}
+
+
+{\ttfamily \#include $<$fbxconstraint.\+h$>$}
+
+
+
+Fbx\+Constraint の継承関係図
+% FIG 0
+
+
+Fbx\+Constraint 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} \{ \newline
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a1f5c6c9045cb37f8e33ab54d41b628f2}{e\+Unknown}, 
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a1be363288f8d920cf30cffaa7cdef010}{e\+Position}, 
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a99a284f64e965cb86f9a3550a99b3160}{e\+Rotation}, 
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a64de25b844a25f3723f7cb0dbaa4f27a}{e\+Scale}, 
+\newline
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a243a8e5ff104cc018d76fd60d82ad5ef}{e\+Parent}, 
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a849661b75a2235ba1b244bc8ee8d9509}{e\+Single\+Chain\+IK}, 
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a6d6fcad832cbbab74f171c5b6fa46ba1}{e\+Aim}, 
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66ad04946a8d6506e255a01521277db52f0}{e\+Character}, 
+\newline
+\hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66ab7e7b731132836a4bb94b9be642cd861}{e\+Custom}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} \hyperlink{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}{Get\+Constraint\+Type} () const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_a7f587d5db9685b5ee925a85354263edc}{Get\+Constrained\+Object} () const
+\item 
+virtual int \hyperlink{class_fbx_constraint_aa702f86c6a1832ce3b4905911e66c58f}{Get\+Constraint\+Source\+Count} () const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_a5ff6fe6fc98af1e33e8b297bc1cea007}{Get\+Constraint\+Source} (int) const
+\item 
+double \hyperlink{class_fbx_constraint_a4466dd54c32b822252c5e960d0be1836}{Get\+Source\+Weight} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_constraint_a6350b98fa8717caf9167c5513824310c}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_constraint_ad056a05f11bcd1df8aae65fa6ab941d6}{Weight}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_ab34f884cb053f5bb9c18f65582ab84e1}{Active}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_a591ebe51dd090af37644355200b70d9a}{Lock}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Base class for weighted animation constraints. Constraints are primarily used to impose limits on properties of objects (e.\+g. position, orientation, scale) and to automate animation processes. A {\bfseries constrained object} is an object with properties constrained by one or more weighted {\bfseries constraint source}s. 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{Fbx\+Constraint\+::\+E\+Type}}
+
+Constraint attribute types. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown@{e\+Unknown}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Unknown@{e\+Unknown}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a1f5c6c9045cb37f8e33ab54d41b628f2}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a1f5c6c9045cb37f8e33ab54d41b628f2}} 
+e\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Position@{e\+Position}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Position@{e\+Position}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a1be363288f8d920cf30cffaa7cdef010}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a1be363288f8d920cf30cffaa7cdef010}} 
+e\+Position&Invalid constraint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rotation@{e\+Rotation}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Rotation@{e\+Rotation}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a99a284f64e965cb86f9a3550a99b3160}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a99a284f64e965cb86f9a3550a99b3160}} 
+e\+Rotation&Position constraint (referred to as a point constraint in Maya). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Scale@{e\+Scale}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Scale@{e\+Scale}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a64de25b844a25f3723f7cb0dbaa4f27a}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a64de25b844a25f3723f7cb0dbaa4f27a}} 
+e\+Scale&Rotation constraint (referred to as an orient constraint in Maya). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Parent@{e\+Parent}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Parent@{e\+Parent}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a243a8e5ff104cc018d76fd60d82ad5ef}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a243a8e5ff104cc018d76fd60d82ad5ef}} 
+e\+Parent&Scale constraint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Single\+Chain\+IK@{e\+Single\+Chain\+IK}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Single\+Chain\+IK@{e\+Single\+Chain\+IK}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a849661b75a2235ba1b244bc8ee8d9509}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a849661b75a2235ba1b244bc8ee8d9509}} 
+e\+Single\+Chain\+IK&Parent constraint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Aim@{e\+Aim}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Aim@{e\+Aim}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a6d6fcad832cbbab74f171c5b6fa46ba1}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66a6d6fcad832cbbab74f171c5b6fa46ba1}} 
+e\+Aim&Single chain IK constraint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Character@{e\+Character}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Character@{e\+Character}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66ad04946a8d6506e255a01521277db52f0}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66ad04946a8d6506e255a01521277db52f0}} 
+e\+Character&Aim constraint. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Custom@{e\+Custom}!Fbx\+Constraint@{Fbx\+Constraint}}\index{Fbx\+Constraint@{Fbx\+Constraint}!e\+Custom@{e\+Custom}}}\mbox{\Hypertarget{class_fbx_constraint_a49c1634663395eab7c28856df233ec66ab7e7b731132836a4bb94b9be642cd861}\label{class_fbx_constraint_a49c1634663395eab7c28856df233ec66ab7e7b731132836a4bb94b9be642cd861}} 
+e\+Custom&Character constraint. User defined constraints. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_constraint_a6350b98fa8717caf9167c5513824310c}\label{class_fbx_constraint_a6350b98fa8717caf9167c5513824310c}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Constraint\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_character_afccb9b74c28560f04f05581a55c0b58a}{Fbx\+Character}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}\label{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Constraint\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_character_ae66db4ff3c527db3c47064c700ce179a}{Fbx\+Character}, \hyperlink{class_fbx_constraint_single_chain_i_k_aeffab44c49ad72283bdb07e50e9baf77}{Fbx\+Constraint\+Single\+Chain\+IK}, \hyperlink{class_fbx_constraint_parent_af968ae8a08629c4c259ec70ce2697c0e}{Fbx\+Constraint\+Parent}, \hyperlink{class_fbx_constraint_aim_a295c1f47dce7a051886dc6b9bb68025f}{Fbx\+Constraint\+Aim}, \hyperlink{class_fbx_constraint_position_adb2f3e784d01313ecc859b7cda16c182}{Fbx\+Constraint\+Position}, \hyperlink{class_fbx_constraint_scale_af34ea4ce8516d69aefbcb9e83060b2c1}{Fbx\+Constraint\+Scale}, \hyperlink{class_fbx_constraint_rotation_ad9f6469905777a18e3a383f402bdd9b0}{Fbx\+Constraint\+Rotation}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_constraint_a7f587d5db9685b5ee925a85354263edc}\label{class_fbx_constraint_a7f587d5db9685b5ee925a85354263edc}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Get\+Constrained\+Object@{Get\+Constrained\+Object}}
+\index{Get\+Constrained\+Object@{Get\+Constrained\+Object}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Get\+Constrained\+Object()}{GetConstrainedObject()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+::\+Get\+Constrained\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constrained object. \begin{DoxyReturn}{戻り値}
+The constrained object. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_parent_a8c878a029a5628f328244f824d3f8847}{Fbx\+Constraint\+Parent}, \hyperlink{class_fbx_constraint_aim_a7245132b757540df762f9b37dae533cf}{Fbx\+Constraint\+Aim}, \hyperlink{class_fbx_constraint_position_a2722540075ef79aa2d14e7e838afaf79}{Fbx\+Constraint\+Position}, \hyperlink{class_fbx_constraint_scale_a1dcbdc6b41d04d6a75ca47f024e05dc9}{Fbx\+Constraint\+Scale}, \hyperlink{class_fbx_constraint_rotation_ad9bdaf083716c730fdd907a9387e4991}{Fbx\+Constraint\+Rotation}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_constraint_a5ff6fe6fc98af1e33e8b297bc1cea007}\label{class_fbx_constraint_a5ff6fe6fc98af1e33e8b297bc1cea007}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Get\+Constraint\+Source@{Get\+Constraint\+Source}}
+\index{Get\+Constraint\+Source@{Get\+Constraint\+Source}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source()}{GetConstraintSource()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+::\+Get\+Constraint\+Source (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve a constraint source with the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The constraint source at the specified index. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_parent_a687e5a56dfd3882d4ff0c3454a976051}{Fbx\+Constraint\+Parent}, \hyperlink{class_fbx_constraint_aim_ae5d3634ababc5cb0af0734b41c78218a}{Fbx\+Constraint\+Aim}, \hyperlink{class_fbx_constraint_position_a0024d10c8464eba13d5f3c3037e973cf}{Fbx\+Constraint\+Position}, \hyperlink{class_fbx_constraint_scale_ac957fc33cab352ef355602fb4325c5b7}{Fbx\+Constraint\+Scale}, \hyperlink{class_fbx_constraint_rotation_a4bfb008520cb5aa6996104c292e5819e}{Fbx\+Constraint\+Rotation}で再実装されています。
+
+呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_constraint_aa702f86c6a1832ce3b4905911e66c58f}\label{class_fbx_constraint_aa702f86c6a1832ce3b4905911e66c58f}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}}
+\index{Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source\+Count()}{GetConstraintSourceCount()}}
+{\footnotesize\ttfamily virtual int Fbx\+Constraint\+::\+Get\+Constraint\+Source\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the count of constraint source. \begin{DoxyReturn}{戻り値}
+The count of constraint source. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_parent_aa7747054ebeee0f94ce907451f648497}{Fbx\+Constraint\+Parent}, \hyperlink{class_fbx_constraint_aim_aa58f34b660f30caff3f89c5372a25a5c}{Fbx\+Constraint\+Aim}, \hyperlink{class_fbx_constraint_position_a5f6c49200df6a7a1fe704084c2b56e09}{Fbx\+Constraint\+Position}, \hyperlink{class_fbx_constraint_scale_a5c4500706618751078dddca3652ce936}{Fbx\+Constraint\+Scale}, \hyperlink{class_fbx_constraint_rotation_ab27178d5b53654eb9f41f6e3f3a4c5dc}{Fbx\+Constraint\+Rotation}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}\label{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Get\+Constraint\+Type@{Get\+Constraint\+Type}}
+\index{Get\+Constraint\+Type@{Get\+Constraint\+Type}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Type()}{GetConstraintType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} Fbx\+Constraint\+::\+Get\+Constraint\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Access the type of the constraint. \begin{DoxyReturn}{戻り値}
+This type of the constraint. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_character_ab6c9f1540880fa72c17a27d19ff11425}{Fbx\+Character}, \hyperlink{class_fbx_constraint_single_chain_i_k_adc9d38f5ae55bf9c6415334a81cbdffb}{Fbx\+Constraint\+Single\+Chain\+IK}, \hyperlink{class_fbx_constraint_parent_a02f6bd2dda6447a23d81d82ce06b73f0}{Fbx\+Constraint\+Parent}, \hyperlink{class_fbx_constraint_aim_a061ee3079d1182fa2e1a5eeebff01b15}{Fbx\+Constraint\+Aim}, \hyperlink{class_fbx_constraint_position_a79f710b1fec4b1285b53dec13ea68824}{Fbx\+Constraint\+Position}, \hyperlink{class_fbx_constraint_scale_a7eb92c352d4a4bd3c0754dd4e53fa6e4}{Fbx\+Constraint\+Scale}, \hyperlink{class_fbx_constraint_rotation_a8d9f54ac347d18a0871eafc21e88cb77}{Fbx\+Constraint\+Rotation}, \hyperlink{class_fbx_constraint_custom_a80bc6e130ef40b27e4621e1a54b22eb8}{Fbx\+Constraint\+Custom}で再実装されています。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{class_fbx_constraint_a4466dd54c32b822252c5e960d0be1836}\label{class_fbx_constraint_a4466dd54c32b822252c5e960d0be1836}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Get\+Source\+Weight@{Get\+Source\+Weight}}
+\index{Get\+Source\+Weight@{Get\+Source\+Weight}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Get\+Source\+Weight()}{GetSourceWeight()}}
+{\footnotesize\ttfamily double Fbx\+Constraint\+::\+Get\+Source\+Weight (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption}) const}
+
+Get the weight associated with a constraint source. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The given constraint source. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The weight of the constraint source. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_ab34f884cb053f5bb9c18f65582ab84e1}\label{class_fbx_constraint_ab34f884cb053f5bb9c18f65582ab84e1}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Active@{Active}}
+\index{Active@{Active}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Active}{Active}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+::\+Active}
+
+This property controls whether the constraint is applied or not. If the value is {\ttfamily false} the constraint will have no effect. The default value is {\ttfamily true}.
+
+Default value is true. \mbox{\Hypertarget{class_fbx_constraint_a591ebe51dd090af37644355200b70d9a}\label{class_fbx_constraint_a591ebe51dd090af37644355200b70d9a}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Lock@{Lock}}
+\index{Lock@{Lock}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+::\+Lock}
+
+This property handles the lock state of the constraint.
+
+When enabled, the constrained object cannot be moved away from its constrained location when the constraint is active.
+
+Default value is false. \mbox{\Hypertarget{class_fbx_constraint_ad056a05f11bcd1df8aae65fa6ab941d6}\label{class_fbx_constraint_ad056a05f11bcd1df8aae65fa6ab941d6}} 
+\index{Fbx\+Constraint@{Fbx\+Constraint}!Weight@{Weight}}
+\index{Weight@{Weight}!Fbx\+Constraint@{Fbx\+Constraint}}
+\subsubsection{\texorpdfstring{Weight}{Weight}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Constraint\+::\+Weight}
+
+This property represents the degree of influence of a constraint from 0.\+0 (no influence) to 100.\+0 (full influence).
+
+Default value is 100.\+0. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxconstraint_8h}{fbxconstraint.\+h}\end{DoxyCompactItemize}

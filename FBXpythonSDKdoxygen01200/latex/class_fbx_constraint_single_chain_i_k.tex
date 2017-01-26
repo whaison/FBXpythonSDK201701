@@ -1,0 +1,355 @@
+\hypertarget{class_fbx_constraint_single_chain_i_k}{}\section{Fbx\+Constraint\+Single\+Chain\+IK クラス}
+\label{class_fbx_constraint_single_chain_i_k}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+
+
+This constraint class contains methods for accessing the properties of a single chain IK constraint.  
+
+
+
+
+{\ttfamily \#include $<$fbxconstraintsinglechainik.\+h$>$}
+
+
+
+Fbx\+Constraint\+Single\+Chain\+IK の継承関係図
+% FIG 0
+
+
+Fbx\+Constraint\+Single\+Chain\+IK 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9a}{E\+Solver\+Mode} \{ \hyperlink{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9aa50550478223ad7fa82d857c7f5cd8160}{e\+Rotate\+Plane}, 
+\hyperlink{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9aa1fa1389075eefdd86c267eab6880a7ca}{e\+Single\+Chain}
+ \}
+\item 
+enum \hyperlink{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bb}{E\+Pole\+Vector\+Mode} \{ \hyperlink{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bba1c3f447e03df20c501c61a098e162420}{e\+Vector}, 
+\hyperlink{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bbac0d1970fc811997b6248e11efbdf31bc}{e\+Object}
+ \}
+\item 
+enum \hyperlink{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1}{E\+Evaluation\+Mode} \{ \hyperlink{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1a92ece36c1a7245ce49d98f355ed78c5f}{e\+Never\+TS}, 
+\hyperlink{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1a2d85bdf9a9c48132894a0b3d35b6c1b2}{e\+Auto\+Detect}, 
+\hyperlink{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1ab6a348da5218082487a30df63cee3c5d}{e\+Always\+TS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_fbx_constraint_single_chain_i_k_ae212fc88bd99906d8aadcc160dc0c1b8}{Get\+Pole\+Vector\+Object\+Weight} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object) const
+\item 
+void \hyperlink{class_fbx_constraint_single_chain_i_k_a26abc95e8442f40ec86f38ef9e4748b8}{Add\+Pole\+Vector\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, double p\+Weight=100)
+\item 
+int \hyperlink{class_fbx_constraint_single_chain_i_k_afeb5c6ab6342ec4aa81e69d3c9888bac}{Get\+Constraint\+Pole\+Vector\+Count} () const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_single_chain_i_k_a59e6ce644cae71cba898be453e74663c}{Get\+Pole\+Vector\+Object} (int p\+Index) const
+\item 
+void \hyperlink{class_fbx_constraint_single_chain_i_k_a3c4bb5735bed369b73eeb42757a6aa1f}{Set\+First\+Joint\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_single_chain_i_k_a0dc8be31ce58d635c933561fd73010f1}{Get\+First\+Joint\+Object} () const
+\item 
+void \hyperlink{class_fbx_constraint_single_chain_i_k_a17923d89b6f7795c5322b1f9241845c1}{Set\+End\+Joint\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_single_chain_i_k_a0159badf18fe865398ae2056d86fe074}{Get\+End\+Joint\+Object} () const
+\item 
+void \hyperlink{class_fbx_constraint_single_chain_i_k_af7dbd878134a3b9255e7ab11830d3206}{Set\+Effector\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_single_chain_i_k_ac4c0052ea23d8e9a144bd9439cee2507}{Get\+Effector\+Object} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_constraint_single_chain_i_k_aeffab44c49ad72283bdb07e50e9baf77}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} \hyperlink{class_fbx_constraint_single_chain_i_k_adc9d38f5ae55bf9c6415334a81cbdffb}{Get\+Constraint\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_a5005bf5aa9d33200a228ad9723c519b0}{Pole\+Vector\+Type}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_a2ed14960ba042a0c7f447306560bbe11}{Solver\+Type}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_ae2f5d57a658c12c748ceeccd31809a3f}{Evaluate\+T\+S\+Anim}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_a20b0f346f5d104fd63a69e3b560cfaba}{Pole\+Vector\+Objects}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_a0fb576e54a64caab8e6609060e020ae2}{Pole\+Vector}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_a3756b61ba9a55d15c00229fc9a670e4e}{Twist}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_ad33341677c0cf0689bcbc1f4e4eda23a}{First\+Joint\+Object}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_acb671de7c974cc53fba45d34dcdf9db4}{End\+Joint\+Object}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_single_chain_i_k_ab7b3721f2b7f267b6dd35ce38ffa7bbe}{Effector\+Object}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This constraint class contains methods for accessing the properties of a single chain IK constraint. 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1}\label{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!E\+Evaluation\+Mode@{E\+Evaluation\+Mode}}
+\index{E\+Evaluation\+Mode@{E\+Evaluation\+Mode}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{E\+Evaluation\+Mode}{EEvaluationMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1}{Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+E\+Evaluation\+Mode}}
+
+If the constraints read its animation on Translation and Scale for the nodes it constraints. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Never\+TS@{e\+Never\+TS}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Never\+TS@{e\+Never\+TS}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1a92ece36c1a7245ce49d98f355ed78c5f}\label{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1a92ece36c1a7245ce49d98f355ed78c5f}} 
+e\+Never\+TS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Auto\+Detect@{e\+Auto\+Detect}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Auto\+Detect@{e\+Auto\+Detect}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1a2d85bdf9a9c48132894a0b3d35b6c1b2}\label{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1a2d85bdf9a9c48132894a0b3d35b6c1b2}} 
+e\+Auto\+Detect&The constraints never read its animation on translation and scale for the nodes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Always\+TS@{e\+Always\+TS}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Always\+TS@{e\+Always\+TS}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1ab6a348da5218082487a30df63cee3c5d}\label{class_fbx_constraint_single_chain_i_k_aa730475e0c3f9f1ecc04e61f39369fc1ab6a348da5218082487a30df63cee3c5d}} 
+e\+Always\+TS&The constraints read its animation on translation and scale for the nodes according to automatic detection. The constraints always read its animation on translation and scale for the nodes. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bb}\label{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bb}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!E\+Pole\+Vector\+Mode@{E\+Pole\+Vector\+Mode}}
+\index{E\+Pole\+Vector\+Mode@{E\+Pole\+Vector\+Mode}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{E\+Pole\+Vector\+Mode}{EPoleVectorMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bb}{Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+E\+Pole\+Vector\+Mode}}
+
+Pole vector mode. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Vector@{e\+Vector}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Vector@{e\+Vector}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bba1c3f447e03df20c501c61a098e162420}\label{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bba1c3f447e03df20c501c61a098e162420}} 
+e\+Vector&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Object@{e\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Object@{e\+Object}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bbac0d1970fc811997b6248e11efbdf31bc}\label{class_fbx_constraint_single_chain_i_k_a853dee195ab92c878a805ed7206a93bbac0d1970fc811997b6248e11efbdf31bc}} 
+e\+Object&Pole vector type is vector. Pole vector type is object. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9a}\label{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9a}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!E\+Solver\+Mode@{E\+Solver\+Mode}}
+\index{E\+Solver\+Mode@{E\+Solver\+Mode}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{E\+Solver\+Mode}{ESolverMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9a}{Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+E\+Solver\+Mode}}
+
+Solver pole vector mode. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rotate\+Plane@{e\+Rotate\+Plane}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Rotate\+Plane@{e\+Rotate\+Plane}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9aa50550478223ad7fa82d857c7f5cd8160}\label{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9aa50550478223ad7fa82d857c7f5cd8160}} 
+e\+Rotate\+Plane&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Single\+Chain@{e\+Single\+Chain}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!e\+Single\+Chain@{e\+Single\+Chain}}}\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9aa1fa1389075eefdd86c267eab6880a7ca}\label{class_fbx_constraint_single_chain_i_k_aac22215f25edcd32ca36e0e4ec0c1d9aa1fa1389075eefdd86c267eab6880a7ca}} 
+e\+Single\+Chain&Rotate plane solver. Single chain solver. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a26abc95e8442f40ec86f38ef9e4748b8}\label{class_fbx_constraint_single_chain_i_k_a26abc95e8442f40ec86f38ef9e4748b8}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Add\+Pole\+Vector\+Object@{Add\+Pole\+Vector\+Object}}
+\index{Add\+Pole\+Vector\+Object@{Add\+Pole\+Vector\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Add\+Pole\+Vector\+Object()}{AddPoleVectorObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Add\+Pole\+Vector\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{double}]{p\+Weight = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Add a source to the constraint. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & New source object. \\
+\hline
+{\em p\+Weight} & Weight value of the source object expressed as a percentage. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+p\+Weight value is 100 percent by default. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_aeffab44c49ad72283bdb07e50e9baf77}\label{class_fbx_constraint_single_chain_i_k_aeffab44c49ad72283bdb07e50e9baf77}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_afeb5c6ab6342ec4aa81e69d3c9888bac}\label{class_fbx_constraint_single_chain_i_k_afeb5c6ab6342ec4aa81e69d3c9888bac}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+Constraint\+Pole\+Vector\+Count@{Get\+Constraint\+Pole\+Vector\+Count}}
+\index{Get\+Constraint\+Pole\+Vector\+Count@{Get\+Constraint\+Pole\+Vector\+Count}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Pole\+Vector\+Count()}{GetConstraintPoleVectorCount()}}
+{\footnotesize\ttfamily int Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+Constraint\+Pole\+Vector\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the constraint source count. \begin{DoxyReturn}{戻り値}
+Current constraint source count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_adc9d38f5ae55bf9c6415334a81cbdffb}\label{class_fbx_constraint_single_chain_i_k_adc9d38f5ae55bf9c6415334a81cbdffb}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+Constraint\+Type@{Get\+Constraint\+Type}}
+\index{Get\+Constraint\+Type@{Get\+Constraint\+Type}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Type()}{GetConstraintType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+Constraint\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Access the type of the constraint. \begin{DoxyReturn}{戻り値}
+This type of the constraint. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_ac4c0052ea23d8e9a144bd9439cee2507}\label{class_fbx_constraint_single_chain_i_k_ac4c0052ea23d8e9a144bd9439cee2507}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+Effector\+Object@{Get\+Effector\+Object}}
+\index{Get\+Effector\+Object@{Get\+Effector\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+Effector\+Object()}{GetEffectorObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+Effector\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the effector object. \begin{DoxyReturn}{戻り値}
+Current effector object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a0159badf18fe865398ae2056d86fe074}\label{class_fbx_constraint_single_chain_i_k_a0159badf18fe865398ae2056d86fe074}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+End\+Joint\+Object@{Get\+End\+Joint\+Object}}
+\index{Get\+End\+Joint\+Object@{Get\+End\+Joint\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+End\+Joint\+Object()}{GetEndJointObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+End\+Joint\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the end joint object. \begin{DoxyReturn}{戻り値}
+Current end joint object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a0dc8be31ce58d635c933561fd73010f1}\label{class_fbx_constraint_single_chain_i_k_a0dc8be31ce58d635c933561fd73010f1}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+First\+Joint\+Object@{Get\+First\+Joint\+Object}}
+\index{Get\+First\+Joint\+Object@{Get\+First\+Joint\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+First\+Joint\+Object()}{GetFirstJointObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+First\+Joint\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the first joint object. \begin{DoxyReturn}{戻り値}
+Current first joint object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a59e6ce644cae71cba898be453e74663c}\label{class_fbx_constraint_single_chain_i_k_a59e6ce644cae71cba898be453e74663c}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+Pole\+Vector\+Object@{Get\+Pole\+Vector\+Object}}
+\index{Get\+Pole\+Vector\+Object@{Get\+Pole\+Vector\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+Pole\+Vector\+Object()}{GetPoleVectorObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+Pole\+Vector\+Object (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Retrieve a constraint source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of constraint source object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Current source at the specified index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_ae212fc88bd99906d8aadcc160dc0c1b8}\label{class_fbx_constraint_single_chain_i_k_ae212fc88bd99906d8aadcc160dc0c1b8}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Get\+Pole\+Vector\+Object\+Weight@{Get\+Pole\+Vector\+Object\+Weight}}
+\index{Get\+Pole\+Vector\+Object\+Weight@{Get\+Pole\+Vector\+Object\+Weight}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Get\+Pole\+Vector\+Object\+Weight()}{GetPoleVectorObjectWeight()}}
+{\footnotesize\ttfamily double Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Get\+Pole\+Vector\+Object\+Weight (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption}) const}
+
+Get the weight of a source. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & Source object that we want the weight. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_af7dbd878134a3b9255e7ab11830d3206}\label{class_fbx_constraint_single_chain_i_k_af7dbd878134a3b9255e7ab11830d3206}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Set\+Effector\+Object@{Set\+Effector\+Object}}
+\index{Set\+Effector\+Object@{Set\+Effector\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Set\+Effector\+Object()}{SetEffectorObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Set\+Effector\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set the effector object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The effector object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a17923d89b6f7795c5322b1f9241845c1}\label{class_fbx_constraint_single_chain_i_k_a17923d89b6f7795c5322b1f9241845c1}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Set\+End\+Joint\+Object@{Set\+End\+Joint\+Object}}
+\index{Set\+End\+Joint\+Object@{Set\+End\+Joint\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Set\+End\+Joint\+Object()}{SetEndJointObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Set\+End\+Joint\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set the end joint object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The end joint object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a3c4bb5735bed369b73eeb42757a6aa1f}\label{class_fbx_constraint_single_chain_i_k_a3c4bb5735bed369b73eeb42757a6aa1f}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Set\+First\+Joint\+Object@{Set\+First\+Joint\+Object}}
+\index{Set\+First\+Joint\+Object@{Set\+First\+Joint\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Set\+First\+Joint\+Object()}{SetFirstJointObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Set\+First\+Joint\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set the first joint object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The first joint object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_ab7b3721f2b7f267b6dd35ce38ffa7bbe}\label{class_fbx_constraint_single_chain_i_k_ab7b3721f2b7f267b6dd35ce38ffa7bbe}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Effector\+Object@{Effector\+Object}}
+\index{Effector\+Object@{Effector\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Effector\+Object}{EffectorObject}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Effector\+Object}
+
+This property handles effector object. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_acb671de7c974cc53fba45d34dcdf9db4}\label{class_fbx_constraint_single_chain_i_k_acb671de7c974cc53fba45d34dcdf9db4}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!End\+Joint\+Object@{End\+Joint\+Object}}
+\index{End\+Joint\+Object@{End\+Joint\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{End\+Joint\+Object}{EndJointObject}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+End\+Joint\+Object}
+
+This property handles end joint object. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_ae2f5d57a658c12c748ceeccd31809a3f}\label{class_fbx_constraint_single_chain_i_k_ae2f5d57a658c12c748ceeccd31809a3f}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Evaluate\+T\+S\+Anim@{Evaluate\+T\+S\+Anim}}
+\index{Evaluate\+T\+S\+Anim@{Evaluate\+T\+S\+Anim}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Evaluate\+T\+S\+Anim}{EvaluateTSAnim}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Evaluate\+T\+S\+Anim}
+
+This property handles evaluate TS animation. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_ad33341677c0cf0689bcbc1f4e4eda23a}\label{class_fbx_constraint_single_chain_i_k_ad33341677c0cf0689bcbc1f4e4eda23a}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!First\+Joint\+Object@{First\+Joint\+Object}}
+\index{First\+Joint\+Object@{First\+Joint\+Object}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{First\+Joint\+Object}{FirstJointObject}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+First\+Joint\+Object}
+
+This property handles first joint object. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a0fb576e54a64caab8e6609060e020ae2}\label{class_fbx_constraint_single_chain_i_k_a0fb576e54a64caab8e6609060e020ae2}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Pole\+Vector@{Pole\+Vector}}
+\index{Pole\+Vector@{Pole\+Vector}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Pole\+Vector}{PoleVector}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Pole\+Vector}
+
+This property handles pole vector.
+
+Default value is (0, 1, 0). \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a20b0f346f5d104fd63a69e3b560cfaba}\label{class_fbx_constraint_single_chain_i_k_a20b0f346f5d104fd63a69e3b560cfaba}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Pole\+Vector\+Objects@{Pole\+Vector\+Objects}}
+\index{Pole\+Vector\+Objects@{Pole\+Vector\+Objects}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Pole\+Vector\+Objects}{PoleVectorObjects}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Pole\+Vector\+Objects}
+
+This property handles pole vector objects. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a5005bf5aa9d33200a228ad9723c519b0}\label{class_fbx_constraint_single_chain_i_k_a5005bf5aa9d33200a228ad9723c519b0}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Pole\+Vector\+Type@{Pole\+Vector\+Type}}
+\index{Pole\+Vector\+Type@{Pole\+Vector\+Type}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Pole\+Vector\+Type}{PoleVectorType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Pole\+Vector\+Type}
+
+This property handles pole vector type. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a2ed14960ba042a0c7f447306560bbe11}\label{class_fbx_constraint_single_chain_i_k_a2ed14960ba042a0c7f447306560bbe11}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Solver\+Type@{Solver\+Type}}
+\index{Solver\+Type@{Solver\+Type}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Solver\+Type}{SolverType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a9a28614cb4272a0ad7d748eda7f3d3e5}{Fbx\+Enum}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Solver\+Type}
+
+This property handles solver type. \mbox{\Hypertarget{class_fbx_constraint_single_chain_i_k_a3756b61ba9a55d15c00229fc9a670e4e}\label{class_fbx_constraint_single_chain_i_k_a3756b61ba9a55d15c00229fc9a670e4e}} 
+\index{Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}!Twist@{Twist}}
+\index{Twist@{Twist}!Fbx\+Constraint\+Single\+Chain\+IK@{Fbx\+Constraint\+Single\+Chain\+IK}}
+\subsubsection{\texorpdfstring{Twist}{Twist}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Constraint\+Single\+Chain\+I\+K\+::\+Twist}
+
+This property handles twist value.
+
+Default value is 0. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxconstraintsinglechainik_8h}{fbxconstraintsinglechainik.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,305 @@
+\hypertarget{class_fbx_plugin}{}\section{Fbx\+Plugin クラス}
+\label{class_fbx_plugin}\index{Fbx\+Plugin@{Fbx\+Plugin}}
+
+
+{\ttfamily \#include $<$fbxplugin.\+h$>$}
+
+
+
+Fbx\+Plugin の継承関係図
+% FIG 0
+
+
+Fbx\+Plugin 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_plugin_a5b6ba0af2c0cf8a7d5cb1680407d9e7e}{Specific\+Initialize} ()=0
+\item 
+virtual bool \hyperlink{class_fbx_plugin_ade394d2752689a4690a29b34d347446e}{Specific\+Terminate} ()=0
+\item 
+virtual void \hyperlink{class_fbx_plugin_aff87a8ef5c8b6bae66cc10970b7827bf}{Write\+Begin} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\item 
+virtual void \hyperlink{class_fbx_plugin_af4b6ae438302c2153d582f1d6c87b636}{Write\+Parameters} (\hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Params)
+\item 
+virtual void \hyperlink{class_fbx_plugin_a7c61fbd0c3d3a3d41f7208c2b28ce379}{Write\+End} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\item 
+virtual void \hyperlink{class_fbx_plugin_ac39bc91afc422603d99fea3c09700814}{Read\+Begin} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\item 
+virtual void \hyperlink{class_fbx_plugin_ab64d3a67a358e3b9466bc8f6d26e3be2}{Read\+Parameters} (\hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Params)
+\item 
+virtual void \hyperlink{class_fbx_plugin_a89290eef23c5359db142e0ad1d8743e0}{Read\+End} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\item 
+const \hyperlink{struct_fbx_plugin_def}{Fbx\+Plugin\+Def} \& \hyperlink{class_fbx_plugin_a2827e6fbb16ac3c80a2e9a50c34201c5}{Get\+Definition} () const
+\item 
+\hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} \hyperlink{class_fbx_plugin_ae50021560acfbc6a4d924cae16d5414b}{Get\+Module\+Hdl} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_plugin_aae9cc7178878f2350538b74e183f46cb}{Get\+Plugin\+Settings} ()
+\item 
+const \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_plugin_a3f5e6d9e20e306ceee8f163bbf59fe58}{Get\+Plugin\+Settings} () const
+\item 
+{\footnotesize template$<$typename Event\+Type , typename Listerner\+Type $>$ }\\\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} $\ast$ \hyperlink{class_fbx_plugin_aafd653e6999de489d8e1c00fa9956ed0}{Bind} (void(Listerner\+Type\+::$\ast$p\+Func)(const Event\+Type $\ast$))
+\item 
+virtual void \hyperlink{class_fbx_plugin_a0a3b33c932cc862e539cef85d168b86a}{Destroy} ()=0
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_plugin_ab9ee11bcfcbc81e8fa9696f113e03181}{Fbx\+Plugin} (const \hyperlink{struct_fbx_plugin_def}{Fbx\+Plugin\+Def} \&p\+Definition, \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} p\+Module\+Handle)
+\item 
+\hyperlink{struct_fbx_plugin_data}{Fbx\+Plugin\+Data} \& \hyperlink{class_fbx_plugin_a2bcee62f35bb9ccaf60dddaa2bd42ed9}{Get\+Data} ()
+\item 
+const \hyperlink{struct_fbx_plugin_data}{Fbx\+Plugin\+Data} \& \hyperlink{class_fbx_plugin_aa35c615aa2b4b740ae01e6301503c844}{Get\+Data} () const
+\item 
+virtual \hyperlink{class_fbx_plugin_ae1d45c36d20e8174fdfe3985a9e0e2d3}{$\sim$\+Fbx\+Plugin} ()
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_plugin_a0e95beb1c4d5b2d326640c0ec8e9fbed}{Fbx\+Loading\+Strategy}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+The base class to inherit from when creating new plug-\/ins for the F\+BX S\+DK. Plug-\/ins for the F\+BX S\+DK are extremely flexible allowing a wide-\/range of possibilities. For example, one can write his own plug-\/in to add new readers/writers to the current list of supported I/O formats, or add new dynamic classes to instantiate custom objects that can later be stored in F\+BX files. We also use the same interface for plug-\/ins written using the F\+BX Extension S\+DK, which allow additional callbacks for other various Autodesk products enabling greater interoperability with multiple various S\+D\+Ks.
+
+Here is typical implementation of an F\+BX S\+DK plug-\/in that doesn\textquotesingle{}t do anything else than just registering itself\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{class }MyPlugin : \textcolor{keyword}{public} \hyperlink{class_fbx_plugin}{FbxPlugin}
+\{
+    \hyperlink{fbxplugin_8h_a82867e434a2a4a1b8f16632928649b07}{FBXSDK\_PLUGIN\_DECLARE}(MyPlugin); \textcolor{comment}{//This macro is mandatory for any plug-in
+       definition}
+
+\textcolor{keyword}{protected}:
+    \textcolor{keyword}{explicit} MyPlugin(\textcolor{keyword}{const} \hyperlink{struct_fbx_plugin_def}{FbxPluginDef}& pDefinition, \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{FbxModule} pModuleHandle) : 
+      \hyperlink{class_fbx_plugin}{FbxPlugin}(pDefinition, pModuleHandle)
+    \{
+    \}
+
+    \textcolor{comment}{//Abstract functions that *must* be implemented}
+    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \hyperlink{class_fbx_plugin_a5b6ba0af2c0cf8a7d5cb1680407d9e7e}{SpecificInitialize}()
+    \{
+        \textcolor{comment}{//For example, here we could register as many new I/O readers/writers as we would like, or classes,
+       etc.}
+        \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+    \}
+
+    \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \hyperlink{class_fbx_plugin_ade394d2752689a4690a29b34d347446e}{SpecificTerminate}()
+    \{
+        \textcolor{comment}{//Here we would have to unregister whatever we registered to the FBX SDK}
+        \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+    \}
+\};
+
+\hyperlink{fbxplugin_8h_a94a72a1e3b950d4d488f036a4f7f35bb}{FBXSDK\_PLUGIN\_IMPLEMENT}(MyPlugin); \textcolor{comment}{//This macro is mandatory for any plug-in
+       implementation}
+
+\textcolor{comment}{//Standard C export needed for any new FBX SDK plug-in}
+\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"}
+\{
+    \textcolor{keyword}{static} MyPlugin* sMyPluginInstance = \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}; \textcolor{comment}{//The module is owner of the plug-in}
+
+    \textcolor{comment}{//This function will be called when an application will request the plug-in}
+\textcolor{preprocessor}{#ifdef FBXSDK\_ENV\_WIN}
+    \_\_declspec(dllexport) \textcolor{keywordtype}{void} FBXPluginRegistration(\hyperlink{class_fbx_plugin_container}{FbxPluginContainer}& pContainer, 
+      \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{FbxModule} pModuleHandle)
+\textcolor{preprocessor}{#else}
+    \textcolor{keywordtype}{void} FBXPluginRegistration(\hyperlink{class_fbx_plugin_container}{FbxPluginContainer}& pContainer, 
+      \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{FbxModule} pModuleHandle)
+\textcolor{preprocessor}{#endif}
+    \{
+        \textcolor{keywordflow}{if}( sPlugin == \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL} )
+        \{
+            \textcolor{comment}{//Create the plug-in definition which contains the information about the plug-in}
+            \hyperlink{struct_fbx_plugin_def}{FbxPluginDef} sPluginDef;
+            sPluginDef.\hyperlink{struct_fbx_plugin_def_ac98378284bf666cbba614e9121ba7189}{mName} = \textcolor{stringliteral}{"My Plugin"};
+            sPluginDef.\hyperlink{struct_fbx_plugin_def_aeea048adb24ec74cb906df076bedf21d}{mVersion} = \textcolor{stringliteral}{"1.0"};
+
+            \textcolor{comment}{//Create an instance of the plug-in}
+            sMyPluginInstance = MyPlugin::Create(sPluginDef, pLibHandle);
+
+            \textcolor{comment}{//Register the plug-in with the FBX SDK}
+            pContainer.\hyperlink{class_fbx_plugin_container_a3fc28ffe0296973afb3014112b4b0df0}{Register}(*sPlugin);
+        \}
+    \}
+\}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{参照}
+\hyperlink{struct_fbx_plugin_def}{Fbx\+Plugin\+Def}, \hyperlink{struct_fbx_plugin_data}{Fbx\+Plugin\+Data} 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_plugin_ab9ee11bcfcbc81e8fa9696f113e03181}\label{class_fbx_plugin_ab9ee11bcfcbc81e8fa9696f113e03181}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Fbx\+Plugin@{Fbx\+Plugin}}
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Fbx\+Plugin()}{FbxPlugin()}}
+{\footnotesize\ttfamily Fbx\+Plugin\+::\+Fbx\+Plugin (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_fbx_plugin_def}{Fbx\+Plugin\+Def} \&}]{p\+Definition,  }\item[{\hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module}}]{p\+Module\+Handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Use the Create() and \hyperlink{class_fbx_plugin_a0a3b33c932cc862e539cef85d168b86a}{Destroy()} methods declared and implemented in the F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+D\+E\+C\+L\+A\+RE and F\+B\+X\+S\+D\+K\+\_\+\+P\+L\+U\+G\+I\+N\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT macros to construct and destroy \hyperlink{class_fbx_plugin}{Fbx\+Plugin} objects. 
+\begin{DoxyParams}{引数}
+{\em p\+Definition} & The definition associated with this plug-\/in. Each plug-\/in must have its own definition to differentiate it with other plug-\/ins. \\
+\hline
+{\em p\+Module\+Handle} & A pointer to the plug-\/in module address. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_ae1d45c36d20e8174fdfe3985a9e0e2d3}\label{class_fbx_plugin_ae1d45c36d20e8174fdfe3985a9e0e2d3}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!````~Fbx\+Plugin@{$\sim$\+Fbx\+Plugin}}
+\index{````~Fbx\+Plugin@{$\sim$\+Fbx\+Plugin}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Plugin()}{~FbxPlugin()}}
+{\footnotesize\ttfamily virtual Fbx\+Plugin\+::$\sim$\+Fbx\+Plugin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_plugin_aafd653e6999de489d8e1c00fa9956ed0}\label{class_fbx_plugin_aafd653e6999de489d8e1c00fa9956ed0}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Bind@{Bind}}
+\index{Bind@{Bind}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily template$<$typename Event\+Type , typename Listerner\+Type $>$ \\
+\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler}$\ast$ Fbx\+Plugin\+::\+Bind (\begin{DoxyParamCaption}\item[{void(Listerner\+Type\+::$\ast$)(const Event\+Type $\ast$)}]{p\+Func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_plugin_a0a3b33c932cc862e539cef85d168b86a}\label{class_fbx_plugin_a0a3b33c932cc862e539cef85d168b86a}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{\Hypertarget{class_fbx_plugin_a2bcee62f35bb9ccaf60dddaa2bd42ed9}\label{class_fbx_plugin_a2bcee62f35bb9ccaf60dddaa2bd42ed9}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{struct_fbx_plugin_data}{Fbx\+Plugin\+Data}\& Fbx\+Plugin\+::\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Accessor to the plug-\/in private data. \begin{DoxyReturn}{戻り値}
+The data for the current plug-\/in. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_plugin_aa35c615aa2b4b740ae01e6301503c844}\label{class_fbx_plugin_aa35c615aa2b4b740ae01e6301503c844}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{struct_fbx_plugin_data}{Fbx\+Plugin\+Data}\& Fbx\+Plugin\+::\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Const accessor to the plug-\/in private data. \begin{DoxyReturn}{戻り値}
+The const data for the current plug-\/in. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_plugin_a2827e6fbb16ac3c80a2e9a50c34201c5}\label{class_fbx_plugin_a2827e6fbb16ac3c80a2e9a50c34201c5}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Get\+Definition@{Get\+Definition}}
+\index{Get\+Definition@{Get\+Definition}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Get\+Definition()}{GetDefinition()}}
+{\footnotesize\ttfamily const \hyperlink{struct_fbx_plugin_def}{Fbx\+Plugin\+Def}\& Fbx\+Plugin\+::\+Get\+Definition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Accessor to the plug-\/in definition structure that contains basic information on the plug-\/in like its name or version. This is the only method available to differentiate plug-\/ins. \begin{DoxyReturn}{戻り値}
+The definition structure for this plug-\/in. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_plugin_ae50021560acfbc6a4d924cae16d5414b}\label{class_fbx_plugin_ae50021560acfbc6a4d924cae16d5414b}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Get\+Module\+Hdl@{Get\+Module\+Hdl}}
+\index{Get\+Module\+Hdl@{Get\+Module\+Hdl}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Get\+Module\+Hdl()}{GetModuleHdl()}}
+{\footnotesize\ttfamily \hyperlink{fbxmodule_8h_a1d2ed3e9ccb8075d585f7cb7bdf40420}{Fbx\+Module} Fbx\+Plugin\+::\+Get\+Module\+Hdl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the module address pointer for this plug-\/in. With this module instance handle, for example someone can query procedures addresses, allowing more complex interactions, as well as other operating system module specific functions. \mbox{\Hypertarget{class_fbx_plugin_aae9cc7178878f2350538b74e183f46cb}\label{class_fbx_plugin_aae9cc7178878f2350538b74e183f46cb}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Get\+Plugin\+Settings@{Get\+Plugin\+Settings}}
+\index{Get\+Plugin\+Settings@{Get\+Plugin\+Settings}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Get\+Plugin\+Settings()}{GetPluginSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Plugin\+::\+Get\+Plugin\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_plugin_a3f5e6d9e20e306ceee8f163bbf59fe58}\label{class_fbx_plugin_a3f5e6d9e20e306ceee8f163bbf59fe58}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Get\+Plugin\+Settings@{Get\+Plugin\+Settings}}
+\index{Get\+Plugin\+Settings@{Get\+Plugin\+Settings}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Get\+Plugin\+Settings()}{GetPluginSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Plugin\+::\+Get\+Plugin\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_plugin_ac39bc91afc422603d99fea3c09700814}\label{class_fbx_plugin_ac39bc91afc422603d99fea3c09700814}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Read\+Begin@{Read\+Begin}}
+\index{Read\+Begin@{Read\+Begin}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Read\+Begin()}{ReadBegin()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Read\+Begin (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function called once when the F\+BX S\+DK is about to read an F\+BX file. Users can re-\/implement it in their plug-\/in if they need to perform tasks at that moment. The scene provided in parameter can be altered. If not re-\/implemented, this function does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene that is about to be read in the F\+BX file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_a89290eef23c5359db142e0ad1d8743e0}\label{class_fbx_plugin_a89290eef23c5359db142e0ad1d8743e0}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Read\+End@{Read\+End}}
+\index{Read\+End@{Read\+End}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Read\+End()}{ReadEnd()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Read\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function called once after the F\+BX S\+DK read an F\+BX file. Users can re-\/implement it in their plug-\/in if they need to perform tasks at that moment. The scene provided in parameter can be altered. If not re-\/implemented, this function does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene that was read in the F\+BX file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_ab64d3a67a358e3b9466bc8f6d26e3be2}\label{class_fbx_plugin_ab64d3a67a358e3b9466bc8f6d26e3be2}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Read\+Parameters@{Read\+Parameters}}
+\index{Read\+Parameters@{Read\+Parameters}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Read\+Parameters()}{ReadParameters()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Read\+Parameters (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function called once after the F\+BX S\+DK reads the plug-\/in\textquotesingle{}s parameters. Users can re-\/implement it in their plug-\/in if they need to retrieve properties for their own usage. The object in parameter is used to retrieve those properties. If not re-\/implemented, this function does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Params} & An abstract object that can be used as a property container, to allow the plug-\/in to read properties about the plug-\/in. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_a5b6ba0af2c0cf8a7d5cb1680407d9e7e}\label{class_fbx_plugin_a5b6ba0af2c0cf8a7d5cb1680407d9e7e}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Specific\+Initialize@{Specific\+Initialize}}
+\index{Specific\+Initialize@{Specific\+Initialize}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Specific\+Initialize()}{SpecificInitialize()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Plugin\+::\+Specific\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract function called once at the end of the plug-\/in construction. At that moment, plug-\/in data have been properly initialized. This function must be implemented by anyone who writes a new plug-\/in for the F\+BX S\+DK. \mbox{\Hypertarget{class_fbx_plugin_ade394d2752689a4690a29b34d347446e}\label{class_fbx_plugin_ade394d2752689a4690a29b34d347446e}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Specific\+Terminate@{Specific\+Terminate}}
+\index{Specific\+Terminate@{Specific\+Terminate}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Specific\+Terminate()}{SpecificTerminate()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Plugin\+::\+Specific\+Terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Abstract function called once at the beginning of the plug-\/in destruction. At that moment, plug-\/in data is fully available. This function must be implemented by anyone who writes a new plug-\/in for the F\+BX S\+DK. \mbox{\Hypertarget{class_fbx_plugin_aff87a8ef5c8b6bae66cc10970b7827bf}\label{class_fbx_plugin_aff87a8ef5c8b6bae66cc10970b7827bf}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Write\+Begin@{Write\+Begin}}
+\index{Write\+Begin@{Write\+Begin}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Write\+Begin()}{WriteBegin()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Write\+Begin (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function called once when the F\+BX S\+DK is about to write an F\+BX file. Users can re-\/implement it in their plug-\/in if they need to perform tasks at that moment. The scene provided in parameter can be altered. If not re-\/implemented, this function does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene that is about to be written in the F\+BX file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_a7c61fbd0c3d3a3d41f7208c2b28ce379}\label{class_fbx_plugin_a7c61fbd0c3d3a3d41f7208c2b28ce379}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Write\+End@{Write\+End}}
+\index{Write\+End@{Write\+End}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Write\+End()}{WriteEnd()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Write\+End (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function called once after the F\+BX S\+DK wrote an F\+BX file. Users can re-\/implement it in their plug-\/in if they need to perform tasks at that moment. The scene provided in parameter can be altered, but the changes will not appear in the F\+BX file. If not re-\/implemented, this function does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene that was written in the F\+BX file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_af4b6ae438302c2153d582f1d6c87b636}\label{class_fbx_plugin_af4b6ae438302c2153d582f1d6c87b636}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Write\+Parameters@{Write\+Parameters}}
+\index{Write\+Parameters@{Write\+Parameters}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Write\+Parameters()}{WriteParameters()}}
+{\footnotesize\ttfamily virtual void Fbx\+Plugin\+::\+Write\+Parameters (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual function called once when the F\+BX S\+DK is about to write plug-\/in\textquotesingle{}s parameters. Users can re-\/implement it in their plug-\/in if they need to store properties in the F\+BX file for their own usage. The object in parameter is used to store those properties. If not re-\/implemented, this function does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Params} & An abstract object that can be used as a property container, to allow the plug-\/in to store properties about the plug-\/in. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_plugin_a0e95beb1c4d5b2d326640c0ec8e9fbed}\label{class_fbx_plugin_a0e95beb1c4d5b2d326640c0ec8e9fbed}} 
+\index{Fbx\+Plugin@{Fbx\+Plugin}!Fbx\+Loading\+Strategy@{Fbx\+Loading\+Strategy}}
+\index{Fbx\+Loading\+Strategy@{Fbx\+Loading\+Strategy}!Fbx\+Plugin@{Fbx\+Plugin}}
+\subsubsection{\texorpdfstring{Fbx\+Loading\+Strategy}{FbxLoadingStrategy}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_loading_strategy}{Fbx\+Loading\+Strategy}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxplugin_8h}{fbxplugin.\+h}\end{DoxyCompactItemize}

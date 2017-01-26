@@ -1,0 +1,153 @@
+\hypertarget{class_fbx_semantic_entry_view}{}\section{Fbx\+Semantic\+Entry\+View クラス}
+\label{class_fbx_semantic_entry_view}\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+
+
+{\ttfamily \#include $<$fbxsemanticentryview.\+h$>$}
+
+
+
+Fbx\+Semantic\+Entry\+View の継承関係図
+% FIG 0
+
+
+Fbx\+Semantic\+Entry\+View 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_semantic_entry_view_a602f170055f7dc100360d0d11bb88c56}{Set\+Semantic} (const char $\ast$p\+Semantic)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_semantic_entry_view_ac1419433cb4547f9cbd42e4855976e43}{Get\+Semantic} (bool p\+Append\+Index=true) const
+\item 
+int \hyperlink{class_fbx_semantic_entry_view_a9163df1576880dd1fa1922eeeb122dfd}{Get\+Index} () const
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_semantic_entry_view_afd242ecac3eaab584dffe108753aba1d}{Entry\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_semantic_entry_view_a971315cc135c67cb4ca164a69fe6f6b2}{s\+Entry\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_semantic_entry_view_a9431f63d5fdde94d264056fa3f3b6df1}{Fbx\+Semantic\+Entry\+View} (\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$p\+Entry, bool p\+As\+Source, bool p\+Create=false)
+\item 
+virtual \hyperlink{class_fbx_semantic_entry_view_a3efcf8b9e3ff9b4d9656910786f88238}{$\sim$\+Fbx\+Semantic\+Entry\+View} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_semantic_entry_view}{Fbx\+Semantic\+Entry\+View} stores a binding corresponding to a semantic within a shader file. A shader semantic is a parameter, a constant or an operator. So a shader semantic could bind with \hyperlink{class_fbx_property}{Fbx\+Property} ( parameter, constant) and \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} (operator).
+
+Here is a code snippet to show how it used. 
+\begin{DoxyCode}
+\hyperlink{class_fbx_property}{FbxProperty} lProp;
+\hyperlink{class_fbx_binding_table}{FbxBindingTable} lTable;
+\hyperlink{class_fbx_binding_table_entry}{FbxBindingTableEntry}& lEntry = lBindingTable.AddNewEntry();
+\hyperlink{class_fbx_property_entry_view}{FbxPropertyEntryView} lSrcView( lEntry, \textcolor{keyword}{true}, \textcolor{keyword}{true});
+lSrcView.SetProperty( lProp.\hyperlink{class_fbx_property_a6045fdbb1bbe5a84f44c7f447d2fa52c}{GetHierarchicalName}());
+\hyperlink{class_fbx_semantic_entry_view}{FbxSemanticEntryView} lDstView( &pEntry, \textcolor{keyword}{false}, \textcolor{keyword}{true} );
+lDstView.SetSemantic( lProp.Getname());
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} and \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}. 
+\end{DoxySeeAlso}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_a9431f63d5fdde94d264056fa3f3b6df1}\label{class_fbx_semantic_entry_view_a9431f63d5fdde94d264056fa3f3b6df1}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{Fbx\+Semantic\+Entry\+View()}{FbxSemanticEntryView()}}
+{\footnotesize\ttfamily Fbx\+Semantic\+Entry\+View\+::\+Fbx\+Semantic\+Entry\+View (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$}]{p\+Entry,  }\item[{bool}]{p\+As\+Source,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry} & The binding table entry to create the entry view for. \\
+\hline
+{\em p\+As\+Source} & {\ttfamily true} to create the entry view as source, {\ttfamily false} as destination. \\
+\hline
+{\em p\+Create} & {\ttfamily true} to create the entry view, {\ttfamily false} otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_a3efcf8b9e3ff9b4d9656910786f88238}\label{class_fbx_semantic_entry_view_a3efcf8b9e3ff9b4d9656910786f88238}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!````~Fbx\+Semantic\+Entry\+View@{$\sim$\+Fbx\+Semantic\+Entry\+View}}
+\index{````~Fbx\+Semantic\+Entry\+View@{$\sim$\+Fbx\+Semantic\+Entry\+View}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Semantic\+Entry\+View()}{~FbxSemanticEntryView()}}
+{\footnotesize\ttfamily virtual Fbx\+Semantic\+Entry\+View\+::$\sim$\+Fbx\+Semantic\+Entry\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_afd242ecac3eaab584dffe108753aba1d}\label{class_fbx_semantic_entry_view_afd242ecac3eaab584dffe108753aba1d}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!Entry\+Type@{Entry\+Type}}
+\index{Entry\+Type@{Entry\+Type}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{Entry\+Type()}{EntryType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Semantic\+Entry\+View\+::\+Entry\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the entry type. \begin{DoxyReturn}{戻り値}
+Entry type as string \char`\"{}\+Fbx\+Semantic\+Entry\char`\"{}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Always use \hyperlink{class_fbx_semantic_entry_view_afd242ecac3eaab584dffe108753aba1d}{Entry\+Type()} to get the right entry type. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_entry_view_a83ee50482b441ba8b0e6d7c2dba5432f}{Fbx\+Entry\+View}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_a9163df1576880dd1fa1922eeeb122dfd}\label{class_fbx_semantic_entry_view_a9163df1576880dd1fa1922eeeb122dfd}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!Get\+Index@{Get\+Index}}
+\index{Get\+Index@{Get\+Index}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{Get\+Index()}{GetIndex()}}
+{\footnotesize\ttfamily int Fbx\+Semantic\+Entry\+View\+::\+Get\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the semantic index suffix. \begin{DoxyReturn}{戻り値}
+Semantic index suffix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_ac1419433cb4547f9cbd42e4855976e43}\label{class_fbx_semantic_entry_view_ac1419433cb4547f9cbd42e4855976e43}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!Get\+Semantic@{Get\+Semantic}}
+\index{Get\+Semantic@{Get\+Semantic}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{Get\+Semantic()}{GetSemantic()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Semantic\+Entry\+View\+::\+Get\+Semantic (\begin{DoxyParamCaption}\item[{bool}]{p\+Append\+Index = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Get the semantic from the binding entry. 
+\begin{DoxyParams}{引数}
+{\em p\+Append\+Index} & {\ttfamily true} if the returned semantic append a index, {\ttfamily false} otherwise. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The semantic. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_a602f170055f7dc100360d0d11bb88c56}\label{class_fbx_semantic_entry_view_a602f170055f7dc100360d0d11bb88c56}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!Set\+Semantic@{Set\+Semantic}}
+\index{Set\+Semantic@{Set\+Semantic}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{Set\+Semantic()}{SetSemantic()}}
+{\footnotesize\ttfamily void Fbx\+Semantic\+Entry\+View\+::\+Set\+Semantic (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Semantic }\end{DoxyParamCaption})}
+
+Set the semantic to the binding entry. 
+\begin{DoxyParams}{引数}
+{\em p\+Semantic} & The semantic string to set. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_semantic_entry_view_a971315cc135c67cb4ca164a69fe6f6b2}\label{class_fbx_semantic_entry_view_a971315cc135c67cb4ca164a69fe6f6b2}} 
+\index{Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}!s\+Entry\+Type@{s\+Entry\+Type}}
+\index{s\+Entry\+Type@{s\+Entry\+Type}!Fbx\+Semantic\+Entry\+View@{Fbx\+Semantic\+Entry\+View}}
+\subsubsection{\texorpdfstring{s\+Entry\+Type}{sEntryType}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Semantic\+Entry\+View\+::s\+Entry\+Type\hspace{0.3cm}{\ttfamily [static]}}
+
+Name of the entry type used in the binding entry. It should be \char`\"{}\+Fbx\+Semantic\+Entry\char`\"{} in this case. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxsemanticentryview_8h}{fbxsemanticentryview.\+h}\end{DoxyCompactItemize}

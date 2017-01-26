@@ -1,0 +1,149 @@
+\hypertarget{class_fbx_i_o_file_header_info}{}\section{Fbx\+I\+O\+File\+Header\+Info クラス}
+\label{class_fbx_i_o_file_header_info}\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+
+
+{\ttfamily \#include $<$fbxio.\+h$>$}
+
+
+
+Fbx\+I\+O\+File\+Header\+Info 連携図
+% FIG 0
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_i_o_default_render_resolution}{Fbx\+I\+O\+Default\+Render\+Resolution} \hyperlink{class_fbx_i_o_file_header_info_a996d676f069d3d35ca2c68d8b77f5273}{m\+Default\+Render\+Resolution}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_fbx_i_o_default_render_resolution}{Fbx\+I\+O\+Default\+Render\+Resolution} to handle default resolution values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_i_o_file_header_info_ad7f29ce7d02e6f796c7aa813caee7a11}{Fbx\+I\+O\+File\+Header\+Info} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_i_o_file_header_info_af30c4a1aaae40af02a7518cadb9253f9}{$\sim$\+Fbx\+I\+O\+File\+Header\+Info} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_i_o_file_header_info_aeed179cd3c2f85990eb5f7659a30ae9d}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset values to default. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_i_o_file_header_info_a8ad5d787f5d5daf0155b0717ceb3e230}{Read\+Extended\+Header\+Information} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_i_o_file_header_info_ab344842c3191b6082e271c6768fe0eb6}{m\+File\+Version}
+\begin{DoxyCompactList}\small\item\em Read only properties (not used for file write) \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_i_o_file_header_info_aa0db0af8bd4add4117e6da9e86b915d2}{m\+Creation\+Time\+Stamp\+Present}
+\item 
+\hyperlink{class_fbx_local_time}{Fbx\+Local\+Time} \hyperlink{class_fbx_i_o_file_header_info_a48645d8ae722ebfeb290b8c1d7e6cac7}{m\+Creation\+Time\+Stamp}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_file_header_info_ac612921a3f7e36b79fb017242ae5fe5c}{m\+Creator}
+\item 
+bool \hyperlink{class_fbx_i_o_file_header_info_a76db06e54a4c3fbc382e630271d5e853}{m\+I\+O\+Plugin}
+\item 
+bool \hyperlink{class_fbx_i_o_file_header_info_a831142b96de2fe8c3da6009c4f596f5c}{m\+P\+LE}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+F\+BX header information used at beginning of the F\+BX file to get or set important values like the file format version number (m\+File\+Version). The file version number will be used to select a particular Reader or Writer. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_i_o_file_header_info_ad7f29ce7d02e6f796c7aa813caee7a11}\label{class_fbx_i_o_file_header_info_ad7f29ce7d02e6f796c7aa813caee7a11}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{Fbx\+I\+O\+File\+Header\+Info()}{FbxIOFileHeaderInfo()}}
+{\footnotesize\ttfamily Fbx\+I\+O\+File\+Header\+Info\+::\+Fbx\+I\+O\+File\+Header\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_fbx_i_o_file_header_info_af30c4a1aaae40af02a7518cadb9253f9}\label{class_fbx_i_o_file_header_info_af30c4a1aaae40af02a7518cadb9253f9}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!````~Fbx\+I\+O\+File\+Header\+Info@{$\sim$\+Fbx\+I\+O\+File\+Header\+Info}}
+\index{````~Fbx\+I\+O\+File\+Header\+Info@{$\sim$\+Fbx\+I\+O\+File\+Header\+Info}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+I\+O\+File\+Header\+Info()}{~FbxIOFileHeaderInfo()}}
+{\footnotesize\ttfamily virtual Fbx\+I\+O\+File\+Header\+Info\+::$\sim$\+Fbx\+I\+O\+File\+Header\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_i_o_file_header_info_a8ad5d787f5d5daf0155b0717ceb3e230}\label{class_fbx_i_o_file_header_info_a8ad5d787f5d5daf0155b0717ceb3e230}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!Read\+Extended\+Header\+Information@{Read\+Extended\+Header\+Information}}
+\index{Read\+Extended\+Header\+Information@{Read\+Extended\+Header\+Information}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{Read\+Extended\+Header\+Information()}{ReadExtendedHeaderInformation()}}
+{\footnotesize\ttfamily virtual bool Fbx\+I\+O\+File\+Header\+Info\+::\+Read\+Extended\+Header\+Information (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+A derived class can override this function to read additional information from the file header. \begin{DoxyReturn}{戻り値}
+false in case of failure that should stop loading the file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_file_header_info_aeed179cd3c2f85990eb5f7659a30ae9d}\label{class_fbx_i_o_file_header_info_aeed179cd3c2f85990eb5f7659a30ae9d}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily virtual void Fbx\+I\+O\+File\+Header\+Info\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reset values to default. 
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_i_o_file_header_info_a48645d8ae722ebfeb290b8c1d7e6cac7}\label{class_fbx_i_o_file_header_info_a48645d8ae722ebfeb290b8c1d7e6cac7}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+Creation\+Time\+Stamp@{m\+Creation\+Time\+Stamp}}
+\index{m\+Creation\+Time\+Stamp@{m\+Creation\+Time\+Stamp}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+Creation\+Time\+Stamp}{mCreationTimeStamp}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_local_time}{Fbx\+Local\+Time} Fbx\+I\+O\+File\+Header\+Info\+::m\+Creation\+Time\+Stamp}
+
+Indicates whether the m\+Creation\+Time\+Stamp member variable contains the actual creation time of the file. \mbox{\Hypertarget{class_fbx_i_o_file_header_info_aa0db0af8bd4add4117e6da9e86b915d2}\label{class_fbx_i_o_file_header_info_aa0db0af8bd4add4117e6da9e86b915d2}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+Creation\+Time\+Stamp\+Present@{m\+Creation\+Time\+Stamp\+Present}}
+\index{m\+Creation\+Time\+Stamp\+Present@{m\+Creation\+Time\+Stamp\+Present}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+Creation\+Time\+Stamp\+Present}{mCreationTimeStampPresent}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+File\+Header\+Info\+::m\+Creation\+Time\+Stamp\+Present}
+
+Indicates whether a creation time stamp is preset \mbox{\Hypertarget{class_fbx_i_o_file_header_info_ac612921a3f7e36b79fb017242ae5fe5c}\label{class_fbx_i_o_file_header_info_ac612921a3f7e36b79fb017242ae5fe5c}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+Creator@{m\+Creator}}
+\index{m\+Creator@{m\+Creator}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+Creator}{mCreator}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+File\+Header\+Info\+::m\+Creator}
+
+Indicates who is the creator of the file Ex\+: \char`\"{}\+F\+B\+X S\+D\+K/\+F\+B\+X Plugins version 2011.\+2\char`\"{} \mbox{\Hypertarget{class_fbx_i_o_file_header_info_a996d676f069d3d35ca2c68d8b77f5273}\label{class_fbx_i_o_file_header_info_a996d676f069d3d35ca2c68d8b77f5273}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+Default\+Render\+Resolution@{m\+Default\+Render\+Resolution}}
+\index{m\+Default\+Render\+Resolution@{m\+Default\+Render\+Resolution}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+Default\+Render\+Resolution}{mDefaultRenderResolution}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_default_render_resolution}{Fbx\+I\+O\+Default\+Render\+Resolution} Fbx\+I\+O\+File\+Header\+Info\+::m\+Default\+Render\+Resolution}
+
+
+
+\hyperlink{class_fbx_i_o_default_render_resolution}{Fbx\+I\+O\+Default\+Render\+Resolution} to handle default resolution values 
+
+\mbox{\Hypertarget{class_fbx_i_o_file_header_info_ab344842c3191b6082e271c6768fe0eb6}\label{class_fbx_i_o_file_header_info_ab344842c3191b6082e271c6768fe0eb6}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+File\+Version@{m\+File\+Version}}
+\index{m\+File\+Version@{m\+File\+Version}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+File\+Version}{mFileVersion}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+File\+Header\+Info\+::m\+File\+Version}
+
+
+
+Read only properties (not used for file write) 
+
+File version ex; 5000, 6000, 6100, 7000, 7099, 7100 the major part is the first digit, the minor part, 3 other digits ex\+: 7100 means version 7.\+1 \mbox{\Hypertarget{class_fbx_i_o_file_header_info_a76db06e54a4c3fbc382e630271d5e853}\label{class_fbx_i_o_file_header_info_a76db06e54a4c3fbc382e630271d5e853}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+I\+O\+Plugin@{m\+I\+O\+Plugin}}
+\index{m\+I\+O\+Plugin@{m\+I\+O\+Plugin}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+I\+O\+Plugin}{mIOPlugin}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+File\+Header\+Info\+::m\+I\+O\+Plugin}
+
+Indicates whether the file is created by a genuine Autodesk plug-\/in or not \mbox{\Hypertarget{class_fbx_i_o_file_header_info_a831142b96de2fe8c3da6009c4f596f5c}\label{class_fbx_i_o_file_header_info_a831142b96de2fe8c3da6009c4f596f5c}} 
+\index{Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}!m\+P\+LE@{m\+P\+LE}}
+\index{m\+P\+LE@{m\+P\+LE}!Fbx\+I\+O\+File\+Header\+Info@{Fbx\+I\+O\+File\+Header\+Info}}
+\subsubsection{\texorpdfstring{m\+P\+LE}{mPLE}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+File\+Header\+Info\+::m\+P\+LE}
+
+The flag indicates that the header was created by a personal learning edition (P\+LE) of F\+BX. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/fbx/\hyperlink{fbxio_8h}{fbxio.\+h}\end{DoxyCompactItemize}

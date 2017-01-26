@@ -1,0 +1,506 @@
+\hypertarget{class_fbx_anim_curve_base}{}\section{Fbx\+Anim\+Curve\+Base クラス}
+\label{class_fbx_anim_curve_base}\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+
+
+{\ttfamily \#include $<$fbxanimcurvebase.\+h$>$}
+
+
+
+Fbx\+Anim\+Curve\+Base の継承関係図
+% FIG 0
+
+
+Fbx\+Anim\+Curve\+Base 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_anim_curve_base_abdd0a239c39552fe978b1b571a4d5465}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_base_a82eba55521f1c0e792b71cb432dac170}{Store} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+File\+Object, bool p\+Legacy\+Version=false)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_base_a58ba1ce28a08145795d95bb27e2db02f}{Retrieve} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+File\+Object)=0
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_base_aab573e42ece898c2c1e61a295adbb610}{Extrapolation\+Sync\+Callback} ()=0
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_base_af8e0d506c1a09c9fbd7432d4eb5caa02}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\end{DoxyCompactItemize}
+\subsection*{Key management.}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_base_abe693d293087fad223770430ec79d65d}{Key\+Clear} ()=0
+\begin{DoxyCompactList}\small\item\em Remove all the keys and free buffer memory. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_fbx_anim_curve_base_a36fcc14d1c1944341da57085956a3f59}{Key\+Get\+Count} () const =0
+\begin{DoxyCompactList}\small\item\em Get the number of keys. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_fbx_anim_curve_base_a3e502968be213bd5cfde287f66f97cf5}{Key\+Add} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, \hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&p\+Key, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_base_a1a66d683a6013b5eb41d128dcbbccd4a}{Key\+Set} (int p\+Index, \hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&p\+Key)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_base_a4d7d1bbd3d40020469aafd7c023f80d5}{Key\+Remove} (int p\+Index)=0
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_base_a2813321af80c66758eb9fbe025fd52ea}{Key\+Remove} (int p\+Start\+Index, int p\+End\+Index)=0
+\end{DoxyCompactItemize}
+\subsection*{Key Time Manipulation}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_anim_curve_base_a9db34dd56ce9822d0d6723ce7d50c4a3}{Key\+Get\+Time} (int) const
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_base_afce0ede7336b9639c1e7ac08adf3e6df}{Key\+Set\+Time} (int p\+Key\+Index, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time)=0
+\end{DoxyCompactItemize}
+\subsection*{Extrapolation}
+\label{_amgrp6ff40b647a49e8b8e9c36d595e9f288b}%
+Extrapolation defines the function curve value before and after the keys. Pre-\/extrapolation defines the function curve value before first key. Post-\/extrapolation defines the function curve value after last key. 
+\begin{DoxyItemize}
+\item C\+O\+N\+S\+T\+A\+NT means a constant value matching the first/last key. 
+\item R\+E\+P\+E\+T\+I\+T\+I\+ON means the entire function curve is looped. 
+\item M\+I\+R\+R\+O\+R\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+ON means the entire function curve is looped once backward, once forward and so on. 
+\item K\+E\+E\+P\+\_\+\+S\+L\+O\+PE means a linear function with a slope matching the first/last key. 
+\item R\+E\+L\+A\+T\+I\+V\+E\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+ON means entire function curve is looped and one loop is relative to the last loop in value.
+\end{DoxyItemize}\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} \{ \newline
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa12ad3ce67324b2ba1391b4c61e6ec8e0}{e\+Constant} = 1, 
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa61ea8cc971ecb3ed4705fa575b1aea8f}{e\+Repetition} = 2, 
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa4ad0cf4dc837a94ee221e76c9bee3edc}{e\+Mirror\+Repetition} = 3, 
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa8081da04891315734b94a6228265c892}{e\+Keep\+Slope} = 4, 
+\newline
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa19bd2cf378ff0a41ac2467f186014ca3}{e\+Relative\+Repetition} = 5
+ \}
+\item 
+void \hyperlink{class_fbx_anim_curve_base_abf3ba6c80fe9371be31602eb36789989}{Set\+Pre\+Extrapolation} (\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} p\+Extrapolation)
+\item 
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} \hyperlink{class_fbx_anim_curve_base_a3d4ba8f60385e14877c370518acea5d3}{Get\+Pre\+Extrapolation} () const
+\item 
+void \hyperlink{class_fbx_anim_curve_base_a9103e7ae34ef31d2952df0684cda6754}{Set\+Pre\+Extrapolation\+Count} (unsigned long p\+Count)
+\item 
+unsigned long \hyperlink{class_fbx_anim_curve_base_a2b8d645a376937f0aa645e25373976e0}{Get\+Pre\+Extrapolation\+Count} () const
+\item 
+void \hyperlink{class_fbx_anim_curve_base_a80e57bd8e710d36348eeb326fd83951b}{Set\+Post\+Extrapolation} (\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} p\+Extrapolation)
+\item 
+\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} \hyperlink{class_fbx_anim_curve_base_acabeaab2cff8753d0411eb0b4e268dc5}{Get\+Post\+Extrapolation} () const
+\item 
+void \hyperlink{class_fbx_anim_curve_base_a4201935f2bc54e924658cc0dd4e7bf74}{Set\+Post\+Extrapolation\+Count} (unsigned long p\+Count)
+\item 
+unsigned long \hyperlink{class_fbx_anim_curve_base_a2ccd05e435a7f010759c947815c55475}{Get\+Post\+Extrapolation\+Count} () const
+\end{DoxyCompactItemize}
+\subsection*{Evaluation and Analysis}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_base_a6d31c045a3733067fc7b4e6416d2fe06}{Evaluate} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, int $\ast$p\+Last=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})=0
+\item 
+virtual float \hyperlink{class_fbx_anim_curve_base_aa54f5c0c77e553be03ba888448dc1818}{Evaluate\+Index} (double p\+Index)=0
+\end{DoxyCompactItemize}
+\subsection*{Utility functions.}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_base_a4d259319e514c5371ff184b0cc7f7cd6}{Get\+Time\+Interval} (\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&p\+Time\+Interval)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This is the base class for implementing animation curves.
+
+It is a pure virtual class that defines the general interface to animation key management and manipulation.
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} for fully implemented class. 
+\end{DoxySeeAlso}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}\label{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!E\+Extrapolation\+Type@{E\+Extrapolation\+Type}}
+\index{E\+Extrapolation\+Type@{E\+Extrapolation\+Type}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{E\+Extrapolation\+Type}{EExtrapolationType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{Fbx\+Anim\+Curve\+Base\+::\+E\+Extrapolation\+Type}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Constant@{e\+Constant}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!e\+Constant@{e\+Constant}}}\mbox{\Hypertarget{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa12ad3ce67324b2ba1391b4c61e6ec8e0}\label{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa12ad3ce67324b2ba1391b4c61e6ec8e0}} 
+e\+Constant&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Repetition@{e\+Repetition}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!e\+Repetition@{e\+Repetition}}}\mbox{\Hypertarget{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa61ea8cc971ecb3ed4705fa575b1aea8f}\label{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa61ea8cc971ecb3ed4705fa575b1aea8f}} 
+e\+Repetition&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Mirror\+Repetition@{e\+Mirror\+Repetition}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!e\+Mirror\+Repetition@{e\+Mirror\+Repetition}}}\mbox{\Hypertarget{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa4ad0cf4dc837a94ee221e76c9bee3edc}\label{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa4ad0cf4dc837a94ee221e76c9bee3edc}} 
+e\+Mirror\+Repetition&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Keep\+Slope@{e\+Keep\+Slope}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!e\+Keep\+Slope@{e\+Keep\+Slope}}}\mbox{\Hypertarget{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa8081da04891315734b94a6228265c892}\label{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa8081da04891315734b94a6228265c892}} 
+e\+Keep\+Slope&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Relative\+Repetition@{e\+Relative\+Repetition}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!e\+Relative\+Repetition@{e\+Relative\+Repetition}}}\mbox{\Hypertarget{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa19bd2cf378ff0a41ac2467f186014ca3}\label{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847fa19bd2cf378ff0a41ac2467f186014ca3}} 
+e\+Relative\+Repetition&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_af8e0d506c1a09c9fbd7432d4eb5caa02}\label{class_fbx_anim_curve_base_af8e0d506c1a09c9fbd7432d4eb5caa02}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Base\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_abdd0a239c39552fe978b1b571a4d5465}\label{class_fbx_anim_curve_base_abdd0a239c39552fe978b1b571a4d5465}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Anim\+Curve\+Base\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a6d31c045a3733067fc7b4e6416d2fe06}\label{class_fbx_anim_curve_base_a6d31c045a3733067fc7b4e6416d2fe06}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+Base\+::\+Evaluate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluate curve value at a given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time of evaluation. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Evaluated curve value. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function take extrapolation into account. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_a74a3ea7a22a69fe69141722adff7f01b}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_aa54f5c0c77e553be03ba888448dc1818}\label{class_fbx_anim_curve_base_aa54f5c0c77e553be03ba888448dc1818}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Evaluate\+Index@{Evaluate\+Index}}
+\index{Evaluate\+Index@{Evaluate\+Index}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Evaluate\+Index()}{EvaluateIndex()}}
+{\footnotesize\ttfamily virtual float Fbx\+Anim\+Curve\+Base\+::\+Evaluate\+Index (\begin{DoxyParamCaption}\item[{double}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluate curve value at the given key index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Any value from 0 to \hyperlink{class_fbx_anim_curve_base_a36fcc14d1c1944341da57085956a3f59}{Key\+Get\+Count()} -\/ 1. If this index falls between keys, the curve value will be interpolated based on the surrounding keys. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Evaluated curve value. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_ad26cbb4cd0360aa8697a2601f8540a21}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_aab573e42ece898c2c1e61a295adbb610}\label{class_fbx_anim_curve_base_aab573e42ece898c2c1e61a295adbb610}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Extrapolation\+Sync\+Callback@{Extrapolation\+Sync\+Callback}}
+\index{Extrapolation\+Sync\+Callback@{Extrapolation\+Sync\+Callback}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Extrapolation\+Sync\+Callback()}{ExtrapolationSyncCallback()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Base\+::\+Extrapolation\+Sync\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_curve_a8982eaf744608ac38457fd6f87990044}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_acabeaab2cff8753d0411eb0b4e268dc5}\label{class_fbx_anim_curve_base_acabeaab2cff8753d0411eb0b4e268dc5}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Get\+Post\+Extrapolation@{Get\+Post\+Extrapolation}}
+\index{Get\+Post\+Extrapolation@{Get\+Post\+Extrapolation}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Get\+Post\+Extrapolation()}{GetPostExtrapolation()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} Fbx\+Anim\+Curve\+Base\+::\+Get\+Post\+Extrapolation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get post-\/extrapolation mode. \begin{DoxyReturn}{戻り値}
+The current post-\/extrapolation mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a2ccd05e435a7f010759c947815c55475}\label{class_fbx_anim_curve_base_a2ccd05e435a7f010759c947815c55475}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Get\+Post\+Extrapolation\+Count@{Get\+Post\+Extrapolation\+Count}}
+\index{Get\+Post\+Extrapolation\+Count@{Get\+Post\+Extrapolation\+Count}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Get\+Post\+Extrapolation\+Count()}{GetPostExtrapolationCount()}}
+{\footnotesize\ttfamily unsigned long Fbx\+Anim\+Curve\+Base\+::\+Get\+Post\+Extrapolation\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get post-\/extrapolation count. \begin{DoxyReturn}{戻り値}
+Number of repetitions if post-\/extrapolation mode is R\+E\+P\+E\+T\+I\+T\+I\+ON or M\+I\+R\+R\+O\+R\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+ON. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a3d4ba8f60385e14877c370518acea5d3}\label{class_fbx_anim_curve_base_a3d4ba8f60385e14877c370518acea5d3}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Get\+Pre\+Extrapolation@{Get\+Pre\+Extrapolation}}
+\index{Get\+Pre\+Extrapolation@{Get\+Pre\+Extrapolation}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Get\+Pre\+Extrapolation()}{GetPreExtrapolation()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type} Fbx\+Anim\+Curve\+Base\+::\+Get\+Pre\+Extrapolation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get pre-\/extrapolation mode. \begin{DoxyReturn}{戻り値}
+The current pre-\/extrapolation mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a2b8d645a376937f0aa645e25373976e0}\label{class_fbx_anim_curve_base_a2b8d645a376937f0aa645e25373976e0}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Get\+Pre\+Extrapolation\+Count@{Get\+Pre\+Extrapolation\+Count}}
+\index{Get\+Pre\+Extrapolation\+Count@{Get\+Pre\+Extrapolation\+Count}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Get\+Pre\+Extrapolation\+Count()}{GetPreExtrapolationCount()}}
+{\footnotesize\ttfamily unsigned long Fbx\+Anim\+Curve\+Base\+::\+Get\+Pre\+Extrapolation\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get pre-\/extrapolation count. \begin{DoxyReturn}{戻り値}
+Number of repetitions if pre-\/extrapolation mode is R\+E\+P\+E\+T\+I\+T\+I\+ON or M\+I\+R\+R\+O\+R\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+ON. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a4d259319e514c5371ff184b0cc7f7cd6}\label{class_fbx_anim_curve_base_a4d259319e514c5371ff184b0cc7f7cd6}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Get\+Time\+Interval@{Get\+Time\+Interval}}
+\index{Get\+Time\+Interval@{Get\+Time\+Interval}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Get\+Time\+Interval()}{GetTimeInterval()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Base\+::\+Get\+Time\+Interval (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&}]{p\+Time\+Interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Find out start and end time of the animation curve. This function retrieves the Curve\textquotesingle{}s time span. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Interval} & Reference to receive start time and end time. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_aa547431c44acd9eb28aebdec1a142501}{Fbx\+Anim\+Curve}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a3e502968be213bd5cfde287f66f97cf5}\label{class_fbx_anim_curve_base_a3e502968be213bd5cfde287f66f97cf5}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Add@{Key\+Add}}
+\index{Key\+Add@{Key\+Add}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Add()}{KeyAdd()}}
+{\footnotesize\ttfamily virtual int Fbx\+Anim\+Curve\+Base\+::\+Key\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{\hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&}]{p\+Key,  }\item[{int $\ast$}]{p\+Last = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Add a key at given time. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time to add the key. \\
+\hline
+{\em p\+Key} & Key to add. \\
+\hline
+{\em p\+Last} & Index of the last processed key to speed up search. If this function is called in a loop, initialize this value to 0 and let it be updated by each call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of the key at given time, no matter if it was added or already present. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_aefac9bf8a5d7bf1fe147e192ba503737}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_abe693d293087fad223770430ec79d65d}\label{class_fbx_anim_curve_base_abe693d293087fad223770430ec79d65d}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Clear@{Key\+Clear}}
+\index{Key\+Clear@{Key\+Clear}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Clear()}{KeyClear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Base\+::\+Key\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Remove all the keys and free buffer memory. 
+
+
+
+\hyperlink{class_fbx_anim_curve_a202883ab5e1844beb60d40137464afd8}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a36fcc14d1c1944341da57085956a3f59}\label{class_fbx_anim_curve_base_a36fcc14d1c1944341da57085956a3f59}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Get\+Count@{Key\+Get\+Count}}
+\index{Key\+Get\+Count@{Key\+Get\+Count}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Get\+Count()}{KeyGetCount()}}
+{\footnotesize\ttfamily virtual int Fbx\+Anim\+Curve\+Base\+::\+Key\+Get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get the number of keys. 
+
+
+
+\hyperlink{class_fbx_anim_curve_a08de74d6ef6469be37abd1df0836eac9}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a9db34dd56ce9822d0d6723ce7d50c4a3}\label{class_fbx_anim_curve_base_a9db34dd56ce9822d0d6723ce7d50c4a3}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Get\+Time@{Key\+Get\+Time}}
+\index{Key\+Get\+Time@{Key\+Get\+Time}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Get\+Time()}{KeyGetTime()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+Anim\+Curve\+Base\+::\+Key\+Get\+Time (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get key time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Key index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Key time (time at which this key is occurring). 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_a547f7842ea7bae5b5ed048d15b8b0d07}{Fbx\+Anim\+Curve}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a4d7d1bbd3d40020469aafd7c023f80d5}\label{class_fbx_anim_curve_base_a4d7d1bbd3d40020469aafd7c023f80d5}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Remove@{Key\+Remove}}
+\index{Key\+Remove@{Key\+Remove}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Remove()}{KeyRemove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Base\+::\+Key\+Remove (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Remove key at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of key to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_a083206eda111aa4c6803410427a4645c}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a2813321af80c66758eb9fbe025fd52ea}\label{class_fbx_anim_curve_base_a2813321af80c66758eb9fbe025fd52ea}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Remove@{Key\+Remove}}
+\index{Key\+Remove@{Key\+Remove}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Remove()}{KeyRemove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Base\+::\+Key\+Remove (\begin{DoxyParamCaption}\item[{int}]{p\+Start\+Index,  }\item[{int}]{p\+End\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Remove all the keys in the given range. 
+\begin{DoxyParams}{引数}
+{\em p\+Start\+Index} & Index of the first key to remove (inclusive). \\
+\hline
+{\em p\+End\+Index} & Index of the last key to remove (inclusive). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_a7b4fe494d1ca4575bb253ec89f867df1}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a1a66d683a6013b5eb41d128dcbbccd4a}\label{class_fbx_anim_curve_base_a1a66d683a6013b5eb41d128dcbbccd4a}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Set@{Key\+Set}}
+\index{Key\+Set@{Key\+Set}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Set()}{KeySet()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Base\+::\+Key\+Set (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_anim_curve_key_base}{Fbx\+Anim\+Curve\+Key\+Base} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of where the key should be set. \\
+\hline
+{\em p\+Key} & The key to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if key time is superior to previous key and inferior to next key, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Result is undetermined if function curve has no key or index is out of bounds. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_a8f36f89bd5fbaa4f180789f4d9faf84f}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_afce0ede7336b9639c1e7ac08adf3e6df}\label{class_fbx_anim_curve_base_afce0ede7336b9639c1e7ac08adf3e6df}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Key\+Set\+Time@{Key\+Set\+Time}}
+\index{Key\+Set\+Time@{Key\+Set\+Time}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Key\+Set\+Time()}{KeySetTime()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Base\+::\+Key\+Set\+Time (\begin{DoxyParamCaption}\item[{int}]{p\+Key\+Index,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set key time. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Index} & Key index. \\
+\hline
+{\em p\+Time} & Key time (time at which this key is occurring). \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_anim_curve_a5ce2130d0cea4de2fc42fa3683f01162}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a58ba1ce28a08145795d95bb27e2db02f}\label{class_fbx_anim_curve_base_a58ba1ce28a08145795d95bb27e2db02f}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Retrieve@{Retrieve}}
+\index{Retrieve@{Retrieve}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Retrieve()}{Retrieve()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Base\+::\+Retrieve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+File\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_curve_a17087752d3a28d373b2aaa66d1755f62}{Fbx\+Anim\+Curve}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a80e57bd8e710d36348eeb326fd83951b}\label{class_fbx_anim_curve_base_a80e57bd8e710d36348eeb326fd83951b}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Set\+Post\+Extrapolation@{Set\+Post\+Extrapolation}}
+\index{Set\+Post\+Extrapolation@{Set\+Post\+Extrapolation}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Set\+Post\+Extrapolation()}{SetPostExtrapolation()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Base\+::\+Set\+Post\+Extrapolation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type}}]{p\+Extrapolation }\end{DoxyParamCaption})}
+
+Set post-\/extrapolation mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Extrapolation} & The post-\/extrapolation mode to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a4201935f2bc54e924658cc0dd4e7bf74}\label{class_fbx_anim_curve_base_a4201935f2bc54e924658cc0dd4e7bf74}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Set\+Post\+Extrapolation\+Count@{Set\+Post\+Extrapolation\+Count}}
+\index{Set\+Post\+Extrapolation\+Count@{Set\+Post\+Extrapolation\+Count}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Set\+Post\+Extrapolation\+Count()}{SetPostExtrapolationCount()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Base\+::\+Set\+Post\+Extrapolation\+Count (\begin{DoxyParamCaption}\item[{unsigned long}]{p\+Count }\end{DoxyParamCaption})}
+
+Set post-\/extrapolation count. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & Number of repetitions if post-\/extrapolation mode is R\+E\+P\+E\+T\+I\+T\+I\+ON or M\+I\+R\+R\+O\+R\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+ON. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_abf3ba6c80fe9371be31602eb36789989}\label{class_fbx_anim_curve_base_abf3ba6c80fe9371be31602eb36789989}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Set\+Pre\+Extrapolation@{Set\+Pre\+Extrapolation}}
+\index{Set\+Pre\+Extrapolation@{Set\+Pre\+Extrapolation}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Set\+Pre\+Extrapolation()}{SetPreExtrapolation()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Base\+::\+Set\+Pre\+Extrapolation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve_base_aa7214d43daa7b6b9b47a8118a858847f}{E\+Extrapolation\+Type}}]{p\+Extrapolation }\end{DoxyParamCaption})}
+
+Set pre-\/extrapolation mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Extrapolation} & The pre-\/extrapolation mode to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a9103e7ae34ef31d2952df0684cda6754}\label{class_fbx_anim_curve_base_a9103e7ae34ef31d2952df0684cda6754}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Set\+Pre\+Extrapolation\+Count@{Set\+Pre\+Extrapolation\+Count}}
+\index{Set\+Pre\+Extrapolation\+Count@{Set\+Pre\+Extrapolation\+Count}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Set\+Pre\+Extrapolation\+Count()}{SetPreExtrapolationCount()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Base\+::\+Set\+Pre\+Extrapolation\+Count (\begin{DoxyParamCaption}\item[{unsigned long}]{p\+Count }\end{DoxyParamCaption})}
+
+Set pre-\/extrapolation count. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & Number of repetitions if pre-\/extrapolation mode is R\+E\+P\+E\+T\+I\+T\+I\+ON or M\+I\+R\+R\+O\+R\+\_\+\+R\+E\+P\+E\+T\+I\+T\+I\+ON. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_base_a82eba55521f1c0e792b71cb432dac170}\label{class_fbx_anim_curve_base_a82eba55521f1c0e792b71cb432dac170}} 
+\index{Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}!Store@{Store}}
+\index{Store@{Store}!Fbx\+Anim\+Curve\+Base@{Fbx\+Anim\+Curve\+Base}}
+\subsubsection{\texorpdfstring{Store()}{Store()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Base\+::\+Store (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+File\+Object,  }\item[{bool}]{p\+Legacy\+Version = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\hyperlink{class_fbx_anim_curve_a0ef3229e43aaca33ab50161235541060}{Fbx\+Anim\+Curve}で実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimcurvebase_8h}{fbxanimcurvebase.\+h}\end{DoxyCompactItemize}

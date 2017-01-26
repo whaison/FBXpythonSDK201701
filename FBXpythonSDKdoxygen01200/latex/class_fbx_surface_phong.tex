@@ -1,0 +1,150 @@
+\hypertarget{class_fbx_surface_phong}{}\section{Fbx\+Surface\+Phong クラス}
+\label{class_fbx_surface_phong}\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+
+
+{\ttfamily \#include $<$fbxsurfacephong.\+h$>$}
+
+
+
+Fbx\+Surface\+Phong の継承関係図
+% FIG 0
+
+
+Fbx\+Surface\+Phong 連携図
+% FIG 1
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_surface_phong_aa4262a042d35769e8ff745d408315bf9}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+void \hyperlink{class_fbx_surface_phong_af594d25056c03cd67396191c7d480098}{Init} ()
+\end{DoxyCompactItemize}
+\subsection*{Material properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_surface_phong_a2f845bd60215d282c415e2129034e79e}{Specular}
+\begin{DoxyCompactList}\small\item\em Specular property. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_surface_phong_a821efe9075d1d6ee22d3ab72ab303eaa}{Specular\+Factor}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_surface_phong_ae92be9749116e7eedecb2447b6401d7d}{Shininess}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_surface_phong_a67159f889406ad672d13e463e840a9ba}{Reflection}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_surface_phong_a87608ae7193bbac4f63c97f6c5f1dee2}{Reflection\+Factor}
+\end{DoxyCompactItemize}
+\subsection*{Default property values}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_surface_phong_ab42f5855747a5699e65b6dd6332b3f70}{s\+Specular\+Default}
+\item 
+static const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} \hyperlink{class_fbx_surface_phong_a4906b3c1de363105b0e0c32be098b7a5}{s\+Specular\+Factor\+Default}
+\item 
+static const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} \hyperlink{class_fbx_surface_phong_ad73d54cca213c728a5c5e88e74cf9bd3}{s\+Shininess\+Default}
+\item 
+static const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_surface_phong_a0513a220ce6a0cc31124637008b637bc}{s\+Reflection\+Default}
+\item 
+static const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} \hyperlink{class_fbx_surface_phong_a7fa1d3af6e4814d255726194b6ebb968}{s\+Reflection\+Factor\+Default}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class contains settings for Phong Materials. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_surface_phong_aa4262a042d35769e8ff745d408315bf9}\label{class_fbx_surface_phong_aa4262a042d35769e8ff745d408315bf9}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Surface\+Phong\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_surface_lambert_a6693e1c08050978c78eece2aa48688e9}{Fbx\+Surface\+Lambert}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_surface_phong_af594d25056c03cd67396191c7d480098}\label{class_fbx_surface_phong_af594d25056c03cd67396191c7d480098}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Init@{Init}}
+\index{Init@{Init}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Fbx\+Surface\+Phong\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_surface_phong_a67159f889406ad672d13e463e840a9ba}\label{class_fbx_surface_phong_a67159f889406ad672d13e463e840a9ba}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Reflection@{Reflection}}
+\index{Reflection@{Reflection}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Reflection}{Reflection}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Surface\+Phong\+::\+Reflection}
+
+Reflection color property. This property is used to implement reflection mapping. \mbox{\Hypertarget{class_fbx_surface_phong_a87608ae7193bbac4f63c97f6c5f1dee2}\label{class_fbx_surface_phong_a87608ae7193bbac4f63c97f6c5f1dee2}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Reflection\+Factor@{Reflection\+Factor}}
+\index{Reflection\+Factor@{Reflection\+Factor}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Reflection\+Factor}{ReflectionFactor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Surface\+Phong\+::\+Reflection\+Factor}
+
+Reflection factor property. This property is used to attenuate the reflection color. \mbox{\Hypertarget{class_fbx_surface_phong_ae92be9749116e7eedecb2447b6401d7d}\label{class_fbx_surface_phong_ae92be9749116e7eedecb2447b6401d7d}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Shininess@{Shininess}}
+\index{Shininess@{Shininess}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Shininess}{Shininess}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Surface\+Phong\+::\+Shininess}
+
+Shininess property. This property controls the aspect of the shiny spot. It is the specular exponent in the Phong illumination model. \mbox{\Hypertarget{class_fbx_surface_phong_a2f845bd60215d282c415e2129034e79e}\label{class_fbx_surface_phong_a2f845bd60215d282c415e2129034e79e}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Specular@{Specular}}
+\index{Specular@{Specular}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Specular}{Specular}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Surface\+Phong\+::\+Specular}
+
+
+
+Specular property. 
+
+\mbox{\Hypertarget{class_fbx_surface_phong_a821efe9075d1d6ee22d3ab72ab303eaa}\label{class_fbx_surface_phong_a821efe9075d1d6ee22d3ab72ab303eaa}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!Specular\+Factor@{Specular\+Factor}}
+\index{Specular\+Factor@{Specular\+Factor}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{Specular\+Factor}{SpecularFactor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Surface\+Phong\+::\+Specular\+Factor}
+
+Specular factor property. This factor is used to attenuate the specular color. \mbox{\Hypertarget{class_fbx_surface_phong_a0513a220ce6a0cc31124637008b637bc}\label{class_fbx_surface_phong_a0513a220ce6a0cc31124637008b637bc}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!s\+Reflection\+Default@{s\+Reflection\+Default}}
+\index{s\+Reflection\+Default@{s\+Reflection\+Default}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{s\+Reflection\+Default}{sReflectionDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Surface\+Phong\+::s\+Reflection\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_phong_a7fa1d3af6e4814d255726194b6ebb968}\label{class_fbx_surface_phong_a7fa1d3af6e4814d255726194b6ebb968}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!s\+Reflection\+Factor\+Default@{s\+Reflection\+Factor\+Default}}
+\index{s\+Reflection\+Factor\+Default@{s\+Reflection\+Factor\+Default}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{s\+Reflection\+Factor\+Default}{sReflectionFactorDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} Fbx\+Surface\+Phong\+::s\+Reflection\+Factor\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_phong_ad73d54cca213c728a5c5e88e74cf9bd3}\label{class_fbx_surface_phong_ad73d54cca213c728a5c5e88e74cf9bd3}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!s\+Shininess\+Default@{s\+Shininess\+Default}}
+\index{s\+Shininess\+Default@{s\+Shininess\+Default}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{s\+Shininess\+Default}{sShininessDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} Fbx\+Surface\+Phong\+::s\+Shininess\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_phong_ab42f5855747a5699e65b6dd6332b3f70}\label{class_fbx_surface_phong_ab42f5855747a5699e65b6dd6332b3f70}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!s\+Specular\+Default@{s\+Specular\+Default}}
+\index{s\+Specular\+Default@{s\+Specular\+Default}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{s\+Specular\+Default}{sSpecularDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Surface\+Phong\+::s\+Specular\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_surface_phong_a4906b3c1de363105b0e0c32be098b7a5}\label{class_fbx_surface_phong_a4906b3c1de363105b0e0c32be098b7a5}} 
+\index{Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}!s\+Specular\+Factor\+Default@{s\+Specular\+Factor\+Default}}
+\index{s\+Specular\+Factor\+Default@{s\+Specular\+Factor\+Default}!Fbx\+Surface\+Phong@{Fbx\+Surface\+Phong}}
+\subsubsection{\texorpdfstring{s\+Specular\+Factor\+Default}{sSpecularFactorDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} Fbx\+Surface\+Phong\+::s\+Specular\+Factor\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxsurfacephong_8h}{fbxsurfacephong.\+h}\end{DoxyCompactItemize}

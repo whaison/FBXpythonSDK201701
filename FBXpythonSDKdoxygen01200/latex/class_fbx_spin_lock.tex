@@ -1,0 +1,50 @@
+\hypertarget{class_fbx_spin_lock}{}\section{Fbx\+Spin\+Lock クラス}
+\label{class_fbx_spin_lock}\index{Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}}
+
+
+{\ttfamily \#include $<$fbxsync.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_spin_lock_acc9c64f44e1834c2af5ab56a5a06266e}{Fbx\+Spin\+Lock} ()
+\item 
+void \hyperlink{class_fbx_spin_lock_a6f5aa93e51e6bd4717337bfb2216c371}{Acquire} ()
+\item 
+void \hyperlink{class_fbx_spin_lock_a3cc819cf0168dfc482696650b32c07f6}{Release} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A spinlock is the fastest and most simple thread lock mechanism available. It is very efficient since it does not use any operating system calls; it is only a test and set on an atomic variable, thus it is the fastest thread lock available. Spinlocks are efficient if threads are only likely to be blocked for a short period of time, as they avoid overhead from operating system process re-\/scheduling or context switching. However, spinlocks become wasteful if held for longer durations, both preventing other threads from running and requiring re-\/scheduling. \begin{DoxyNote}{覚え書き}
+Spinlocks does not support recursive locking. A thread attempting to lock the same spinlock twice will wait indefinitely. 
+\end{DoxyNote}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_spin_lock_acc9c64f44e1834c2af5ab56a5a06266e}\label{class_fbx_spin_lock_acc9c64f44e1834c2af5ab56a5a06266e}} 
+\index{Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}!Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}}
+\index{Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}!Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}}
+\subsubsection{\texorpdfstring{Fbx\+Spin\+Lock()}{FbxSpinLock()}}
+{\footnotesize\ttfamily Fbx\+Spin\+Lock\+::\+Fbx\+Spin\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_spin_lock_a6f5aa93e51e6bd4717337bfb2216c371}\label{class_fbx_spin_lock_a6f5aa93e51e6bd4717337bfb2216c371}} 
+\index{Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}}
+\subsubsection{\texorpdfstring{Acquire()}{Acquire()}}
+{\footnotesize\ttfamily void Fbx\+Spin\+Lock\+::\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acquire the lock; thread will wait indefinitely until it is available. \mbox{\Hypertarget{class_fbx_spin_lock_a3cc819cf0168dfc482696650b32c07f6}\label{class_fbx_spin_lock_a3cc819cf0168dfc482696650b32c07f6}} 
+\index{Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Spin\+Lock@{Fbx\+Spin\+Lock}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Fbx\+Spin\+Lock\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Release the lock; this will allow other threads to acquire the lock if they are waiting. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/sync/\hyperlink{fbxsync_8h}{fbxsync.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{class_fbx_base64_decoder}{}\section{Fbx\+Base64\+Decoder クラス}
+\label{class_fbx_base64_decoder}\index{Fbx\+Base64\+Decoder@{Fbx\+Base64\+Decoder}}
+
+
+{\ttfamily \#include $<$fbxbase64coder.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_base64_decoder_a04ee2ab9e6d914878c565f5e65568761}{Decode} (const void $\ast$p\+In\+Buffer, int p\+In\+Size, void $\ast$p\+Out\+Buffer, int p\+Out\+Size)
+\item 
+int \hyperlink{class_fbx_base64_decoder_a7fd80ad0699f441dce72f3eff39cddae}{Decode} (const char $\ast$p\+In\+Buffer, void $\ast$p\+Out\+Buffer, int p\+Out\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class decodes Base64 encoded data. 
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_base64_decoder_a04ee2ab9e6d914878c565f5e65568761}\label{class_fbx_base64_decoder_a04ee2ab9e6d914878c565f5e65568761}} 
+\index{Fbx\+Base64\+Decoder@{Fbx\+Base64\+Decoder}!Decode@{Decode}}
+\index{Decode@{Decode}!Fbx\+Base64\+Decoder@{Fbx\+Base64\+Decoder}}
+\subsubsection{\texorpdfstring{Decode()}{Decode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Base64\+Decoder\+::\+Decode (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+In\+Buffer,  }\item[{int}]{p\+In\+Size,  }\item[{void $\ast$}]{p\+Out\+Buffer,  }\item[{int}]{p\+Out\+Size }\end{DoxyParamCaption})}
+
+Decodes the input buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+In\+Buffer} & the input buffer containing Base64 data. \\
+\hline
+{\em p\+In\+Size} & the size of the input data in bytes (must be a multiple of 4) \\
+\hline
+{\em p\+Out\+Buffer} & the destination buffer. \\
+\hline
+{\em p\+Out\+Size} & the capacity of the output buffer in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the number of bytes put in the output buffer, or -\/1 if the output buffer is too small, or contains invalid characters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_base64_decoder_a7fd80ad0699f441dce72f3eff39cddae}\label{class_fbx_base64_decoder_a7fd80ad0699f441dce72f3eff39cddae}} 
+\index{Fbx\+Base64\+Decoder@{Fbx\+Base64\+Decoder}!Decode@{Decode}}
+\index{Decode@{Decode}!Fbx\+Base64\+Decoder@{Fbx\+Base64\+Decoder}}
+\subsubsection{\texorpdfstring{Decode()}{Decode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+Base64\+Decoder\+::\+Decode (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+In\+Buffer,  }\item[{void $\ast$}]{p\+Out\+Buffer,  }\item[{int}]{p\+Out\+Size }\end{DoxyParamCaption})}
+
+Decodes the input buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+In\+Buffer} & the input buffer containing Base64 data; its length is computed using strlen(). \\
+\hline
+{\em p\+Out\+Buffer} & the destination buffer. \\
+\hline
+{\em p\+Out\+Size} & the capacity of the output buffer in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the number of bytes put in the output buffer. 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxbase64coder_8h}{fbxbase64coder.\+h}\end{DoxyCompactItemize}

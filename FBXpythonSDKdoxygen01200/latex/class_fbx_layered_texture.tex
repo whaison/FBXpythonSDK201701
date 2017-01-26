@@ -1,0 +1,424 @@
+\hypertarget{class_fbx_layered_texture}{}\section{Fbx\+Layered\+Texture クラス}
+\label{class_fbx_layered_texture}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+
+
+{\ttfamily \#include $<$fbxlayeredtexture.\+h$>$}
+
+
+
+Fbx\+Layered\+Texture の継承関係図
+% FIG 0
+
+
+Fbx\+Layered\+Texture 連携図
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_layered_texture_1_1_input_data}{Input\+Data}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}{E\+Blend\+Mode} \{ \newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaa53f2c708a364a1d72e2e212cef66231}{e\+Translucent}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4b056289649a890dd48c158d33786f12}{e\+Additive}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa14180cce3a38ecdc1df33ce9d2f1ae9b}{e\+Modulate}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa722ace4648c2dc7d1be0623317bf8e76}{e\+Modulate2}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baab235ee3fa24dcb41e4d8e1ae837bae70}{e\+Over}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa70d650bdf65fcb9d5d8c9ffebc0b3063}{e\+Normal}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa8fd303f0313fb995c1819cb4a703f2c1}{e\+Dissolve}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3d8575a38684bb76fe428faee8616134}{e\+Darken}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa9abce25d2c5e080377602b0affe0ebb1}{e\+Color\+Burn}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa50a97ecccc9a02769df09c2364f955f8}{e\+Linear\+Burn}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3467612d44ef6cd2025cde2d18c65dca}{e\+Darker\+Color}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4f5410c6355ea1775a40ce4a382371ed}{e\+Lighten}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa7a4864db872da31d342e274beb29fc61}{e\+Screen}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaea4989efb7a40a27af569e108fd7965c}{e\+Color\+Dodge}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa010665bfd13b519549a3227f16697b19}{e\+Linear\+Dodge}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa2f24b1d1d8bbcec5c2bda9a5468c7265}{e\+Lighter\+Color}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa042dddc2499ab7576d358dc09a823454}{e\+Soft\+Light}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3929f4a257688f547463a7486b0c05fe}{e\+Hard\+Light}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3105b6468be38d41572e6f8a184afb1f}{e\+Vivid\+Light}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa709e60fc2fe1498ff640037a30756206}{e\+Linear\+Light}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baac081cec5ad991e7b8d70794b294fa121}{e\+Pin\+Light}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa2084bbee3d3afac31ae434af923bb2b7}{e\+Hard\+Mix}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa841964425115396a75c3f181a7c7628c}{e\+Difference}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baad5bcf178acbe5a4c5f0ebac857cc8bea}{e\+Exclusion}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa1f691b259e9fe862604694c1db5efad7}{e\+Subtract}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaffe2df28a944783fa8b28ac697ed1733}{e\+Divide}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa111a7706c7e4d71633335359309cd60b}{e\+Hue}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaa5639266b843c97911bf3559c03a098b}{e\+Saturation}, 
+\newline
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa0a6f03a09702716e57986e29bea4b06f}{e\+Color}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baade8ddbd8bd2da4b66bfb469106413a57}{e\+Luminosity}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4154995deef9df1efc771e273e2af980}{e\+Overlay}, 
+\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaeed5b8152de39df3e7043e3dd295662f}{e\+Blend\+Mode\+Count}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_layered_texture_a8a01816e03ca531e7bdd8c65804febf7}{operator==} (const \hyperlink{class_fbx_layered_texture}{Fbx\+Layered\+Texture} \&p\+Other) const
+\item 
+bool \hyperlink{class_fbx_layered_texture_ae16a157ad7ff41d377a2cff885a00c80}{Set\+Texture\+Blend\+Mode} (int p\+Index, \hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}{E\+Blend\+Mode} p\+Mode)
+\item 
+bool \hyperlink{class_fbx_layered_texture_ae0b5014964899ff448c859d408d8614a}{Get\+Texture\+Blend\+Mode} (int p\+Index, \hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}{E\+Blend\+Mode} \&p\+Mode) const
+\item 
+bool \hyperlink{class_fbx_layered_texture_a87145db35c3a207f5e54c9a9dcd83f1f}{Set\+Texture\+Alpha} (int p\+Index, double p\+Alpha)
+\item 
+bool \hyperlink{class_fbx_layered_texture_a2d38e409c9671b2850d1260d881e1940}{Get\+Texture\+Alpha} (int p\+Index, double \&p\+Alpha) const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_layered_texture_a61ca1d210dcae83133ad2ee1c9c7daa9}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{struct_fbx_layered_texture_1_1_input_data}{Input\+Data} $>$ \hyperlink{class_fbx_layered_texture_ae06d32684ea2f049c21abb66dfc30d4f}{m\+Input\+Data}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_layered_texture_a78ed9cd6298697060ebc278617d72d44}{Connect\+Notify} (\hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} const \&p\+Event)
+\item 
+bool \hyperlink{class_fbx_layered_texture_a6d1190feade206649f73444c5b114bd1}{Remove\+Input\+Data} (int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_layered_texture}{Fbx\+Layered\+Texture} is a combination of multiple textures(\+Fbx\+Texture) blended sequentially. For example, you can access individual texture by\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_texture}{FbxTexture}* pIndiTexture = lLayeredTexture->\hyperlink{class_fbx_object_a655ed30675d9bf1686ec075f5e7c7a84}{GetSrcObject}(FbxTexture::ClassId, 
+      pTextureIndex);
+\end{DoxyCode}
+ Another example to construct a layered texture with two sub textures. 
+\begin{DoxyCode}
+\hyperlink{class_fbx_file_texture}{FbxFileTexture} *background, *file1;
+\hyperlink{class_fbx_layered_texture}{FbxLayeredTexture}* layeredTexture;
+
+\textcolor{comment}{// connect two file textures to a layered texture via OO connections}
+layeredTexture->\hyperlink{class_fbx_object_a1c75d466c5166486787bfa06b4fd221f}{ConnectSrcObject}(background);
+layeredTexture->\hyperlink{class_fbx_object_a1c75d466c5166486787bfa06b4fd221f}{ConnectSrcObject}(file1);
+
+\textcolor{comment}{// set the second file texture's blend mode and alpha.}
+layeredTexture->\hyperlink{class_fbx_layered_texture_ae16a157ad7ff41d377a2cff885a00c80}{SetTextureBlendMode}(1, 
+      \hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baab235ee3fa24dcb41e4d8e1ae837bae70}{FbxLayeredTexture::eOver});
+layeredTexture->\hyperlink{class_fbx_layered_texture_a87145db35c3a207f5e54c9a9dcd83f1f}{SetTextureAlpha}(1, 0.5);
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_texture}{Fbx\+Texture} 
+\end{DoxySeeAlso}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!E\+Blend\+Mode@{E\+Blend\+Mode}}
+\index{E\+Blend\+Mode@{E\+Blend\+Mode}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{E\+Blend\+Mode}{EBlendMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}{Fbx\+Layered\+Texture\+::\+E\+Blend\+Mode}}
+
+Blend modes.
+\begin{DoxyItemize}
+\item {\itshape e\+Translucent}, The new texture layer is transparent (depending on the Alpha value).
+\item {\itshape e\+Additive}, Add the color of the new texture to the previous texture.
+\item {\itshape e\+Modulate}, Multiples the color value of the new texture by the color values of all previous layers of texture.
+\item {\itshape e\+Modulate2}, Multiples the color value of the new texture by two and then by the color values of all previous layers of texture.
+\item {\itshape e\+Over}, Equivalent to e\+Translucent. Blends the new texture over top of the old texture, according to the new texture\textquotesingle{}s alpha channel.
+\item {\itshape e\+Normal}, The colors of the two layers will not interact in any way, and it will display the full value of the colors in layer 1.
+\item {\itshape e\+Dissolve}, Dissolve makes the lower layer take on the colors of the top layer, and how much depends on the opacity of the upper layer.
+\item {\itshape e\+Darken}, Darken compares each pixel value of the upper layer to its counterpart\textquotesingle{}s pixel value of the lower layer and chooses the darker of the two to display.
+\item {\itshape e\+Color\+Burn}, Color Burn burns in the color of the upper layer with the lower layer. No part of the image will get lighter.
+\item {\itshape e\+Linear\+Burn}, Linear Burn works like multiply but the results are more intense.
+\item {\itshape e\+Darker\+Color}, This blend mode simply divides pixel values of one layer with the other.
+\item {\itshape e\+Lighten}, Lighten compares the two layers pixel for pixel and uses the lightest pixel value. No part of the image gets darker.
+\item {\itshape e\+Screen}, Screen brightens by lightning the lower layer based on the lightness of the upper layer
+\item {\itshape e\+Color\+Dodge}, Color Dodge dodges the lower layer with the upper layer, resulting in a lighter image. No part of the image will be darkened.
+\item {\itshape e\+Linear\+Dodge}, Linear Dodge works like screen but with more intense results.
+\item {\itshape e\+Lighter\+Color}, This blend mode has the opposite effect of the Darker Color mode. It compares all the values in both layers, then displays the lightest values.
+\item {\itshape e\+Soft\+Light}, Soft Light will multiply the dark tones and screen the light tones.
+\item {\itshape e\+Hard\+Light}, Hard Light multiplies the dark colors and screens the light colors.
+\item {\itshape e\+Vivid\+Light}, Vivid Light will dodges or burn the lower layer pixels depending on whether the upper layer pixels are brighter or darker than neutral gray. It works on the contrast of the lower layer.
+\item {\itshape e\+Linear\+Light}, Linear Light is the same as Vivid light but it works on the brightness of the lower layer.
+\item {\itshape e\+Pin\+Light}, Pin Light changes the lower layer pixels depending on how bright the pixels are in the upper layer.
+\item {\itshape e\+Hard\+Mix}, Produces either white or black, depending on similarities between A and B.
+\item {\itshape e\+Difference}, Difference reacts to the differences between the upper and lower layer pixels.
+\item {\itshape e\+Exclusion}, Exclusion uses the darkness of the lower layer to mask the difference between upper and lower layers.
+\item {\itshape e\+Subtract}, The result color is the foreground color subtracted from the background color. The result color is then applied over the background color using the foreground alpha to define the opacity of the result.
+\item {\itshape e\+Divide}, This blend mode simply divides pixel values of one layer with the other.
+\item {\itshape e\+Hue}, Hue changes the hue of the lower layer to the hue of the upper layer but leaves brightness and saturation alone.
+\item {\itshape e\+Saturation}, Saturation changes the saturation of the lower layer to the hue of the upper layer but leaves brightness and hue alone.
+\item {\itshape e\+Color}, Color changes the hue and saturation of the lower layer to the hue and saturation of the upper layer but leaves luminosity alone.
+\item {\itshape e\+Luminosity}, Luminosity changes the luminosity of the lower layer to the luminosity of the upper layer while leaving hue and saturation the same.
+\item {\itshape e\+Overlay}, Multiplies (darkens) when the layer on which the mode is set is dark and screens (brightens) when the layer on which the mode is applied is lighter.
+\item {\itshape e\+Blend\+Mode\+Count}, Marks the end of the blend mode enum. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Translucent@{e\+Translucent}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Translucent@{e\+Translucent}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaa53f2c708a364a1d72e2e212cef66231}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaa53f2c708a364a1d72e2e212cef66231}} 
+e\+Translucent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Additive@{e\+Additive}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Additive@{e\+Additive}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4b056289649a890dd48c158d33786f12}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4b056289649a890dd48c158d33786f12}} 
+e\+Additive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Modulate@{e\+Modulate}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Modulate@{e\+Modulate}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa14180cce3a38ecdc1df33ce9d2f1ae9b}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa14180cce3a38ecdc1df33ce9d2f1ae9b}} 
+e\+Modulate&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Modulate2@{e\+Modulate2}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Modulate2@{e\+Modulate2}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa722ace4648c2dc7d1be0623317bf8e76}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa722ace4648c2dc7d1be0623317bf8e76}} 
+e\+Modulate2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Over@{e\+Over}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Over@{e\+Over}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baab235ee3fa24dcb41e4d8e1ae837bae70}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baab235ee3fa24dcb41e4d8e1ae837bae70}} 
+e\+Over&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Normal@{e\+Normal}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Normal@{e\+Normal}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa70d650bdf65fcb9d5d8c9ffebc0b3063}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa70d650bdf65fcb9d5d8c9ffebc0b3063}} 
+e\+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Dissolve@{e\+Dissolve}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Dissolve@{e\+Dissolve}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa8fd303f0313fb995c1819cb4a703f2c1}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa8fd303f0313fb995c1819cb4a703f2c1}} 
+e\+Dissolve&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Darken@{e\+Darken}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Darken@{e\+Darken}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3d8575a38684bb76fe428faee8616134}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3d8575a38684bb76fe428faee8616134}} 
+e\+Darken&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Burn@{e\+Color\+Burn}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Color\+Burn@{e\+Color\+Burn}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa9abce25d2c5e080377602b0affe0ebb1}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa9abce25d2c5e080377602b0affe0ebb1}} 
+e\+Color\+Burn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear\+Burn@{e\+Linear\+Burn}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Linear\+Burn@{e\+Linear\+Burn}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa50a97ecccc9a02769df09c2364f955f8}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa50a97ecccc9a02769df09c2364f955f8}} 
+e\+Linear\+Burn&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Darker\+Color@{e\+Darker\+Color}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Darker\+Color@{e\+Darker\+Color}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3467612d44ef6cd2025cde2d18c65dca}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3467612d44ef6cd2025cde2d18c65dca}} 
+e\+Darker\+Color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Lighten@{e\+Lighten}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Lighten@{e\+Lighten}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4f5410c6355ea1775a40ce4a382371ed}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4f5410c6355ea1775a40ce4a382371ed}} 
+e\+Lighten&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Screen@{e\+Screen}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Screen@{e\+Screen}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa7a4864db872da31d342e274beb29fc61}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa7a4864db872da31d342e274beb29fc61}} 
+e\+Screen&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Dodge@{e\+Color\+Dodge}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Color\+Dodge@{e\+Color\+Dodge}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaea4989efb7a40a27af569e108fd7965c}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaea4989efb7a40a27af569e108fd7965c}} 
+e\+Color\+Dodge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear\+Dodge@{e\+Linear\+Dodge}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Linear\+Dodge@{e\+Linear\+Dodge}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa010665bfd13b519549a3227f16697b19}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa010665bfd13b519549a3227f16697b19}} 
+e\+Linear\+Dodge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Lighter\+Color@{e\+Lighter\+Color}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Lighter\+Color@{e\+Lighter\+Color}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa2f24b1d1d8bbcec5c2bda9a5468c7265}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa2f24b1d1d8bbcec5c2bda9a5468c7265}} 
+e\+Lighter\+Color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Soft\+Light@{e\+Soft\+Light}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Soft\+Light@{e\+Soft\+Light}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa042dddc2499ab7576d358dc09a823454}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa042dddc2499ab7576d358dc09a823454}} 
+e\+Soft\+Light&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hard\+Light@{e\+Hard\+Light}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Hard\+Light@{e\+Hard\+Light}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3929f4a257688f547463a7486b0c05fe}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3929f4a257688f547463a7486b0c05fe}} 
+e\+Hard\+Light&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Vivid\+Light@{e\+Vivid\+Light}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Vivid\+Light@{e\+Vivid\+Light}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3105b6468be38d41572e6f8a184afb1f}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa3105b6468be38d41572e6f8a184afb1f}} 
+e\+Vivid\+Light&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear\+Light@{e\+Linear\+Light}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Linear\+Light@{e\+Linear\+Light}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa709e60fc2fe1498ff640037a30756206}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa709e60fc2fe1498ff640037a30756206}} 
+e\+Linear\+Light&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Pin\+Light@{e\+Pin\+Light}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Pin\+Light@{e\+Pin\+Light}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baac081cec5ad991e7b8d70794b294fa121}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baac081cec5ad991e7b8d70794b294fa121}} 
+e\+Pin\+Light&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hard\+Mix@{e\+Hard\+Mix}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Hard\+Mix@{e\+Hard\+Mix}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa2084bbee3d3afac31ae434af923bb2b7}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa2084bbee3d3afac31ae434af923bb2b7}} 
+e\+Hard\+Mix&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Difference@{e\+Difference}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Difference@{e\+Difference}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa841964425115396a75c3f181a7c7628c}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa841964425115396a75c3f181a7c7628c}} 
+e\+Difference&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Exclusion@{e\+Exclusion}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Exclusion@{e\+Exclusion}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baad5bcf178acbe5a4c5f0ebac857cc8bea}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baad5bcf178acbe5a4c5f0ebac857cc8bea}} 
+e\+Exclusion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Subtract@{e\+Subtract}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Subtract@{e\+Subtract}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa1f691b259e9fe862604694c1db5efad7}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa1f691b259e9fe862604694c1db5efad7}} 
+e\+Subtract&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Divide@{e\+Divide}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Divide@{e\+Divide}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaffe2df28a944783fa8b28ac697ed1733}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaffe2df28a944783fa8b28ac697ed1733}} 
+e\+Divide&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hue@{e\+Hue}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Hue@{e\+Hue}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa111a7706c7e4d71633335359309cd60b}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa111a7706c7e4d71633335359309cd60b}} 
+e\+Hue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Saturation@{e\+Saturation}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Saturation@{e\+Saturation}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaa5639266b843c97911bf3559c03a098b}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaa5639266b843c97911bf3559c03a098b}} 
+e\+Saturation&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color@{e\+Color}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Color@{e\+Color}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa0a6f03a09702716e57986e29bea4b06f}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa0a6f03a09702716e57986e29bea4b06f}} 
+e\+Color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Luminosity@{e\+Luminosity}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Luminosity@{e\+Luminosity}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baade8ddbd8bd2da4b66bfb469106413a57}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baade8ddbd8bd2da4b66bfb469106413a57}} 
+e\+Luminosity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Overlay@{e\+Overlay}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Overlay@{e\+Overlay}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4154995deef9df1efc771e273e2af980}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baa4154995deef9df1efc771e273e2af980}} 
+e\+Overlay&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend\+Mode\+Count@{e\+Blend\+Mode\+Count}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!e\+Blend\+Mode\+Count@{e\+Blend\+Mode\+Count}}}\mbox{\Hypertarget{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaeed5b8152de39df3e7043e3dd295662f}\label{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5baaeed5b8152de39df3e7043e3dd295662f}} 
+e\+Blend\+Mode\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_layered_texture_a78ed9cd6298697060ebc278617d72d44}\label{class_fbx_layered_texture_a78ed9cd6298697060ebc278617d72d44}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Connect\+Notify@{Connect\+Notify}}
+\index{Connect\+Notify@{Connect\+Notify}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Connect\+Notify()}{ConnectNotify()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Layered\+Texture\+::\+Connect\+Notify (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} const \&}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_ab7a400f3829d1f0da57d3d78c8168dd0}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_layered_texture_a61ca1d210dcae83133ad2ee1c9c7daa9}\label{class_fbx_layered_texture_a61ca1d210dcae83133ad2ee1c9c7daa9}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Layered\+Texture\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_texture_a321c23c2dc2e91c58e2fcc2ed7d29f9e}{Fbx\+Texture}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_layered_texture_a2d38e409c9671b2850d1260d881e1940}\label{class_fbx_layered_texture_a2d38e409c9671b2850d1260d881e1940}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Get\+Texture\+Alpha@{Get\+Texture\+Alpha}}
+\index{Get\+Texture\+Alpha@{Get\+Texture\+Alpha}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Get\+Texture\+Alpha()}{GetTextureAlpha()}}
+{\footnotesize\ttfamily bool Fbx\+Layered\+Texture\+::\+Get\+Texture\+Alpha (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{double \&}]{p\+Alpha }\end{DoxyParamCaption}) const}
+
+Returns the alpha of a specified texture 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The texture index. \\
+\hline
+{\em p\+Alpha} & The parameter that will hold the returned alpha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if successful, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layered_texture_ae0b5014964899ff448c859d408d8614a}\label{class_fbx_layered_texture_ae0b5014964899ff448c859d408d8614a}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Get\+Texture\+Blend\+Mode@{Get\+Texture\+Blend\+Mode}}
+\index{Get\+Texture\+Blend\+Mode@{Get\+Texture\+Blend\+Mode}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Get\+Texture\+Blend\+Mode()}{GetTextureBlendMode()}}
+{\footnotesize\ttfamily bool Fbx\+Layered\+Texture\+::\+Get\+Texture\+Blend\+Mode (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}{E\+Blend\+Mode} \&}]{p\+Mode }\end{DoxyParamCaption}) const}
+
+Returns the blending mode of a specified texture 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The texture index. \\
+\hline
+{\em p\+Mode} & The parameter that will hold the returned blend mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if successful, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layered_texture_a8a01816e03ca531e7bdd8c65804febf7}\label{class_fbx_layered_texture_a8a01816e03ca531e7bdd8c65804febf7}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Layered\+Texture\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_layered_texture}{Fbx\+Layered\+Texture} \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The object for comparison. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if p\+Other is equivalent to this object, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layered_texture_a6d1190feade206649f73444c5b114bd1}\label{class_fbx_layered_texture_a6d1190feade206649f73444c5b114bd1}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Remove\+Input\+Data@{Remove\+Input\+Data}}
+\index{Remove\+Input\+Data@{Remove\+Input\+Data}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Remove\+Input\+Data()}{RemoveInputData()}}
+{\footnotesize\ttfamily bool Fbx\+Layered\+Texture\+::\+Remove\+Input\+Data (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layered_texture_a87145db35c3a207f5e54c9a9dcd83f1f}\label{class_fbx_layered_texture_a87145db35c3a207f5e54c9a9dcd83f1f}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Set\+Texture\+Alpha@{Set\+Texture\+Alpha}}
+\index{Set\+Texture\+Alpha@{Set\+Texture\+Alpha}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Set\+Texture\+Alpha()}{SetTextureAlpha()}}
+{\footnotesize\ttfamily bool Fbx\+Layered\+Texture\+::\+Set\+Texture\+Alpha (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{double}]{p\+Alpha }\end{DoxyParamCaption})}
+
+Sets the alpha of a specified texture. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The texture index. \\
+\hline
+{\em p\+Alpha} & The alpha to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if successful, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layered_texture_ae16a157ad7ff41d377a2cff885a00c80}\label{class_fbx_layered_texture_ae16a157ad7ff41d377a2cff885a00c80}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!Set\+Texture\+Blend\+Mode@{Set\+Texture\+Blend\+Mode}}
+\index{Set\+Texture\+Blend\+Mode@{Set\+Texture\+Blend\+Mode}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{Set\+Texture\+Blend\+Mode()}{SetTextureBlendMode()}}
+{\footnotesize\ttfamily bool Fbx\+Layered\+Texture\+::\+Set\+Texture\+Blend\+Mode (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_layered_texture_af291d42b0329513909d2ddf48f56f5ba}{E\+Blend\+Mode}}]{p\+Mode }\end{DoxyParamCaption})}
+
+Sets the blending mode of a specified texture. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The texture index. \\
+\hline
+{\em p\+Mode} & The blend mode to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if successful, returns {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layered_texture_ae06d32684ea2f049c21abb66dfc30d4f}\label{class_fbx_layered_texture_ae06d32684ea2f049c21abb66dfc30d4f}} 
+\index{Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}!m\+Input\+Data@{m\+Input\+Data}}
+\index{m\+Input\+Data@{m\+Input\+Data}!Fbx\+Layered\+Texture@{Fbx\+Layered\+Texture}}
+\subsubsection{\texorpdfstring{m\+Input\+Data}{mInputData}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{struct_fbx_layered_texture_1_1_input_data}{Input\+Data}$>$ Fbx\+Layered\+Texture\+::m\+Input\+Data}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxlayeredtexture_8h}{fbxlayeredtexture.\+h}\end{DoxyCompactItemize}

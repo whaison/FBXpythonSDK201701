@@ -1,0 +1,2519 @@
+\hypertarget{class_fbx_property}{}\section{Fbx\+Property クラス}
+\label{class_fbx_property}\index{Fbx\+Property@{Fbx\+Property}}
+
+
+Class to hold user properties.  
+
+
+
+
+{\ttfamily \#include $<$fbxproperty.\+h$>$}
+
+
+
+\hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ T $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Access\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Antialiasing\+Method $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Aperture\+Format $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Aperture\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Area\+Light\+Shape $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Aspect\+Ratio\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Auto\+User $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Blend\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Cache\+Channel\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Category $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Contact\+Behaviour $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Decay\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Fbx\+Quat\+Interp\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Fbx\+Rotation\+Order $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Film\+Roll\+Order $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Finger\+Contact\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Floor\+Pivot $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Focus\+Distance\+Source $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Foot\+Contact\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Format $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Front\+Back\+Plane\+Display\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Front\+Back\+Plane\+Distance\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Gate\+Fit $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Hand\+Contact\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Hips\+Translation\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Interlace\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Look $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Off\+Auto\+User $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Posture\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Projection\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Roll\+Extraction\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Safe\+Area\+Style $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Sampling\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Stereo\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Texture\+Use6 $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Unified\+Mapping\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ E\+Wrap\+Mode $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Blob $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Bool $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Control\+Set\+::\+E\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Date\+Time $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Double $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Enum $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Float $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Int $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Object $>$}, \hyperlink{class_fbx_property_t_3_01_fbx_reference_01_4}{Fbx\+Property\+T$<$ Fbx\+Reference $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+String $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Time $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Transform\+::\+E\+Inherit\+Type $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+U\+Long\+Long $>$}, \hyperlink{class_fbx_property_t}{Fbx\+Property\+T$<$ Fbx\+Vector\+Template3 $>$} (計54項目)に継承されています。
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_property_1_1_fbx_property_name_cache}{Fbx\+Property\+Name\+Cache}
+\begin{DoxyCompactList}\small\item\em This is an internal class that you can use to build and clear the name map of properties. You can use the name map to speed up searching for property names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_aadee6392924e168e7cfea5225148893a}{Copy\+Value} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_property_a4b55a5fb0b5e63c3db166e64f38bec1d}{s\+Hierarchical\+Separator}
+\begin{DoxyCompactList}\small\item\em Hierarchical separator of properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_aa9bd3c13031aeb1035adfb3e37256ce4}{Fbx\+Property} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type=\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}(), const char $\ast$p\+Label=\char`\"{}\char`\"{})
+\item 
+\hyperlink{class_fbx_property_a019739c19f5652349afb9780945e57f0}{Fbx\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Parent, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, const char $\ast$p\+Label)
+\item 
+bool \hyperlink{class_fbx_property_aa89d91b8bf335921748ea21ab08eb9a3}{Set} (const void $\ast$p\+Value, const \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \&p\+Value\+Type, bool p\+Check\+For\+Value\+Equality=true)
+\item 
+bool \hyperlink{class_fbx_property_ac2b8fdea0758676644547365cea1e2ae}{Get} (void $\ast$p\+Value, const \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \&p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_property_afb12acf8aeec609f4df77c61e5346e59}{Notify\+Set\+Request} ()
+\item 
+bool \hyperlink{class_fbx_property_ac2a6a7d8711567294c90f37791846331}{Notify\+Set} ()
+\item 
+bool \hyperlink{class_fbx_property_abbb2f1f50f22fbcd94ad56e3373efaac}{Notify\+Get} () const
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_property_a7ea6fa004b54d9c3cd5b85fd33328078}{Fbx\+Object}
+\item 
+class \hyperlink{class_fbx_property_a9e1f446d3bd16145e2b59d431856e5e0}{Fbx\+I\+O\+Settings}
+\item 
+class \hyperlink{class_fbx_property_a8d8dceef68317bda5a5d5404edfab5da}{Fbx\+Binding\+Operator}
+\item 
+class \hyperlink{class_fbx_property_a1b769b6684b71dfe76f350fef1137cab}{Fbx\+Anim\+Eval\+Classic}
+\item 
+void \hyperlink{class_fbx_property_a08fc1df47ff71ef2c17871f8e95ab2d6}{Fbx\+Mark\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{class_fbx_map}{Fbx\+Map}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$, int $>$ \&p\+Object\+Dst\+Disconnect\+Count, \hyperlink{class_fbx_set}{Fbx\+Set}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&p\+Objects\+To\+Deleted, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&p\+Object\+To\+Deleted\+In\+Sequence)
+\item 
+void \hyperlink{class_fbx_property_ae1a9835e0187d6623df42de2bde8c29d}{Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Object, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&p\+Object\+To\+Deleted\+In\+Sequence)
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor.}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ae4aff3fdfa579d96a06f3f025d710e36}{Create} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Compound\+Property, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, const char $\ast$p\+Name, const char $\ast$p\+Label=\char`\"{}\char`\"{}, bool p\+Check\+For\+Dup=true, bool $\ast$p\+Was\+Found=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+static \hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ae08139931825dd529057d67812928622}{Create} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, const char $\ast$p\+Name, const char $\ast$p\+Label=\char`\"{}\char`\"{}, bool p\+Check\+For\+Dup=true, bool $\ast$p\+Was\+Found=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+static \hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_a333f52b93aca2083c6de7541a3911a65}{Create\+From} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Compound\+Property, \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+From\+Property, bool p\+Check\+For\+Dup=true)
+\item 
+static \hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_a3a80022746dbee36a37eed53aa19dbe0}{Create\+From} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+From\+Property, bool p\+Check\+For\+Dup=true)
+\item 
+void \hyperlink{class_fbx_property_a868cb14e3bdafc7e6bb68ffcf003f266}{Destroy} ()
+\item 
+void \hyperlink{class_fbx_property_acd55a5da5402c12716b5dcda32068456}{Destroy\+Recursively} ()
+\item 
+void \hyperlink{class_fbx_property_a5dbf74ee7ac5ec07d810d24d58c50ead}{Destroy\+Children} ()
+\item 
+\hyperlink{class_fbx_property_ac6f4561fd451ab81b93de09dd463e356}{Fbx\+Property} ()
+\item 
+\hyperlink{class_fbx_property_aaff1233681e54f5e8d70e695c2bdd2ca}{Fbx\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+\hyperlink{class_fbx_property_afaf9ebfe81538ea7948fde0d617f3408}{Fbx\+Property} (const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&p\+Property\+Handle)
+\item 
+\hyperlink{class_fbx_property_aabd3a3fc65f04824f033844223735139}{$\sim$\+Fbx\+Property} ()
+\end{DoxyCompactItemize}
+\subsection*{Property Identification.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \hyperlink{class_fbx_property_a62565770177152f06d82c745e0811b84}{Get\+Property\+Data\+Type} () const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_property_ad4505c67d892b22bb40ba5e9c5b4a844}{Get\+Name} () const
+\item 
+const char $\ast$ \hyperlink{class_fbx_property_af2f3725b832d70596008f895950c2235}{Get\+Name\+As\+C\+Str} () const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_property_a6045fdbb1bbe5a84f44c7f447d2fa52c}{Get\+Hierarchical\+Name} () const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_property_a6efe7b201b09f1694daa39d32ea2d7e1}{Get\+Label} (bool p\+Return\+Name\+If\+Empty=true) const
+\item 
+void \hyperlink{class_fbx_property_a8ceef24a4b0e5838895962aaf0ad07ae}{Set\+Label} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Label)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_aaa3f53accde176da9528ec831fc95ec8}{Get\+Fbx\+Object} () const
+\end{DoxyCompactItemize}
+\subsection*{User data}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_property_affbc6e79fd35b52606d84d4e6839725c}{Set\+User\+Tag} (int p\+Tag)
+\item 
+int \hyperlink{class_fbx_property_a346536ecdb6cc2178105ed4fc30b80fc}{Get\+User\+Tag} ()
+\begin{DoxyCompactList}\small\item\em Gets the user tag. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_property_a36506608b92abf21707be1c06a6cac3b}{Set\+User\+Data\+Ptr} (void $\ast$p\+User\+Data)
+\item 
+void $\ast$ \hyperlink{class_fbx_property_a4d1057bd2c1b78585aad480c88a40a11}{Get\+User\+Data\+Ptr} ()
+\end{DoxyCompactItemize}
+\subsection*{Property Flags.}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_property_a16da0381546978afc477b033239f1fc9}{Modify\+Flag} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flag, bool p\+Value)
+\item 
+bool \hyperlink{class_fbx_property_a08c9fefe4d1a34c091ff02386462c8d6}{Get\+Flag} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flag) const
+\item 
+\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} \hyperlink{class_fbx_property_a8a6c56ee1afdaac4fd6d750a6677f177}{Get\+Flags} () const
+\item 
+\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} \hyperlink{class_fbx_property_ad2c773361ba216ae0fdd3eb8d10cb4e2}{Get\+Flag\+Inherit\+Type} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flag) const
+\item 
+bool \hyperlink{class_fbx_property_a65a521dab6bcd5c3f2570f555dbcaddc}{Set\+Flag\+Inherit\+Type} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flag, \hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} p\+Type)
+\item 
+bool \hyperlink{class_fbx_property_ab89605d755ba9030d8a03819741dbafb}{Modified\+Flag} (\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} p\+Flag) const
+\end{DoxyCompactItemize}
+\subsection*{Assignment and comparison operators}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \& \hyperlink{class_fbx_property_a14126bd5d02fd8558c5946cc7ba12d46}{operator=} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+bool \hyperlink{class_fbx_property_a5c68be7d9ec048949e5f0b489e1f687c}{operator==} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\item 
+bool \hyperlink{class_fbx_property_a78e06f51d52af04ffef695e3dd795659}{operator!=} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\item 
+bool \hyperlink{class_fbx_property_aa02dd8d143c2814367c1a81de6ab42a2}{operator$<$} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\item 
+bool \hyperlink{class_fbx_property_a78307c874fd49f1721713da94d953423}{operator$>$} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\item 
+bool \hyperlink{class_fbx_property_a027c88dfbe6dc8283307ec81edf79159}{operator==} (int p\+Value) const
+\item 
+bool \hyperlink{class_fbx_property_a9cb24dd197f19e6d1cc8dad2b757dce0}{operator!=} (int p\+Value) const
+\item 
+bool \hyperlink{class_fbx_property_a41408b250f8d1f15baa0aa358a7cc163}{Compare\+Value} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\end{DoxyCompactItemize}
+\subsection*{Value management.}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_fbx_property_aa040d85cda5816e4937a348e47357a61}{Has\+Default\+Value} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_a7d3760c0aec45b51823c57f62a08dc46}{Get} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_a7854464326c74ce7caee2a4263284a46}{Set} (const T \&p\+Value)
+\item 
+bool \hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{Is\+Valid} () const
+\item 
+\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} \hyperlink{class_fbx_property_aee557d7603e73430d4034a03b631b75e}{Get\+Value\+Inherit\+Type} () const
+\item 
+bool \hyperlink{class_fbx_property_ad83cb36df88b5c088d955effd462d4be}{Set\+Value\+Inherit\+Type} (\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} p\+Type)
+\item 
+bool \hyperlink{class_fbx_property_acea8ef5412320c293dfaca9680bc797b}{Modified} () const
+\end{DoxyCompactItemize}
+\subsection*{Property Limits.}
+\label{_amgrp3eae9aa97a3e75e6a8fba4877593ea02}%
+Property limits are provided for convenience if some applications desire to bound the range of possible values for a given type property. F\+BX will never apply these limits internally, however it will store and retrieve the limits values from files, and will assure that they are persistent in memory while the property exists.
+
+Notes\+:
+\begin{DoxyItemize}
+\item The limit value is truncated to the property data type.
+\item These limits are meaningless for the boolean type. It is the responsibility of the calling application to implement the necessary instructions to limit the property of boolean type.
+\item The Set\+Min\+Limit/\+Set\+Max\+Limit methods will do nothing if Support\+Set\+Limits\+As\+Doube() returns false. 
+\end{DoxyItemize}\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_a7f84a31a453f4e800e4440517418e7fe}{Support\+Set\+Limit\+As\+Double} () const
+\item 
+bool \hyperlink{class_fbx_property_aa257615c70fd0ff635471216d8aea3ca}{Set\+Min\+Limit} (double p\+Min)
+\item 
+bool \hyperlink{class_fbx_property_ae2c3f0688ecfbed568feb2dbe33967c3}{Has\+Min\+Limit} () const
+\item 
+double \hyperlink{class_fbx_property_abdc5ccbaea5c1e32d7b1ccfa3fd826af}{Get\+Min\+Limit} () const
+\item 
+bool \hyperlink{class_fbx_property_a0f55c44acd2069128f85063eb2c04d47}{Has\+Max\+Limit} () const
+\item 
+bool \hyperlink{class_fbx_property_af79f0aa4871176b7ca40e16af233a984}{Set\+Max\+Limit} (double p\+Max)
+\item 
+double \hyperlink{class_fbx_property_a1cdf4161465d3b988b23b9fe05fa22b4}{Get\+Max\+Limit} () const
+\item 
+bool \hyperlink{class_fbx_property_acc29ebadc04e2fdd89f986d3faaff874}{Set\+Limits} (double p\+Min, double p\+Max)
+\end{DoxyCompactItemize}
+\subsection*{Enum and property list}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_property_aa25239a939eb238e2eb239040364e286}{Add\+Enum\+Value} (const char $\ast$p\+String\+Value)
+\item 
+void \hyperlink{class_fbx_property_a3e03482059d70c4e86314f8922ae8d22}{Insert\+Enum\+Value} (int p\+Index, const char $\ast$p\+String\+Value)
+\item 
+int \hyperlink{class_fbx_property_ac06caf332b2d662a8ad09cff1f397820}{Get\+Enum\+Count} () const
+\item 
+void \hyperlink{class_fbx_property_ae9dd7a699742397756227ac1dbd9eb13}{Set\+Enum\+Value} (int p\+Index, const char $\ast$p\+String\+Value)
+\item 
+void \hyperlink{class_fbx_property_aa652adeb57fa64c60cab63ac1df9efa5}{Remove\+Enum\+Value} (int p\+Index)
+\item 
+const char $\ast$ \hyperlink{class_fbx_property_ab378e2225ba43c225625f137e48808d5}{Get\+Enum\+Value} (int p\+Index) const
+\end{DoxyCompactItemize}
+\subsection*{Hierarchical properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_ac614dd09edb00ac99ce49332a66a597d}{Is\+Root} () const
+\item 
+bool \hyperlink{class_fbx_property_aa8284deb85f3a324db108291bc42284a}{Is\+Child\+Of} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Parent) const
+\item 
+bool \hyperlink{class_fbx_property_aa346bfac7ee0847e7fa2a6dc4aba90ac}{Is\+Descendent\+Of} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Ancestor) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_a2cafce5b279fd3dd3a01a618538c15ca}{Get\+Parent} () const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_a0b677f1fd948cfc645962a91b1ed928f}{Get\+Child} () const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ac723c81393df4b2fdedd78863b361ab5}{Get\+Sibling} () const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ad7f8dea372a3401119e18f23b03691f4}{Get\+First\+Descendent} () const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_a1de724032949fd7a7b21028894adbcce}{Get\+Next\+Descendent} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_af6dc98aa7ae9fd339f5b463845f56b29}{Find} (const char $\ast$p\+Name, bool p\+Case\+Sensitive=true) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_acd7815414a490b7d6c2fb6bf1d95536e}{Find} (const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, bool p\+Case\+Sensitive=true) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_aa3c6cdd5991e086121dc7d724846e444}{Find\+Hierarchical} (const char $\ast$p\+Name, bool p\+Case\+Sensitive=true) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_a5daed7a38564da53f44bdaa5f71f7837}{Find\+Hierarchical} (const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type, bool p\+Case\+Sensitive=true) const
+\end{DoxyCompactItemize}
+\subsection*{Optimizations}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_property_a9305ebb4cec09a9a9dea0a36f38e2712}{Begin\+Create\+Or\+Find\+Property} ()
+\begin{DoxyCompactList}\small\item\em Internal function for building a property name map. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_property_a1af85e75268d31cb28323895ad45d52c}{End\+Create\+Or\+Find\+Property} ()
+\begin{DoxyCompactList}\small\item\em Internal function for clearing the property name map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Animation Curve Management}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator} $\ast$ \hyperlink{class_fbx_property_adcf2ea55a226994e1545b6179b33cbb2}{Get\+Animation\+Evaluator} () const
+\item 
+bool \hyperlink{class_fbx_property_a1ae3c41711a9684cb1b3e6cf454c9b12}{Is\+Animated} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T \hyperlink{class_fbx_property_a6256ee462711d9b236f345a4c7eb8a75}{Evaluate\+Value} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}, bool p\+Force\+Eval=false)
+\item 
+\hyperlink{class_fbx_property_value}{Fbx\+Property\+Value} \& \hyperlink{class_fbx_property_ad581a049a2f336d6a3466fdd3c8c32c0}{Evaluate\+Value} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}, bool p\+Force\+Eval=false)
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_property_a990b9a78c7af13adf76143b7e23f7c9b}{Create\+Curve\+Node} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer)
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_property_a75e8145e21782dd1cc405b09c0981dd9}{Get\+Curve\+Node} (bool p\+Create=false)
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_property_a7cbdcc1cccba29824790d0621911831d}{Get\+Curve\+Node} (\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$p\+Anim\+Stack, bool p\+Create=false)
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_property_a26057248b360da2653fa9020d88258ac}{Get\+Curve\+Node} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, bool p\+Create=false)
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_property_a78b7ee36876a91b8689caae3117cbbb0}{Get\+Curve} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, bool p\+Create=false)
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_property_aac649fc614b3174b351d36d6e67e5c90}{Get\+Curve} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, const char $\ast$p\+Channel, bool p\+Create=false)
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_property_aa676a46d3dd168f9bdcac1b4161561ee}{Get\+Curve} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, const char $\ast$p\+Name, const char $\ast$p\+Channel, bool p\+Create)
+\end{DoxyCompactItemize}
+\subsection*{General Object Connection and Relationship Management}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_ad6169eb703985c8a77f294442a03703d}{Connect\+Src\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type} p\+Type=\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}{Fbx\+Connection\+::e\+None})
+\item 
+bool \hyperlink{class_fbx_property_af4fc85f2c880d813903e158147aeeae4}{Is\+Connected\+Src\+Object} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object) const
+\item 
+bool \hyperlink{class_fbx_property_aaf72d2b89f03e122cea736ca8e060cab}{Disconnect\+Src\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+bool \hyperlink{class_fbx_property_a7b9a767f964e705be7436739c5752644}{Disconnect\+All\+Src\+Object} ()
+\item 
+bool \hyperlink{class_fbx_property_a5535e9be6a48d8fd8fcb3a382067be8d}{Disconnect\+All\+Src\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria)
+\item 
+int \hyperlink{class_fbx_property_a4b6d431d87134722800f06e4cb442335}{Get\+Src\+Object\+Count} () const
+\item 
+int \hyperlink{class_fbx_property_ad90aa5b8d3fbe78a9bf541dcbcf9c210}{Get\+Src\+Object\+Count} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_ade290835b0d88b978bc2566e255c5974}{Get\+Src\+Object} (const int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_ab7e0cadde56df774a9a52e24be2bcec9}{Get\+Src\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_a9d65777042de1ee73b9e6635b12fe607}{Find\+Src\+Object} (const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_a225b5e5f588ea9a0bacfc03c9843ee15}{Find\+Src\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_a70f1adf2711c5bd6f3d7c1f6f9c7ddf2}{Disconnect\+All\+Src\+Object} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_ab176817ac3ddc88c86d28006b066bc26}{Disconnect\+All\+Src\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_property_a876b4f2219a1ca16337f35b27a76eed4}{Get\+Src\+Object\+Count} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_property_a4a79c28a713cafebad7254bd68b05a2f}{Get\+Src\+Object\+Count} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_a75fae8a9182ea51767ade157d614227a}{Get\+Src\+Object} (const int p\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_ac8ef2f7e7ea3fbfc19ca6202d4b8faf7}{Get\+Src\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const int p\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_ac7e7b3ac3ef1eb2a2c1178cf36047cbe}{Find\+Src\+Object} (const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_ab13fcbae9e768a074f40464670cbc462}{Find\+Src\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_property_aa6ba6b487c09e1cecc2eb02440998d1a}{Connect\+Dst\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type} p\+Type=\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}{Fbx\+Connection\+::e\+None})
+\item 
+bool \hyperlink{class_fbx_property_a991b94a016bed8e93015e1024596bbef}{Is\+Connected\+Dst\+Object} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object) const
+\item 
+bool \hyperlink{class_fbx_property_a322bdde93bd6716cdeeddd29d735d900}{Disconnect\+Dst\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+bool \hyperlink{class_fbx_property_ad4205b37ed636ff110565351d82a6468}{Disconnect\+All\+Dst\+Object} ()
+\item 
+bool \hyperlink{class_fbx_property_aab638ced78a12c068238b538159cf003}{Disconnect\+All\+Dst\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria)
+\item 
+int \hyperlink{class_fbx_property_a8a87e8b905f4a30eac5d382fa6b95dbc}{Get\+Dst\+Object\+Count} () const
+\item 
+int \hyperlink{class_fbx_property_acfca6ad7f8a1eebfecc838e91b7af100}{Get\+Dst\+Object\+Count} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_ace9e846d1442c106958d34a1364533e4}{Get\+Dst\+Object} (const int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_a49669c464e5caecb2cf954972e9af366}{Get\+Dst\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_a5c816ef8651dedd41022121ed073eeaa}{Find\+Dst\+Object} (const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_property_a7cdf86294b2b1dc3ec1e98bbb3bf2c87}{Find\+Dst\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_a9700052b15311bdbdb950fec91fe8ea8}{Disconnect\+All\+Dst\+Object} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_property_aa87d6cc464919a95dd7fd428b28c6e48}{Disconnect\+All\+Dst\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_property_a99dd8bf0103c66a7a8bf3a5ea72e41bd}{Get\+Dst\+Object\+Count} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_property_a5ba90af060ad449844816a3234ad0750}{Get\+Dst\+Object\+Count} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_a97b492c1eb439a481dbea8f494b82a2e}{Get\+Dst\+Object} (const int p\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_af7d61576c53b6b0d1dbf0f0d0a27ad3d}{Get\+Dst\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const int p\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_ab4b1b4ad00991bfbd702d8ea2bde5ae7}{Find\+Dst\+Object} (const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_property_a76ea2989d26c3e48488b4edb88d79ddb}{Find\+Dst\+Object} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\end{DoxyCompactItemize}
+\subsection*{General Property Connection and Relationship Management}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_property_aeeed658a70181e4bd6030c516065eb03}{Connect\+Src\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+bool \hyperlink{class_fbx_property_aca4ace4ad256046bc548c54173dab0c1}{Is\+Connected\+Src\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+bool \hyperlink{class_fbx_property_a25e6a00df6d1ec69db93a1d31c38374b}{Disconnect\+Src\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+int \hyperlink{class_fbx_property_a536aec7568f10441cf70045aa8842429}{Get\+Src\+Property\+Count} () const
+\item 
+bool \hyperlink{class_fbx_property_a1da4b660e1375970a8fa1dfb09074e3e}{Connect\+Dst\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+bool \hyperlink{class_fbx_property_aff04371bd84802d5c50c397e5716b604}{Is\+Connected\+Dst\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+bool \hyperlink{class_fbx_property_aa7178fdcef5b430fd74b5a1385b18ce7}{Disconnect\+Dst\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+int \hyperlink{class_fbx_property_abfcc52bdbd9853b10806740934b0230a}{Get\+Dst\+Property\+Count} () const
+\item 
+void \hyperlink{class_fbx_property_abc41950bc933e9bc5454e1b5b39c4d5c}{Clear\+Connect\+Cache} ()
+\begin{DoxyCompactList}\small\item\em Clears the connection cache of this property, this cache is used to store the connections that satisfy the given criteria. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ad538b18849614ac8d6ec3031bdf8a7ea}{Get\+Src\+Property} (const int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ae3efe1d4750e6e4e5b0a91cde0adb935}{Find\+Src\+Property} (const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ade7a6b86edce76764b6b4cb4854cb9b7}{Get\+Dst\+Property} (const int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_property_ac4658f970d7c354229e1f6fe71d0d250}{Find\+Dst\+Property} (const char $\ast$p\+Name, const int p\+Start\+Index=0) const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Class to hold user properties. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_property_ac6f4561fd451ab81b93de09dd463e356}\label{class_fbx_property_ac6f4561fd451ab81b93de09dd463e356}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Property()}{FbxProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Fbx\+Property\+::\+Fbx\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Static property constructor. \mbox{\Hypertarget{class_fbx_property_aaff1233681e54f5e8d70e695c2bdd2ca}\label{class_fbx_property_aaff1233681e54f5e8d70e695c2bdd2ca}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Property()}{FbxProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Fbx\+Property\+::\+Fbx\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Copy constructor for properties. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_afaf9ebfe81538ea7948fde0d617f3408}\label{class_fbx_property_afaf9ebfe81538ea7948fde0d617f3408}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Property()}{FbxProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Fbx\+Property\+::\+Fbx\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} \&}]{p\+Property\+Handle }\end{DoxyParamCaption})}
+
+Copy constructor for properties. 
+\begin{DoxyParams}{引数}
+{\em p\+Property\+Handle} & The property handle copied to this property handle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_aabd3a3fc65f04824f033844223735139}\label{class_fbx_property_aabd3a3fc65f04824f033844223735139}} 
+\index{Fbx\+Property@{Fbx\+Property}!````~Fbx\+Property@{$\sim$\+Fbx\+Property}}
+\index{````~Fbx\+Property@{$\sim$\+Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Property()}{~FbxProperty()}}
+{\footnotesize\ttfamily Fbx\+Property\+::$\sim$\+Fbx\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Static property destructor. \mbox{\Hypertarget{class_fbx_property_aa9bd3c13031aeb1035adfb3e37256ce4}\label{class_fbx_property_aa9bd3c13031aeb1035adfb3e37256ce4}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Property()}{FbxProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Fbx\+Property\+::\+Fbx\+Property (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type = {\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}()},  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_property_a019739c19f5652349afb9780945e57f0}\label{class_fbx_property_a019739c19f5652349afb9780945e57f0}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Property()}{FbxProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Fbx\+Property\+::\+Fbx\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Parent,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{const char $\ast$}]{p\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_property_aa25239a939eb238e2eb239040364e286}\label{class_fbx_property_aa25239a939eb238e2eb239040364e286}} 
+\index{Fbx\+Property@{Fbx\+Property}!Add\+Enum\+Value@{Add\+Enum\+Value}}
+\index{Add\+Enum\+Value@{Add\+Enum\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Add\+Enum\+Value()}{AddEnumValue()}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Add\+Enum\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+String\+Value }\end{DoxyParamCaption})}
+
+Adds a string value at the end of the enumeration list. 
+\begin{DoxyParams}{引数}
+{\em p\+String\+Value} & The string value to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index in the list where the string is added or -\/1 if the action failed. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only valid if the property type is e\+Fbx\+Enum or e\+Fbx\+EnumM. 
+
+If the property is of type e\+Fbx\+Enum, trying to add a value that is already in the enumeration list will fail. Empty strings are not allowed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a9305ebb4cec09a9a9dea0a36f38e2712}\label{class_fbx_property_a9305ebb4cec09a9a9dea0a36f38e2712}} 
+\index{Fbx\+Property@{Fbx\+Property}!Begin\+Create\+Or\+Find\+Property@{Begin\+Create\+Or\+Find\+Property}}
+\index{Begin\+Create\+Or\+Find\+Property@{Begin\+Create\+Or\+Find\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Begin\+Create\+Or\+Find\+Property()}{BeginCreateOrFindProperty()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Begin\+Create\+Or\+Find\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Internal function for building a property name map. 
+
+被呼び出し関係図\+:
+% FIG 0
+\mbox{\Hypertarget{class_fbx_property_abc41950bc933e9bc5454e1b5b39c4d5c}\label{class_fbx_property_abc41950bc933e9bc5454e1b5b39c4d5c}} 
+\index{Fbx\+Property@{Fbx\+Property}!Clear\+Connect\+Cache@{Clear\+Connect\+Cache}}
+\index{Clear\+Connect\+Cache@{Clear\+Connect\+Cache}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Clear\+Connect\+Cache()}{ClearConnectCache()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Clear\+Connect\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the connection cache of this property, this cache is used to store the connections that satisfy the given criteria. 
+
+\mbox{\Hypertarget{class_fbx_property_a41408b250f8d1f15baa0aa358a7cc163}\label{class_fbx_property_a41408b250f8d1f15baa0aa358a7cc163}} 
+\index{Fbx\+Property@{Fbx\+Property}!Compare\+Value@{Compare\+Value}}
+\index{Compare\+Value@{Compare\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Compare\+Value()}{CompareValue()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Compare\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const}
+
+Compares this property\textquotesingle{}s value to another property\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property whose value is compared with this property\textquotesingle{}s value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa6ba6b487c09e1cecc2eb02440998d1a}\label{class_fbx_property_aa6ba6b487c09e1cecc2eb02440998d1a}} 
+\index{Fbx\+Property@{Fbx\+Property}!Connect\+Dst\+Object@{Connect\+Dst\+Object}}
+\index{Connect\+Dst\+Object@{Connect\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Connect\+Dst\+Object()}{ConnectDstObject()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Connect\+Dst\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type}}]{p\+Type = {\ttfamily \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}{Fbx\+Connection\+::e\+None}} }\end{DoxyParamCaption})}
+
+Connects this property to one destination object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The destination object with which this property connects. \\
+\hline
+{\em p\+Type} & The connection type between this property and the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a1da4b660e1375970a8fa1dfb09074e3e}\label{class_fbx_property_a1da4b660e1375970a8fa1dfb09074e3e}} 
+\index{Fbx\+Property@{Fbx\+Property}!Connect\+Dst\+Property@{Connect\+Dst\+Property}}
+\index{Connect\+Dst\+Property@{Connect\+Dst\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Connect\+Dst\+Property()}{ConnectDstProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Connect\+Dst\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Connects this property to a destination property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The destination property with which this property connects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ad6169eb703985c8a77f294442a03703d}\label{class_fbx_property_ad6169eb703985c8a77f294442a03703d}} 
+\index{Fbx\+Property@{Fbx\+Property}!Connect\+Src\+Object@{Connect\+Src\+Object}}
+\index{Connect\+Src\+Object@{Connect\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Connect\+Src\+Object()}{ConnectSrcObject()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Connect\+Src\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type}}]{p\+Type = {\ttfamily \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}{Fbx\+Connection\+::e\+None}} }\end{DoxyParamCaption})}
+
+Connects this property to one source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to which this property connects. \\
+\hline
+{\em p\+Type} & The connection type between the property and the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{class_fbx_property_aeeed658a70181e4bd6030c516065eb03}\label{class_fbx_property_aeeed658a70181e4bd6030c516065eb03}} 
+\index{Fbx\+Property@{Fbx\+Property}!Connect\+Src\+Property@{Connect\+Src\+Property}}
+\index{Connect\+Src\+Property@{Connect\+Src\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Connect\+Src\+Property()}{ConnectSrcProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Connect\+Src\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Connects this property to a source property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The source property with which this property connects. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aadee6392924e168e7cfea5225148893a}\label{class_fbx_property_aadee6392924e168e7cfea5225148893a}} 
+\index{Fbx\+Property@{Fbx\+Property}!Copy\+Value@{Copy\+Value}}
+\index{Copy\+Value@{Copy\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Copy\+Value()}{CopyValue()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Copy\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Copies the value of a property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property from which to derive the value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if value has been copied successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ae4aff3fdfa579d96a06f3f025d710e36}\label{class_fbx_property_ae4aff3fdfa579d96a06f3f025d710e36}} 
+\index{Fbx\+Property@{Fbx\+Property}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Create (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Compound\+Property,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{p\+Check\+For\+Dup = {\ttfamily true},  }\item[{bool $\ast$}]{p\+Was\+Found = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a runtime property on the specified property. 
+\begin{DoxyParams}{引数}
+{\em p\+Compound\+Property} & The parent property of this property. \\
+\hline
+{\em p\+Data\+Type} & The data type of this property. \\
+\hline
+{\em p\+Name} & The property name. \\
+\hline
+{\em p\+Label} & The label of this property. \\
+\hline
+{\em p\+Check\+For\+Dup} & If {\ttfamily true}, parent property checks if it has a child property already with p\+Name, if {\ttfamily false}, the new property is created. \\
+\hline
+{\em p\+Was\+Found} & If p\+Check\+For\+Dup is {\ttfamily true}, this flag is set to indicate whether the p\+Compound\+Property already has a child property with p\+Name. \\
+\hline
+\end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_property_ae08139931825dd529057d67812928622}\label{class_fbx_property_ae08139931825dd529057d67812928622}} 
+\index{Fbx\+Property@{Fbx\+Property}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{p\+Check\+For\+Dup = {\ttfamily true},  }\item[{bool $\ast$}]{p\+Was\+Found = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a runtime property on the specified object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object on which the property will be created. \\
+\hline
+{\em p\+Data\+Type} & The data type of this property. \\
+\hline
+{\em p\+Name} & The property name. \\
+\hline
+{\em p\+Label} & The label of this property. \\
+\hline
+{\em p\+Check\+For\+Dup} & If {\ttfamily true}, p\+Object checks whether it already has a property with p\+Name, if {\ttfamily false}, a new property is created. \\
+\hline
+{\em p\+Was\+Found} & If p\+Check\+For\+Dup is {\ttfamily true}, this flag is set to indicate whether the p\+Object already has a child property with p\+Name. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_a990b9a78c7af13adf76143b7e23f7c9b}\label{class_fbx_property_a990b9a78c7af13adf76143b7e23f7c9b}} 
+\index{Fbx\+Property@{Fbx\+Property}!Create\+Curve\+Node@{Create\+Curve\+Node}}
+\index{Create\+Curve\+Node@{Create\+Curve\+Node}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Create\+Curve\+Node()}{CreateCurveNode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Property\+::\+Create\+Curve\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer }\end{DoxyParamCaption})}
+
+Creates a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} on the specified layer. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Layer} & The animation layer the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} object is attached to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function check the property \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} flag and fails to execute if it is not set. 
+
+If created, the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} is automatically connected to the property and the animation layer. 
+
+The created \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} does not automatically allocate anim curves. 
+
+On the successful execution of this function, the property e\+Animated flag is set to {\ttfamily true}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a333f52b93aca2083c6de7541a3911a65}\label{class_fbx_property_a333f52b93aca2083c6de7541a3911a65}} 
+\index{Fbx\+Property@{Fbx\+Property}!Create\+From@{Create\+From}}
+\index{Create\+From@{Create\+From}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Create\+From()}{CreateFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Create\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Compound\+Property,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+From\+Property,  }\item[{bool}]{p\+Check\+For\+Dup = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a dynamic property from another property on the specified property. 
+\begin{DoxyParams}{引数}
+{\em p\+Compound\+Property} & The parent property of this property. \\
+\hline
+{\em p\+From\+Property} & The property copied by this property. \\
+\hline
+{\em p\+Check\+For\+Dup} & If {\ttfamily true}, parent property checks if it already has a child property that has the name of p\+From\+Property, if {\ttfamily false}, a new property is created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Only the property name, label, min/max, enums and flags are copied. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a3a80022746dbee36a37eed53aa19dbe0}\label{class_fbx_property_a3a80022746dbee36a37eed53aa19dbe0}} 
+\index{Fbx\+Property@{Fbx\+Property}!Create\+From@{Create\+From}}
+\index{Create\+From@{Create\+From}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Create\+From()}{CreateFrom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Create\+From (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+From\+Property,  }\item[{bool}]{p\+Check\+For\+Dup = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a dynamic property from another property on the specified object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object that contains this property. \\
+\hline
+{\em p\+From\+Property} & The property copied by this property. \\
+\hline
+{\em p\+Check\+For\+Dup} & If {\ttfamily true}, p\+Object checks if it already has a property that has the name of p\+From\+Property, if {\ttfamily false}, a new property is created. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Only the property name, label, min/max, enums and flags are copied. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a868cb14e3bdafc7e6bb68ffcf003f266}\label{class_fbx_property_a868cb14e3bdafc7e6bb68ffcf003f266}} 
+\index{Fbx\+Property@{Fbx\+Property}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys a dynamic property. \mbox{\Hypertarget{class_fbx_property_a5dbf74ee7ac5ec07d810d24d58c50ead}\label{class_fbx_property_a5dbf74ee7ac5ec07d810d24d58c50ead}} 
+\index{Fbx\+Property@{Fbx\+Property}!Destroy\+Children@{Destroy\+Children}}
+\index{Destroy\+Children@{Destroy\+Children}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Destroy\+Children()}{DestroyChildren()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Destroy\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys children of a dynamic property. \begin{DoxyRemark}{注釈}
+Destroy all children of current property, and current property will not be destroyed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_acd55a5da5402c12716b5dcda32068456}\label{class_fbx_property_acd55a5da5402c12716b5dcda32068456}} 
+\index{Fbx\+Property@{Fbx\+Property}!Destroy\+Recursively@{Destroy\+Recursively}}
+\index{Destroy\+Recursively@{Destroy\+Recursively}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Destroy\+Recursively()}{DestroyRecursively()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Destroy\+Recursively (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys a dynamic property and its children \begin{DoxyRemark}{注釈}
+Destroy all children of current property, and current property will also be destroyed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_ad4205b37ed636ff110565351d82a6468}\label{class_fbx_property_ad4205b37ed636ff110565351d82a6468}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}}
+\index{Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Dst\+Object()}{DisconnectAllDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+All\+Dst\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disconnects this property from all the destination objects. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all the destination objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aab638ced78a12c068238b538159cf003}\label{class_fbx_property_aab638ced78a12c068238b538159cf003}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}}
+\index{Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Dst\+Object()}{DisconnectAllDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+All\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption})}
+
+Disconnects this property from all the destination objects that satisfy given criteria. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all the destination objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a9700052b15311bdbdb950fec91fe8ea8}\label{class_fbx_property_a9700052b15311bdbdb950fec91fe8ea8}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}}
+\index{Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Dst\+Object()}{DisconnectAllDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+::\+Disconnect\+All\+Dst\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disconnects this property from all the destination objects of the specified class type. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all the destination objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_property_aa87d6cc464919a95dd7fd428b28c6e48}\label{class_fbx_property_aa87d6cc464919a95dd7fd428b28c6e48}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}}
+\index{Disconnect\+All\+Dst\+Object@{Disconnect\+All\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Dst\+Object()}{DisconnectAllDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+::\+Disconnect\+All\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption})}
+
+Disconnects this property from all the destination objects which are of the specified class type and satisfy the given criteria. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all the destination objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{class_fbx_property_a7b9a767f964e705be7436739c5752644}\label{class_fbx_property_a7b9a767f964e705be7436739c5752644}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}}
+\index{Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Src\+Object()}{DisconnectAllSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+All\+Src\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disconnects this property from all the source objects. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all the source objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a5535e9be6a48d8fd8fcb3a382067be8d}\label{class_fbx_property_a5535e9be6a48d8fd8fcb3a382067be8d}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}}
+\index{Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Src\+Object()}{DisconnectAllSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+All\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption})}
+
+Disconnects this property from all source objects that satisfy a given criteria. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all the source objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a70f1adf2711c5bd6f3d7c1f6f9c7ddf2}\label{class_fbx_property_a70f1adf2711c5bd6f3d7c1f6f9c7ddf2}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}}
+\index{Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Src\+Object()}{DisconnectAllSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+::\+Disconnect\+All\+Src\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disconnects this property from all source objects of the specified class type. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all source objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{class_fbx_property_ab176817ac3ddc88c86d28006b066bc26}\label{class_fbx_property_ab176817ac3ddc88c86d28006b066bc26}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}}
+\index{Disconnect\+All\+Src\+Object@{Disconnect\+All\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+All\+Src\+Object()}{DisconnectAllSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+::\+Disconnect\+All\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption})}
+
+Disconnects this property from all source objects which are of the specified class type and satisfy the given criteria. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it disconnects all source objects successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{class_fbx_property_a322bdde93bd6716cdeeddd29d735d900}\label{class_fbx_property_a322bdde93bd6716cdeeddd29d735d900}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+Dst\+Object@{Disconnect\+Dst\+Object}}
+\index{Disconnect\+Dst\+Object@{Disconnect\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+Dst\+Object()}{DisconnectDstObject()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+Dst\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Disconnects this property from the destination object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The destination object from which this property disconnects from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa7178fdcef5b430fd74b5a1385b18ce7}\label{class_fbx_property_aa7178fdcef5b430fd74b5a1385b18ce7}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+Dst\+Property@{Disconnect\+Dst\+Property}}
+\index{Disconnect\+Dst\+Property@{Disconnect\+Dst\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+Dst\+Property()}{DisconnectDstProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+Dst\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Disconnects this property from the specified destination property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The specified destination property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aaf72d2b89f03e122cea736ca8e060cab}\label{class_fbx_property_aaf72d2b89f03e122cea736ca8e060cab}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+Src\+Object@{Disconnect\+Src\+Object}}
+\index{Disconnect\+Src\+Object@{Disconnect\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+Src\+Object()}{DisconnectSrcObject()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+Src\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Disconnects this property from one source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object from which this property will be disconnected. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{class_fbx_property_a25e6a00df6d1ec69db93a1d31c38374b}\label{class_fbx_property_a25e6a00df6d1ec69db93a1d31c38374b}} 
+\index{Fbx\+Property@{Fbx\+Property}!Disconnect\+Src\+Property@{Disconnect\+Src\+Property}}
+\index{Disconnect\+Src\+Property@{Disconnect\+Src\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Disconnect\+Src\+Property()}{DisconnectSrcProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Disconnect\+Src\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Disconnects this property from the specified source property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The specified source property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a1af85e75268d31cb28323895ad45d52c}\label{class_fbx_property_a1af85e75268d31cb28323895ad45d52c}} 
+\index{Fbx\+Property@{Fbx\+Property}!End\+Create\+Or\+Find\+Property@{End\+Create\+Or\+Find\+Property}}
+\index{End\+Create\+Or\+Find\+Property@{End\+Create\+Or\+Find\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{End\+Create\+Or\+Find\+Property()}{EndCreateOrFindProperty()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+End\+Create\+Or\+Find\+Property (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Internal function for clearing the property name map. 
+
+\mbox{\Hypertarget{class_fbx_property_a6256ee462711d9b236f345a4c7eb8a75}\label{class_fbx_property_a6256ee462711d9b236f345a4c7eb8a75}} 
+\index{Fbx\+Property@{Fbx\+Property}!Evaluate\+Value@{Evaluate\+Value}}
+\index{Evaluate\+Value@{Evaluate\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Evaluate\+Value()}{EvaluateValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+::\+Evaluate\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}},  }\item[{bool}]{p\+Force\+Eval = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Evaluate the value of a property if it has animation and return the result as the template type. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & The time used for evaluate. If F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE is used, this returns the default value, without animation curves evaluation. \\
+\hline
+{\em p\+Force\+Eval} & Force the evaluator to refresh the evaluation state cache even if its already up-\/to-\/date. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The property value at the specified time converted to the template type provided, if possible. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the property type versus the template cannot be converted, the result is unknown. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_ad581a049a2f336d6a3466fdd3c8c32c0}\label{class_fbx_property_ad581a049a2f336d6a3466fdd3c8c32c0}} 
+\index{Fbx\+Property@{Fbx\+Property}!Evaluate\+Value@{Evaluate\+Value}}
+\index{Evaluate\+Value@{Evaluate\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Evaluate\+Value()}{EvaluateValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_value}{Fbx\+Property\+Value}\& Fbx\+Property\+::\+Evaluate\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}},  }\item[{bool}]{p\+Force\+Eval = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Evaluate the value of a property if it has animation and return the result. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & The time used for evaluate. If F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE is used, this returns the default value, without animation curves evaluation. \\
+\hline
+{\em p\+Force\+Eval} & Force the evaluator to refresh the evaluation state cache even if its already up-\/to-\/date. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The property value at the specified time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_af6dc98aa7ae9fd339f5b463845f56b29}\label{class_fbx_property_af6dc98aa7ae9fd339f5b463845f56b29}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool}]{p\+Case\+Sensitive = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Searches a property using its name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the property as a {\ttfamily N\+U\+LL} terminated string. \\
+\hline
+{\em p\+Case\+Sensitive} & Whether the name is case-\/sensitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A valid \hyperlink{class_fbx_property}{Fbx\+Property} if the property is found, else an invalid \hyperlink{class_fbx_property}{Fbx\+Property}. See \hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{Fbx\+Property\+::\+Is\+Valid()} 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{class_fbx_property_acd7815414a490b7d6c2fb6bf1d95536e}\label{class_fbx_property_acd7815414a490b7d6c2fb6bf1d95536e}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Find (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{bool}]{p\+Case\+Sensitive = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Searches a property using its name and data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the property as a {\ttfamily N\+U\+LL} terminated string. \\
+\hline
+{\em p\+Data\+Type} & The data type of the property. \\
+\hline
+{\em p\+Case\+Sensitive} & Whether the name is case-\/sensitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A valid \hyperlink{class_fbx_property}{Fbx\+Property} if the property is found, else an invalid \hyperlink{class_fbx_property}{Fbx\+Property}. See \hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{Fbx\+Property\+::\+Is\+Valid()} 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 13
+\mbox{\Hypertarget{class_fbx_property_a5c816ef8651dedd41022121ed073eeaa}\label{class_fbx_property_a5c816ef8651dedd41022121ed073eeaa}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Dst\+Object@{Find\+Dst\+Object}}
+\index{Find\+Dst\+Object@{Find\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Dst\+Object()}{FindDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Find\+Dst\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the destination object with the specified name, starting with the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a7cdf86294b2b1dc3ec1e98bbb3bf2c87}\label{class_fbx_property_a7cdf86294b2b1dc3ec1e98bbb3bf2c87}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Dst\+Object@{Find\+Dst\+Object}}
+\index{Find\+Dst\+Object@{Find\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Dst\+Object()}{FindDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Find\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the destination object with the specified name which satisfies the given criteria, starting with the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ab4b1b4ad00991bfbd702d8ea2bde5ae7}\label{class_fbx_property_ab4b1b4ad00991bfbd702d8ea2bde5ae7}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Dst\+Object@{Find\+Dst\+Object}}
+\index{Find\+Dst\+Object@{Find\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Dst\+Object()}{FindDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Find\+Dst\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the destination object with the specified name which is of the specified class type, starting with the specified index. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 14
+被呼び出し関係図\+:
+% FIG 15
+\mbox{\Hypertarget{class_fbx_property_a76ea2989d26c3e48488b4edb88d79ddb}\label{class_fbx_property_a76ea2989d26c3e48488b4edb88d79ddb}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Dst\+Object@{Find\+Dst\+Object}}
+\index{Find\+Dst\+Object@{Find\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Dst\+Object()}{FindDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Find\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the destination object with the specified name which is of the specified class type and satisfies the given criteria, starting with the specified index. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 16
+被呼び出し関係図\+:
+% FIG 17
+\mbox{\Hypertarget{class_fbx_property_ac4658f970d7c354229e1f6fe71d0d250}\label{class_fbx_property_ac4658f970d7c354229e1f6fe71d0d250}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Dst\+Property@{Find\+Dst\+Property}}
+\index{Find\+Dst\+Property@{Find\+Dst\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Dst\+Property()}{FindDstProperty()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Find\+Dst\+Property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the destination property with the specified name, starting with the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The specified property name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination property with the specified name. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 18
+\mbox{\Hypertarget{class_fbx_property_aa3c6cdd5991e086121dc7d724846e444}\label{class_fbx_property_aa3c6cdd5991e086121dc7d724846e444}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Hierarchical@{Find\+Hierarchical}}
+\index{Find\+Hierarchical@{Find\+Hierarchical}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Hierarchical()}{FindHierarchical()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Find\+Hierarchical (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool}]{p\+Case\+Sensitive = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Searches a property using its full name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The full name of the property as a {\ttfamily N\+U\+LL} terminated string. \\
+\hline
+{\em p\+Case\+Sensitive} & whether the name is case-\/sensitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A valid \hyperlink{class_fbx_property}{Fbx\+Property} if the property is found, else an invalid \hyperlink{class_fbx_property}{Fbx\+Property}. See \hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{Fbx\+Property\+::\+Is\+Valid()} 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 19
+\mbox{\Hypertarget{class_fbx_property_a5daed7a38564da53f44bdaa5f71f7837}\label{class_fbx_property_a5daed7a38564da53f44bdaa5f71f7837}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Hierarchical@{Find\+Hierarchical}}
+\index{Find\+Hierarchical@{Find\+Hierarchical}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Hierarchical()}{FindHierarchical()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Find\+Hierarchical (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type,  }\item[{bool}]{p\+Case\+Sensitive = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Searches a property using its full name and data type. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The full name of the property as a {\ttfamily N\+U\+LL} terminated string. \\
+\hline
+{\em p\+Data\+Type} & The data type of the property. \\
+\hline
+{\em p\+Case\+Sensitive} & whether the name is case-\/sensitive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A valid \hyperlink{class_fbx_property}{Fbx\+Property} if the property is found, else an invalid \hyperlink{class_fbx_property}{Fbx\+Property}. See \hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{Fbx\+Property\+::\+Is\+Valid()} 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 20
+\mbox{\Hypertarget{class_fbx_property_a9d65777042de1ee73b9e6635b12fe607}\label{class_fbx_property_a9d65777042de1ee73b9e6635b12fe607}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Src\+Object@{Find\+Src\+Object}}
+\index{Find\+Src\+Object@{Find\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Src\+Object()}{FindSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Find\+Src\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the source object with the specified name, starting with the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 21
+\mbox{\Hypertarget{class_fbx_property_a225b5e5f588ea9a0bacfc03c9843ee15}\label{class_fbx_property_a225b5e5f588ea9a0bacfc03c9843ee15}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Src\+Object@{Find\+Src\+Object}}
+\index{Find\+Src\+Object@{Find\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Src\+Object()}{FindSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Find\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the source object with the specified name which satisfies the given criteria, starting with the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ac7e7b3ac3ef1eb2a2c1178cf36047cbe}\label{class_fbx_property_ac7e7b3ac3ef1eb2a2c1178cf36047cbe}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Src\+Object@{Find\+Src\+Object}}
+\index{Find\+Src\+Object@{Find\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Src\+Object()}{FindSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Find\+Src\+Object (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the source object with the specified name which is of the specified class type, starting with the specified index. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 22
+被呼び出し関係図\+:
+% FIG 23
+\mbox{\Hypertarget{class_fbx_property_ab13fcbae9e768a074f40464670cbc462}\label{class_fbx_property_ab13fcbae9e768a074f40464670cbc462}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Src\+Object@{Find\+Src\+Object}}
+\index{Find\+Src\+Object@{Find\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Src\+Object()}{FindSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Find\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the source object with the specified name which is of the specified class type and satisfies the given criteria, starting with the specified index. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Name} & The object name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object with the name, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 24
+被呼び出し関係図\+:
+% FIG 25
+\mbox{\Hypertarget{class_fbx_property_ae3efe1d4750e6e4e5b0a91cde0adb935}\label{class_fbx_property_ae3efe1d4750e6e4e5b0a91cde0adb935}} 
+\index{Fbx\+Property@{Fbx\+Property}!Find\+Src\+Property@{Find\+Src\+Property}}
+\index{Find\+Src\+Property@{Find\+Src\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Find\+Src\+Property()}{FindSrcProperty()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Find\+Src\+Property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const int}]{p\+Start\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Searches the source property with the specified name, starting with the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The specified property name. \\
+\hline
+{\em p\+Start\+Index} & The start index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source property with the specified name. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 26
+\mbox{\Hypertarget{class_fbx_property_a7d3760c0aec45b51823c57f62a08dc46}\label{class_fbx_property_a7d3760c0aec45b51823c57f62a08dc46}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T Fbx\+Property\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the value of the property. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The data type of the value. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{戻り値}
+The property value. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 27
+被呼び出し関係図\+:
+% FIG 28
+\mbox{\Hypertarget{class_fbx_property_ac2b8fdea0758676644547365cea1e2ae}\label{class_fbx_property_ac2b8fdea0758676644547365cea1e2ae}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get()}{Get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Get (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Value,  }\item[{const \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \&}]{p\+Value\+Type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_property_adcf2ea55a226994e1545b6179b33cbb2}\label{class_fbx_property_adcf2ea55a226994e1545b6179b33cbb2}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Animation\+Evaluator@{Get\+Animation\+Evaluator}}
+\index{Get\+Animation\+Evaluator@{Get\+Animation\+Evaluator}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Animation\+Evaluator()}{GetAnimationEvaluator()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator}$\ast$ Fbx\+Property\+::\+Get\+Animation\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the proper animation evaluator to use for this property. \begin{DoxyReturn}{戻り値}
+If the object has no scene, returns the default evaluator, otherwise the object\textquotesingle{}s scene evaluator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a0b677f1fd948cfc645962a91b1ed928f}\label{class_fbx_property_a0b677f1fd948cfc645962a91b1ed928f}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Child@{Get\+Child}}
+\index{Get\+Child@{Get\+Child}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Child()}{GetChild()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+Child (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the first child of this property. \begin{DoxyReturn}{戻り値}
+The first child of this property, if there is none, an invalid property is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a78b7ee36876a91b8689caae3117cbbb0}\label{class_fbx_property_a78b7ee36876a91b8689caae3117cbbb0}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Curve@{Get\+Curve}}
+\index{Get\+Curve@{Get\+Curve}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Curve()}{GetCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Property\+::\+Get\+Curve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} from the specified animation layer. This function expects to find a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} object with the same name as the property and it attempts to retrieve the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} from it. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Layer} & The searched animation layer. \\
+\hline
+{\em p\+Create} & Create a \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} if not found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. Returns N\+U\+LL in case of errors or p\+Create is {\ttfamily false} and the curve is not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} does not exists but the property has the \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} flag set and p\+Create is true, then this function will first create the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} object and then the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. 
+
+If more than one \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} matching the name criteria are connected, the first one is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_aac649fc614b3174b351d36d6e67e5c90}\label{class_fbx_property_aac649fc614b3174b351d36d6e67e5c90}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Curve@{Get\+Curve}}
+\index{Get\+Curve@{Get\+Curve}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Curve()}{GetCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Property\+::\+Get\+Curve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{const char $\ast$}]{p\+Channel,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} from the specified animation layer. This function expects to find a \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} object with the same name as the property and it attempts to retrieve the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} from it. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Layer} & The searched animation layer. \\
+\hline
+{\em p\+Channel} & Name of the channel we are looking for the animation curve. If N\+U\+LL use the first defined channel. \\
+\hline
+{\em p\+Create} & Create a \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} if not found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. Returns N\+U\+LL in case of errors or p\+Create is {\ttfamily false} and the curve is not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} does not exists but the property has the \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} flag set and p\+Create is true, then this function will first create the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} object and then the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. 
+
+If more than one \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} matching the name criteria are connected, the first one is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_aa676a46d3dd168f9bdcac1b4161561ee}\label{class_fbx_property_aa676a46d3dd168f9bdcac1b4161561ee}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Curve@{Get\+Curve}}
+\index{Get\+Curve@{Get\+Curve}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Curve()}{GetCurve()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Property\+::\+Get\+Curve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Channel,  }\item[{bool}]{p\+Create }\end{DoxyParamCaption})}
+
+Get the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} of the specified channel from the specified animation layer. This function looks for the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} named p\+Name and the channel p\+Channel. It will retrieves the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} from it. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Layer} & The searched animation layer. \\
+\hline
+{\em p\+Name} & Name of the curve node. It is an error to leave this field empty. \\
+\hline
+{\em p\+Channel} & Name of the channel we are looking for the animation curve. If N\+U\+LL use the first defined channel. \\
+\hline
+{\em p\+Create} & Create a \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} if not found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. Returns N\+U\+LL in case of errors or p\+Create is {\ttfamily false} and the curve is not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} does not exists but the property has the \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} flag set and p\+Create is true, then this function will first create the \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} object and then the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}. 
+
+If more than one \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} matching the name criteria are connected, the first one is returned. 
+
+If p\+Channel is N\+U\+LL, this function is the equivalent of \hyperlink{class_fbx_property_a78b7ee36876a91b8689caae3117cbbb0}{Get\+Curve(\+Fbx\+Anim\+Layer$\ast$, bool)}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a75e8145e21782dd1cc405b09c0981dd9}\label{class_fbx_property_a75e8145e21782dd1cc405b09c0981dd9}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Curve\+Node@{Get\+Curve\+Node}}
+\index{Get\+Curve\+Node@{Get\+Curve\+Node}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Curve\+Node()}{GetCurveNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Property\+::\+Get\+Curve\+Node (\begin{DoxyParamCaption}\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the property\textquotesingle{}s animation curve node on the default animation stack and base layer. 
+\begin{DoxyParams}{引数}
+{\em p\+Create} & If {\ttfamily true}, create the animation curve node and return it if none were found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The animation curve node of this property, if found or created, otherwise N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the property flag \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} is not set, creating the curve node will fail. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a7cbdcc1cccba29824790d0621911831d}\label{class_fbx_property_a7cbdcc1cccba29824790d0621911831d}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Curve\+Node@{Get\+Curve\+Node}}
+\index{Get\+Curve\+Node@{Get\+Curve\+Node}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Curve\+Node()}{GetCurveNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Property\+::\+Get\+Curve\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$}]{p\+Anim\+Stack,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the property\textquotesingle{}s animation curve node on the specified animation stack, using its base layer. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Stack} & The animation stack to use to get or create the property\textquotesingle{}s animation curve node. {\ttfamily N\+U\+LL} can be passed to automatically specify the default animation stack. \\
+\hline
+{\em p\+Create} & If {\ttfamily true}, create the animation curve node and return it if none were found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The animation curve node of this property, if found or created, otherwise N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the property flag \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} is not set, creating the curve node will fail. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a26057248b360da2653fa9020d88258ac}\label{class_fbx_property_a26057248b360da2653fa9020d88258ac}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Curve\+Node@{Get\+Curve\+Node}}
+\index{Get\+Curve\+Node@{Get\+Curve\+Node}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Curve\+Node()}{GetCurveNode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Property\+::\+Get\+Curve\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Get the property\textquotesingle{}s animation curve node on the specified animation layer. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Layer} & The animation layer to use to get or create the property\textquotesingle{}s animation curve node. Cannot be N\+U\+LL. \\
+\hline
+{\em p\+Create} & If {\ttfamily true}, create the animation curve node and return it if none were found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The animation curve node of this property, if found or created, otherwise N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the property flag \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99ae2c562a65bb942f3f94631794bc3d257}{Fbx\+Property\+Flags\+::e\+Animatable} is not set, creating the curve node will fail. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_ace9e846d1442c106958d34a1364533e4}\label{class_fbx_property_ace9e846d1442c106958d34a1364533e4}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object@{Get\+Dst\+Object}}
+\index{Get\+Dst\+Object@{Get\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object()}{GetDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Get\+Dst\+Object (\begin{DoxyParamCaption}\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the destination object at the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination object at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 29
+\mbox{\Hypertarget{class_fbx_property_a49669c464e5caecb2cf954972e9af366}\label{class_fbx_property_a49669c464e5caecb2cf954972e9af366}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object@{Get\+Dst\+Object}}
+\index{Get\+Dst\+Object@{Get\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object()}{GetDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Get\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the destination object that satisfies given criteria at the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination object that satisfies given criteria at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a97b492c1eb439a481dbea8f494b82a2e}\label{class_fbx_property_a97b492c1eb439a481dbea8f494b82a2e}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object@{Get\+Dst\+Object}}
+\index{Get\+Dst\+Object@{Get\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object()}{GetDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Get\+Dst\+Object (\begin{DoxyParamCaption}\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the destination object of the specified class type at the specified index with which this property connects. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination object of the specified class type at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 30
+被呼び出し関係図\+:
+% FIG 31
+\mbox{\Hypertarget{class_fbx_property_af7d61576c53b6b0d1dbf0f0d0a27ad3d}\label{class_fbx_property_af7d61576c53b6b0d1dbf0f0d0a27ad3d}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object@{Get\+Dst\+Object}}
+\index{Get\+Dst\+Object@{Get\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object()}{GetDstObject()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Get\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the destination object which is of the specified class type and satisfies the given criteria at the specified index with which this property connects. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination object which is of the specified class type and satisfies the given criteria at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 32
+被呼び出し関係図\+:
+% FIG 33
+\mbox{\Hypertarget{class_fbx_property_a8a87e8b905f4a30eac5d382fa6b95dbc}\label{class_fbx_property_a8a87e8b905f4a30eac5d382fa6b95dbc}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}}
+\index{Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object\+Count()}{GetDstObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Dst\+Object\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of destination objects with which this property connects. \begin{DoxyReturn}{戻り値}
+The number of destination objects with which this property connects. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 34
+\mbox{\Hypertarget{class_fbx_property_acfca6ad7f8a1eebfecc838e91b7af100}\label{class_fbx_property_acfca6ad7f8a1eebfecc838e91b7af100}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}}
+\index{Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object\+Count()}{GetDstObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Dst\+Object\+Count (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption}) const}
+
+Returns the number of destination objects that satisfy the given criteria with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of destination objects that satisfy given criteria with which this property connects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a99dd8bf0103c66a7a8bf3a5ea72e41bd}\label{class_fbx_property_a99dd8bf0103c66a7a8bf3a5ea72e41bd}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}}
+\index{Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object\+Count()}{GetDstObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Property\+::\+Get\+Dst\+Object\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of destination objects of the specified class type with which this property connects. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{戻り値}
+The number of destination objects of the specified class type with which this property connects. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 35
+被呼び出し関係図\+:
+% FIG 36
+\mbox{\Hypertarget{class_fbx_property_a5ba90af060ad449844816a3234ad0750}\label{class_fbx_property_a5ba90af060ad449844816a3234ad0750}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}}
+\index{Get\+Dst\+Object\+Count@{Get\+Dst\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Object\+Count()}{GetDstObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Property\+::\+Get\+Dst\+Object\+Count (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption}) const}
+
+Returns the number of destination objects which are of the specified class type and satisfy the given criteria with which this property connects. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of destination objects which are of the specified class type and satisfy the given criteria with which this property connects. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 37
+被呼び出し関係図\+:
+% FIG 38
+\mbox{\Hypertarget{class_fbx_property_ade7a6b86edce76764b6b4cb4854cb9b7}\label{class_fbx_property_ade7a6b86edce76764b6b4cb4854cb9b7}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Property@{Get\+Dst\+Property}}
+\index{Get\+Dst\+Property@{Get\+Dst\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Property()}{GetDstProperty()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+Dst\+Property (\begin{DoxyParamCaption}\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the destination property at the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The destination property at the specified index. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 39
+\mbox{\Hypertarget{class_fbx_property_abfcc52bdbd9853b10806740934b0230a}\label{class_fbx_property_abfcc52bdbd9853b10806740934b0230a}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Dst\+Property\+Count@{Get\+Dst\+Property\+Count}}
+\index{Get\+Dst\+Property\+Count@{Get\+Dst\+Property\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Dst\+Property\+Count()}{GetDstPropertyCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Dst\+Property\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of destination properties with which this property connects. \begin{DoxyReturn}{戻り値}
+The number of destination properties with which this property connects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ac06caf332b2d662a8ad09cff1f397820}\label{class_fbx_property_ac06caf332b2d662a8ad09cff1f397820}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Enum\+Count@{Get\+Enum\+Count}}
+\index{Get\+Enum\+Count@{Get\+Enum\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Count()}{GetEnumCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Enum\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of elements in the enumeration list. \begin{DoxyReturn}{戻り値}
+The number of elements in the enumeration list. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function returns 0 if the property type is not e\+Fbx\+Enum or e\+Fbx\+EnumM. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_ab378e2225ba43c225625f137e48808d5}\label{class_fbx_property_ab378e2225ba43c225625f137e48808d5}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Enum\+Value@{Get\+Enum\+Value}}
+\index{Get\+Enum\+Value@{Get\+Enum\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Value()}{GetEnumValue()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+::\+Get\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns a string value at the specified index 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Zero bound index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only valid if the property type is e\+Fbx\+Enum or e\+Fbx\+EnumM. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_aaa3f53accde176da9528ec831fc95ec8}\label{class_fbx_property_aaa3f53accde176da9528ec831fc95ec8}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Fbx\+Object@{Get\+Fbx\+Object}}
+\index{Get\+Fbx\+Object@{Get\+Fbx\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Fbx\+Object()}{GetFbxObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Get\+Fbx\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the object that contains the property. \begin{DoxyReturn}{戻り値}
+The property object owner (or null if the property is an orphan). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ad7f8dea372a3401119e18f23b03691f4}\label{class_fbx_property_ad7f8dea372a3401119e18f23b03691f4}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+First\+Descendent@{Get\+First\+Descendent}}
+\index{Get\+First\+Descendent@{Get\+First\+Descendent}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+First\+Descendent()}{GetFirstDescendent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+First\+Descendent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the first property that is a descendant of this property. \begin{DoxyReturn}{戻り値}
+The first descendant of this property, if there is none, an invalid property is returned. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 40
+\mbox{\Hypertarget{class_fbx_property_a08c9fefe4d1a34c091ff02386462c8d6}\label{class_fbx_property_a08c9fefe4d1a34c091ff02386462c8d6}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Flag@{Get\+Flag}}
+\index{Get\+Flag@{Get\+Flag}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Flag()}{GetFlag()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Get\+Flag (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flag }\end{DoxyParamCaption}) const}
+
+Returns the state of the property attribute. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & Property attribute identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The state of the property attribute(p\+Flag). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ad2c773361ba216ae0fdd3eb8d10cb4e2}\label{class_fbx_property_ad2c773361ba216ae0fdd3eb8d10cb4e2}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Flag\+Inherit\+Type@{Get\+Flag\+Inherit\+Type}}
+\index{Get\+Flag\+Inherit\+Type@{Get\+Flag\+Inherit\+Type}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Flag\+Inherit\+Type()}{GetFlagInheritType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} Fbx\+Property\+::\+Get\+Flag\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flag }\end{DoxyParamCaption}) const}
+
+Returns the inheritance type of the given flag, similar to \hyperlink{class_fbx_property_aee557d7603e73430d4034a03b631b75e}{Get\+Value\+Inherit\+Type()}. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & The flag to be queried. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The inheritance type of the specific flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a8a6c56ee1afdaac4fd6d750a6677f177}\label{class_fbx_property_a8a6c56ee1afdaac4fd6d750a6677f177}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Flags@{Get\+Flags}}
+\index{Get\+Flags@{Get\+Flags}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Flags()}{GetFlags()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} Fbx\+Property\+::\+Get\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the state of all of the property attributes. \begin{DoxyReturn}{戻り値}
+The state of the property attributes(p\+Flags). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a6045fdbb1bbe5a84f44c7f447d2fa52c}\label{class_fbx_property_a6045fdbb1bbe5a84f44c7f447d2fa52c}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Hierarchical\+Name@{Get\+Hierarchical\+Name}}
+\index{Get\+Hierarchical\+Name@{Get\+Hierarchical\+Name}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Hierarchical\+Name()}{GetHierarchicalName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Property\+::\+Get\+Hierarchical\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the hierarchical name of the property. \begin{DoxyReturn}{戻り値}
+Property hierarchical name string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a6efe7b201b09f1694daa39d32ea2d7e1}\label{class_fbx_property_a6efe7b201b09f1694daa39d32ea2d7e1}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Label@{Get\+Label}}
+\index{Get\+Label@{Get\+Label}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Label()}{GetLabel()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Property\+::\+Get\+Label (\begin{DoxyParamCaption}\item[{bool}]{p\+Return\+Name\+If\+Empty = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Returns the property label. 
+\begin{DoxyParams}{引数}
+{\em p\+Return\+Name\+If\+Empty} & If {\ttfamily true}, lets this method return the internal name if the label is empty. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The property label if set, or the property internal name if the p\+Return\+Name\+If\+Empty flag is set to {\ttfamily true} and the label has not been defined. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Some applications may ignore the label field and work uniquely with the internal name. Therefore, it should not be taken for granted that a label exists. Also, remember that the label does not get saved in the F\+BX file. It only exists while the property object is in memory. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a1cdf4161465d3b988b23b9fe05fa22b4}\label{class_fbx_property_a1cdf4161465d3b988b23b9fe05fa22b4}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Max\+Limit@{Get\+Max\+Limit}}
+\index{Get\+Max\+Limit@{Get\+Max\+Limit}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Max\+Limit()}{GetMaxLimit()}}
+{\footnotesize\ttfamily double Fbx\+Property\+::\+Get\+Max\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the maximum property value. \begin{DoxyReturn}{戻り値}
+The maximum value limit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_abdc5ccbaea5c1e32d7b1ccfa3fd826af}\label{class_fbx_property_abdc5ccbaea5c1e32d7b1ccfa3fd826af}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Min\+Limit@{Get\+Min\+Limit}}
+\index{Get\+Min\+Limit@{Get\+Min\+Limit}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Min\+Limit()}{GetMinLimit()}}
+{\footnotesize\ttfamily double Fbx\+Property\+::\+Get\+Min\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the minimum property value limit. \begin{DoxyReturn}{戻り値}
+The minimum value limit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ad4505c67d892b22bb40ba5e9c5b4a844}\label{class_fbx_property_ad4505c67d892b22bb40ba5e9c5b4a844}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Property\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the internal name of the property. \begin{DoxyReturn}{戻り値}
+Property internal name string. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 41
+\mbox{\Hypertarget{class_fbx_property_af2f3725b832d70596008f895950c2235}\label{class_fbx_property_af2f3725b832d70596008f895950c2235}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Name\+As\+C\+Str@{Get\+Name\+As\+C\+Str}}
+\index{Get\+Name\+As\+C\+Str@{Get\+Name\+As\+C\+Str}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Name\+As\+C\+Str()}{GetNameAsCStr()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+::\+Get\+Name\+As\+C\+Str (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the internal name of the property. \begin{DoxyReturn}{戻り値}
+Property internal name string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a1de724032949fd7a7b21028894adbcce}\label{class_fbx_property_a1de724032949fd7a7b21028894adbcce}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Next\+Descendent@{Get\+Next\+Descendent}}
+\index{Get\+Next\+Descendent@{Get\+Next\+Descendent}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Next\+Descendent()}{GetNextDescendent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+Next\+Descendent (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const}
+
+Returns the property that follows p\+Property that is a descendant of this property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The last found descendant. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The property that follows p\+Property, if there is none, an invalid property is returned. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 42
+\mbox{\Hypertarget{class_fbx_property_a2cafce5b279fd3dd3a01a618538c15ca}\label{class_fbx_property_a2cafce5b279fd3dd3a01a618538c15ca}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the parent property of this property. \begin{DoxyReturn}{戻り値}
+The parent of this property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a62565770177152f06d82c745e0811b84}\label{class_fbx_property_a62565770177152f06d82c745e0811b84}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Property\+Data\+Type@{Get\+Property\+Data\+Type}}
+\index{Get\+Property\+Data\+Type@{Get\+Property\+Data\+Type}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Property\+Data\+Type()}{GetPropertyDataType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} Fbx\+Property\+::\+Get\+Property\+Data\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the property data type. \begin{DoxyReturn}{戻り値}
+The property data type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ac723c81393df4b2fdedd78863b361ab5}\label{class_fbx_property_ac723c81393df4b2fdedd78863b361ab5}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Sibling@{Get\+Sibling}}
+\index{Get\+Sibling@{Get\+Sibling}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Sibling()}{GetSibling()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+Sibling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the sibling of this property. \begin{DoxyReturn}{戻り値}
+The sibling of this property, if there is none, an invalid property is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ade290835b0d88b978bc2566e255c5974}\label{class_fbx_property_ade290835b0d88b978bc2566e255c5974}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object@{Get\+Src\+Object}}
+\index{Get\+Src\+Object@{Get\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object()}{GetSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Get\+Src\+Object (\begin{DoxyParamCaption}\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the source object at the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 43
+\mbox{\Hypertarget{class_fbx_property_ab7e0cadde56df774a9a52e24be2bcec9}\label{class_fbx_property_ab7e0cadde56df774a9a52e24be2bcec9}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object@{Get\+Src\+Object}}
+\index{Get\+Src\+Object@{Get\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object()}{GetSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Property\+::\+Get\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the source object that satisfies the criteria at the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object that satisfies the given criteria at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a75fae8a9182ea51767ade157d614227a}\label{class_fbx_property_a75fae8a9182ea51767ade157d614227a}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object@{Get\+Src\+Object}}
+\index{Get\+Src\+Object@{Get\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object()}{GetSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Get\+Src\+Object (\begin{DoxyParamCaption}\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the source object of the specified class type at the specified index. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object of a specified class type at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 44
+被呼び出し関係図\+:
+% FIG 45
+\mbox{\Hypertarget{class_fbx_property_ac8ef2f7e7ea3fbfc19ca6202d4b8faf7}\label{class_fbx_property_ac8ef2f7e7ea3fbfc19ca6202d4b8faf7}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object@{Get\+Src\+Object}}
+\index{Get\+Src\+Object@{Get\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object()}{GetSrcObject()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Property\+::\+Get\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the source object which is of the specified class type and satisfies the given criteria at the specified index. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+{\em p\+Index} & The specified index whose default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source object which is of the specified class type and satisfies the given criteria at the specified index, N\+U\+LL if not found. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 46
+被呼び出し関係図\+:
+% FIG 47
+\mbox{\Hypertarget{class_fbx_property_a4b6d431d87134722800f06e4cb442335}\label{class_fbx_property_a4b6d431d87134722800f06e4cb442335}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}}
+\index{Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object\+Count()}{GetSrcObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Src\+Object\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of source objects with which this property connects. \begin{DoxyReturn}{戻り値}
+The number of source objects with which this property connects. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 48
+\mbox{\Hypertarget{class_fbx_property_ad90aa5b8d3fbe78a9bf541dcbcf9c210}\label{class_fbx_property_ad90aa5b8d3fbe78a9bf541dcbcf9c210}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}}
+\index{Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object\+Count()}{GetSrcObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Src\+Object\+Count (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption}) const}
+
+Returns the number of source objects that satisfy the given criteria with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of source objects that satisfy the given criteria with which this property connects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a876b4f2219a1ca16337f35b27a76eed4}\label{class_fbx_property_a876b4f2219a1ca16337f35b27a76eed4}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}}
+\index{Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object\+Count()}{GetSrcObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Property\+::\+Get\+Src\+Object\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of source objects of a specific class type with which this property connects. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{戻り値}
+The number of source objects of the specified class type with which this property connects. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 49
+被呼び出し関係図\+:
+% FIG 50
+\mbox{\Hypertarget{class_fbx_property_a4a79c28a713cafebad7254bd68b05a2f}\label{class_fbx_property_a4a79c28a713cafebad7254bd68b05a2f}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}}
+\index{Get\+Src\+Object\+Count@{Get\+Src\+Object\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Object\+Count()}{GetSrcObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Property\+::\+Get\+Src\+Object\+Count (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption}) const}
+
+Returns the number of source objects which are of the specified class type and satisfy the given criteria with which this property connects. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The specified class type. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & The given criteria. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of source objects which are of the specified class type and satisfy the given criteria. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 51
+被呼び出し関係図\+:
+% FIG 52
+\mbox{\Hypertarget{class_fbx_property_ad538b18849614ac8d6ec3031bdf8a7ea}\label{class_fbx_property_ad538b18849614ac8d6ec3031bdf8a7ea}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Property@{Get\+Src\+Property}}
+\index{Get\+Src\+Property@{Get\+Src\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Property()}{GetSrcProperty()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Property\+::\+Get\+Src\+Property (\begin{DoxyParamCaption}\item[{const int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Returns the source property at the specified index with which this property connects. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The source property at the specified index. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 53
+\mbox{\Hypertarget{class_fbx_property_a536aec7568f10441cf70045aa8842429}\label{class_fbx_property_a536aec7568f10441cf70045aa8842429}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Src\+Property\+Count@{Get\+Src\+Property\+Count}}
+\index{Get\+Src\+Property\+Count@{Get\+Src\+Property\+Count}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Src\+Property\+Count()}{GetSrcPropertyCount()}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+Src\+Property\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of source properties with which this property connects. \begin{DoxyReturn}{戻り値}
+The number of source properties with which this property connects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a4d1057bd2c1b78585aad480c88a40a11}\label{class_fbx_property_a4d1057bd2c1b78585aad480c88a40a11}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+User\+Data\+Ptr@{Get\+User\+Data\+Ptr}}
+\index{Get\+User\+Data\+Ptr@{Get\+User\+Data\+Ptr}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+User\+Data\+Ptr()}{GetUserDataPtr()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Property\+::\+Get\+User\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the user data pointer. \begin{DoxyReturn}{戻り値}
+The user data pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a346536ecdb6cc2178105ed4fc30b80fc}\label{class_fbx_property_a346536ecdb6cc2178105ed4fc30b80fc}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+User\+Tag@{Get\+User\+Tag}}
+\index{Get\+User\+Tag@{Get\+User\+Tag}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+User\+Tag()}{GetUserTag()}}
+{\footnotesize\ttfamily int Fbx\+Property\+::\+Get\+User\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the user tag. 
+
+\mbox{\Hypertarget{class_fbx_property_aee557d7603e73430d4034a03b631b75e}\label{class_fbx_property_aee557d7603e73430d4034a03b631b75e}} 
+\index{Fbx\+Property@{Fbx\+Property}!Get\+Value\+Inherit\+Type@{Get\+Value\+Inherit\+Type}}
+\index{Get\+Value\+Inherit\+Type@{Get\+Value\+Inherit\+Type}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Get\+Value\+Inherit\+Type()}{GetValueInheritType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type} Fbx\+Property\+::\+Get\+Value\+Inherit\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Queries the inheritance type of the property. Use this method to determine if this property\textquotesingle{}s value is overridden from the default value, or from the referenced object, if this object is a clone. \begin{DoxyReturn}{戻り値}
+The inheritance type of the property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa040d85cda5816e4937a348e47357a61}\label{class_fbx_property_aa040d85cda5816e4937a348e47357a61}} 
+\index{Fbx\+Property@{Fbx\+Property}!Has\+Default\+Value@{Has\+Default\+Value}}
+\index{Has\+Default\+Value@{Has\+Default\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Has\+Default\+Value()}{HasDefaultValue()}}
+{\footnotesize\ttfamily static bool Fbx\+Property\+::\+Has\+Default\+Value (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks if the specified property\textquotesingle{}s value has changed from its default value. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & Property that is tested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the property value is still the default, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the inheritance type of p\+Property\textquotesingle{}s value is e\+Override, p\+Property\textquotesingle{}s value should have been modified, so p\+Property doesn\textquotesingle{}t have the default value. If the inheritance type of p\+Property\textquotesingle{}s value is e\+Inherit, that means p\+Property\textquotesingle{}s value inherits the referenced object\textquotesingle{}s property value, so p\+Property has the default value. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a0f55c44acd2069128f85063eb2c04d47}\label{class_fbx_property_a0f55c44acd2069128f85063eb2c04d47}} 
+\index{Fbx\+Property@{Fbx\+Property}!Has\+Max\+Limit@{Has\+Max\+Limit}}
+\index{Has\+Max\+Limit@{Has\+Max\+Limit}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Has\+Max\+Limit()}{HasMaxLimit()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Has\+Max\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns whether a maximum limit exists, if it returns false, calling \hyperlink{class_fbx_property_a1cdf4161465d3b988b23b9fe05fa22b4}{Get\+Max\+Limit()} produces undefined behavior. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} when a maximum limit exists, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ae2c3f0688ecfbed568feb2dbe33967c3}\label{class_fbx_property_ae2c3f0688ecfbed568feb2dbe33967c3}} 
+\index{Fbx\+Property@{Fbx\+Property}!Has\+Min\+Limit@{Has\+Min\+Limit}}
+\index{Has\+Min\+Limit@{Has\+Min\+Limit}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Has\+Min\+Limit()}{HasMinLimit()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Has\+Min\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns whether a minimum limit exists, if it returns false, calling \hyperlink{class_fbx_property_abdc5ccbaea5c1e32d7b1ccfa3fd826af}{Get\+Min\+Limit()} produces undefined behavior. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} when a minimum limit exists, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a3e03482059d70c4e86314f8922ae8d22}\label{class_fbx_property_a3e03482059d70c4e86314f8922ae8d22}} 
+\index{Fbx\+Property@{Fbx\+Property}!Insert\+Enum\+Value@{Insert\+Enum\+Value}}
+\index{Insert\+Enum\+Value@{Insert\+Enum\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Insert\+Enum\+Value()}{InsertEnumValue()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Insert\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$}]{p\+String\+Value }\end{DoxyParamCaption})}
+
+Inserts a string value at the specific index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Zero bound index. \\
+\hline
+{\em p\+String\+Value} & The string value to be inserted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only valid if the property type is e\+Fbx\+Enum or e\+Fbx\+EnumM. 
+
+If the property is of type e\+Fbx\+Enum, trying to insert a value that is already in the enumeration list will fail. p\+Index must be in the range \mbox{[}0, List\+Value\+Get\+Count()\mbox{]}. Empty strings are not allowed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a1ae3c41711a9684cb1b3e6cf454c9b12}\label{class_fbx_property_a1ae3c41711a9684cb1b3e6cf454c9b12}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Animated@{Is\+Animated}}
+\index{Is\+Animated@{Is\+Animated}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Animated()}{IsAnimated()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Animated (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Find out if the property is animated\+: has a curve node with curves. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Layer} & The animation layer to test for curve presence. Set to N\+U\+LL if you want to use the default animation layer of the default animation stack. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the property is animated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa8284deb85f3a324db108291bc42284a}\label{class_fbx_property_aa8284deb85f3a324db108291bc42284a}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Child\+Of@{Is\+Child\+Of}}
+\index{Is\+Child\+Of@{Is\+Child\+Of}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Child\+Of()}{IsChildOf()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Child\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Parent }\end{DoxyParamCaption}) const}
+
+Judges whether this property is a child of the specified property. 
+\begin{DoxyParams}{引数}
+{\em p\+Parent} & The specified property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} when this property is a child of the specified property, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a991b94a016bed8e93015e1024596bbef}\label{class_fbx_property_a991b94a016bed8e93015e1024596bbef}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Connected\+Dst\+Object@{Is\+Connected\+Dst\+Object}}
+\index{Is\+Connected\+Dst\+Object@{Is\+Connected\+Dst\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Connected\+Dst\+Object()}{IsConnectedDstObject()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Connected\+Dst\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption}) const}
+
+Judges whether this property connects with the destination object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The destination object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property connects with the destination object, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aff04371bd84802d5c50c397e5716b604}\label{class_fbx_property_aff04371bd84802d5c50c397e5716b604}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Connected\+Dst\+Property@{Is\+Connected\+Dst\+Property}}
+\index{Is\+Connected\+Dst\+Property@{Is\+Connected\+Dst\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Connected\+Dst\+Property()}{IsConnectedDstProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Connected\+Dst\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Judges if this property connects with the specified destination property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The specified destination property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property connects with the specified destination property, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_af4fc85f2c880d813903e158147aeeae4}\label{class_fbx_property_af4fc85f2c880d813903e158147aeeae4}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Connected\+Src\+Object@{Is\+Connected\+Src\+Object}}
+\index{Is\+Connected\+Src\+Object@{Is\+Connected\+Src\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Connected\+Src\+Object()}{IsConnectedSrcObject()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Connected\+Src\+Object (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption}) const}
+
+Judges whether this property connects with the source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property connects with the source object, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aca4ace4ad256046bc548c54173dab0c1}\label{class_fbx_property_aca4ace4ad256046bc548c54173dab0c1}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Connected\+Src\+Property@{Is\+Connected\+Src\+Property}}
+\index{Is\+Connected\+Src\+Property@{Is\+Connected\+Src\+Property}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Connected\+Src\+Property()}{IsConnectedSrcProperty()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Connected\+Src\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Judges whether this property connects with the specified source property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The specified source property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property connects with the specified source property, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa346bfac7ee0847e7fa2a6dc4aba90ac}\label{class_fbx_property_aa346bfac7ee0847e7fa2a6dc4aba90ac}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Descendent\+Of@{Is\+Descendent\+Of}}
+\index{Is\+Descendent\+Of@{Is\+Descendent\+Of}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Descendent\+Of()}{IsDescendentOf()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Descendent\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Ancestor }\end{DoxyParamCaption}) const}
+
+Judges whether this property is a descendant of the specified property. 
+\begin{DoxyParams}{引数}
+{\em p\+Ancestor} & The specified property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} when this property is a descendant of the specified property, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_ac614dd09edb00ac99ce49332a66a597d}\label{class_fbx_property_ac614dd09edb00ac99ce49332a66a597d}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Root@{Is\+Root}}
+\index{Is\+Root@{Is\+Root}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Root()}{IsRoot()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judges if this property is the root property. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} when this property is a root property, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}\label{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}} 
+\index{Fbx\+Property@{Fbx\+Property}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Judges the property\textquotesingle{}s validity. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property is valid, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 54
+\mbox{\Hypertarget{class_fbx_property_acea8ef5412320c293dfaca9680bc797b}\label{class_fbx_property_acea8ef5412320c293dfaca9680bc797b}} 
+\index{Fbx\+Property@{Fbx\+Property}!Modified@{Modified}}
+\index{Modified@{Modified}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Modified()}{Modified()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Modified (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks if the property\textquotesingle{}s value has been modified from its default value. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the value of the property has changed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the inheritance type of the property\textquotesingle{}s value is e\+Override, the property\textquotesingle{}s value should have been modified, it returns {\ttfamily true}. If the inheritance type of the property\textquotesingle{}s value is e\+Inherit, that means the property\textquotesingle{}s value inherits the referenced object\textquotesingle{}s property value, so the property\textquotesingle{}s value is not modified and it returns {\ttfamily false}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_ab89605d755ba9030d8a03819741dbafb}\label{class_fbx_property_ab89605d755ba9030d8a03819741dbafb}} 
+\index{Fbx\+Property@{Fbx\+Property}!Modified\+Flag@{Modified\+Flag}}
+\index{Modified\+Flag@{Modified\+Flag}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Modified\+Flag()}{ModifiedFlag()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Modified\+Flag (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flag }\end{DoxyParamCaption}) const}
+
+Checks if the property flag has been modified from its default value. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & The flag to be queried. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the value of this property has changed, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a16da0381546978afc477b033239f1fc9}\label{class_fbx_property_a16da0381546978afc477b033239f1fc9}} 
+\index{Fbx\+Property@{Fbx\+Property}!Modify\+Flag@{Modify\+Flag}}
+\index{Modify\+Flag@{Modify\+Flag}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Modify\+Flag()}{ModifyFlag()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Modify\+Flag (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flag,  }\item[{bool}]{p\+Value }\end{DoxyParamCaption})}
+
+Changes the property attribute. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & Property attribute identifier. \\
+\hline
+{\em p\+Value} & New state of p\+Flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_abbb2f1f50f22fbcd94ad56e3373efaac}\label{class_fbx_property_abbb2f1f50f22fbcd94ad56e3373efaac}} 
+\index{Fbx\+Property@{Fbx\+Property}!Notify\+Get@{Notify\+Get}}
+\index{Notify\+Get@{Notify\+Get}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Notify\+Get()}{NotifyGet()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Notify\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 55
+\mbox{\Hypertarget{class_fbx_property_ac2a6a7d8711567294c90f37791846331}\label{class_fbx_property_ac2a6a7d8711567294c90f37791846331}} 
+\index{Fbx\+Property@{Fbx\+Property}!Notify\+Set@{Notify\+Set}}
+\index{Notify\+Set@{Notify\+Set}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Notify\+Set()}{NotifySet()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Notify\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 56
+\mbox{\Hypertarget{class_fbx_property_afb12acf8aeec609f4df77c61e5346e59}\label{class_fbx_property_afb12acf8aeec609f4df77c61e5346e59}} 
+\index{Fbx\+Property@{Fbx\+Property}!Notify\+Set\+Request@{Notify\+Set\+Request}}
+\index{Notify\+Set\+Request@{Notify\+Set\+Request}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Notify\+Set\+Request()}{NotifySetRequest()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Notify\+Set\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+被呼び出し関係図\+:
+% FIG 57
+\mbox{\Hypertarget{class_fbx_property_a78e06f51d52af04ffef695e3dd795659}\label{class_fbx_property_a78e06f51d52af04ffef695e3dd795659}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const}
+
+Non-\/equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property compared to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if unequal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a9cb24dd197f19e6d1cc8dad2b757dce0}\label{class_fbx_property_a9cb24dd197f19e6d1cc8dad2b757dce0}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::operator!= (\begin{DoxyParamCaption}\item[{int}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Non-\/equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value compared to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property is valid and p\+Value equals zero, or this property is invalid and p\+Value doesn\textquotesingle{}t equal zero, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa02dd8d143c2814367c1a81de6ab42a2}\label{class_fbx_property_aa02dd8d143c2814367c1a81de6ab42a2}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const}
+
+Lesser operator, used to sort property in map. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property compared to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if less, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a14126bd5d02fd8558c5946cc7ba12d46}\label{class_fbx_property_a14126bd5d02fd8558c5946cc7ba12d46}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property}\& Fbx\+Property\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property assigned to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+This property. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a5c68be7d9ec048949e5f0b489e1f687c}\label{class_fbx_property_a5c68be7d9ec048949e5f0b489e1f687c}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property compared to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a027c88dfbe6dc8283307ec81edf79159}\label{class_fbx_property_a027c88dfbe6dc8283307ec81edf79159}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::operator== (\begin{DoxyParamCaption}\item[{int}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value compared to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if this property is valid and p\+Value doesn\textquotesingle{}t equal zero, or this property is invalid and p\+Value equals zero, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a78307c874fd49f1721713da94d953423}\label{class_fbx_property_a78307c874fd49f1721713da94d953423}} 
+\index{Fbx\+Property@{Fbx\+Property}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption}) const}
+
+Greater operator, used to sort property in map. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property compared to this property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if greater, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa652adeb57fa64c60cab63ac1df9efa5}\label{class_fbx_property_aa652adeb57fa64c60cab63ac1df9efa5}} 
+\index{Fbx\+Property@{Fbx\+Property}!Remove\+Enum\+Value@{Remove\+Enum\+Value}}
+\index{Remove\+Enum\+Value@{Remove\+Enum\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Remove\+Enum\+Value()}{RemoveEnumValue()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Remove\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Removes the string value at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the string value to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only valid if the property type is e\+Fbx\+Enum or e\+Fbx\+EnuM. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a7854464326c74ce7caee2a4263284a46}\label{class_fbx_property_a7854464326c74ce7caee2a4263284a46}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Property\+::\+Set (\begin{DoxyParamCaption}\item[{const T \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Sets the value of the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if type is compatible and the value is set successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 58
+被呼び出し関係図\+:
+% FIG 59
+\mbox{\Hypertarget{class_fbx_property_aa89d91b8bf335921748ea21ab08eb9a3}\label{class_fbx_property_aa89d91b8bf335921748ea21ab08eb9a3}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set()}{Set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Set (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Value,  }\item[{const \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \&}]{p\+Value\+Type,  }\item[{bool}]{p\+Check\+For\+Value\+Equality = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_property_ae9dd7a699742397756227ac1dbd9eb13}\label{class_fbx_property_ae9dd7a699742397756227ac1dbd9eb13}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Enum\+Value@{Set\+Enum\+Value}}
+\index{Set\+Enum\+Value@{Set\+Enum\+Value}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Enum\+Value()}{SetEnumValue()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Set\+Enum\+Value (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$}]{p\+String\+Value }\end{DoxyParamCaption})}
+
+Sets a string value at the specific index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Zero bound index. \\
+\hline
+{\em p\+String\+Value} & The string value at the specific index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only valid if the property type is e\+Fbx\+Enum or e\+Fbx\+EnumM. 
+
+If the property is of type e\+Fbx\+Enum, trying to set a value that is already in the enumeration list will fail. The function assigns the string value to the specific index. A string value must exist at the specific index in order to be changed. Empty strings are not allowed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_property_a65a521dab6bcd5c3f2570f555dbcaddc}\label{class_fbx_property_a65a521dab6bcd5c3f2570f555dbcaddc}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Flag\+Inherit\+Type@{Set\+Flag\+Inherit\+Type}}
+\index{Set\+Flag\+Inherit\+Type@{Set\+Flag\+Inherit\+Type}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Flag\+Inherit\+Type()}{SetFlagInheritType()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Set\+Flag\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{p\+Flag,  }\item[{\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Sets the inheritance type for the specific flag, similar to \hyperlink{class_fbx_property_ad83cb36df88b5c088d955effd462d4be}{Set\+Value\+Inherit\+Type()}. 
+\begin{DoxyParams}{引数}
+{\em p\+Flag} & The flag to be set. \\
+\hline
+{\em p\+Type} & The inheritance type to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a8ceef24a4b0e5838895962aaf0ad07ae}\label{class_fbx_property_a8ceef24a4b0e5838895962aaf0ad07ae}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Label@{Set\+Label}}
+\index{Set\+Label@{Set\+Label}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Label()}{SetLabel()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Set\+Label (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Label }\end{DoxyParamCaption})}
+
+Sets a label for the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Label} & Label string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_acc29ebadc04e2fdd89f986d3faaff874}\label{class_fbx_property_acc29ebadc04e2fdd89f986d3faaff874}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Limits@{Set\+Limits}}
+\index{Set\+Limits@{Set\+Limits}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Limits()}{SetLimits()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Set\+Limits (\begin{DoxyParamCaption}\item[{double}]{p\+Min,  }\item[{double}]{p\+Max }\end{DoxyParamCaption})}
+
+Sets the minimum and maximum value limit of the property. 
+\begin{DoxyParams}{引数}
+{\em p\+Min} & Minimum value allowed. \\
+\hline
+{\em p\+Max} & Maximum value allowed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if both the min and max limit have been set, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_af79f0aa4871176b7ca40e16af233a984}\label{class_fbx_property_af79f0aa4871176b7ca40e16af233a984}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Max\+Limit@{Set\+Max\+Limit}}
+\index{Set\+Max\+Limit@{Set\+Max\+Limit}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Max\+Limit()}{SetMaxLimit()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Set\+Max\+Limit (\begin{DoxyParamCaption}\item[{double}]{p\+Max }\end{DoxyParamCaption})}
+
+Sets a maximum property value limit. 
+\begin{DoxyParams}{引数}
+{\em p\+Max} & Maximum value allowed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the limit has been set, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_aa257615c70fd0ff635471216d8aea3ca}\label{class_fbx_property_aa257615c70fd0ff635471216d8aea3ca}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Min\+Limit@{Set\+Min\+Limit}}
+\index{Set\+Min\+Limit@{Set\+Min\+Limit}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Min\+Limit()}{SetMinLimit()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Set\+Min\+Limit (\begin{DoxyParamCaption}\item[{double}]{p\+Min }\end{DoxyParamCaption})}
+
+Sets a minimum property value limit. 
+\begin{DoxyParams}{引数}
+{\em p\+Min} & Minimum value allowed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the limit has been set, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_property_a36506608b92abf21707be1c06a6cac3b}\label{class_fbx_property_a36506608b92abf21707be1c06a6cac3b}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+User\+Data\+Ptr@{Set\+User\+Data\+Ptr}}
+\index{Set\+User\+Data\+Ptr@{Set\+User\+Data\+Ptr}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+User\+Data\+Ptr()}{SetUserDataPtr()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Set\+User\+Data\+Ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+User\+Data }\end{DoxyParamCaption})}
+
+Sets the user data pointer. 
+\begin{DoxyParams}{引数}
+{\em p\+User\+Data} & The user data pointer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_affbc6e79fd35b52606d84d4e6839725c}\label{class_fbx_property_affbc6e79fd35b52606d84d4e6839725c}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+User\+Tag@{Set\+User\+Tag}}
+\index{Set\+User\+Tag@{Set\+User\+Tag}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+User\+Tag()}{SetUserTag()}}
+{\footnotesize\ttfamily void Fbx\+Property\+::\+Set\+User\+Tag (\begin{DoxyParamCaption}\item[{int}]{p\+Tag }\end{DoxyParamCaption})}
+
+Sets the user tag. 
+\begin{DoxyParams}{引数}
+{\em p\+Tag} & The user tag to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_property_ad83cb36df88b5c088d955effd462d4be}\label{class_fbx_property_ad83cb36df88b5c088d955effd462d4be}} 
+\index{Fbx\+Property@{Fbx\+Property}!Set\+Value\+Inherit\+Type@{Set\+Value\+Inherit\+Type}}
+\index{Set\+Value\+Inherit\+Type@{Set\+Value\+Inherit\+Type}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Set\+Value\+Inherit\+Type()}{SetValueInheritType()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Set\+Value\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property_flags_ae3b667a4fcac4b827fa186a698fec2f8}{Fbx\+Property\+Flags\+::\+E\+Inherit\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Sets the inheritance type of the property. Use the method to explicitly override the default value of the property, or the referenced object\textquotesingle{}s property value, if this object is a clone.
+
+You can also use this to explicitly inherit the default value of the property, or the referenced object\textquotesingle{}s property value, if this object is a clone.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The new inheritance type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 60
+\mbox{\Hypertarget{class_fbx_property_a7f84a31a453f4e800e4440517418e7fe}\label{class_fbx_property_a7f84a31a453f4e800e4440517418e7fe}} 
+\index{Fbx\+Property@{Fbx\+Property}!Support\+Set\+Limit\+As\+Double@{Support\+Set\+Limit\+As\+Double}}
+\index{Support\+Set\+Limit\+As\+Double@{Support\+Set\+Limit\+As\+Double}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Support\+Set\+Limit\+As\+Double()}{SupportSetLimitAsDouble()}}
+{\footnotesize\ttfamily bool Fbx\+Property\+::\+Support\+Set\+Limit\+As\+Double (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns whether setting limits as a double number on this property type is allowed. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if allowed, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_property_a1b769b6684b71dfe76f350fef1137cab}\label{class_fbx_property_a1b769b6684b71dfe76f350fef1137cab}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}}
+\index{Fbx\+Anim\+Eval\+Classic@{Fbx\+Anim\+Eval\+Classic}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Eval\+Classic}{FbxAnimEvalClassic}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_anim_eval_classic}{Fbx\+Anim\+Eval\+Classic}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_property_a8d8dceef68317bda5a5d5404edfab5da}\label{class_fbx_property_a8d8dceef68317bda5a5d5404edfab5da}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}}
+\index{Fbx\+Binding\+Operator@{Fbx\+Binding\+Operator}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Binding\+Operator}{FbxBindingOperator}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_property_ae1a9835e0187d6623df42de2bde8c29d}\label{class_fbx_property_ae1a9835e0187d6623df42de2bde8c29d}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary@{Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary}}
+\index{Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary@{Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary}{FbxCleanUpConnectionsAtDestructionBoundary}}
+{\footnotesize\ttfamily void Fbx\+Clean\+Up\+Connections\+At\+Destruction\+Boundary (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&}]{p\+Object\+To\+Deleted\+In\+Sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_property_a9e1f446d3bd16145e2b59d431856e5e0}\label{class_fbx_property_a9e1f446d3bd16145e2b59d431856e5e0}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+I\+O\+Settings}{FbxIOSettings}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_property_a08fc1df47ff71ef2c17871f8e95ab2d6}\label{class_fbx_property_a08fc1df47ff71ef2c17871f8e95ab2d6}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Mark\+Object@{Fbx\+Mark\+Object}}
+\index{Fbx\+Mark\+Object@{Fbx\+Mark\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Mark\+Object}{FbxMarkObject}}
+{\footnotesize\ttfamily void Fbx\+Mark\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_map}{Fbx\+Map}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$, int $>$ \&}]{p\+Object\+Dst\+Disconnect\+Count,  }\item[{\hyperlink{class_fbx_set}{Fbx\+Set}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&}]{p\+Objects\+To\+Deleted,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&}]{p\+Object\+To\+Deleted\+In\+Sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_fbx_property_a7ea6fa004b54d9c3cd5b85fd33328078}\label{class_fbx_property_a7ea6fa004b54d9c3cd5b85fd33328078}} 
+\index{Fbx\+Property@{Fbx\+Property}!Fbx\+Object@{Fbx\+Object}}
+\index{Fbx\+Object@{Fbx\+Object}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{Fbx\+Object}{FbxObject}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_object}{Fbx\+Object}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_property_a4b55a5fb0b5e63c3db166e64f38bec1d}\label{class_fbx_property_a4b55a5fb0b5e63c3db166e64f38bec1d}} 
+\index{Fbx\+Property@{Fbx\+Property}!s\+Hierarchical\+Separator@{s\+Hierarchical\+Separator}}
+\index{s\+Hierarchical\+Separator@{s\+Hierarchical\+Separator}!Fbx\+Property@{Fbx\+Property}}
+\subsubsection{\texorpdfstring{s\+Hierarchical\+Separator}{sHierarchicalSeparator}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Property\+::s\+Hierarchical\+Separator\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Hierarchical separator of properties. 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxproperty_8h}{fbxproperty.\+h}\end{DoxyCompactItemize}

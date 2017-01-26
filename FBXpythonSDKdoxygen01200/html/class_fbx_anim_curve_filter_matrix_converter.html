@@ -1,0 +1,1607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXpythonSDKdoxygen01100: FbxAnimCurveFilterMatrixConverter クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXpythonSDKdoxygen01100
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_fbx_anim_curve_filter_matrix_converter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxAnimCurveFilterMatrixConverter クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fbxanimcurvefilters_8h_source.html">fbxanimcurvefilters.h</a>&gt;</code></p>
+<div class="dynheader">
+FbxAnimCurveFilterMatrixConverter の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter__inherit__graph.png" border="0" usemap="#_fbx_anim_curve_filter_matrix_converter_inherit__map" alt="Inheritance graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+FbxAnimCurveFilterMatrixConverter 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter__coll__graph.png" border="0" usemap="#_fbx_anim_curve_filter_matrix_converter_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 1 -->
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a41638d5acd6d14ef0f095ab75b18ee69"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a> { <br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a84d33765fc4bd4e481a998c2002d168b">ePreGlobal</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a01c0b9f0f9148eb003003eac43d7a783">ePreTranslate</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a8483e4fd410e3f1d7d727dd90272745d">ePostTranslate</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a557aabfd9b91053b1356a72eab3d9a7e">ePreRotate</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a79b84e6bae709b0c9cf03fe8c2639bf0">ePostRotate</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a50bde4676519ef9ca9e2ffb6e2ccd90e">ePreScale</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a87fafdf264bdf644cef0857fc56fcbf8">ePostScale</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69ac613535e97a454b4014da0c5baba43fa">ePostGlobal</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69ade05cc6a84bc8e4a968f57b127403956">eScaleOffset</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a0cd2c9524b27db3dd9cffd84af7042d6">eInactivePre</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a27924880372685bc5b61d733d4cb2f2a">eInactivePost</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a94dfcbf5497374814ca3bc6403b4dfcf">eRotationPivot</a>, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a5c0a4f4def4a54fb1a1f3b54a1db4d25">eScalingPivot</a>, 
+<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69a367aeb292b3015d210f1c7f8217bec1c">eMatrixIndexCount</a>
+<br />
+ }</td></tr>
+<tr class="separator:a41638d5acd6d14ef0f095ab75b18ee69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a756dc5898f25c94c6887a6fcf9b14f97"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a756dc5898f25c94c6887a6fcf9b14f97">FbxAnimCurveFilterMatrixConverter</a> ()</td></tr>
+<tr class="memdesc:a756dc5898f25c94c6887a6fcf9b14f97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a756dc5898f25c94c6887a6fcf9b14f97">[詳解]</a><br /></td></tr>
+<tr class="separator:a756dc5898f25c94c6887a6fcf9b14f97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab87ad3901de6754e782e1b923ffa1399"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#ab87ad3901de6754e782e1b923ffa1399">~FbxAnimCurveFilterMatrixConverter</a> ()</td></tr>
+<tr class="memdesc:ab87ad3901de6754e782e1b923ffa1399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#ab87ad3901de6754e782e1b923ffa1399">[詳解]</a><br /></td></tr>
+<tr class="separator:ab87ad3901de6754e782e1b923ffa1399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264eb163214f398627f4b8e20631b1ab"><td class="memItemLeft" align="right" valign="top">virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a264eb163214f398627f4b8e20631b1ab">GetName</a> () const</td></tr>
+<tr class="separator:a264eb163214f398627f4b8e20631b1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad19ed98d377e10fb85c20454dbbadaae"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#ad19ed98d377e10fb85c20454dbbadaae">NeedApply</a> (<a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:ad19ed98d377e10fb85c20454dbbadaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f4e811fedfacc4bc5a90942d2a2bfd5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a8f4e811fedfacc4bc5a90942d2a2bfd5">NeedApply</a> (<a class="el" href="class_fbx_object.html">FbxObject</a> *, <a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a8f4e811fedfacc4bc5a90942d2a2bfd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640fa8192c330f999894be8083ec578f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a640fa8192c330f999894be8083ec578f">NeedApply</a> (<a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> *pCurveNode[3], <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a640fa8192c330f999894be8083ec578f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7105a07dbaf0d9598fa930ff2b3141d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#aa7105a07dbaf0d9598fa930ff2b3141d">NeedApply</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> &amp;, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:aa7105a07dbaf0d9598fa930ff2b3141d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20db5fcf27096c750a9b5bfc1ed074e4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a20db5fcf27096c750a9b5bfc1ed074e4">Apply</a> (<a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a20db5fcf27096c750a9b5bfc1ed074e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9159d911dfa550f7760ffbb1e3b6cb6b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a9159d911dfa550f7760ffbb1e3b6cb6b">Apply</a> (<a class="el" href="class_fbx_object.html">FbxObject</a> *, <a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a9159d911dfa550f7760ffbb1e3b6cb6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75ed2f9079858c1db98740c3fa0506e9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a75ed2f9079858c1db98740c3fa0506e9">Apply</a> (<a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> *pCurveNode[3], <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a75ed2f9079858c1db98740c3fa0506e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30599e88b210af2fa8c7be727d59fae8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a30599e88b210af2fa8c7be727d59fae8">Apply</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **pCurve, int pCount, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a30599e88b210af2fa8c7be727d59fae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfcd53e23b1a55da02892b7ecf3822b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#adfcd53e23b1a55da02892b7ecf3822b3">Apply</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **pCurve, double *pVals, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:adfcd53e23b1a55da02892b7ecf3822b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33ffa3eacf298e44aeaaec44db9bdd26"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a33ffa3eacf298e44aeaaec44db9bdd26">Apply</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> &amp;, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a33ffa3eacf298e44aeaaec44db9bdd26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad441f2753722fa3fd07631fb249afadb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#ad441f2753722fa3fd07631fb249afadb">Reset</a> ()</td></tr>
+<tr class="separator:ad441f2753722fa3fd07631fb249afadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38313c4b68b33172198ca19ef957bc1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a38313c4b68b33172198ca19ef957bc1c">GetSourceMatrix</a> (<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a> pIndex, <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;pMatrix) const</td></tr>
+<tr class="separator:a38313c4b68b33172198ca19ef957bc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f8c45cecbe23a5df38bd0f2b4feb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a51f8c45cecbe23a5df38bd0f2b4feb08">SetSourceMatrix</a> (<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a> pIndex, <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;pMatrix)</td></tr>
+<tr class="separator:a51f8c45cecbe23a5df38bd0f2b4feb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd3e587cb299a3ae2d78e9c964a5ef0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a5cd3e587cb299a3ae2d78e9c964a5ef0">GetDestMatrix</a> (<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a> pIndex, <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;pMatrix) const</td></tr>
+<tr class="separator:a5cd3e587cb299a3ae2d78e9c964a5ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eafea6927cc0698df3a1a9c2cdb3b7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a5eafea6927cc0698df3a1a9c2cdb3b7d">SetDestMatrix</a> (<a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a> pIndex, <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;pMatrix)</td></tr>
+<tr class="separator:a5eafea6927cc0698df3a1a9c2cdb3b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30366999bdf8a54362cb07415cb09d67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_time.html">FbxTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a30366999bdf8a54362cb07415cb09d67">GetResamplingPeriod</a> () const</td></tr>
+<tr class="separator:a30366999bdf8a54362cb07415cb09d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32f07496ccaa59ed3fa575da58b5dc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#ad32f07496ccaa59ed3fa575da58b5dc1">SetResamplingPeriod</a> (<a class="el" href="class_fbx_time.html">FbxTime</a> &amp;pResamplingPeriod)</td></tr>
+<tr class="separator:ad32f07496ccaa59ed3fa575da58b5dc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2721fda063f33bb95358c60df9a935f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a2721fda063f33bb95358c60df9a935f7">GetGenerateLastKeyExactlyAtEndTime</a> () const</td></tr>
+<tr class="separator:a2721fda063f33bb95358c60df9a935f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f6bbf821eff2180bef5b63764d4a305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a3f6bbf821eff2180bef5b63764d4a305">SetGenerateLastKeyExactlyAtEndTime</a> (bool pFlag)</td></tr>
+<tr class="separator:a3f6bbf821eff2180bef5b63764d4a305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f5d905229e996ddccfe96e2cd4454e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a6f5d905229e996ddccfe96e2cd4454e3">GetResamplingOnFrameRateMultiple</a> () const</td></tr>
+<tr class="separator:a6f5d905229e996ddccfe96e2cd4454e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b23dfad34cae6de4c7f20ea8c071633"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a7b23dfad34cae6de4c7f20ea8c071633">SetResamplingOnFrameRateMultiple</a> (bool pFlag)</td></tr>
+<tr class="separator:a7b23dfad34cae6de4c7f20ea8c071633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf269bdba7f9526a1c957505cb3beb9c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#acf269bdba7f9526a1c957505cb3beb9c">GetApplyUnroll</a> () const</td></tr>
+<tr class="separator:acf269bdba7f9526a1c957505cb3beb9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcfe379526feec5a8d3ffc9e3e435d66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#abcfe379526feec5a8d3ffc9e3e435d66">SetApplyUnroll</a> (bool pFlag)</td></tr>
+<tr class="separator:abcfe379526feec5a8d3ffc9e3e435d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01b2d31ebe1cc32373d01c7b3f3e7797"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a01b2d31ebe1cc32373d01c7b3f3e7797">GetApplyConstantKeyReducer</a> () const</td></tr>
+<tr class="separator:a01b2d31ebe1cc32373d01c7b3f3e7797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67f6df28fee3f4703d96a2f92d58dfe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a67f6df28fee3f4703d96a2f92d58dfe2">SetApplyConstantKeyReducer</a> (bool pFlag)</td></tr>
+<tr class="separator:a67f6df28fee3f4703d96a2f92d58dfe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7603a34315c35f2d9ba8f501059992c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a7603a34315c35f2d9ba8f501059992c5">GetResampleTranslation</a> () const</td></tr>
+<tr class="separator:a7603a34315c35f2d9ba8f501059992c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce7c2108f6a39ad4a13cbc4175a5ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a3ce7c2108f6a39ad4a13cbc4175a5ec8">SetResampleTranslation</a> (bool pFlag)</td></tr>
+<tr class="separator:a3ce7c2108f6a39ad4a13cbc4175a5ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7140e4dce0bf5ef87d75991fa5eb315e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a7140e4dce0bf5ef87d75991fa5eb315e">SetSrcRotateOrder</a> (<a class="el" href="class_fbx_euler.html#a7d5bec7eedb022b4dae56894ab7a9939">FbxEuler::EOrder</a> pOrder)</td></tr>
+<tr class="separator:a7140e4dce0bf5ef87d75991fa5eb315e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115f94c96f1f14b55e4f3f9b6bc5977a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a115f94c96f1f14b55e4f3f9b6bc5977a">SetDestRotateOrder</a> (<a class="el" href="class_fbx_euler.html#a7d5bec7eedb022b4dae56894ab7a9939">FbxEuler::EOrder</a> pOrder)</td></tr>
+<tr class="separator:a115f94c96f1f14b55e4f3f9b6bc5977a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b49dc7704c847a3b909cf7d9052f7a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a4b49dc7704c847a3b909cf7d9052f7a7">SetForceApply</a> (bool pVal)</td></tr>
+<tr class="separator:a4b49dc7704c847a3b909cf7d9052f7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeb4273e3155dd4644a35a68f39ebda3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#abeb4273e3155dd4644a35a68f39ebda3">GetForceApply</a> () const</td></tr>
+<tr class="separator:abeb4273e3155dd4644a35a68f39ebda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a892ade0f0e5b7451a6e09da5ee4179bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a892ade0f0e5b7451a6e09da5ee4179bf">SetTranslationLimits</a> (<a class="el" href="class_fbx_limits.html">FbxLimits</a> &amp;limit)</td></tr>
+<tr class="separator:a892ade0f0e5b7451a6e09da5ee4179bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95cad4a51f2204a7c5cce101486eaab6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a95cad4a51f2204a7c5cce101486eaab6">SetRotationLimits</a> (<a class="el" href="class_fbx_limits.html">FbxLimits</a> &amp;limit)</td></tr>
+<tr class="separator:a95cad4a51f2204a7c5cce101486eaab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad291cc58221b27ffa8824c73d00cc0ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#ad291cc58221b27ffa8824c73d00cc0ba">SetScalingLimits</a> (<a class="el" href="class_fbx_limits.html">FbxLimits</a> &amp;limit)</td></tr>
+<tr class="separator:ad291cc58221b27ffa8824c73d00cc0ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_fbx_anim_curve_filter"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_fbx_anim_curve_filter')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_fbx_anim_curve_filter.html">FbxAnimCurveFilter</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:ac908ea01d9d49a263be450e760dabcce inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#ac908ea01d9d49a263be450e760dabcce">FbxAnimCurveFilter</a> ()</td></tr>
+<tr class="memdesc:ac908ea01d9d49a263be450e760dabcce inherit pub_methods_class_fbx_anim_curve_filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="class_fbx_anim_curve_filter.html#ac908ea01d9d49a263be450e760dabcce">[詳解]</a><br /></td></tr>
+<tr class="separator:ac908ea01d9d49a263be450e760dabcce inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adafe5c10e506cabca6410869f53602bc inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#adafe5c10e506cabca6410869f53602bc">~FbxAnimCurveFilter</a> ()</td></tr>
+<tr class="memdesc:adafe5c10e506cabca6410869f53602bc inherit pub_methods_class_fbx_anim_curve_filter"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="class_fbx_anim_curve_filter.html#adafe5c10e506cabca6410869f53602bc">[詳解]</a><br /></td></tr>
+<tr class="separator:adafe5c10e506cabca6410869f53602bc inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0695d801a1a8d5e6ca9f4e992d9af7ff inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_time.html">FbxTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#a0695d801a1a8d5e6ca9f4e992d9af7ff">GetStartTime</a> ()</td></tr>
+<tr class="separator:a0695d801a1a8d5e6ca9f4e992d9af7ff inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5833e1664b9621b4bafef76944ad383 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#ad5833e1664b9621b4bafef76944ad383">SetStartTime</a> (<a class="el" href="class_fbx_time.html">FbxTime</a> &amp;pTime)</td></tr>
+<tr class="separator:ad5833e1664b9621b4bafef76944ad383 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afef1281c6f615676466c65ff8c7186a9 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_time.html">FbxTime</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#afef1281c6f615676466c65ff8c7186a9">GetStopTime</a> ()</td></tr>
+<tr class="separator:afef1281c6f615676466c65ff8c7186a9 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fd5bf41a315dd12d8efb3184a17fc8 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#a75fd5bf41a315dd12d8efb3184a17fc8">SetStopTime</a> (<a class="el" href="class_fbx_time.html">FbxTime</a> &amp;pTime)</td></tr>
+<tr class="separator:a75fd5bf41a315dd12d8efb3184a17fc8 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af428acfb5850fe1d91d7d99bfc5ccab2 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#af428acfb5850fe1d91d7d99bfc5ccab2">GetStartKey</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> &amp;pCurve) const</td></tr>
+<tr class="separator:af428acfb5850fe1d91d7d99bfc5ccab2 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f41fc2b018813560c250c598602cb2 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#a94f41fc2b018813560c250c598602cb2">GetStopKey</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> &amp;pCurve) const</td></tr>
+<tr class="separator:a94f41fc2b018813560c250c598602cb2 inherit pub_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Exposed parent class methods.</h2></td></tr>
+<tr class="memitem:a7cae8d7e31ab1cf2437de8636a5b4916"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a7cae8d7e31ab1cf2437de8636a5b4916">NeedApply</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **pCurve, int pCount, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a7cae8d7e31ab1cf2437de8636a5b4916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f04a303254479eef1aa3bfbe0643d8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a00f04a303254479eef1aa3bfbe0643d8">NeedApply</a> (<a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> &amp;pCurveNode, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:a00f04a303254479eef1aa3bfbe0643d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71462534eff53b1177aaa5bb3e059ec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#aa71462534eff53b1177aaa5bb3e059ec">Apply</a> (<a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> &amp;pCurveNode, <a class="el" href="class_fbx_status.html">FbxStatus</a> *pStatus=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:aa71462534eff53b1177aaa5bb3e059ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pub_static_methods_class_fbx_anim_curve_filter"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_fbx_anim_curve_filter')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_fbx_anim_curve_filter.html">FbxAnimCurveFilter</a> に属する継承静的公開メンバ関数</td></tr>
+<tr class="memitem:a6aa65cd224b35635b02d842b2c72692e inherit pub_static_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#a6aa65cd224b35635b02d842b2c72692e">GetContinuousOffset</a> (<a class="el" href="class_fbx_rotation_order.html">FbxRotationOrder</a> &amp;pOrder, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;pOffset, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;pNew, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;pOld)</td></tr>
+<tr class="separator:a6aa65cd224b35635b02d842b2c72692e inherit pub_static_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_class_fbx_anim_curve_filter"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_fbx_anim_curve_filter')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_fbx_anim_curve_filter.html">FbxAnimCurveFilter</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:aa5aafb34a738b03619cdf426eb9b4089 inherit pro_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#aa5aafb34a738b03619cdf426eb9b4089">GetKFCurvesFromAnimCurve</a> (<a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **pSrc, int pSrcCount, KFCurve **pDst, int &amp;pDstCount)</td></tr>
+<tr class="separator:aa5aafb34a738b03619cdf426eb9b4089 inherit pro_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9403f06db2fd928f29d68d755a26c1b inherit pro_methods_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#ac9403f06db2fd928f29d68d755a26c1b">UpdateProgressInformation</a> (<a class="el" href="class_fbx_time.html">FbxTime</a>, <a class="el" href="class_fbx_time.html">FbxTime</a>)</td></tr>
+<tr class="separator:ac9403f06db2fd928f29d68d755a26c1b inherit pro_methods_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_fbx_anim_curve_filter"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_fbx_anim_curve_filter')"><img src="closed.png" alt="-"/>&#160;基底クラス <a class="el" href="class_fbx_anim_curve_filter.html">FbxAnimCurveFilter</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:afb8079a673486763ec97bea38641bc54 inherit pro_attribs_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_time.html">FbxTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#afb8079a673486763ec97bea38641bc54">mStart</a></td></tr>
+<tr class="separator:afb8079a673486763ec97bea38641bc54 inherit pro_attribs_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3be4640799f960d1910a2e3132e82eb inherit pro_attribs_class_fbx_anim_curve_filter"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_time.html">FbxTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_filter.html#ad3be4640799f960d1910a2e3132e82eb">mStop</a></td></tr>
+<tr class="separator:ad3be4640799f960d1910a2e3132e82eb inherit pro_attribs_class_fbx_anim_curve_filter"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Matrix conversion filter.</p>
+<dl class="section remark"><dt>注釈</dt><dd>The current implementation of this filter expects to process 9 curves. If the ApplyUnroll flag is enabled, set with a call to <a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#abcfe379526feec5a8d3ffc9e3e435d66">SetApplyUnroll()</a>, the internal unroll filter will automatically be configured to convert USER and BREAK tangents to AUTO (refer to the <a class="el" href="class_fbx_anim_curve_filter_unroll.html">FbxAnimCurveFilterUnroll</a> documentation). </dd></dl>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a41638d5acd6d14ef0f095ab75b18ee69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41638d5acd6d14ef0f095ab75b18ee69">&#9670;&nbsp;</a></span>EMatrixIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">FbxAnimCurveFilterMatrixConverter::EMatrixIndex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Matrix index type</p><ul>
+<li><em>ePreGlobal</em> </li>
+<li><em>ePreTranslate</em> </li>
+<li><em>ePostTranslate</em> </li>
+<li><em>ePreRotate</em> </li>
+<li><em>ePreScale</em> </li>
+<li><em>ePostGlobal</em> </li>
+<li><em>eScaleOffset</em> </li>
+<li><em>eInactivePre</em> </li>
+<li><em>eInactivePost</em> </li>
+<li><em>eRotationPivot</em> </li>
+<li><em>eScalingPivot</em> </li>
+<li><em>eMatrixIndexCount</em> </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a84d33765fc4bd4e481a998c2002d168b"></a>ePreGlobal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a01c0b9f0f9148eb003003eac43d7a783"></a>ePreTranslate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a8483e4fd410e3f1d7d727dd90272745d"></a>ePostTranslate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a557aabfd9b91053b1356a72eab3d9a7e"></a>ePreRotate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a79b84e6bae709b0c9cf03fe8c2639bf0"></a>ePostRotate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a50bde4676519ef9ca9e2ffb6e2ccd90e"></a>ePreScale&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a87fafdf264bdf644cef0857fc56fcbf8"></a>ePostScale&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69ac613535e97a454b4014da0c5baba43fa"></a>ePostGlobal&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69ade05cc6a84bc8e4a968f57b127403956"></a>eScaleOffset&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a0cd2c9524b27db3dd9cffd84af7042d6"></a>eInactivePre&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a27924880372685bc5b61d733d4cb2f2a"></a>eInactivePost&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a94dfcbf5497374814ca3bc6403b4dfcf"></a>eRotationPivot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a5c0a4f4def4a54fb1a1f3b54a1db4d25"></a>eScalingPivot&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a41638d5acd6d14ef0f095ab75b18ee69a367aeb292b3015d210f1c7f8217bec1c"></a>eMatrixIndexCount&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a756dc5898f25c94c6887a6fcf9b14f97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a756dc5898f25c94c6887a6fcf9b14f97">&#9670;&nbsp;</a></span>FbxAnimCurveFilterMatrixConverter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxAnimCurveFilterMatrixConverter::FbxAnimCurveFilterMatrixConverter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+
+</div>
+</div>
+<a id="ab87ad3901de6754e782e1b923ffa1399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab87ad3901de6754e782e1b923ffa1399">&#9670;&nbsp;</a></span>~FbxAnimCurveFilterMatrixConverter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual FbxAnimCurveFilterMatrixConverter::~FbxAnimCurveFilterMatrixConverter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">メソッド詳解</h2>
+<a id="aa71462534eff53b1177aaa5bb3e059ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa71462534eff53b1177aaa5bb3e059ec">&#9670;&nbsp;</a></span>Apply() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> &amp;&#160;</td>
+          <td class="paramname"><em>pCurveNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Apply filter on all the curves of an animation curve node. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurveNode</td><td>Curve node to which the filter is applied. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the curve filtering operation was successful, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>This method collects all the <a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> objects connected to the curve node and calls Apply(FbxAnimCurve**, int) </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#ad042b45c0675278fa49e61739b0825c2">FbxAnimCurveFilter</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter_aa71462534eff53b1177aaa5bb3e059ec_cgraph.png" border="0" usemap="#class_fbx_anim_curve_filter_matrix_converter_aa71462534eff53b1177aaa5bb3e059ec_cgraph" alt=""/></div>
+<!-- MAP 2 -->
+</div>
+
+</div>
+</div>
+<a id="a20db5fcf27096c750a9b5bfc1ed074e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20db5fcf27096c750a9b5bfc1ed074e4">&#9670;&nbsp;</a></span>Apply() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This filter expects to work with interdependent curves. Passing the animation stack makes no sense since this object would not know which curves to handle. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pAnimStack</td><td>Animation stack where to retrieve the animation curves. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#aef3900e6180e05661c27ee484ae939c3">FbxAnimCurveFilter</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a9159d911dfa550f7760ffbb1e3b6cb6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9159d911dfa550f7760ffbb1e3b6cb6b">&#9670;&nbsp;</a></span>Apply() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_object.html">FbxObject</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This filter expects to work with 9 interdependent curves. Collecting all the animation curves from the properties defined in <em>pObj</em> could not guarantee that we are manipulating 9 interdependent curves. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pObj</td><td>Object containing the properties to test. </td></tr>
+    <tr><td class="paramname">pAnimStack</td><td>Animation stack where to retrieve the animation curves. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#a009498a65af4995bf5e5908f17837531">FbxAnimCurveFilter</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter_a9159d911dfa550f7760ffbb1e3b6cb6b_cgraph.png" border="0" usemap="#class_fbx_anim_curve_filter_matrix_converter_a9159d911dfa550f7760ffbb1e3b6cb6b_cgraph" alt=""/></div>
+<!-- MAP 3 -->
+</div>
+
+</div>
+</div>
+<a id="a75ed2f9079858c1db98740c3fa0506e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ed2f9079858c1db98740c3fa0506e9">&#9670;&nbsp;</a></span>Apply() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> *&#160;</td>
+          <td class="paramname"><em>pCurveNode</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Apply filter on all the curves of the animation curve nodes. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurveNode</td><td>Curve nodes to which the filter is applied. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the curve filtering operation was successful, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>This method assumes that <em>pCurveNode</em>[0] holds the translation curve, <em>pCurveNode</em>[1] holds the rotation curves and <em>pCurveNode</em>[2] holds the scaling curves. </dd></dl>
+
+</div>
+</div>
+<a id="a30599e88b210af2fa8c7be727d59fae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30599e88b210af2fa8c7be727d59fae8">&#9670;&nbsp;</a></span>Apply() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **&#160;</td>
+          <td class="paramname"><em>pCurve</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Apply filter on the given animation curves. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurve</td><td>Array of curve to which the filter is applied. </td></tr>
+    <tr><td class="paramname">pCount</td><td>Number of curves in array. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the curve filtering operation was successful, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd><em>pCount</em> must be equal to 9 </dd>
+<dd>
+Because this method only manipulates <a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> objects, it cannot set/get the channels value. If the calling application wishes to use this flavor of the <a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#aa71462534eff53b1177aaa5bb3e059ec">Apply()</a> method, it is strongly suggested to use the method: FbxAnimCurveFilterMatrixConverter::Apply(FbxAnimCurve** pCurve, double&amp; pVals[9]); The Apply(FbxAnimCurveNode*) method is not affected by this limitation since the channel values can be accessed via the animation curve node. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#aca6a41fbc4d9019b20df7adccfa6ed3c">FbxAnimCurveFilter</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="adfcd53e23b1a55da02892b7ecf3822b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfcd53e23b1a55da02892b7ecf3822b3">&#9670;&nbsp;</a></span>Apply() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **&#160;</td>
+          <td class="paramname"><em>pCurve</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>pVals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Apply filter on the given animation curves. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurve</td><td>Array of curve to which the filter is applied. </td></tr>
+    <tr><td class="paramname">pVals</td><td>Array of channel values (same size as <em>pCurve</em>). </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the curve filtering operation was successful, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>This method assumes that <em>pCurve</em> contains exactly 9 curves. </dd>
+<dd>
+<em>pVals</em> must be correctly initialized with the channels values and, if the method calculates new values, they will be returned in this array. </dd>
+<dd>
+The curves are assumed to represent: Translation X,Y and Z, Rotation X,Y and Z and Scaling X,Y and Z in this order. </dd></dl>
+
+</div>
+</div>
+<a id="a33ffa3eacf298e44aeaaec44db9bdd26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ffa3eacf298e44aeaaec44db9bdd26">&#9670;&nbsp;</a></span>Apply() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::Apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This filter expects to work with interdependent curves. Receiving one single curve is useless. </p><dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#a6a69996c47c0e6f63a0f8b0d5fa806a0">FbxAnimCurveFilter</a>を実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter_a33ffa3eacf298e44aeaaec44db9bdd26_cgraph.png" border="0" usemap="#class_fbx_anim_curve_filter_matrix_converter_a33ffa3eacf298e44aeaaec44db9bdd26_cgraph" alt=""/></div>
+<!-- MAP 4 -->
+</div>
+
+</div>
+</div>
+<a id="a01b2d31ebe1cc32373d01c7b3f3e7797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01b2d31ebe1cc32373d01c7b3f3e7797">&#9670;&nbsp;</a></span>GetApplyConstantKeyReducer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::GetApplyConstantKeyReducer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current state of the flag that determines if constant key reducer is used or not. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> if constant key reducer is applied, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="acf269bdba7f9526a1c957505cb3beb9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf269bdba7f9526a1c957505cb3beb9c">&#9670;&nbsp;</a></span>GetApplyUnroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::GetApplyUnroll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current state of the ApplyUnroll flag. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the internal unroll filter is applied, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>Enable the internal unroll filter to get continuous rotation animation curves. </dd></dl>
+<dl class="section see"><dt>参照</dt><dd><a class="el" href="class_fbx_anim_curve_filter_unroll.html">FbxAnimCurveFilterUnroll</a>. </dd></dl>
+
+</div>
+</div>
+<a id="a5cd3e587cb299a3ae2d78e9c964a5ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd3e587cb299a3ae2d78e9c964a5ef0">&#9670;&nbsp;</a></span>GetDestMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::GetDestMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a>&#160;</td>
+          <td class="paramname"><em>pIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Translation Rotation Scaling destination matrix. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIndex</td><td>The matrix ID. </td></tr>
+    <tr><td class="paramname">pMatrix</td><td>The matrix used to receive the destination matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abeb4273e3155dd4644a35a68f39ebda3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb4273e3155dd4644a35a68f39ebda3">&#9670;&nbsp;</a></span>GetForceApply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::GetForceApply </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current state of the flag to force usage of the filter even if source and destination matrices are equivalent. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> to force usage of the filter, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a2721fda063f33bb95358c60df9a935f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2721fda063f33bb95358c60df9a935f7">&#9670;&nbsp;</a></span>GetGenerateLastKeyExactlyAtEndTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::GetGenerateLastKeyExactlyAtEndTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current state of the flag which determines if the last key should be generated exactly at the end time or not. This filter handles 9 animation curves, each of them has a stop time, the latest one is defined as the end time. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> if last key is set exactly at end time, <code>false</code> otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a264eb163214f398627f4b8e20631b1ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264eb163214f398627f4b8e20631b1ab">&#9670;&nbsp;</a></span>GetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const char* FbxAnimCurveFilterMatrixConverter::GetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the name of the filter. </p><dl class="section return"><dt>戻り値</dt><dd>Pointer to name. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#abd559d5052fbb072042e59241940a35c">FbxAnimCurveFilter</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a7603a34315c35f2d9ba8f501059992c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7603a34315c35f2d9ba8f501059992c5">&#9670;&nbsp;</a></span>GetResampleTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::GetResampleTranslation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current state of the flag that determines if the translation data should be re-sampled or not. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> if translation data is re-sampled upon conversion, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>If this flag is <code>false</code>, translation data must be calculated after the conversion process, overriding the re-sampling process. </dd></dl>
+
+</div>
+</div>
+<a id="a6f5d905229e996ddccfe96e2cd4454e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f5d905229e996ddccfe96e2cd4454e3">&#9670;&nbsp;</a></span>GetResamplingOnFrameRateMultiple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxAnimCurveFilterMatrixConverter::GetResamplingOnFrameRateMultiple </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if re-sampling is on frame rate multiple. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> if re-sampling is on a frame rate multiple. </dd></dl>
+
+</div>
+</div>
+<a id="a30366999bdf8a54362cb07415cb09d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30366999bdf8a54362cb07415cb09d67">&#9670;&nbsp;</a></span>GetResamplingPeriod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_time.html">FbxTime</a> FbxAnimCurveFilterMatrixConverter::GetResamplingPeriod </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the re-sampling period. </p><dl class="section return"><dt>戻り値</dt><dd>the re-sampling period. </dd></dl>
+
+</div>
+</div>
+<a id="a38313c4b68b33172198ca19ef957bc1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38313c4b68b33172198ca19ef957bc1c">&#9670;&nbsp;</a></span>GetSourceMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::GetSourceMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a>&#160;</td>
+          <td class="paramname"><em>pIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the Translation Rotation Scaling source matrix </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIndex</td><td>The matrix ID. </td></tr>
+    <tr><td class="paramname">pMatrix</td><td>The matrix used to receive the source matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7cae8d7e31ab1cf2437de8636a5b4916"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cae8d7e31ab1cf2437de8636a5b4916">&#9670;&nbsp;</a></span>NeedApply() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::NeedApply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> **&#160;</td>
+          <td class="paramname"><em>pCurve</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the given animation curve need an application of the filter. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurve</td><td>Array of curves to test if they need the and application of the filter. </td></tr>
+    <tr><td class="paramname">pCount</td><td>Number of curves in array. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if at least one animation curve in the array needs an application of the filter. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#a6b210eca45b745cf070c46bfaaf3e5b2">FbxAnimCurveFilter</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter_a7cae8d7e31ab1cf2437de8636a5b4916_cgraph.png" border="0" usemap="#class_fbx_anim_curve_filter_matrix_converter_a7cae8d7e31ab1cf2437de8636a5b4916_cgraph" alt=""/></div>
+<!-- MAP 5 -->
+</div>
+
+</div>
+</div>
+<a id="a00f04a303254479eef1aa3bfbe0643d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f04a303254479eef1aa3bfbe0643d8">&#9670;&nbsp;</a></span>NeedApply() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::NeedApply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> &amp;&#160;</td>
+          <td class="paramname"><em>pCurveNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the animation curve node needs an application of the filter. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurveNode</td><td>Curve node to test. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the animation curve node needs an application of the filter. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>This method collects all the <a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> objects connected to the curve node and calls NeedApply(FbxAnimCurve**, int) </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#a2a88d855d34bb1f2f22ca8386020b33a">FbxAnimCurveFilter</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter_a00f04a303254479eef1aa3bfbe0643d8_cgraph.png" border="0" usemap="#class_fbx_anim_curve_filter_matrix_converter_a00f04a303254479eef1aa3bfbe0643d8_cgraph" alt=""/></div>
+<!-- MAP 6 -->
+</div>
+
+</div>
+</div>
+<a id="ad19ed98d377e10fb85c20454dbbadaae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19ed98d377e10fb85c20454dbbadaae">&#9670;&nbsp;</a></span>NeedApply() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::NeedApply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This filter expects to work with interdependent curves. Passing the animation stack makes no sense since this object would not know which curves to handle. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pAnimStack</td><td>Animation stack. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code> </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#af95af2469851b88b4f6d38401ace5791">FbxAnimCurveFilter</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a8f4e811fedfacc4bc5a90942d2a2bfd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f4e811fedfacc4bc5a90942d2a2bfd5">&#9670;&nbsp;</a></span>NeedApply() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::NeedApply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_object.html">FbxObject</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_stack.html">FbxAnimStack</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This filter expects to work with 9 interdependent curves. Collecting all the animation curves from the properties defined in <em>pObj</em> could not guarantee that we are manipulating 9 interdependent curves. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pObj</td><td>Object containing the properties to test. </td></tr>
+    <tr><td class="paramname">pAnimStack</td><td>Animation stack where to retrieve the animation curves </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code> </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#a09438dd8d0e9bcb934e6a4b6fc51bcd7">FbxAnimCurveFilter</a>を再実装しています。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_fbx_anim_curve_filter_matrix_converter_a8f4e811fedfacc4bc5a90942d2a2bfd5_cgraph.png" border="0" usemap="#class_fbx_anim_curve_filter_matrix_converter_a8f4e811fedfacc4bc5a90942d2a2bfd5_cgraph" alt=""/></div>
+<!-- MAP 7 -->
+</div>
+
+</div>
+</div>
+<a id="a640fa8192c330f999894be8083ec578f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a640fa8192c330f999894be8083ec578f">&#9670;&nbsp;</a></span>NeedApply() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::NeedApply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_node.html">FbxAnimCurveNode</a> *&#160;</td>
+          <td class="paramname"><em>pCurveNode</em>[3], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the animation curve nodes need an application of the filter. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCurveNode</td><td>Curves to test if they need an application of the filter. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> if the animation curve nodes need an application of the filter and <code>false</code> if they don't or an incompatible configuration is detected. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>This method assumes that <em>pCurveNode</em>[0] holds the translation curve, <em>pCurveNode</em>[1] holds the rotation curves and <em>pCurveNode</em>[2] holds the scaling curves. </dd></dl>
+
+</div>
+</div>
+<a id="aa7105a07dbaf0d9598fa930ff2b3141d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7105a07dbaf0d9598fa930ff2b3141d">&#9670;&nbsp;</a></span>NeedApply() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxAnimCurveFilterMatrixConverter::NeedApply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve.html">FbxAnimCurve</a> &amp;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> *&#160;</td>
+          <td class="paramname"><em>pStatus</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This filter expects to work with interdependent curves. Receiving one single curve is useless. </p><dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#af768a9c47e4f5a5fff47a8ec781e6b4c">FbxAnimCurveFilter</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="ad441f2753722fa3fd07631fb249afadb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad441f2753722fa3fd07631fb249afadb">&#9670;&nbsp;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxAnimCurveFilterMatrixConverter::Reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reset the filter to its default parameters. </p>
+
+<p><a class="el" href="class_fbx_anim_curve_filter.html#a57fb35baaaa85adb08946383cf40e811">FbxAnimCurveFilter</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a67f6df28fee3f4703d96a2f92d58dfe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67f6df28fee3f4703d96a2f92d58dfe2">&#9670;&nbsp;</a></span>SetApplyConstantKeyReducer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetApplyConstantKeyReducer </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the state of the flag that determines if constant key reducer is used or not. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFlag</td><td>Set to <code>true</code> to apply the constant key reducer, \ Set to <code>false</code> otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abcfe379526feec5a8d3ffc9e3e435d66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfe379526feec5a8d3ffc9e3e435d66">&#9670;&nbsp;</a></span>SetApplyUnroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetApplyUnroll </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the state of the ApplyUnroll flag. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFlag</td><td>Set to <code>true</code> to apply an unroll filter to the rotation curves internally, \ set to <code>false</code> otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5eafea6927cc0698df3a1a9c2cdb3b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eafea6927cc0698df3a1a9c2cdb3b7d">&#9670;&nbsp;</a></span>SetDestMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetDestMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a>&#160;</td>
+          <td class="paramname"><em>pIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the Translation Rotation Scaling destination matrix. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIndex</td><td>The matrix ID. </td></tr>
+    <tr><td class="paramname">pMatrix</td><td>The matrix used to set the destination matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a115f94c96f1f14b55e4f3f9b6bc5977a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115f94c96f1f14b55e4f3f9b6bc5977a">&#9670;&nbsp;</a></span>SetDestRotateOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetDestRotateOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_euler.html#a7d5bec7eedb022b4dae56894ab7a9939">FbxEuler::EOrder</a>&#160;</td>
+          <td class="paramname"><em>pOrder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the rotation order of the destination matrix. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pOrder</td><td>The rotation order to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4b49dc7704c847a3b909cf7d9052f7a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b49dc7704c847a3b909cf7d9052f7a7">&#9670;&nbsp;</a></span>SetForceApply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetForceApply </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pVal</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the state of the flag to force usage of the filter even if source and destination matrices are equivalent. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pVal</td><td>Set to <code>true</code> to force usage of the filter, set to <code>false</code> otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f6bbf821eff2180bef5b63764d4a305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f6bbf821eff2180bef5b63764d4a305">&#9670;&nbsp;</a></span>SetGenerateLastKeyExactlyAtEndTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetGenerateLastKeyExactlyAtEndTime </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the flag to determine if the last key will be generated exactly at the end time or not. This filter handles 9 animation curves, each of them has a stop time, the latest one is defined as the end time. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFlag</td><td>Set to <code>true</code> to generate the last key exactly at the end time, <code>false</code> otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ce7c2108f6a39ad4a13cbc4175a5ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce7c2108f6a39ad4a13cbc4175a5ec8">&#9670;&nbsp;</a></span>SetResampleTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetResampleTranslation </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the state of the flag that determines if the translation data should be re-sampled or not. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFlag</td><td>Set to <code>true</code> to re-sample the translation data, set to <code>false</code> otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>注釈</dt><dd>If this flag is set to <code>false</code>, translation data must be calculated after the conversion process, overriding the re-sampling process. </dd></dl>
+
+</div>
+</div>
+<a id="a7b23dfad34cae6de4c7f20ea8c071633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b23dfad34cae6de4c7f20ea8c071633">&#9670;&nbsp;</a></span>SetResamplingOnFrameRateMultiple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetResamplingOnFrameRateMultiple </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pFlag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the re-sample on a frame rate multiple. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFlag</td><td>The value to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>注釈</dt><dd>It might be necessary that the starting time of the converted animation starts at an multiple of frame period starting from time 0. Most softwares play their animation at a definite frame rate, starting from time 0. As re-sampling occurs when we can't guarantee interpolation, keys must match with the moment when the curve is evaluated. </dd></dl>
+
+</div>
+</div>
+<a id="ad32f07496ccaa59ed3fa575da58b5dc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad32f07496ccaa59ed3fa575da58b5dc1">&#9670;&nbsp;</a></span>SetResamplingPeriod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetResamplingPeriod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_time.html">FbxTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>pResamplingPeriod</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the re-sampling period. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pResamplingPeriod</td><td>The re-sampling period to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95cad4a51f2204a7c5cce101486eaab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cad4a51f2204a7c5cce101486eaab6">&#9670;&nbsp;</a></span>SetRotationLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetRotationLimits </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits.html">FbxLimits</a> &amp;&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the rotation limits to be applied during conversion. Only active limits are applied. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>The rotation limit to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad291cc58221b27ffa8824c73d00cc0ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad291cc58221b27ffa8824c73d00cc0ba">&#9670;&nbsp;</a></span>SetScalingLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetScalingLimits </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits.html">FbxLimits</a> &amp;&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the scaling limits to be applied during conversion. Only active limits are applied. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>The scaling limit to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51f8c45cecbe23a5df38bd0f2b4feb08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f8c45cecbe23a5df38bd0f2b4feb08">&#9670;&nbsp;</a></span>SetSourceMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetSourceMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_curve_filter_matrix_converter.html#a41638d5acd6d14ef0f095ab75b18ee69">EMatrixIndex</a>&#160;</td>
+          <td class="paramname"><em>pIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>pMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the Translation Rotation Scaling source matrix. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIndex</td><td>The matrix ID. </td></tr>
+    <tr><td class="paramname">pMatrix</td><td>The matrix used to set the source matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7140e4dce0bf5ef87d75991fa5eb315e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7140e4dce0bf5ef87d75991fa5eb315e">&#9670;&nbsp;</a></span>SetSrcRotateOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetSrcRotateOrder </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_euler.html#a7d5bec7eedb022b4dae56894ab7a9939">FbxEuler::EOrder</a>&#160;</td>
+          <td class="paramname"><em>pOrder</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the rotation order of the source matrix. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pOrder</td><td>The rotation order to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a892ade0f0e5b7451a6e09da5ee4179bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a892ade0f0e5b7451a6e09da5ee4179bf">&#9670;&nbsp;</a></span>SetTranslationLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxAnimCurveFilterMatrixConverter::SetTranslationLimits </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits.html">FbxLimits</a> &amp;&#160;</td>
+          <td class="paramname"><em>limit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the Translation limits to be applied during conversion. Only active limits are applied. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>The rotation limit to be set. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/github/FBXpythonSDK201701/FBXpythonSDK201701/2017.1/include/fbxsdk/scene/animation/<a class="el" href="fbxanimcurvefilters_8h_source.html">fbxanimcurvefilters.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

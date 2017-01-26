@@ -1,0 +1,91 @@
+\hypertarget{class_fbx_hungry_allocator}{}\section{Fbx\+Hungry\+Allocator クラス}
+\label{class_fbx_hungry_allocator}\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+
+
+{\ttfamily \#include $<$fbxcontainerallocators.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_hungry_allocator_a194f8edf036580f3652dcbd84f09c5c2}{Fbx\+Hungry\+Allocator} (size\+\_\+t p\+Record\+Size)
+\item 
+\hyperlink{class_fbx_hungry_allocator_aa97f29518f4a71ac45f0784f6a4c66b7}{Fbx\+Hungry\+Allocator} (const \hyperlink{class_fbx_hungry_allocator}{Fbx\+Hungry\+Allocator} \&p\+Other)
+\item 
+\hyperlink{class_fbx_hungry_allocator_a05e40ed81ef8cde223014ed5471d8586}{$\sim$\+Fbx\+Hungry\+Allocator} ()
+\item 
+void \hyperlink{class_fbx_hungry_allocator_a8aeb6180f5d6ce87b57d0505520144b5}{Reserve} (const size\+\_\+t p\+Record\+Count)
+\item 
+void $\ast$ \hyperlink{class_fbx_hungry_allocator_a89f760df090e671f74361a3c64b5fccd}{Allocate\+Records} (const size\+\_\+t p\+Record\+Count=1)
+\item 
+void \hyperlink{class_fbx_hungry_allocator_a1c06ce521e51ae99b671daa3c308e0b0}{Free\+Memory} (void $\ast$)
+\item 
+size\+\_\+t \hyperlink{class_fbx_hungry_allocator_a6aa8fde93ff214d3313ec29abe6b2eb2}{Get\+Record\+Size} () const
+\item 
+\hyperlink{class_fbx_hungry_allocator}{Fbx\+Hungry\+Allocator} \& \hyperlink{class_fbx_hungry_allocator_a692a8e4e268a60d82be5469e6e8c232f}{operator=} (const \hyperlink{class_fbx_hungry_allocator}{Fbx\+Hungry\+Allocator} \&p\+Other)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This allocator only frees the allocated memory when it is deleted. This is a good allocator for building dictionaries, where we only add things to a container, but never remove them. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a194f8edf036580f3652dcbd84f09c5c2}\label{class_fbx_hungry_allocator_a194f8edf036580f3652dcbd84f09c5c2}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{Fbx\+Hungry\+Allocator()}{FbxHungryAllocator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Hungry\+Allocator\+::\+Fbx\+Hungry\+Allocator (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{p\+Record\+Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_hungry_allocator_aa97f29518f4a71ac45f0784f6a4c66b7}\label{class_fbx_hungry_allocator_aa97f29518f4a71ac45f0784f6a4c66b7}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{Fbx\+Hungry\+Allocator()}{FbxHungryAllocator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Hungry\+Allocator\+::\+Fbx\+Hungry\+Allocator (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_hungry_allocator}{Fbx\+Hungry\+Allocator} \&}]{p\+Other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a05e40ed81ef8cde223014ed5471d8586}\label{class_fbx_hungry_allocator_a05e40ed81ef8cde223014ed5471d8586}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!````~Fbx\+Hungry\+Allocator@{$\sim$\+Fbx\+Hungry\+Allocator}}
+\index{````~Fbx\+Hungry\+Allocator@{$\sim$\+Fbx\+Hungry\+Allocator}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Hungry\+Allocator()}{~FbxHungryAllocator()}}
+{\footnotesize\ttfamily Fbx\+Hungry\+Allocator\+::$\sim$\+Fbx\+Hungry\+Allocator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+呼び出し関係図\+:
+% FIG 0
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a89f760df090e671f74361a3c64b5fccd}\label{class_fbx_hungry_allocator_a89f760df090e671f74361a3c64b5fccd}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Allocate\+Records@{Allocate\+Records}}
+\index{Allocate\+Records@{Allocate\+Records}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{Allocate\+Records()}{AllocateRecords()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Hungry\+Allocator\+::\+Allocate\+Records (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Record\+Count = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a1c06ce521e51ae99b671daa3c308e0b0}\label{class_fbx_hungry_allocator_a1c06ce521e51ae99b671daa3c308e0b0}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Free\+Memory@{Free\+Memory}}
+\index{Free\+Memory@{Free\+Memory}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{Free\+Memory()}{FreeMemory()}}
+{\footnotesize\ttfamily void Fbx\+Hungry\+Allocator\+::\+Free\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a6aa8fde93ff214d3313ec29abe6b2eb2}\label{class_fbx_hungry_allocator_a6aa8fde93ff214d3313ec29abe6b2eb2}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Get\+Record\+Size@{Get\+Record\+Size}}
+\index{Get\+Record\+Size@{Get\+Record\+Size}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{Get\+Record\+Size()}{GetRecordSize()}}
+{\footnotesize\ttfamily size\+\_\+t Fbx\+Hungry\+Allocator\+::\+Get\+Record\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a692a8e4e268a60d82be5469e6e8c232f}\label{class_fbx_hungry_allocator_a692a8e4e268a60d82be5469e6e8c232f}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_hungry_allocator}{Fbx\+Hungry\+Allocator}\& Fbx\+Hungry\+Allocator\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_hungry_allocator}{Fbx\+Hungry\+Allocator} \&}]{p\+Other }\end{DoxyParamCaption})}
+
+呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{class_fbx_hungry_allocator_a8aeb6180f5d6ce87b57d0505520144b5}\label{class_fbx_hungry_allocator_a8aeb6180f5d6ce87b57d0505520144b5}} 
+\index{Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Fbx\+Hungry\+Allocator@{Fbx\+Hungry\+Allocator}}
+\subsubsection{\texorpdfstring{Reserve()}{Reserve()}}
+{\footnotesize\ttfamily void Fbx\+Hungry\+Allocator\+::\+Reserve (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Record\+Count }\end{DoxyParamCaption})}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxcontainerallocators_8h}{fbxcontainerallocators.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\hypertarget{class_fbx_func_event_handler}{}\section{Fbx\+Func\+Event\+Handler$<$ Event\+Type $>$ クラステンプレート}
+\label{class_fbx_func_event_handler}\index{Fbx\+Func\+Event\+Handler$<$ Event\+Type $>$@{Fbx\+Func\+Event\+Handler$<$ Event\+Type $>$}}
+
+
+{\ttfamily \#include $<$fbxeventhandler.\+h$>$}
+
+
+
+Fbx\+Func\+Event\+Handler$<$ Event\+Type $>$ の継承関係図
+% FIG 0
+
+
+Fbx\+Func\+Event\+Handler$<$ Event\+Type $>$ 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_func_event_handler_adc9cefc0f250faf562bc0d8a83171548}{Fbx\+Func\+Event\+Handler} (\hyperlink{class_fbx_listener}{Fbx\+Listener} $\ast$p\+Listener, Callback\+Fnc p\+Function)
+\item 
+virtual int \hyperlink{class_fbx_func_event_handler_a0c1a0eaedda70615a684bd96aa72fb97}{Get\+Handler\+Event\+Type} ()
+\item 
+virtual void \hyperlink{class_fbx_func_event_handler_a6111e1a7e1a0e60170a2de498fe44766}{Function\+Call} (const \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} \&p\+Event)
+\item 
+virtual \hyperlink{class_fbx_listener}{Fbx\+Listener} $\ast$ \hyperlink{class_fbx_func_event_handler_af196b87b07e698704615056be5923745}{Get\+Listener} ()
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_func_event_handler_adc9cefc0f250faf562bc0d8a83171548}\label{class_fbx_func_event_handler_adc9cefc0f250faf562bc0d8a83171548}} 
+\index{Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}!Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}}
+\index{Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}!Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Fbx\+Func\+Event\+Handler()}{FbxFuncEventHandler()}}
+{\footnotesize\ttfamily template$<$typename Event\+Type$>$ \\
+\hyperlink{class_fbx_func_event_handler}{Fbx\+Func\+Event\+Handler}$<$ Event\+Type $>$\+::\hyperlink{class_fbx_func_event_handler}{Fbx\+Func\+Event\+Handler} (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_listener}{Fbx\+Listener} $\ast$}]{p\+Listener,  }\item[{Callback\+Fnc}]{p\+Function }\end{DoxyParamCaption})}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_func_event_handler_a6111e1a7e1a0e60170a2de498fe44766}\label{class_fbx_func_event_handler_a6111e1a7e1a0e60170a2de498fe44766}} 
+\index{Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}!Function\+Call@{Function\+Call}}
+\index{Function\+Call@{Function\+Call}!Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Function\+Call()}{FunctionCall()}}
+{\footnotesize\ttfamily template$<$typename Event\+Type$>$ \\
+virtual void \hyperlink{class_fbx_func_event_handler}{Fbx\+Func\+Event\+Handler}$<$ Event\+Type $>$\+::Function\+Call (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} \&}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Call function that process event data. 
+\begin{DoxyParams}{引数}
+{\em p\+Event} & specify the event type. p\+Event could be a specific class which derived from \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} 
+\end{DoxySeeAlso}
+
+
+\hyperlink{class_fbx_event_handler_a46357ba45116a30c8f53c3e5fe9ba2fb}{Fbx\+Event\+Handler}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_func_event_handler_a0c1a0eaedda70615a684bd96aa72fb97}\label{class_fbx_func_event_handler_a0c1a0eaedda70615a684bd96aa72fb97}} 
+\index{Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}!Get\+Handler\+Event\+Type@{Get\+Handler\+Event\+Type}}
+\index{Get\+Handler\+Event\+Type@{Get\+Handler\+Event\+Type}!Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Handler\+Event\+Type()}{GetHandlerEventType()}}
+{\footnotesize\ttfamily template$<$typename Event\+Type$>$ \\
+virtual int \hyperlink{class_fbx_func_event_handler}{Fbx\+Func\+Event\+Handler}$<$ Event\+Type $>$\+::Get\+Handler\+Event\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get event type of current handler. \begin{DoxyReturn}{戻り値}
+The type ID of event. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_event_handler_a0b42d2b93e63d866975f468a481c9f3c}{Fbx\+Event\+Handler}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_func_event_handler_af196b87b07e698704615056be5923745}\label{class_fbx_func_event_handler_af196b87b07e698704615056be5923745}} 
+\index{Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}!Get\+Listener@{Get\+Listener}}
+\index{Get\+Listener@{Get\+Listener}!Fbx\+Func\+Event\+Handler@{Fbx\+Func\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Listener()}{GetListener()}}
+{\footnotesize\ttfamily template$<$typename Event\+Type$>$ \\
+virtual \hyperlink{class_fbx_listener}{Fbx\+Listener}$\ast$ \hyperlink{class_fbx_func_event_handler}{Fbx\+Func\+Event\+Handler}$<$ Event\+Type $>$\+::Get\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get listener of current handler. \begin{DoxyReturn}{戻り値}
+A pointer to the listener object. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_event_handler_a6d496102fe1253372bb042840c2d45a7}{Fbx\+Event\+Handler}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxeventhandler_8h}{fbxeventhandler.\+h}\end{DoxyCompactItemize}

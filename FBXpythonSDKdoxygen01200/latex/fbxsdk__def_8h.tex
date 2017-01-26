@@ -1,0 +1,65 @@
+\hypertarget{fbxsdk__def_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/fbxsdk\+\_\+def.h ファイル}
+\label{fbxsdk__def_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fbxsdk\+\_\+def.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fbxsdk\+\_\+def.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$wchar.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include $<$float.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+version.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/arch/fbxarch.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/arch/fbxtypes.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/arch/fbxdebug.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/arch/fbxalloc.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/arch/fbxnew.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/arch/fbxstdcompliant.\+h$>$}\newline
+fbxsdk\+\_\+def.\+h の依存先関係図\+:
+% FIG 0
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxsdk__def_8h_a13e2dabd614d0dab749b603f970f7794}{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE}(p)~\{\hyperlink{fbxnew_8h_aa786c72511e8e12955ff58c27d413a7f}{Fbx\+Delete}(p);(p)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}
+\item 
+\#define \hyperlink{fbxsdk__def_8h_a90d01c019b70e0de18d88f99de5680b8}{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY}(a)~\{\hyperlink{fbxnew_8h_a8be8d4e9880b1e381fb626ce96889c5e}{Fbx\+Delete\+Array}(a);(a)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}
+\item 
+\#define \hyperlink{fbxsdk__def_8h_a8e254e2b5a33faf864eb0e05cdafe2de}{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY}(p)~if(p)\{(p)-\/$>$Destroy();(p)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}
+\item 
+\#define \hyperlink{fbxsdk__def_8h_a09c6671866084dcf79bbe9fb2c05ba69}{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE}(p)~if(p)\{\hyperlink{fbxalloc_8h_a8252906713d55f4c56e7ba84221d3852}{Fbx\+Free}(p);(p)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+F\+BX S\+DK environment definition.
+
+This file is the principal F\+BX S\+DK environment definition. It is used at the top of every header and source file so that every unit is using the same definitions. 
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxsdk__def_8h_a13e2dabd614d0dab749b603f970f7794}\label{fbxsdk__def_8h_a13e2dabd614d0dab749b603f970f7794}} 
+\index{fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}!F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE}}
+\index{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE}!fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE}{FBX\_SAFE\_DELETE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+TE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\{\hyperlink{fbxnew_8h_aa786c72511e8e12955ff58c27d413a7f}{Fbx\+Delete}(p);(p)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}}
+
+\mbox{\Hypertarget{fbxsdk__def_8h_a90d01c019b70e0de18d88f99de5680b8}\label{fbxsdk__def_8h_a90d01c019b70e0de18d88f99de5680b8}} 
+\index{fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}!F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY}}
+\index{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY}!fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY}{FBX\_SAFE\_DELETE\_ARRAY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+A\+R\+R\+AY(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~\{\hyperlink{fbxnew_8h_a8be8d4e9880b1e381fb626ce96889c5e}{Fbx\+Delete\+Array}(a);(a)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}}
+
+\mbox{\Hypertarget{fbxsdk__def_8h_a8e254e2b5a33faf864eb0e05cdafe2de}\label{fbxsdk__def_8h_a8e254e2b5a33faf864eb0e05cdafe2de}} 
+\index{fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}!F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY}}
+\index{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY}!fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY}{FBX\_SAFE\_DESTROY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+D\+E\+S\+T\+R\+OY(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~if(p)\{(p)-\/$>$Destroy();(p)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}}
+
+\mbox{\Hypertarget{fbxsdk__def_8h_a09c6671866084dcf79bbe9fb2c05ba69}\label{fbxsdk__def_8h_a09c6671866084dcf79bbe9fb2c05ba69}} 
+\index{fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}!F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE}}
+\index{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE@{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE}!fbxsdk\+\_\+def.\+h@{fbxsdk\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE}{FBX\_SAFE\_FREE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+S\+A\+F\+E\+\_\+\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~if(p)\{\hyperlink{fbxalloc_8h_a8252906713d55f4c56e7ba84221d3852}{Fbx\+Free}(p);(p)=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL};\}}
+

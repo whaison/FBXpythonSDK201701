@@ -1,0 +1,378 @@
+\hypertarget{class_fbx_camera_manipulator}{}\section{Fbx\+Camera\+Manipulator クラス}
+\label{class_fbx_camera_manipulator}\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+
+
+{\ttfamily \#include $<$fbxmanipulators.\+h$>$}
+
+
+
+Fbx\+Camera\+Manipulator の継承関係図
+% FIG 0
+
+
+Fbx\+Camera\+Manipulator 連携図
+% FIG 1
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action} \{ \newline
+\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922ad7f82cf29963964f19482d8f6e246efe}{e\+None}, 
+\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a172298ef345544e9aa221599bf5fde25}{e\+Orbit}, 
+\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a0aa0fccd579ee7ee47658bca13803471}{e\+Dolly}, 
+\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a14e17787f7b2c85171219544e4f35045}{e\+Pan}, 
+\newline
+\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a870b225912367c395c73fb1aae971ec5}{e\+Free\+Pan}
+ \}\begin{DoxyCompactList}\small\item\em All possible manipulation actions that can be performed on a camera using this manipulator. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_camera_manipulator_a67dde46522f0fe7e3e3b10112e7a9c29}{Begin} (\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action} p\+Action, float pX, float pY)
+\item 
+void \hyperlink{class_fbx_camera_manipulator_af9008a220ef4a6ececcf46bb171656b4}{Notify} (float pX, float pY, float p\+Scale=0)
+\item 
+void \hyperlink{class_fbx_camera_manipulator_ae9eef6e3b92ce1b9f2a7da21a2487bb2}{End} ()
+\begin{DoxyCompactList}\small\item\em End current manipulation. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_camera_manipulator_a0753a414b92367037fd96d588b0faba9}{Update} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time\+Delta=\hyperlink{fbxtime_8h_aa43cd11e74102affeac06402663d2653}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+Z\+E\+RO})
+\item 
+void \hyperlink{class_fbx_camera_manipulator_a87d5576928c945640be5414d945feab5}{Action} (\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action} p\+Action, float pX, float pY, float p\+Scale=0)
+\item 
+\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action} \hyperlink{class_fbx_camera_manipulator_a93f3cd6487e8f10c9accb6db1022e397}{Get\+Current\+Action} () const
+\item 
+void \hyperlink{class_fbx_camera_manipulator_a78fab2478759b295c01ab4a4e5f716e9}{Frame\+All} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE})
+\item 
+void \hyperlink{class_fbx_camera_manipulator_a7c286fb462b04bc029f72e82e61cdc72}{Frame\+Selected} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE})
+\item 
+void \hyperlink{class_fbx_camera_manipulator_a622a6f144dede94c05ed63c80832f25f}{Frame\+Screen\+Position} (float pX, float pY, bool p\+Culling=false, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE})
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_camera_manipulator_a3914094466ec766c18c0e544431e8060}{Camera}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float} $>$ \hyperlink{class_fbx_camera_manipulator_a03e2795ba49c8bcce02dc786356ab2d5}{Viewport\+Width}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float} $>$ \hyperlink{class_fbx_camera_manipulator_afdf345d7e5f01d42da8011bbeb8dc394}{Viewport\+Height}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_camera_manipulator_abdefaf7c5fef50e2c873616099c2a579}{Smooth}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_camera_manipulator_afa0edcbcd8ad9a4de15672c7e8fc0c3d}{Smooth\+Speed}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_camera_manipulator_aebb2e55534a051995499d73cd1742511}{InvertX}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_camera_manipulator_a9e9a2e653b6ef9f1d3da31110f26fec3}{InvertY}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_camera_manipulator_aafe0b0e43ecaf16a44a49ae2d55f440a}{Restore}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_camera_manipulator_ac85c39bca662da17932613bd8bbaf95b}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_camera_manipulator_aba0217b5fd302152dc0e2726ca3c325a}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_camera_manipulator_a9e97c5d7f153bbc80a2c233d425a447f}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual bool \hyperlink{class_fbx_camera_manipulator_a0cd75ec4a78ef84f2cf10f750e4491c6}{Connect\+Notify} (const \hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} \&p\+Event)
+\item 
+virtual bool \hyperlink{class_fbx_camera_manipulator_aa0b1cdb3a150798e03587a3adeadd87a}{Property\+Notify} (\hyperlink{class_fbx_object_a528f1b2c2b7abbd64c525ba3a9a496b8}{E\+Property\+Notify\+Type} p\+Type, \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class can be used to provide basic camera manipulation in any program using this library. 
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}\label{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!E\+Action@{E\+Action}}
+\index{E\+Action@{E\+Action}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{E\+Action}{EAction}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{Fbx\+Camera\+Manipulator\+::\+E\+Action}}
+
+
+
+All possible manipulation actions that can be performed on a camera using this manipulator. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922ad7f82cf29963964f19482d8f6e246efe}\label{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922ad7f82cf29963964f19482d8f6e246efe}} 
+e\+None&No action. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Orbit@{e\+Orbit}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!e\+Orbit@{e\+Orbit}}}\mbox{\Hypertarget{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a172298ef345544e9aa221599bf5fde25}\label{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a172298ef345544e9aa221599bf5fde25}} 
+e\+Orbit&Orbiting camera around Loot\+At/\+Interest position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Dolly@{e\+Dolly}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!e\+Dolly@{e\+Dolly}}}\mbox{\Hypertarget{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a0aa0fccd579ee7ee47658bca13803471}\label{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a0aa0fccd579ee7ee47658bca13803471}} 
+e\+Dolly&Moving camera closer or away from its Look\+At/\+Intest position. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Pan@{e\+Pan}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!e\+Pan@{e\+Pan}}}\mbox{\Hypertarget{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a14e17787f7b2c85171219544e4f35045}\label{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a14e17787f7b2c85171219544e4f35045}} 
+e\+Pan&Panning camera up, down and sideways. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Free\+Pan@{e\+Free\+Pan}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!e\+Free\+Pan@{e\+Free\+Pan}}}\mbox{\Hypertarget{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a870b225912367c395c73fb1aae971ec5}\label{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922a870b225912367c395c73fb1aae971ec5}} 
+e\+Free\+Pan&Panning and dollying all at once. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a87d5576928c945640be5414d945feab5}\label{class_fbx_camera_manipulator_a87d5576928c945640be5414d945feab5}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Action@{Action}}
+\index{Action@{Action}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Action()}{Action()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Action (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action}}]{p\+Action,  }\item[{float}]{pX,  }\item[{float}]{pY,  }\item[{float}]{p\+Scale = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Do a complete manipulation action in a single operation. This is the equivalent of calling Begin, Notify and End successively. 
+\begin{DoxyParams}{引数}
+{\em p\+Action} & The action performed for this manipulation scope. \\
+\hline
+{\em pX} & Horizontal position of the manipulation, in pixels. \\
+\hline
+{\em pY} & Vertical position of the manipulation, in pixels. \\
+\hline
+{\em p\+Scale} & Scaling value of the manipulation. Only used by e\+Free\+Pan action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a67dde46522f0fe7e3e3b10112e7a9c29}\label{class_fbx_camera_manipulator_a67dde46522f0fe7e3e3b10112e7a9c29}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Begin@{Begin}}
+\index{Begin@{Begin}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Begin (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action}}]{p\+Action,  }\item[{float}]{pX,  }\item[{float}]{pY }\end{DoxyParamCaption})}
+
+Begin manipulation of the camera. 
+\begin{DoxyParams}{引数}
+{\em p\+Action} & The action performed for this manipulation scope. \\
+\hline
+{\em pX} & Begin horizontal position of the manipulation, in pixels. \\
+\hline
+{\em pY} & Begin vertical position of the manipulation, in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a0cd75ec4a78ef84f2cf10f750e4491c6}\label{class_fbx_camera_manipulator_a0cd75ec4a78ef84f2cf10f750e4491c6}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Connect\+Notify@{Connect\+Notify}}
+\index{Connect\+Notify@{Connect\+Notify}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Connect\+Notify()}{ConnectNotify()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Camera\+Manipulator\+::\+Connect\+Notify (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} \&}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_ab7a400f3829d1f0da57d3d78c8168dd0}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_manipulator_ac85c39bca662da17932613bd8bbaf95b}\label{class_fbx_camera_manipulator_ac85c39bca662da17932613bd8bbaf95b}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Camera\+Manipulator\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a9e97c5d7f153bbc80a2c233d425a447f}\label{class_fbx_camera_manipulator_a9e97c5d7f153bbc80a2c233d425a447f}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Camera\+Manipulator\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_manipulator_aba0217b5fd302152dc0e2726ca3c325a}\label{class_fbx_camera_manipulator_aba0217b5fd302152dc0e2726ca3c325a}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Camera\+Manipulator\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_manipulator_ae9eef6e3b92ce1b9f2a7da21a2487bb2}\label{class_fbx_camera_manipulator_ae9eef6e3b92ce1b9f2a7da21a2487bb2}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!End@{End}}
+\index{End@{End}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+End current manipulation. 
+
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a78fab2478759b295c01ab4a4e5f716e9}\label{class_fbx_camera_manipulator_a78fab2478759b295c01ab4a4e5f716e9}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Frame\+All@{Frame\+All}}
+\index{Frame\+All@{Frame\+All}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Frame\+All()}{FrameAll()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Frame\+All (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}} }\end{DoxyParamCaption})}
+
+Change camera position and Look\+At node to frame all objects. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time to use to evaluate mesh deformations. Leave at default value to cancel mesh evaluation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a622a6f144dede94c05ed63c80832f25f}\label{class_fbx_camera_manipulator_a622a6f144dede94c05ed63c80832f25f}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Frame\+Screen\+Position@{Frame\+Screen\+Position}}
+\index{Frame\+Screen\+Position@{Frame\+Screen\+Position}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Frame\+Screen\+Position()}{FrameScreenPosition()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Frame\+Screen\+Position (\begin{DoxyParamCaption}\item[{float}]{pX,  }\item[{float}]{pY,  }\item[{bool}]{p\+Culling = {\ttfamily false},  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}} }\end{DoxyParamCaption})}
+
+Change camera position and Look\+At to frame the selected position on screen. The Look\+At will be placed at first closest intersecting geometry, and the distance between camera and Look\+At will be preserved. 
+\begin{DoxyParams}{引数}
+{\em pX} & The horizontal screen coordinate. \\
+\hline
+{\em pY} & The vertical screen coordinate. \\
+\hline
+{\em p\+Culling} & If {\ttfamily true}, only test triangles that are front-\/facing, otherwise test both sides. \\
+\hline
+{\em p\+Time} & Time to use to evaluate mesh deformations. Leave at default value to cancel mesh evaluation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a7c286fb462b04bc029f72e82e61cdc72}\label{class_fbx_camera_manipulator_a7c286fb462b04bc029f72e82e61cdc72}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Frame\+Selected@{Frame\+Selected}}
+\index{Frame\+Selected@{Frame\+Selected}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Frame\+Selected()}{FrameSelected()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Frame\+Selected (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}} }\end{DoxyParamCaption})}
+
+Change camera position and Look\+At to frame all selected objects. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time to use to evaluate mesh deformations. Leave at default value to cancel mesh evaluation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a93f3cd6487e8f10c9accb6db1022e397}\label{class_fbx_camera_manipulator_a93f3cd6487e8f10c9accb6db1022e397}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Get\+Current\+Action@{Get\+Current\+Action}}
+\index{Get\+Current\+Action@{Get\+Current\+Action}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Get\+Current\+Action()}{GetCurrentAction()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera_manipulator_ada0f93888edb4a1c0140e35f99eba922}{E\+Action} Fbx\+Camera\+Manipulator\+::\+Get\+Current\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve current manipulation action. \begin{DoxyReturn}{戻り値}
+The action currently performed by the camera manipulator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_af9008a220ef4a6ececcf46bb171656b4}\label{class_fbx_camera_manipulator_af9008a220ef4a6ececcf46bb171656b4}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Notify@{Notify}}
+\index{Notify@{Notify}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Notify (\begin{DoxyParamCaption}\item[{float}]{pX,  }\item[{float}]{pY,  }\item[{float}]{p\+Scale = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Notify manipulation of latest input. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Delta} & Elapsed time since the last notify. Only used if Smoothing is enabled. \\
+\hline
+{\em pX} & Horizontal position of the manipulation, in pixels. \\
+\hline
+{\em pY} & Vertical position of the manipulation, in pixels. \\
+\hline
+{\em p\+Scale} & Scaling value of the manipulation. Only used by e\+Free\+Pan action. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_aa0b1cdb3a150798e03587a3adeadd87a}\label{class_fbx_camera_manipulator_aa0b1cdb3a150798e03587a3adeadd87a}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Property\+Notify@{Property\+Notify}}
+\index{Property\+Notify@{Property\+Notify}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Property\+Notify()}{PropertyNotify()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Camera\+Manipulator\+::\+Property\+Notify (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object_a528f1b2c2b7abbd64c525ba3a9a496b8}{E\+Property\+Notify\+Type}}]{p\+Type,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a68b9ad65d98d7be9cb252949bc709385}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a0753a414b92367037fd96d588b0faba9}\label{class_fbx_camera_manipulator_a0753a414b92367037fd96d588b0faba9}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Update@{Update}}
+\index{Update@{Update}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Manipulator\+::\+Update (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time\+Delta = {\ttfamily \hyperlink{fbxtime_8h_aa43cd11e74102affeac06402663d2653}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+Z\+E\+RO}} }\end{DoxyParamCaption})}
+
+Update the camera position. This must be called periodically in order for the camera to update its position. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Delta} & Elapsed time since the last update. If Smooth is disabled, you can leave this value to zero. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Begin, Notify and End will not change the current camera position. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a3914094466ec766c18c0e544431e8060}\label{class_fbx_camera_manipulator_a3914094466ec766c18c0e544431e8060}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Camera@{Camera}}
+\index{Camera@{Camera}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Camera}{Camera}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Camera\+Manipulator\+::\+Camera}
+
+The camera controlled by the manipulator. \mbox{\Hypertarget{class_fbx_camera_manipulator_aebb2e55534a051995499d73cd1742511}\label{class_fbx_camera_manipulator_aebb2e55534a051995499d73cd1742511}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!InvertX@{InvertX}}
+\index{InvertX@{InvertX}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{InvertX}{InvertX}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Camera\+Manipulator\+::\+InvertX}
+
+Invert the camera horizontal manipulation direction if set to true. False by default. \mbox{\Hypertarget{class_fbx_camera_manipulator_a9e9a2e653b6ef9f1d3da31110f26fec3}\label{class_fbx_camera_manipulator_a9e9a2e653b6ef9f1d3da31110f26fec3}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!InvertY@{InvertY}}
+\index{InvertY@{InvertY}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{InvertY}{InvertY}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Camera\+Manipulator\+::\+InvertY}
+
+Invert the camera vertical manipulation direction if set to true. False by default. \mbox{\Hypertarget{class_fbx_camera_manipulator_aafe0b0e43ecaf16a44a49ae2d55f440a}\label{class_fbx_camera_manipulator_aafe0b0e43ecaf16a44a49ae2d55f440a}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Restore@{Restore}}
+\index{Restore@{Restore}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Restore}{Restore}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Camera\+Manipulator\+::\+Restore}
+
+Restore the camera transform upon destruction of the manipulator. \mbox{\Hypertarget{class_fbx_camera_manipulator_abdefaf7c5fef50e2c873616099c2a579}\label{class_fbx_camera_manipulator_abdefaf7c5fef50e2c873616099c2a579}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Smooth@{Smooth}}
+\index{Smooth@{Smooth}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Smooth}{Smooth}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Camera\+Manipulator\+::\+Smooth}
+
+Camera manipulations will be smooth if enabled. True by default. \mbox{\Hypertarget{class_fbx_camera_manipulator_afa0edcbcd8ad9a4de15672c7e8fc0c3d}\label{class_fbx_camera_manipulator_afa0edcbcd8ad9a4de15672c7e8fc0c3d}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Smooth\+Speed@{Smooth\+Speed}}
+\index{Smooth\+Speed@{Smooth\+Speed}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Smooth\+Speed}{SmoothSpeed}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Camera\+Manipulator\+::\+Smooth\+Speed}
+
+Camera manipulations smoothing speed. Higher speed will stabilize the camera more quickly. Default is 10.\+0 \mbox{\Hypertarget{class_fbx_camera_manipulator_afdf345d7e5f01d42da8011bbeb8dc394}\label{class_fbx_camera_manipulator_afdf345d7e5f01d42da8011bbeb8dc394}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Viewport\+Height@{Viewport\+Height}}
+\index{Viewport\+Height@{Viewport\+Height}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Viewport\+Height}{ViewportHeight}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float}$>$ Fbx\+Camera\+Manipulator\+::\+Viewport\+Height}
+
+Height of the camera viewport, in pixels. This is used to accurately calculate to movement speed. \begin{DoxyRemark}{注釈}
+If this property is not correctly set, movements will be erronous. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_manipulator_a03e2795ba49c8bcce02dc786356ab2d5}\label{class_fbx_camera_manipulator_a03e2795ba49c8bcce02dc786356ab2d5}} 
+\index{Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}!Viewport\+Width@{Viewport\+Width}}
+\index{Viewport\+Width@{Viewport\+Width}!Fbx\+Camera\+Manipulator@{Fbx\+Camera\+Manipulator}}
+\subsubsection{\texorpdfstring{Viewport\+Width}{ViewportWidth}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float}$>$ Fbx\+Camera\+Manipulator\+::\+Viewport\+Width}
+
+Width of the camera viewport, in pixels. This is used to accurately calculate to movement speed. \begin{DoxyRemark}{注釈}
+If this property is not correctly set, movements will be erronous. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxmanipulators_8h}{fbxmanipulators.\+h}\end{DoxyCompactItemize}

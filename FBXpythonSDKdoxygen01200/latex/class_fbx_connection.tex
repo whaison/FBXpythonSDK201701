@@ -1,0 +1,80 @@
+\hypertarget{class_fbx_connection}{}\section{Fbx\+Connection クラス}
+\label{class_fbx_connection}\index{Fbx\+Connection@{Fbx\+Connection}}
+
+
+{\ttfamily \#include $<$fbxconnectionpoint.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{E\+Type} \{ \newline
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}{e\+None} = 0, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a92429761695ae31e7bc3257c79881f71}{e\+System} = 1 $<$$<$ 0, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a49fcc02ebff96f18851b208474307ba8}{e\+User} = 1 $<$$<$ 1, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749abf06b5ecc849595c80f9da875da1175b}{e\+System\+Or\+User} = e\+User $\vert$ e\+System, 
+\newline
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a7ec0099e91989fc4bf05e47bd43c4681}{e\+Reference} = 1 $<$$<$ 2, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a4415e3b73e6a0d70bcc92b0082bb6b51}{e\+Contains} = 1 $<$$<$ 3, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a09096c73e898aa5a553c55b4b6afd571}{e\+Data} = 1 $<$$<$ 4, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a2fd0b59d9b15aefe864aa42541dac350}{e\+Link\+Type} = e\+Reference $\vert$ e\+Contains $\vert$ e\+Data, 
+\newline
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}{e\+Default} = e\+User $\vert$ e\+Reference, 
+\hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749ab0ed7d506ad79f538e46cf3fa111df5a}{e\+Unidirectional} = 1 $<$$<$ 7
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}} 
+\index{Fbx\+Connection@{Fbx\+Connection}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Connection@{Fbx\+Connection}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_connection_a3df448a5db356652ab99fd2be2553749}{Fbx\+Connection\+::\+E\+Type}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a47aa04870c3c0769263e3972e67e9ebe}} 
+e\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+System@{e\+System}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+System@{e\+System}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a92429761695ae31e7bc3257c79881f71}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a92429761695ae31e7bc3257c79881f71}} 
+e\+System&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+User@{e\+User}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+User@{e\+User}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a49fcc02ebff96f18851b208474307ba8}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a49fcc02ebff96f18851b208474307ba8}} 
+e\+User&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+System\+Or\+User@{e\+System\+Or\+User}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+System\+Or\+User@{e\+System\+Or\+User}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749abf06b5ecc849595c80f9da875da1175b}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749abf06b5ecc849595c80f9da875da1175b}} 
+e\+System\+Or\+User&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Reference@{e\+Reference}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+Reference@{e\+Reference}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a7ec0099e91989fc4bf05e47bd43c4681}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a7ec0099e91989fc4bf05e47bd43c4681}} 
+e\+Reference&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Contains@{e\+Contains}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+Contains@{e\+Contains}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a4415e3b73e6a0d70bcc92b0082bb6b51}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a4415e3b73e6a0d70bcc92b0082bb6b51}} 
+e\+Contains&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Data@{e\+Data}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+Data@{e\+Data}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a09096c73e898aa5a553c55b4b6afd571}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a09096c73e898aa5a553c55b4b6afd571}} 
+e\+Data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Link\+Type@{e\+Link\+Type}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+Link\+Type@{e\+Link\+Type}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a2fd0b59d9b15aefe864aa42541dac350}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a2fd0b59d9b15aefe864aa42541dac350}} 
+e\+Link\+Type&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Default@{e\+Default}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+Default@{e\+Default}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749a93ca385d7cc25fef28232a2d10b836e3}} 
+e\+Default&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unidirectional@{e\+Unidirectional}!Fbx\+Connection@{Fbx\+Connection}}\index{Fbx\+Connection@{Fbx\+Connection}!e\+Unidirectional@{e\+Unidirectional}}}\mbox{\Hypertarget{class_fbx_connection_a3df448a5db356652ab99fd2be2553749ab0ed7d506ad79f538e46cf3fa111df5a}\label{class_fbx_connection_a3df448a5db356652ab99fd2be2553749ab0ed7d506ad79f538e46cf3fa111df5a}} 
+e\+Unidirectional&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/\hyperlink{fbxconnectionpoint_8h}{fbxconnectionpoint.\+h}\end{DoxyCompactItemize}

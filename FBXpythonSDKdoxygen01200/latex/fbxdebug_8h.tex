@@ -1,0 +1,197 @@
+\hypertarget{fbxdebug_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/core/arch/fbxdebug.h ファイル}
+\label{fbxdebug_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/arch/fbxdebug.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/arch/fbxdebug.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+fbxdebug.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_incompatible_with_array}{Fbx\+Incompatible\+With\+Array$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxdebug_8h_a3c386f94889c37d1cdb9e882f1c2d213}{F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR}~\char`\"{}F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+RT\char`\"{}
+\item 
+\#define \hyperlink{fbxdebug_8h_a9f068a0d6d82fca3d86818a3d6bf66ab}{F\+B\+X\+\_\+\+A\+S\+S\+E\+RT}(Condition)~((void)0)
+\item 
+\#define \hyperlink{fbxdebug_8h_a42e3545c979004b9b98bbecf9f12e154}{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}(Condition,  Message, ...)~((void)0)
+\item 
+\#define \hyperlink{fbxdebug_8h_adc2893852feec3ac0ec8e0da2e04369b}{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW}(Message, ...)~((void)0)
+\item 
+\#define \hyperlink{fbxdebug_8h_a2e7b645f42cc4d0b51cd2dfd05f3a75f}{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN}(Condition)~if(!(Condition))\{return;\}
+\item 
+\#define \hyperlink{fbxdebug_8h_a464dbc6d915107abce3204a60e2ec7a0}{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}(Condition,  Value)~if(!(Condition))\{return Value;\}
+\item 
+\#define \hyperlink{fbxdebug_8h_a37589da868412daae7b4f29ed46c39c8}{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC}(Condition)
+\item 
+\#define \hyperlink{fbxdebug_8h_a7f414210cc4706ede71086a366f91ecb}{F\+B\+X\+\_\+\+T\+R\+A\+CE}(Message, ...)~((void)0)
+\item 
+\#define \hyperlink{fbxdebug_8h_a14171fa70e183e8206a415ef4a02b3a0}{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE}(T)
+\item 
+\#define \hyperlink{fbxdebug_8h_ac24f4844b3ed7a1afe79ae02b3c7fedb}{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}(T)~template$<$$>$ \hyperlink{fbxarray_8h_a27456a4f4beaf9d9470d120b54de6241}{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE}(T)
+\item 
+\#define \hyperlink{fbxdebug_8h_a331e1eaaf7d1d823886df870a5ad6a94}{F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}(T)~((bool) \hyperlink{struct_fbx_incompatible_with_array}{Fbx\+Incompatible\+With\+Array}$<$T$>$\+::value)
+\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{fbxdebug_8h_a297e620aabd9731969776e9cff92b116}{Fbx\+Assert\+Proc}) (const char $\ast$p\+File\+Name, const char $\ast$p\+Function\+Name, const unsigned int p\+Line\+Number, const char $\ast$p\+Message)
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \hyperlink{fbxdebug_8h_acfdcde5384f91cc53209b3d8d2b098b6}{Fbx\+Assert\+Set\+Proc} (\hyperlink{fbxdebug_8h_a297e620aabd9731969776e9cff92b116}{Fbx\+Assert\+Proc} p\+Assert\+Proc)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \hyperlink{fbxdebug_8h_a25fa1e7b7efbc834d1d559c58f2ccd2a}{Fbx\+Assert\+Set\+Default\+Proc} ()
+\begin{DoxyCompactList}\small\item\em Change the procedure back to the default one. \end{DoxyCompactList}\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \hyperlink{fbxdebug_8h_a00d29eb670214a41113d200693639cb3}{\+\_\+\+Fbx\+Assert} (const char $\ast$p\+File\+Name, const char $\ast$p\+Function\+Name, const unsigned int p\+Line\+Number, bool p\+Format, const char $\ast$p\+Message,...)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \hyperlink{fbxdebug_8h_a51619ffe786391a362f7554e5b1ac888}{\+\_\+\+Fbx\+Trace} (const char $\ast$p\+Message,...)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Debugging macros and functions.
+
+All macros and functions are removed in release builds. To enable asserts, a debug build is required as well as the environment variable \char`\"{}\+F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\char`\"{} set to 1 is also required. By default, assertions will pop-\/up a window. It is possible to disable the pop-\/up on the Windows platform by calling the following code\+: 
+\begin{DoxyCode}
+\_CrtSetReportMode(\_CRT\_ASSERT, \_CRTDBG\_MODE\_DEBUG);
+\end{DoxyCode}
+ 
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxdebug_8h_a9f068a0d6d82fca3d86818a3d6bf66ab}\label{fbxdebug_8h_a9f068a0d6d82fca3d86818a3d6bf66ab}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+A\+S\+S\+E\+RT@{F\+B\+X\+\_\+\+A\+S\+S\+E\+RT}}
+\index{F\+B\+X\+\_\+\+A\+S\+S\+E\+RT@{F\+B\+X\+\_\+\+A\+S\+S\+E\+RT}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+A\+S\+S\+E\+RT}{FBX\_ASSERT}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{Condition }\end{DoxyParamCaption})~((void)0)}
+
+\mbox{\Hypertarget{fbxdebug_8h_a42e3545c979004b9b98bbecf9f12e154}\label{fbxdebug_8h_a42e3545c979004b9b98bbecf9f12e154}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}}
+\index{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}{FBX\_ASSERT\_MSG}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{Condition,  }\item[{}]{Message,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+\mbox{\Hypertarget{fbxdebug_8h_adc2893852feec3ac0ec8e0da2e04369b}\label{fbxdebug_8h_adc2893852feec3ac0ec8e0da2e04369b}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW}}
+\index{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW}{FBX\_ASSERT\_NOW}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+N\+OW(\begin{DoxyParamCaption}\item[{}]{Message,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+\mbox{\Hypertarget{fbxdebug_8h_a2e7b645f42cc4d0b51cd2dfd05f3a75f}\label{fbxdebug_8h_a2e7b645f42cc4d0b51cd2dfd05f3a75f}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN}}
+\index{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN}{FBX\_ASSERT\_RETURN}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+RN(\begin{DoxyParamCaption}\item[{}]{Condition }\end{DoxyParamCaption})~if(!(Condition))\{return;\}}
+
+\mbox{\Hypertarget{fbxdebug_8h_a464dbc6d915107abce3204a60e2ec7a0}\label{fbxdebug_8h_a464dbc6d915107abce3204a60e2ec7a0}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}}
+\index{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE}{FBX\_ASSERT\_RETURN\_VALUE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE(\begin{DoxyParamCaption}\item[{}]{Condition,  }\item[{}]{Value }\end{DoxyParamCaption})~if(!(Condition))\{return Value;\}}
+
+\mbox{\Hypertarget{fbxdebug_8h_a37589da868412daae7b4f29ed46c39c8}\label{fbxdebug_8h_a37589da868412daae7b4f29ed46c39c8}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC}}
+\index{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC@{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC}{FBX\_ASSERT\_STATIC}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+S\+T\+A\+T\+IC(\begin{DoxyParamCaption}\item[{}]{Condition }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxdebug_8h_a7f414210cc4706ede71086a366f91ecb}\label{fbxdebug_8h_a7f414210cc4706ede71086a366f91ecb}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+\_\+\+T\+R\+A\+CE@{F\+B\+X\+\_\+\+T\+R\+A\+CE}}
+\index{F\+B\+X\+\_\+\+T\+R\+A\+CE@{F\+B\+X\+\_\+\+T\+R\+A\+CE}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+T\+R\+A\+CE}{FBX\_TRACE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{Message,  }\item[{}]{... }\end{DoxyParamCaption})~((void)0)}
+
+\mbox{\Hypertarget{fbxdebug_8h_a3c386f94889c37d1cdb9e882f1c2d213}\label{fbxdebug_8h_a3c386f94889c37d1cdb9e882f1c2d213}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR@{F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR@{F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR}{FBXSDK\_ASSERT\_ENVSTR}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+N\+V\+S\+TR~\char`\"{}F\+B\+X\+S\+D\+K\+\_\+\+A\+S\+S\+E\+RT\char`\"{}}
+
+If this environment variable is set to 1, the F\+BX S\+DK will assert in debug builds \mbox{\Hypertarget{fbxdebug_8h_ac24f4844b3ed7a1afe79ae02b3c7fedb}\label{fbxdebug_8h_ac24f4844b3ed7a1afe79ae02b3c7fedb}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY@{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY@{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}{FBXSDK\_INCOMPATIBLE\_WITH\_ARRAY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})~template$<$$>$ \hyperlink{fbxarray_8h_a27456a4f4beaf9d9470d120b54de6241}{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE}(T)}
+
+\mbox{\Hypertarget{fbxdebug_8h_a14171fa70e183e8206a415ef4a02b3a0}\label{fbxdebug_8h_a14171fa70e183e8206a415ef4a02b3a0}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE@{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE}{FBXSDK\_INCOMPATIBLE\_WITH\_ARRAY\_TEMPLATE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+T\+E\+M\+P\+L\+A\+TE(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{struct }\hyperlink{struct_fbx_incompatible_with_array}{FbxIncompatibleWithArray}< T >\{\(\backslash\)
+        union \{\(\backslash\)
+            T t();\(\backslash\)
+        \} catcherr;\(\backslash\)
+        enum \{\hyperlink{struct_fbx_incompatible_with_array_a743e133c2fd464a89727c246358c5a58a9cca835a5c42f16108589087ba958114}{value} = 1\};\}
+\end{DoxyCode}
+\mbox{\Hypertarget{fbxdebug_8h_a331e1eaaf7d1d823886df870a5ad6a94}\label{fbxdebug_8h_a331e1eaaf7d1d823886df870a5ad6a94}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY@{F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY@{F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY}{FBXSDK\_IS\_INCOMPATIBLE\_WITH\_ARRAY}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+I\+S\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+L\+E\+\_\+\+W\+I\+T\+H\+\_\+\+A\+R\+R\+AY(\begin{DoxyParamCaption}\item[{}]{T }\end{DoxyParamCaption})~((bool) \hyperlink{struct_fbx_incompatible_with_array}{Fbx\+Incompatible\+With\+Array}$<$T$>$\+::value)}
+
+
+
+\subsection{型定義詳解}
+\mbox{\Hypertarget{fbxdebug_8h_a297e620aabd9731969776e9cff92b116}\label{fbxdebug_8h_a297e620aabd9731969776e9cff92b116}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!Fbx\+Assert\+Proc@{Fbx\+Assert\+Proc}}
+\index{Fbx\+Assert\+Proc@{Fbx\+Assert\+Proc}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Assert\+Proc}{FbxAssertProc}}
+{\footnotesize\ttfamily typedef void($\ast$ Fbx\+Assert\+Proc) (const char $\ast$p\+File\+Name, const char $\ast$p\+Function\+Name, const unsigned int p\+Line\+Number, const char $\ast$p\+Message)}
+
+The assertion procedure signature. If a different assertion procedure must be provided, it should have this signature. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & The file name where the assertion occurred. \\
+\hline
+{\em p\+Function\+Name} & The function name where the assertion occurred. \\
+\hline
+{\em p\+Line\+Number} & The line number in the file where the assertion occurred. \\
+\hline
+{\em p\+Message} & The message to display when the assertion occurs. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxdebug_8h_a00d29eb670214a41113d200693639cb3}\label{fbxdebug_8h_a00d29eb670214a41113d200693639cb3}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!\+\_\+\+Fbx\+Assert@{\+\_\+\+Fbx\+Assert}}
+\index{\+\_\+\+Fbx\+Assert@{\+\_\+\+Fbx\+Assert}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+Fbx\+Assert()}{\_FbxAssert()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \+\_\+\+Fbx\+Assert (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name,  }\item[{const char $\ast$}]{p\+Function\+Name,  }\item[{const unsigned int}]{p\+Line\+Number,  }\item[{bool}]{p\+Format,  }\item[{const char $\ast$}]{p\+Message,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxdebug_8h_a51619ffe786391a362f7554e5b1ac888}\label{fbxdebug_8h_a51619ffe786391a362f7554e5b1ac888}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!\+\_\+\+Fbx\+Trace@{\+\_\+\+Fbx\+Trace}}
+\index{\+\_\+\+Fbx\+Trace@{\+\_\+\+Fbx\+Trace}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+Fbx\+Trace()}{\_FbxTrace()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \+\_\+\+Fbx\+Trace (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Message,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{fbxdebug_8h_a25fa1e7b7efbc834d1d559c58f2ccd2a}\label{fbxdebug_8h_a25fa1e7b7efbc834d1d559c58f2ccd2a}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!Fbx\+Assert\+Set\+Default\+Proc@{Fbx\+Assert\+Set\+Default\+Proc}}
+\index{Fbx\+Assert\+Set\+Default\+Proc@{Fbx\+Assert\+Set\+Default\+Proc}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Assert\+Set\+Default\+Proc()}{FbxAssertSetDefaultProc()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void Fbx\+Assert\+Set\+Default\+Proc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Change the procedure back to the default one. 
+
+\mbox{\Hypertarget{fbxdebug_8h_acfdcde5384f91cc53209b3d8d2b098b6}\label{fbxdebug_8h_acfdcde5384f91cc53209b3d8d2b098b6}} 
+\index{fbxdebug.\+h@{fbxdebug.\+h}!Fbx\+Assert\+Set\+Proc@{Fbx\+Assert\+Set\+Proc}}
+\index{Fbx\+Assert\+Set\+Proc@{Fbx\+Assert\+Set\+Proc}!fbxdebug.\+h@{fbxdebug.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Assert\+Set\+Proc()}{FbxAssertSetProc()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void Fbx\+Assert\+Set\+Proc (\begin{DoxyParamCaption}\item[{\hyperlink{fbxdebug_8h_a297e620aabd9731969776e9cff92b116}{Fbx\+Assert\+Proc}}]{p\+Assert\+Proc }\end{DoxyParamCaption})}
+
+Change the procedure used when assertion occurs. 
+\begin{DoxyParams}{引数}
+{\em p\+Assert\+Proc} & The procedure to be called when assertions occurs. \\
+\hline
+\end{DoxyParams}

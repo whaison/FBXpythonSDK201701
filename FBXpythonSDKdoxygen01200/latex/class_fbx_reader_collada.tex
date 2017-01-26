@@ -1,0 +1,218 @@
+\hypertarget{class_fbx_reader_collada}{}\section{Fbx\+Reader\+Collada クラス}
+\label{class_fbx_reader_collada}\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+
+
+{\ttfamily \#include $<$fbxreadercollada14.\+h$>$}
+
+
+
+Fbx\+Reader\+Collada の継承関係図
+% FIG 0
+
+
+Fbx\+Reader\+Collada 連携図
+% FIG 1
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_reader_collada_aec4f19904290f36b47c9de5f193f626a}{Fbx\+Reader\+Collada} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, int p\+ID, \hyperlink{class_fbx_status}{Fbx\+Status} \&p\+Status)
+\item 
+virtual \hyperlink{class_fbx_reader_collada_a0a09a8a6955bc948a743edd1e10f99a1}{$\sim$\+Fbx\+Reader\+Collada} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{File Management}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_reader_collada_aec7a5267f85187eeb26dd55ec250119e}{File\+Open} (char $\ast$p\+File\+Name)
+\item 
+virtual bool \hyperlink{class_fbx_reader_collada_a5668036ed12534fd339f3106c0d09864}{File\+Close} ()
+\item 
+virtual bool \hyperlink{class_fbx_reader_collada_a6732d6488100827a26065750e80f3a27}{Is\+File\+Open} ()
+\end{DoxyCompactItemize}
+\subsection*{Read Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_reader_collada_a23cea871d527b8695ebdeade47b1938e}{Get\+Read\+Options} (bool p\+Parse\+File\+As\+Needed=true)
+\item 
+virtual bool \hyperlink{class_fbx_reader_collada_aed6cb43bb8262e63260088ad8abcf2e6}{Get\+Axis\+Info} (\hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} $\ast$p\+Axis\+System, \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} $\ast$p\+System\+Units)
+\item 
+virtual \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} $\ast$ $>$ $\ast$ \hyperlink{class_fbx_reader_collada_af772ad8fc79672d06aa9ea6910b81ab0}{Get\+Take\+Info} ()
+\item 
+virtual bool \hyperlink{class_fbx_reader_collada_afbffa96769d22d8e5df25c83d15bd8cb}{Read} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Class to read a Collada file and import it to a F\+BX scene.
+
+Some terms about C\+O\+L\+L\+A\+DA (from the spec of the C\+O\+L\+L\+A\+DA).
+
+Element\+: An X\+ML document consists primarily of elements. An element is a block of information that is bounded by tags at the beginning and end of the block. Elements can be nested, producing a hierarchical data set.
+
+Tag\+: Each X\+ML element begins with a start tag and ends with an end tag.
+
+Attribute\+: An X\+ML element can have zero or more attributes. Attributes are given within the start tag and follow the tag name. Each attribute is a name-\/value pair. The value portion of an attribute is always surrounded by quotation marks (\char`\"{} \char`\"{}). Attributes provide semantic information about the element on which they are bound. For example\+: 
+\begin{DoxyCode}
+<tagName attribute=\textcolor{stringliteral}{"value"}>
+\end{DoxyCode}
+
+
+U\+RI Addressing\+: Refers to the id attribute of an element. Used in url, source or target attributes. In a url, source or target attribute, the U\+RI fragment identifier is preceded with the pound sign (\char`\"{}\#\char`\"{}).
+
+Markup and Content\+: The characters which make up an X\+ML document are divided into markup and content. Markup and content may be distinguished by the application of simple syntactic rules. All strings which constitute markup either begin with the character \char`\"{}$<$\char`\"{} and end with a \char`\"{}$>$\char`\"{}, or begin with the character \char`\"{}\&\char`\"{} and end with a \char`\"{};\char`\"{}. Strings of characters which are not markup are content. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_reader_collada_aec4f19904290f36b47c9de5f193f626a}\label{class_fbx_reader_collada_aec4f19904290f36b47c9de5f193f626a}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{Fbx\+Reader\+Collada()}{FbxReaderCollada()}}
+{\footnotesize\ttfamily Fbx\+Reader\+Collada\+::\+Fbx\+Reader\+Collada (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{int}]{p\+ID,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} \&}]{p\+Status }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & F\+BX S\+DK object Manager. \\
+\hline
+{\em p\+ID} & Internal ID. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_reader_collada_a0a09a8a6955bc948a743edd1e10f99a1}\label{class_fbx_reader_collada_a0a09a8a6955bc948a743edd1e10f99a1}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!````~Fbx\+Reader\+Collada@{$\sim$\+Fbx\+Reader\+Collada}}
+\index{````~Fbx\+Reader\+Collada@{$\sim$\+Fbx\+Reader\+Collada}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Reader\+Collada()}{~FbxReaderCollada()}}
+{\footnotesize\ttfamily virtual Fbx\+Reader\+Collada\+::$\sim$\+Fbx\+Reader\+Collada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_reader_collada_a5668036ed12534fd339f3106c0d09864}\label{class_fbx_reader_collada_a5668036ed12534fd339f3106c0d09864}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!File\+Close@{File\+Close}}
+\index{File\+Close@{File\+Close}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{File\+Close()}{FileClose()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Collada\+::\+File\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Close file. \begin{DoxyReturn}{戻り値}
+Return true if file is closed successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a327df94e5c24315fc5cbcedf0e7bb615}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_collada_aec7a5267f85187eeb26dd55ec250119e}\label{class_fbx_reader_collada_aec7a5267f85187eeb26dd55ec250119e}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Collada\+::\+File\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Open file with the given name. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & the name of file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if the specified file is opened. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a6105bd37ae86c03f35aee6f62901856d}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_collada_aed6cb43bb8262e63260088ad8abcf2e6}\label{class_fbx_reader_collada_aed6cb43bb8262e63260088ad8abcf2e6}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Get\+Axis\+Info@{Get\+Axis\+Info}}
+\index{Get\+Axis\+Info@{Get\+Axis\+Info}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{Get\+Axis\+Info()}{GetAxisInfo()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Collada\+::\+Get\+Axis\+Info (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_axis_system}{Fbx\+Axis\+System} $\ast$}]{p\+Axis\+System,  }\item[{\hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} $\ast$}]{p\+System\+Units }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get axis system information from file 
+\begin{DoxyParams}{引数}
+{\em p\+Axis\+System} & axis system in file \\
+\hline
+{\em p\+System\+Units} & system unit in file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+if either p\+Axis\+System or p\+System\+Units is {\ttfamily N\+U\+LL} return {\ttfamily false}, otherwise return {\ttfamily true}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a73e58c3f7734250f0f8ffaef96b2df3f}{Fbx\+Reader}を再実装しています。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{class_fbx_reader_collada_a23cea871d527b8695ebdeade47b1938e}\label{class_fbx_reader_collada_a23cea871d527b8695ebdeade47b1938e}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Get\+Read\+Options@{Get\+Read\+Options}}
+\index{Get\+Read\+Options@{Get\+Read\+Options}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{Get\+Read\+Options()}{GetReadOptions()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Collada\+::\+Get\+Read\+Options (\begin{DoxyParamCaption}\item[{bool}]{p\+Parse\+File\+As\+Needed = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get Collada import options settings. 
+\begin{DoxyParams}{引数}
+{\em p\+Parse\+File\+As\+Needed} & whether parse file as needed, the default value is true. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_acea3c118db490378c9aed17512396932}{Fbx\+Reader}を実装しています。
+
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{class_fbx_reader_collada_af772ad8fc79672d06aa9ea6910b81ab0}\label{class_fbx_reader_collada_af772ad8fc79672d06aa9ea6910b81ab0}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Get\+Take\+Info@{Get\+Take\+Info}}
+\index{Get\+Take\+Info@{Get\+Take\+Info}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{Get\+Take\+Info()}{GetTakeInfo()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_take_info}{Fbx\+Take\+Info}$\ast$$>$$\ast$ Fbx\+Reader\+Collada\+::\+Get\+Take\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the list of take infos from the file. \begin{DoxyReturn}{戻り値}
+N\+U\+LL 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a9d7b40684bb3181219945eb0c73fb9d1}{Fbx\+Reader}を再実装しています。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{class_fbx_reader_collada_a6732d6488100827a26065750e80f3a27}\label{class_fbx_reader_collada_a6732d6488100827a26065750e80f3a27}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Is\+File\+Open@{Is\+File\+Open}}
+\index{Is\+File\+Open@{Is\+File\+Open}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{Is\+File\+Open()}{IsFileOpen()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Collada\+::\+Is\+File\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if current file is open. \begin{DoxyReturn}{戻り値}
+Return true if file is open, false otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_af86b437702ffc840cfab52185cbc7232}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_collada_afbffa96769d22d8e5df25c83d15bd8cb}\label{class_fbx_reader_collada_afbffa96769d22d8e5df25c83d15bd8cb}} 
+\index{Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Reader\+Collada@{Fbx\+Reader\+Collada}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Collada\+::\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Read from Collada file and import it to the F\+BX document, according to the given options settings. 
+\begin{DoxyParams}{引数}
+{\em p\+Document} & F\+BX Document to import. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, false otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a29941746acc73d7ffd2411a9be9d2525}{Fbx\+Reader}を実装しています。
+
+被呼び出し関係図\+:
+% FIG 5
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/collada/\hyperlink{fbxreadercollada14_8h}{fbxreadercollada14.\+h}\end{DoxyCompactItemize}

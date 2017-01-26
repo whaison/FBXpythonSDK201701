@@ -1,0 +1,165 @@
+\hypertarget{class_fbx_layer_element_material}{}\section{Fbx\+Layer\+Element\+Material クラス}
+\label{class_fbx_layer_element_material}\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+
+
+{\ttfamily \#include $<$fbxlayer.\+h$>$}
+
+
+
+Fbx\+Layer\+Element\+Material の継承関係図
+% FIG 0
+
+
+Fbx\+Layer\+Element\+Material 連携図
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_layer_element_material_1_1_layer_element_array_proxy}{Layer\+Element\+Array\+Proxy}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ $>$ \hyperlink{class_fbx_layer_element_material_a8f8718ab06cb0f6a9aa82205573fa64b}{Parent\+Class}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_material_a28e7e3a7c499ecf9beb67ab1111e1e29}{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE} (Layer\+Element\+Material)
+\item 
+virtual void \hyperlink{class_fbx_layer_element_material_a5bf99bae72fa4a516eed88e04a66b7ff}{Allocate\+Arrays} ()
+\item 
+virtual void \hyperlink{class_fbx_layer_element_material_afe025ea61981c53c05cb97bcd9174631}{Set\+Owner} (\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$p\+Owner, int p\+Instance=0)
+\item 
+virtual void \hyperlink{class_fbx_layer_element_material_a45d70417f95d962c5e41bed5480888dc}{Set\+Instance} (int p\+Instance)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_material_ad5f7288e3fc7f3d58853b12390766fe3}{Fbx\+Layer\+Element\+Material} ()
+\item 
+\hyperlink{class_fbx_layer_element_material_aff5bc662b9c38efaea5b61de0d108088}{$\sim$\+Fbx\+Layer\+Element\+Material} ()
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_layer_element_material_a791d2046ce60bf6f5fb85d9dc6242f2e}{Fbx\+Layer\+Container}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Layer element for mapping materials (\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}) to a geometry.
+
+F\+BX S\+DK 2011 and later connects materials (\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}) to nodes (\hyperlink{class_fbx_node}{Fbx\+Node}). The direct array of this class is no longer used. The integer \char`\"{}n\char`\"{} in the index array of this class represents the n-\/th material (zero-\/based) connected to the node.
+
+For example\+:
+
+Mapping mode e\+All\+Same and index array \{0\} means the whole geometry is assigned with the 0-\/th material connected to the node.
+
+Mapping mode e\+By\+Polygon and index array \{0, 1\} means the first polygon is assigned with the 0-\/th material and the second polygon is assigned with the 1-\/th material.
+
+You can access the materials from a node by using \hyperlink{class_fbx_node_a00fabc04c839f665fa5d4a0b49859745}{Fbx\+Node\+::\+Get\+Material\+Count()} and Fbx\+Node\+::\+Get\+Material(int p\+Index) or the more generic calls to Get\+Src\+Object\+Count$<$\+Fbx\+Surface\+Material$>$() and Get\+Src\+Object$<$\+Fbx\+Surface\+Material$>$(index)
+
+For example\+:
+
+
+\begin{DoxyCode}
+\hyperlink{class_fbx_node}{FbxNode}* node;
+\textcolor{keywordtype}{int} nbMat = node->\hyperlink{class_fbx_node_a00fabc04c839f665fa5d4a0b49859745}{GetMaterialCount}();
+\textcolor{keywordtype}{int} nbMat1= node->\hyperlink{class_fbx_object_a5fce56e85d5e0568243a5df99dabb42f}{GetSrcObjectCount}<\hyperlink{class_fbx_surface_material}{FbxSurfaceMaterial}>();
+
+\hyperlink{class_fbx_surface_material}{FbxSurfaceMaterial}* material;
+\hyperlink{class_fbx_layer_element_material}{FbxLayerElementMaterial}* layerElement;
+\textcolor{keywordflow}{if} (layerElement->\hyperlink{class_fbx_layer_element_a3b20bf41d0b5abc9661b8b93e033cddb}{GetMappingMode}() == \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ab42522efc125ff87d80ba08267a8624f}{FbxLayerElement::eAllSame})
+\{
+    \textcolor{keywordtype}{int} index = layerElement->\hyperlink{class_fbx_layer_element_template_ab1494495d1944eb4b20c4c97abd6358c}{GetIndexArray}()[0];
+    material = node->\hyperlink{class_fbx_node_aa89bfed69b0fe26ee03708931fbda9c2}{GetMaterial}(index);
+\}
+\end{DoxyCode}
+
+
+\begin{DoxyRemark}{注釈}
+The Direct\+Array() methods still exist for legacy reasons but has been made private and should not be used. Therefore, to be correctly saved in F\+BX file, this type of Layer element should have its reference mode set to {\itshape e\+Index\+To\+Direct}.
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} 
+
+\hyperlink{class_fbx_node}{Fbx\+Node} 
+\end{DoxySeeAlso}
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_material_a8f8718ab06cb0f6a9aa82205573fa64b}\label{class_fbx_layer_element_material_a8f8718ab06cb0f6a9aa82205573fa64b}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Parent\+Class@{Parent\+Class}}
+\index{Parent\+Class@{Parent\+Class}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{Parent\+Class}{ParentClass}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}$\ast$$>$ \hyperlink{class_fbx_layer_element_material_a8f8718ab06cb0f6a9aa82205573fa64b}{Fbx\+Layer\+Element\+Material\+::\+Parent\+Class}}
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_layer_element_material_ad5f7288e3fc7f3d58853b12390766fe3}\label{class_fbx_layer_element_material_ad5f7288e3fc7f3d58853b12390766fe3}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element\+Material()}{FbxLayerElementMaterial()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+Material\+::\+Fbx\+Layer\+Element\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_material_aff5bc662b9c38efaea5b61de0d108088}\label{class_fbx_layer_element_material_aff5bc662b9c38efaea5b61de0d108088}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!````~Fbx\+Layer\+Element\+Material@{$\sim$\+Fbx\+Layer\+Element\+Material}}
+\index{````~Fbx\+Layer\+Element\+Material@{$\sim$\+Fbx\+Layer\+Element\+Material}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Layer\+Element\+Material()}{~FbxLayerElementMaterial()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+Material\+::$\sim$\+Fbx\+Layer\+Element\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_material_a5bf99bae72fa4a516eed88e04a66b7ff}\label{class_fbx_layer_element_material_a5bf99bae72fa4a516eed88e04a66b7ff}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Allocate\+Arrays@{Allocate\+Arrays}}
+\index{Allocate\+Arrays@{Allocate\+Arrays}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{Allocate\+Arrays()}{AllocateArrays()}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+Material\+::\+Allocate\+Arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_template_aa6d432c5865fcda1b58376119f1fcaa8}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Surface\+Material $\ast$$>$}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_layer_element_material_a28e7e3a7c499ecf9beb67ab1111e1e29}\label{class_fbx_layer_element_material_a28e7e3a7c499ecf9beb67ab1111e1e29}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+R\+E()}{FBXSDK\_LAYER\_ELEMENT\_CREATE\_DECLARE()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+Material\+::\+F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE (\begin{DoxyParamCaption}\item[{Layer\+Element\+Material}]{ }\end{DoxyParamCaption})}
+
+Allocation method. \begin{DoxyReturn}{戻り値}
+A pointer to the layer element or {\ttfamily N\+U\+LL} if creation fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_material_a45d70417f95d962c5e41bed5480888dc}\label{class_fbx_layer_element_material_a45d70417f95d962c5e41bed5480888dc}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Set\+Instance@{Set\+Instance}}
+\index{Set\+Instance@{Set\+Instance}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{Set\+Instance()}{SetInstance()}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+Material\+::\+Set\+Instance (\begin{DoxyParamCaption}\item[{int}]{p\+Instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_material_afe025ea61981c53c05cb97bcd9174631}\label{class_fbx_layer_element_material_afe025ea61981c53c05cb97bcd9174631}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Set\+Owner@{Set\+Owner}}
+\index{Set\+Owner@{Set\+Owner}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{Set\+Owner()}{SetOwner()}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+Material\+::\+Set\+Owner (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$}]{p\+Owner,  }\item[{int}]{p\+Instance = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_ab4740c4774c0600f91515fb2c022f0ef}{Fbx\+Layer\+Element}を再実装しています。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_material_a791d2046ce60bf6f5fb85d9dc6242f2e}\label{class_fbx_layer_element_material_a791d2046ce60bf6f5fb85d9dc6242f2e}} 
+\index{Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}!Fbx\+Layer\+Container@{Fbx\+Layer\+Container}}
+\index{Fbx\+Layer\+Container@{Fbx\+Layer\+Container}!Fbx\+Layer\+Element\+Material@{Fbx\+Layer\+Element\+Material}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Container}{FbxLayerContainer}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxlayer_8h}{fbxlayer.\+h}\end{DoxyCompactItemize}

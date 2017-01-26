@@ -1,0 +1,97 @@
+\hypertarget{class_fbx_binding_operator_1_1_function}{}\section{Fbx\+Binding\+Operator\+:\+:Function クラス}
+\label{class_fbx_binding_operator_1_1_function}\index{Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}}
+
+
+{\ttfamily \#include $<$fbxbindingoperator.\+h$>$}
+
+
+
+Fbx\+Binding\+Operator\+:\+:Function の継承関係図
+% FIG 0
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_binding_operator_1_1_function_a87c75b7d2a19945c11161104691294c9}{$\sim$\+Function} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_binding_operator_1_1_function_aa238a63d12508db3cb5c00a4b157524e}{Evaluate} (const \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} $\ast$p\+Operator, const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$p\+Result\+Type, void $\ast$$\ast$p\+Result) const =0
+\item 
+virtual bool \hyperlink{class_fbx_binding_operator_1_1_function_a9bbeec993a6e453a6569e7f40a85fd52}{Reverse\+Evaluate} (const \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} $\ast$p\+Operator, const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Target, const void $\ast$p\+In, void $\ast$$\ast$p\+Out, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$p\+Out\+Type, bool set\+Obj, int index) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+It represents a binding relationship between current object and the target. Any binding operation need to specify a certain kind of binding function. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_binding_operator_1_1_function_a87c75b7d2a19945c11161104691294c9}\label{class_fbx_binding_operator_1_1_function_a87c75b7d2a19945c11161104691294c9}} 
+\index{Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}!````~Function@{$\sim$\+Function}}
+\index{````~Function@{$\sim$\+Function}!Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}}
+\subsubsection{\texorpdfstring{$\sim$\+Function()}{~Function()}}
+{\footnotesize\ttfamily virtual Fbx\+Binding\+Operator\+::\+Function\+::$\sim$\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_binding_operator_1_1_function_aa238a63d12508db3cb5c00a4b157524e}\label{class_fbx_binding_operator_1_1_function_aa238a63d12508db3cb5c00a4b157524e}} 
+\index{Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}}
+\subsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Binding\+Operator\+::\+Function\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} $\ast$}]{p\+Operator,  }\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$}]{p\+Result\+Type,  }\item[{void $\ast$$\ast$}]{p\+Result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the operator on the given object. 
+\begin{DoxyParams}{引数}
+{\em p\+Operator} & The operator that will be applied. \\
+\hline
+{\em p\+Object} & The object that will be evaluated. \\
+\hline
+{\em p\+Result\+Type} & Will be filled by the type of the result. \\
+\hline
+{\em p\+Result} & Will be filled by a pointer to a buffer that hold the result. The caller must call \hyperlink{class_fbx_binding_operator_af7e8559f61c34efa27b1562d386efd2c}{Free\+Evaluation\+Result()} when it is done with this pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_spot_distribution_chooser_b_o_f_a3372ac6ab54e4d20b6646b953f7feecf}{Fbx\+Spot\+Distribution\+Chooser\+B\+OF}, \hyperlink{class_fbx_symbol_i_d_b_o_f_a2cb2538884cf58d68a0ee37fbf910cea}{Fbx\+Symbol\+I\+D\+B\+OF}, \hyperlink{class_fbx_is_yup_b_o_f_a9833ec572b4af6536e46e185f1fad6b9}{Fbx\+Is\+Yup\+B\+OF}, \hyperlink{class_fbx_spherical_to_cartesian_b_o_f_a0c53f8982c1e6c6ca7772ab2503f7d2d}{Fbx\+Spherical\+To\+Cartesian\+B\+OF}, \hyperlink{class_fbx_vector_degree_to_vector_radian_b_o_f_a5141b54262a6aad0c2e51ec67367a578}{Fbx\+Vector\+Degree\+To\+Vector\+Radian\+B\+OF}, \hyperlink{class_fbx_degree_to_radian_b_o_f_a6cee9578c7edb1b27f90f72ac9ec7000}{Fbx\+Degree\+To\+Radian\+B\+OF}, \hyperlink{class_fbx_power_b_o_f_a6e8bfdde2e9ec733432c9ec7a9ef7195}{Fbx\+Power\+B\+OF}, \hyperlink{class_fbx_one_over_x_b_o_f_a373df11d5ad550e76e2edc28f4182f92}{Fbx\+One\+Over\+X\+B\+OF}, \hyperlink{class_fbx_multiply_dist_b_o_f_a3c6639f5d765181313578955f38996a4}{Fbx\+Multiply\+Dist\+B\+OF}, \hyperlink{class_fbx_multiply_b_o_f_a8626aa9c47369019e5afed776fce72e9}{Fbx\+Multiply\+B\+OF}, \hyperlink{class_fbx_substract_b_o_f_a2c01671e4d9c6664557536e2bd748a3b}{Fbx\+Substract\+B\+OF}, \hyperlink{class_fbx_add_b_o_f_a2b1552f30e4ce028d9b67247ed3b9d06}{Fbx\+Add\+B\+OF}, \hyperlink{class_fbx_t_r_s_to_matrix_b_o_f_a41e6ce21b68dc69b6a71cded68676d1c}{Fbx\+T\+R\+S\+To\+Matrix\+B\+OF}, \hyperlink{class_fbx_switch_b_o_f_aa6cb2b6d6b4b03849efc885c86152e2e}{Fbx\+Switch\+B\+OF}, \hyperlink{class_fbx_conditional_b_o_f_ac01ad643a1505219964c8b379385e931}{Fbx\+Conditional\+B\+OF}, \hyperlink{class_fbx_assign_b_o_f_a8d560108ab481a3087cc6a997284617c}{Fbx\+Assign\+B\+OF}, \hyperlink{class_fbx_node_direction_b_o_f_a2366e8ea542715bd9bb4c4e865e4978c}{Fbx\+Node\+Direction\+B\+OF}, \hyperlink{class_fbx_node_position_b_o_f_ac2f916b57120cd4ba7d6df7a55a180c2}{Fbx\+Node\+Position\+B\+OF} (計18項目)で実装されています。
+
+\mbox{\Hypertarget{class_fbx_binding_operator_1_1_function_a9bbeec993a6e453a6569e7f40a85fd52}\label{class_fbx_binding_operator_1_1_function_a9bbeec993a6e453a6569e7f40a85fd52}} 
+\index{Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}!Reverse\+Evaluate@{Reverse\+Evaluate}}
+\index{Reverse\+Evaluate@{Reverse\+Evaluate}!Fbx\+Binding\+Operator\+::\+Function@{Fbx\+Binding\+Operator\+::\+Function}}
+\subsubsection{\texorpdfstring{Reverse\+Evaluate()}{ReverseEvaluate()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Binding\+Operator\+::\+Function\+::\+Reverse\+Evaluate (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_binding_operator}{Fbx\+Binding\+Operator} $\ast$}]{p\+Operator,  }\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Target,  }\item[{const void $\ast$}]{p\+In,  }\item[{void $\ast$$\ast$}]{p\+Out,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} $\ast$}]{p\+Out\+Type,  }\item[{bool}]{set\+Obj,  }\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Run the inverse operator on the given object, assigning the result directly to the object. 
+\begin{DoxyParams}{引数}
+{\em p\+Operator} & The operator that will be applied. \\
+\hline
+{\em p\+Target} & The object that will be evaluated. \\
+\hline
+{\em p\+In} & \\
+\hline
+{\em p\+Out} & \\
+\hline
+{\em p\+Out\+Type} & Type of value being reversed. \\
+\hline
+{\em set\+Obj} & Control to set the property (only to query by the default ). \\
+\hline
+{\em index} & Used only in \hyperlink{class_fbx_multiply_dist_b_o_f}{Fbx\+Multiply\+Dist\+B\+OF}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_spot_distribution_chooser_b_o_f_a8442158a644f0c6c24cbcf30d86413c7}{Fbx\+Spot\+Distribution\+Chooser\+B\+OF}, \hyperlink{class_fbx_symbol_i_d_b_o_f_a2d4eee3d2a4fbf9790b2491ed33846b3}{Fbx\+Symbol\+I\+D\+B\+OF}, \hyperlink{class_fbx_is_yup_b_o_f_a27c960322c0b7c6a4aec67484fcfcf52}{Fbx\+Is\+Yup\+B\+OF}, \hyperlink{class_fbx_spherical_to_cartesian_b_o_f_a05d7c7e0e46df48e22f01f0b09a86bae}{Fbx\+Spherical\+To\+Cartesian\+B\+OF}, \hyperlink{class_fbx_vector_degree_to_vector_radian_b_o_f_a09862a90a073963e88f63afdc60c67c8}{Fbx\+Vector\+Degree\+To\+Vector\+Radian\+B\+OF}, \hyperlink{class_fbx_degree_to_radian_b_o_f_a65c7f3fdae835f27e123b2efc8aaf9da}{Fbx\+Degree\+To\+Radian\+B\+OF}, \hyperlink{class_fbx_power_b_o_f_a6117db8807508595bbe95de7e547cad3}{Fbx\+Power\+B\+OF}, \hyperlink{class_fbx_one_over_x_b_o_f_afa8f32a5706dd4cfee3f69547fdeebe4}{Fbx\+One\+Over\+X\+B\+OF}, \hyperlink{class_fbx_multiply_dist_b_o_f_af5eef2d2b8168d2be835a1643fa35ca1}{Fbx\+Multiply\+Dist\+B\+OF}, \hyperlink{class_fbx_multiply_b_o_f_a54c8a0996a65b3d9bafcbcabf1594745}{Fbx\+Multiply\+B\+OF}, \hyperlink{class_fbx_substract_b_o_f_a86004768a640d77ca9d7d937c4a91d2c}{Fbx\+Substract\+B\+OF}, \hyperlink{class_fbx_add_b_o_f_aee96f76da5722af28d12b65eefcc61bb}{Fbx\+Add\+B\+OF}, \hyperlink{class_fbx_t_r_s_to_matrix_b_o_f_a0152c2805f41834ea2554d4d865e308c}{Fbx\+T\+R\+S\+To\+Matrix\+B\+OF}, \hyperlink{class_fbx_switch_b_o_f_af48ca495a335e415853ec0c5269867a6}{Fbx\+Switch\+B\+OF}, \hyperlink{class_fbx_conditional_b_o_f_a2d20cc9f6b6e1c5a469c49a55c8ed512}{Fbx\+Conditional\+B\+OF}, \hyperlink{class_fbx_assign_b_o_f_ae2342d6ad5f7bc8182cc14c562290247}{Fbx\+Assign\+B\+OF}, \hyperlink{class_fbx_node_direction_b_o_f_ae550509066a010d97d92777df2cba41e}{Fbx\+Node\+Direction\+B\+OF}, \hyperlink{class_fbx_node_position_b_o_f_a1f42ed86523fe35e64c63ee1c85dc22a}{Fbx\+Node\+Position\+B\+OF} (計18項目)で実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxbindingoperator_8h}{fbxbindingoperator.\+h}\end{DoxyCompactItemize}

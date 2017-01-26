@@ -1,0 +1,174 @@
+\hypertarget{class_fbx_user_notification_filtered_iterator}{}\section{Fbx\+User\+Notification\+Filtered\+Iterator クラス}
+\label{class_fbx_user_notification_filtered_iterator}\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+
+
+{\ttfamily \#include $<$fbxusernotification.\+h$>$}
+
+
+
+Fbx\+User\+Notification\+Filtered\+Iterator 連携図
+% FIG 0
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_user_notification_filtered_iterator_a6e10f51f22b5d4e32fb4acfc4492091f}{Fbx\+User\+Notification\+Filtered\+Iterator} (\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} \&p\+Accumulator, int p\+Filter\+Class, \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{Fbx\+User\+Notification\+::\+E\+Output\+Source} p\+Src=\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a4f1172f3c9c59d12a175a66c71be2101}{Fbx\+User\+Notification\+::e\+Sequenced\+Details}, bool p\+No\+Detail=true)
+\item 
+virtual \hyperlink{class_fbx_user_notification_filtered_iterator_aa6d56d17ef3263a8043dbc73d652143b}{$\sim$\+Fbx\+User\+Notification\+Filtered\+Iterator} ()
+\item 
+int \hyperlink{class_fbx_user_notification_filtered_iterator_a66548434b844f1099637aa71eb485f9e}{Get\+Nb\+Items} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of elements contained in this iterator. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_user_notification_filtered_iterator_a0cd7bd9eb21f787767d5f603bfb0cf17}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Put the iterator in its reset state. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$const \hyperlink{class_fbx_user_notification_filtered_iterator_a61fc433ba00db459bac761a49e1121a2}{First} ()
+\item 
+\hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$const \hyperlink{class_fbx_user_notification_filtered_iterator_a6f53e9356bb96d31bcf1a9fbb342533a}{Previous} ()
+\item 
+\hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$const \hyperlink{class_fbx_user_notification_filtered_iterator_a52a38aed0f08e19410e1f45f0eba0115}{Next} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_user_notification_filtered_iterator_ab4aeac096dc929ed94aebe72506524ef}{Build\+Filtered\+List} (\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} \&p\+Accumulator)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_user_notification_filtered_iterator_a00fa9fbeceeddef4d6622bc95c9941b9}{m\+Iterator}
+\item 
+int \hyperlink{class_fbx_user_notification_filtered_iterator_ab0e224a4d178349530d2157753139d63}{m\+Filter\+Class}
+\item 
+bool \hyperlink{class_fbx_user_notification_filtered_iterator_ab38143eb6742f98d8462fdb83b9f6616}{m\+No\+Detail}
+\item 
+\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{Fbx\+User\+Notification\+::\+E\+Output\+Source} \hyperlink{class_fbx_user_notification_filtered_iterator_a817f4766f2b7475c68fb596388eed438}{m\+Accu\+Src\+Data}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$ $>$ \hyperlink{class_fbx_user_notification_filtered_iterator_a1f1ac151c2005704078362ed3a588399}{m\+Filtered\+AE}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class iterates through the accumulated messages depending on the configuration flags (filter). The iterator keeps a local copy of the data extracted from the accumulator. 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a6e10f51f22b5d4e32fb4acfc4492091f}\label{class_fbx_user_notification_filtered_iterator_a6e10f51f22b5d4e32fb4acfc4492091f}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{Fbx\+User\+Notification\+Filtered\+Iterator()}{FbxUserNotificationFilteredIterator()}}
+{\footnotesize\ttfamily Fbx\+User\+Notification\+Filtered\+Iterator\+::\+Fbx\+User\+Notification\+Filtered\+Iterator (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} \&}]{p\+Accumulator,  }\item[{int}]{p\+Filter\+Class,  }\item[{\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{Fbx\+User\+Notification\+::\+E\+Output\+Source}}]{p\+Src = {\ttfamily \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a4f1172f3c9c59d12a175a66c71be2101}{Fbx\+User\+Notification\+::e\+Sequenced\+Details}},  }\item[{bool}]{p\+No\+Detail = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Accumulator} & This reference is only used during construction for retrieving the data required to fill the iterator. \\
+\hline
+{\em p\+Filter\+Class} & The bitwise combination of the E\+Class identifiers. An \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} element is copied from the accumulator if its Class matches one of the bits of this flag. \\
+\hline
+{\em p\+Src} & Specify which data format is extracted from the accumulator. \\
+\hline
+{\em p\+No\+Detail} & This parameter is used O\+N\+LY if p\+Src == e\+Accumulator\+Entry and, if set to false, the details of the \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} are also sent to the output devices. If left to its default value, only the description of the \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} is sent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_aa6d56d17ef3263a8043dbc73d652143b}\label{class_fbx_user_notification_filtered_iterator_aa6d56d17ef3263a8043dbc73d652143b}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!````~Fbx\+User\+Notification\+Filtered\+Iterator@{$\sim$\+Fbx\+User\+Notification\+Filtered\+Iterator}}
+\index{````~Fbx\+User\+Notification\+Filtered\+Iterator@{$\sim$\+Fbx\+User\+Notification\+Filtered\+Iterator}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+User\+Notification\+Filtered\+Iterator()}{~FbxUserNotificationFilteredIterator()}}
+{\footnotesize\ttfamily virtual Fbx\+User\+Notification\+Filtered\+Iterator\+::$\sim$\+Fbx\+User\+Notification\+Filtered\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_ab4aeac096dc929ed94aebe72506524ef}\label{class_fbx_user_notification_filtered_iterator_ab4aeac096dc929ed94aebe72506524ef}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Build\+Filtered\+List@{Build\+Filtered\+List}}
+\index{Build\+Filtered\+List@{Build\+Filtered\+List}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{Build\+Filtered\+List()}{BuildFilteredList()}}
+{\footnotesize\ttfamily virtual void Fbx\+User\+Notification\+Filtered\+Iterator\+::\+Build\+Filtered\+List (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} \&}]{p\+Accumulator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a61fc433ba00db459bac761a49e1121a2}\label{class_fbx_user_notification_filtered_iterator_a61fc433ba00db459bac761a49e1121a2}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!First@{First}}
+\index{First@{First}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{First()}{First()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}$\ast$ const Fbx\+User\+Notification\+Filtered\+Iterator\+::\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get this iterator\textquotesingle{}s first item. \begin{DoxyReturn}{戻り値}
+N\+U\+LL if the iterator is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a66548434b844f1099637aa71eb485f9e}\label{class_fbx_user_notification_filtered_iterator_a66548434b844f1099637aa71eb485f9e}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Get\+Nb\+Items@{Get\+Nb\+Items}}
+\index{Get\+Nb\+Items@{Get\+Nb\+Items}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{Get\+Nb\+Items()}{GetNbItems()}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+Filtered\+Iterator\+::\+Get\+Nb\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of elements contained in this iterator. 
+
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a52a38aed0f08e19410e1f45f0eba0115}\label{class_fbx_user_notification_filtered_iterator_a52a38aed0f08e19410e1f45f0eba0115}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Next@{Next}}
+\index{Next@{Next}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}$\ast$ const Fbx\+User\+Notification\+Filtered\+Iterator\+::\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get this iterator\textquotesingle{}s next item. \begin{DoxyReturn}{戻り値}
+N\+U\+LL if the iterator reached the end (or is empty). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method will also return N\+U\+LL if it is called while the iterator is in its reset state (called before \hyperlink{class_fbx_user_notification_filtered_iterator_a61fc433ba00db459bac761a49e1121a2}{First()} or after a preceding call to \hyperlink{class_fbx_user_notification_filtered_iterator_a6f53e9356bb96d31bcf1a9fbb342533a}{Previous()} reached beyond the beginning). 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a6f53e9356bb96d31bcf1a9fbb342533a}\label{class_fbx_user_notification_filtered_iterator_a6f53e9356bb96d31bcf1a9fbb342533a}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Previous@{Previous}}
+\index{Previous@{Previous}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{Previous()}{Previous()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}$\ast$ const Fbx\+User\+Notification\+Filtered\+Iterator\+::\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get this iterator\textquotesingle{}s previous item. \begin{DoxyReturn}{戻り値}
+N\+U\+LL if the iterator reached the beginning (or is empty). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method will also return N\+U\+LL if it is called before or immediately after a call to \hyperlink{class_fbx_user_notification_filtered_iterator_a61fc433ba00db459bac761a49e1121a2}{First()} and reset the iterator to its reset state (meaning that a call to \hyperlink{class_fbx_user_notification_filtered_iterator_a61fc433ba00db459bac761a49e1121a2}{First()} is mandatory to be able to iterate again). 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a0cd7bd9eb21f787767d5f603bfb0cf17}\label{class_fbx_user_notification_filtered_iterator_a0cd7bd9eb21f787767d5f603bfb0cf17}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+Filtered\+Iterator\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Put the iterator in its reset state. 
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a817f4766f2b7475c68fb596388eed438}\label{class_fbx_user_notification_filtered_iterator_a817f4766f2b7475c68fb596388eed438}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!m\+Accu\+Src\+Data@{m\+Accu\+Src\+Data}}
+\index{m\+Accu\+Src\+Data@{m\+Accu\+Src\+Data}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{m\+Accu\+Src\+Data}{mAccuSrcData}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{Fbx\+User\+Notification\+::\+E\+Output\+Source} Fbx\+User\+Notification\+Filtered\+Iterator\+::m\+Accu\+Src\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_ab0e224a4d178349530d2157753139d63}\label{class_fbx_user_notification_filtered_iterator_ab0e224a4d178349530d2157753139d63}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!m\+Filter\+Class@{m\+Filter\+Class}}
+\index{m\+Filter\+Class@{m\+Filter\+Class}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{m\+Filter\+Class}{mFilterClass}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+Filtered\+Iterator\+::m\+Filter\+Class\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a1f1ac151c2005704078362ed3a588399}\label{class_fbx_user_notification_filtered_iterator_a1f1ac151c2005704078362ed3a588399}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!m\+Filtered\+AE@{m\+Filtered\+AE}}
+\index{m\+Filtered\+AE@{m\+Filtered\+AE}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{m\+Filtered\+AE}{mFilteredAE}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}$\ast$$>$ Fbx\+User\+Notification\+Filtered\+Iterator\+::m\+Filtered\+AE\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_a00fa9fbeceeddef4d6622bc95c9941b9}\label{class_fbx_user_notification_filtered_iterator_a00fa9fbeceeddef4d6622bc95c9941b9}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!m\+Iterator@{m\+Iterator}}
+\index{m\+Iterator@{m\+Iterator}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{m\+Iterator}{mIterator}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+Filtered\+Iterator\+::m\+Iterator\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_user_notification_filtered_iterator_ab38143eb6742f98d8462fdb83b9f6616}\label{class_fbx_user_notification_filtered_iterator_ab38143eb6742f98d8462fdb83b9f6616}} 
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!m\+No\+Detail@{m\+No\+Detail}}
+\index{m\+No\+Detail@{m\+No\+Detail}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\subsubsection{\texorpdfstring{m\+No\+Detail}{mNoDetail}}
+{\footnotesize\ttfamily bool Fbx\+User\+Notification\+Filtered\+Iterator\+::m\+No\+Detail\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxusernotification_8h}{fbxusernotification.\+h}\end{DoxyCompactItemize}

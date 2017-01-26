@@ -1,0 +1,185 @@
+\hypertarget{class_fbx_external_doc_ref_listener}{}\section{Fbx\+External\+Doc\+Ref\+Listener クラス}
+\label{class_fbx_external_doc_ref_listener}\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+
+
+{\ttfamily \#include $<$fbxexternaldocreflistener.\+h$>$}
+
+
+
+Fbx\+External\+Doc\+Ref\+Listener の継承関係図
+% FIG 0
+
+
+Fbx\+External\+Doc\+Ref\+Listener 連携図
+% FIG 1
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_external_doc_ref_listener_a9118825e2ee04df01ee6117ab55fd175}{Fbx\+External\+Doc\+Ref\+Listener} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Doc\+File\+Path)
+\item 
+virtual \hyperlink{class_fbx_external_doc_ref_listener_a4145e93503fe9759dcd8a2ddd515d091}{$\sim$\+Fbx\+External\+Doc\+Ref\+Listener} ()
+\item 
+virtual void \hyperlink{class_fbx_external_doc_ref_listener_aac019a58c4fda8ce675fb67edb340cbf}{Set\+Document\+File\+Path} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Doc\+File\+Path)
+\item 
+virtual bool \hyperlink{class_fbx_external_doc_ref_listener_a3bed051aad3654a8e71b31175dc0a51d}{Are\+All\+External\+Documents\+Still\+Valid} () const
+\item 
+virtual bool \hyperlink{class_fbx_external_doc_ref_listener_a7a7e4947b7f4a250365a8761fb71cd1e}{Were\+All\+External\+Documents\+Valid} () const
+\item 
+virtual void \hyperlink{class_fbx_external_doc_ref_listener_a0d2e5c292d9aad7263cb16b9008851f2}{Unload\+External\+Documents} ()
+\item 
+virtual void \hyperlink{class_fbx_external_doc_ref_listener_ab1517a34510c213bad2750763b502a88}{Handle\+Event} (const \hyperlink{class_fbx_event_referenced_document}{Fbx\+Event\+Referenced\+Document} $\ast$p\+Event)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_external_doc_ref_listener_a0ccdcffe94bdebb645b119cbb8b8e452}{Make\+Filename\+Absolute} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Filename) const
+\item 
+virtual \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$ \hyperlink{class_fbx_external_doc_ref_listener_a945c6cf13ded5425201a557a66f18723}{Find\+Document} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Path\+To\+Doc)
+\begin{DoxyCompactList}\small\item\em Locate a document by its document path. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$ \hyperlink{class_fbx_external_doc_ref_listener_adeb34f3aa94412bf637b42f9ee6cf78b}{Load\+Document} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Parent, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Class\+Name, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Filename)
+\begin{DoxyCompactList}\small\item\em Load a library, potentially under another library. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_external_doc_ref_listener_a68443ac6cc93f33279eaac41e7b23d7f}{Connect\+To\+Parent\+Library} (const \hyperlink{struct_fbx_external_document_info}{Fbx\+External\+Document\+Info} \&)
+\begin{DoxyCompactList}\small\item\em Try to connect a library to its parent given its document path. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_fbx_external_doc_ref_listener_a38eb0370ac40ed398430223cc2e9de5e}{Try\+Connecting\+Dangling\+Libraries} ()
+\begin{DoxyCompactList}\small\item\em Try to reconnect dangling libraries that didn\textquotesingle{}t find their parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Typical handler for the referenced document events.
+
+Register it like so\+: \hyperlink{class_fbx_external_doc_ref_listener}{Fbx\+External\+Doc\+Ref\+Listener} l\+Ref\+Doc\+Listener( sdk\+Manager, file\+Name ); \hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} $\ast$ l\+Handler = l\+Ref\+Doc\+Listener.\+Bind(scene, \&\hyperlink{class_fbx_external_doc_ref_listener_ab1517a34510c213bad2750763b502a88}{Fbx\+External\+Doc\+Ref\+Listener\+::\+Handle\+Event});
+
+And later unregister it like so\+: l\+Ref\+Doc\+Listener.\+Unbind(l\+Handler); 
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a9118825e2ee04df01ee6117ab55fd175}\label{class_fbx_external_doc_ref_listener_a9118825e2ee04df01ee6117ab55fd175}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Fbx\+External\+Doc\+Ref\+Listener()}{FbxExternalDocRefListener()}}
+{\footnotesize\ttfamily Fbx\+External\+Doc\+Ref\+Listener\+::\+Fbx\+External\+Doc\+Ref\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Doc\+File\+Path }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & \\
+\hline
+{\em p\+Doc\+File\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Keep a reference to the S\+DK and the path of the document to be able to resolve relative paths. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a4145e93503fe9759dcd8a2ddd515d091}\label{class_fbx_external_doc_ref_listener_a4145e93503fe9759dcd8a2ddd515d091}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!````~Fbx\+External\+Doc\+Ref\+Listener@{$\sim$\+Fbx\+External\+Doc\+Ref\+Listener}}
+\index{````~Fbx\+External\+Doc\+Ref\+Listener@{$\sim$\+Fbx\+External\+Doc\+Ref\+Listener}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+External\+Doc\+Ref\+Listener()}{~FbxExternalDocRefListener()}}
+{\footnotesize\ttfamily virtual Fbx\+External\+Doc\+Ref\+Listener\+::$\sim$\+Fbx\+External\+Doc\+Ref\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{メソッド詳解}
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a3bed051aad3654a8e71b31175dc0a51d}\label{class_fbx_external_doc_ref_listener_a3bed051aad3654a8e71b31175dc0a51d}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Are\+All\+External\+Documents\+Still\+Valid@{Are\+All\+External\+Documents\+Still\+Valid}}
+\index{Are\+All\+External\+Documents\+Still\+Valid@{Are\+All\+External\+Documents\+Still\+Valid}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Are\+All\+External\+Documents\+Still\+Valid()}{AreAllExternalDocumentsStillValid()}}
+{\footnotesize\ttfamily virtual bool Fbx\+External\+Doc\+Ref\+Listener\+::\+Are\+All\+External\+Documents\+Still\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Verify that all documents that were previously loaded in a previous load session are still valid. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if all documents are still valid, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a68443ac6cc93f33279eaac41e7b23d7f}\label{class_fbx_external_doc_ref_listener_a68443ac6cc93f33279eaac41e7b23d7f}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Connect\+To\+Parent\+Library@{Connect\+To\+Parent\+Library}}
+\index{Connect\+To\+Parent\+Library@{Connect\+To\+Parent\+Library}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Connect\+To\+Parent\+Library()}{ConnectToParentLibrary()}}
+{\footnotesize\ttfamily virtual bool Fbx\+External\+Doc\+Ref\+Listener\+::\+Connect\+To\+Parent\+Library (\begin{DoxyParamCaption}\item[{const \hyperlink{struct_fbx_external_document_info}{Fbx\+External\+Document\+Info} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Try to connect a library to its parent given its document path. 
+
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a945c6cf13ded5425201a557a66f18723}\label{class_fbx_external_doc_ref_listener_a945c6cf13ded5425201a557a66f18723}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Find\+Document@{Find\+Document}}
+\index{Find\+Document@{Find\+Document}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Find\+Document()}{FindDocument()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_document}{Fbx\+Document}$\ast$ Fbx\+External\+Doc\+Ref\+Listener\+::\+Find\+Document (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Path\+To\+Doc }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Locate a document by its document path. 
+
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_ab1517a34510c213bad2750763b502a88}\label{class_fbx_external_doc_ref_listener_ab1517a34510c213bad2750763b502a88}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Handle\+Event@{Handle\+Event}}
+\index{Handle\+Event@{Handle\+Event}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Handle\+Event()}{HandleEvent()}}
+{\footnotesize\ttfamily virtual void Fbx\+External\+Doc\+Ref\+Listener\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_event_referenced_document}{Fbx\+Event\+Referenced\+Document} $\ast$}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+External document reference event handler. 
+\begin{DoxyParams}{引数}
+{\em p\+Event} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Operation\+: calls \hyperlink{class_fbx_external_doc_ref_listener_a945c6cf13ded5425201a557a66f18723}{Find\+Document()} to find the specified external document and if not found calls \hyperlink{class_fbx_external_doc_ref_listener_adeb34f3aa94412bf637b42f9ee6cf78b}{Load\+Document()} either directly, if it has not parent, or via \hyperlink{class_fbx_external_doc_ref_listener_a68443ac6cc93f33279eaac41e7b23d7f}{Connect\+To\+Parent\+Library()}. If its parent cannot be found, it\textquotesingle{}s added to the dangling document list (and it is not loaded until it\textquotesingle{}s parent is found). After, it tries to resolve dangling documents by calling \hyperlink{class_fbx_external_doc_ref_listener_a38eb0370ac40ed398430223cc2e9de5e}{Try\+Connecting\+Dangling\+Libraries()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_adeb34f3aa94412bf637b42f9ee6cf78b}\label{class_fbx_external_doc_ref_listener_adeb34f3aa94412bf637b42f9ee6cf78b}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Load\+Document@{Load\+Document}}
+\index{Load\+Document@{Load\+Document}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Load\+Document()}{LoadDocument()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_document}{Fbx\+Document}$\ast$ Fbx\+External\+Doc\+Ref\+Listener\+::\+Load\+Document (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Parent,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Class\+Name,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Load a library, potentially under another library. 
+
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a0ccdcffe94bdebb645b119cbb8b8e452}\label{class_fbx_external_doc_ref_listener_a0ccdcffe94bdebb645b119cbb8b8e452}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Make\+Filename\+Absolute@{Make\+Filename\+Absolute}}
+\index{Make\+Filename\+Absolute@{Make\+Filename\+Absolute}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Make\+Filename\+Absolute()}{MakeFilenameAbsolute()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+External\+Doc\+Ref\+Listener\+::\+Make\+Filename\+Absolute (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Turn a relative path to an absolute path using the file path of the original document being loaded. If the path is already is absolute, it is returned as is. \mbox{\Hypertarget{class_fbx_external_doc_ref_listener_aac019a58c4fda8ce675fb67edb340cbf}\label{class_fbx_external_doc_ref_listener_aac019a58c4fda8ce675fb67edb340cbf}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Set\+Document\+File\+Path@{Set\+Document\+File\+Path}}
+\index{Set\+Document\+File\+Path@{Set\+Document\+File\+Path}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Set\+Document\+File\+Path()}{SetDocumentFilePath()}}
+{\footnotesize\ttfamily virtual void Fbx\+External\+Doc\+Ref\+Listener\+::\+Set\+Document\+File\+Path (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Doc\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Set the document file path used to resolve documents. 
+\begin{DoxyParams}{引数}
+{\em p\+Doc\+File\+Path} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Allows re-\/using the same instance for multiple document loadings. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a38eb0370ac40ed398430223cc2e9de5e}\label{class_fbx_external_doc_ref_listener_a38eb0370ac40ed398430223cc2e9de5e}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Try\+Connecting\+Dangling\+Libraries@{Try\+Connecting\+Dangling\+Libraries}}
+\index{Try\+Connecting\+Dangling\+Libraries@{Try\+Connecting\+Dangling\+Libraries}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Try\+Connecting\+Dangling\+Libraries()}{TryConnectingDanglingLibraries()}}
+{\footnotesize\ttfamily virtual void Fbx\+External\+Doc\+Ref\+Listener\+::\+Try\+Connecting\+Dangling\+Libraries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Try to reconnect dangling libraries that didn\textquotesingle{}t find their parent. 
+
+\mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a0d2e5c292d9aad7263cb16b9008851f2}\label{class_fbx_external_doc_ref_listener_a0d2e5c292d9aad7263cb16b9008851f2}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Unload\+External\+Documents@{Unload\+External\+Documents}}
+\index{Unload\+External\+Documents@{Unload\+External\+Documents}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Unload\+External\+Documents()}{UnloadExternalDocuments()}}
+{\footnotesize\ttfamily virtual void Fbx\+External\+Doc\+Ref\+Listener\+::\+Unload\+External\+Documents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Unload all documents that were loaded through this event handler. \mbox{\Hypertarget{class_fbx_external_doc_ref_listener_a7a7e4947b7f4a250365a8761fb71cd1e}\label{class_fbx_external_doc_ref_listener_a7a7e4947b7f4a250365a8761fb71cd1e}} 
+\index{Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}!Were\+All\+External\+Documents\+Valid@{Were\+All\+External\+Documents\+Valid}}
+\index{Were\+All\+External\+Documents\+Valid@{Were\+All\+External\+Documents\+Valid}!Fbx\+External\+Doc\+Ref\+Listener@{Fbx\+External\+Doc\+Ref\+Listener}}
+\subsubsection{\texorpdfstring{Were\+All\+External\+Documents\+Valid()}{WereAllExternalDocumentsValid()}}
+{\footnotesize\ttfamily virtual bool Fbx\+External\+Doc\+Ref\+Listener\+::\+Were\+All\+External\+Documents\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Verify that all documents that were referred to didn\textquotesingle{}t change. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if all documents didn\textquotesingle{}t change, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function should be called if at posteriori check is desired. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxexternaldocreflistener_8h}{fbxexternaldocreflistener.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,253 @@
+\hypertarget{fbxobject_8h}{}\section{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.1/include/fbxsdk/core/fbxobject.h ファイル}
+\label{fbxobject_8h}\index{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/fbxobject.\+h@{C\+:/github/\+F\+B\+Xpython\+S\+D\+K201701/\+F\+B\+Xpython\+S\+D\+K201701/2017.\+1/include/fbxsdk/core/fbxobject.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxclassid.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxquery.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxemitter.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxproperty.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxstream.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/base/fbxstringlist.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/utils/fbxnamehandler.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+fbxobject.\+h の依存先関係図\+:
+% FIG 0
+被依存関係図\+:
+% FIG 1
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_object}{Fbx\+Object}
+\item 
+class \hyperlink{class_fbx_iterator}{Fbx\+Iterator$<$ Fbx\+Property $>$}
+\item 
+class \hyperlink{class_fbx_iterator_src_base}{Fbx\+Iterator\+Src\+Base}
+\item 
+class \hyperlink{class_fbx_iterator_src}{Fbx\+Iterator\+Src$<$ Type $>$}
+\item 
+class \hyperlink{class_fbx_iterator_dst_base}{Fbx\+Iterator\+Dst\+Base}
+\item 
+class \hyperlink{class_fbx_iterator_dst}{Fbx\+Iterator\+Dst$<$ Type $>$}
+\item 
+class \hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event}
+\item 
+class \hyperlink{class_fbx_object_property_changed}{Fbx\+Object\+Property\+Changed}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxobject_8h_a499d1f3b16dd6039a47b9a654f813cdd}{F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE}(Class,  Parent)
+\item 
+\#define \hyperlink{fbxobject_8h_a75a5dd16f8e7ebd782535534e5f25499}{F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}(Class,  Parent)
+\item 
+\#define \hyperlink{fbxobject_8h_a1628eb1d9b23ef9ce13f4406689fe50e}{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}(Class,  Parent)
+\begin{DoxyCompactList}\small\item\em Macro used to declare a new class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. \end{DoxyCompactList}\item 
+\#define \hyperlink{fbxobject_8h_a8e970655f5b1f1c91f4887e30fa8379d}{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}(Class,  Parent)
+\begin{DoxyCompactList}\small\item\em Macro used to declare a new abstract class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. \end{DoxyCompactList}\item 
+\#define \hyperlink{fbxobject_8h_ac76185d8d380cda2e3d5c10981e5f510}{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}(Class)
+\begin{DoxyCompactList}\small\item\em Macro used to implement a new class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. \end{DoxyCompactList}\item 
+\#define \hyperlink{fbxobject_8h_ad0cf5fd98d32bf0df085c31257e0d524}{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}(Class)
+\begin{DoxyCompactList}\small\item\em Macro used to implement a new abstract class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. \end{DoxyCompactList}\item 
+\#define \hyperlink{fbxobject_8h_a5d7afc748adbd02b6e42e01ec252f29e}{F\+B\+X\+\_\+\+T\+Y\+PE}(class)~((const class$\ast$)0)
+\item 
+\#define \hyperlink{fbxobject_8h_a13a2f4f0eeea3daf81411a268f65ff82}{Fbx\+For\+Each}(Iterator,  Object)~for((Object)=(Iterator).Get\+First();(Object)!=0;(Object)=(Iterator).Get\+Next())
+\begin{DoxyCompactList}\small\item\em Macro used to iterate over source or destination objects that connect to property (\hyperlink{class_fbx_property}{Fbx\+Property}) or object (\hyperlink{class_fbx_object}{Fbx\+Object}). \end{DoxyCompactList}\item 
+\#define \hyperlink{fbxobject_8h_a3fe9c6ab69bafbcbefcf17ad3debb3a6}{Fbx\+For\+Each\+Reverse}(Iterator,  Object)~for(Object=(Iterator).Get\+Last();(Object)!=0;Object=(Iterator).Get\+Previous())
+\begin{DoxyCompactList}\small\item\em Macro used to reversely iterate over source or destination objects that connect to property (\hyperlink{class_fbx_property}{Fbx\+Property}) or object (\hyperlink{class_fbx_object}{Fbx\+Object}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{fbxobject_8h_a26423220d10d7399420c377300112622}{Fbx\+Cast} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+{\footnotesize template$<$class T $>$ }\\const T $\ast$ \hyperlink{fbxobject_8h_aa172a54744c69a42363104b0957d444b}{Fbx\+Cast} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxobject_8h_a5d7afc748adbd02b6e42e01ec252f29e}\label{fbxobject_8h_a5d7afc748adbd02b6e42e01ec252f29e}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+\_\+\+T\+Y\+PE@{F\+B\+X\+\_\+\+T\+Y\+PE}}
+\index{F\+B\+X\+\_\+\+T\+Y\+PE@{F\+B\+X\+\_\+\+T\+Y\+PE}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+\_\+\+T\+Y\+PE}{FBX\_TYPE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{class }\end{DoxyParamCaption})~((const class$\ast$)0)}
+
+Convert the class type parameter into a C class parameter for other function inputs. Usage example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{//Assuming MyCamera is a valid FbxCamera object}
+\textcolor{keywordtype}{bool} AreCamerasObject = MyCamera->Is<\hyperlink{class_fbx_object}{FbxObject}>(); \textcolor{comment}{//Should return true :)}
+\end{DoxyCode}
+ \mbox{\Hypertarget{fbxobject_8h_a13a2f4f0eeea3daf81411a268f65ff82}\label{fbxobject_8h_a13a2f4f0eeea3daf81411a268f65ff82}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!Fbx\+For\+Each@{Fbx\+For\+Each}}
+\index{Fbx\+For\+Each@{Fbx\+For\+Each}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+For\+Each}{FbxForEach}}
+{\footnotesize\ttfamily \#define Fbx\+For\+Each(\begin{DoxyParamCaption}\item[{}]{Iterator,  }\item[{}]{Object }\end{DoxyParamCaption})~for((Object)=(Iterator).Get\+First();(Object)!=0;(Object)=(Iterator).Get\+Next())}
+
+
+
+Macro used to iterate over source or destination objects that connect to property (\hyperlink{class_fbx_property}{Fbx\+Property}) or object (\hyperlink{class_fbx_object}{Fbx\+Object}). 
+
+\mbox{\Hypertarget{fbxobject_8h_a3fe9c6ab69bafbcbefcf17ad3debb3a6}\label{fbxobject_8h_a3fe9c6ab69bafbcbefcf17ad3debb3a6}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!Fbx\+For\+Each\+Reverse@{Fbx\+For\+Each\+Reverse}}
+\index{Fbx\+For\+Each\+Reverse@{Fbx\+For\+Each\+Reverse}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+For\+Each\+Reverse}{FbxForEachReverse}}
+{\footnotesize\ttfamily \#define Fbx\+For\+Each\+Reverse(\begin{DoxyParamCaption}\item[{}]{Iterator,  }\item[{}]{Object }\end{DoxyParamCaption})~for(Object=(Iterator).Get\+Last();(Object)!=0;Object=(Iterator).Get\+Previous())}
+
+
+
+Macro used to reversely iterate over source or destination objects that connect to property (\hyperlink{class_fbx_property}{Fbx\+Property}) or object (\hyperlink{class_fbx_object}{Fbx\+Object}) 
+
+\mbox{\Hypertarget{fbxobject_8h_a8e970655f5b1f1c91f4887e30fa8379d}\label{fbxobject_8h_a8e970655f5b1f1c91f4887e30fa8379d}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_ABSTRACT\_OBJECT\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Class,  }\item[{}]{Parent }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{fbxobject_8h_a499d1f3b16dd6039a47b9a654f813cdd}{FBXSDK\_CLASS\_DECLARE}(Class, Parent)\(\backslash\)
+protected:\(\backslash\)
+    static \hyperlink{fbxclassid_8h_a12707e967b73358bdb4956b72e5aa449}{FbxObjectCreateProc} Allocate;\(\backslash\)
+    Class(\hyperlink{class_fbx_manager}{FbxManager}& pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName) : Parent(pManager, pName)\{\};\(\backslash\)
+private: \textcolor{comment}{/* end of object declaration, put back private */}\(\backslash\)
+\end{DoxyCode}
+
+
+Macro used to declare a new abstract class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. 
+
+\mbox{\Hypertarget{fbxobject_8h_ad0cf5fd98d32bf0df085c31257e0d524}\label{fbxobject_8h_ad0cf5fd98d32bf0df085c31257e0d524}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT@{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT@{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}{FBXSDK\_ABSTRACT\_OBJECT\_IMPLEMENT}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT(\begin{DoxyParamCaption}\item[{}]{Class }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{class_fbx_class_id}{FbxClassId} Class::ClassId;\(\backslash\)
+    FbxObjectCreateProc Class::Allocate = 0;\(\backslash\)
+    Class* Class::Create(\hyperlink{class_fbx_manager}{FbxManager}* pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName)\(\backslash\)
+    \{\(\backslash\)
+        return (Class*)pManager->CreateNewObjectFromClassId(Class::ClassId, pName);\(\backslash\)
+    \}\(\backslash\)
+\end{DoxyCode}
+
+
+Macro used to implement a new abstract class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. 
+
+\mbox{\Hypertarget{fbxobject_8h_a499d1f3b16dd6039a47b9a654f813cdd}\label{fbxobject_8h_a499d1f3b16dd6039a47b9a654f813cdd}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_CLASS\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+C\+L\+A\+S\+S\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Class,  }\item[{}]{Parent }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{private}:\(\backslash\)
+    Class(\textcolor{keyword}{const} Class&);\(\backslash\)
+    Class& operator=(\textcolor{keyword}{const} Class&);\(\backslash\)
+protected:\(\backslash\)
+    virtual ~Class()\{\};\(\backslash\)
+public:\(\backslash\)
+    static \hyperlink{class_fbx_class_id}{FbxClassId} ClassId;\(\backslash\)
+    virtual \hyperlink{class_fbx_class_id}{FbxClassId} GetClassId()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} ClassId; \}\(\backslash\)
+    friend \textcolor{keyword}{class }FBXSDK\_NAMESPACE::FbxManager;\(\backslash\)
+    typedef Parent ParentClass;\(\backslash\)
+    static Class* Create(\hyperlink{class_fbx_manager}{FbxManager}* pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName);\(\backslash\)
+\end{DoxyCode}
+\mbox{\Hypertarget{fbxobject_8h_a75a5dd16f8e7ebd782535534e5f25499}\label{fbxobject_8h_a75a5dd16f8e7ebd782535534e5f25499}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_FBXOBJECT\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+F\+B\+X\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Class,  }\item[{}]{Parent }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{fbxobject_8h_a499d1f3b16dd6039a47b9a654f813cdd}{FBXSDK\_CLASS\_DECLARE}(Class, Parent)\(\backslash\)
+    FBXSDK\_FRIEND\_NEW()\(\backslash\)
+    static Class* Create(\hyperlink{class_fbx_object}{FbxObject}* pContainer, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName);\(\backslash\)
+protected:\(\backslash\)
+    static Class* Allocate(\hyperlink{class_fbx_manager}{FbxManager}* pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName, \textcolor{keyword}{const} Class* pFrom);\(\backslash\)
+\end{DoxyCode}
+\mbox{\Hypertarget{fbxobject_8h_a1628eb1d9b23ef9ce13f4406689fe50e}\label{fbxobject_8h_a1628eb1d9b23ef9ce13f4406689fe50e}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_OBJECT\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Class,  }\item[{}]{Parent }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{fbxobject_8h_a75a5dd16f8e7ebd782535534e5f25499}{FBXSDK\_FBXOBJECT\_DECLARE}(Class, Parent)\(\backslash\)
+protected:\(\backslash\)
+    Class(\hyperlink{class_fbx_manager}{FbxManager}& pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName) : Parent(pManager, pName)\{\};\(\backslash\)
+private: \textcolor{comment}{/* end of object declaration, put back private */}\(\backslash\)
+\end{DoxyCode}
+
+
+Macro used to declare a new class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. 
+
+\mbox{\Hypertarget{fbxobject_8h_ac76185d8d380cda2e3d5c10981e5f510}\label{fbxobject_8h_ac76185d8d380cda2e3d5c10981e5f510}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT@{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT@{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT}{FBXSDK\_OBJECT\_IMPLEMENT}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+O\+B\+J\+E\+C\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+NT(\begin{DoxyParamCaption}\item[{}]{Class }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{class_fbx_class_id}{FbxClassId} Class::ClassId;\(\backslash\)
+    Class* Class::Create(\hyperlink{class_fbx_manager}{FbxManager}* pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName)\(\backslash\)
+    \{\(\backslash\)
+        return (Class*)pManager->CreateNewObjectFromClassId(Class::ClassId, pName);\(\backslash\)
+    \}\(\backslash\)
+    Class* Class::Create(\hyperlink{class_fbx_object}{FbxObject}* pContainer, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName)\(\backslash\)
+    \{\(\backslash\)
+        FBX\_ASSERT\_RETURN\_VALUE(pContainer && pContainer->GetFbxManager(), \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL});\(\backslash\)
+        return (Class*)pContainer->GetFbxManager()->CreateNewObjectFromClassId(Class::ClassId, pName, 
+      pContainer);\(\backslash\)
+    \}\(\backslash\)
+    Class* Class::Allocate(\hyperlink{class_fbx_manager}{FbxManager}* pManager, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName, \textcolor{keyword}{const} Class* pFrom)\(\backslash\)
+    \{\(\backslash\)
+        Class* lNewObject = FbxNew<Class>(*pManager, pName);\(\backslash\)
+        lNewObject->Construct(pFrom);\(\backslash\)
+        lNewObject->SetObjectFlags(\hyperlink{class_fbx_object_a117b8002963e9fe475a93556c217b244aef7e1bffd6a66da3afcef75a5b58099c}{FbxObject::eInitialized}, \textcolor{keyword}{true});\(\backslash\)
+        return lNewObject;\(\backslash\)
+    \}\(\backslash\)
+\end{DoxyCode}
+
+
+Macro used to implement a new class derived from \hyperlink{class_fbx_object}{Fbx\+Object}. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxobject_8h_a26423220d10d7399420c377300112622}\label{fbxobject_8h_a26423220d10d7399420c377300112622}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!Fbx\+Cast@{Fbx\+Cast}}
+\index{Fbx\+Cast@{Fbx\+Cast}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Cast()}{FbxCast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Cast (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Safe casting of F\+BX S\+DK objects into other F\+BX S\+DK class types. This cast will perform the complete test to make sure the object inherits from the requested class type. This is the equivalent of a dynamic\+\_\+cast but much faster. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object to try to cast into T type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A non-\/null pointer if the cast was successful. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{fbxobject_8h_aa172a54744c69a42363104b0957d444b}\label{fbxobject_8h_aa172a54744c69a42363104b0957d444b}} 
+\index{fbxobject.\+h@{fbxobject.\+h}!Fbx\+Cast@{Fbx\+Cast}}
+\index{Fbx\+Cast@{Fbx\+Cast}!fbxobject.\+h@{fbxobject.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Cast()}{FbxCast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+const T$\ast$ Fbx\+Cast (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Safe const casting of F\+BX S\+DK objects into other F\+BX S\+DK class types. This cast will perform the complete test to make sure the object inherits from the requested class type. This is the equivalent of a dynamic\+\_\+cast but much faster. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The object to try to cast into T type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A non-\/null pointer if the cast was successful. 
+\end{DoxyReturn}
+呼び出し関係図\+:
+% FIG 3
