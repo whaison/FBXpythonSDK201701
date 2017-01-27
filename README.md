@@ -45,24 +45,23 @@ Source code directory
 
 	
 	
-	-----------------------
-	mode
-	
-	Select the desired extraction mode	
+-------------------	
+mode
+-------------------
+
+＊ Select the desired extraction mode	
 	  多分、ドキュメント化の範囲。
-      ここでは、"Document entities only"にしてある。"All entities"とか"Include cross-referenced source code in the output"にチェックを入れると、ドキュメントに より多くのソース情報を含ませるハズ
-   Select programming language to optimize the result for
+      ここでは、"Document entities only"にしてある。"All entities"とか"Include cross-referenced source code in the output"にチェック    を入れると、ドキュメントに より多くのソース情報を含ませるハズ
+＊ Select programming language to optimize the result for
       ソースに書き込んだドキュメント形式を教えろと言っているハズ。
       ここでは、"Optimize for Java Output"としているのは、
 	  Special documentation blocks in Pythonここに設定ファイルに、
 	  "OPTIMIZE_OUTPUT_JAVA"って設定しろとあったから
 	  
 	  
-	  
-	  -------------------------------
-	  
+-------------------  -------------------------------
 	  Outputタブは、出力するドキュメントの種類を指定する。
-
+-------------------
     ここでは、以下のようにしてみた。
 
     HTML	チェック入れるとHTMLファイルを出力する。
@@ -74,12 +73,11 @@ Source code directory
 	
 	-------------------------------------
 	
-	
-    Diagramsタブは、クラス構造を図化する種類を指定する。
+＊ Diagramsタブは、クラス構造を図化する種類を指定する。
 
      ここでは、以下のようにしてみた。
 
-      Diagrams to generate	
+＊ Diagrams to generate	
 	            ここでは、上で折角 Graphviz 入れたので、"Use dot tool from the Graphviz package to generate"を選んでみた。
              図なんか要らねぇって場合は、"No diagrams"とか選べばOKのハズ
 
