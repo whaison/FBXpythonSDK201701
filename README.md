@@ -18,8 +18,13 @@ http://effbot.org/downloads#elementtree
 
 http://effbot.org/media/downloads/elementtree-1.2.6-20050316.tar.gz
 
-
-
+----------------------------------------------------------------------------
+Unofficial FBXpythonSDK201701  |
+ http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=26012646 |  http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxpythonsdk_win.exe | 
+ ユーザー名.github.io/リポジトリ名 |
+ whaison.github.io/FBXpythonSDK201701 |
+ https://whaison.github.io/FBXpythonSDK201701/FBXpythonSDKdoxygen01200/html/ |  https://whaison.github.io/FBXpythonSDK201701/FBXcppSDKdoxygen01200/html/
+----------------------------------------------------------------------------
 
 
 URL
