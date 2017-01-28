@@ -1,0 +1,199 @@
+\hypertarget{class_fbx_char_ptr_set}{}\section{Fbx\+Char\+Ptr\+Set クラス}
+\label{class_fbx_char_ptr_set}\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+
+
+{\ttfamily \#include $<$fbxcharptrset.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_char_ptr_set_a7f12f3a80a0e523ecb890aaa093c2aad}{Fbx\+Char\+Ptr\+Set} (int p\+Item\+Per\+Block=20)
+\item 
+\hyperlink{class_fbx_char_ptr_set_adbdbfd04a21ccc2d880de34d74f96771}{$\sim$\+Fbx\+Char\+Ptr\+Set} ()
+\begin{DoxyCompactList}\small\item\em Class destructor \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_char_ptr_set_a9efd684cdc4dbb93168c91fb717e89b1}{Add} (const char $\ast$p\+Reference, Fbx\+Handle p\+Item)
+\item 
+bool \hyperlink{class_fbx_char_ptr_set_afb7850c77043dd57c0fae1743ca01d29}{Remove} (const char $\ast$p\+Reference)
+\item 
+Fbx\+Handle \hyperlink{class_fbx_char_ptr_set_a626ae8a1c9406567c09755f467902b84}{Get} (const char $\ast$p\+Reference, int $\ast$P\+Index=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+Fbx\+Handle \& \hyperlink{class_fbx_char_ptr_set_a925f5012e7dd515e1d3c44584c97101d}{operator\mbox{[}$\,$\mbox{]}} (int p\+Index)
+\item 
+Fbx\+Handle \hyperlink{class_fbx_char_ptr_set_ab201112f7e7bbdad802978c451c41680}{Get\+From\+Index} (int p\+Index, const char $\ast$$\ast$p\+Reference=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_char_ptr_set_a2cfe1b7b1f73100b37decf29b3dba45e}{Remove\+From\+Index} (int p\+Index)
+\item 
+int \hyperlink{class_fbx_char_ptr_set_ab62ea2f88eed06e033e4ae7c516e96a0}{Get\+Count} () const
+\item 
+void \hyperlink{class_fbx_char_ptr_set_a54d7c3c3b927eb0040f0235b5aaff717}{Sort} ()
+\begin{DoxyCompactList}\small\item\em Sorts the array. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_char_ptr_set_a868b8f961a3e3f5d4c4c5f77009e5947}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the array. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_char_ptr_set_ad7da280af4a52c6b7aa3037fd7636f6f}{Set\+Case\+Sensitive} (bool p\+Is\+Case\+Sensitive)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class contains the data structure support for char pointer set. 
+
+ fbxcharptrset.\+h の 22 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a7f12f3a80a0e523ecb890aaa093c2aad}\label{class_fbx_char_ptr_set_a7f12f3a80a0e523ecb890aaa093c2aad}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Fbx\+Char\+Ptr\+Set()}{FbxCharPtrSet()}}
+{\footnotesize\ttfamily Fbx\+Char\+Ptr\+Set\+::\+Fbx\+Char\+Ptr\+Set (\begin{DoxyParamCaption}\item[{int}]{p\+Item\+Per\+Block = {\ttfamily 20} }\end{DoxyParamCaption})}
+
+Class constructor 
+\begin{DoxyParams}{引数}
+{\em p\+Item\+Per\+Block} & Number of item per block. Default is 20. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_adbdbfd04a21ccc2d880de34d74f96771}\label{class_fbx_char_ptr_set_adbdbfd04a21ccc2d880de34d74f96771}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!````~Fbx\+Char\+Ptr\+Set@{$\sim$\+Fbx\+Char\+Ptr\+Set}}
+\index{````~Fbx\+Char\+Ptr\+Set@{$\sim$\+Fbx\+Char\+Ptr\+Set}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Char\+Ptr\+Set()}{~FbxCharPtrSet()}}
+{\footnotesize\ttfamily Fbx\+Char\+Ptr\+Set\+::$\sim$\+Fbx\+Char\+Ptr\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Class destructor 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a9efd684cdc4dbb93168c91fb717e89b1}\label{class_fbx_char_ptr_set_a9efd684cdc4dbb93168c91fb717e89b1}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Add@{Add}}
+\index{Add@{Add}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Fbx\+Char\+Ptr\+Set\+::\+Add (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Reference,  }\item[{Fbx\+Handle}]{p\+Item }\end{DoxyParamCaption})}
+
+Add a new item. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference} & char pointer reference to the item. \\
+\hline
+{\em p\+Item} & Fbx\+Handle to the item. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a868b8f961a3e3f5d4c4c5f77009e5947}\label{class_fbx_char_ptr_set_a868b8f961a3e3f5d4c4c5f77009e5947}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Char\+Ptr\+Set\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the array. 
+
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a626ae8a1c9406567c09755f467902b84}\label{class_fbx_char_ptr_set_a626ae8a1c9406567c09755f467902b84}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily Fbx\+Handle Fbx\+Char\+Ptr\+Set\+::\+Get (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Reference,  }\item[{int $\ast$}]{P\+Index = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get an item\textquotesingle{}s reference. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference} & char reference to the item. \\
+\hline
+{\em P\+Index} & index to the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Fbx\+Handle to the item, N\+U\+LL if fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_ab62ea2f88eed06e033e4ae7c516e96a0}\label{class_fbx_char_ptr_set_ab62ea2f88eed06e033e4ae7c516e96a0}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Get\+Count@{Get\+Count}}
+\index{Get\+Count@{Get\+Count}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Get\+Count()}{GetCount()}}
+{\footnotesize\ttfamily int Fbx\+Char\+Ptr\+Set\+::\+Get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of item in the array. \begin{DoxyReturn}{戻り値}
+the number of element in the set. 
+\end{DoxyReturn}
+
+
+ fbxcharptrset.\+h の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_char_ptr_set_ab201112f7e7bbdad802978c451c41680}\label{class_fbx_char_ptr_set_ab201112f7e7bbdad802978c451c41680}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Get\+From\+Index@{Get\+From\+Index}}
+\index{Get\+From\+Index@{Get\+From\+Index}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Get\+From\+Index()}{GetFromIndex()}}
+{\footnotesize\ttfamily Fbx\+Handle Fbx\+Char\+Ptr\+Set\+::\+Get\+From\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const char $\ast$$\ast$}]{p\+Reference = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get an item\textquotesingle{}s reference from index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & index to the item. \\
+\hline
+{\em p\+Reference} & char reference to the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Fbx\+Handle to the item, N\+U\+LL if fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a925f5012e7dd515e1d3c44584c97101d}\label{class_fbx_char_ptr_set_a925f5012e7dd515e1d3c44584c97101d}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily Fbx\+Handle\& Fbx\+Char\+Ptr\+Set\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get an item\textquotesingle{}s reference from index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & index to the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Fbx\+Handle to the item, N\+U\+LL if fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_afb7850c77043dd57c0fae1743ca01d29}\label{class_fbx_char_ptr_set_afb7850c77043dd57c0fae1743ca01d29}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily bool Fbx\+Char\+Ptr\+Set\+::\+Remove (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Reference }\end{DoxyParamCaption})}
+
+Removes an item. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference} & char reference to the item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true if successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a2cfe1b7b1f73100b37decf29b3dba45e}\label{class_fbx_char_ptr_set_a2cfe1b7b1f73100b37decf29b3dba45e}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Remove\+From\+Index@{Remove\+From\+Index}}
+\index{Remove\+From\+Index@{Remove\+From\+Index}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Remove\+From\+Index()}{RemoveFromIndex()}}
+{\footnotesize\ttfamily void Fbx\+Char\+Ptr\+Set\+::\+Remove\+From\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Removes an item by index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & index to the item. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_char_ptr_set_ad7da280af4a52c6b7aa3037fd7636f6f}\label{class_fbx_char_ptr_set_ad7da280af4a52c6b7aa3037fd7636f6f}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Set\+Case\+Sensitive@{Set\+Case\+Sensitive}}
+\index{Set\+Case\+Sensitive@{Set\+Case\+Sensitive}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Set\+Case\+Sensitive()}{SetCaseSensitive()}}
+{\footnotesize\ttfamily void Fbx\+Char\+Ptr\+Set\+::\+Set\+Case\+Sensitive (\begin{DoxyParamCaption}\item[{bool}]{p\+Is\+Case\+Sensitive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcharptrset.\+h の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_char_ptr_set_a54d7c3c3b927eb0040f0235b5aaff717}\label{class_fbx_char_ptr_set_a54d7c3c3b927eb0040f0235b5aaff717}} 
+\index{Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}!Sort@{Sort}}
+\index{Sort@{Sort}!Fbx\+Char\+Ptr\+Set@{Fbx\+Char\+Ptr\+Set}}
+\subsubsection{\texorpdfstring{Sort()}{Sort()}}
+{\footnotesize\ttfamily void Fbx\+Char\+Ptr\+Set\+::\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts the array. 
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxcharptrset_8h}{fbxcharptrset.\+h}\end{DoxyCompactItemize}

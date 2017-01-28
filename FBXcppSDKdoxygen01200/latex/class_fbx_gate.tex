@@ -1,0 +1,95 @@
+\hypertarget{class_fbx_gate}{}\section{Fbx\+Gate クラス}
+\label{class_fbx_gate}\index{Fbx\+Gate@{Fbx\+Gate}}
+
+
+{\ttfamily \#include $<$fbxsync.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_gate_a0bfa381894e420784ea2cee86d5f8662}{Fbx\+Gate} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_gate_a588ebab279f8bd182bc0a1aeb6001554}{$\sim$\+Fbx\+Gate} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_gate_acd9a45eb0ef7d06f2a4a7f5954555310}{Open} ()
+\item 
+void \hyperlink{class_fbx_gate_aa91ba9c41757e0065d400f254a5175ee}{Close} ()
+\item 
+bool \hyperlink{class_fbx_gate_a96baa45cb4fa4a655201355601b6bc47}{Is\+Open} ()
+\item 
+bool \hyperlink{class_fbx_gate_ad3d9e530f43a6f446c2d09364153c918}{Wait} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A gate thread locking mechanism is very similar to a semaphore, except that when it is opened, any further call to wait will not wait until it is closed. It is generally used to block multiple threads until one of them open the gate to release them all. 
+
+ fbxsync.\+h の 123 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_gate_a0bfa381894e420784ea2cee86d5f8662}\label{class_fbx_gate_a0bfa381894e420784ea2cee86d5f8662}} 
+\index{Fbx\+Gate@{Fbx\+Gate}!Fbx\+Gate@{Fbx\+Gate}}
+\index{Fbx\+Gate@{Fbx\+Gate}!Fbx\+Gate@{Fbx\+Gate}}
+\subsubsection{\texorpdfstring{Fbx\+Gate()}{FbxGate()}}
+{\footnotesize\ttfamily Fbx\+Gate\+::\+Fbx\+Gate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor 
+
+\mbox{\Hypertarget{class_fbx_gate_a588ebab279f8bd182bc0a1aeb6001554}\label{class_fbx_gate_a588ebab279f8bd182bc0a1aeb6001554}} 
+\index{Fbx\+Gate@{Fbx\+Gate}!````~Fbx\+Gate@{$\sim$\+Fbx\+Gate}}
+\index{````~Fbx\+Gate@{$\sim$\+Fbx\+Gate}!Fbx\+Gate@{Fbx\+Gate}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Gate()}{~FbxGate()}}
+{\footnotesize\ttfamily virtual Fbx\+Gate\+::$\sim$\+Fbx\+Gate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_gate_aa91ba9c41757e0065d400f254a5175ee}\label{class_fbx_gate_aa91ba9c41757e0065d400f254a5175ee}} 
+\index{Fbx\+Gate@{Fbx\+Gate}!Close@{Close}}
+\index{Close@{Close}!Fbx\+Gate@{Fbx\+Gate}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily void Fbx\+Gate\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the gate so that the next time a thread call \hyperlink{class_fbx_gate_ad3d9e530f43a6f446c2d09364153c918}{Wait()} it will be blocked. \mbox{\Hypertarget{class_fbx_gate_a96baa45cb4fa4a655201355601b6bc47}\label{class_fbx_gate_a96baa45cb4fa4a655201355601b6bc47}} 
+\index{Fbx\+Gate@{Fbx\+Gate}!Is\+Open@{Is\+Open}}
+\index{Is\+Open@{Is\+Open}!Fbx\+Gate@{Fbx\+Gate}}
+\subsubsection{\texorpdfstring{Is\+Open()}{IsOpen()}}
+{\footnotesize\ttfamily bool Fbx\+Gate\+::\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Check if the gate is open. \begin{DoxyReturn}{戻り値}
+True if the gate is open, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_gate_acd9a45eb0ef7d06f2a4a7f5954555310}\label{class_fbx_gate_acd9a45eb0ef7d06f2a4a7f5954555310}} 
+\index{Fbx\+Gate@{Fbx\+Gate}!Open@{Open}}
+\index{Open@{Open}!Fbx\+Gate@{Fbx\+Gate}}
+\subsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily void Fbx\+Gate\+::\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Open the gate to release all threads waiting. \begin{DoxyRemark}{注釈}
+All waiting threads will unblock until the gate is closed. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_gate_ad3d9e530f43a6f446c2d09364153c918}\label{class_fbx_gate_ad3d9e530f43a6f446c2d09364153c918}} 
+\index{Fbx\+Gate@{Fbx\+Gate}!Wait@{Wait}}
+\index{Wait@{Wait}!Fbx\+Gate@{Fbx\+Gate}}
+\subsubsection{\texorpdfstring{Wait()}{Wait()}}
+{\footnotesize\ttfamily bool Fbx\+Gate\+::\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait indefinitely until the gate open. \begin{DoxyReturn}{戻り値}
+True if the wait completed without errors. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the gate is already open, this function returns immediately. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/sync/\hyperlink{fbxsync_8h}{fbxsync.\+h}\end{DoxyCompactItemize}

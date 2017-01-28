@@ -1,0 +1,547 @@
+\hypertarget{fbxlayer_8h}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/include/fbxsdk/scene/geometry/fbxlayer.h ファイル}
+\label{fbxlayer_8h}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/fbxlayer.\+h@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/fbxlayer.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxdatatypes.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxstream.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/scene/shading/fbxsurfacematerial.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/scene/shading/fbxtexture.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element}
+\item 
+class \hyperlink{class_lock_access_status}{Lock\+Access\+Status}
+\item 
+class \hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array}
+\item 
+struct \hyperlink{struct_fbx_layer_element_array_read_lock}{Fbx\+Layer\+Element\+Array\+Read\+Lock$<$ T $>$}
+\item 
+class \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template$<$ T $>$}
+\item 
+class \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template$<$ Type $>$}
+\item 
+class \hyperlink{class_fbx_layer_element_normal}{Fbx\+Layer\+Element\+Normal}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping Normals to a geometry. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_binormal}{Fbx\+Layer\+Element\+Binormal}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping Binormals to a geometry. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_tangent}{Fbx\+Layer\+Element\+Tangent}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping Tangents to a geometry. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material}
+\item 
+class \hyperlink{class_fbx_layer_element_material_1_1_layer_element_array_proxy}{Fbx\+Layer\+Element\+Material\+::\+Layer\+Element\+Array\+Proxy}
+\item 
+class \hyperlink{class_fbx_layer_element_polygon_group}{Fbx\+Layer\+Element\+Polygon\+Group}
+\begin{DoxyCompactList}\small\item\em Layer element for grouping related polygons together. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping U\+Vs to a geometry. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_vertex_color}{Fbx\+Layer\+Element\+Vertex\+Color}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping Vertex Colors to a geometry. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping custom user data to a geometry. This layer element is different from the other types of layer elements in that it has multiple direct arrays. There is one array for each user data attribute. Each array is indexed by the index array. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer_element_smoothing}{Fbx\+Layer\+Element\+Smoothing}
+\item 
+class \hyperlink{class_fbx_layer_element_crease}{Fbx\+Layer\+Element\+Crease}
+\item 
+class \hyperlink{class_fbx_layer_element_hole}{Fbx\+Layer\+Element\+Hole}
+\item 
+class \hyperlink{class_fbx_layer_element_visibility}{Fbx\+Layer\+Element\+Visibility}
+\item 
+class \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}
+\begin{DoxyCompactList}\small\item\em Layer element for mapping Textures to a geometry. This class is deprecated. \end{DoxyCompactList}\item 
+class \hyperlink{class_fbx_layer}{Fbx\+Layer}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxlayer_8h_adfce7b9de051c86e12762fca61249040}{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE}(class\+Desc)
+\item 
+\#define \hyperlink{fbxlayer_8h_a42b3680476fe346a09056be080837af4}{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE}(l\+Layer\+Index)~for((l\+Layer\+Index)=0;(l\+Layer\+Index)$<$\hyperlink{class_fbx_layer_element_ae7a09ea6aa90f96d37a9e161b9f54094}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Count};(l\+Layer\+Index)++)
+\item 
+\#define \hyperlink{fbxlayer_8h_a75554677440241d66a548f956a8ed148}{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE}(l\+Layer\+Index)~for((l\+Layer\+Index)=0;(l\+Layer\+Index)$<$\hyperlink{class_fbx_layer_element_a97147949d75646270ceee636624c0bba}{Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Count};(l\+Layer\+Index)++)
+\item 
+\#define \hyperlink{fbxlayer_8h_a9f52c42087f7d856f8b5be161b6dffee}{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}(Element\+Type)~(int(Element\+Type)-\/\hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Start\+Index})
+\item 
+\#define \hyperlink{fbxlayer_8h_a5d1f385ea18f6973a95048199c20af6f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}(Texture\+Index)~(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}((Texture\+Index)+\hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Start\+Index}))
+\item 
+\#define \hyperlink{fbxlayer_8h_ac13fd532711238459b40c04c2aa6915e}{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}(Element\+Type)~(int(Element\+Type)-\/\hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Start\+Index})
+\item 
+\#define \hyperlink{fbxlayer_8h_abd03639f472f399e34a61ca199fe8cff}{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}(Index)~(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}((Index)+\hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Start\+Index}))
+\end{DoxyCompactItemize}
+\subsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef Fbx\+Handle $\ast$ \hyperlink{fbxlayer_8h_aea897b32af67510deacaf3d1f5d7d99f}{Fbx\+Ref\+Ptr}
+\item 
+typedef \hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array} $\ast$ \hyperlink{fbxlayer_8h_a16a10f4ba5c3f69afaf2ab2051695c4c}{Fbx\+Layer\+Element\+Array\+Ptr}
+\item 
+typedef \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ \hyperlink{fbxlayer_8h_a0499a668eeb0c50a15e4a420ecb71ccb}{Fbx\+Surface\+Material\+Ptr}
+\item 
+typedef \hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$ \hyperlink{fbxlayer_8h_a8b52560d149732e14eeb059bc4fd22dc}{Fbx\+Texture\+Ptr}
+\item 
+typedef \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} \hyperlink{fbxlayer_8h_a1d632d51022467acafa043cb8f431daf}{Fbx\+Geometry\+Element}
+\item 
+typedef \hyperlink{class_fbx_layer_element_normal}{Fbx\+Layer\+Element\+Normal} \hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal}
+\item 
+typedef \hyperlink{class_fbx_layer_element_binormal}{Fbx\+Layer\+Element\+Binormal} \hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal}
+\item 
+typedef \hyperlink{class_fbx_layer_element_tangent}{Fbx\+Layer\+Element\+Tangent} \hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent}
+\item 
+typedef \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material} \hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material}
+\item 
+typedef \hyperlink{class_fbx_layer_element_polygon_group}{Fbx\+Layer\+Element\+Polygon\+Group} \hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group}
+\item 
+typedef \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}
+\item 
+typedef \hyperlink{class_fbx_layer_element_vertex_color}{Fbx\+Layer\+Element\+Vertex\+Color} \hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color}
+\item 
+typedef \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} \hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data}
+\item 
+typedef \hyperlink{class_fbx_layer_element_smoothing}{Fbx\+Layer\+Element\+Smoothing} \hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing}
+\item 
+typedef \hyperlink{class_fbx_layer_element_crease}{Fbx\+Layer\+Element\+Crease} \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}
+\item 
+typedef \hyperlink{class_fbx_layer_element_hole}{Fbx\+Layer\+Element\+Hole} \hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole}
+\item 
+typedef \hyperlink{class_fbx_layer_element_visibility}{Fbx\+Layer\+Element\+Visibility} \hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \hyperlink{fbxlayer_8h_a729662a11e394d8121317d19cb7c5fab}{Fbx\+Type\+Of} (const \hyperlink{fbxlayer_8h_aea897b32af67510deacaf3d1f5d7d99f}{Fbx\+Ref\+Ptr} \&)
+\item 
+\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \hyperlink{fbxlayer_8h_a4933625fa9627b18cb0406ac6e13837f}{Fbx\+Type\+Of} (const \hyperlink{fbxlayer_8h_a16a10f4ba5c3f69afaf2ab2051695c4c}{Fbx\+Layer\+Element\+Array\+Ptr} \&)
+\item 
+\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \hyperlink{fbxlayer_8h_a9c7873665d8830595ca4ec19b958b54a}{Fbx\+Type\+Of} (const \hyperlink{fbxlayer_8h_a0499a668eeb0c50a15e4a420ecb71ccb}{Fbx\+Surface\+Material\+Ptr} \&)
+\item 
+\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \hyperlink{fbxlayer_8h_a852abf154cf9f86ff38f35032470a3b1}{Fbx\+Type\+Of} (const \hyperlink{fbxlayer_8h_a8b52560d149732e14eeb059bc4fd22dc}{Fbx\+Texture\+Ptr} \&)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} int \hyperlink{fbxlayer_8h_a22c0aa2b31d2957c72537366f30152db}{Remap\+Index\+Array\+To} (\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} $\ast$p\+Layer\+El, \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} p\+New\+Mapping, \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$p\+Index\+Array)
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ \& \hyperlink{fbxlayer_8h_abbdc57428c6f4252c955489e8b8b43dc}{Fbx\+Get\+Direct\+Array} (\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} $\ast$p\+Layer\+Element, int p\+Index, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ const  \& \hyperlink{fbxlayer_8h_a608877488c1de24b1bb9b4fc844203dd}{Fbx\+Get\+Direct\+Array} (\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const $\ast$p\+Layer\+Element, int p\+Index, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ \& \hyperlink{fbxlayer_8h_ae006241bf69d4b959ddc7ad9d320186c}{Fbx\+Get\+Direct\+Array} (\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} $\ast$p\+Layer\+Element, const char $\ast$p\+Name, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+{\footnotesize template$<$class T $>$ }\\\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ const  \& \hyperlink{fbxlayer_8h_aa92845094255f24faf996ce304c4289c}{Fbx\+Get\+Direct\+Array} (\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const $\ast$p\+Layer\+Element, const char $\ast$p\+Name, bool $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxlayer_8h_a75554677440241d66a548f956a8ed148}\label{fbxlayer_8h_a75554677440241d66a548f956a8ed148}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE}{FBXSDK\_FOR\_EACH\_NON\_TEXTURE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+RE(\begin{DoxyParamCaption}\item[{}]{l\+Layer\+Index }\end{DoxyParamCaption})~for((l\+Layer\+Index)=0;(l\+Layer\+Index)$<$\hyperlink{class_fbx_layer_element_a97147949d75646270ceee636624c0bba}{Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Count};(l\+Layer\+Index)++)}
+
+Utility macro for iterating over non-\/texture layer elements 
+
+ fbxlayer.\+h の 2756 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a42b3680476fe346a09056be080837af4}\label{fbxlayer_8h_a42b3680476fe346a09056be080837af4}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE}{FBXSDK\_FOR\_EACH\_TEXTURE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+F\+O\+R\+\_\+\+E\+A\+C\+H\+\_\+\+T\+E\+X\+T\+U\+RE(\begin{DoxyParamCaption}\item[{}]{l\+Layer\+Index }\end{DoxyParamCaption})~for((l\+Layer\+Index)=0;(l\+Layer\+Index)$<$\hyperlink{class_fbx_layer_element_ae7a09ea6aa90f96d37a9e161b9f54094}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Count};(l\+Layer\+Index)++)}
+
+Utility macro for iterating over texture layer elements 
+
+ fbxlayer.\+h の 2751 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_adfce7b9de051c86e12762fca61249040}\label{fbxlayer_8h_adfce7b9de051c86e12762fca61249040}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_LAYER\_ELEMENT\_CREATE\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{class\+Desc }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\hyperlink{fbxnew_8h_a4c4a21bb14cb4509efd5113b1b9d372c}{FBXSDK\_FRIEND\_NEW}();        \(\backslash\)
+    static Fbx##classDesc* Create(\hyperlink{class_fbx_layer_container}{FbxLayerContainer}* pOwner, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* pName);
+\end{DoxyCode}
+
+
+ fbxlayer.\+h の 1294 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_ac13fd532711238459b40c04c2aa6915e}\label{fbxlayer_8h_ac13fd532711238459b40c04c2aa6915e}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX@{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX@{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}{FBXSDK\_NON\_TEXTURE\_INDEX}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{Element\+Type }\end{DoxyParamCaption})~(int(Element\+Type)-\/\hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Start\+Index})}
+
+Utility macro for getting non-\/texture layer element index by type 
+
+ fbxlayer.\+h の 2771 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_abd03639f472f399e34a61ca199fe8cff}\label{fbxlayer_8h_abd03639f472f399e34a61ca199fe8cff}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE@{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE@{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}{FBXSDK\_NON\_TEXTURE\_TYPE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+N\+O\+N\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{Index }\end{DoxyParamCaption})~(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}((Index)+\hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Start\+Index}))}
+
+Utility macro for getting non-\/texture layer element type by index 
+
+ fbxlayer.\+h の 2776 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a9f52c42087f7d856f8b5be161b6dffee}\label{fbxlayer_8h_a9f52c42087f7d856f8b5be161b6dffee}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX@{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX@{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX}{FBXSDK\_TEXTURE\_INDEX}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+I\+N\+D\+EX(\begin{DoxyParamCaption}\item[{}]{Element\+Type }\end{DoxyParamCaption})~(int(Element\+Type)-\/\hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Start\+Index})}
+
+Utility macro for getting texture layer element index by type 
+
+ fbxlayer.\+h の 2761 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a5d1f385ea18f6973a95048199c20af6f}\label{fbxlayer_8h_a5d1f385ea18f6973a95048199c20af6f}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE@{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE}{FBXSDK\_TEXTURE\_TYPE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+T\+Y\+PE(\begin{DoxyParamCaption}\item[{}]{Texture\+Index }\end{DoxyParamCaption})~(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}((Texture\+Index)+\hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Start\+Index}))}
+
+Utility macro for getting texture layer element type by index 
+
+ fbxlayer.\+h の 2766 行目に定義があります。
+
+
+
+\subsection{型定義詳解}
+\mbox{\Hypertarget{fbxlayer_8h_a1d632d51022467acafa043cb8f431daf}\label{fbxlayer_8h_a1d632d51022467acafa043cb8f431daf}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element@{Fbx\+Geometry\+Element}}
+\index{Fbx\+Geometry\+Element@{Fbx\+Geometry\+Element}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element}{FbxGeometryElement}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} \hyperlink{fbxlayer_8h_a1d632d51022467acafa043cb8f431daf}{Fbx\+Geometry\+Element}}
+
+Defines geometry element classes. A geometry element describes how the geometry element is mapped to a geometry surface and how the mapping information is arranged in memory. \begin{DoxyRemark}{注釈}
+Geometry elements are independent of layer elements and hide the complexity of layers. 
+\begin{DoxyCode}
+\hyperlink{class_fbx_layer_element_u_v}{FbxGeometryElementUV}* lUVs = lMesh->GetElementUV(\textcolor{stringliteral}{"map1"});
+\hyperlink{class_fbx_layer_element_array_template}{FbxGeometryElementUV::DirectArrayType} lDirectArray = lUVs->
+      \hyperlink{class_fbx_layer_element_template_a42afd6d78d902570d7b2724cb0336226}{GetDirectArray}();
+\textcolor{keywordtype}{int} lDirectUVCount = lDirectArray.\hyperlink{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}{GetCount}();
+\hyperlink{class_fbx_vector2}{FbxVector2} lFirstUV = lDirectArray[0];
+\end{DoxyCode}
+ 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} 
+\end{DoxySeeAlso}
+
+
+ fbxlayer.\+h の 2790 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}\label{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Binormal@{Fbx\+Geometry\+Element\+Binormal}}
+\index{Fbx\+Geometry\+Element\+Binormal@{Fbx\+Geometry\+Element\+Binormal}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Binormal}{FbxGeometryElementBinormal}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_binormal}{Fbx\+Layer\+Element\+Binormal} \hyperlink{fbxlayer_8h_a066e30a64eb051458583b656a651e90b}{Fbx\+Geometry\+Element\+Binormal}}
+
+
+
+ fbxlayer.\+h の 2792 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}\label{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Crease@{Fbx\+Geometry\+Element\+Crease}}
+\index{Fbx\+Geometry\+Element\+Crease@{Fbx\+Geometry\+Element\+Crease}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Crease}{FbxGeometryElementCrease}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_crease}{Fbx\+Layer\+Element\+Crease} \hyperlink{fbxlayer_8h_aa1db71d39153856548f192cf52aa2cc5}{Fbx\+Geometry\+Element\+Crease}}
+
+
+
+ fbxlayer.\+h の 2800 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}\label{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Hole@{Fbx\+Geometry\+Element\+Hole}}
+\index{Fbx\+Geometry\+Element\+Hole@{Fbx\+Geometry\+Element\+Hole}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Hole}{FbxGeometryElementHole}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_hole}{Fbx\+Layer\+Element\+Hole} \hyperlink{fbxlayer_8h_ac66f768aa149c016447f88213c374e25}{Fbx\+Geometry\+Element\+Hole}}
+
+
+
+ fbxlayer.\+h の 2801 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}\label{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Material@{Fbx\+Geometry\+Element\+Material}}
+\index{Fbx\+Geometry\+Element\+Material@{Fbx\+Geometry\+Element\+Material}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Material}{FbxGeometryElementMaterial}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material} \hyperlink{fbxlayer_8h_a1a779f3f614dbf0024c07f4a1d8332f4}{Fbx\+Geometry\+Element\+Material}}
+
+
+
+ fbxlayer.\+h の 2794 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}\label{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Normal@{Fbx\+Geometry\+Element\+Normal}}
+\index{Fbx\+Geometry\+Element\+Normal@{Fbx\+Geometry\+Element\+Normal}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Normal}{FbxGeometryElementNormal}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_normal}{Fbx\+Layer\+Element\+Normal} \hyperlink{fbxlayer_8h_a54a5aaec6f1979871fe9d93dd2d246c9}{Fbx\+Geometry\+Element\+Normal}}
+
+
+
+ fbxlayer.\+h の 2791 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}\label{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Polygon\+Group@{Fbx\+Geometry\+Element\+Polygon\+Group}}
+\index{Fbx\+Geometry\+Element\+Polygon\+Group@{Fbx\+Geometry\+Element\+Polygon\+Group}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Polygon\+Group}{FbxGeometryElementPolygonGroup}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_polygon_group}{Fbx\+Layer\+Element\+Polygon\+Group} \hyperlink{fbxlayer_8h_aa5c7fb92a1c396014bf2ced7797a95a9}{Fbx\+Geometry\+Element\+Polygon\+Group}}
+
+
+
+ fbxlayer.\+h の 2795 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}\label{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Smoothing@{Fbx\+Geometry\+Element\+Smoothing}}
+\index{Fbx\+Geometry\+Element\+Smoothing@{Fbx\+Geometry\+Element\+Smoothing}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Smoothing}{FbxGeometryElementSmoothing}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_smoothing}{Fbx\+Layer\+Element\+Smoothing} \hyperlink{fbxlayer_8h_a6a651170dec994ac83db90645d9ecfd3}{Fbx\+Geometry\+Element\+Smoothing}}
+
+
+
+ fbxlayer.\+h の 2799 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}\label{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Tangent@{Fbx\+Geometry\+Element\+Tangent}}
+\index{Fbx\+Geometry\+Element\+Tangent@{Fbx\+Geometry\+Element\+Tangent}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Tangent}{FbxGeometryElementTangent}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_tangent}{Fbx\+Layer\+Element\+Tangent} \hyperlink{fbxlayer_8h_a291cacd8b247483cc24704c8f49087a7}{Fbx\+Geometry\+Element\+Tangent}}
+
+
+
+ fbxlayer.\+h の 2793 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}\label{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+User\+Data@{Fbx\+Geometry\+Element\+User\+Data}}
+\index{Fbx\+Geometry\+Element\+User\+Data@{Fbx\+Geometry\+Element\+User\+Data}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+User\+Data}{FbxGeometryElementUserData}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} \hyperlink{fbxlayer_8h_acef498b248e323a189b5ccbf478b0b41}{Fbx\+Geometry\+Element\+User\+Data}}
+
+
+
+ fbxlayer.\+h の 2798 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}\label{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+UV@{Fbx\+Geometry\+Element\+UV}}
+\index{Fbx\+Geometry\+Element\+UV@{Fbx\+Geometry\+Element\+UV}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+UV}{FbxGeometryElementUV}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} \hyperlink{fbxlayer_8h_a12413531f4bb2c482e3ddbd59e3417e5}{Fbx\+Geometry\+Element\+UV}}
+
+
+
+ fbxlayer.\+h の 2796 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a4baddeaf720350758d230973d114f593}\label{fbxlayer_8h_a4baddeaf720350758d230973d114f593}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Vertex\+Color@{Fbx\+Geometry\+Element\+Vertex\+Color}}
+\index{Fbx\+Geometry\+Element\+Vertex\+Color@{Fbx\+Geometry\+Element\+Vertex\+Color}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Vertex\+Color}{FbxGeometryElementVertexColor}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_vertex_color}{Fbx\+Layer\+Element\+Vertex\+Color} \hyperlink{fbxlayer_8h_a4baddeaf720350758d230973d114f593}{Fbx\+Geometry\+Element\+Vertex\+Color}}
+
+
+
+ fbxlayer.\+h の 2797 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}\label{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Geometry\+Element\+Visibility@{Fbx\+Geometry\+Element\+Visibility}}
+\index{Fbx\+Geometry\+Element\+Visibility@{Fbx\+Geometry\+Element\+Visibility}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Element\+Visibility}{FbxGeometryElementVisibility}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_visibility}{Fbx\+Layer\+Element\+Visibility} \hyperlink{fbxlayer_8h_a98f6c16a3021e9e04b0352f652eac2a1}{Fbx\+Geometry\+Element\+Visibility}}
+
+
+
+ fbxlayer.\+h の 2802 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a16a10f4ba5c3f69afaf2ab2051695c4c}\label{fbxlayer_8h_a16a10f4ba5c3f69afaf2ab2051695c4c}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Layer\+Element\+Array\+Ptr@{Fbx\+Layer\+Element\+Array\+Ptr}}
+\index{Fbx\+Layer\+Element\+Array\+Ptr@{Fbx\+Layer\+Element\+Array\+Ptr}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element\+Array\+Ptr}{FbxLayerElementArrayPtr}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array}$\ast$ \hyperlink{fbxlayer_8h_a16a10f4ba5c3f69afaf2ab2051695c4c}{Fbx\+Layer\+Element\+Array\+Ptr}}
+
+
+
+ fbxlayer.\+h の 318 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_aea897b32af67510deacaf3d1f5d7d99f}\label{fbxlayer_8h_aea897b32af67510deacaf3d1f5d7d99f}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Ref\+Ptr@{Fbx\+Ref\+Ptr}}
+\index{Fbx\+Ref\+Ptr@{Fbx\+Ref\+Ptr}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Ref\+Ptr}{FbxRefPtr}}
+{\footnotesize\ttfamily typedef Fbx\+Handle$\ast$ \hyperlink{fbxlayer_8h_aea897b32af67510deacaf3d1f5d7d99f}{Fbx\+Ref\+Ptr}}
+
+
+
+ fbxlayer.\+h の 317 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a0499a668eeb0c50a15e4a420ecb71ccb}\label{fbxlayer_8h_a0499a668eeb0c50a15e4a420ecb71ccb}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Surface\+Material\+Ptr@{Fbx\+Surface\+Material\+Ptr}}
+\index{Fbx\+Surface\+Material\+Ptr@{Fbx\+Surface\+Material\+Ptr}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Surface\+Material\+Ptr}{FbxSurfaceMaterialPtr}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}$\ast$ \hyperlink{fbxlayer_8h_a0499a668eeb0c50a15e4a420ecb71ccb}{Fbx\+Surface\+Material\+Ptr}}
+
+
+
+ fbxlayer.\+h の 319 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a8b52560d149732e14eeb059bc4fd22dc}\label{fbxlayer_8h_a8b52560d149732e14eeb059bc4fd22dc}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Texture\+Ptr@{Fbx\+Texture\+Ptr}}
+\index{Fbx\+Texture\+Ptr@{Fbx\+Texture\+Ptr}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Texture\+Ptr}{FbxTexturePtr}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_texture}{Fbx\+Texture}$\ast$ \hyperlink{fbxlayer_8h_a8b52560d149732e14eeb059bc4fd22dc}{Fbx\+Texture\+Ptr}}
+
+
+
+ fbxlayer.\+h の 320 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxlayer_8h_abbdc57428c6f4252c955489e8b8b43dc}\label{fbxlayer_8h_abbdc57428c6f4252c955489e8b8b43dc}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}}
+\index{Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Get\+Direct\+Array()}{FbxGetDirectArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ \& Fbx\+Get\+Direct\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} $\ast$}]{p\+Layer\+Element,  }\item[{int}]{p\+Index,  }\item[{bool $\ast$}]{p\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the direct array with the given attribute index. The template type must match the attribute type at p\+Index. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Element} & The layer element whose direct array to return. \\
+\hline
+{\em p\+Index} & The direct array index \\
+\hline
+{\em p\+Status} & Will be set to {\ttfamily false} if accessing the direct array encounters an error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If p\+Status receives {\ttfamily true}, the direct array at the given index is returned. Otherwise the return value is {\ttfamily undefined}. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 1971 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a608877488c1de24b1bb9b4fc844203dd}\label{fbxlayer_8h_a608877488c1de24b1bb9b4fc844203dd}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}}
+\index{Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Get\+Direct\+Array()}{FbxGetDirectArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ const  \& Fbx\+Get\+Direct\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const $\ast$}]{p\+Layer\+Element,  }\item[{int}]{p\+Index,  }\item[{bool $\ast$}]{p\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the direct array with the given attribute index. The template type must match the attribute type at p\+Index. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Element} & The layer element whose direct array to return. \\
+\hline
+{\em p\+Index} & The direct array index \\
+\hline
+{\em p\+Status} & Will be set to {\ttfamily false} if accessing the direct array encounters an error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If p\+Status receives {\ttfamily true}, the direct array at the given index is returned. Otherwise the return value is {\ttfamily undefined}. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 1984 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_ae006241bf69d4b959ddc7ad9d320186c}\label{fbxlayer_8h_ae006241bf69d4b959ddc7ad9d320186c}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}}
+\index{Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Get\+Direct\+Array()}{FbxGetDirectArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ \& Fbx\+Get\+Direct\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} $\ast$}]{p\+Layer\+Element,  }\item[{const char $\ast$}]{p\+Name,  }\item[{bool $\ast$}]{p\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the direct array with the given attribute name.\+The template type must match the attribute type with p\+Name. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Element} & The layer element whose direct array to return. \\
+\hline
+{\em p\+Name} & The given attribute name. \\
+\hline
+{\em p\+Status} & Will be set to false if accessing the direct array encounters an error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If p\+Status receives {\ttfamily true}, the direct array at the given index is returned. Otherwise the return value is {\ttfamily undefined}. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 1998 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_aa92845094255f24faf996ce304c4289c}\label{fbxlayer_8h_aa92845094255f24faf996ce304c4289c}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}}
+\index{Fbx\+Get\+Direct\+Array@{Fbx\+Get\+Direct\+Array}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Get\+Direct\+Array()}{FbxGetDirectArray()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ T $>$ const  \& Fbx\+Get\+Direct\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data} const $\ast$}]{p\+Layer\+Element,  }\item[{const char $\ast$}]{p\+Name,  }\item[{bool $\ast$}]{p\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the direct array with the given attribute name.\+The template type must match the attribute type with p\+Name. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Element} & The layer element whose direct array to return. \\
+\hline
+{\em p\+Name} & The given attribute name. \\
+\hline
+{\em p\+Status} & Will be set to false if accessing the direct array encounters an error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If p\+Status receives {\ttfamily true}, the direct array at the given index is returned. Otherwise the return value is {\ttfamily undefined}. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 2011 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a729662a11e394d8121317d19cb7c5fab}\label{fbxlayer_8h_a729662a11e394d8121317d19cb7c5fab}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Type\+Of@{Fbx\+Type\+Of}}
+\index{Fbx\+Type\+Of@{Fbx\+Type\+Of}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Type\+Of()}{FbxTypeOf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} Fbx\+Type\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxlayer_8h_aea897b32af67510deacaf3d1f5d7d99f}{Fbx\+Ref\+Ptr} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 322 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a4933625fa9627b18cb0406ac6e13837f}\label{fbxlayer_8h_a4933625fa9627b18cb0406ac6e13837f}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Type\+Of@{Fbx\+Type\+Of}}
+\index{Fbx\+Type\+Of@{Fbx\+Type\+Of}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Type\+Of()}{FbxTypeOf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} Fbx\+Type\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxlayer_8h_a16a10f4ba5c3f69afaf2ab2051695c4c}{Fbx\+Layer\+Element\+Array\+Ptr} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 323 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a9c7873665d8830595ca4ec19b958b54a}\label{fbxlayer_8h_a9c7873665d8830595ca4ec19b958b54a}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Type\+Of@{Fbx\+Type\+Of}}
+\index{Fbx\+Type\+Of@{Fbx\+Type\+Of}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Type\+Of()}{FbxTypeOf()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} Fbx\+Type\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxlayer_8h_a0499a668eeb0c50a15e4a420ecb71ccb}{Fbx\+Surface\+Material\+Ptr} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 324 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a852abf154cf9f86ff38f35032470a3b1}\label{fbxlayer_8h_a852abf154cf9f86ff38f35032470a3b1}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Fbx\+Type\+Of@{Fbx\+Type\+Of}}
+\index{Fbx\+Type\+Of@{Fbx\+Type\+Of}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Type\+Of()}{FbxTypeOf()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} Fbx\+Type\+Of (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxlayer_8h_a8b52560d149732e14eeb059bc4fd22dc}{Fbx\+Texture\+Ptr} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 325 行目に定義があります。
+
+\mbox{\Hypertarget{fbxlayer_8h_a22c0aa2b31d2957c72537366f30152db}\label{fbxlayer_8h_a22c0aa2b31d2957c72537366f30152db}} 
+\index{fbxlayer.\+h@{fbxlayer.\+h}!Remap\+Index\+Array\+To@{Remap\+Index\+Array\+To}}
+\index{Remap\+Index\+Array\+To@{Remap\+Index\+Array\+To}!fbxlayer.\+h@{fbxlayer.\+h}}
+\subsubsection{\texorpdfstring{Remap\+Index\+Array\+To()}{RemapIndexArrayTo()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} int Remap\+Index\+Array\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} $\ast$}]{p\+Layer\+El,  }\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}]{p\+New\+Mapping,  }\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$}]{p\+Index\+Array }\end{DoxyParamCaption})}
+
+Remap the index array to a new E\+Mapping\+Mode 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+El} & The layer element to remap \\
+\hline
+{\em p\+New\+Mapping} & The new mapping mode \\
+\hline
+{\em p\+Index\+Array} & The index array to modify \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+return -\/1 if the layer element is \hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca5fc55c27657e58417ca58fa80aad38a7}{Fbx\+Layer\+Element\+::e\+Direct} 0 if layer element or index array is {\ttfamily N\+U\+LL} and 1 if the remap is successful 
+\end{DoxyReturn}

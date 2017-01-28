@@ -1,0 +1,130 @@
+\hypertarget{class_fbx_display_layer}{}\section{Fbx\+Display\+Layer クラス}
+\label{class_fbx_display_layer}\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+
+
+{\ttfamily \#include $<$fbxdisplaylayer.\+h$>$}
+
+Fbx\+Display\+Layer の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_fbx_display_layer}
+\end{center}
+\end{figure}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_display_layer_ab43c4c4514ffc390a0ae1d7997a2bf06}{Color}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_display_layer_a06b26abb009bd57c5472c134c3dff9e1}{Show}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_display_layer_abbda272dffabbf9c54947efefcce141a}{Freeze}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_display_layer_ae1e076e8613ebc76150369577dbba985}{L\+O\+D\+Box}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_display_layer_a41bcfbb4b645d20daba8da41307fc1a5}{s\+Color\+Default}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_display_layer_a5712965749ccf41c758913d2a0ebc0c9}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Class for display layers.
+
+Display layers are overlapping views of your scene that contain a list of members. The members are exclusive. Members cannot be part of multiple display layers. Display layers enables user to organize elements of scene and affect visibility and manipulation attributes of multiple objects at once. 
+
+ fbxdisplaylayer.\+h の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_display_layer_a5712965749ccf41c758913d2a0ebc0c9}\label{class_fbx_display_layer_a5712965749ccf41c758913d2a0ebc0c9}} 
+\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Display\+Layer\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_display_layer_ab43c4c4514ffc390a0ae1d7997a2bf06}\label{class_fbx_display_layer_ab43c4c4514ffc390a0ae1d7997a2bf06}} 
+\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}!Color@{Color}}
+\index{Color@{Color}!Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+\subsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Display\+Layer\+::\+Color}
+
+This property stores the color of this display layer.
+
+Default value is Fbx\+Double3(0.\+8,0.\+8,0.\+8). 
+
+ fbxdisplaylayer.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_display_layer_abbda272dffabbf9c54947efefcce141a}\label{class_fbx_display_layer_abbda272dffabbf9c54947efefcce141a}} 
+\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}!Freeze@{Freeze}}
+\index{Freeze@{Freeze}!Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+\subsubsection{\texorpdfstring{Freeze}{Freeze}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Display\+Layer\+::\+Freeze}
+
+This property stores the manipulation state of this display layer.
+
+Default value is false. 
+
+ fbxdisplaylayer.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_display_layer_ae1e076e8613ebc76150369577dbba985}\label{class_fbx_display_layer_ae1e076e8613ebc76150369577dbba985}} 
+\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}!L\+O\+D\+Box@{L\+O\+D\+Box}}
+\index{L\+O\+D\+Box@{L\+O\+D\+Box}!Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+\subsubsection{\texorpdfstring{L\+O\+D\+Box}{LODBox}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Display\+Layer\+::\+L\+O\+D\+Box}
+
+This property stores the level of detail mode of this display layer.
+
+Default value is false. 
+
+ fbxdisplaylayer.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_display_layer_a41bcfbb4b645d20daba8da41307fc1a5}\label{class_fbx_display_layer_a41bcfbb4b645d20daba8da41307fc1a5}} 
+\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}!s\+Color\+Default@{s\+Color\+Default}}
+\index{s\+Color\+Default@{s\+Color\+Default}!Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+\subsubsection{\texorpdfstring{s\+Color\+Default}{sColorDefault}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Display\+Layer\+::s\+Color\+Default\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ fbxdisplaylayer.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_display_layer_a06b26abb009bd57c5472c134c3dff9e1}\label{class_fbx_display_layer_a06b26abb009bd57c5472c134c3dff9e1}} 
+\index{Fbx\+Display\+Layer@{Fbx\+Display\+Layer}!Show@{Show}}
+\index{Show@{Show}!Fbx\+Display\+Layer@{Fbx\+Display\+Layer}}
+\subsubsection{\texorpdfstring{Show}{Show}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Display\+Layer\+::\+Show}
+
+This property stores the visibility of this display layer.
+
+Default value is true. 
+
+ fbxdisplaylayer.\+h の 47 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxdisplaylayer_8h}{fbxdisplaylayer.\+h}\end{DoxyCompactItemize}

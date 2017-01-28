@@ -1,0 +1,344 @@
+\hypertarget{class_fbx_class_id}{}\section{Fbx\+Class\+Id クラス}
+\label{class_fbx_class_id}\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+
+
+{\ttfamily \#include $<$fbxclassid.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_class_id_afb4ee8374e852a1ea03c6c057ce15da8}{Fbx\+Class\+Id} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_class_id_ab475f340c10f7fc47f694d591e0b05a8}{Fbx\+Class\+Id} (const char $\ast$p\+Class\+Name, const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&p\+Parent\+Class\+Id, \hyperlink{fbxclassid_8h_a12707e967b73358bdb4956b72e5aa449}{Fbx\+Object\+Create\+Proc} p\+Constructor=0, const char $\ast$p\+F\+B\+X\+Type=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, const char $\ast$p\+F\+B\+X\+Sub\+Type=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_class_id_ab720ad680937b89844a07d3bc7fcd445}{Destroy} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_fbx_class_id_ad9ec390d9c134c57f76ccfcbe448b1c5}{Get\+Name} () const
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_class_id_a5805c5b91800c43aeab75d12398080b8}{Get\+Parent} () const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_class_id_a25765b5f1823d8416918bac07b9b493c}{Create} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, const char $\ast$p\+Name, const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+bool \hyperlink{class_fbx_class_id_ac73f4b211d566fac0f811e6616c79979}{Override} (\hyperlink{fbxclassid_8h_a12707e967b73358bdb4956b72e5aa449}{Fbx\+Object\+Create\+Proc} p\+Constructor)
+\item 
+bool \hyperlink{class_fbx_class_id_a276315faecc3a540664b49f6ba73b542}{Is} (const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&p\+Id) const
+\item 
+bool \hyperlink{class_fbx_class_id_af52cd2e39251da6e43f5a5ce87151984}{operator==} (const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&p\+Class\+Id) const
+\item 
+bool \hyperlink{class_fbx_class_id_a2743b7231681c0fbb92926842135e853}{operator!=} (const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&p\+Class\+Id) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_class_id_ac1cca09d096f3f65f6df0f03d4ce7e39}{Get\+Fbx\+File\+Type\+Name} (bool p\+Ask\+Parent=false) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_class_id_a2aa9a15c83252c28a9ffd01366e9348b}{Get\+Fbx\+File\+Sub\+Type\+Name} () const
+\item 
+bool \hyperlink{class_fbx_class_id_a7ef887641b41040beea323813806046c}{Is\+Valid} () const
+\item 
+void \hyperlink{class_fbx_class_id_aa62f8547a3ed3a2c3c7f1ea88b392d8c}{Set\+Object\+Type\+Prefix} (const char $\ast$p\+Object\+Type\+Prefix)
+\item 
+const char $\ast$ \hyperlink{class_fbx_class_id_a31ab0fd2220388a26bbc10b0ed7aef67}{Get\+Object\+Type\+Prefix} ()
+\item 
+\hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle} $\ast$ \hyperlink{class_fbx_class_id_a7dc7dd00c35e2bcaa97b5296973dda44}{Get\+Root\+Class\+Default\+Property\+Handle} ()
+\item 
+int \hyperlink{class_fbx_class_id_a7133ed002b3dc51f227f05f178f4d9c9}{Class\+Instance\+Inc\+Ref} ()
+\item 
+int \hyperlink{class_fbx_class_id_a2e3e27c3ac450640cc232e1bae749ae7}{Class\+Instance\+Dec\+Ref} ()
+\item 
+int \hyperlink{class_fbx_class_id_a8650ac5fe79b1241e0c65b32d67d1fcc}{Get\+Instance\+Ref} ()
+\item 
+Fbx\+Class\+Id\+Info $\ast$ \hyperlink{class_fbx_class_id_a71fa5e648cb7a7949fa13e30b94e05e6}{Get\+Class\+Id\+Info} ()
+\item 
+const Fbx\+Class\+Id\+Info $\ast$ \hyperlink{class_fbx_class_id_ab773eed6b02a90514547cff07b1a7e24}{Get\+Class\+Id\+Info} () const
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_class_id_aa6292f0d09535e3fe957088d09276268}{Fbx\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Internal class used to differentiate objects during run-\/time. Essentially, each class has an unique Class\+Id, that the system can request in order to test if the class match the description. This class implement the necessary tools to be able to perform hierarchic class testing. This means that a class B that inherits from the class A will answer yes to a \char`\"{}\+Is A\char`\"{} query of type A or B, but will answer no to a class C that can still inherit from A. All class must inherit from \hyperlink{class_fbx_object}{Fbx\+Object} before they can have their own Class\+Id. When using the standard macros to create new types of objects in the F\+BX S\+DK, a static Class\+Id will automatically be generated for that new class.
+
+When objects are exported to an F\+BX file, their class type is maintained using 3 sort of strings. They are the Object Type string, the Object Sub Type string and the Object Type Prefix. There is no good or bad way to choose the value of these identifiers, but it is preferable to use meaningful values to keep the A\+S\+C\+II version of F\+BX readable and easy to understand. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_object}{Fbx\+Object} 
+\end{DoxySeeAlso}
+
+
+ fbxclassid.\+h の 39 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_class_id_afb4ee8374e852a1ea03c6c057ce15da8}\label{class_fbx_class_id_afb4ee8374e852a1ea03c6c057ce15da8}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Fbx\+Class\+Id()}{FbxClassId()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Class\+Id\+::\+Fbx\+Class\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{class_fbx_class_id_ab475f340c10f7fc47f694d591e0b05a8}\label{class_fbx_class_id_ab475f340c10f7fc47f694d591e0b05a8}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Fbx\+Class\+Id()}{FbxClassId()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Class\+Id\+::\+Fbx\+Class\+Id (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Class\+Name,  }\item[{const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&}]{p\+Parent\+Class\+Id,  }\item[{\hyperlink{fbxclassid_8h_a12707e967b73358bdb4956b72e5aa449}{Fbx\+Object\+Create\+Proc}}]{p\+Constructor = {\ttfamily 0},  }\item[{const char $\ast$}]{p\+F\+B\+X\+Type = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{const char $\ast$}]{p\+F\+B\+X\+Sub\+Type = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Advanced constructor were we can specify the general parameters for this Class\+Id. 
+\begin{DoxyParams}{引数}
+{\em p\+Class\+Name} & The name of the class represented. \\
+\hline
+{\em p\+Parent\+Class\+Id} & The parent Class\+Id of this class. \\
+\hline
+{\em p\+Constructor} & A function pointer to a construction method for this Class\+Id. \\
+\hline
+{\em p\+F\+B\+X\+Type} & The F\+BX file Object Type string associated to this class. \\
+\hline
+{\em p\+F\+B\+X\+Sub\+Type} & The F\+BX file Object Sub Type string associated to this class. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_class_id_a2e3e27c3ac450640cc232e1bae749ae7}\label{class_fbx_class_id_a2e3e27c3ac450640cc232e1bae749ae7}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Class\+Instance\+Dec\+Ref@{Class\+Instance\+Dec\+Ref}}
+\index{Class\+Instance\+Dec\+Ref@{Class\+Instance\+Dec\+Ref}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Class\+Instance\+Dec\+Ref()}{ClassInstanceDecRef()}}
+{\footnotesize\ttfamily int Fbx\+Class\+Id\+::\+Class\+Instance\+Dec\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Decrease the instance reference count for this class type. \begin{DoxyReturn}{戻り値}
+the new count of reference to this class after decrement. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a7133ed002b3dc51f227f05f178f4d9c9}\label{class_fbx_class_id_a7133ed002b3dc51f227f05f178f4d9c9}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Class\+Instance\+Inc\+Ref@{Class\+Instance\+Inc\+Ref}}
+\index{Class\+Instance\+Inc\+Ref@{Class\+Instance\+Inc\+Ref}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Class\+Instance\+Inc\+Ref()}{ClassInstanceIncRef()}}
+{\footnotesize\ttfamily int Fbx\+Class\+Id\+::\+Class\+Instance\+Inc\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Increase the instance reference count for this class type. \begin{DoxyReturn}{戻り値}
+the new count of reference to this class after increment. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a25765b5f1823d8416918bac07b9b493c}\label{class_fbx_class_id_a25765b5f1823d8416918bac07b9b493c}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Class\+Id\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})}
+
+Create an instance of this class. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & The F\+BX S\+DK Manager to be used to instantiate this object. This allow the object to use the same memory manager as the provided manager. \\
+\hline
+{\em p\+Name} & The name to assign to this new object instance. \\
+\hline
+{\em p\+From} & An object to clone if it matches the same Class\+Id. This is an optional parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The newly created instance of this class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_ab720ad680937b89844a07d3bc7fcd445}\label{class_fbx_class_id_ab720ad680937b89844a07d3bc7fcd445}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Fbx\+Class\+Id\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+\mbox{\Hypertarget{class_fbx_class_id_a71fa5e648cb7a7949fa13e30b94e05e6}\label{class_fbx_class_id_a71fa5e648cb7a7949fa13e30b94e05e6}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Class\+Id\+Info@{Get\+Class\+Id\+Info}}
+\index{Get\+Class\+Id\+Info@{Get\+Class\+Id\+Info}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Class\+Id\+Info()}{GetClassIdInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Class\+Id\+Info$\ast$ Fbx\+Class\+Id\+::\+Get\+Class\+Id\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxclassid.\+h の 138 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_class_id_ab773eed6b02a90514547cff07b1a7e24}\label{class_fbx_class_id_ab773eed6b02a90514547cff07b1a7e24}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Class\+Id\+Info@{Get\+Class\+Id\+Info}}
+\index{Get\+Class\+Id\+Info@{Get\+Class\+Id\+Info}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Class\+Id\+Info()}{GetClassIdInfo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const Fbx\+Class\+Id\+Info$\ast$ Fbx\+Class\+Id\+::\+Get\+Class\+Id\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxclassid.\+h の 139 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_class_id_a2aa9a15c83252c28a9ffd01366e9348b}\label{class_fbx_class_id_a2aa9a15c83252c28a9ffd01366e9348b}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Fbx\+File\+Sub\+Type\+Name@{Get\+Fbx\+File\+Sub\+Type\+Name}}
+\index{Get\+Fbx\+File\+Sub\+Type\+Name@{Get\+Fbx\+File\+Sub\+Type\+Name}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Fbx\+File\+Sub\+Type\+Name()}{GetFbxFileSubTypeName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Class\+Id\+::\+Get\+Fbx\+File\+Sub\+Type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the F\+BX file Object Sub Type string associated to this class. \begin{DoxyReturn}{戻り値}
+The F\+BX file Object Sub Type string associated to this class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_ac1cca09d096f3f65f6df0f03d4ce7e39}\label{class_fbx_class_id_ac1cca09d096f3f65f6df0f03d4ce7e39}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Fbx\+File\+Type\+Name@{Get\+Fbx\+File\+Type\+Name}}
+\index{Get\+Fbx\+File\+Type\+Name@{Get\+Fbx\+File\+Type\+Name}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Fbx\+File\+Type\+Name()}{GetFbxFileTypeName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Class\+Id\+::\+Get\+Fbx\+File\+Type\+Name (\begin{DoxyParamCaption}\item[{bool}]{p\+Ask\+Parent = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Retrieve the F\+BX file Object Type string associated to this class. 
+\begin{DoxyParams}{引数}
+{\em p\+Ask\+Parent} & If {\ttfamily true}, retrieve the parent Class\+Id, but only if self Class\+Id is not valid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The F\+BX file Object Type string associated to this class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a8650ac5fe79b1241e0c65b32d67d1fcc}\label{class_fbx_class_id_a8650ac5fe79b1241e0c65b32d67d1fcc}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Instance\+Ref@{Get\+Instance\+Ref}}
+\index{Get\+Instance\+Ref@{Get\+Instance\+Ref}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Instance\+Ref()}{GetInstanceRef()}}
+{\footnotesize\ttfamily int Fbx\+Class\+Id\+::\+Get\+Instance\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the instance reference count for this class type. \begin{DoxyReturn}{戻り値}
+The reference count of this class type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_ad9ec390d9c134c57f76ccfcbe448b1c5}\label{class_fbx_class_id_ad9ec390d9c134c57f76ccfcbe448b1c5}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Class\+Id\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the class name. \begin{DoxyReturn}{戻り値}
+The class identification string name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a31ab0fd2220388a26bbc10b0ed7aef67}\label{class_fbx_class_id_a31ab0fd2220388a26bbc10b0ed7aef67}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Object\+Type\+Prefix@{Get\+Object\+Type\+Prefix}}
+\index{Get\+Object\+Type\+Prefix@{Get\+Object\+Type\+Prefix}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Object\+Type\+Prefix()}{GetObjectTypePrefix()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Class\+Id\+::\+Get\+Object\+Type\+Prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the Object Type Prefix string associated to this class. \begin{DoxyReturn}{戻り値}
+The Object Type Prefix string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a5805c5b91800c43aeab75d12398080b8}\label{class_fbx_class_id_a5805c5b91800c43aeab75d12398080b8}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Parent@{Get\+Parent}}
+\index{Get\+Parent@{Get\+Parent}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Parent()}{GetParent()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Class\+Id\+::\+Get\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the parent Class\+Id. \begin{DoxyReturn}{戻り値}
+The parent Class\+Id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a7dc7dd00c35e2bcaa97b5296973dda44}\label{class_fbx_class_id_a7dc7dd00c35e2bcaa97b5296973dda44}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Get\+Root\+Class\+Default\+Property\+Handle@{Get\+Root\+Class\+Default\+Property\+Handle}}
+\index{Get\+Root\+Class\+Default\+Property\+Handle@{Get\+Root\+Class\+Default\+Property\+Handle}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Get\+Root\+Class\+Default\+Property\+Handle()}{GetRootClassDefaultPropertyHandle()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_handle}{Fbx\+Property\+Handle}$\ast$ Fbx\+Class\+Id\+::\+Get\+Root\+Class\+Default\+Property\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the root property handle of this class. This is useful to access the default property hierarchy for this class. This allow users to retrieve information such as the default value for all properties of this class. \begin{DoxyReturn}{戻り値}
+The root property handle for this class. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_a276315faecc3a540664b49f6ba73b542}\label{class_fbx_class_id_a276315faecc3a540664b49f6ba73b542}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Is@{Is}}
+\index{Is@{Is}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Is()}{Is()}}
+{\footnotesize\ttfamily bool Fbx\+Class\+Id\+::\+Is (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&}]{p\+Id }\end{DoxyParamCaption}) const}
+
+Test if this class is a hierarchical children of the specified class type. This is the standard method to differentiate object classes. 
+\begin{DoxyParams}{引数}
+{\em p\+Id} & The class type to test against self. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the object is a hierarchical children of the type specified. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function will perform a complete search until it reaches the top level class, but it will stop as soon as one Class\+Id matches the test. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_class_id_a7ef887641b41040beea323813806046c}\label{class_fbx_class_id_a7ef887641b41040beea323813806046c}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily bool Fbx\+Class\+Id\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find out if self Class\+Id is valid or not. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if self Class\+Id is valid, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxclassid.\+h の 105 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_class_id_a2743b7231681c0fbb92926842135e853}\label{class_fbx_class_id_a2743b7231681c0fbb92926842135e853}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+Class\+Id\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&}]{p\+Class\+Id }\end{DoxyParamCaption}) const}
+
+Inequivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Class\+Id} & The class type to test against self. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the Class\+Id is not the same, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function only perform direct inequality test, and doesn\textquotesingle{}t test hierarchic children. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_class_id_af52cd2e39251da6e43f5a5ce87151984}\label{class_fbx_class_id_af52cd2e39251da6e43f5a5ce87151984}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Class\+Id\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \&}]{p\+Class\+Id }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Class\+Id} & The class type to test against self. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the Class\+Id is exactly the same, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function only perform direct equality test, and doesn\textquotesingle{}t test hierarchic children. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_class_id_ac73f4b211d566fac0f811e6616c79979}\label{class_fbx_class_id_ac73f4b211d566fac0f811e6616c79979}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Override@{Override}}
+\index{Override@{Override}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Override()}{Override()}}
+{\footnotesize\ttfamily bool Fbx\+Class\+Id\+::\+Override (\begin{DoxyParamCaption}\item[{\hyperlink{fbxclassid_8h_a12707e967b73358bdb4956b72e5aa449}{Fbx\+Object\+Create\+Proc}}]{p\+Constructor }\end{DoxyParamCaption})}
+
+Override the function pointer method to construct this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Constructor} & A newly defined function pointer to a construction method to replace the existing one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the operation was successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_class_id_aa62f8547a3ed3a2c3c7f1ea88b392d8c}\label{class_fbx_class_id_aa62f8547a3ed3a2c3c7f1ea88b392d8c}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Set\+Object\+Type\+Prefix@{Set\+Object\+Type\+Prefix}}
+\index{Set\+Object\+Type\+Prefix@{Set\+Object\+Type\+Prefix}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Set\+Object\+Type\+Prefix()}{SetObjectTypePrefix()}}
+{\footnotesize\ttfamily void Fbx\+Class\+Id\+::\+Set\+Object\+Type\+Prefix (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Object\+Type\+Prefix }\end{DoxyParamCaption})}
+
+Set the Object Type Prefix string associated to this class. This will change the \char`\"{}\+Object\+Type\+Prefix\+::\char`\"{} found in front of object name in the F\+BX file. This is useful to differentiate objects by their name without using the Object Type or Sub Type strings in the file. 
+\begin{DoxyParams}{引数}
+{\em p\+Object\+Type\+Prefix} & The Object Type prefix string. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_class_id_aa6292f0d09535e3fe957088d09276268}\label{class_fbx_class_id_aa6292f0d09535e3fe957088d09276268}} 
+\index{Fbx\+Class\+Id@{Fbx\+Class\+Id}!Fbx\+Manager@{Fbx\+Manager}}
+\index{Fbx\+Manager@{Fbx\+Manager}!Fbx\+Class\+Id@{Fbx\+Class\+Id}}
+\subsubsection{\texorpdfstring{Fbx\+Manager}{FbxManager}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_manager}{Fbx\+Manager}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxclassid.\+h の 149 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxclassid_8h}{fbxclassid.\+h}\end{DoxyCompactItemize}

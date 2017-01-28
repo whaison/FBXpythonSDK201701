@@ -1,0 +1,172 @@
+\hypertarget{_user_properties_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+User\+Properties/main.cxx ファイル}
+\label{_user_properties_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+User\+Properties/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+User\+Properties/main.\+cxx}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Common.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_user_properties_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}User\+Properties.\+fbx\char`\"{}
+\item 
+\#define \hyperlink{_user_properties_2main_8cxx_a891039fc7a52086a09ff90dda86ec24f}{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST}~\char`\"{}Animate Cube List\char`\"{}
+\item 
+\#define \hyperlink{_user_properties_2main_8cxx_a9444ba348cd9e3bf88651728e42d77e1}{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE}~\char`\"{}Animate Cube\char`\"{}
+\item 
+\#define \hyperlink{_user_properties_2main_8cxx_a27914086ed312809ecee6b3ba5b166e4}{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID}~\char`\"{}Animate Pyramid\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_user_properties_2main_8cxx_a23c93dfea0dc539d83f888cb10cd5ad6}{Create\+Cube} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_user_properties_2main_8cxx_a056c7820a76b9dd9443f6dac7bc7e59e}{Create\+Pyramid} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+void \hyperlink{_user_properties_2main_8cxx_ab05dd9df5dc2772fe1367e7c902b5e7c}{Create\+User\+Properties} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{_user_properties_2main_8cxx_af8673dc4fc422685429b3f486b8f81ed}{Animate\+List} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_property}{Fbx\+Property} $\ast$p\+List)
+\item 
+\hyperlink{class_fbx_constraint_position}{Fbx\+Constraint\+Position} $\ast$ \hyperlink{_user_properties_2main_8cxx_acc54ac69703f97264db3d9fbd6c299b5}{Create\+Position\+Constraint} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Source\+Node, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Constrained\+Node)
+\item 
+void \hyperlink{_user_properties_2main_8cxx_aed841b28288890149401fcb979f1b204}{Animate\+Cube} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{_user_properties_2main_8cxx_a1baac6e23f0f9da83c518c7a095f5511}{Animate\+Pyramid} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{_user_properties_2main_8cxx_a5ad4cf732b9197424356b8d74081a578}{Animate\+Node} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer)
+\item 
+int \hyperlink{_user_properties_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a9444ba348cd9e3bf88651728e42d77e1}\label{_user_properties_2main_8cxx_a9444ba348cd9e3bf88651728e42d77e1}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE@{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE}}
+\index{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE@{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE}{ANIM\_STACK\_ANIMATE\_CUBE}}
+{\footnotesize\ttfamily \#define A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+C\+U\+BE~\char`\"{}Animate Cube\char`\"{}}
+
+
+
+ main.\+cxx の 30 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a891039fc7a52086a09ff90dda86ec24f}\label{_user_properties_2main_8cxx_a891039fc7a52086a09ff90dda86ec24f}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST@{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST}}
+\index{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST@{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST}{ANIM\_STACK\_ANIMATE\_LIST}}
+{\footnotesize\ttfamily \#define A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+L\+I\+ST~\char`\"{}Animate Cube List\char`\"{}}
+
+
+
+ main.\+cxx の 29 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a27914086ed312809ecee6b3ba5b166e4}\label{_user_properties_2main_8cxx_a27914086ed312809ecee6b3ba5b166e4}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID@{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID}}
+\index{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID@{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID}{ANIM\_STACK\_ANIMATE\_PYRAMID}}
+{\footnotesize\ttfamily \#define A\+N\+I\+M\+\_\+\+S\+T\+A\+C\+K\+\_\+\+A\+N\+I\+M\+A\+T\+E\+\_\+\+P\+Y\+R\+A\+M\+ID~\char`\"{}Animate Pyramid\char`\"{}}
+
+
+
+ main.\+cxx の 31 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_user_properties_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}User\+Properties.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_user_properties_2main_8cxx_aed841b28288890149401fcb979f1b204}\label{_user_properties_2main_8cxx_aed841b28288890149401fcb979f1b204}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Animate\+Cube@{Animate\+Cube}}
+\index{Animate\+Cube@{Animate\+Cube}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+Cube()}{AnimateCube()}}
+{\footnotesize\ttfamily void Animate\+Cube (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 418 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_af8673dc4fc422685429b3f486b8f81ed}\label{_user_properties_2main_8cxx_af8673dc4fc422685429b3f486b8f81ed}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Animate\+List@{Animate\+List}}
+\index{Animate\+List@{Animate\+List}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+List()}{AnimateList()}}
+{\footnotesize\ttfamily void Animate\+List (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} $\ast$}]{p\+List }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 335 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a5ad4cf732b9197424356b8d74081a578}\label{_user_properties_2main_8cxx_a5ad4cf732b9197424356b8d74081a578}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Animate\+Node@{Animate\+Node}}
+\index{Animate\+Node@{Animate\+Node}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+Node()}{AnimateNode()}}
+{\footnotesize\ttfamily void Animate\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 444 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a1baac6e23f0f9da83c518c7a095f5511}\label{_user_properties_2main_8cxx_a1baac6e23f0f9da83c518c7a095f5511}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Animate\+Pyramid@{Animate\+Pyramid}}
+\index{Animate\+Pyramid@{Animate\+Pyramid}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+Pyramid()}{AnimatePyramid()}}
+{\footnotesize\ttfamily void Animate\+Pyramid (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 431 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a23c93dfea0dc539d83f888cb10cd5ad6}\label{_user_properties_2main_8cxx_a23c93dfea0dc539d83f888cb10cd5ad6}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Create\+Cube@{Create\+Cube}}
+\index{Create\+Cube@{Create\+Cube}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Cube()}{CreateCube()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Create\+Cube (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 108 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_acc54ac69703f97264db3d9fbd6c299b5}\label{_user_properties_2main_8cxx_acc54ac69703f97264db3d9fbd6c299b5}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Create\+Position\+Constraint@{Create\+Position\+Constraint}}
+\index{Create\+Position\+Constraint@{Create\+Position\+Constraint}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Position\+Constraint()}{CreatePositionConstraint()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_constraint_position}{Fbx\+Constraint\+Position} $\ast$ Create\+Position\+Constraint (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Source\+Node,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Constrained\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 385 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a056c7820a76b9dd9443f6dac7bc7e59e}\label{_user_properties_2main_8cxx_a056c7820a76b9dd9443f6dac7bc7e59e}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Create\+Pyramid@{Create\+Pyramid}}
+\index{Create\+Pyramid@{Create\+Pyramid}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Pyramid()}{CreatePyramid()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Pyramid (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 179 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_ab05dd9df5dc2772fe1367e7c902b5e7c}\label{_user_properties_2main_8cxx_ab05dd9df5dc2772fe1367e7c902b5e7c}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!Create\+User\+Properties@{Create\+User\+Properties}}
+\index{Create\+User\+Properties@{Create\+User\+Properties}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+User\+Properties()}{CreateUserProperties()}}
+{\footnotesize\ttfamily void Create\+User\+Properties (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 283 行目に定義があります。
+
+\mbox{\Hypertarget{_user_properties_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_user_properties_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}!main@{main}}
+\index{main@{main}!User\+Properties/main.\+cxx@{User\+Properties/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 44 行目に定義があります。
+

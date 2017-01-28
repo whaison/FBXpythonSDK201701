@@ -1,0 +1,273 @@
+\hypertarget{class_fbx_anim_curve_filter_key_reducer}{}\section{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer クラス}
+\label{class_fbx_anim_curve_filter_key_reducer}\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+
+
+{\ttfamily \#include $<$fbxanimcurvefilters.\+h$>$}
+
+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_anim_curve_filter_key_reducer}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_anim_curve_filter_key_reducer_ad43e77bed0728ae7cd9f24e33753f984}{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_anim_curve_filter_key_reducer_a69f345185767183595a34df13ae713c2}{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \hyperlink{class_fbx_anim_curve_filter_key_reducer_a86d571282e550eecbf7afb0f198ce91f}{Get\+Name} () const
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_key_reducer_a8c0c58b8f2e4272bc5f257570daf5ba1}{Apply} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$$\ast$p\+Curve, int p\+Count, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_key_reducer_a8b2b0d1d3eaeb8d1333be55211a75b1a}{Apply} (\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} \&p\+Curve, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual void \hyperlink{class_fbx_anim_curve_filter_key_reducer_a52e9e7476a3c4e55ad7c41c978b92cd5}{Reset} ()
+\item 
+double \hyperlink{class_fbx_anim_curve_filter_key_reducer_abd457aef2c4da70a5a6657947f078988}{Get\+Precision} () const
+\begin{DoxyCompactList}\small\item\em Get precision. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_anim_curve_filter_key_reducer_a36e172b2c259e383897828f10036e277}{Set\+Precision} (double p\+Precision)
+\item 
+bool \hyperlink{class_fbx_anim_curve_filter_key_reducer_a82cb456079577735e58cba071eed3a12}{Get\+Key\+Sync} () const
+\begin{DoxyCompactList}\small\item\em Return {\ttfamily true} key sync is applied at the end. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_anim_curve_filter_key_reducer_adf95529fab4de5a4e3a8d3112d6ba722}{Set\+Key\+Sync} (bool p\+Key\+Sync)
+\end{DoxyCompactItemize}
+\subsection*{Exposed parent class methods.}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_key_reducer_ace307ff2d9d99bf845ddaa26649fb136}{Apply} (\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$p\+Anim\+Stack, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_key_reducer_ac9cd8a32e87c1589d0f245be377a3da3}{Apply} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Obj, \hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$p\+Anim\+Stack, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_anim_curve_filter_key_reducer_a1f3a0f984cf30eb74d9ae260ef9ae252}{Apply} (\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} \&p\+Curve\+Node, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Key reducing filter.
+
+Filter to test if each key is really necessary to define the curve at a definite degree of precision. It filters recursively from the strongest difference first. All useless keys are eliminated. 
+
+ fbxanimcurvefilters.\+h の 539 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_ad43e77bed0728ae7cd9f24e33753f984}\label{class_fbx_anim_curve_filter_key_reducer_ad43e77bed0728ae7cd9f24e33753f984}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer()}{FbxAnimCurveFilterKeyReducer()}}
+{\footnotesize\ttfamily Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a69f345185767183595a34df13ae713c2}\label{class_fbx_anim_curve_filter_key_reducer_a69f345185767183595a34df13ae713c2}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!````~Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\index{````~Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer()}{~FbxAnimCurveFilterKeyReducer()}}
+{\footnotesize\ttfamily virtual Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::$\sim$\+Fbx\+Anim\+Curve\+Filter\+Key\+Reducer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+ fbxanimcurvefilters.\+h の 546 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_ace307ff2d9d99bf845ddaa26649fb136}\label{class_fbx_anim_curve_filter_key_reducer_ace307ff2d9d99bf845ddaa26649fb136}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$}]{p\+Anim\+Stack,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply filter to all the curves stored in the animation stack. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Stack} & Animation stack where to retrieve the animation curves \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_aef3900e6180e05661c27ee484ae939c3}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+
+
+ fbxanimcurvefilters.\+h の 557 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_ac9cd8a32e87c1589d0f245be377a3da3}\label{class_fbx_anim_curve_filter_key_reducer_ac9cd8a32e87c1589d0f245be377a3da3}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Obj,  }\item[{\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$}]{p\+Anim\+Stack,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply filter to all the animated properties of the object. 
+\begin{DoxyParams}{引数}
+{\em p\+Obj} & Object containing the animated properties to which the filter is applied. \\
+\hline
+{\em p\+Anim\+Stack} & Animation stack where to retrieve the animation curves \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_a009498a65af4995bf5e5908f17837531}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+
+
+ fbxanimcurvefilters.\+h の 558 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a1f3a0f984cf30eb74d9ae260ef9ae252}\label{class_fbx_anim_curve_filter_key_reducer_a1f3a0f984cf30eb74d9ae260ef9ae252}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} \&}]{p\+Curve\+Node,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Apply filter on all the curves of an animation curve node. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve\+Node} & Curve node to which the filter is applied. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method collects all the \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} objects connected to the curve node and calls Apply(\+Fbx\+Anim\+Curve$\ast$$\ast$, int) 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_anim_curve_filter_ad042b45c0675278fa49e61739b0825c2}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+
+
+ fbxanimcurvefilters.\+h の 559 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a8c0c58b8f2e4272bc5f257570daf5ba1}\label{class_fbx_anim_curve_filter_key_reducer_a8c0c58b8f2e4272bc5f257570daf5ba1}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$$\ast$}]{p\+Curve,  }\item[{int}]{p\+Count,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter on the given animation curve. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & Array of curve to which the filter is applied. \\
+\hline
+{\em p\+Count} & Number of curves in array. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_aca6a41fbc4d9019b20df7adccfa6ed3c}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a8b2b0d1d3eaeb8d1333be55211a75b1a}\label{class_fbx_anim_curve_filter_key_reducer_a8b2b0d1d3eaeb8d1333be55211a75b1a}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Apply (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} \&}]{p\+Curve,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Apply filter on an animation curve. 
+\begin{DoxyParams}{引数}
+{\em p\+Curve} & Curve to which the filter is applied. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the curve filtering operation was successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_a6a69996c47c0e6f63a0f8b0d5fa806a0}{Fbx\+Anim\+Curve\+Filter}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a82cb456079577735e58cba071eed3a12}\label{class_fbx_anim_curve_filter_key_reducer_a82cb456079577735e58cba071eed3a12}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Get\+Key\+Sync@{Get\+Key\+Sync}}
+\index{Get\+Key\+Sync@{Get\+Key\+Sync}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Get\+Key\+Sync()}{GetKeySync()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Get\+Key\+Sync (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return {\ttfamily true} key sync is applied at the end. 
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a86d571282e550eecbf7afb0f198ce91f}\label{class_fbx_anim_curve_filter_key_reducer_a86d571282e550eecbf7afb0f198ce91f}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the name of the filter. \begin{DoxyReturn}{戻り値}
+Pointer to name. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_anim_curve_filter_abd559d5052fbb072042e59241940a35c}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_abd457aef2c4da70a5a6657947f078988}\label{class_fbx_anim_curve_filter_key_reducer_abd457aef2c4da70a5a6657947f078988}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Get\+Precision@{Get\+Precision}}
+\index{Get\+Precision@{Get\+Precision}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Get\+Precision()}{GetPrecision()}}
+{\footnotesize\ttfamily double Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Get\+Precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get precision. 
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a52e9e7476a3c4e55ad7c41c978b92cd5}\label{class_fbx_anim_curve_filter_key_reducer_a52e9e7476a3c4e55ad7c41c978b92cd5}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reset the filter to its default parameters. 
+
+\hyperlink{class_fbx_anim_curve_filter_a57fb35baaaa85adb08946383cf40e811}{Fbx\+Anim\+Curve\+Filter}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_adf95529fab4de5a4e3a8d3112d6ba722}\label{class_fbx_anim_curve_filter_key_reducer_adf95529fab4de5a4e3a8d3112d6ba722}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Set\+Key\+Sync@{Set\+Key\+Sync}}
+\index{Set\+Key\+Sync@{Set\+Key\+Sync}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Set\+Key\+Sync()}{SetKeySync()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Set\+Key\+Sync (\begin{DoxyParamCaption}\item[{bool}]{p\+Key\+Sync }\end{DoxyParamCaption})}
+
+Set to {\ttfamily true} to apply key sync at the end. 
+\begin{DoxyParams}{引数}
+{\em p\+Key\+Sync} & Key sync flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_curve_filter_key_reducer_a36e172b2c259e383897828f10036e277}\label{class_fbx_anim_curve_filter_key_reducer_a36e172b2c259e383897828f10036e277}} 
+\index{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}!Set\+Precision@{Set\+Precision}}
+\index{Set\+Precision@{Set\+Precision}!Fbx\+Anim\+Curve\+Filter\+Key\+Reducer@{Fbx\+Anim\+Curve\+Filter\+Key\+Reducer}}
+\subsubsection{\texorpdfstring{Set\+Precision()}{SetPrecision()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Curve\+Filter\+Key\+Reducer\+::\+Set\+Precision (\begin{DoxyParamCaption}\item[{double}]{p\+Precision }\end{DoxyParamCaption})}
+
+Set precision. 
+\begin{DoxyParams}{引数}
+{\em p\+Precision} & The precision to set. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimcurvefilters_8h}{fbxanimcurvefilters.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,888 @@
+\hypertarget{class_fbx_video}{}\section{Fbx\+Video クラス}
+\label{class_fbx_video}\index{Fbx\+Video@{Fbx\+Video}}
+
+
+{\ttfamily \#include $<$fbxvideo.\+h$>$}
+
+Fbx\+Video の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fbx_video}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode} \{ \newline
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a704fe60074b80df20b68fedcda6b9b4f}{e\+None}, 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a70210f309a14cf3fe1fdfdec93536f80}{e\+Fields}, 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215ad04c4acb98e0446dfc296e2287c56a6f}{e\+Half\+Even}, 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa3c9bb81d958669eb0d66f481b5b4b57}{e\+Half\+Odd}, 
+\newline
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa4207eff0569b05011c820555f206e6e}{e\+Full\+Even}, 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215af4f5d62b92c2487787b429965829a70c}{e\+Full\+Odd}, 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a5643f7d85ee0d023d43b0d0feb11ea73}{e\+Full\+Even\+Odd}, 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa342e3401c45173cdfd733920163340f}{e\+Full\+Odd\+Even}
+ \}
+\item 
+enum \hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode} \{ \hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40acca51c771e1f539812097982a4e62d80}{e\+Disk}, 
+\hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40aea3d1fa828ba9d118a2f8da3fd944f41}{e\+Memory}, 
+\hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40ab7a1eb0357475f15c29683abcc1f16e3}{e\+Disk\+Async}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_fbx_video_afa17b30dbcff2e23fe507585e2688619}{Get\+Frame\+Rate} () const
+\item 
+int \hyperlink{class_fbx_video_abcc991da628ef1ae31f15a64d773e8be}{Get\+Last\+Frame} () const
+\item 
+int \hyperlink{class_fbx_video_a9ad08f6d0da0e76353dc6250f1321093}{Get\+Width} () const
+\item 
+int \hyperlink{class_fbx_video_a49e54923c0ec892e5bebf479545a32de}{Get\+Height} () const
+\item 
+void \hyperlink{class_fbx_video_a85a31f27e4cca068fd285385998bcad5}{Set\+Start\+Frame} (int p\+Start\+Frame)
+\item 
+int \hyperlink{class_fbx_video_ab634605d67edca645b11d575b04e42ff}{Get\+Start\+Frame} () const
+\item 
+void \hyperlink{class_fbx_video_aa7dd98bc975a79daf988c395be2199cd}{Set\+Stop\+Frame} (int p\+Stop\+Frame)
+\item 
+int \hyperlink{class_fbx_video_a8b6b7be05e339cfe47998674269242e7}{Get\+Stop\+Frame} () const
+\item 
+void \hyperlink{class_fbx_video_a9f7fd819e6d3eeea943183264c55d357}{Set\+Play\+Speed} (double p\+Play\+Speed)
+\item 
+double \hyperlink{class_fbx_video_a69311023497b0ace1ac4fd78318b178a}{Get\+Play\+Speed} () const
+\item 
+void \hyperlink{class_fbx_video_a8385942ed01c3258b7ebd7b3080962c2}{Set\+Offset} (\hyperlink{class_fbx_time}{Fbx\+Time} p\+Time)
+\item 
+\hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_video_ac4a2e039c73ba16c80f3c538a739a364}{Get\+Offset} () const
+\item 
+void \hyperlink{class_fbx_video_ade24bcc804d746751c5a35c1bde50333}{Set\+Free\+Running} (bool p\+State)
+\item 
+bool \hyperlink{class_fbx_video_a47eacfcc9760e1b014cc706795e267fd}{Get\+Free\+Running} () const
+\item 
+void \hyperlink{class_fbx_video_a8fbffbebcc3ef5f170003d0f18ecd7ee}{Set\+Loop} (bool p\+Loop)
+\item 
+bool \hyperlink{class_fbx_video_a6b78fbe7939fb49f51c1d381fe927816}{Get\+Loop} () const
+\item 
+void \hyperlink{class_fbx_video_aa33fec12f17da41767260e59a3165d05}{Set\+Interlace\+Mode} (\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode} p\+Interlace\+Mode)
+\item 
+\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode} \hyperlink{class_fbx_video_ac86d64d43fd683b6573b4bfa636aa9d1}{Get\+Interlace\+Mode} () const
+\item 
+void \hyperlink{class_fbx_video_a7c593f34c56ecb905de956d50048a4f5}{Set\+Access\+Mode} (\hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode} p\+Access\+Mode)
+\item 
+\hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode} \hyperlink{class_fbx_video_af03167bd6b840efe8425017fb7a606e3}{Get\+Access\+Mode} () const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_video_aafd075b5cd4710be1e3f14cd0ede1bce}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_video_a69adf09a2346176545e330cd2c8f23ad}{Get\+Type\+Flags} () const
+\item 
+void \hyperlink{class_fbx_video_afc417f0c646bf474cbe976eb76d01099}{Set\+Original\+Format} (bool p\+State)
+\item 
+bool \hyperlink{class_fbx_video_aa267c61d456e3cbb8317ac85eac1e979}{Get\+Original\+Format} () const
+\item 
+void \hyperlink{class_fbx_video_a67861ed77b1e7bfd2c1bce310f7406e6}{Set\+Original\+Filename} (const char $\ast$p\+Original\+Filename)
+\item 
+const char $\ast$ \hyperlink{class_fbx_video_a8657651afd89c2f7811b7056ac8346c9}{Get\+Original\+Filename} () const
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_video_a8d98e668bd42f8ed67e8bc28488d0abb}{Image\+Sequence}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_video_acc7a05788def81e3b7b1cb3d003021fb}{Image\+Sequence\+Offset}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_video_ac97913b5255c4f67ec2d401d8ff2b619}{Frame\+Rate}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_video_a30d7edd0fc1e23268702f5811327e526}{Last\+Frame}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_video_a9f1d9f9874ac3a9274a754cfb311fc30}{Width}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_video_a9e77b423cac730992fe57429c302593c}{Height}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_video_a3741896f51e9702d4c8b9d0e7065264c}{Path}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_video_a61a7c941bfe1022b4cc0a8ba14b932f1}{Start\+Frame}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int} $>$ \hyperlink{class_fbx_video_aab5d673b818ce8a797ac47851a34e996}{Stop\+Frame}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_video_a43c6cf4ab4d46dd1a962258f5e4c42f2}{Play\+Speed}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_time}{Fbx\+Time} $>$ \hyperlink{class_fbx_video_ac21a47d9f4ec91abf585b2bcf8e0a3aa}{Offset}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode} $>$ \hyperlink{class_fbx_video_a624969738a09268e8897cffbe94e5188}{Interlace\+Mode}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_video_abb47ae8cd752b8846cda1ad1d7e1ffff}{Free\+Running}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_video_aa325b2e04fac1593125ca02e6dc6a423}{Loop}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode} $>$ \hyperlink{class_fbx_video_a23a5a08b0504da545d812c16a7a0d20a}{Access\+Mode}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_video_a1cd66b3d19e213f62f90d073462e4cce}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_video_a25c6015f2330ec4ff029ac919b1a231c}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual bool \hyperlink{class_fbx_video_afb1d8565917f33ab3777ac9e07b21cd0}{Connect\+Notify} (\hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} const \&p\+Event)
+\item 
+void \hyperlink{class_fbx_video_a7eebf649a1500d85b39a69673ef75a9c}{Init} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_video_a2c100f8b0f670f8490d91c71ac6b539e}{m\+Use\+Mip\+Map}
+\item 
+bool \hyperlink{class_fbx_video_a8e767da7513901cbc25a298e18a2b616}{m\+Original\+Format}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_video_ad87f8963e4e7a262c8470be9cbcfb723}{m\+Original\+Filename}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_video_a3645c6b2f2e12d12f544100cf0c9033a}{m\+Relative\+Filename}
+\end{DoxyCompactItemize}
+\subsection*{Reset video}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_video_a135c575d14d2ba47c901920687f0e52c}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the video to default values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Video attributes Management}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_video_ae041331c4f831b2b55e87b4581047d74}{Image\+Texture\+Set\+Mip\+Map} (bool p\+Use\+Mip\+Map)
+\item 
+bool \hyperlink{class_fbx_video_a71d943f108e39aa4bdec2a55d7d2468a}{Image\+Texture\+Get\+Mip\+Map} () const
+\item 
+bool \hyperlink{class_fbx_video_a897a450c62670d4730cb9ee663a26ea2}{Set\+File\+Name} (const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_video_a96fc2a11e4e7ca89230389bb55ca5466}{Get\+File\+Name} () const
+\item 
+bool \hyperlink{class_fbx_video_a3217bac3585954766fa2c56a10de48f3}{Set\+Relative\+File\+Name} (const char $\ast$p\+Name)
+\item 
+const char $\ast$ \hyperlink{class_fbx_video_a5c99c225a47e6aae4cd3028f2737babb}{Get\+Relative\+File\+Name} () const
+\end{DoxyCompactItemize}
+\subsection*{Image sequence attributes Management}
+\label{_amgrp3cc586aa3ad85d11fb9e89277ee745d9}%
+Besides storing video clips, the \hyperlink{class_fbx_video}{Fbx\+Video} object can also store image sequences. This section contains the manipulation methods used in this specialized mode. Note that, except for the \hyperlink{class_fbx_video_a96fc2a11e4e7ca89230389bb55ca5466}{Get\+File\+Name()}, \hyperlink{class_fbx_video_a897a450c62670d4730cb9ee663a26ea2}{Set\+File\+Name()}, \hyperlink{class_fbx_video_a5c99c225a47e6aae4cd3028f2737babb}{Get\+Relative\+File\+Name()}, \hyperlink{class_fbx_video_a3217bac3585954766fa2c56a10de48f3}{Set\+Relative\+File\+Name()} and the methods in this section, all the other ones are not mandatory therefore could contain uninitialized or default data values. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_video_a511c7cfc220c659c6d07cb4b891572ae}{Set\+Image\+Sequence} (bool p\+Image\+Sequence)
+\item 
+bool \hyperlink{class_fbx_video_aefb54b6ccb813ae4da9062b27db5fb1f}{Get\+Image\+Sequence} () const
+\item 
+void \hyperlink{class_fbx_video_a32c2bbbd3fdcfc4d653e14067d92e552}{Set\+Image\+Sequence\+Offset} (int p\+Offset)
+\item 
+int \hyperlink{class_fbx_video_a9b37e1a2972b4cf0016ad94d86ea5680}{Get\+Image\+Sequence\+Offset} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+F\+BX S\+DK video class. 
+
+ fbxvideo.\+h の 25 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}\label{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}} 
+\index{Fbx\+Video@{Fbx\+Video}!E\+Access\+Mode@{E\+Access\+Mode}}
+\index{E\+Access\+Mode@{E\+Access\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{E\+Access\+Mode}{EAccessMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{Fbx\+Video\+::\+E\+Access\+Mode}}
+
+Video clip access mode. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Disk@{e\+Disk}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Disk@{e\+Disk}}}\mbox{\Hypertarget{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40acca51c771e1f539812097982a4e62d80}\label{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40acca51c771e1f539812097982a4e62d80}} 
+e\+Disk&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Memory@{e\+Memory}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Memory@{e\+Memory}}}\mbox{\Hypertarget{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40aea3d1fa828ba9d118a2f8da3fd944f41}\label{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40aea3d1fa828ba9d118a2f8da3fd944f41}} 
+e\+Memory&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Disk\+Async@{e\+Disk\+Async}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Disk\+Async@{e\+Disk\+Async}}}\mbox{\Hypertarget{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40ab7a1eb0357475f15c29683abcc1f16e3}\label{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40ab7a1eb0357475f15c29683abcc1f16e3}} 
+e\+Disk\+Async&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxvideo.\+h の 228 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}} 
+\index{Fbx\+Video@{Fbx\+Video}!E\+Interlace\+Mode@{E\+Interlace\+Mode}}
+\index{E\+Interlace\+Mode@{E\+Interlace\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{E\+Interlace\+Mode}{EInterlaceMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{Fbx\+Video\+::\+E\+Interlace\+Mode}}
+
+Video interlace modes. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a704fe60074b80df20b68fedcda6b9b4f}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a704fe60074b80df20b68fedcda6b9b4f}} 
+e\+None&Progressive frame (full frame). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Fields@{e\+Fields}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Fields@{e\+Fields}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a70210f309a14cf3fe1fdfdec93536f80}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a70210f309a14cf3fe1fdfdec93536f80}} 
+e\+Fields&Alternate even/odd fields. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Half\+Even@{e\+Half\+Even}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Half\+Even@{e\+Half\+Even}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215ad04c4acb98e0446dfc296e2287c56a6f}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215ad04c4acb98e0446dfc296e2287c56a6f}} 
+e\+Half\+Even&Half of a frame, even fields only. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Half\+Odd@{e\+Half\+Odd}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Half\+Odd@{e\+Half\+Odd}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa3c9bb81d958669eb0d66f481b5b4b57}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa3c9bb81d958669eb0d66f481b5b4b57}} 
+e\+Half\+Odd&Half of a frame, odd fields only. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Full\+Even@{e\+Full\+Even}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Full\+Even@{e\+Full\+Even}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa4207eff0569b05011c820555f206e6e}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa4207eff0569b05011c820555f206e6e}} 
+e\+Full\+Even&Extract and use the even field of a full frame. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Full\+Odd@{e\+Full\+Odd}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Full\+Odd@{e\+Full\+Odd}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215af4f5d62b92c2487787b429965829a70c}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215af4f5d62b92c2487787b429965829a70c}} 
+e\+Full\+Odd&Extract and use the odd field of a full frame. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Full\+Even\+Odd@{e\+Full\+Even\+Odd}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Full\+Even\+Odd@{e\+Full\+Even\+Odd}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a5643f7d85ee0d023d43b0d0feb11ea73}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215a5643f7d85ee0d023d43b0d0feb11ea73}} 
+e\+Full\+Even\+Odd&Extract e\+Fields and make full frame with each one beginning with Odd (60fps). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Full\+Odd\+Even@{e\+Full\+Odd\+Even}!Fbx\+Video@{Fbx\+Video}}\index{Fbx\+Video@{Fbx\+Video}!e\+Full\+Odd\+Even@{e\+Full\+Odd\+Even}}}\mbox{\Hypertarget{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa342e3401c45173cdfd733920163340f}\label{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215aa342e3401c45173cdfd733920163340f}} 
+e\+Full\+Odd\+Even&Extract e\+Fields and make full frame with each one beginning with Even (60fps). \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxvideo.\+h の 203 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_video_afb1d8565917f33ab3777ac9e07b21cd0}\label{class_fbx_video_afb1d8565917f33ab3777ac9e07b21cd0}} 
+\index{Fbx\+Video@{Fbx\+Video}!Connect\+Notify@{Connect\+Notify}}
+\index{Connect\+Notify@{Connect\+Notify}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Connect\+Notify()}{ConnectNotify()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Video\+::\+Connect\+Notify (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_connect_event}{Fbx\+Connect\+Event} const \&}]{p\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_ab7a400f3829d1f0da57d3d78c8168dd0}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_video_a1cd66b3d19e213f62f90d073462e4cce}\label{class_fbx_video_a1cd66b3d19e213f62f90d073462e4cce}} 
+\index{Fbx\+Video@{Fbx\+Video}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Video\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_video_a25c6015f2330ec4ff029ac919b1a231c}\label{class_fbx_video_a25c6015f2330ec4ff029ac919b1a231c}} 
+\index{Fbx\+Video@{Fbx\+Video}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Video\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_video_aafd075b5cd4710be1e3f14cd0ede1bce}\label{class_fbx_video_aafd075b5cd4710be1e3f14cd0ede1bce}} 
+\index{Fbx\+Video@{Fbx\+Video}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Video\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_video_af03167bd6b840efe8425017fb7a606e3}\label{class_fbx_video_af03167bd6b840efe8425017fb7a606e3}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Access\+Mode@{Get\+Access\+Mode}}
+\index{Get\+Access\+Mode@{Get\+Access\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Access\+Mode()}{GetAccessMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode} Fbx\+Video\+::\+Get\+Access\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the clip Access Mode. \begin{DoxyReturn}{戻り値}
+Clip access mode identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a96fc2a11e4e7ca89230389bb55ca5466}\label{class_fbx_video_a96fc2a11e4e7ca89230389bb55ca5466}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+File\+Name@{Get\+File\+Name}}
+\index{Get\+File\+Name@{Get\+File\+Name}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+File\+Name()}{GetFileName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Video\+::\+Get\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the Video full filename. \begin{DoxyReturn}{戻り値}
+Video full filename. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_afa17b30dbcff2e23fe507585e2688619}\label{class_fbx_video_afa17b30dbcff2e23fe507585e2688619}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Frame\+Rate@{Get\+Frame\+Rate}}
+\index{Get\+Frame\+Rate@{Get\+Frame\+Rate}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Frame\+Rate()}{GetFrameRate()}}
+{\footnotesize\ttfamily double Fbx\+Video\+::\+Get\+Frame\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the Frame rate of the video clip. \begin{DoxyReturn}{戻り値}
+Frame rate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a47eacfcc9760e1b014cc706795e267fd}\label{class_fbx_video_a47eacfcc9760e1b014cc706795e267fd}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Free\+Running@{Get\+Free\+Running}}
+\index{Get\+Free\+Running@{Get\+Free\+Running}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Free\+Running()}{GetFreeRunning()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Get\+Free\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the Free Running state. \begin{DoxyReturn}{戻り値}
+Current free running flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a49e54923c0ec892e5bebf479545a32de}\label{class_fbx_video_a49e54923c0ec892e5bebf479545a32de}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Height@{Get\+Height}}
+\index{Get\+Height@{Get\+Height}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Height()}{GetHeight()}}
+{\footnotesize\ttfamily int Fbx\+Video\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the clip height. \begin{DoxyReturn}{戻り値}
+Video image height. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_aefb54b6ccb813ae4da9062b27db5fb1f}\label{class_fbx_video_aefb54b6ccb813ae4da9062b27db5fb1f}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Image\+Sequence@{Get\+Image\+Sequence}}
+\index{Get\+Image\+Sequence@{Get\+Image\+Sequence}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Image\+Sequence()}{GetImageSequence()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Get\+Image\+Sequence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current state of the Image\+Sequence property. \begin{DoxyReturn}{戻り値}
+Image\+Sequence property value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a9b37e1a2972b4cf0016ad94d86ea5680}\label{class_fbx_video_a9b37e1a2972b4cf0016ad94d86ea5680}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Image\+Sequence\+Offset@{Get\+Image\+Sequence\+Offset}}
+\index{Get\+Image\+Sequence\+Offset@{Get\+Image\+Sequence\+Offset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Image\+Sequence\+Offset()}{GetImageSequenceOffset()}}
+{\footnotesize\ttfamily int Fbx\+Video\+::\+Get\+Image\+Sequence\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current value of the Image\+Sequence\+Offset property. \begin{DoxyReturn}{戻り値}
+Image\+Sequence\+Offset property value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_ac86d64d43fd683b6573b4bfa636aa9d1}\label{class_fbx_video_ac86d64d43fd683b6573b4bfa636aa9d1}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Interlace\+Mode@{Get\+Interlace\+Mode}}
+\index{Get\+Interlace\+Mode@{Get\+Interlace\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Interlace\+Mode()}{GetInterlaceMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode} Fbx\+Video\+::\+Get\+Interlace\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the Interlace mode. \begin{DoxyReturn}{戻り値}
+Interlace mode identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_abcc991da628ef1ae31f15a64d773e8be}\label{class_fbx_video_abcc991da628ef1ae31f15a64d773e8be}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Last\+Frame@{Get\+Last\+Frame}}
+\index{Get\+Last\+Frame@{Get\+Last\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Last\+Frame()}{GetLastFrame()}}
+{\footnotesize\ttfamily int Fbx\+Video\+::\+Get\+Last\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the last frame of the video clip. \begin{DoxyReturn}{戻り値}
+Last frame number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a6b78fbe7939fb49f51c1d381fe927816}\label{class_fbx_video_a6b78fbe7939fb49f51c1d381fe927816}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Loop@{Get\+Loop}}
+\index{Get\+Loop@{Get\+Loop}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Loop()}{GetLoop()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Get\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the Loop state. \begin{DoxyReturn}{戻り値}
+Current loop flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_ac4a2e039c73ba16c80f3c538a739a364}\label{class_fbx_video_ac4a2e039c73ba16c80f3c538a739a364}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Offset@{Get\+Offset}}
+\index{Get\+Offset@{Get\+Offset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Offset()}{GetOffset()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+Video\+::\+Get\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_video_a8657651afd89c2f7811b7056ac8346c9}\label{class_fbx_video_a8657651afd89c2f7811b7056ac8346c9}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Original\+Filename@{Get\+Original\+Filename}}
+\index{Get\+Original\+Filename@{Get\+Original\+Filename}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Original\+Filename()}{GetOriginalFilename()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Video\+::\+Get\+Original\+Filename (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_video_aa267c61d456e3cbb8317ac85eac1e979}\label{class_fbx_video_aa267c61d456e3cbb8317ac85eac1e979}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Original\+Format@{Get\+Original\+Format}}
+\index{Get\+Original\+Format@{Get\+Original\+Format}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Original\+Format()}{GetOriginalFormat()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Get\+Original\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_video_a69311023497b0ace1ac4fd78318b178a}\label{class_fbx_video_a69311023497b0ace1ac4fd78318b178a}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Play\+Speed@{Get\+Play\+Speed}}
+\index{Get\+Play\+Speed@{Get\+Play\+Speed}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Play\+Speed()}{GetPlaySpeed()}}
+{\footnotesize\ttfamily double Fbx\+Video\+::\+Get\+Play\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the play speed of the video clip. \begin{DoxyReturn}{戻り値}
+Playback speed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a5c99c225a47e6aae4cd3028f2737babb}\label{class_fbx_video_a5c99c225a47e6aae4cd3028f2737babb}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Relative\+File\+Name@{Get\+Relative\+File\+Name}}
+\index{Get\+Relative\+File\+Name@{Get\+Relative\+File\+Name}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Relative\+File\+Name()}{GetRelativeFileName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Video\+::\+Get\+Relative\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the Video relative filename. \begin{DoxyReturn}{戻り値}
+Video relative filename. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_ab634605d67edca645b11d575b04e42ff}\label{class_fbx_video_ab634605d67edca645b11d575b04e42ff}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Start\+Frame@{Get\+Start\+Frame}}
+\index{Get\+Start\+Frame@{Get\+Start\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Start\+Frame()}{GetStartFrame()}}
+{\footnotesize\ttfamily int Fbx\+Video\+::\+Get\+Start\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the start frame of the video clip. \begin{DoxyReturn}{戻り値}
+Start frame number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a8b6b7be05e339cfe47998674269242e7}\label{class_fbx_video_a8b6b7be05e339cfe47998674269242e7}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Stop\+Frame@{Get\+Stop\+Frame}}
+\index{Get\+Stop\+Frame@{Get\+Stop\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Stop\+Frame()}{GetStopFrame()}}
+{\footnotesize\ttfamily int Fbx\+Video\+::\+Get\+Stop\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the stop frame of the video clip. \begin{DoxyReturn}{戻り値}
+Stop frame number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a69adf09a2346176545e330cd2c8f23ad}\label{class_fbx_video_a69adf09a2346176545e330cd2c8f23ad}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Video\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_video_a9ad08f6d0da0e76353dc6250f1321093}\label{class_fbx_video_a9ad08f6d0da0e76353dc6250f1321093}} 
+\index{Fbx\+Video@{Fbx\+Video}!Get\+Width@{Get\+Width}}
+\index{Get\+Width@{Get\+Width}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Get\+Width()}{GetWidth()}}
+{\footnotesize\ttfamily int Fbx\+Video\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the clip width. \begin{DoxyReturn}{戻り値}
+Video image width. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_a71d943f108e39aa4bdec2a55d7d2468a}\label{class_fbx_video_a71d943f108e39aa4bdec2a55d7d2468a}} 
+\index{Fbx\+Video@{Fbx\+Video}!Image\+Texture\+Get\+Mip\+Map@{Image\+Texture\+Get\+Mip\+Map}}
+\index{Image\+Texture\+Get\+Mip\+Map@{Image\+Texture\+Get\+Mip\+Map}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Image\+Texture\+Get\+Mip\+Map()}{ImageTextureGetMipMap()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Image\+Texture\+Get\+Mip\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve use Mip\+Map state. \begin{DoxyReturn}{戻り値}
+Mip\+Map flag state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_video_ae041331c4f831b2b55e87b4581047d74}\label{class_fbx_video_ae041331c4f831b2b55e87b4581047d74}} 
+\index{Fbx\+Video@{Fbx\+Video}!Image\+Texture\+Set\+Mip\+Map@{Image\+Texture\+Set\+Mip\+Map}}
+\index{Image\+Texture\+Set\+Mip\+Map@{Image\+Texture\+Set\+Mip\+Map}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Image\+Texture\+Set\+Mip\+Map()}{ImageTextureSetMipMap()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Image\+Texture\+Set\+Mip\+Map (\begin{DoxyParamCaption}\item[{bool}]{p\+Use\+Mip\+Map }\end{DoxyParamCaption})}
+
+Set the use of Mip\+Map on the video. 
+\begin{DoxyParams}{引数}
+{\em p\+Use\+Mip\+Map} & If {\ttfamily true}, use Mip\+Map on the video. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_a7eebf649a1500d85b39a69673ef75a9c}\label{class_fbx_video_a7eebf649a1500d85b39a69673ef75a9c}} 
+\index{Fbx\+Video@{Fbx\+Video}!Init@{Init}}
+\index{Init@{Init}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_video_a135c575d14d2ba47c901920687f0e52c}\label{class_fbx_video_a135c575d14d2ba47c901920687f0e52c}} 
+\index{Fbx\+Video@{Fbx\+Video}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the video to default values. 
+
+\mbox{\Hypertarget{class_fbx_video_a7c593f34c56ecb905de956d50048a4f5}\label{class_fbx_video_a7c593f34c56ecb905de956d50048a4f5}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Access\+Mode@{Set\+Access\+Mode}}
+\index{Set\+Access\+Mode@{Set\+Access\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Access\+Mode()}{SetAccessMode()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Access\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode}}]{p\+Access\+Mode }\end{DoxyParamCaption})}
+
+Set the clip Access Mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Access\+Mode} & Clip access mode identifier. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_a897a450c62670d4730cb9ee663a26ea2}\label{class_fbx_video_a897a450c62670d4730cb9ee663a26ea2}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+File\+Name@{Set\+File\+Name}}
+\index{Set\+File\+Name@{Set\+File\+Name}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+File\+Name()}{SetFileName()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Set\+File\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Specify the Video full filename. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Video full filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True},if update successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Update the texture filename if the connection exists. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_video_ade24bcc804d746751c5a35c1bde50333}\label{class_fbx_video_ade24bcc804d746751c5a35c1bde50333}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Free\+Running@{Set\+Free\+Running}}
+\index{Set\+Free\+Running@{Set\+Free\+Running}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Free\+Running()}{SetFreeRunning()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Free\+Running (\begin{DoxyParamCaption}\item[{bool}]{p\+State }\end{DoxyParamCaption})}
+
+Set the Free Running state of the video clip. The Free Running flag can be used by a client application to implement a playback scheme that is independent of the main timeline. 
+\begin{DoxyParams}{引数}
+{\em p\+State} & State of the Free running flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_a511c7cfc220c659c6d07cb4b891572ae}\label{class_fbx_video_a511c7cfc220c659c6d07cb4b891572ae}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Image\+Sequence@{Set\+Image\+Sequence}}
+\index{Set\+Image\+Sequence@{Set\+Image\+Sequence}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Image\+Sequence()}{SetImageSequence()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Image\+Sequence (\begin{DoxyParamCaption}\item[{bool}]{p\+Image\+Sequence }\end{DoxyParamCaption})}
+
+Specify if this video object is holding the starting point of an image sequence. 
+\begin{DoxyParams}{引数}
+{\em p\+Image\+Sequence} & If {\ttfamily true}, this object is holding an image sequence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+When this object is used as image sequence, the F\+BX S\+DK will automatically exclude it from the embedding mechanism. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_video_a32c2bbbd3fdcfc4d653e14067d92e552}\label{class_fbx_video_a32c2bbbd3fdcfc4d653e14067d92e552}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Image\+Sequence\+Offset@{Set\+Image\+Sequence\+Offset}}
+\index{Set\+Image\+Sequence\+Offset@{Set\+Image\+Sequence\+Offset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Image\+Sequence\+Offset()}{SetImageSequenceOffset()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Image\+Sequence\+Offset (\begin{DoxyParamCaption}\item[{int}]{p\+Offset }\end{DoxyParamCaption})}
+
+Specify the frame offset to be applied to the image sequence. 
+\begin{DoxyParams}{引数}
+{\em p\+Offset} & The frame offset value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_aa33fec12f17da41767260e59a3165d05}\label{class_fbx_video_aa33fec12f17da41767260e59a3165d05}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Interlace\+Mode@{Set\+Interlace\+Mode}}
+\index{Set\+Interlace\+Mode@{Set\+Interlace\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Interlace\+Mode()}{SetInterlaceMode()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Interlace\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode}}]{p\+Interlace\+Mode }\end{DoxyParamCaption})}
+
+Set the Interlace mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Interlace\+Mode} & Interlace mode identifier. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_a8fbffbebcc3ef5f170003d0f18ecd7ee}\label{class_fbx_video_a8fbffbebcc3ef5f170003d0f18ecd7ee}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Loop@{Set\+Loop}}
+\index{Set\+Loop@{Set\+Loop}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Loop()}{SetLoop()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Loop (\begin{DoxyParamCaption}\item[{bool}]{p\+Loop }\end{DoxyParamCaption})}
+
+Set the Loop state of the video clip. The Loop flag can be used by a client application to implement the loop playback of the video clip. 
+\begin{DoxyParams}{引数}
+{\em p\+Loop} & State of the loop flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_a8385942ed01c3258b7ebd7b3080962c2}\label{class_fbx_video_a8385942ed01c3258b7ebd7b3080962c2}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Offset@{Set\+Offset}}
+\index{Set\+Offset@{Set\+Offset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Offset()}{SetOffset()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Offset (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time }\end{DoxyParamCaption})}
+
+Set the time offset. The offset can be used to shift the playback start time of the clip. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & Time offset of the clip. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_video_a67861ed77b1e7bfd2c1bce310f7406e6}\label{class_fbx_video_a67861ed77b1e7bfd2c1bce310f7406e6}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Original\+Filename@{Set\+Original\+Filename}}
+\index{Set\+Original\+Filename@{Set\+Original\+Filename}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Original\+Filename()}{SetOriginalFilename()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Original\+Filename (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Original\+Filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_video_afc417f0c646bf474cbe976eb76d01099}\label{class_fbx_video_afc417f0c646bf474cbe976eb76d01099}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Original\+Format@{Set\+Original\+Format}}
+\index{Set\+Original\+Format@{Set\+Original\+Format}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Original\+Format()}{SetOriginalFormat()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Original\+Format (\begin{DoxyParamCaption}\item[{bool}]{p\+State }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_video_a9f7fd819e6d3eeea943183264c55d357}\label{class_fbx_video_a9f7fd819e6d3eeea943183264c55d357}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Play\+Speed@{Set\+Play\+Speed}}
+\index{Set\+Play\+Speed@{Set\+Play\+Speed}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Play\+Speed()}{SetPlaySpeed()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Play\+Speed (\begin{DoxyParamCaption}\item[{double}]{p\+Play\+Speed }\end{DoxyParamCaption})}
+
+Set the play speed of the video clip. 
+\begin{DoxyParams}{引数}
+{\em p\+Play\+Speed} & Playback speed of the clip. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The parameter value is not checked. It is the responsibility of the caller to deal with bad playback speed values. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_video_a3217bac3585954766fa2c56a10de48f3}\label{class_fbx_video_a3217bac3585954766fa2c56a10de48f3}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Relative\+File\+Name@{Set\+Relative\+File\+Name}}
+\index{Set\+Relative\+File\+Name@{Set\+Relative\+File\+Name}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Relative\+File\+Name()}{SetRelativeFileName()}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::\+Set\+Relative\+File\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Specify the Video relative filename. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Video relative filename. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True}, if update successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Update the texture filename if the connection exists. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_video_a85a31f27e4cca068fd285385998bcad5}\label{class_fbx_video_a85a31f27e4cca068fd285385998bcad5}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Start\+Frame@{Set\+Start\+Frame}}
+\index{Set\+Start\+Frame@{Set\+Start\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Start\+Frame()}{SetStartFrame()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Start\+Frame (\begin{DoxyParamCaption}\item[{int}]{p\+Start\+Frame }\end{DoxyParamCaption})}
+
+Set the start frame of the video clip. 
+\begin{DoxyParams}{引数}
+{\em p\+Start\+Frame} & Start frame number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The parameter value is not checked. It is the responsibility of the caller to deal with bad frame numbers. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_video_aa7dd98bc975a79daf988c395be2199cd}\label{class_fbx_video_aa7dd98bc975a79daf988c395be2199cd}} 
+\index{Fbx\+Video@{Fbx\+Video}!Set\+Stop\+Frame@{Set\+Stop\+Frame}}
+\index{Set\+Stop\+Frame@{Set\+Stop\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Set\+Stop\+Frame()}{SetStopFrame()}}
+{\footnotesize\ttfamily void Fbx\+Video\+::\+Set\+Stop\+Frame (\begin{DoxyParamCaption}\item[{int}]{p\+Stop\+Frame }\end{DoxyParamCaption})}
+
+Set the stop frame of the video clip. 
+\begin{DoxyParams}{引数}
+{\em p\+Stop\+Frame} & Stop frame number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The parameter value is not checked. It is the responsibility of the caller to deal with bad frame numbers. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_video_a23a5a08b0504da545d812c16a7a0d20a}\label{class_fbx_video_a23a5a08b0504da545d812c16a7a0d20a}} 
+\index{Fbx\+Video@{Fbx\+Video}!Access\+Mode@{Access\+Mode}}
+\index{Access\+Mode@{Access\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Access\+Mode}{AccessMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_video_a6dd88dabb2170adcd8c58952ed2e0c40}{E\+Access\+Mode}$>$ Fbx\+Video\+::\+Access\+Mode}
+
+
+
+ fbxvideo.\+h の 279 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_ac97913b5255c4f67ec2d401d8ff2b619}\label{class_fbx_video_ac97913b5255c4f67ec2d401d8ff2b619}} 
+\index{Fbx\+Video@{Fbx\+Video}!Frame\+Rate@{Frame\+Rate}}
+\index{Frame\+Rate@{Frame\+Rate}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Frame\+Rate}{FrameRate}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Video\+::\+Frame\+Rate}
+
+
+
+ fbxvideo.\+h の 267 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_abb47ae8cd752b8846cda1ad1d7e1ffff}\label{class_fbx_video_abb47ae8cd752b8846cda1ad1d7e1ffff}} 
+\index{Fbx\+Video@{Fbx\+Video}!Free\+Running@{Free\+Running}}
+\index{Free\+Running@{Free\+Running}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Free\+Running}{FreeRunning}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Video\+::\+Free\+Running}
+
+
+
+ fbxvideo.\+h の 277 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a9e77b423cac730992fe57429c302593c}\label{class_fbx_video_a9e77b423cac730992fe57429c302593c}} 
+\index{Fbx\+Video@{Fbx\+Video}!Height@{Height}}
+\index{Height@{Height}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Video\+::\+Height}
+
+
+
+ fbxvideo.\+h の 270 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a8d98e668bd42f8ed67e8bc28488d0abb}\label{class_fbx_video_a8d98e668bd42f8ed67e8bc28488d0abb}} 
+\index{Fbx\+Video@{Fbx\+Video}!Image\+Sequence@{Image\+Sequence}}
+\index{Image\+Sequence@{Image\+Sequence}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Image\+Sequence}{ImageSequence}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Video\+::\+Image\+Sequence}
+
+
+
+ fbxvideo.\+h の 265 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_acc7a05788def81e3b7b1cb3d003021fb}\label{class_fbx_video_acc7a05788def81e3b7b1cb3d003021fb}} 
+\index{Fbx\+Video@{Fbx\+Video}!Image\+Sequence\+Offset@{Image\+Sequence\+Offset}}
+\index{Image\+Sequence\+Offset@{Image\+Sequence\+Offset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Image\+Sequence\+Offset}{ImageSequenceOffset}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Video\+::\+Image\+Sequence\+Offset}
+
+
+
+ fbxvideo.\+h の 266 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a624969738a09268e8897cffbe94e5188}\label{class_fbx_video_a624969738a09268e8897cffbe94e5188}} 
+\index{Fbx\+Video@{Fbx\+Video}!Interlace\+Mode@{Interlace\+Mode}}
+\index{Interlace\+Mode@{Interlace\+Mode}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Interlace\+Mode}{InterlaceMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_video_a1e60229c28a15e29289f3f00b23aa215}{E\+Interlace\+Mode}$>$ Fbx\+Video\+::\+Interlace\+Mode}
+
+
+
+ fbxvideo.\+h の 276 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a30d7edd0fc1e23268702f5811327e526}\label{class_fbx_video_a30d7edd0fc1e23268702f5811327e526}} 
+\index{Fbx\+Video@{Fbx\+Video}!Last\+Frame@{Last\+Frame}}
+\index{Last\+Frame@{Last\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Last\+Frame}{LastFrame}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Video\+::\+Last\+Frame}
+
+
+
+ fbxvideo.\+h の 268 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_aa325b2e04fac1593125ca02e6dc6a423}\label{class_fbx_video_aa325b2e04fac1593125ca02e6dc6a423}} 
+\index{Fbx\+Video@{Fbx\+Video}!Loop@{Loop}}
+\index{Loop@{Loop}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Loop}{Loop}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Video\+::\+Loop}
+
+
+
+ fbxvideo.\+h の 278 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_ad87f8963e4e7a262c8470be9cbcfb723}\label{class_fbx_video_ad87f8963e4e7a262c8470be9cbcfb723}} 
+\index{Fbx\+Video@{Fbx\+Video}!m\+Original\+Filename@{m\+Original\+Filename}}
+\index{m\+Original\+Filename@{m\+Original\+Filename}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{m\+Original\+Filename}{mOriginalFilename}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Video\+::m\+Original\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxvideo.\+h の 286 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a8e767da7513901cbc25a298e18a2b616}\label{class_fbx_video_a8e767da7513901cbc25a298e18a2b616}} 
+\index{Fbx\+Video@{Fbx\+Video}!m\+Original\+Format@{m\+Original\+Format}}
+\index{m\+Original\+Format@{m\+Original\+Format}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{m\+Original\+Format}{mOriginalFormat}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::m\+Original\+Format\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxvideo.\+h の 285 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a3645c6b2f2e12d12f544100cf0c9033a}\label{class_fbx_video_a3645c6b2f2e12d12f544100cf0c9033a}} 
+\index{Fbx\+Video@{Fbx\+Video}!m\+Relative\+Filename@{m\+Relative\+Filename}}
+\index{m\+Relative\+Filename@{m\+Relative\+Filename}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{m\+Relative\+Filename}{mRelativeFilename}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Video\+::m\+Relative\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxvideo.\+h の 287 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a2c100f8b0f670f8490d91c71ac6b539e}\label{class_fbx_video_a2c100f8b0f670f8490d91c71ac6b539e}} 
+\index{Fbx\+Video@{Fbx\+Video}!m\+Use\+Mip\+Map@{m\+Use\+Mip\+Map}}
+\index{m\+Use\+Mip\+Map@{m\+Use\+Mip\+Map}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{m\+Use\+Mip\+Map}{mUseMipMap}}
+{\footnotesize\ttfamily bool Fbx\+Video\+::m\+Use\+Mip\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxvideo.\+h の 284 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_ac21a47d9f4ec91abf585b2bcf8e0a3aa}\label{class_fbx_video_ac21a47d9f4ec91abf585b2bcf8e0a3aa}} 
+\index{Fbx\+Video@{Fbx\+Video}!Offset@{Offset}}
+\index{Offset@{Offset}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Offset}{Offset}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_time}{Fbx\+Time}$>$ Fbx\+Video\+::\+Offset}
+
+
+
+ fbxvideo.\+h の 275 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a3741896f51e9702d4c8b9d0e7065264c}\label{class_fbx_video_a3741896f51e9702d4c8b9d0e7065264c}} 
+\index{Fbx\+Video@{Fbx\+Video}!Path@{Path}}
+\index{Path@{Path}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Path}{Path}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Video\+::\+Path}
+
+
+
+ fbxvideo.\+h の 271 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a43c6cf4ab4d46dd1a962258f5e4c42f2}\label{class_fbx_video_a43c6cf4ab4d46dd1a962258f5e4c42f2}} 
+\index{Fbx\+Video@{Fbx\+Video}!Play\+Speed@{Play\+Speed}}
+\index{Play\+Speed@{Play\+Speed}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Play\+Speed}{PlaySpeed}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Video\+::\+Play\+Speed}
+
+
+
+ fbxvideo.\+h の 274 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a61a7c941bfe1022b4cc0a8ba14b932f1}\label{class_fbx_video_a61a7c941bfe1022b4cc0a8ba14b932f1}} 
+\index{Fbx\+Video@{Fbx\+Video}!Start\+Frame@{Start\+Frame}}
+\index{Start\+Frame@{Start\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Start\+Frame}{StartFrame}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Video\+::\+Start\+Frame}
+
+
+
+ fbxvideo.\+h の 272 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_aab5d673b818ce8a797ac47851a34e996}\label{class_fbx_video_aab5d673b818ce8a797ac47851a34e996}} 
+\index{Fbx\+Video@{Fbx\+Video}!Stop\+Frame@{Stop\+Frame}}
+\index{Stop\+Frame@{Stop\+Frame}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Stop\+Frame}{StopFrame}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Video\+::\+Stop\+Frame}
+
+
+
+ fbxvideo.\+h の 273 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_video_a9f1d9f9874ac3a9274a754cfb311fc30}\label{class_fbx_video_a9f1d9f9874ac3a9274a754cfb311fc30}} 
+\index{Fbx\+Video@{Fbx\+Video}!Width@{Width}}
+\index{Width@{Width}!Fbx\+Video@{Fbx\+Video}}
+\subsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a088fa96de3b0b3ea69f0f6afef525dfb}{Fbx\+Int}$>$ Fbx\+Video\+::\+Width}
+
+
+
+ fbxvideo.\+h の 269 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxvideo_8h}{fbxvideo.\+h}\end{DoxyCompactItemize}

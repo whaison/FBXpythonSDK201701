@@ -1,0 +1,248 @@
+\hypertarget{class_fbx_iterator_dst_base}{}\section{Fbx\+Iterator\+Dst\+Base クラス}
+\label{class_fbx_iterator_dst_base}\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+
+
+{\ttfamily \#include $<$fbxobject.\+h$>$}
+
+Fbx\+Iterator\+Dst\+Base の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_iterator_dst_base}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_iterator_dst_base_ab8ebd364825476724f9db0ca76bf6f9b}{Fbx\+Iterator\+Dst\+Base} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property, \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} p\+Class\+Id)
+\item 
+\hyperlink{class_fbx_iterator_dst_base_a28644eed9f037cf94d81dbf7c733622e}{Fbx\+Iterator\+Dst\+Base} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} p\+Class\+Id)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_dst_base_a52413f0e25a78503bbd1add8a30fec80}{Get\+First} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_dst_base_ae7b2570f972d09f8e12b2dc22033c90e}{Get\+Next} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_dst_base_a2107573dd3869f094ca35931ffc4b790}{Get\+Safe\+Next} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_dst_base_a36f14606800603afb3106369d8dec485}{Get\+Last} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_dst_base_aa722d332048283c09ba3e690bfe52e14}{Get\+Previous} ()
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_iterator_dst_base_af5526eefa90ef43e1a0daff1b8e8e3d3}{Get\+Safe\+Previous} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_iterator_dst_base_aa732906f31b3b79c5380186d02cb7159}{Reset\+To\+Begin} ()
+\item 
+void \hyperlink{class_fbx_iterator_dst_base_ab742852e3955c14f6299f6104120c2d2}{Reset\+To\+End} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_iterator_dst_base_a3f4bd3e4d6427c2183c2fae3c3cc3033}{m\+Property}
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_iterator_dst_base_a6de7e7773a295d5cd2cf5e1dbb1e355a}{m\+Class\+Id}
+\item 
+int \hyperlink{class_fbx_iterator_dst_base_a9bac54bd7497f350e9a7f8be88d711eb}{m\+Size}
+\item 
+int \hyperlink{class_fbx_iterator_dst_base_ad24255785c3869f0c76d37aa4cedf6aa}{m\+Index}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A utility class for iterating over destination objects that connect to property (\hyperlink{class_fbx_property}{Fbx\+Property}) or object (\hyperlink{class_fbx_object}{Fbx\+Object}). 
+
+ fbxobject.\+h の 1279 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_ab8ebd364825476724f9db0ca76bf6f9b}\label{class_fbx_iterator_dst_base_ab8ebd364825476724f9db0ca76bf6f9b}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Fbx\+Iterator\+Dst\+Base()}{FbxIteratorDstBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Iterator\+Dst\+Base\+::\+Fbx\+Iterator\+Dst\+Base (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property,  }\item[{\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id}}]{p\+Class\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & Property object. The iterator will iterate destination objects that connect to it. \\
+\hline
+{\em p\+Class\+Id} & The class ID specifies the type of the destination objects. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxobject.\+h の 1297 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a28644eed9f037cf94d81dbf7c733622e}\label{class_fbx_iterator_dst_base_a28644eed9f037cf94d81dbf7c733622e}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Fbx\+Iterator\+Dst\+Base()}{FbxIteratorDstBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Iterator\+Dst\+Base\+::\+Fbx\+Iterator\+Dst\+Base (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id}}]{p\+Class\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & F\+BX object. The iterator will iterate source objects that connect to it. \\
+\hline
+{\em p\+Class\+Id} & The class ID specifies the type of the source objects. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxobject.\+h の 1311 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a52413f0e25a78503bbd1add8a30fec80}\label{class_fbx_iterator_dst_base_a52413f0e25a78503bbd1add8a30fec80}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Get\+First@{Get\+First}}
+\index{Get\+First@{Get\+First}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Get\+First()}{GetFirst()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Dst\+Base\+::\+Get\+First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the first destination object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The first destination object. 
+\end{DoxyReturn}
+
+
+ fbxobject.\+h の 1324 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a36f14606800603afb3106369d8dec485}\label{class_fbx_iterator_dst_base_a36f14606800603afb3106369d8dec485}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Get\+Last@{Get\+Last}}
+\index{Get\+Last@{Get\+Last}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Get\+Last()}{GetLast()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Dst\+Base\+::\+Get\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the last destination object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The last destination object. 
+\end{DoxyReturn}
+
+
+ fbxobject.\+h の 1355 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_ae7b2570f972d09f8e12b2dc22033c90e}\label{class_fbx_iterator_dst_base_ae7b2570f972d09f8e12b2dc22033c90e}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Get\+Next@{Get\+Next}}
+\index{Get\+Next@{Get\+Next}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Get\+Next()}{GetNext()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Dst\+Base\+::\+Get\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get next destination object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The next destination object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+
+
+ fbxobject.\+h の 1334 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_aa722d332048283c09ba3e690bfe52e14}\label{class_fbx_iterator_dst_base_aa722d332048283c09ba3e690bfe52e14}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Get\+Previous@{Get\+Previous}}
+\index{Get\+Previous@{Get\+Previous}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Get\+Previous()}{GetPrevious()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Dst\+Base\+::\+Get\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get previous destination object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The previous destination object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+
+
+ fbxobject.\+h の 1365 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a2107573dd3869f094ca35931ffc4b790}\label{class_fbx_iterator_dst_base_a2107573dd3869f094ca35931ffc4b790}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Get\+Safe\+Next@{Get\+Safe\+Next}}
+\index{Get\+Safe\+Next@{Get\+Safe\+Next}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Get\+Safe\+Next()}{GetSafeNext()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Dst\+Base\+::\+Get\+Safe\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get next destination object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The next destination object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method makes sure the iterate index is not out of bounds. 
+\end{DoxyRemark}
+
+
+ fbxobject.\+h の 1345 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_af5526eefa90ef43e1a0daff1b8e8e3d3}\label{class_fbx_iterator_dst_base_af5526eefa90ef43e1a0daff1b8e8e3d3}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Get\+Safe\+Previous@{Get\+Safe\+Previous}}
+\index{Get\+Safe\+Previous@{Get\+Safe\+Previous}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Get\+Safe\+Previous()}{GetSafePrevious()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Iterator\+Dst\+Base\+::\+Get\+Safe\+Previous (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get previous destination object that connects to the property or object. \begin{DoxyReturn}{戻り値}
+The previous destination object. If there are no more objects, return N\+U\+LL. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method makes sure the iterate index is not out of bounds. If the iterate index is out of bounds, the last destination object is returned. 
+\end{DoxyRemark}
+
+
+ fbxobject.\+h の 1377 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_aa732906f31b3b79c5380186d02cb7159}\label{class_fbx_iterator_dst_base_aa732906f31b3b79c5380186d02cb7159}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Reset\+To\+Begin@{Reset\+To\+Begin}}
+\index{Reset\+To\+Begin@{Reset\+To\+Begin}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Reset\+To\+Begin()}{ResetToBegin()}}
+{\footnotesize\ttfamily void Fbx\+Iterator\+Dst\+Base\+::\+Reset\+To\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Reset the iterate index to the beginning. 
+
+ fbxobject.\+h の 1388 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_ab742852e3955c14f6299f6104120c2d2}\label{class_fbx_iterator_dst_base_ab742852e3955c14f6299f6104120c2d2}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!Reset\+To\+End@{Reset\+To\+End}}
+\index{Reset\+To\+End@{Reset\+To\+End}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{Reset\+To\+End()}{ResetToEnd()}}
+{\footnotesize\ttfamily void Fbx\+Iterator\+Dst\+Base\+::\+Reset\+To\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Reset the iterate index to the end. 
+
+ fbxobject.\+h の 1397 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a6de7e7773a295d5cd2cf5e1dbb1e355a}\label{class_fbx_iterator_dst_base_a6de7e7773a295d5cd2cf5e1dbb1e355a}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!m\+Class\+Id@{m\+Class\+Id}}
+\index{m\+Class\+Id@{m\+Class\+Id}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{m\+Class\+Id}{mClassId}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Iterator\+Dst\+Base\+::m\+Class\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+The class ID specifies the type of the destination objects to be retrieved. 
+
+ fbxobject.\+h の 1285 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_ad24255785c3869f0c76d37aa4cedf6aa}\label{class_fbx_iterator_dst_base_ad24255785c3869f0c76d37aa4cedf6aa}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!m\+Index@{m\+Index}}
+\index{m\+Index@{m\+Index}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{m\+Index}{mIndex}}
+{\footnotesize\ttfamily int Fbx\+Iterator\+Dst\+Base\+::m\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+Iterate index. 
+
+ fbxobject.\+h の 1289 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a3f4bd3e4d6427c2183c2fae3c3cc3033}\label{class_fbx_iterator_dst_base_a3f4bd3e4d6427c2183c2fae3c3cc3033}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!m\+Property@{m\+Property}}
+\index{m\+Property@{m\+Property}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{m\+Property}{mProperty}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Iterator\+Dst\+Base\+::m\+Property\hspace{0.3cm}{\ttfamily [protected]}}
+
+The property to iterate. If iterate an object, this is the root property of the object. 
+
+ fbxobject.\+h の 1283 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_iterator_dst_base_a9bac54bd7497f350e9a7f8be88d711eb}\label{class_fbx_iterator_dst_base_a9bac54bd7497f350e9a7f8be88d711eb}} 
+\index{Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}!m\+Size@{m\+Size}}
+\index{m\+Size@{m\+Size}!Fbx\+Iterator\+Dst\+Base@{Fbx\+Iterator\+Dst\+Base}}
+\subsubsection{\texorpdfstring{m\+Size}{mSize}}
+{\footnotesize\ttfamily int Fbx\+Iterator\+Dst\+Base\+::m\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+The number of destination objects whose type is specified by m\+Class\+Id. 
+
+ fbxobject.\+h の 1287 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxobject_8h}{fbxobject.\+h}\end{DoxyCompactItemize}

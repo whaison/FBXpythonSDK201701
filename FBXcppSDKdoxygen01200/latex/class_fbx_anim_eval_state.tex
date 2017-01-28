@@ -1,0 +1,151 @@
+\hypertarget{class_fbx_anim_eval_state}{}\section{Fbx\+Anim\+Eval\+State クラス}
+\label{class_fbx_anim_eval_state}\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+
+
+{\ttfamily \#include $<$fbxanimevalstate.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_anim_eval_state_ad6674f0c37ecd45c15dcfbc220f8faff}{Get\+Time} () const
+\item 
+void \hyperlink{class_fbx_anim_eval_state_a34be9a999fc7dfa426307b4778a50344}{Reset} ()
+\item 
+void \hyperlink{class_fbx_anim_eval_state_aff48b77374c628e0e5e02d0dcb5aee55}{Begin} (const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time)
+\item 
+void \hyperlink{class_fbx_anim_eval_state_a7e647a8391cf8f0356e38e0fd86f5310}{Flush} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_anim_eval_state_aaeebbdfac04c6dbe42c992bc484698c3}{Flush} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+\hyperlink{class_fbx_node_eval_state}{Fbx\+Node\+Eval\+State} $\ast$ \hyperlink{class_fbx_anim_eval_state_a2aedc029a4b2870a2d2112111a450ded}{Get\+Node\+Eval\+State} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+\hyperlink{class_fbx_property_eval_state}{Fbx\+Property\+Eval\+State} $\ast$ \hyperlink{class_fbx_anim_eval_state_a43703fd0f0799332d5840a6f4b549081}{Get\+Property\+Eval\+State} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property)
+\item 
+\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ \hyperlink{class_fbx_anim_eval_state_aa8ad680f208af36dd8f7864cf3449217}{Get\+Property\+Curve\+Node} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer)
+\item 
+\hyperlink{class_fbx_anim_eval_state_a580a41fcddf592e7c4466a26648392c1}{Fbx\+Anim\+Eval\+State} ()
+\item 
+virtual \hyperlink{class_fbx_anim_eval_state_a571cadbab0fda535e1b0a5f650307342}{$\sim$\+Fbx\+Anim\+Eval\+State} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class hold results from animation evaluations. To clear an evaluation state for re-\/use, it is possible to invalidate or to reset it. For the same scene with the same objects, invalidating an evaluation state is the quickest way to clear an evaluation state object for re-\/use because it only zeroes all the entries. A reset will delete all the entries. Unless the scene changes, for performance purposes it is recommended to invalidate evaluation states instead of resetting them. 
+
+ fbxanimevalstate.\+h の 41 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_a580a41fcddf592e7c4466a26648392c1}\label{class_fbx_anim_eval_state_a580a41fcddf592e7c4466a26648392c1}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Fbx\+Anim\+Eval\+State()}{FbxAnimEvalState()}}
+{\footnotesize\ttfamily Fbx\+Anim\+Eval\+State\+::\+Fbx\+Anim\+Eval\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_anim_eval_state_a571cadbab0fda535e1b0a5f650307342}\label{class_fbx_anim_eval_state_a571cadbab0fda535e1b0a5f650307342}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!````~Fbx\+Anim\+Eval\+State@{$\sim$\+Fbx\+Anim\+Eval\+State}}
+\index{````~Fbx\+Anim\+Eval\+State@{$\sim$\+Fbx\+Anim\+Eval\+State}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Anim\+Eval\+State()}{~FbxAnimEvalState()}}
+{\footnotesize\ttfamily virtual Fbx\+Anim\+Eval\+State\+::$\sim$\+Fbx\+Anim\+Eval\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_aff48b77374c628e0e5e02d0dcb5aee55}\label{class_fbx_anim_eval_state_aff48b77374c628e0e5e02d0dcb5aee55}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Begin@{Begin}}
+\index{Begin@{Begin}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Eval\+State\+::\+Begin (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time }\end{DoxyParamCaption})}
+
+Start a new evaluation state frame by zeroing the cache it contains, and changing its associated time. All node and property entries will remain in the list, but their evaluation state will not be up-\/to-\/date. 
+\begin{DoxyParams}{引数}
+{\em p\+Time} & The time at which the evaluation state should be set after the invalidation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_a7e647a8391cf8f0356e38e0fd86f5310}\label{class_fbx_anim_eval_state_a7e647a8391cf8f0356e38e0fd86f5310}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Flush@{Flush}}
+\index{Flush@{Flush}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Flush()}{Flush()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Eval\+State\+::\+Flush (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Invalidate a node evaluation state to force update on next evaluation. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & The node that needs to be updated on next evaluation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_aaeebbdfac04c6dbe42c992bc484698c3}\label{class_fbx_anim_eval_state_aaeebbdfac04c6dbe42c992bc484698c3}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Flush@{Flush}}
+\index{Flush@{Flush}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Flush()}{Flush()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Eval\+State\+::\+Flush (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Invalidate a property evaluation state to force update on next evaluation. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property that needs to be updated on next evaluation. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_a2aedc029a4b2870a2d2112111a450ded}\label{class_fbx_anim_eval_state_a2aedc029a4b2870a2d2112111a450ded}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Get\+Node\+Eval\+State@{Get\+Node\+Eval\+State}}
+\index{Get\+Node\+Eval\+State@{Get\+Node\+Eval\+State}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Get\+Node\+Eval\+State()}{GetNodeEvalState()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node_eval_state}{Fbx\+Node\+Eval\+State}$\ast$ Fbx\+Anim\+Eval\+State\+::\+Get\+Node\+Eval\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Get node transform evaluation result from the evaluation state. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & The node for which the value was stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The global or local matrix transform for the specified node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_aa8ad680f208af36dd8f7864cf3449217}\label{class_fbx_anim_eval_state_aa8ad680f208af36dd8f7864cf3449217}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Get\+Property\+Curve\+Node@{Get\+Property\+Curve\+Node}}
+\index{Get\+Property\+Curve\+Node@{Get\+Property\+Curve\+Node}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Get\+Property\+Curve\+Node()}{GetPropertyCurveNode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$ Fbx\+Anim\+Eval\+State\+::\+Get\+Property\+Curve\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer }\end{DoxyParamCaption})}
+
+Get a property curve node from the evaluation state for quick access. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property to search for its animation curve node. \\
+\hline
+{\em p\+Anim\+Layer} & The animation layer on which the animation curve node must be searched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function uses a map to store animation curve node search results. If animation curve nodes are replaced, the evaluation state must be reset. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_a43703fd0f0799332d5840a6f4b549081}\label{class_fbx_anim_eval_state_a43703fd0f0799332d5840a6f4b549081}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Get\+Property\+Eval\+State@{Get\+Property\+Eval\+State}}
+\index{Get\+Property\+Eval\+State@{Get\+Property\+Eval\+State}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Get\+Property\+Eval\+State()}{GetPropertyEvalState()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_eval_state}{Fbx\+Property\+Eval\+State}$\ast$ Fbx\+Anim\+Eval\+State\+::\+Get\+Property\+Eval\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property }\end{DoxyParamCaption})}
+
+Get a property evaluation result from the evaluation state. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property for which the value was stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result value that was stored. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_ad6674f0c37ecd45c15dcfbc220f8faff}\label{class_fbx_anim_eval_state_ad6674f0c37ecd45c15dcfbc220f8faff}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Get\+Time@{Get\+Time}}
+\index{Get\+Time@{Get\+Time}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Get\+Time()}{GetTime()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+Anim\+Eval\+State\+::\+Get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the time associated with this evaluation state. \begin{DoxyReturn}{戻り値}
+The time associated with this evaluation state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_eval_state_a34be9a999fc7dfa426307b4778a50344}\label{class_fbx_anim_eval_state_a34be9a999fc7dfa426307b4778a50344}} 
+\index{Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Anim\+Eval\+State@{Fbx\+Anim\+Eval\+State}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Eval\+State\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset an evaluation state by deleting the cache it contains. This will remove all entries in the cache. 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimevalstate_8h}{fbxanimevalstate.\+h}\end{DoxyCompactItemize}

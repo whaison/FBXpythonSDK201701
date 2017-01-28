@@ -1,0 +1,277 @@
+\hypertarget{class_fbx_collection}{}\section{Fbx\+Collection クラス}
+\label{class_fbx_collection}\index{Fbx\+Collection@{Fbx\+Collection}}
+
+
+{\ttfamily \#include $<$fbxcollection.\+h$>$}
+
+Fbx\+Collection の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.090508cm]{class_fbx_collection}
+\end{center}
+\end{figure}
+\subsection*{Collection member management}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_collection_a79ba35ab4693cd1b1c79a221d7d2f8d3}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Deletes all objects in the container. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_collection_a8f9bfa57454dda20ef75dd4f27761a15}{Add\+Member} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Member)
+\item 
+virtual bool \hyperlink{class_fbx_collection_a8a65c60bae5ebfcd19f4aaad99ec10f1}{Remove\+Member} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Member)
+\item 
+int \hyperlink{class_fbx_collection_a3e22b8afd7b46dcc4988c2723dd75e02}{Get\+Member\+Count} () const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_collection_a79c52e9fdd2c04a29b5ba04ff7e15bc6}{Get\+Member} (int p\+Index=0) const
+\item 
+virtual bool \hyperlink{class_fbx_collection_a988fd0dcbe61e4b9b165d6830543f49e}{Is\+Member} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Member) const
+\end{DoxyCompactItemize}
+\subsection*{Templated member management}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_collection_a0bc6b29ae68a76d65c554c7217432cca}{Get\+Member\+Count} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_collection_a36af3c2dc008c0c6261ff29b492eaee0}{Get\+Member} (int p\+Index=0) const
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_collection_ac68aa37ee6d89cb3cc066ca1407cb505}{Find\+Member} (const char $\ast$p\+Name) const
+\end{DoxyCompactItemize}
+\subsection*{Criteria based member management}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_collection_ab885c6a1cc7eb77b471ae11c65658258}{Get\+Member\+Count} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_collection_a0734fa6462dbc0926b610dfc6047252e}{Get\+Member} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, int p\+Index=0) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_collection_a72875fa801308b233f5e1cb04cf66bb4}{Find\+Member} (const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Criteria, const char $\ast$p\+Name) const
+\end{DoxyCompactItemize}
+\subsection*{Selection management}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_collection_a93caba5f2a0bded8cb00fca4001950e9}{Set\+Selected\+All} (bool p\+Selection)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+A \hyperlink{class_fbx_object}{Fbx\+Object} derived container for \hyperlink{class_fbx_object}{Fbx\+Object}. 
+
+ fbxcollection.\+h の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_collection_a8f9bfa57454dda20ef75dd4f27761a15}\label{class_fbx_collection_a8f9bfa57454dda20ef75dd4f27761a15}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Add\+Member@{Add\+Member}}
+\index{Add\+Member@{Add\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Add\+Member()}{AddMember()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Collection\+::\+Add\+Member (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Adds a member. 
+\begin{DoxyParams}{引数}
+{\em p\+Member} & Object to be added. \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_collection_exclusive_ab39aa1d3200f5cc628685d7c9eca6fb2}{Fbx\+Collection\+Exclusive}で再実装されています。
+
+
+
+ fbxcollection.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a79ba35ab4693cd1b1c79a221d7d2f8d3}\label{class_fbx_collection_a79ba35ab4693cd1b1c79a221d7d2f8d3}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Collection\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deletes all objects in the container. 
+
+
+
+\hyperlink{class_fbx_scene_ab578ff733eb8f6af89ff1645852966cd}{Fbx\+Scene}, \hyperlink{class_fbx_document_ac8fa73e98a73c4f6637466e58d069bbe}{Fbx\+Document}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_collection_ac68aa37ee6d89cb3cc066ca1407cb505}\label{class_fbx_collection_ac68aa37ee6d89cb3cc066ca1407cb505}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Find\+Member@{Find\+Member}}
+\index{Find\+Member@{Find\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Find\+Member()}{FindMember()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Collection\+::\+Find\+Member (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Searches for a member of class T. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Member name. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxcollection.\+h の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a72875fa801308b233f5e1cb04cf66bb4}\label{class_fbx_collection_a72875fa801308b233f5e1cb04cf66bb4}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Find\+Member@{Find\+Member}}
+\index{Find\+Member@{Find\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Find\+Member()}{FindMember()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Collection\+::\+Find\+Member (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Searches for a member with the given name that also meets the given criteria. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & Defines a set of criteria that the returned object must meet. \\
+\hline
+{\em p\+Name} & Member name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The member with the given name if it meets the criteria; N\+U\+LL if no match could be found. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 108 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a79c52e9fdd2c04a29b5ba04ff7e15bc6}\label{class_fbx_collection_a79c52e9fdd2c04a29b5ba04ff7e15bc6}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Get\+Member@{Get\+Member}}
+\index{Get\+Member@{Get\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Get\+Member()}{GetMember()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Collection\+::\+Get\+Member (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the member of the collection at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The member of the collection at the given index. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a36af3c2dc008c0c6261ff29b492eaee0}\label{class_fbx_collection_a36af3c2dc008c0c6261ff29b492eaee0}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Get\+Member@{Get\+Member}}
+\index{Get\+Member@{Get\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Get\+Member()}{GetMember()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Collection\+::\+Get\+Member (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the member of class T at the given index in the collection. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The given index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The member of class T at the given index. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a0734fa6462dbc0926b610dfc6047252e}\label{class_fbx_collection_a0734fa6462dbc0926b610dfc6047252e}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Get\+Member@{Get\+Member}}
+\index{Get\+Member@{Get\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Get\+Member()}{GetMember()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Collection\+::\+Get\+Member (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria,  }\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the member at the given index in the collection if it meets the specified criteria. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & Defines a set of criteria that the returned object must meet. \\
+\hline
+{\em p\+Index} & The given index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The member at the given index if it meets the criteria; N\+U\+LL otherwise. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 101 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a3e22b8afd7b46dcc4988c2723dd75e02}\label{class_fbx_collection_a3e22b8afd7b46dcc4988c2723dd75e02}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Get\+Member\+Count@{Get\+Member\+Count}}
+\index{Get\+Member\+Count@{Get\+Member\+Count}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Get\+Member\+Count()}{GetMemberCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int Fbx\+Collection\+::\+Get\+Member\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of objects contained within the collection. \begin{DoxyReturn}{戻り値}
+The number of objects the collection contains. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a0bc6b29ae68a76d65c554c7217432cca}\label{class_fbx_collection_a0bc6b29ae68a76d65c554c7217432cca}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Get\+Member\+Count@{Get\+Member\+Count}}
+\index{Get\+Member\+Count@{Get\+Member\+Count}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Get\+Member\+Count()}{GetMemberCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Collection\+::\+Get\+Member\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of class T objects contained within the collection. \begin{DoxyReturn}{戻り値}
+The number of objects of class T the collection contains. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 74 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_ab885c6a1cc7eb77b471ae11c65658258}\label{class_fbx_collection_ab885c6a1cc7eb77b471ae11c65658258}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Get\+Member\+Count@{Get\+Member\+Count}}
+\index{Get\+Member\+Count@{Get\+Member\+Count}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Get\+Member\+Count()}{GetMemberCount()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int Fbx\+Collection\+::\+Get\+Member\+Count (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Criteria }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of objects contained within the collection that meet the specified criteria. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & Defines a set of criteria that each object must meet in order to be included in the results. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of objects the collection contains that meet the specified criteria. 
+\end{DoxyReturn}
+
+
+ fbxcollection.\+h の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a988fd0dcbe61e4b9b165d6830543f49e}\label{class_fbx_collection_a988fd0dcbe61e4b9b165d6830543f49e}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Is\+Member@{Is\+Member}}
+\index{Is\+Member@{Is\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Is\+Member()}{IsMember()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Collection\+::\+Is\+Member (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Member }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Judges whether an object is a part of the collection. 
+\begin{DoxyParams}{引数}
+{\em p\+Member} & The member to be judged. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it is a member of the collection, returns {\ttfamily false} if it is not a member. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_collection_a8a65c60bae5ebfcd19f4aaad99ec10f1}\label{class_fbx_collection_a8a65c60bae5ebfcd19f4aaad99ec10f1}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Remove\+Member@{Remove\+Member}}
+\index{Remove\+Member@{Remove\+Member}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Remove\+Member()}{RemoveMember()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Collection\+::\+Remove\+Member (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Member }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Removes a member. 
+\begin{DoxyParams}{引数}
+{\em p\+Member} & Object to be removed. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxcollection.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_collection_a93caba5f2a0bded8cb00fca4001950e9}\label{class_fbx_collection_a93caba5f2a0bded8cb00fca4001950e9}} 
+\index{Fbx\+Collection@{Fbx\+Collection}!Set\+Selected\+All@{Set\+Selected\+All}}
+\index{Set\+Selected\+All@{Set\+Selected\+All}!Fbx\+Collection@{Fbx\+Collection}}
+\subsubsection{\texorpdfstring{Set\+Selected\+All()}{SetSelectedAll()}}
+{\footnotesize\ttfamily virtual void Fbx\+Collection\+::\+Set\+Selected\+All (\begin{DoxyParamCaption}\item[{bool}]{p\+Selection }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Selects/\+Deselects all the contained objects. 
+\begin{DoxyParams}{引数}
+{\em p\+Selection} & If {\ttfamily true}, all objects are selected, if {\ttfamily false}, all objects are deselected. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxcollection_8h}{fbxcollection.\+h}\end{DoxyCompactItemize}

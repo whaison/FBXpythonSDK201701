@@ -1,0 +1,184 @@
+\hypertarget{class_fbx_deformer}{}\section{Fbx\+Deformer クラス}
+\label{class_fbx_deformer}\index{Fbx\+Deformer@{Fbx\+Deformer}}
+
+
+{\ttfamily \#include $<$fbxdeformer.\+h$>$}
+
+Fbx\+Deformer の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_deformer}
+\end{center}
+\end{figure}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_deformer_ac50e8e0e8cfd2934f8f8cca2d69a6f58}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_deformer_ac3f5a3eb2dda62397fc667004d798319}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_deformer_ac570aba2e0282a6075831422a05c2d48}{m\+Multi\+Layer}
+\end{DoxyCompactItemize}
+\subsection*{Multi-\/\+Layer Flag}
+\label{_amgrpdf4ac1e76a017b89c2c8620c9bd4ab91}%
+This flag is available for backward compatibility with older version of F\+BX files and should not be used anymore. All the animation layering system has been moved to the \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} and \hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} classes. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_deformer_ac1152e69487365faa19fe23ffde19f85}{Set\+Multi\+Layer} (bool p\+Multi\+Layer)
+\item 
+bool \hyperlink{class_fbx_deformer_a1f56fdb78d3b615bb2b4b4d142436e8b}{Get\+Multi\+Layer} () const
+\end{DoxyCompactItemize}
+\subsection*{Deformer types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{E\+Deformer\+Type} \{ \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6a432666d716eeff4acebb52aeb7df93ee}{e\+Unknown}, 
+\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6ae219b2649e29244fe4d80e649241c90e}{e\+Skin}, 
+\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6aa59f09ee382f2e19e4923b5b2155b2d9}{e\+Blend\+Shape}, 
+\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6afca1c8188109c1fe60004335f76a42b8}{e\+Vertex\+Cache}
+ \}
+\item 
+virtual \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{E\+Deformer\+Type} \hyperlink{class_fbx_deformer_adbc586e383f788f24d7fce9ed859d481}{Get\+Deformer\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Base class for skin deformer (\hyperlink{class_fbx_skin}{Fbx\+Skin}) and vertex cache deformer (\hyperlink{class_fbx_vertex_cache_deformer}{Fbx\+Vertex\+Cache\+Deformer}). The corresponding deformer types are \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6ae219b2649e29244fe4d80e649241c90e}{Fbx\+Deformer\+::e\+Skin} and \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6afca1c8188109c1fe60004335f76a42b8}{Fbx\+Deformer\+::e\+Vertex\+Cache}. A deformer can be binded to a geometry (\hyperlink{class_fbx_geometry}{Fbx\+Geometry}) to act on its shape. Typically, some objects under the deformer are animated, and via the deformer, the geometry is animated too.
+
+A skin deformer contains clusters (\hyperlink{class_fbx_cluster}{Fbx\+Cluster}). Each cluster acts on a subset of the geometry\textquotesingle{}s control points, with different weights. For example, a mesh of humanoid shape can have a skin attached, that describes the way the humanoid mesh is deformed by bones. When the bones are animated, the clusters act on the geometry to animate it too.
+
+A vertex cache deformer contains a cache (\hyperlink{class_fbx_cache}{Fbx\+Cache}). The cache contains animation information for every control point of the geometry. 
+
+ fbxdeformer.\+h の 38 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}\label{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!E\+Deformer\+Type@{E\+Deformer\+Type}}
+\index{E\+Deformer\+Type@{E\+Deformer\+Type}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{E\+Deformer\+Type}{EDeformerType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{Fbx\+Deformer\+::\+E\+Deformer\+Type}}
+
+Deformer types. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown@{e\+Unknown}!Fbx\+Deformer@{Fbx\+Deformer}}\index{Fbx\+Deformer@{Fbx\+Deformer}!e\+Unknown@{e\+Unknown}}}\mbox{\Hypertarget{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6a432666d716eeff4acebb52aeb7df93ee}\label{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6a432666d716eeff4acebb52aeb7df93ee}} 
+e\+Unknown&Unknown deformer type \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Skin@{e\+Skin}!Fbx\+Deformer@{Fbx\+Deformer}}\index{Fbx\+Deformer@{Fbx\+Deformer}!e\+Skin@{e\+Skin}}}\mbox{\Hypertarget{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6ae219b2649e29244fe4d80e649241c90e}\label{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6ae219b2649e29244fe4d80e649241c90e}} 
+e\+Skin&Type \hyperlink{class_fbx_skin}{Fbx\+Skin} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend\+Shape@{e\+Blend\+Shape}!Fbx\+Deformer@{Fbx\+Deformer}}\index{Fbx\+Deformer@{Fbx\+Deformer}!e\+Blend\+Shape@{e\+Blend\+Shape}}}\mbox{\Hypertarget{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6aa59f09ee382f2e19e4923b5b2155b2d9}\label{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6aa59f09ee382f2e19e4923b5b2155b2d9}} 
+e\+Blend\+Shape&Type \hyperlink{class_fbx_blend_shape}{Fbx\+Blend\+Shape} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Vertex\+Cache@{e\+Vertex\+Cache}!Fbx\+Deformer@{Fbx\+Deformer}}\index{Fbx\+Deformer@{Fbx\+Deformer}!e\+Vertex\+Cache@{e\+Vertex\+Cache}}}\mbox{\Hypertarget{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6afca1c8188109c1fe60004335f76a42b8}\label{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6afca1c8188109c1fe60004335f76a42b8}} 
+e\+Vertex\+Cache&Type \hyperlink{class_fbx_vertex_cache_deformer}{Fbx\+Vertex\+Cache\+Deformer} \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxdeformer.\+h の 67 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_deformer_ac50e8e0e8cfd2934f8f8cca2d69a6f58}\label{class_fbx_deformer_ac50e8e0e8cfd2934f8f8cca2d69a6f58}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Deformer\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_skin_aeebbc037507285cdb2e066f420970208}{Fbx\+Skin}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_deformer_adbc586e383f788f24d7fce9ed859d481}\label{class_fbx_deformer_adbc586e383f788f24d7fce9ed859d481}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!Get\+Deformer\+Type@{Get\+Deformer\+Type}}
+\index{Get\+Deformer\+Type@{Get\+Deformer\+Type}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{Get\+Deformer\+Type()}{GetDeformerType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{E\+Deformer\+Type} Fbx\+Deformer\+::\+Get\+Deformer\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get the deformer type. \begin{DoxyReturn}{戻り値}
+Deformer type identifier. Default value is e\+Unknown. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_skin_abaf5fca14c0e8339ea692560fbd494d8}{Fbx\+Skin}, \hyperlink{class_fbx_blend_shape_afc886286ac95264b993335d8b3954b4f}{Fbx\+Blend\+Shape}, \hyperlink{class_fbx_vertex_cache_deformer_ab213400e170fe58699649acaf652c787}{Fbx\+Vertex\+Cache\+Deformer}で再実装されています。
+
+
+
+ fbxdeformer.\+h の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_deformer_a1f56fdb78d3b615bb2b4b4d142436e8b}\label{class_fbx_deformer_a1f56fdb78d3b615bb2b4b4d142436e8b}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!Get\+Multi\+Layer@{Get\+Multi\+Layer}}
+\index{Get\+Multi\+Layer@{Get\+Multi\+Layer}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{Get\+Multi\+Layer()}{GetMultiLayer()}}
+{\footnotesize\ttfamily bool Fbx\+Deformer\+::\+Get\+Multi\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get multi-\/layer state. \begin{DoxyReturn}{戻り値}
+The current state of the multi-\/layer flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_deformer_ac3f5a3eb2dda62397fc667004d798319}\label{class_fbx_deformer_ac3f5a3eb2dda62397fc667004d798319}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Deformer\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_skin_a736228a80b5d0db0075527767286be2d}{Fbx\+Skin}, \hyperlink{class_fbx_blend_shape_aa2b22b70c929ac1ad39b12f0ade998d1}{Fbx\+Blend\+Shape}, \hyperlink{class_fbx_vertex_cache_deformer_a67322e24180497b1f268cad5ed29c08b}{Fbx\+Vertex\+Cache\+Deformer}で再実装されています。
+
+
+
+ fbxdeformer.\+h の 87 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_deformer_ac1152e69487365faa19fe23ffde19f85}\label{class_fbx_deformer_ac1152e69487365faa19fe23ffde19f85}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!Set\+Multi\+Layer@{Set\+Multi\+Layer}}
+\index{Set\+Multi\+Layer@{Set\+Multi\+Layer}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{Set\+Multi\+Layer()}{SetMultiLayer()}}
+{\footnotesize\ttfamily void Fbx\+Deformer\+::\+Set\+Multi\+Layer (\begin{DoxyParamCaption}\item[{bool}]{p\+Multi\+Layer }\end{DoxyParamCaption})}
+
+Set multi-\/layer state flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Multi\+Layer} & Set to {\ttfamily true} to enable multi-\/layering. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_deformer_ac570aba2e0282a6075831422a05c2d48}\label{class_fbx_deformer_ac570aba2e0282a6075831422a05c2d48}} 
+\index{Fbx\+Deformer@{Fbx\+Deformer}!m\+Multi\+Layer@{m\+Multi\+Layer}}
+\index{m\+Multi\+Layer@{m\+Multi\+Layer}!Fbx\+Deformer@{Fbx\+Deformer}}
+\subsubsection{\texorpdfstring{m\+Multi\+Layer}{mMultiLayer}}
+{\footnotesize\ttfamily bool Fbx\+Deformer\+::m\+Multi\+Layer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxdeformer.\+h の 89 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxdeformer_8h}{fbxdeformer.\+h}\end{DoxyCompactItemize}

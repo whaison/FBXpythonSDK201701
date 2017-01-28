@@ -1,0 +1,242 @@
+\hypertarget{class_fbx_anim_stack}{}\section{Fbx\+Anim\+Stack クラス}
+\label{class_fbx_anim_stack}\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+
+
+{\ttfamily \#include $<$fbxanimstack.\+h$>$}
+
+Fbx\+Anim\+Stack の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_anim_stack}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_anim_stack_a69f6d38a6b4fa348585674e5d68464b2}{Reset} (const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} $\ast$p\+Take\+Info=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_anim_stack_a87abfeabeaa31a44e2474f01d4501b7f}{Description}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_time}{Fbx\+Time} $>$ \hyperlink{class_fbx_anim_stack_a140ba636c0907144d60d2901c0995456}{Local\+Start}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_time}{Fbx\+Time} $>$ \hyperlink{class_fbx_anim_stack_a07be87cbd6b3226be489c69b5466a72d}{Local\+Stop}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_time}{Fbx\+Time} $>$ \hyperlink{class_fbx_anim_stack_adeac4e2557e00ccd420eb9b790377e22}{Reference\+Start}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_time}{Fbx\+Time} $>$ \hyperlink{class_fbx_anim_stack_a480a3b46ab895a740ee658e7022ec208}{Reference\+Stop}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_anim_stack_a41c0a8c693a1dcf5ba2e150b7ea89aa3}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual void \hyperlink{class_fbx_anim_stack_a4809de086c3a2d28d98d771b011599d6}{Destruct} (bool p\+Recursive)
+\end{DoxyCompactItemize}
+\subsection*{Utility functions.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \hyperlink{class_fbx_anim_stack_a61d246d787a9ac3ab230527e9bab00bb}{Get\+Local\+Time\+Span} () const
+\item 
+void \hyperlink{class_fbx_anim_stack_ae7d19d4d0cbc6e01fef742b9acaa036e}{Set\+Local\+Time\+Span} (\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&p\+Time\+Span)
+\item 
+\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \hyperlink{class_fbx_anim_stack_a01aacdecb9d3e1860e015aa364111239}{Get\+Reference\+Time\+Span} () const
+\item 
+void \hyperlink{class_fbx_anim_stack_ae63b01339e65e5a6c52ce532e0006e8b}{Set\+Reference\+Time\+Span} (\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&p\+Time\+Span)
+\item 
+bool \hyperlink{class_fbx_anim_stack_a20891f3e62c6a50a628f2ed65616bf36}{Bake\+Layers} (\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator} $\ast$p\+Evaluator, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Start, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Stop, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Period)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+The Animation stack is a collection of animation layers. The Fbx document can have one or more animation stacks. Each stack can be viewed as one \char`\"{}take\char`\"{} in the previous versions of the F\+BX S\+DK. The \char`\"{}stack\char`\"{} terminology comes from the fact that the object contains 1 to n animation layers that are evaluated according to their blending modes to produce a resulting animation for a given attribute. 
+
+ fbxanimstack.\+h の 37 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_anim_stack_a20891f3e62c6a50a628f2ed65616bf36}\label{class_fbx_anim_stack_a20891f3e62c6a50a628f2ed65616bf36}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Bake\+Layers@{Bake\+Layers}}
+\index{Bake\+Layers@{Bake\+Layers}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Bake\+Layers()}{BakeLayers()}}
+{\footnotesize\ttfamily bool Fbx\+Anim\+Stack\+::\+Bake\+Layers (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator} $\ast$}]{p\+Evaluator,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Start,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Stop,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Period }\end{DoxyParamCaption})}
+
+Bake all the animation layers on the base layer. This function will process all the properties on every animation layer and generate a re-\/sampled set of animation keys (representing the layers\textquotesingle{} evaluated result) on the base layer. Once this operation is completed successfully, all the layers (except the base one) are destroyed. Properties that are only defined on the base layer will remain unaffected by the re-\/sampling. The stack local timespan is updated with the overall animation range.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Evaluator} & The layer evaluator. This is the engine that evaluates the overall result of any given property according to the layers flags. \\
+\hline
+{\em p\+Start} & The start time of the re-\/sampling range. \\
+\hline
+{\em p\+Stop} & The stop time of the re-\/sampling range. \\
+\hline
+{\em p\+Period} & The time increment for the re-\/sampling. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the operation was successful and {\ttfamily false} in case of errors. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If this Anim\+Stack contains only one Anim\+Layer, the function will return false and do nothing. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_anim_stack_a41c0a8c693a1dcf5ba2e150b7ea89aa3}\label{class_fbx_anim_stack_a41c0a8c693a1dcf5ba2e150b7ea89aa3}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Stack\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_stack_a4809de086c3a2d28d98d771b011599d6}\label{class_fbx_anim_stack_a4809de086c3a2d28d98d771b011599d6}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Anim\+Stack\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_anim_stack_a61d246d787a9ac3ab230527e9bab00bb}\label{class_fbx_anim_stack_a61d246d787a9ac3ab230527e9bab00bb}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Get\+Local\+Time\+Span@{Get\+Local\+Time\+Span}}
+\index{Get\+Local\+Time\+Span@{Get\+Local\+Time\+Span}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Get\+Local\+Time\+Span()}{GetLocalTimeSpan()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} Fbx\+Anim\+Stack\+::\+Get\+Local\+Time\+Span (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the Local\+Start and Local\+Stop time properties as a \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span}. \begin{DoxyReturn}{戻り値}
+The current local time span. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_stack_a01aacdecb9d3e1860e015aa364111239}\label{class_fbx_anim_stack_a01aacdecb9d3e1860e015aa364111239}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Get\+Reference\+Time\+Span@{Get\+Reference\+Time\+Span}}
+\index{Get\+Reference\+Time\+Span@{Get\+Reference\+Time\+Span}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Get\+Reference\+Time\+Span()}{GetReferenceTimeSpan()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} Fbx\+Anim\+Stack\+::\+Get\+Reference\+Time\+Span (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the Reference\+Start and Reference\+Stop time properties as a \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span}. \begin{DoxyReturn}{戻り値}
+The current reference time span. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_anim_stack_a69f6d38a6b4fa348585674e5d68464b2}\label{class_fbx_anim_stack_a69f6d38a6b4fa348585674e5d68464b2}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Stack\+::\+Reset (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} $\ast$}]{p\+Take\+Info = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Reset the object time spans either to their default values or from the p\+Take\+Info structure, if provided. 
+\begin{DoxyParams}{引数}
+{\em p\+Take\+Info} & The take info to be used during reset. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_stack_ae7d19d4d0cbc6e01fef742b9acaa036e}\label{class_fbx_anim_stack_ae7d19d4d0cbc6e01fef742b9acaa036e}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Set\+Local\+Time\+Span@{Set\+Local\+Time\+Span}}
+\index{Set\+Local\+Time\+Span@{Set\+Local\+Time\+Span}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Set\+Local\+Time\+Span()}{SetLocalTimeSpan()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Stack\+::\+Set\+Local\+Time\+Span (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&}]{p\+Time\+Span }\end{DoxyParamCaption})}
+
+Set the Local\+Start and Local\+Stop time properties from a \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span}. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Span} & The new local time span. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_anim_stack_ae63b01339e65e5a6c52ce532e0006e8b}\label{class_fbx_anim_stack_ae63b01339e65e5a6c52ce532e0006e8b}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Set\+Reference\+Time\+Span@{Set\+Reference\+Time\+Span}}
+\index{Set\+Reference\+Time\+Span@{Set\+Reference\+Time\+Span}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Set\+Reference\+Time\+Span()}{SetReferenceTimeSpan()}}
+{\footnotesize\ttfamily void Fbx\+Anim\+Stack\+::\+Set\+Reference\+Time\+Span (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_time_span}{Fbx\+Time\+Span} \&}]{p\+Time\+Span }\end{DoxyParamCaption})}
+
+Set the Reference\+Start and Reference\+Stop time properties from a \hyperlink{class_fbx_time_span}{Fbx\+Time\+Span}. 
+\begin{DoxyParams}{引数}
+{\em p\+Time\+Span} & The new reference time span. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_anim_stack_a87abfeabeaa31a44e2474f01d4501b7f}\label{class_fbx_anim_stack_a87abfeabeaa31a44e2474f01d4501b7f}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Description@{Description}}
+\index{Description@{Description}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Description}{Description}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Anim\+Stack\+::\+Description}
+
+This property stores a description string of this animation stack. This string can be used to display, in a human readable format, information relative to this animation stack object. Default value is \char`\"{}\char`\"{}. \begin{DoxyRemark}{注釈}
+The applications using the F\+BX S\+DK are not required to manipulate this information. 
+\end{DoxyRemark}
+
+
+ fbxanimstack.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_stack_a140ba636c0907144d60d2901c0995456}\label{class_fbx_anim_stack_a140ba636c0907144d60d2901c0995456}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Local\+Start@{Local\+Start}}
+\index{Local\+Start@{Local\+Start}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Local\+Start}{LocalStart}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_time}{Fbx\+Time}$>$ Fbx\+Anim\+Stack\+::\+Local\+Start}
+
+This property stores the local time span \char`\"{}\+Start\char`\"{} time. This \char`\"{}start\char`\"{} time should be seen as a time marker. Typically it would represent the whole animation starting time but its use (and update) is left to the calling application (with one exception occurring in the Bake\+Layers). The F\+BX S\+DK does not use this value internally and only guarantees that it will be stored to the F\+BX file and retrieved from it.
+
+Default value is 0. 
+
+ fbxanimstack.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_stack_a07be87cbd6b3226be489c69b5466a72d}\label{class_fbx_anim_stack_a07be87cbd6b3226be489c69b5466a72d}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Local\+Stop@{Local\+Stop}}
+\index{Local\+Stop@{Local\+Stop}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Local\+Stop}{LocalStop}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_time}{Fbx\+Time}$>$ Fbx\+Anim\+Stack\+::\+Local\+Stop}
+
+This property stores the local time span \char`\"{}\+Stop\char`\"{} time. This \char`\"{}stop\char`\"{} time should be seen as a time marker. Typically it would represent the whole animation ending time but its use (and update) is left to the calling application (with one exception occurring in the Bake\+Layers). The F\+BX S\+DK does not use this value internally and only guarantees that it will be stored to the F\+BX file and retrieved from it.
+
+Default value is 0 
+
+ fbxanimstack.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_stack_adeac4e2557e00ccd420eb9b790377e22}\label{class_fbx_anim_stack_adeac4e2557e00ccd420eb9b790377e22}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Reference\+Start@{Reference\+Start}}
+\index{Reference\+Start@{Reference\+Start}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Reference\+Start}{ReferenceStart}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_time}{Fbx\+Time}$>$ Fbx\+Anim\+Stack\+::\+Reference\+Start}
+
+This property stores the reference time span \char`\"{}\+Start\char`\"{} time. This reference start time is another time marker that can be used by the calling application. The F\+BX S\+DK never uses it and only guarantees that this value is stored in the F\+BX file and retrieved from it.
+
+Default value is 0 
+
+ fbxanimstack.\+h の 81 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_anim_stack_a480a3b46ab895a740ee658e7022ec208}\label{class_fbx_anim_stack_a480a3b46ab895a740ee658e7022ec208}} 
+\index{Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}!Reference\+Stop@{Reference\+Stop}}
+\index{Reference\+Stop@{Reference\+Stop}!Fbx\+Anim\+Stack@{Fbx\+Anim\+Stack}}
+\subsubsection{\texorpdfstring{Reference\+Stop}{ReferenceStop}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_time}{Fbx\+Time}$>$ Fbx\+Anim\+Stack\+::\+Reference\+Stop}
+
+This property stores the reference time span \char`\"{}\+Stop\char`\"{} time. This reference stop time is another time marker that can be used by the calling application. The F\+BX S\+DK never uses it and only guarantees that this value is stored in the F\+BX file and retrieved from it.
+
+Default value is 0 
+
+ fbxanimstack.\+h の 89 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/animation/\hyperlink{fbxanimstack_8h}{fbxanimstack.\+h}\end{DoxyCompactItemize}

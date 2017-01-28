@@ -1,0 +1,354 @@
+\hypertarget{class_fbx_reader_fbx5}{}\section{Fbx\+Reader\+Fbx5 クラス}
+\label{class_fbx_reader_fbx5}\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+
+
+{\ttfamily \#include $<$fbxreaderfbx5.\+h$>$}
+
+Fbx\+Reader\+Fbx5 の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_reader_fbx5}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5}{E\+Import\+Mode} \{ \hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5ad5ec6aa189d4f8dd1c0f74907b72d800}{e\+A\+S\+C\+II}, 
+\hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5ae11f33f94eb2bd6ea602deab3bc7cb6f}{e\+B\+I\+N\+A\+RY}, 
+\hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5a1a218e22b2c3355b99c5b68f73959c26}{e\+E\+N\+C\+R\+Y\+P\+T\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_reader_fbx5_ad9ae3c7eebf1b77a35066a545abb9792}{Fbx\+Reader\+Fbx5} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, \hyperlink{class_fbx_importer}{Fbx\+Importer} \&p\+Importer, int p\+ID, \hyperlink{class_fbx_status}{Fbx\+Status} \&p\+Status)
+\item 
+virtual \hyperlink{class_fbx_reader_fbx5_ae1ebf6def0485de077076b8e18435eb6}{$\sim$\+Fbx\+Reader\+Fbx5} ()
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_afabd2457815a65017943a48fb0d0b3bc}{File\+Open} (char $\ast$p\+File\+Name, bool p\+Ignored\+Arg)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_aa197089a894684834388a2caf43145e3}{File\+Open} (char $\ast$p\+File\+Name, \hyperlink{class_fbx_reader_a1a14bd907bcda7dd48ba9b0a6236b7b8}{E\+File\+Open\+Special\+Flags} p\+Flags)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_a1aef8cc95eae3b44812beef48d6edb5d}{File\+Open} (char $\ast$p\+File\+Name)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_ad48fa87e086b236db57f57eed5f50ddb}{File\+Open} (\hyperlink{class_fbx_file}{Fbx\+File} $\ast$p\+File)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_a1ac1c0598fea61e91ac2c98de15a0d24}{File\+Open} (\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$p\+Stream, void $\ast$p\+Stream\+Data)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_a315730ff4083066964d32c6d3b3a717d}{File\+Close} ()
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_ae610563380260e4445a8c90646898a87}{Is\+File\+Open} ()
+\item 
+virtual void \hyperlink{class_fbx_reader_fbx5_ab910914828f297f51c28d88f466d6928}{Set\+Embedding\+Extraction\+Folder} (const char $\ast$p\+Extract\+Folder)
+\item 
+\hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5}{E\+Import\+Mode} \hyperlink{class_fbx_reader_fbx5_a2124b8ecb7523ead3f623c47633e9e85}{Get\+Import\+Mode} ()
+\item 
+virtual void \hyperlink{class_fbx_reader_fbx5_a297ed289a6d5e55f33540d8efb4bfd0b}{Get\+Version} (int \&p\+Major, int \&p\+Minor, int \&p\+Revision)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_a30c6a2a6f02fddffecec9cabf9f51ed7}{Get\+Read\+Options} (bool p\+Parse\+File\+As\+Needed=true)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_aac75f44d42d473ac88a54c81ec5b1af6}{Read} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_a6c8620d040add56c30500a593b4e56d6}{Get\+Read\+Options} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+Fbx, bool p\+Parse\+File\+As\+Needed=true)
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_a9f5142bf143ff9192bb7d687c831ad21}{Read} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene, \hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+Fbx)
+\item 
+virtual \hyperlink{class_fbx_document_info}{Fbx\+Document\+Info} $\ast$ \hyperlink{class_fbx_reader_fbx5_af685112183765e2a278bbbc898374074}{Get\+Scene\+Info} ()
+\item 
+virtual \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_take_info}{Fbx\+Take\+Info} $\ast$ $>$ $\ast$ \hyperlink{class_fbx_reader_fbx5_a4680a5c4695d3692582d3ca8db71cd01}{Get\+Take\+Info} ()
+\item 
+virtual bool \hyperlink{class_fbx_reader_fbx5_ae6f619a41303077d9d4ed2935f3d2108}{Supports\+Streams} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+
+
+ fbxreaderfbx5.\+h の 31 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5}\label{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!E\+Import\+Mode@{E\+Import\+Mode}}
+\index{E\+Import\+Mode@{E\+Import\+Mode}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{E\+Import\+Mode}{EImportMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5}{Fbx\+Reader\+Fbx5\+::\+E\+Import\+Mode}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+A\+S\+C\+II@{e\+A\+S\+C\+II}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!e\+A\+S\+C\+II@{e\+A\+S\+C\+II}}}\mbox{\Hypertarget{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5ad5ec6aa189d4f8dd1c0f74907b72d800}\label{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5ad5ec6aa189d4f8dd1c0f74907b72d800}} 
+e\+A\+S\+C\+II&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+B\+I\+N\+A\+RY@{e\+B\+I\+N\+A\+RY}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!e\+B\+I\+N\+A\+RY@{e\+B\+I\+N\+A\+RY}}}\mbox{\Hypertarget{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5ae11f33f94eb2bd6ea602deab3bc7cb6f}\label{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5ae11f33f94eb2bd6ea602deab3bc7cb6f}} 
+e\+B\+I\+N\+A\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+E\+N\+C\+R\+Y\+P\+T\+ED@{e\+E\+N\+C\+R\+Y\+P\+T\+ED}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!e\+E\+N\+C\+R\+Y\+P\+T\+ED@{e\+E\+N\+C\+R\+Y\+P\+T\+ED}}}\mbox{\Hypertarget{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5a1a218e22b2c3355b99c5b68f73959c26}\label{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5a1a218e22b2c3355b99c5b68f73959c26}} 
+e\+E\+N\+C\+R\+Y\+P\+T\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxreaderfbx5.\+h の 47 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_reader_fbx5_ad9ae3c7eebf1b77a35066a545abb9792}\label{class_fbx_reader_fbx5_ad9ae3c7eebf1b77a35066a545abb9792}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Fbx\+Reader\+Fbx5()}{FbxReaderFbx5()}}
+{\footnotesize\ttfamily Fbx\+Reader\+Fbx5\+::\+Fbx\+Reader\+Fbx5 (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{\hyperlink{class_fbx_importer}{Fbx\+Importer} \&}]{p\+Importer,  }\item[{int}]{p\+ID,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} \&}]{p\+Status }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_ae1ebf6def0485de077076b8e18435eb6}\label{class_fbx_reader_fbx5_ae1ebf6def0485de077076b8e18435eb6}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!````~Fbx\+Reader\+Fbx5@{$\sim$\+Fbx\+Reader\+Fbx5}}
+\index{````~Fbx\+Reader\+Fbx5@{$\sim$\+Fbx\+Reader\+Fbx5}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Reader\+Fbx5()}{~FbxReaderFbx5()}}
+{\footnotesize\ttfamily virtual Fbx\+Reader\+Fbx5\+::$\sim$\+Fbx\+Reader\+Fbx5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a315730ff4083066964d32c6d3b3a717d}\label{class_fbx_reader_fbx5_a315730ff4083066964d32c6d3b3a717d}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!File\+Close@{File\+Close}}
+\index{File\+Close@{File\+Close}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{File\+Close()}{FileClose()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+File\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Closes the file stream \begin{DoxyReturn}{戻り値}
+{\ttfamily false} 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a327df94e5c24315fc5cbcedf0e7bb615}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_afabd2457815a65017943a48fb0d0b3bc}\label{class_fbx_reader_fbx5_afabd2457815a65017943a48fb0d0b3bc}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+File\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name,  }\item[{bool}]{p\+Ignored\+Arg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_aa197089a894684834388a2caf43145e3}\label{class_fbx_reader_fbx5_aa197089a894684834388a2caf43145e3}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+File\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name,  }\item[{\hyperlink{class_fbx_reader_a1a14bd907bcda7dd48ba9b0a6236b7b8}{E\+File\+Open\+Special\+Flags}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Opens the file with specific E\+File\+Open\+Special\+Flags 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & Name of the File to open. \\
+\hline
+{\em p\+Flags} & The E\+File\+Open\+Special\+Flags to open with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the file opens successfully return true, otherwise return false. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a345b292805ea8799a9d962714e1ad9a5}{Fbx\+Reader}を再実装しています。
+
+
+
+ fbxreaderfbx5.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a1aef8cc95eae3b44812beef48d6edb5d}\label{class_fbx_reader_fbx5_a1aef8cc95eae3b44812beef48d6edb5d}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+File\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Opens the file with default flag 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & Name of the File to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the file opens successfully return {\ttfamily true}, otherwise return {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a6105bd37ae86c03f35aee6f62901856d}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_ad48fa87e086b236db57f57eed5f50ddb}\label{class_fbx_reader_fbx5_ad48fa87e086b236db57f57eed5f50ddb}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+File\+Open (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_file}{Fbx\+File} $\ast$}]{p\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_reader_a9e334ad0c2abd069c35a016413a8adcd}{Fbx\+Reader}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a1ac1c0598fea61e91ac2c98de15a0d24}\label{class_fbx_reader_fbx5_a1ac1c0598fea61e91ac2c98de15a0d24}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+File\+Open (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$}]{p\+Stream,  }\item[{void $\ast$}]{p\+Stream\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Opens the stream with default flag 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & stream to open \\
+\hline
+{\em p\+Stream\+Data} & user-\/defined stream data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the stream opens successfully return {\ttfamily true}, otherwise return {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a819487a39b5e25f69a8dccf187ab4ab9}{Fbx\+Reader}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a2124b8ecb7523ead3f623c47633e9e85}\label{class_fbx_reader_fbx5_a2124b8ecb7523ead3f623c47633e9e85}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Get\+Import\+Mode@{Get\+Import\+Mode}}
+\index{Get\+Import\+Mode@{Get\+Import\+Mode}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Get\+Import\+Mode()}{GetImportMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_reader_fbx5_a9d205ec64b33007dd74af093943b50c5}{E\+Import\+Mode} Fbx\+Reader\+Fbx5\+::\+Get\+Import\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a30c6a2a6f02fddffecec9cabf9f51ed7}\label{class_fbx_reader_fbx5_a30c6a2a6f02fddffecec9cabf9f51ed7}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Get\+Read\+Options@{Get\+Read\+Options}}
+\index{Get\+Read\+Options@{Get\+Read\+Options}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Get\+Read\+Options()}{GetReadOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+Get\+Read\+Options (\begin{DoxyParamCaption}\item[{bool}]{p\+Parse\+File\+As\+Needed = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns file stream options 
+\begin{DoxyParams}{引数}
+{\em p\+Parse\+File\+As\+Needed} & Sets whether to parse file as read options \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, otherwise return false. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_acea3c118db490378c9aed17512396932}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a6c8620d040add56c30500a593b4e56d6}\label{class_fbx_reader_fbx5_a6c8620d040add56c30500a593b4e56d6}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Get\+Read\+Options@{Get\+Read\+Options}}
+\index{Get\+Read\+Options@{Get\+Read\+Options}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Get\+Read\+Options()}{GetReadOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+Get\+Read\+Options (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+Fbx,  }\item[{bool}]{p\+Parse\+File\+As\+Needed = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_af685112183765e2a278bbbc898374074}\label{class_fbx_reader_fbx5_af685112183765e2a278bbbc898374074}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Get\+Scene\+Info@{Get\+Scene\+Info}}
+\index{Get\+Scene\+Info@{Get\+Scene\+Info}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Get\+Scene\+Info()}{GetSceneInfo()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_document_info}{Fbx\+Document\+Info}$\ast$ Fbx\+Reader\+Fbx5\+::\+Get\+Scene\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the scene info from the file. \begin{DoxyReturn}{戻り値}
+N\+U\+LL. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_acb928634641ad5f99d709478c7a234be}{Fbx\+Reader}を再実装しています。
+
+
+
+ fbxreaderfbx5.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a4680a5c4695d3692582d3ca8db71cd01}\label{class_fbx_reader_fbx5_a4680a5c4695d3692582d3ca8db71cd01}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Get\+Take\+Info@{Get\+Take\+Info}}
+\index{Get\+Take\+Info@{Get\+Take\+Info}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Get\+Take\+Info()}{GetTakeInfo()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_take_info}{Fbx\+Take\+Info}$\ast$$>$$\ast$ Fbx\+Reader\+Fbx5\+::\+Get\+Take\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns the list of take infos from the file. \begin{DoxyReturn}{戻り値}
+N\+U\+LL 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a9d7b40684bb3181219945eb0c73fb9d1}{Fbx\+Reader}を再実装しています。
+
+
+
+ fbxreaderfbx5.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a297ed289a6d5e55f33540d8efb4bfd0b}\label{class_fbx_reader_fbx5_a297ed289a6d5e55f33540d8efb4bfd0b}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Get\+Version@{Get\+Version}}
+\index{Get\+Version@{Get\+Version}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Get\+Version()}{GetVersion()}}
+{\footnotesize\ttfamily virtual void Fbx\+Reader\+Fbx5\+::\+Get\+Version (\begin{DoxyParamCaption}\item[{int \&}]{p\+Major,  }\item[{int \&}]{p\+Minor,  }\item[{int \&}]{p\+Revision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the file version. 
+\begin{DoxyParams}{引数}
+{\em p\+Major} & Major version. \\
+\hline
+{\em p\+Minor} & Minor version. \\
+\hline
+{\em p\+Revision} & Revision version. \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_reader_aa16aacbaa1c1e16fc208624b55dd6767}{Fbx\+Reader}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_ae610563380260e4445a8c90646898a87}\label{class_fbx_reader_fbx5_ae610563380260e4445a8c90646898a87}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Is\+File\+Open@{Is\+File\+Open}}
+\index{Is\+File\+Open@{Is\+File\+Open}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Is\+File\+Open()}{IsFileOpen()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+Is\+File\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks if the file stream is open. \begin{DoxyReturn}{戻り値}
+{\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_af86b437702ffc840cfab52185cbc7232}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_aac75f44d42d473ac88a54c81ec5b1af6}\label{class_fbx_reader_fbx5_aac75f44d42d473ac88a54c81ec5b1af6}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reads file with stream options 
+\begin{DoxyParams}{引数}
+{\em p\+Document} & \hyperlink{class_fbx_document}{Fbx\+Document} to store the file data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a29941746acc73d7ffd2411a9be9d2525}{Fbx\+Reader}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_a9f5142bf143ff9192bb7d687c831ad21}\label{class_fbx_reader_fbx5_a9f5142bf143ff9192bb7d687c831ad21}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Read@{Read}}
+\index{Read@{Read}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Read()}{Read()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene,  }\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+Fbx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_ab910914828f297f51c28d88f466d6928}\label{class_fbx_reader_fbx5_ab910914828f297f51c28d88f466d6928}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Set\+Embedding\+Extraction\+Folder@{Set\+Embedding\+Extraction\+Folder}}
+\index{Set\+Embedding\+Extraction\+Folder@{Set\+Embedding\+Extraction\+Folder}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Set\+Embedding\+Extraction\+Folder()}{SetEmbeddingExtractionFolder()}}
+{\footnotesize\ttfamily virtual void Fbx\+Reader\+Fbx5\+::\+Set\+Embedding\+Extraction\+Folder (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Extract\+Folder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_reader_a640eef510ddb298b2eaad0545b79de66}{Fbx\+Reader}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_reader_fbx5_ae6f619a41303077d9d4ed2935f3d2108}\label{class_fbx_reader_fbx5_ae6f619a41303077d9d4ed2935f3d2108}} 
+\index{Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}!Supports\+Streams@{Supports\+Streams}}
+\index{Supports\+Streams@{Supports\+Streams}!Fbx\+Reader\+Fbx5@{Fbx\+Reader\+Fbx5}}
+\subsubsection{\texorpdfstring{Supports\+Streams()}{SupportsStreams()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Reader\+Fbx5\+::\+Supports\+Streams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Returns true if this reader supports \hyperlink{class_fbx_stream}{Fbx\+Stream} I/O. Default value is false. 
+
+\hyperlink{class_fbx_reader_ab08a9e71a059ef6052e7fe2d8ba6c35d}{Fbx\+Reader}を再実装しています。
+
+
+
+ fbxreaderfbx5.\+h の 66 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/fbx/\hyperlink{fbxreaderfbx5_8h}{fbxreaderfbx5.\+h}\end{DoxyCompactItemize}

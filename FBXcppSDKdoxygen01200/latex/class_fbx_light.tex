@@ -1,0 +1,613 @@
+\hypertarget{class_fbx_light}{}\section{Fbx\+Light クラス}
+\label{class_fbx_light}\index{Fbx\+Light@{Fbx\+Light}}
+
+
+This node attribute contains methods for accessing the properties of a light.  
+
+
+
+
+{\ttfamily \#include $<$fbxlight.\+h$>$}
+
+Fbx\+Light の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_light}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_light_a0a0ef9dd3eacb2cadb30416d13ea8e7d}{Get\+Attribute\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_light_aaa406a871272d3f36c6300ab81f312c5}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_light_a962256338837265748540bd0b3d9b511}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{Light Properties}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}{E\+Type} \{ \newline
+\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafaf011f303cca315a722180e2be1764bed}{e\+Point}, 
+\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafaa043bae32364728e45948dc1262c4621}{e\+Directional}, 
+\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa21d1448fe1b9114683e4a00b61b5c688}{e\+Spot}, 
+\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa2e323ce08014a8f5744a9f942aaaa48e}{e\+Area}, 
+\newline
+\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa736883e23926a35eb6dd8e22df64a207}{e\+Volume}
+ \}
+\item 
+enum \hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875}{E\+Decay\+Type} \{ \hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875af69400a8f78e5f6dcbedf37458455df9}{e\+None}, 
+\hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875a3ae33079550925e2d50bb9f4714ba00f}{e\+Linear}, 
+\hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875a85e3645a0f4987ee84970e249bb31ec7}{e\+Quadratic}, 
+\hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875abfdba279c76bbcf84b1bc2a610ecbfdb}{e\+Cubic}
+ \}
+\item 
+enum \hyperlink{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cd}{E\+Area\+Light\+Shape} \{ \hyperlink{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cda3ad60ea65faa6a6b1c0a81c5cb014ec9}{e\+Rectangle}, 
+\hyperlink{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cda2e2d016a7ad503ff88a90cc12ded0347}{e\+Sphere}
+ \}
+\item 
+void \hyperlink{class_fbx_light_af6ea79f113aa9ba55bcbfa98e36d9bfe}{Set\+Shadow\+Texture} (\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$p\+Texture)
+\item 
+\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$ \hyperlink{class_fbx_light_a853f9998aa5dce0f60752794e58b0250}{Get\+Shadow\+Texture} () const
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}{E\+Type} $>$ \hyperlink{class_fbx_light_a2ce6e644dd2f9d7140c192d27d70ff93}{Light\+Type}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_aab7e8386257e02ef8e3873f15d5fc690}{Cast\+Light}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_a80eac74312e16415e3bfc8923a2ae98b}{Draw\+Volumetric\+Light}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_a924e57f289e13900b4579d8e8ffdbc93}{Draw\+Ground\+Projection}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_aac35b91a53647b958436f966ce65d7f7}{Draw\+Front\+Facing\+Volumetric\+Light}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_light_abd8989416ecbe6a33adcb6bc09b2401b}{Color}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_a3fc7a2684e3ab3cbd944825afd263433}{Intensity}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_aced336586b1b3a1b8d685bf11ef21216}{Inner\+Angle}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_ae4343cc9ecd82f2fde13d095b067fe68}{Outer\+Angle}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_a85b9565571e88a5899fa7683ff77643c}{Fog}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875}{E\+Decay\+Type} $>$ \hyperlink{class_fbx_light_aef58f45dfa9e83866792ed63b3e8ba21}{Decay\+Type}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_a33459f3a22c886508580c8879ee6cb54}{Decay\+Start}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_light_aeb6d0d316710f03e0f4aeb0376e1e376}{File\+Name}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_ae9bf8b3fa56b50962615f78e999f3371}{Enable\+Near\+Attenuation}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_aaad5d9617b23e08933e5360c948b3d26}{Near\+Attenuation\+Start}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_adb8b8187ea6c10eca1c82d1a2b769d53}{Near\+Attenuation\+End}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_a65848a9a9d7afb4c576efa5376138a06}{Enable\+Far\+Attenuation}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_ac28fb5441eded0c0cf73d1e3efcf92bc}{Far\+Attenuation\+Start}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_light_a2bb8f1a2eaba27196db363efe4cae050}{Far\+Attenuation\+End}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_a9ab7648e8c96d34f4feb5c76c52987ce}{Cast\+Shadows}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_light_aeb8d7f6d6fa57f4dc86ff8e47ff61dbf}{Shadow\+Color}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cd}{E\+Area\+Light\+Shape} $>$ \hyperlink{class_fbx_light_a2d2ad2128f1ae61151c15d7de259d2e8}{Area\+Light\+Shape}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float} $>$ \hyperlink{class_fbx_light_afcf3b7db2cad32e11bb6fa016a402bc7}{Left\+Barn\+Door}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float} $>$ \hyperlink{class_fbx_light_aea237e743f2b2e2d5a2e3cdf28a78290}{Right\+Barn\+Door}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float} $>$ \hyperlink{class_fbx_light_a22b02c12b00c38da4d38a21876ec5340}{Top\+Barn\+Door}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float} $>$ \hyperlink{class_fbx_light_aef1e933e3a3baea5ad804868750cbd04}{Bottom\+Barn\+Door}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_light_add61baef63184934eeb71ede6328354c}{Enable\+Barn\+Door}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This node attribute contains methods for accessing the properties of a light. 
+
+ fbxlight.\+h の 27 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cd}\label{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cd}} 
+\index{Fbx\+Light@{Fbx\+Light}!E\+Area\+Light\+Shape@{E\+Area\+Light\+Shape}}
+\index{E\+Area\+Light\+Shape@{E\+Area\+Light\+Shape}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{E\+Area\+Light\+Shape}{EAreaLightShape}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cd}{Fbx\+Light\+::\+E\+Area\+Light\+Shape}}
+
+Supported area light types.
+\begin{DoxyItemize}
+\item {\itshape e\+Rectangle} Rectangle (or often called a plane) area light type.
+\item {\itshape e\+Sphere} Area light that illuminate all directions. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rectangle@{e\+Rectangle}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Rectangle@{e\+Rectangle}}}\mbox{\Hypertarget{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cda3ad60ea65faa6a6b1c0a81c5cb014ec9}\label{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cda3ad60ea65faa6a6b1c0a81c5cb014ec9}} 
+e\+Rectangle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Sphere@{e\+Sphere}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Sphere@{e\+Sphere}}}\mbox{\Hypertarget{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cda2e2d016a7ad503ff88a90cc12ded0347}\label{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cda2e2d016a7ad503ff88a90cc12ded0347}} 
+e\+Sphere&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlight.\+h の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a940254a9a826ab44a4cde044db1b3875}\label{class_fbx_light_a940254a9a826ab44a4cde044db1b3875}} 
+\index{Fbx\+Light@{Fbx\+Light}!E\+Decay\+Type@{E\+Decay\+Type}}
+\index{E\+Decay\+Type@{E\+Decay\+Type}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{E\+Decay\+Type}{EDecayType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875}{Fbx\+Light\+::\+E\+Decay\+Type}}
+
+Decay types. Used for setting the attenuation of the light.
+\begin{DoxyItemize}
+\item {\itshape e\+None} No decay. The light\textquotesingle{}s intensity will not diminish with distance.
+\item {\itshape e\+Linear} Linear decay. The light\textquotesingle{}s intensity will diminish linearly with the distance from the light.
+\item {\itshape e\+Quadratic} Quadratic decay. The light\textquotesingle{}s intensity will diminish with the squared distance from the light. This is the most physically accurate decay rate.
+\item {\itshape e\+Cubic} Cubic decay. The light\textquotesingle{}s intensity will diminish with the cubed distance from the light. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_light_a940254a9a826ab44a4cde044db1b3875af69400a8f78e5f6dcbedf37458455df9}\label{class_fbx_light_a940254a9a826ab44a4cde044db1b3875af69400a8f78e5f6dcbedf37458455df9}} 
+e\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear@{e\+Linear}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Linear@{e\+Linear}}}\mbox{\Hypertarget{class_fbx_light_a940254a9a826ab44a4cde044db1b3875a3ae33079550925e2d50bb9f4714ba00f}\label{class_fbx_light_a940254a9a826ab44a4cde044db1b3875a3ae33079550925e2d50bb9f4714ba00f}} 
+e\+Linear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Quadratic@{e\+Quadratic}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Quadratic@{e\+Quadratic}}}\mbox{\Hypertarget{class_fbx_light_a940254a9a826ab44a4cde044db1b3875a85e3645a0f4987ee84970e249bb31ec7}\label{class_fbx_light_a940254a9a826ab44a4cde044db1b3875a85e3645a0f4987ee84970e249bb31ec7}} 
+e\+Quadratic&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Cubic@{e\+Cubic}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Cubic@{e\+Cubic}}}\mbox{\Hypertarget{class_fbx_light_a940254a9a826ab44a4cde044db1b3875abfdba279c76bbcf84b1bc2a610ecbfdb}\label{class_fbx_light_a940254a9a826ab44a4cde044db1b3875abfdba279c76bbcf84b1bc2a610ecbfdb}} 
+e\+Cubic&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlight.\+h の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}\label{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}} 
+\index{Fbx\+Light@{Fbx\+Light}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}{Fbx\+Light\+::\+E\+Type}}
+
+Light types.
+\begin{DoxyItemize}
+\item {\itshape e\+Point} 
+\item {\itshape e\+Directional} 
+\item {\itshape e\+Spot} 
+\item {\itshape e\+Area} 
+\item {\itshape e\+Volume} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Point@{e\+Point}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Point@{e\+Point}}}\mbox{\Hypertarget{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafaf011f303cca315a722180e2be1764bed}\label{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafaf011f303cca315a722180e2be1764bed}} 
+e\+Point&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Directional@{e\+Directional}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Directional@{e\+Directional}}}\mbox{\Hypertarget{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafaa043bae32364728e45948dc1262c4621}\label{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafaa043bae32364728e45948dc1262c4621}} 
+e\+Directional&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Spot@{e\+Spot}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Spot@{e\+Spot}}}\mbox{\Hypertarget{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa21d1448fe1b9114683e4a00b61b5c688}\label{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa21d1448fe1b9114683e4a00b61b5c688}} 
+e\+Spot&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Area@{e\+Area}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Area@{e\+Area}}}\mbox{\Hypertarget{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa2e323ce08014a8f5744a9f942aaaa48e}\label{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa2e323ce08014a8f5744a9f942aaaa48e}} 
+e\+Area&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Volume@{e\+Volume}!Fbx\+Light@{Fbx\+Light}}\index{Fbx\+Light@{Fbx\+Light}!e\+Volume@{e\+Volume}}}\mbox{\Hypertarget{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa736883e23926a35eb6dd8e22df64a207}\label{class_fbx_light_ace4ba495501bddf1341600bea7ed8dafa736883e23926a35eb6dd8e22df64a207}} 
+e\+Volume&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlight.\+h の 43 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_light_aaa406a871272d3f36c6300ab81f312c5}\label{class_fbx_light_aaa406a871272d3f36c6300ab81f312c5}} 
+\index{Fbx\+Light@{Fbx\+Light}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Light\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}{Fbx\+Node\+Attribute}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_light_a0a0ef9dd3eacb2cadb30416d13ea8e7d}\label{class_fbx_light_a0a0ef9dd3eacb2cadb30416d13ea8e7d}} 
+\index{Fbx\+Light@{Fbx\+Light}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Light\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the type of node attribute. This class is pure virtual. 
+
+\hyperlink{class_fbx_node_attribute_a1c2116756906127145a2b8721fc26752}{Fbx\+Node\+Attribute}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_light_a853f9998aa5dce0f60752794e58b0250}\label{class_fbx_light_a853f9998aa5dce0f60752794e58b0250}} 
+\index{Fbx\+Light@{Fbx\+Light}!Get\+Shadow\+Texture@{Get\+Shadow\+Texture}}
+\index{Get\+Shadow\+Texture@{Get\+Shadow\+Texture}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Get\+Shadow\+Texture()}{GetShadowTexture()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_texture}{Fbx\+Texture}$\ast$ Fbx\+Light\+::\+Get\+Shadow\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the light state. \begin{DoxyReturn}{戻り値}
+Pointer to the texture cast by the light shadow, or {\ttfamily N\+U\+LL} if the shadow texture has not been set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_light_a962256338837265748540bd0b3d9b511}\label{class_fbx_light_a962256338837265748540bd0b3d9b511}} 
+\index{Fbx\+Light@{Fbx\+Light}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Light\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_light_af6ea79f113aa9ba55bcbfa98e36d9bfe}\label{class_fbx_light_af6ea79f113aa9ba55bcbfa98e36d9bfe}} 
+\index{Fbx\+Light@{Fbx\+Light}!Set\+Shadow\+Texture@{Set\+Shadow\+Texture}}
+\index{Set\+Shadow\+Texture@{Set\+Shadow\+Texture}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Set\+Shadow\+Texture()}{SetShadowTexture()}}
+{\footnotesize\ttfamily void Fbx\+Light\+::\+Set\+Shadow\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$}]{p\+Texture }\end{DoxyParamCaption})}
+
+Set the shadow texture for the light. 
+\begin{DoxyParams}{引数}
+{\em p\+Texture} & The texture cast by the light shadow. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_light_a2d2ad2128f1ae61151c15d7de259d2e8}\label{class_fbx_light_a2d2ad2128f1ae61151c15d7de259d2e8}} 
+\index{Fbx\+Light@{Fbx\+Light}!Area\+Light\+Shape@{Area\+Light\+Shape}}
+\index{Area\+Light\+Shape@{Area\+Light\+Shape}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Area\+Light\+Shape}{AreaLightShape}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_light_a9bc60eabc41255f46f35d1f6acd274cd}{E\+Area\+Light\+Shape}$>$ Fbx\+Light\+::\+Area\+Light\+Shape}
+
+This property handles type when Light\+Type is e\+Area
+
+Default value is e\+Rectangle 
+
+ fbxlight.\+h の 222 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aef1e933e3a3baea5ad804868750cbd04}\label{class_fbx_light_aef1e933e3a3baea5ad804868750cbd04}} 
+\index{Fbx\+Light@{Fbx\+Light}!Bottom\+Barn\+Door@{Bottom\+Barn\+Door}}
+\index{Bottom\+Barn\+Door@{Bottom\+Barn\+Door}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Bottom\+Barn\+Door}{BottomBarnDoor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float}$>$ Fbx\+Light\+::\+Bottom\+Barn\+Door}
+
+This property handles the bottom barn door angle
+
+Default value is 20.\+0 
+
+ fbxlight.\+h の 246 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aab7e8386257e02ef8e3873f15d5fc690}\label{class_fbx_light_aab7e8386257e02ef8e3873f15d5fc690}} 
+\index{Fbx\+Light@{Fbx\+Light}!Cast\+Light@{Cast\+Light}}
+\index{Cast\+Light@{Cast\+Light}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Cast\+Light}{CastLight}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Cast\+Light}
+
+This property handles the cast light on object flag.
+
+Default value is true 
+
+ fbxlight.\+h の 102 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a9ab7648e8c96d34f4feb5c76c52987ce}\label{class_fbx_light_a9ab7648e8c96d34f4feb5c76c52987ce}} 
+\index{Fbx\+Light@{Fbx\+Light}!Cast\+Shadows@{Cast\+Shadows}}
+\index{Cast\+Shadows@{Cast\+Shadows}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Cast\+Shadows}{CastShadows}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Cast\+Shadows}
+
+This property handles the cast shadow flag
+
+Default value is false 
+
+ fbxlight.\+h の 210 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_abd8989416ecbe6a33adcb6bc09b2401b}\label{class_fbx_light_abd8989416ecbe6a33adcb6bc09b2401b}} 
+\index{Fbx\+Light@{Fbx\+Light}!Color@{Color}}
+\index{Color@{Color}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Light\+::\+Color}
+
+This property handles the light color.
+
+Default value is (1.\+0, 1.\+0, 1.\+0) 
+
+ fbxlight.\+h の 126 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a33459f3a22c886508580c8879ee6cb54}\label{class_fbx_light_a33459f3a22c886508580c8879ee6cb54}} 
+\index{Fbx\+Light@{Fbx\+Light}!Decay\+Start@{Decay\+Start}}
+\index{Decay\+Start@{Decay\+Start}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Decay\+Start}{DecayStart}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Decay\+Start}
+
+This property handles the decay start distance
+
+Default value is 0.\+0 
+
+ fbxlight.\+h の 162 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aef58f45dfa9e83866792ed63b3e8ba21}\label{class_fbx_light_aef58f45dfa9e83866792ed63b3e8ba21}} 
+\index{Fbx\+Light@{Fbx\+Light}!Decay\+Type@{Decay\+Type}}
+\index{Decay\+Type@{Decay\+Type}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Decay\+Type}{DecayType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_light_a940254a9a826ab44a4cde044db1b3875}{E\+Decay\+Type}$>$ Fbx\+Light\+::\+Decay\+Type}
+
+This property handles the decay type
+
+Default value is e\+None 
+
+ fbxlight.\+h の 156 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aac35b91a53647b958436f966ce65d7f7}\label{class_fbx_light_aac35b91a53647b958436f966ce65d7f7}} 
+\index{Fbx\+Light@{Fbx\+Light}!Draw\+Front\+Facing\+Volumetric\+Light@{Draw\+Front\+Facing\+Volumetric\+Light}}
+\index{Draw\+Front\+Facing\+Volumetric\+Light@{Draw\+Front\+Facing\+Volumetric\+Light}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Draw\+Front\+Facing\+Volumetric\+Light}{DrawFrontFacingVolumetricLight}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Draw\+Front\+Facing\+Volumetric\+Light}
+
+This property handles the draw facing volumetric projection flag.
+
+Default value is false 
+
+ fbxlight.\+h の 120 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a924e57f289e13900b4579d8e8ffdbc93}\label{class_fbx_light_a924e57f289e13900b4579d8e8ffdbc93}} 
+\index{Fbx\+Light@{Fbx\+Light}!Draw\+Ground\+Projection@{Draw\+Ground\+Projection}}
+\index{Draw\+Ground\+Projection@{Draw\+Ground\+Projection}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Draw\+Ground\+Projection}{DrawGroundProjection}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Draw\+Ground\+Projection}
+
+This property handles the draw ground projection flag.
+
+Default value is true 
+
+ fbxlight.\+h の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a80eac74312e16415e3bfc8923a2ae98b}\label{class_fbx_light_a80eac74312e16415e3bfc8923a2ae98b}} 
+\index{Fbx\+Light@{Fbx\+Light}!Draw\+Volumetric\+Light@{Draw\+Volumetric\+Light}}
+\index{Draw\+Volumetric\+Light@{Draw\+Volumetric\+Light}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Draw\+Volumetric\+Light}{DrawVolumetricLight}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Draw\+Volumetric\+Light}
+
+This property handles the draw volumetric light flag.
+
+Default value is true 
+
+ fbxlight.\+h の 108 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_add61baef63184934eeb71ede6328354c}\label{class_fbx_light_add61baef63184934eeb71ede6328354c}} 
+\index{Fbx\+Light@{Fbx\+Light}!Enable\+Barn\+Door@{Enable\+Barn\+Door}}
+\index{Enable\+Barn\+Door@{Enable\+Barn\+Door}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Enable\+Barn\+Door}{EnableBarnDoor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Enable\+Barn\+Door}
+
+This property handles active status of barn doors
+
+Default value is false 
+
+ fbxlight.\+h の 252 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a65848a9a9d7afb4c576efa5376138a06}\label{class_fbx_light_a65848a9a9d7afb4c576efa5376138a06}} 
+\index{Fbx\+Light@{Fbx\+Light}!Enable\+Far\+Attenuation@{Enable\+Far\+Attenuation}}
+\index{Enable\+Far\+Attenuation@{Enable\+Far\+Attenuation}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Enable\+Far\+Attenuation}{EnableFarAttenuation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Enable\+Far\+Attenuation}
+
+This property handles the enable far attenuation flag
+
+Default value is false 
+
+ fbxlight.\+h の 192 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_ae9bf8b3fa56b50962615f78e999f3371}\label{class_fbx_light_ae9bf8b3fa56b50962615f78e999f3371}} 
+\index{Fbx\+Light@{Fbx\+Light}!Enable\+Near\+Attenuation@{Enable\+Near\+Attenuation}}
+\index{Enable\+Near\+Attenuation@{Enable\+Near\+Attenuation}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Enable\+Near\+Attenuation}{EnableNearAttenuation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Light\+::\+Enable\+Near\+Attenuation}
+
+This property handles the enable near attenuation flag
+
+Default value is false 
+
+ fbxlight.\+h の 174 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a2bb8f1a2eaba27196db363efe4cae050}\label{class_fbx_light_a2bb8f1a2eaba27196db363efe4cae050}} 
+\index{Fbx\+Light@{Fbx\+Light}!Far\+Attenuation\+End@{Far\+Attenuation\+End}}
+\index{Far\+Attenuation\+End@{Far\+Attenuation\+End}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Far\+Attenuation\+End}{FarAttenuationEnd}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Far\+Attenuation\+End}
+
+This property handles the attenuation end distance
+
+Default value is 0.\+0 
+
+ fbxlight.\+h の 204 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_ac28fb5441eded0c0cf73d1e3efcf92bc}\label{class_fbx_light_ac28fb5441eded0c0cf73d1e3efcf92bc}} 
+\index{Fbx\+Light@{Fbx\+Light}!Far\+Attenuation\+Start@{Far\+Attenuation\+Start}}
+\index{Far\+Attenuation\+Start@{Far\+Attenuation\+Start}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Far\+Attenuation\+Start}{FarAttenuationStart}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Far\+Attenuation\+Start}
+
+This property handles the far attenuation start distance
+
+Default value is 0.\+0 
+
+ fbxlight.\+h の 198 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aeb6d0d316710f03e0f4aeb0376e1e376}\label{class_fbx_light_aeb6d0d316710f03e0f4aeb0376e1e376}} 
+\index{Fbx\+Light@{Fbx\+Light}!File\+Name@{File\+Name}}
+\index{File\+Name@{File\+Name}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{File\+Name}{FileName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Light\+::\+File\+Name}
+
+This property handles the gobo file name
+
+Default value is \char`\"{}\char`\"{} 
+
+ fbxlight.\+h の 168 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a85b9565571e88a5899fa7683ff77643c}\label{class_fbx_light_a85b9565571e88a5899fa7683ff77643c}} 
+\index{Fbx\+Light@{Fbx\+Light}!Fog@{Fog}}
+\index{Fog@{Fog}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Fog}{Fog}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Fog}
+
+This property handles the light fog intensity
+
+Default value is 50.\+0 
+
+ fbxlight.\+h の 150 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aced336586b1b3a1b8d685bf11ef21216}\label{class_fbx_light_aced336586b1b3a1b8d685bf11ef21216}} 
+\index{Fbx\+Light@{Fbx\+Light}!Inner\+Angle@{Inner\+Angle}}
+\index{Inner\+Angle@{Inner\+Angle}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Inner\+Angle}{InnerAngle}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Inner\+Angle}
+
+This property handles the light inner cone angle (in degrees). Also know as the Hot\+Spot
+
+Default value is 45.\+0 
+
+ fbxlight.\+h の 138 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a3fc7a2684e3ab3cbd944825afd263433}\label{class_fbx_light_a3fc7a2684e3ab3cbd944825afd263433}} 
+\index{Fbx\+Light@{Fbx\+Light}!Intensity@{Intensity}}
+\index{Intensity@{Intensity}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Intensity}{Intensity}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Intensity}
+
+This property handles the light intensity.
+
+Default value is 100.\+0 
+
+ fbxlight.\+h の 132 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_afcf3b7db2cad32e11bb6fa016a402bc7}\label{class_fbx_light_afcf3b7db2cad32e11bb6fa016a402bc7}} 
+\index{Fbx\+Light@{Fbx\+Light}!Left\+Barn\+Door@{Left\+Barn\+Door}}
+\index{Left\+Barn\+Door@{Left\+Barn\+Door}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Left\+Barn\+Door}{LeftBarnDoor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float}$>$ Fbx\+Light\+::\+Left\+Barn\+Door}
+
+This property handles the left barn door angle
+
+Default value is 20.\+0 
+
+ fbxlight.\+h の 228 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a2ce6e644dd2f9d7140c192d27d70ff93}\label{class_fbx_light_a2ce6e644dd2f9d7140c192d27d70ff93}} 
+\index{Fbx\+Light@{Fbx\+Light}!Light\+Type@{Light\+Type}}
+\index{Light\+Type@{Light\+Type}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Light\+Type}{LightType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}{E\+Type}$>$ Fbx\+Light\+::\+Light\+Type}
+
+This property handles the light type.
+
+Default value is e\+Point 
+
+ fbxlight.\+h の 96 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_adb8b8187ea6c10eca1c82d1a2b769d53}\label{class_fbx_light_adb8b8187ea6c10eca1c82d1a2b769d53}} 
+\index{Fbx\+Light@{Fbx\+Light}!Near\+Attenuation\+End@{Near\+Attenuation\+End}}
+\index{Near\+Attenuation\+End@{Near\+Attenuation\+End}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Near\+Attenuation\+End}{NearAttenuationEnd}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Near\+Attenuation\+End}
+
+This property handles the near end attenuation
+
+Default value is 0.\+0 
+
+ fbxlight.\+h の 186 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aaad5d9617b23e08933e5360c948b3d26}\label{class_fbx_light_aaad5d9617b23e08933e5360c948b3d26}} 
+\index{Fbx\+Light@{Fbx\+Light}!Near\+Attenuation\+Start@{Near\+Attenuation\+Start}}
+\index{Near\+Attenuation\+Start@{Near\+Attenuation\+Start}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Near\+Attenuation\+Start}{NearAttenuationStart}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Near\+Attenuation\+Start}
+
+This property handles the near attenuation start distance
+
+Default value is 0.\+0 
+
+ fbxlight.\+h の 180 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_ae4343cc9ecd82f2fde13d095b067fe68}\label{class_fbx_light_ae4343cc9ecd82f2fde13d095b067fe68}} 
+\index{Fbx\+Light@{Fbx\+Light}!Outer\+Angle@{Outer\+Angle}}
+\index{Outer\+Angle@{Outer\+Angle}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Outer\+Angle}{OuterAngle}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Light\+::\+Outer\+Angle}
+
+This property handles the light outer cone angle (in degrees). Also known as the Falloff
+
+Default value is 45.\+0 
+
+ fbxlight.\+h の 144 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aea237e743f2b2e2d5a2e3cdf28a78290}\label{class_fbx_light_aea237e743f2b2e2d5a2e3cdf28a78290}} 
+\index{Fbx\+Light@{Fbx\+Light}!Right\+Barn\+Door@{Right\+Barn\+Door}}
+\index{Right\+Barn\+Door@{Right\+Barn\+Door}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Right\+Barn\+Door}{RightBarnDoor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float}$>$ Fbx\+Light\+::\+Right\+Barn\+Door}
+
+This property handles the right barn door angle
+
+Default value is 20.\+0 
+
+ fbxlight.\+h の 234 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_aeb8d7f6d6fa57f4dc86ff8e47ff61dbf}\label{class_fbx_light_aeb8d7f6d6fa57f4dc86ff8e47ff61dbf}} 
+\index{Fbx\+Light@{Fbx\+Light}!Shadow\+Color@{Shadow\+Color}}
+\index{Shadow\+Color@{Shadow\+Color}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Shadow\+Color}{ShadowColor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Light\+::\+Shadow\+Color}
+
+This property handles the shadow color
+
+Default value is (0.\+0, 0.\+0, 0.\+0) 
+
+ fbxlight.\+h の 216 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_light_a22b02c12b00c38da4d38a21876ec5340}\label{class_fbx_light_a22b02c12b00c38da4d38a21876ec5340}} 
+\index{Fbx\+Light@{Fbx\+Light}!Top\+Barn\+Door@{Top\+Barn\+Door}}
+\index{Top\+Barn\+Door@{Top\+Barn\+Door}!Fbx\+Light@{Fbx\+Light}}
+\subsubsection{\texorpdfstring{Top\+Barn\+Door}{TopBarnDoor}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_aef968e37f2ddc4188de464d8578c1d5c}{Fbx\+Float}$>$ Fbx\+Light\+::\+Top\+Barn\+Door}
+
+This property handles the top barn door angle
+
+Default value is 20.\+0 
+
+ fbxlight.\+h の 240 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxlight_8h}{fbxlight.\+h}\end{DoxyCompactItemize}

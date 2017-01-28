@@ -1,0 +1,380 @@
+\hypertarget{class_scene_context}{}\section{Scene\+Context クラス}
+\label{class_scene_context}\index{Scene\+Context@{Scene\+Context}}
+
+
+{\ttfamily \#include $<$Scene\+Context.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1}{Status} \{ \hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a0b21309be7710270e8f874d2899e4157}{U\+N\+L\+O\+A\+D\+ED}, 
+\hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a6c9b140d16fc1e09aada9314899fe402}{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+L\+O\+A\+D\+ED}, 
+\hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a130c51bd6cc10fe91d3daa934ea285f3}{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+ED}, 
+\hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a096d358f49b48c2147562b1938b952b1}{R\+E\+F\+R\+E\+S\+H\+ED}
+ \}
+\item 
+enum \hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78}{Camera\+Zoom\+Mode} \{ \hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78a2a877f0410883fecc792bc00e3a9d80d}{Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH}, 
+\hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78a0203d0eeed5adfe6b7186f8998639a45}{Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1}{Status} \hyperlink{class_scene_context_af33ba9000594fd8bce536c99bb4aae4e}{Get\+Status} () const
+\item 
+\hyperlink{class_scene_context_a9c88d7d278908ac5b2a8ec62b5eac5ed}{Scene\+Context} (const char $\ast$p\+File\+Name, int p\+Window\+Width, int p\+Window\+Height, bool p\+Support\+V\+BO)
+\item 
+\hyperlink{class_scene_context_ad8768b5caaf784be9cd21f7dd5c2f4c8}{$\sim$\+Scene\+Context} ()
+\item 
+const \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$ \hyperlink{class_scene_context_acdfe66cd9b8838bda8d266769fcad915}{Get\+Scene} () const
+\item 
+bool \hyperlink{class_scene_context_ae0e2269a6a0df27ec32114282c52f812}{Load\+File} ()
+\item 
+const \hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_scene_context_a0a8ec2998e945ddf669ad263759e14d4}{Get\+Frame\+Time} () const
+\item 
+bool \hyperlink{class_scene_context_a757f3c7f7824e77bbce4a3baf9490ac6}{On\+Display} ()
+\item 
+void \hyperlink{class_scene_context_ab90174ca8b46fd0605bdafa2feb34bbb}{On\+Reshape} (int p\+Width, int p\+Height)
+\item 
+void \hyperlink{class_scene_context_a0a885b57e382b9e5057b0cae7b96de61}{On\+Keyboard} (unsigned char p\+Key)
+\item 
+void \hyperlink{class_scene_context_a661e2afdb07136789ca6e63f73a22801}{On\+Mouse} (int p\+Button, int p\+State, int pX, int pY)
+\item 
+void \hyperlink{class_scene_context_ad684c731a852c7af58a433b596564d82}{On\+Mouse\+Motion} (int pX, int pY)
+\item 
+void \hyperlink{class_scene_context_ad2cd3fb0710e845b5cc7ad3cfc8abaeb}{On\+Timer\+Click} () const
+\item 
+const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ $>$ \& \hyperlink{class_scene_context_af91e35c678853d0656e17df1ed164a19}{Get\+Camera\+Array} () const
+\item 
+const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$ $>$ \& \hyperlink{class_scene_context_a343b99a8d1d13c3b4e2071a539512193}{Get\+Anim\+Stack\+Name\+Array} () const
+\item 
+const \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$ $>$ \& \hyperlink{class_scene_context_a963c3d4a2d7956bc15ee3dead095fef3}{Get\+Pose\+Array} () const
+\item 
+bool \hyperlink{class_scene_context_a003a522965333e080d2ac5e8d3e0163e}{Set\+Current\+Anim\+Stack} (int p\+Index)
+\item 
+bool \hyperlink{class_scene_context_a10d6a89671f4aa66719387a1299db7a9}{Set\+Current\+Camera} (const char $\ast$p\+Camera\+Name)
+\item 
+bool \hyperlink{class_scene_context_a2cd3263d79e2170f7ea3197186540916}{Set\+Current\+Pose\+Index} (int p\+Pose\+Index)
+\item 
+void \hyperlink{class_scene_context_a181d85ec09f86f556fa2d4050fa28fb8}{Set\+Selected\+Node} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Selected\+Node)
+\item 
+void \hyperlink{class_scene_context_ac2719e4c499f1d811619ea21ea477392}{Set\+Shading\+Mode} (\hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode} p\+Mode)
+\item 
+void \hyperlink{class_scene_context_a0bb98ae02d7fd834f7cf83f79fb7e628}{Set\+Pause} (bool p\+Pause)
+\item 
+bool \hyperlink{class_scene_context_a4c0e12192d34a63047e3ed044565bfab}{Get\+Pause} () const
+\item 
+\hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78}{Camera\+Zoom\+Mode} \hyperlink{class_scene_context_ae0c21a6c4e0cbb7a6a531a1a5d1a9ec9}{Get\+Zoom\+Mode} ()
+\item 
+void \hyperlink{class_scene_context_a1e6f52aae39dab1278852e2bbe44ffb0}{Set\+Zoom\+Mode} (\hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78}{Camera\+Zoom\+Mode} p\+Zoom\+Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+
+
+ Scene\+Context.\+h の 21 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_scene_context_a06de9da0c18152a74673a8ed829abf78}\label{class_scene_context_a06de9da0c18152a74673a8ed829abf78}} 
+\index{Scene\+Context@{Scene\+Context}!Camera\+Zoom\+Mode@{Camera\+Zoom\+Mode}}
+\index{Camera\+Zoom\+Mode@{Camera\+Zoom\+Mode}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Camera\+Zoom\+Mode}{CameraZoomMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78}{Scene\+Context\+::\+Camera\+Zoom\+Mode}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH@{Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH}!Scene\+Context@{Scene\+Context}}\index{Scene\+Context@{Scene\+Context}!Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH@{Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH}}}\mbox{\Hypertarget{class_scene_context_a06de9da0c18152a74673a8ed829abf78a2a877f0410883fecc792bc00e3a9d80d}\label{class_scene_context_a06de9da0c18152a74673a8ed829abf78a2a877f0410883fecc792bc00e3a9d80d}} 
+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}!Scene\+Context@{Scene\+Context}}\index{Scene\+Context@{Scene\+Context}!Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}}\mbox{\Hypertarget{class_scene_context_a06de9da0c18152a74673a8ed829abf78a0203d0eeed5adfe6b7186f8998639a45}\label{class_scene_context_a06de9da0c18152a74673a8ed829abf78a0203d0eeed5adfe6b7186f8998639a45}} 
+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Scene\+Context.\+h の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1}\label{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1}} 
+\index{Scene\+Context@{Scene\+Context}!Status@{Status}}
+\index{Status@{Status}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1}{Scene\+Context\+::\+Status}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U\+N\+L\+O\+A\+D\+ED@{U\+N\+L\+O\+A\+D\+ED}!Scene\+Context@{Scene\+Context}}\index{Scene\+Context@{Scene\+Context}!U\+N\+L\+O\+A\+D\+ED@{U\+N\+L\+O\+A\+D\+ED}}}\mbox{\Hypertarget{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a0b21309be7710270e8f874d2899e4157}\label{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a0b21309be7710270e8f874d2899e4157}} 
+U\+N\+L\+O\+A\+D\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+L\+O\+A\+D\+ED@{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+L\+O\+A\+D\+ED}!Scene\+Context@{Scene\+Context}}\index{Scene\+Context@{Scene\+Context}!M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+L\+O\+A\+D\+ED@{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+L\+O\+A\+D\+ED}}}\mbox{\Hypertarget{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a6c9b140d16fc1e09aada9314899fe402}\label{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a6c9b140d16fc1e09aada9314899fe402}} 
+M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+L\+O\+A\+D\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+ED@{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+ED}!Scene\+Context@{Scene\+Context}}\index{Scene\+Context@{Scene\+Context}!M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+ED@{M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+ED}}}\mbox{\Hypertarget{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a130c51bd6cc10fe91d3daa934ea285f3}\label{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a130c51bd6cc10fe91d3daa934ea285f3}} 
+M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+F\+R\+E\+S\+H\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+F\+R\+E\+S\+H\+ED@{R\+E\+F\+R\+E\+S\+H\+ED}!Scene\+Context@{Scene\+Context}}\index{Scene\+Context@{Scene\+Context}!R\+E\+F\+R\+E\+S\+H\+ED@{R\+E\+F\+R\+E\+S\+H\+ED}}}\mbox{\Hypertarget{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a096d358f49b48c2147562b1938b952b1}\label{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1a096d358f49b48c2147562b1938b952b1}} 
+R\+E\+F\+R\+E\+S\+H\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ Scene\+Context.\+h の 24 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_scene_context_a9c88d7d278908ac5b2a8ec62b5eac5ed}\label{class_scene_context_a9c88d7d278908ac5b2a8ec62b5eac5ed}} 
+\index{Scene\+Context@{Scene\+Context}!Scene\+Context@{Scene\+Context}}
+\index{Scene\+Context@{Scene\+Context}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Scene\+Context()}{SceneContext()}}
+{\footnotesize\ttfamily Scene\+Context\+::\+Scene\+Context (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name,  }\item[{int}]{p\+Window\+Width,  }\item[{int}]{p\+Window\+Height,  }\item[{bool}]{p\+Support\+V\+BO }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 409 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ad8768b5caaf784be9cd21f7dd5c2f4c8}\label{class_scene_context_ad8768b5caaf784be9cd21f7dd5c2f4c8}} 
+\index{Scene\+Context@{Scene\+Context}!````~Scene\+Context@{$\sim$\+Scene\+Context}}
+\index{````~Scene\+Context@{$\sim$\+Scene\+Context}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene\+Context()}{~SceneContext()}}
+{\footnotesize\ttfamily Scene\+Context\+::$\sim$\+Scene\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 466 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_scene_context_a343b99a8d1d13c3b4e2071a539512193}\label{class_scene_context_a343b99a8d1d13c3b4e2071a539512193}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Anim\+Stack\+Name\+Array@{Get\+Anim\+Stack\+Name\+Array}}
+\index{Get\+Anim\+Stack\+Name\+Array@{Get\+Anim\+Stack\+Name\+Array}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Anim\+Stack\+Name\+Array()}{GetAnimStackNameArray()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_string}{Fbx\+String} $\ast$$>$\& Scene\+Context\+::\+Get\+Anim\+Stack\+Name\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_af91e35c678853d0656e17df1ed164a19}\label{class_scene_context_af91e35c678853d0656e17df1ed164a19}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Camera\+Array@{Get\+Camera\+Array}}
+\index{Get\+Camera\+Array@{Get\+Camera\+Array}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Camera\+Array()}{GetCameraArray()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$\& Scene\+Context\+::\+Get\+Camera\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a0a8ec2998e945ddf669ad263759e14d4}\label{class_scene_context_a0a8ec2998e945ddf669ad263759e14d4}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Frame\+Time@{Get\+Frame\+Time}}
+\index{Get\+Frame\+Time@{Get\+Frame\+Time}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Frame\+Time()}{GetFrameTime()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_time}{Fbx\+Time} Scene\+Context\+::\+Get\+Frame\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a4c0e12192d34a63047e3ed044565bfab}\label{class_scene_context_a4c0e12192d34a63047e3ed044565bfab}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Pause@{Get\+Pause}}
+\index{Get\+Pause@{Get\+Pause}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Pause()}{GetPause()}}
+{\footnotesize\ttfamily bool Scene\+Context\+::\+Get\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 80 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a963c3d4a2d7956bc15ee3dead095fef3}\label{class_scene_context_a963c3d4a2d7956bc15ee3dead095fef3}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Pose\+Array@{Get\+Pose\+Array}}
+\index{Get\+Pose\+Array@{Get\+Pose\+Array}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Pose\+Array()}{GetPoseArray()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$$>$\& Scene\+Context\+::\+Get\+Pose\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_acdfe66cd9b8838bda8d266769fcad915}\label{class_scene_context_acdfe66cd9b8838bda8d266769fcad915}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Scene@{Get\+Scene}}
+\index{Get\+Scene@{Get\+Scene}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Scene()}{GetScene()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_scene}{Fbx\+Scene}$\ast$ Scene\+Context\+::\+Get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_af33ba9000594fd8bce536c99bb4aae4e}\label{class_scene_context_af33ba9000594fd8bce536c99bb4aae4e}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Status@{Get\+Status}}
+\index{Get\+Status@{Get\+Status}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Status()}{GetStatus()}}
+{\footnotesize\ttfamily \hyperlink{class_scene_context_ad0fdb258c51900e90cc206ecdff267d1}{Status} Scene\+Context\+::\+Get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 31 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ae0c21a6c4e0cbb7a6a531a1a5d1a9ec9}\label{class_scene_context_ae0c21a6c4e0cbb7a6a531a1a5d1a9ec9}} 
+\index{Scene\+Context@{Scene\+Context}!Get\+Zoom\+Mode@{Get\+Zoom\+Mode}}
+\index{Get\+Zoom\+Mode@{Get\+Zoom\+Mode}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Get\+Zoom\+Mode()}{GetZoomMode()}}
+{\footnotesize\ttfamily \hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78}{Camera\+Zoom\+Mode} Scene\+Context\+::\+Get\+Zoom\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 88 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ae0e2269a6a0df27ec32114282c52f812}\label{class_scene_context_ae0e2269a6a0df27ec32114282c52f812}} 
+\index{Scene\+Context@{Scene\+Context}!Load\+File@{Load\+File}}
+\index{Load\+File@{Load\+File}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Load\+File()}{LoadFile()}}
+{\footnotesize\ttfamily bool Scene\+Context\+::\+Load\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 484 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a757f3c7f7824e77bbce4a3baf9490ac6}\label{class_scene_context_a757f3c7f7824e77bbce4a3baf9490ac6}} 
+\index{Scene\+Context@{Scene\+Context}!On\+Display@{On\+Display}}
+\index{On\+Display@{On\+Display}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{On\+Display()}{OnDisplay()}}
+{\footnotesize\ttfamily bool Scene\+Context\+::\+On\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 670 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a0a885b57e382b9e5057b0cae7b96de61}\label{class_scene_context_a0a885b57e382b9e5057b0cae7b96de61}} 
+\index{Scene\+Context@{Scene\+Context}!On\+Keyboard@{On\+Keyboard}}
+\index{On\+Keyboard@{On\+Keyboard}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{On\+Keyboard()}{OnKeyboard()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+On\+Keyboard (\begin{DoxyParamCaption}\item[{unsigned char}]{p\+Key }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 727 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a661e2afdb07136789ca6e63f73a22801}\label{class_scene_context_a661e2afdb07136789ca6e63f73a22801}} 
+\index{Scene\+Context@{Scene\+Context}!On\+Mouse@{On\+Mouse}}
+\index{On\+Mouse@{On\+Mouse}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{On\+Mouse()}{OnMouse()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+On\+Mouse (\begin{DoxyParamCaption}\item[{int}]{p\+Button,  }\item[{int}]{p\+State,  }\item[{int}]{pX,  }\item[{int}]{pY }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 766 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ad684c731a852c7af58a433b596564d82}\label{class_scene_context_ad684c731a852c7af58a433b596564d82}} 
+\index{Scene\+Context@{Scene\+Context}!On\+Mouse\+Motion@{On\+Mouse\+Motion}}
+\index{On\+Mouse\+Motion@{On\+Mouse\+Motion}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{On\+Mouse\+Motion()}{OnMouseMotion()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+On\+Mouse\+Motion (\begin{DoxyParamCaption}\item[{int}]{pX,  }\item[{int}]{pY }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 839 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ab90174ca8b46fd0605bdafa2feb34bbb}\label{class_scene_context_ab90174ca8b46fd0605bdafa2feb34bbb}} 
+\index{Scene\+Context@{Scene\+Context}!On\+Reshape@{On\+Reshape}}
+\index{On\+Reshape@{On\+Reshape}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{On\+Reshape()}{OnReshape()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+On\+Reshape (\begin{DoxyParamCaption}\item[{int}]{p\+Width,  }\item[{int}]{p\+Height }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 720 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ad2cd3fb0710e845b5cc7ad3cfc8abaeb}\label{class_scene_context_ad2cd3fb0710e845b5cc7ad3cfc8abaeb}} 
+\index{Scene\+Context@{Scene\+Context}!On\+Timer\+Click@{On\+Timer\+Click}}
+\index{On\+Timer\+Click@{On\+Timer\+Click}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{On\+Timer\+Click()}{OnTimerClick()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+On\+Timer\+Click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+ Scene\+Context.\+cxx の 643 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a003a522965333e080d2ac5e8d3e0163e}\label{class_scene_context_a003a522965333e080d2ac5e8d3e0163e}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Current\+Anim\+Stack@{Set\+Current\+Anim\+Stack}}
+\index{Set\+Current\+Anim\+Stack@{Set\+Current\+Anim\+Stack}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Current\+Anim\+Stack()}{SetCurrentAnimStack()}}
+{\footnotesize\ttfamily bool Scene\+Context\+::\+Set\+Current\+Anim\+Stack (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 568 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a10d6a89671f4aa66719387a1299db7a9}\label{class_scene_context_a10d6a89671f4aa66719387a1299db7a9}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Current\+Camera@{Set\+Current\+Camera}}
+\index{Set\+Current\+Camera@{Set\+Current\+Camera}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Current\+Camera()}{SetCurrentCamera()}}
+{\footnotesize\ttfamily bool Scene\+Context\+::\+Set\+Current\+Camera (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Camera\+Name }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 623 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a2cd3263d79e2170f7ea3197186540916}\label{class_scene_context_a2cd3263d79e2170f7ea3197186540916}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Current\+Pose\+Index@{Set\+Current\+Pose\+Index}}
+\index{Set\+Current\+Pose\+Index@{Set\+Current\+Pose\+Index}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Current\+Pose\+Index()}{SetCurrentPoseIndex()}}
+{\footnotesize\ttfamily bool Scene\+Context\+::\+Set\+Current\+Pose\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Pose\+Index }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 636 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a0bb98ae02d7fd834f7cf83f79fb7e628}\label{class_scene_context_a0bb98ae02d7fd834f7cf83f79fb7e628}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Pause@{Set\+Pause}}
+\index{Set\+Pause@{Set\+Pause}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Pause()}{SetPause()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+Set\+Pause (\begin{DoxyParamCaption}\item[{bool}]{p\+Pause }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ Scene\+Context.\+h の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a181d85ec09f86f556fa2d4050fa28fb8}\label{class_scene_context_a181d85ec09f86f556fa2d4050fa28fb8}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Selected\+Node@{Set\+Selected\+Node}}
+\index{Set\+Selected\+Node@{Set\+Selected\+Node}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Selected\+Node()}{SetSelectedNode()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+Set\+Selected\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Selected\+Node }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 866 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_ac2719e4c499f1d811619ea21ea477392}\label{class_scene_context_ac2719e4c499f1d811619ea21ea477392}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Shading\+Mode@{Set\+Shading\+Mode}}
+\index{Set\+Shading\+Mode@{Set\+Shading\+Mode}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Shading\+Mode()}{SetShadingMode()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+Set\+Shading\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode}}]{p\+Mode }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 872 行目に定義があります。
+
+\mbox{\Hypertarget{class_scene_context_a1e6f52aae39dab1278852e2bbe44ffb0}\label{class_scene_context_a1e6f52aae39dab1278852e2bbe44ffb0}} 
+\index{Scene\+Context@{Scene\+Context}!Set\+Zoom\+Mode@{Set\+Zoom\+Mode}}
+\index{Set\+Zoom\+Mode@{Set\+Zoom\+Mode}!Scene\+Context@{Scene\+Context}}
+\subsubsection{\texorpdfstring{Set\+Zoom\+Mode()}{SetZoomMode()}}
+{\footnotesize\ttfamily void Scene\+Context\+::\+Set\+Zoom\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_scene_context_a06de9da0c18152a74673a8ed829abf78}{Camera\+Zoom\+Mode}}]{p\+Zoom\+Mode }\end{DoxyParamCaption})}
+
+
+
+ Scene\+Context.\+cxx の 988 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/\hyperlink{_scene_context_8h}{Scene\+Context.\+h}\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/\hyperlink{_scene_context_8cxx}{Scene\+Context.\+cxx}\end{DoxyCompactItemize}

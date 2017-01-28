@@ -1,0 +1,99 @@
+\hypertarget{fbxevent_8h}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/include/fbxsdk/core/fbxevent.h ファイル}
+\label{fbxevent_8h}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/fbxevent.\+h@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/fbxevent.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/core/fbxpropertytypes.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base}
+\item 
+class \hyperlink{class_fbx_event}{Fbx\+Event$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{fbxevent_8h_abab53b2d37df507254052aedf199b964}{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE}(Class)
+\item 
+\#define \hyperlink{fbxevent_8h_a32d1e5674058de64a4ea389cdfa89302}{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE}(Class,  F\+B\+X\+Type)
+\item 
+\#define \hyperlink{fbxevent_8h_a447f33a689aa623afd370a1e34f9b0b8}{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER}(Class\+Name,  Template\+Name)
+\item 
+\#define \hyperlink{fbxevent_8h_a06424633e333256adc5f1db6770ef125}{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER}()~\};
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{fbxevent_8h_abab53b2d37df507254052aedf199b964}\label{fbxevent_8h_abab53b2d37df507254052aedf199b964}} 
+\index{fbxevent.\+h@{fbxevent.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxevent.\+h@{fbxevent.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_EVENT\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Class }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* GetEventName()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} FbxEventName(); \} \(\backslash\)
+    private: \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* FbxEventName() \{ \textcolor{keywordflow}{return} #Class; \}               \(\backslash\)
+    friend \textcolor{keyword}{class }\hyperlink{class_fbx_event}{FbxEvent}<Class>;                                               \(\backslash\)
+\end{DoxyCode}
+
+
+ fbxevent.\+h の 68 行目に定義があります。
+
+\mbox{\Hypertarget{fbxevent_8h_a06424633e333256adc5f1db6770ef125}\label{fbxevent_8h_a06424633e333256adc5f1db6770ef125}} 
+\index{fbxevent.\+h@{fbxevent.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER}!fbxevent.\+h@{fbxevent.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER}{FBXSDK\_EVENT\_TEMPLATE\_FOOTER}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+F\+O\+O\+T\+ER(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\};}
+
+
+
+ fbxevent.\+h の 111 行目に定義があります。
+
+\mbox{\Hypertarget{fbxevent_8h_a447f33a689aa623afd370a1e34f9b0b8}\label{fbxevent_8h_a447f33a689aa623afd370a1e34f9b0b8}} 
+\index{fbxevent.\+h@{fbxevent.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER}!fbxevent.\+h@{fbxevent.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER}{FBXSDK\_EVENT\_TEMPLATE\_HEADER}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+H\+E\+A\+D\+ER(\begin{DoxyParamCaption}\item[{}]{Class\+Name,  }\item[{}]{Template\+Name }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{template} < \textcolor{keyword}{class} TemplateName, const \textcolor{keywordtype}{char}* T > \(\backslash\)
+class ClassName: \textcolor{keyword}{public}  \hyperlink{class_fbx_event}{FbxEvent< ClassName <TemplateName,T>} >\(\backslash\)
+\{\(\backslash\)
+    public: \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \hyperlink{class_fbx_event_base_a94c1acf878d522042b327abf0c129f10}{GetEventName}()\textcolor{keyword}{ const }\{\textcolor{keywordflow}{return} FbxEventName();\}\(\backslash\)
+    private: \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* FbxEventName() \{\(\backslash\)
+    static \hyperlink{class_fbx_string}{FbxString} lEventName = (\hyperlink{class_fbx_string}{FbxString}(#ClassName) +\textcolor{stringliteral}{"<"}+ 
+      \hyperlink{class_fbx_string}{FbxString}(T) +\textcolor{stringliteral}{">"});\(\backslash\)
+    return lEventName.\hyperlink{class_fbx_string_ac41dc796638cda32faebf887a88e769b}{Buffer}();\(\backslash\)
+    \}\(\backslash\)
+    friend \textcolor{keyword}{class }\hyperlink{class_fbx_event}{FbxEvent}< ClassName<TemplateName, T> >;
+\end{DoxyCode}
+
+
+ fbxevent.\+h の 97 行目に定義があります。
+
+\mbox{\Hypertarget{fbxevent_8h_a32d1e5674058de64a4ea389cdfa89302}\label{fbxevent_8h_a32d1e5674058de64a4ea389cdfa89302}} 
+\index{fbxevent.\+h@{fbxevent.\+h}!F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE@{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE}!fbxevent.\+h@{fbxevent.\+h}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE}{FBXSDK\_EVENT\_TYPE\_DECLARE}}
+{\footnotesize\ttfamily \#define F\+B\+X\+S\+D\+K\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+C\+L\+A\+RE(\begin{DoxyParamCaption}\item[{}]{Class,  }\item[{}]{F\+B\+X\+Type }\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{public}: \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \hyperlink{class_fbx_event_base_a94c1acf878d522042b327abf0c129f10}{GetEventName}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} FbxEventName(); \}      \(\backslash\)
+  private:                                                                         \(\backslash\)
+     static \textcolor{keyword}{const} \textcolor{keywordtype}{char}* FbxEventName() \{                                           \(\backslash\)
+     static \hyperlink{class_fbx_string}{FbxString} lEventName = \hyperlink{class_fbx_string}{FbxString}(#Class) + 
+      \hyperlink{class_fbx_string}{FbxString}(\textcolor{stringliteral}{"<"}) +                  \(\backslash\)
+     FbxGetDataTypeFromEnum(\hyperlink{fbxpropertytypes_8h_a1e622dc5bedcefdf0cf0d051d0d7dc4d}{FbxTypeOf}(*((\textcolor{keyword}{const} FBXType *)0))).GetName() + \textcolor{stringliteral}{">"};               \(\backslash\)
+                                                                                   \(\backslash\)
+     return lEventName.\hyperlink{class_fbx_string_ac41dc796638cda32faebf887a88e769b}{Buffer}();                                                   \(\backslash\)
+  \}                                                                                \(\backslash\)
+  friend \textcolor{keyword}{class }\hyperlink{class_fbx_event}{FbxEvent}< Class<FBXType> >;
+\end{DoxyCode}
+
+
+ fbxevent.\+h の 77 行目に定義があります。
+

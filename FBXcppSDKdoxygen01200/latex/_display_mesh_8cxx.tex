@@ -1,0 +1,124 @@
+\hypertarget{_display_mesh_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Import\+Scene/\+Display\+Mesh.cxx ファイル}
+\label{_display_mesh_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Import\+Scene/\+Display\+Mesh.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Import\+Scene/\+Display\+Mesh.\+cxx}}
+{\ttfamily \#include \char`\"{}Display\+Mesh.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Display\+Material.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Display\+Texture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Display\+Link.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Display\+Shape.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Display\+Cache.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_display_mesh_8cxx_ab2dc2365b03e72a659911bdb5ef7c198}{M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH}~200
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_display_mesh_8cxx_a774b8e08ae8694ce952407699a3fe62c}{Display\+Controls\+Points} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+void \hyperlink{_display_mesh_8cxx_acdfdab7927e39404c85f6fad4ab0c68c}{Display\+Polygons} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+void \hyperlink{_display_mesh_8cxx_aabf3f70050a212e533c273c2c762fe6a}{Display\+Material\+Mapping} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+void \hyperlink{_display_mesh_8cxx_af69f51575bd2a507a508aaa126f7a581}{Display\+Texture\+Mapping} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+void \hyperlink{_display_mesh_8cxx_a0bc1dafadd8e6fb72f74cd4571f7de5e}{Display\+Texture\+Names} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Property, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Connection\+String)
+\item 
+void \hyperlink{_display_mesh_8cxx_a899f669fc87748eda9f738119d85132c}{Display\+Material\+Connections} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+void \hyperlink{_display_mesh_8cxx_ac79ba91c392e4908d3f254dbdc3cce79}{Display\+Material\+Texture\+Connections} (\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$p\+Material, char $\ast$header, int p\+Mat\+Id, int l)
+\item 
+void \hyperlink{_display_mesh_8cxx_a9855caeea8bccc239e4b21b69079cd42}{Display\+Mesh} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_display_mesh_8cxx_ab2dc2365b03e72a659911bdb5ef7c198}\label{_display_mesh_8cxx_ab2dc2365b03e72a659911bdb5ef7c198}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH@{M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH}{MAT\_HEADER\_LENGTH}}
+{\footnotesize\ttfamily \#define M\+A\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+L\+E\+N\+G\+TH~200}
+
+
+
+ Display\+Mesh.\+cxx の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_display_mesh_8cxx_a774b8e08ae8694ce952407699a3fe62c}\label{_display_mesh_8cxx_a774b8e08ae8694ce952407699a3fe62c}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Controls\+Points@{Display\+Controls\+Points}}
+\index{Display\+Controls\+Points@{Display\+Controls\+Points}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Controls\+Points()}{DisplayControlsPoints()}}
+{\footnotesize\ttfamily void Display\+Controls\+Points (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 56 行目に定義があります。
+
+\mbox{\Hypertarget{_display_mesh_8cxx_a899f669fc87748eda9f738119d85132c}\label{_display_mesh_8cxx_a899f669fc87748eda9f738119d85132c}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Material\+Connections@{Display\+Material\+Connections}}
+\index{Display\+Material\+Connections@{Display\+Material\+Connections}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Material\+Connections()}{DisplayMaterialConnections()}}
+{\footnotesize\ttfamily void Display\+Material\+Connections (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 465 行目に定義があります。
+
+\mbox{\Hypertarget{_display_mesh_8cxx_aabf3f70050a212e533c273c2c762fe6a}\label{_display_mesh_8cxx_aabf3f70050a212e533c273c2c762fe6a}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Material\+Mapping@{Display\+Material\+Mapping}}
+\index{Display\+Material\+Mapping@{Display\+Material\+Mapping}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Material\+Mapping()}{DisplayMaterialMapping()}}
+{\footnotesize\ttfamily void Display\+Material\+Mapping (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 536 行目に定義があります。
+
+\mbox{\Hypertarget{_display_mesh_8cxx_ac79ba91c392e4908d3f254dbdc3cce79}\label{_display_mesh_8cxx_ac79ba91c392e4908d3f254dbdc3cce79}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Material\+Texture\+Connections@{Display\+Material\+Texture\+Connections}}
+\index{Display\+Material\+Texture\+Connections@{Display\+Material\+Texture\+Connections}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Material\+Texture\+Connections()}{DisplayMaterialTextureConnections()}}
+{\footnotesize\ttfamily void Display\+Material\+Texture\+Connections (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$}]{p\+Material,  }\item[{char $\ast$}]{header,  }\item[{int}]{p\+Mat\+Id,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 383 行目に定義があります。
+
+\mbox{\Hypertarget{_display_mesh_8cxx_a9855caeea8bccc239e4b21b69079cd42}\label{_display_mesh_8cxx_a9855caeea8bccc239e4b21b69079cd42}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Mesh@{Display\+Mesh}}
+\index{Display\+Mesh@{Display\+Mesh}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Mesh()}{DisplayMesh()}}
+{\footnotesize\ttfamily void Display\+Mesh (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 37 行目に定義があります。
+
+\mbox{\Hypertarget{_display_mesh_8cxx_acdfdab7927e39404c85f6fad4ab0c68c}\label{_display_mesh_8cxx_acdfdab7927e39404c85f6fad4ab0c68c}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Polygons@{Display\+Polygons}}
+\index{Display\+Polygons@{Display\+Polygons}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Polygons()}{DisplayPolygons()}}
+{\footnotesize\ttfamily void Display\+Polygons (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 85 行目に定義があります。
+
+\mbox{\Hypertarget{_display_mesh_8cxx_af69f51575bd2a507a508aaa126f7a581}\label{_display_mesh_8cxx_af69f51575bd2a507a508aaa126f7a581}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Texture\+Mapping@{Display\+Texture\+Mapping}}
+\index{Display\+Texture\+Mapping@{Display\+Texture\+Mapping}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Texture\+Mapping()}{DisplayTextureMapping()}}
+{\footnotesize\ttfamily void Display\+Texture\+Mapping (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_display_mesh_8cxx_a0bc1dafadd8e6fb72f74cd4571f7de5e}\label{_display_mesh_8cxx_a0bc1dafadd8e6fb72f74cd4571f7de5e}} 
+\index{Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}!Display\+Texture\+Names@{Display\+Texture\+Names}}
+\index{Display\+Texture\+Names@{Display\+Texture\+Names}!Display\+Mesh.\+cxx@{Display\+Mesh.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Texture\+Names()}{DisplayTextureNames()}}
+{\footnotesize\ttfamily void Display\+Texture\+Names (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Property,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Connection\+String }\end{DoxyParamCaption})}
+
+
+
+ Display\+Mesh.\+cxx の 329 行目に定義があります。
+

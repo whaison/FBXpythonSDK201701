@@ -1,0 +1,93 @@
+\hypertarget{class_fbx_mutex}{}\section{Fbx\+Mutex クラス}
+\label{class_fbx_mutex}\index{Fbx\+Mutex@{Fbx\+Mutex}}
+
+
+{\ttfamily \#include $<$fbxsync.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_mutex_af2e9cbb51bc45952ccb6a310717e70a1}{Fbx\+Mutex} (bool p\+Initial\+Ownership=false)
+\item 
+virtual \hyperlink{class_fbx_mutex_a68eda93d02e2adc9f717d28208305aa6}{$\sim$\+Fbx\+Mutex} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_mutex_abca054ea52a16ade66050af56a04b97c}{Acquire} ()
+\item 
+bool \hyperlink{class_fbx_mutex_ace271bd592e917dffdc850b74482d52f}{Try\+Acquire} (unsigned int p\+Retry\+Count)
+\item 
+void \hyperlink{class_fbx_mutex_af64f050aba0c86a19c75c8fc236325d1}{Release} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Mutually excluding thread lock mechanism. While the mutex is a much heavier implementation than a spinlock, it supports recursive locking; the same thread can safely lock the same mutex more than once without blocking. But it will have to be released as many times as it as been acquired before other threads can acquire the context. It is sometimes referred as a critical section. This is the heaviest thread lock implementation, but also the most secure. 
+
+ fbxsync.\+h の 59 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_mutex_af2e9cbb51bc45952ccb6a310717e70a1}\label{class_fbx_mutex_af2e9cbb51bc45952ccb6a310717e70a1}} 
+\index{Fbx\+Mutex@{Fbx\+Mutex}!Fbx\+Mutex@{Fbx\+Mutex}}
+\index{Fbx\+Mutex@{Fbx\+Mutex}!Fbx\+Mutex@{Fbx\+Mutex}}
+\subsubsection{\texorpdfstring{Fbx\+Mutex()}{FbxMutex()}}
+{\footnotesize\ttfamily Fbx\+Mutex\+::\+Fbx\+Mutex (\begin{DoxyParamCaption}\item[{bool}]{p\+Initial\+Ownership = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{引数}
+{\em p\+Initial\+Ownership} & If p\+Initial\+Ownership is true, the lock will be initialized as being locked by the current thread. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mutex_a68eda93d02e2adc9f717d28208305aa6}\label{class_fbx_mutex_a68eda93d02e2adc9f717d28208305aa6}} 
+\index{Fbx\+Mutex@{Fbx\+Mutex}!````~Fbx\+Mutex@{$\sim$\+Fbx\+Mutex}}
+\index{````~Fbx\+Mutex@{$\sim$\+Fbx\+Mutex}!Fbx\+Mutex@{Fbx\+Mutex}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Mutex()}{~FbxMutex()}}
+{\footnotesize\ttfamily virtual Fbx\+Mutex\+::$\sim$\+Fbx\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_mutex_abca054ea52a16ade66050af56a04b97c}\label{class_fbx_mutex_abca054ea52a16ade66050af56a04b97c}} 
+\index{Fbx\+Mutex@{Fbx\+Mutex}!Acquire@{Acquire}}
+\index{Acquire@{Acquire}!Fbx\+Mutex@{Fbx\+Mutex}}
+\subsubsection{\texorpdfstring{Acquire()}{Acquire()}}
+{\footnotesize\ttfamily void Fbx\+Mutex\+::\+Acquire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Acquire the lock; thread will wait indefinitely until it is available. \begin{DoxyRemark}{注釈}
+The same thread can acquire the lock multiple times without blocking. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mutex_af64f050aba0c86a19c75c8fc236325d1}\label{class_fbx_mutex_af64f050aba0c86a19c75c8fc236325d1}} 
+\index{Fbx\+Mutex@{Fbx\+Mutex}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Mutex@{Fbx\+Mutex}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void Fbx\+Mutex\+::\+Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Release the lock; this will allow other threads to acquire the lock if they are waiting. \begin{DoxyRemark}{注釈}
+Only the owner thread should call \hyperlink{class_fbx_mutex_af64f050aba0c86a19c75c8fc236325d1}{Release()}, and it needs to be released as many times as it was acquired. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mutex_ace271bd592e917dffdc850b74482d52f}\label{class_fbx_mutex_ace271bd592e917dffdc850b74482d52f}} 
+\index{Fbx\+Mutex@{Fbx\+Mutex}!Try\+Acquire@{Try\+Acquire}}
+\index{Try\+Acquire@{Try\+Acquire}!Fbx\+Mutex@{Fbx\+Mutex}}
+\subsubsection{\texorpdfstring{Try\+Acquire()}{TryAcquire()}}
+{\footnotesize\ttfamily bool Fbx\+Mutex\+::\+Try\+Acquire (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Retry\+Count }\end{DoxyParamCaption})}
+
+Try acquiring the lock; thread will not wait if it is not available. 
+\begin{DoxyParams}{引数}
+{\em p\+Retry\+Count} & The number of retries in case the lock is not available. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the lock is acquired, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The same thread can acquire the lock multiple times without blocking. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/sync/\hyperlink{fbxsync_8h}{fbxsync.\+h}\end{DoxyCompactItemize}

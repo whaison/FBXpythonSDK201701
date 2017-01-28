@@ -1,0 +1,180 @@
+\hypertarget{class_fbx_sub_deformer}{}\section{Fbx\+Sub\+Deformer クラス}
+\label{class_fbx_sub_deformer}\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+
+
+{\ttfamily \#include $<$fbxsubdeformer.\+h$>$}
+
+Fbx\+Sub\+Deformer の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_sub_deformer}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}{E\+Type} \{ \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a688c70619ed57e89246838f7b89640cf}{e\+Unknown}, 
+\hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a329357c41a658df236d0802d586c2643}{e\+Cluster}, 
+\hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a1082bcdf5d88e593ea78a8da89b5cebd}{e\+Blend\+Shape\+Channel}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_sub_deformer_a46748fbb4e8496449bb28e6eeefde288}{Set\+Multi\+Layer} (bool p\+Multi\+Layer)
+\item 
+bool \hyperlink{class_fbx_sub_deformer_a9a430ccafe4f08c976b9963627b5de05}{Get\+Multi\+Layer} () const
+\item 
+virtual \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}{E\+Type} \hyperlink{class_fbx_sub_deformer_a1a1998b98ca03598bc6bec630e1aaa97}{Get\+Sub\+Deformer\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_sub_deformer_ae3d566383651e82b681827f0f38b97f3}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_sub_deformer_a80652fd0521b2ea1897e221e5ae1b5cf}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_sub_deformer_aedda8831e40648602b073c9613687e9d}{m\+Multi\+Layer}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Base class for cluster sub-\/deformer( \hyperlink{class_fbx_cluster}{Fbx\+Cluster}) and blend shape channel sub-\/deformer( \hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel})
+
+The corresponding sub-\/deformer types are \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a329357c41a658df236d0802d586c2643}{Fbx\+Sub\+Deformer\+::e\+Cluster} and \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a1082bcdf5d88e593ea78a8da89b5cebd}{Fbx\+Sub\+Deformer\+::e\+Blend\+Shape\+Channel}.
+
+A cluster, or link, is an entity acting on a geometry (\hyperlink{class_fbx_geometry}{Fbx\+Geometry}). More precisely, the cluster acts on a subset of the geometry\textquotesingle{}s control points. For each control point that the cluster acts on, the intensity of the cluster\textquotesingle{}s action is modulated by a weight. The link mode (E\+Link\+Mode) specifies how the weights are taken into account. The cluster\textquotesingle{}s link node specifies the node (\hyperlink{class_fbx_node}{Fbx\+Node}) that influences the control points of the cluster. If the node is animated, the control points will move accordingly. A cluster is usually part of a skin (see \hyperlink{class_fbx_deformer}{Fbx\+Deformer}, \hyperlink{class_fbx_skin}{Fbx\+Skin}). For example, imagine a mesh representing a humanoid, and imagine a skeleton made of bones. Each bone is represented by a node in F\+BX. To bind the geometry to the nodes, we create a skin (\hyperlink{class_fbx_skin}{Fbx\+Skin}). The skin has many clusters, each one corresponding to a bone. Each node influences some control points of the mesh. A node has a high influence on some of the points (high weight) and lower influence on some other points (low weight). Some points of the mesh are not affected at all by the bone, so they would not be part of the corresponding cluster.
+
+A blend shape channel is a sub-\/deformer to help blend shape deformer to organize the target shapes. One blend shape deformer can have multiple blend shape channels in parallel, and each of them can control one or multiple target shapes. If there are multiple target shapes connected to one channel, and each target shape could have its own full deformation percentage, for example, one channel could have 3 target shapes, whose full deform percentage are 30, to 80 to 100, then when the percent change from 0 to 100, the base geometry will deform from the first target shape to the last one, this is called In-\/\+Between blend-\/shapes. The blend shape channel also control the deform percent of each target shape or In-\/\+Between blend shape on it. 
+
+ fbxsubdeformer.\+h の 55 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}\label{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}{Fbx\+Sub\+Deformer\+::\+E\+Type}}
+
+Sub-\/deformer type \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown@{e\+Unknown}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!e\+Unknown@{e\+Unknown}}}\mbox{\Hypertarget{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a688c70619ed57e89246838f7b89640cf}\label{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a688c70619ed57e89246838f7b89640cf}} 
+e\+Unknown&Untyped sub-\/deformer \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Cluster@{e\+Cluster}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!e\+Cluster@{e\+Cluster}}}\mbox{\Hypertarget{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a329357c41a658df236d0802d586c2643}\label{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a329357c41a658df236d0802d586c2643}} 
+e\+Cluster&Type \hyperlink{class_fbx_cluster}{Fbx\+Cluster} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend\+Shape\+Channel@{e\+Blend\+Shape\+Channel}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!e\+Blend\+Shape\+Channel@{e\+Blend\+Shape\+Channel}}}\mbox{\Hypertarget{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a1082bcdf5d88e593ea78a8da89b5cebd}\label{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319a1082bcdf5d88e593ea78a8da89b5cebd}} 
+e\+Blend\+Shape\+Channel&Type \hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxsubdeformer.\+h の 73 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_sub_deformer_ae3d566383651e82b681827f0f38b97f3}\label{class_fbx_sub_deformer_ae3d566383651e82b681827f0f38b97f3}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Sub\+Deformer\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_cluster_a80619129929789d80930b2bbb524593c}{Fbx\+Cluster}, \hyperlink{class_fbx_blend_shape_channel_ad16237e4706289af6a9235b8425415cb}{Fbx\+Blend\+Shape\+Channel}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_sub_deformer_a9a430ccafe4f08c976b9963627b5de05}\label{class_fbx_sub_deformer_a9a430ccafe4f08c976b9963627b5de05}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!Get\+Multi\+Layer@{Get\+Multi\+Layer}}
+\index{Get\+Multi\+Layer@{Get\+Multi\+Layer}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{Get\+Multi\+Layer()}{GetMultiLayer()}}
+{\footnotesize\ttfamily bool Fbx\+Sub\+Deformer\+::\+Get\+Multi\+Layer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get multilayer state. \begin{DoxyReturn}{戻り値}
+The state of the multi-\/layer flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_sub_deformer_a1a1998b98ca03598bc6bec630e1aaa97}\label{class_fbx_sub_deformer_a1a1998b98ca03598bc6bec630e1aaa97}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!Get\+Sub\+Deformer\+Type@{Get\+Sub\+Deformer\+Type}}
+\index{Get\+Sub\+Deformer\+Type@{Get\+Sub\+Deformer\+Type}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{Get\+Sub\+Deformer\+Type()}{GetSubDeformerType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_sub_deformer_aed7eba8aabbb8b25a8ddbab127d67319}{E\+Type} Fbx\+Sub\+Deformer\+::\+Get\+Sub\+Deformer\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get the type of the sub-\/deformer. \begin{DoxyReturn}{戻り値}
+Sub\+Deformer type identifier. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_blend_shape_channel_a1dba13e481ea7ba1874587ad92ee0347}{Fbx\+Blend\+Shape\+Channel}, \hyperlink{class_fbx_cluster_aa395931c54c7a8b7e23b1be50b32a1d6}{Fbx\+Cluster}で再実装されています。
+
+
+
+ fbxsubdeformer.\+h の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_sub_deformer_a80652fd0521b2ea1897e221e5ae1b5cf}\label{class_fbx_sub_deformer_a80652fd0521b2ea1897e221e5ae1b5cf}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Sub\+Deformer\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_cluster_af989ca14bdf9e025f3db49183dc09811}{Fbx\+Cluster}, \hyperlink{class_fbx_blend_shape_channel_a354002154ea342025ba0936e656b640a}{Fbx\+Blend\+Shape\+Channel}で再実装されています。
+
+
+
+ fbxsubdeformer.\+h の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_sub_deformer_a46748fbb4e8496449bb28e6eeefde288}\label{class_fbx_sub_deformer_a46748fbb4e8496449bb28e6eeefde288}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!Set\+Multi\+Layer@{Set\+Multi\+Layer}}
+\index{Set\+Multi\+Layer@{Set\+Multi\+Layer}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{Set\+Multi\+Layer()}{SetMultiLayer()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Deformer\+::\+Set\+Multi\+Layer (\begin{DoxyParamCaption}\item[{bool}]{p\+Multi\+Layer }\end{DoxyParamCaption})}
+
+Set multi layer state flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Multi\+Layer} & If {\ttfamily true}, multi-\/layering is enabled. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_sub_deformer_aedda8831e40648602b073c9613687e9d}\label{class_fbx_sub_deformer_aedda8831e40648602b073c9613687e9d}} 
+\index{Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}!m\+Multi\+Layer@{m\+Multi\+Layer}}
+\index{m\+Multi\+Layer@{m\+Multi\+Layer}!Fbx\+Sub\+Deformer@{Fbx\+Sub\+Deformer}}
+\subsubsection{\texorpdfstring{m\+Multi\+Layer}{mMultiLayer}}
+{\footnotesize\ttfamily bool Fbx\+Sub\+Deformer\+::m\+Multi\+Layer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxsubdeformer.\+h の 94 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxsubdeformer_8h}{fbxsubdeformer.\+h}\end{DoxyCompactItemize}

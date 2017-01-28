@@ -1,0 +1,208 @@
+\hypertarget{class_fbx_renaming_strategy_base}{}\section{Fbx\+Renaming\+Strategy\+Base クラス}
+\label{class_fbx_renaming_strategy_base}\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+
+
+Base class for renaming strategy.  
+
+
+
+
+{\ttfamily \#include $<$fbxrenamingstrategybase.\+h$>$}
+
+Fbx\+Renaming\+Strategy\+Base の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_renaming_strategy_base}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_renaming_strategy_base_1_1_name_cell}{Name\+Cell}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_renaming_strategy_base_a96b05d890a49769ed329ffb79c052a54}{Fbx\+Renaming\+Strategy\+Base} ()
+\begin{DoxyCompactList}\small\item\em Default constructor \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_renaming_strategy_base_a236910482755c3d7e0ee9d28d3b74a31}{Fbx\+Renaming\+Strategy\+Base} (char p\+Name\+Space\+Symbol)
+\item 
+virtual \hyperlink{class_fbx_renaming_strategy_base_a9c79c9c02fef4d3480bd7a4704fd2019}{$\sim$\+Fbx\+Renaming\+Strategy\+Base} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_base_a6c368dff1424b4b54cdfa49ad49bf09c}{Decode\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)=0
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_base_a7449fa6c649949d6d5e3c4b7190d6b25}{Encode\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)=0
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_base_acc30037744da35fa2b59fdd4ff6d9ede}{Decode\+String} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&p\+String)=0
+\item 
+virtual bool \hyperlink{class_fbx_renaming_strategy_base_aa762726a9d92a328ec720f2b8135db09}{Encode\+String} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&p\+String, bool p\+Is\+Property\+Name=false)=0
+\item 
+virtual void \hyperlink{class_fbx_renaming_strategy_base_ae1ab8784f6769fce3068ee21e3c34196}{Clean\+Up} ()
+\begin{DoxyCompactList}\small\item\em clean up the name cells. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+char \hyperlink{class_fbx_renaming_strategy_base_a9952264301fae41f0ecbc63bcaf1e7fa}{m\+Namespace\+Symbol}
+\item 
+\hyperlink{class_fbx_char_ptr_set}{Fbx\+Char\+Ptr\+Set} \hyperlink{class_fbx_renaming_strategy_base_a4cab3a7e42cbd982adc44841c38b02d0}{m\+String\+Name\+Array}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Base class for renaming strategy. 
+
+ fbxrenamingstrategybase.\+h の 26 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a96b05d890a49769ed329ffb79c052a54}\label{class_fbx_renaming_strategy_base_a96b05d890a49769ed329ffb79c052a54}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Fbx\+Renaming\+Strategy\+Base()}{FbxRenamingStrategyBase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Renaming\+Strategy\+Base\+::\+Fbx\+Renaming\+Strategy\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor 
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a236910482755c3d7e0ee9d28d3b74a31}\label{class_fbx_renaming_strategy_base_a236910482755c3d7e0ee9d28d3b74a31}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Fbx\+Renaming\+Strategy\+Base()}{FbxRenamingStrategyBase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Renaming\+Strategy\+Base\+::\+Fbx\+Renaming\+Strategy\+Base (\begin{DoxyParamCaption}\item[{char}]{p\+Name\+Space\+Symbol }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Name\+Space\+Symbol} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a9c79c9c02fef4d3480bd7a4704fd2019}\label{class_fbx_renaming_strategy_base_a9c79c9c02fef4d3480bd7a4704fd2019}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!````~Fbx\+Renaming\+Strategy\+Base@{$\sim$\+Fbx\+Renaming\+Strategy\+Base}}
+\index{````~Fbx\+Renaming\+Strategy\+Base@{$\sim$\+Fbx\+Renaming\+Strategy\+Base}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Renaming\+Strategy\+Base()}{~FbxRenamingStrategyBase()}}
+{\footnotesize\ttfamily virtual Fbx\+Renaming\+Strategy\+Base\+::$\sim$\+Fbx\+Renaming\+Strategy\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_ae1ab8784f6769fce3068ee21e3c34196}\label{class_fbx_renaming_strategy_base_ae1ab8784f6769fce3068ee21e3c34196}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Clean\+Up@{Clean\+Up}}
+\index{Clean\+Up@{Clean\+Up}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Clean\+Up()}{CleanUp()}}
+{\footnotesize\ttfamily virtual void Fbx\+Renaming\+Strategy\+Base\+::\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+clean up the name cells. 
+
+
+
+\hyperlink{class_fbx_renaming_strategy_fbx5_a581d1d5e0b4fcc9f9702be12669fc795}{Fbx\+Renaming\+Strategy\+Fbx5}, \hyperlink{class_fbx_renaming_strategy_fbx6_acb37bd5bc46fdf1e4bf77d3db6654d45}{Fbx\+Renaming\+Strategy\+Fbx6}, \hyperlink{class_fbx_renaming_strategy_fbx7_a4495cc04e089d7e0d432e50a3161ea50}{Fbx\+Renaming\+Strategy\+Fbx7}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a6c368dff1424b4b54cdfa49ad49bf09c}\label{class_fbx_renaming_strategy_base_a6c368dff1424b4b54cdfa49ad49bf09c}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Decode\+Scene@{Decode\+Scene}}
+\index{Decode\+Scene@{Decode\+Scene}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Decode\+Scene()}{DecodeScene()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+Base\+::\+Decode\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This method put all the names in the scene back to the original values 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if some names have been modified. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_fbx5_a3af6482297f78deb29a48a9f26ded270}{Fbx\+Renaming\+Strategy\+Fbx5}, \hyperlink{class_fbx_renaming_strategy_fbx6_a663b913a3f88b49e847f9c9c99ab16f2}{Fbx\+Renaming\+Strategy\+Fbx6}, \hyperlink{class_fbx_renaming_strategy_fbx7_a203a4659e427f4c6046eff93031a24bf}{Fbx\+Renaming\+Strategy\+Fbx7}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_acc30037744da35fa2b59fdd4ff6d9ede}\label{class_fbx_renaming_strategy_base_acc30037744da35fa2b59fdd4ff6d9ede}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Decode\+String@{Decode\+String}}
+\index{Decode\+String@{Decode\+String}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Decode\+String()}{DecodeString()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+Base\+::\+Decode\+String (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&}]{p\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This method find the original name of a given string 
+\begin{DoxyParams}{引数}
+{\em p\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if the name has been modified. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_fbx5_a10862b9d829203cdb2810c2f42c844ee}{Fbx\+Renaming\+Strategy\+Fbx5}, \hyperlink{class_fbx_renaming_strategy_fbx6_a491fb1e1fe7f2d194059f83f49be9e19}{Fbx\+Renaming\+Strategy\+Fbx6}, \hyperlink{class_fbx_renaming_strategy_fbx7_a9f8f8714746bdc9904c31741e0b595f6}{Fbx\+Renaming\+Strategy\+Fbx7}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a7449fa6c649949d6d5e3c4b7190d6b25}\label{class_fbx_renaming_strategy_base_a7449fa6c649949d6d5e3c4b7190d6b25}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Encode\+Scene@{Encode\+Scene}}
+\index{Encode\+Scene@{Encode\+Scene}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Encode\+Scene()}{EncodeScene()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+Base\+::\+Encode\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This method renames all the names in the scene 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if some names have been modified. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_fbx5_a559a5b6e57b4ac39b09aaa13fa021ab9}{Fbx\+Renaming\+Strategy\+Fbx5}, \hyperlink{class_fbx_renaming_strategy_fbx6_a24a48914e694f5bada3b0604a4dc62bf}{Fbx\+Renaming\+Strategy\+Fbx6}, \hyperlink{class_fbx_renaming_strategy_fbx7_a9c3d4574319c2e744a80d66f6c7c0ae3}{Fbx\+Renaming\+Strategy\+Fbx7}で実装されています。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_aa762726a9d92a328ec720f2b8135db09}\label{class_fbx_renaming_strategy_base_aa762726a9d92a328ec720f2b8135db09}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!Encode\+String@{Encode\+String}}
+\index{Encode\+String@{Encode\+String}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{Encode\+String()}{EncodeString()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Renaming\+Strategy\+Base\+::\+Encode\+String (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \&}]{p\+String,  }\item[{bool}]{p\+Is\+Property\+Name = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This method find the renaming name of a given string 
+\begin{DoxyParams}{引数}
+{\em p\+String} & \\
+\hline
+{\em p\+Is\+Property\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if the name has been modified. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_renaming_strategy_fbx5_adcd74ccce2269d962b5bd8e8600c472c}{Fbx\+Renaming\+Strategy\+Fbx5}, \hyperlink{class_fbx_renaming_strategy_fbx6_aee897659c210920eefbcb899b8b463d6}{Fbx\+Renaming\+Strategy\+Fbx6}, \hyperlink{class_fbx_renaming_strategy_fbx7_ae7ce3bfd32c1cb7c8ac420972287760e}{Fbx\+Renaming\+Strategy\+Fbx7}で実装されています。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a9952264301fae41f0ecbc63bcaf1e7fa}\label{class_fbx_renaming_strategy_base_a9952264301fae41f0ecbc63bcaf1e7fa}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!m\+Namespace\+Symbol@{m\+Namespace\+Symbol}}
+\index{m\+Namespace\+Symbol@{m\+Namespace\+Symbol}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{m\+Namespace\+Symbol}{mNamespaceSymbol}}
+{\footnotesize\ttfamily char Fbx\+Renaming\+Strategy\+Base\+::m\+Namespace\+Symbol}
+
+
+
+ fbxrenamingstrategybase.\+h の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_renaming_strategy_base_a4cab3a7e42cbd982adc44841c38b02d0}\label{class_fbx_renaming_strategy_base_a4cab3a7e42cbd982adc44841c38b02d0}} 
+\index{Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}!m\+String\+Name\+Array@{m\+String\+Name\+Array}}
+\index{m\+String\+Name\+Array@{m\+String\+Name\+Array}!Fbx\+Renaming\+Strategy\+Base@{Fbx\+Renaming\+Strategy\+Base}}
+\subsubsection{\texorpdfstring{m\+String\+Name\+Array}{mStringNameArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_char_ptr_set}{Fbx\+Char\+Ptr\+Set} Fbx\+Renaming\+Strategy\+Base\+::m\+String\+Name\+Array}
+
+
+
+ fbxrenamingstrategybase.\+h の 86 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxrenamingstrategybase_8h}{fbxrenamingstrategybase.\+h}\end{DoxyCompactItemize}

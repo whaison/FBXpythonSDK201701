@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/core/base/fbxbitset.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_1ce401db224ad750f31980d76a4b573f.html">include</a></li><li class="navelem"><a class="el" href="dir_035686f885016bbe7a8de4bfce896a3f.html">fbxsdk</a></li><li class="navelem"><a class="el" href="dir_d0e04206037511caa7947a04e3bd094b.html">core</a></li><li class="navelem"><a class="el" href="dir_a298ec56c0e5eabb962d5fd8f855a7c7.html">base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fbxbitset.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fbxbitset_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">   Copyright (C) 2015 Autodesk, Inc.</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">   All rights reserved.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">   Use of this software is subject to the terms of the Autodesk license agreement</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">   provided at the time of installation or download, or which otherwise accompanies</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">   this software in either electronic or hard copy form.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">****************************************************************************************/</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef _FBXSDK_CORE_BASE_BITSET_H_</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define _FBXSDK_CORE_BASE_BITSET_H_</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__def_8h.html">fbxsdk/fbxsdk_def.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsbegin_8h.html">fbxsdk/fbxsdk_nsbegin.h</a>&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_fbx_bit_set.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a> <a class="code" href="class_fbx_bit_set.html">FbxBitSet</a></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_fbx_bit_set.html">FbxBitSet</a>(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pInitialSize=0);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_fbx_bit_set.html">FbxBitSet</a>();</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> SetBit(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pBitIndex);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> SetAllBits(<span class="keyword">const</span> <span class="keywordtype">bool</span> pValue);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> UnsetBit(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pBitIndex);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> GetBit(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pBitIndex) <span class="keyword">const</span>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> GetFirstSetBitIndex() <span class="keyword">const</span>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> GetLastSetBitIndex() <span class="keyword">const</span>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> GetNextSetBitIndex(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pBitIndex) <span class="keyword">const</span>;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> GetPreviousSetBitIndex(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pBitIndex) <span class="keyword">const</span>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> Grow(<span class="keyword">const</span> <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> pNewSize);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span>* mData;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a> mSize;</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsend_8h.html">fbxsdk/fbxsdk_nsend.h</a>&gt;</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FBXSDK_CORE_BASE_BITSET_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="fbxtypes_8h_html_ae9fb141d8158a730aa85ec5ff2ea3f6b"><div class="ttname"><a href="fbxtypes_8h.html#ae9fb141d8158a730aa85ec5ff2ea3f6b">FbxUInt</a></div><div class="ttdeci">unsigned int FbxUInt</div><div class="ttdef"><b>Definition:</b> <a href="fbxtypes_8h_source.html#l00040">fbxtypes.h:40</a></div></div>
+<div class="ttc" id="fbxsdk__def_8h_html"><div class="ttname"><a href="fbxsdk__def_8h.html">fbxsdk_def.h</a></div></div>
+<div class="ttc" id="fbxsdk__nsbegin_8h_html"><div class="ttname"><a href="fbxsdk__nsbegin_8h.html">fbxsdk_nsbegin.h</a></div></div>
+<div class="ttc" id="fbxsdk__nsend_8h_html"><div class="ttname"><a href="fbxsdk__nsend_8h.html">fbxsdk_nsend.h</a></div></div>
+<div class="ttc" id="fbxarch_8h_html_a25d1298b33c31da5dbed969e0d4b4bc1"><div class="ttname"><a href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a></div><div class="ttdeci">#define FBXSDK_DLL</div><div class="ttdef"><b>Definition:</b> <a href="fbxarch_8h_source.html#l00173">fbxarch.h:173</a></div></div>
+<div class="ttc" id="class_fbx_bit_set_html"><div class="ttname"><a href="class_fbx_bit_set.html">FbxBitSet</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxbitset_8h_source.html#l00027">fbxbitset.h:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

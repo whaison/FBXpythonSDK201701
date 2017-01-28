@@ -1,0 +1,496 @@
+\hypertarget{class_fbx_camera_stereo}{}\section{Fbx\+Camera\+Stereo クラス}
+\label{class_fbx_camera_stereo}\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+
+
+{\ttfamily \#include $<$fbxcamerastereo.\+h$>$}
+
+Fbx\+Camera\+Stereo の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_fbx_camera_stereo}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}{E\+Stereo\+Type} \{ \hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37acaf3e8d389472ecc3408aa946d13c31f}{e\+None}, 
+\hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a37c80e0a3ef659934cac67457a3f8c0c}{e\+Converged}, 
+\hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a15c8f9c81ecc4a7e7174fe214cfc5ec2}{e\+Off\+Axis}, 
+\hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a5a361b7a07b8066eaa3ecffa5d695370}{e\+Parallel}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_camera_stereo_a19160f0fdeaf5407d2bc9c1608f6af53}{Get\+Attribute\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return the type of node attribute which is E\+Type\+::e\+Camera\+Stereo. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_camera_stereo_a5c693025d4b4d25ea05bec61f2c25cd8}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the stereo camera to default values. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_camera_stereo_a6841f71c09bdd63c7e936cdb23e818e9}{Get\+Left\+Camera} () const
+\item 
+\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$ \hyperlink{class_fbx_camera_stereo_a8c293c596ad0c3b9fb169bdf5b508a68}{Get\+Right\+Camera} () const
+\item 
+bool \hyperlink{class_fbx_camera_stereo_a3f6d9d09dd4ec6f9fe1b1b829f26a11f}{Set\+Left\+Camera} (\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$p\+Camera)
+\item 
+bool \hyperlink{class_fbx_camera_stereo_a9b37a67b3bf1e94a6845077913083d78}{Set\+Right\+Camera} (\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$p\+Camera)
+\item 
+\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \hyperlink{class_fbx_camera_stereo_aba407c7661b66bc57690534a7aaf445e}{Get\+Left\+Camera\+Local\+Matrix} () const
+\item 
+\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \hyperlink{class_fbx_camera_stereo_afca8a70331c5a524ad7c790e8c52af77}{Get\+Left\+Camera\+Global\+Matrix} () const
+\item 
+\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \hyperlink{class_fbx_camera_stereo_a111785c11520b456bb43ed6701eaa84d}{Get\+Right\+Camera\+Local\+Matrix} () const
+\item 
+\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \hyperlink{class_fbx_camera_stereo_ae46b1246ccc65e2cb3e76cc3673172fd}{Get\+Right\+Camera\+Global\+Matrix} () const
+\item 
+double \hyperlink{class_fbx_camera_stereo_a372e001c8d6f950d787831dc57c5fc20}{Reevaluate\+Left\+Camera\+Film\+OffsetX} () const
+\item 
+double \hyperlink{class_fbx_camera_stereo_a63526f13544a343e4447d4567a88bf9d}{Reevaluate\+Right\+Camera\+Film\+OffsetX} () const
+\item 
+bool \hyperlink{class_fbx_camera_stereo_a00d710d453a4cad2f7f93199ff68ee17}{Connect\+Properties} ()
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}{E\+Stereo\+Type} $>$ \hyperlink{class_fbx_camera_stereo_af7ab718dda255c4673813f0993cd143f}{Stereo}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_camera_stereo_a93f63eb9bb9d1a9829db054abce1289d}{Interaxial\+Separation}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_camera_stereo_ab76f0822d4543864dfe707ea8b3be50a}{Zero\+Parallax}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_camera_stereo_ad869c71fad3c11ada97b96bceeda09ed}{Toe\+In\+Adjust}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_camera_stereo_a91f409fc6af89147826e7eb0aae87184}{Film\+Offset\+Right\+Cam}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_camera_stereo_adfb0e61258f415bd4e80d2a74071d2b5}{Film\+Offset\+Left\+Cam}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_camera_stereo_ae4bbaad53a1ebbc0534f78c246affd84}{Right\+Camera}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_camera_stereo_a92cc37f2c93f8920e66756ef4d947762}{Left\+Camera}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_camera_stereo_a25294714b9dfedce9180102396ebd7bc}{Precomp\+File\+Name}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_camera_stereo_af7d8b1be43665a8662630cdc2fdb0dbb}{Relative\+Precomp\+File\+Name}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_camera_stereo_a83a9b1ee59d0014b30411fe4877b5dec}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_camera_stereo_a73c9df71edcd9a56b2710357b95fcde6}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This node attribute contains methods for accessing the properties of a stereo camera.
+
+Generally, a set of stereo\+Rig contains the center camera, the left camera and the right camera. \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} is used to represent the center camera. The left and right camera could be \hyperlink{class_fbx_camera}{Fbx\+Camera}. \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} contains stereo properties. The left and right camera can also be get and set via related methods in \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} class. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_camera}{Fbx\+Camera} and \hyperlink{class_fbx_camera_switcher}{Fbx\+Camera\+Switcher}. 
+\end{DoxySeeAlso}
+
+
+ fbxcamerastereo.\+h の 30 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}\label{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!E\+Stereo\+Type@{E\+Stereo\+Type}}
+\index{E\+Stereo\+Type@{E\+Stereo\+Type}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{E\+Stereo\+Type}{EStereoType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}{Fbx\+Camera\+Stereo\+::\+E\+Stereo\+Type}}
+
+Types of Stereo camera. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37acaf3e8d389472ecc3408aa946d13c31f}\label{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37acaf3e8d389472ecc3408aa946d13c31f}} 
+e\+None&Disable the stereo effect.(Default value) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Converged@{e\+Converged}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!e\+Converged@{e\+Converged}}}\mbox{\Hypertarget{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a37c80e0a3ef659934cac67457a3f8c0c}\label{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a37c80e0a3ef659934cac67457a3f8c0c}} 
+e\+Converged&Computes the zero parallax plane by toeing in the cameras. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Off\+Axis@{e\+Off\+Axis}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!e\+Off\+Axis@{e\+Off\+Axis}}}\mbox{\Hypertarget{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a15c8f9c81ecc4a7e7174fe214cfc5ec2}\label{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a15c8f9c81ecc4a7e7174fe214cfc5ec2}} 
+e\+Off\+Axis&Computes the convergence plane by shifting the frustum using camera film back. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Parallel@{e\+Parallel}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!e\+Parallel@{e\+Parallel}}}\mbox{\Hypertarget{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a5a361b7a07b8066eaa3ecffa5d695370}\label{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37a5a361b7a07b8066eaa3ecffa5d695370}} 
+e\+Parallel&A parallel camera setup where there is effectively no convergence plane. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxcamerastereo.\+h の 43 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a00d710d453a4cad2f7f93199ff68ee17}\label{class_fbx_camera_stereo_a00d710d453a4cad2f7f93199ff68ee17}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Connect\+Properties@{Connect\+Properties}}
+\index{Connect\+Properties@{Connect\+Properties}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Connect\+Properties()}{ConnectProperties()}}
+{\footnotesize\ttfamily bool Fbx\+Camera\+Stereo\+::\+Connect\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+connect left and right camera property to stereo camera. \begin{DoxyReturn}{戻り値}
+true if it\textquotesingle{}s successful, otherwise return false. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+It\textquotesingle{}s used to connect the left/right camera property \mbox{[}Focal\+Length, Far\+Plane, Near\+Plane, Film\+Width, Film\+Height, Film\+Squeeze\+Ratio\mbox{]} to stereo camera. During F\+BX S\+DK reevaluating, if Connect\+Properties is called, to get the newest Focal\+Length property of left camera, please use l\+Left\+\_\+\+Camera-\/$>$Focal\+Length.\+Get\+Src\+Property(); 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a83a9b1ee59d0014b30411fe4877b5dec}\label{class_fbx_camera_stereo_a83a9b1ee59d0014b30411fe4877b5dec}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Camera\+Stereo\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_camera_a11334e5358efacbd87e4a7d78036155d}{Fbx\+Camera}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a19160f0fdeaf5407d2bc9c1608f6af53}\label{class_fbx_camera_stereo_a19160f0fdeaf5407d2bc9c1608f6af53}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Camera\+Stereo\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the type of node attribute which is E\+Type\+::e\+Camera\+Stereo. 
+
+
+
+\hyperlink{class_fbx_camera_a1149e4b05fd079637fe8d2a66a5a7a17}{Fbx\+Camera}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a6841f71c09bdd63c7e936cdb23e818e9}\label{class_fbx_camera_stereo_a6841f71c09bdd63c7e936cdb23e818e9}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Left\+Camera@{Get\+Left\+Camera}}
+\index{Get\+Left\+Camera@{Get\+Left\+Camera}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Left\+Camera()}{GetLeftCamera()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Camera\+Stereo\+::\+Get\+Left\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the left camera which connect to property Left\+Camera. \begin{DoxyReturn}{戻り値}
+A pointer to \hyperlink{class_fbx_camera}{Fbx\+Camera}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Current \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} should work with two \hyperlink{class_fbx_camera}{Fbx\+Camera}, left camera and right camera. Use this method to get the left camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_afca8a70331c5a524ad7c790e8c52af77}\label{class_fbx_camera_stereo_afca8a70331c5a524ad7c790e8c52af77}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Left\+Camera\+Global\+Matrix@{Get\+Left\+Camera\+Global\+Matrix}}
+\index{Get\+Left\+Camera\+Global\+Matrix@{Get\+Left\+Camera\+Global\+Matrix}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Left\+Camera\+Global\+Matrix()}{GetLeftCameraGlobalMatrix()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} Fbx\+Camera\+Stereo\+::\+Get\+Left\+Camera\+Global\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the global matrix of left camera. \begin{DoxyReturn}{戻り値}
+The global transformation matrix of left camera. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Use this method to reevaluate the global transformation of left camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_aba407c7661b66bc57690534a7aaf445e}\label{class_fbx_camera_stereo_aba407c7661b66bc57690534a7aaf445e}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Left\+Camera\+Local\+Matrix@{Get\+Left\+Camera\+Local\+Matrix}}
+\index{Get\+Left\+Camera\+Local\+Matrix@{Get\+Left\+Camera\+Local\+Matrix}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Left\+Camera\+Local\+Matrix()}{GetLeftCameraLocalMatrix()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} Fbx\+Camera\+Stereo\+::\+Get\+Left\+Camera\+Local\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the local transformation matrix of left camera. \begin{DoxyReturn}{戻り値}
+The local transformation matrix of left camera. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Use this method to reevaluate the local transformation of left camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a8c293c596ad0c3b9fb169bdf5b508a68}\label{class_fbx_camera_stereo_a8c293c596ad0c3b9fb169bdf5b508a68}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Right\+Camera@{Get\+Right\+Camera}}
+\index{Get\+Right\+Camera@{Get\+Right\+Camera}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Right\+Camera()}{GetRightCamera()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_camera}{Fbx\+Camera}$\ast$ Fbx\+Camera\+Stereo\+::\+Get\+Right\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the right camera which connect to property Right\+Camera. \begin{DoxyReturn}{戻り値}
+A pointer to \hyperlink{class_fbx_camera}{Fbx\+Camera}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Current \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} should work with two \hyperlink{class_fbx_camera}{Fbx\+Camera}, left camera and right camera. Use this method to get the right camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_ae46b1246ccc65e2cb3e76cc3673172fd}\label{class_fbx_camera_stereo_ae46b1246ccc65e2cb3e76cc3673172fd}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Right\+Camera\+Global\+Matrix@{Get\+Right\+Camera\+Global\+Matrix}}
+\index{Get\+Right\+Camera\+Global\+Matrix@{Get\+Right\+Camera\+Global\+Matrix}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Right\+Camera\+Global\+Matrix()}{GetRightCameraGlobalMatrix()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} Fbx\+Camera\+Stereo\+::\+Get\+Right\+Camera\+Global\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the global transformation matrix of right camera. \begin{DoxyReturn}{戻り値}
+The global transformation matrix of right camera. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Use this method to reevaluate the global transformation of right camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a111785c11520b456bb43ed6701eaa84d}\label{class_fbx_camera_stereo_a111785c11520b456bb43ed6701eaa84d}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Right\+Camera\+Local\+Matrix@{Get\+Right\+Camera\+Local\+Matrix}}
+\index{Get\+Right\+Camera\+Local\+Matrix@{Get\+Right\+Camera\+Local\+Matrix}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Right\+Camera\+Local\+Matrix()}{GetRightCameraLocalMatrix()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} Fbx\+Camera\+Stereo\+::\+Get\+Right\+Camera\+Local\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the local transformation matrix of right camera. \begin{DoxyReturn}{戻り値}
+The local transformation matrix of right camera.. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Use this method to reevaluate the local transformation of right camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a73c9df71edcd9a56b2710357b95fcde6}\label{class_fbx_camera_stereo_a73c9df71edcd9a56b2710357b95fcde6}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Camera\+Stereo\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_camera_ac52d0e82cbabac69f8b0dcd212853616}{Fbx\+Camera}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a372e001c8d6f950d787831dc57c5fc20}\label{class_fbx_camera_stereo_a372e001c8d6f950d787831dc57c5fc20}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Reevaluate\+Left\+Camera\+Film\+OffsetX@{Reevaluate\+Left\+Camera\+Film\+OffsetX}}
+\index{Reevaluate\+Left\+Camera\+Film\+OffsetX@{Reevaluate\+Left\+Camera\+Film\+OffsetX}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Reevaluate\+Left\+Camera\+Film\+Offset\+X()}{ReevaluateLeftCameraFilmOffsetX()}}
+{\footnotesize\ttfamily double Fbx\+Camera\+Stereo\+::\+Reevaluate\+Left\+Camera\+Film\+OffsetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Reevaluate the Film\+OffsetX of left camera. It\textquotesingle{}s computed through stereo camera properties. \begin{DoxyReturn}{戻り値}
+Current Film\+OffsetX value. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method does not set the Film\+OffsetX of left camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a63526f13544a343e4447d4567a88bf9d}\label{class_fbx_camera_stereo_a63526f13544a343e4447d4567a88bf9d}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Reevaluate\+Right\+Camera\+Film\+OffsetX@{Reevaluate\+Right\+Camera\+Film\+OffsetX}}
+\index{Reevaluate\+Right\+Camera\+Film\+OffsetX@{Reevaluate\+Right\+Camera\+Film\+OffsetX}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Reevaluate\+Right\+Camera\+Film\+Offset\+X()}{ReevaluateRightCameraFilmOffsetX()}}
+{\footnotesize\ttfamily double Fbx\+Camera\+Stereo\+::\+Reevaluate\+Right\+Camera\+Film\+OffsetX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Reevaluate the Film\+OffsetX of right camera. It\textquotesingle{}s computed through stereo camera properties. \begin{DoxyReturn}{戻り値}
+Current Film\+OffsetX value. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+this method does not set the Film\+OffsetX of right camera 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a5c693025d4b4d25ea05bec61f2c25cd8}\label{class_fbx_camera_stereo_a5c693025d4b4d25ea05bec61f2c25cd8}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Camera\+Stereo\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the stereo camera to default values. 
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a3f6d9d09dd4ec6f9fe1b1b829f26a11f}\label{class_fbx_camera_stereo_a3f6d9d09dd4ec6f9fe1b1b829f26a11f}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Set\+Left\+Camera@{Set\+Left\+Camera}}
+\index{Set\+Left\+Camera@{Set\+Left\+Camera}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Set\+Left\+Camera()}{SetLeftCamera()}}
+{\footnotesize\ttfamily bool Fbx\+Camera\+Stereo\+::\+Set\+Left\+Camera (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$}]{p\+Camera }\end{DoxyParamCaption})}
+
+Set the left camera, connect property Left\+Camera to p\+Camera. 
+\begin{DoxyParams}{引数}
+{\em p\+Camera} & The camera to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if it\textquotesingle{}s successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Current \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} should work with two \hyperlink{class_fbx_camera}{Fbx\+Camera}, left camera and right camera. Use this method to set the left camera. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_camera_stereo_a9b37a67b3bf1e94a6845077913083d78}\label{class_fbx_camera_stereo_a9b37a67b3bf1e94a6845077913083d78}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Set\+Right\+Camera@{Set\+Right\+Camera}}
+\index{Set\+Right\+Camera@{Set\+Right\+Camera}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Set\+Right\+Camera()}{SetRightCamera()}}
+{\footnotesize\ttfamily bool Fbx\+Camera\+Stereo\+::\+Set\+Right\+Camera (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_camera}{Fbx\+Camera} $\ast$}]{p\+Camera }\end{DoxyParamCaption})}
+
+Set the right camera, connect property Right\+Camera to p\+Camera. 
+\begin{DoxyParams}{引数}
+{\em p\+Camera} & The camera to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if it\textquotesingle{}s successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Current \hyperlink{class_fbx_camera_stereo}{Fbx\+Camera\+Stereo} should work with two \hyperlink{class_fbx_camera}{Fbx\+Camera}, left camera and right camera. Use this method to set the right camera. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_camera_stereo_adfb0e61258f415bd4e80d2a74071d2b5}\label{class_fbx_camera_stereo_adfb0e61258f415bd4e80d2a74071d2b5}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Film\+Offset\+Left\+Cam@{Film\+Offset\+Left\+Cam}}
+\index{Film\+Offset\+Left\+Cam@{Film\+Offset\+Left\+Cam}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Film\+Offset\+Left\+Cam}{FilmOffsetLeftCam}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Camera\+Stereo\+::\+Film\+Offset\+Left\+Cam}
+
+This property handles the film offset for the left camera.
+
+To access this property do\+: Film\+Offset\+Left\+Cam.\+Get(). To set this property do\+: Film\+Offset\+Left\+Cam.\+Set(\+Fbx\+Double).
+
+\begin{DoxyRemark}{注釈}
+Default Value is 0.\+0. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 183 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a91f409fc6af89147826e7eb0aae87184}\label{class_fbx_camera_stereo_a91f409fc6af89147826e7eb0aae87184}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Film\+Offset\+Right\+Cam@{Film\+Offset\+Right\+Cam}}
+\index{Film\+Offset\+Right\+Cam@{Film\+Offset\+Right\+Cam}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Film\+Offset\+Right\+Cam}{FilmOffsetRightCam}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Camera\+Stereo\+::\+Film\+Offset\+Right\+Cam}
+
+This property handles the film offset for the right camera.
+
+To access this property do\+: Film\+Offset\+Right\+Cam.\+Get(). To set this property do\+: Film\+Offset\+Right\+Cam.\+Set(\+Fbx\+Double).
+
+\begin{DoxyRemark}{注釈}
+Default Value is 0.\+0. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 174 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a93f63eb9bb9d1a9829db054abce1289d}\label{class_fbx_camera_stereo_a93f63eb9bb9d1a9829db054abce1289d}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Interaxial\+Separation@{Interaxial\+Separation}}
+\index{Interaxial\+Separation@{Interaxial\+Separation}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Interaxial\+Separation}{InteraxialSeparation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Camera\+Stereo\+::\+Interaxial\+Separation}
+
+This property handles the distance between left and right cameras.
+
+To access this property do\+: Interaxial\+Separation.\+Get(). To set this property do\+: Interaxial\+Separation.\+Set(\+Fbx\+Double).
+
+\begin{DoxyRemark}{注釈}
+Default Value is 0.\+0. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 145 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a92cc37f2c93f8920e66756ef4d947762}\label{class_fbx_camera_stereo_a92cc37f2c93f8920e66756ef4d947762}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Left\+Camera@{Left\+Camera}}
+\index{Left\+Camera@{Left\+Camera}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Left\+Camera}{LeftCamera}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Camera\+Stereo\+::\+Left\+Camera}
+
+This property has the left camera connected to it.
+
+To access this property do\+: \hyperlink{class_fbx_camera_stereo_a6841f71c09bdd63c7e936cdb23e818e9}{Get\+Left\+Camera()}. To set this property do\+: \hyperlink{class_fbx_camera_stereo_a3f6d9d09dd4ec6f9fe1b1b829f26a11f}{Set\+Left\+Camera(\+Fbx\+Camera$\ast$ p\+Camera)}.
+
+\begin{DoxyRemark}{注釈}
+The left camera is connected as source object. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 201 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_a25294714b9dfedce9180102396ebd7bc}\label{class_fbx_camera_stereo_a25294714b9dfedce9180102396ebd7bc}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Precomp\+File\+Name@{Precomp\+File\+Name}}
+\index{Precomp\+File\+Name@{Precomp\+File\+Name}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Precomp\+File\+Name}{PrecompFileName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Camera\+Stereo\+::\+Precomp\+File\+Name}
+
+This property handles the precomp file name
+
+To access this property do\+: Precomp\+File\+Name.\+Get(). To set this property do\+: Precomp\+File\+Name.\+Set(\+Fbx\+String).
+
+Default value is \char`\"{}\char`\"{} 
+
+ fbxcamerastereo.\+h の 210 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_af7d8b1be43665a8662630cdc2fdb0dbb}\label{class_fbx_camera_stereo_af7d8b1be43665a8662630cdc2fdb0dbb}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Relative\+Precomp\+File\+Name@{Relative\+Precomp\+File\+Name}}
+\index{Relative\+Precomp\+File\+Name@{Relative\+Precomp\+File\+Name}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Relative\+Precomp\+File\+Name}{RelativePrecompFileName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Camera\+Stereo\+::\+Relative\+Precomp\+File\+Name}
+
+This property handles the relative precomp file name
+
+To access this property do\+: Relative\+Precomp\+File\+Name.\+Get(). To set this property do\+: Relative\+Precomp\+File\+Name.\+Set(\+Fbx\+String).
+
+Default value is \char`\"{}\char`\"{} 
+
+ fbxcamerastereo.\+h の 219 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_ae4bbaad53a1ebbc0534f78c246affd84}\label{class_fbx_camera_stereo_ae4bbaad53a1ebbc0534f78c246affd84}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Right\+Camera@{Right\+Camera}}
+\index{Right\+Camera@{Right\+Camera}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Right\+Camera}{RightCamera}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Camera\+Stereo\+::\+Right\+Camera}
+
+This property has the right camera connected to it.
+
+To access this property do\+: \hyperlink{class_fbx_camera_stereo_a8c293c596ad0c3b9fb169bdf5b508a68}{Get\+Right\+Camera()}. To set this property do\+: \hyperlink{class_fbx_camera_stereo_a9b37a67b3bf1e94a6845077913083d78}{Set\+Right\+Camera(\+Fbx\+Camera$\ast$ p\+Camera)}.
+
+\begin{DoxyRemark}{注釈}
+The right camera is connected as source object. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 192 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_af7ab718dda255c4673813f0993cd143f}\label{class_fbx_camera_stereo_af7ab718dda255c4673813f0993cd143f}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Stereo@{Stereo}}
+\index{Stereo@{Stereo}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Stereo}{Stereo}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}{E\+Stereo\+Type}$>$ Fbx\+Camera\+Stereo\+::\+Stereo}
+
+This property handles the types of Stereo camera.
+
+To access this property do\+: Stereo.\+Get(). To set this property do\+: Stereo.\+Set(\+E\+Stereo\+Type).
+
+\begin{DoxyRemark}{注釈}
+Default Value is e\+None. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 136 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_ad869c71fad3c11ada97b96bceeda09ed}\label{class_fbx_camera_stereo_ad869c71fad3c11ada97b96bceeda09ed}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Toe\+In\+Adjust@{Toe\+In\+Adjust}}
+\index{Toe\+In\+Adjust@{Toe\+In\+Adjust}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Toe\+In\+Adjust}{ToeInAdjust}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Camera\+Stereo\+::\+Toe\+In\+Adjust}
+
+This property is to offset the computed toe-\/in effect when it\textquotesingle{}s in Converged mode.
+
+To access this property do\+: Toe\+In\+Adjust.\+Get(). To set this property do\+: Toe\+In\+Adjust.\+Set(\+Fbx\+Double).
+
+\begin{DoxyRemark}{注釈}
+Default Value is 0.\+0. This value is specified in degrees and acts as an offset to the computed toe-\/in. 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_camera_stereo_acb0f27675a73de0858983b703196cb37}{E\+Stereo\+Type}. 
+\end{DoxySeeAlso}
+
+
+ fbxcamerastereo.\+h の 165 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_camera_stereo_ab76f0822d4543864dfe707ea8b3be50a}\label{class_fbx_camera_stereo_ab76f0822d4543864dfe707ea8b3be50a}} 
+\index{Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}!Zero\+Parallax@{Zero\+Parallax}}
+\index{Zero\+Parallax@{Zero\+Parallax}!Fbx\+Camera\+Stereo@{Fbx\+Camera\+Stereo}}
+\subsubsection{\texorpdfstring{Zero\+Parallax}{ZeroParallax}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Camera\+Stereo\+::\+Zero\+Parallax}
+
+This property handles the distance on the camera view axis where the zero parallax plane occurs.
+
+To access this property do\+: Zero\+Parallax.\+Get(). To set this property do\+: Zero\+Parallax.\+Set(\+Fbx\+Double).
+
+\begin{DoxyRemark}{注釈}
+Default Value is 0.\+0. 
+\end{DoxyRemark}
+
+
+ fbxcamerastereo.\+h の 154 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxcamerastereo_8h}{fbxcamerastereo.\+h}\end{DoxyCompactItemize}

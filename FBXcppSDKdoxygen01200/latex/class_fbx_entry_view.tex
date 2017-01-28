@@ -1,0 +1,151 @@
+\hypertarget{class_fbx_entry_view}{}\section{Fbx\+Entry\+View クラス}
+\label{class_fbx_entry_view}\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+
+
+{\ttfamily \#include $<$fbxentryview.\+h$>$}
+
+Fbx\+Entry\+View の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.244444cm]{class_fbx_entry_view}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_entry_view_a6bbdad937ef02ffbacd343fd71ed85d7}{Is\+Valid} () const
+\item 
+virtual bool \hyperlink{class_fbx_entry_view_aeff9d8adb34fe45d338c65483b52d2fc}{Create} ()
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_entry_view_a83ee50482b441ba8b0e6d7c2dba5432f}{Entry\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_entry_view_a483b58dc47c39143426afe0d2076b6f6}{s\+Entry\+Type}
+\begin{DoxyCompactList}\small\item\em Entry type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_entry_view_a274da88dfb87f2725f9c8fdbfe860c75}{m\+As\+Source}
+\item 
+\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$ \hyperlink{class_fbx_entry_view_a74afe18ad35e48e7bd6dce480ab49ad7}{m\+Entry}
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_entry_view_a16e4c36a79ae38f1fc4b31973f43c15c}{Fbx\+Entry\+View} (\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$p\+Entry, bool p\+As\+Source, bool p\+Create=false)
+\item 
+virtual \hyperlink{class_fbx_entry_view_a8adf9f4b899377fef920fd7b5e2bfcbf}{$\sim$\+Fbx\+Entry\+View} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Entry view class represents binding entry in entry tables. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} and \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}. 
+\end{DoxySeeAlso}
+
+
+ fbxentryview.\+h の 26 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_entry_view_a16e4c36a79ae38f1fc4b31973f43c15c}\label{class_fbx_entry_view_a16e4c36a79ae38f1fc4b31973f43c15c}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{Fbx\+Entry\+View()}{FbxEntryView()}}
+{\footnotesize\ttfamily Fbx\+Entry\+View\+::\+Fbx\+Entry\+View (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$}]{p\+Entry,  }\item[{bool}]{p\+As\+Source,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry} & The binding table entry to create the entry view for. \\
+\hline
+{\em p\+As\+Source} & {\ttfamily true} to create the entry view as source, {\ttfamily false} as destination. \\
+\hline
+{\em p\+Create} & {\ttfamily true} to create the entry view, {\ttfamily false} otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_entry_view_a8adf9f4b899377fef920fd7b5e2bfcbf}\label{class_fbx_entry_view_a8adf9f4b899377fef920fd7b5e2bfcbf}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!````~Fbx\+Entry\+View@{$\sim$\+Fbx\+Entry\+View}}
+\index{````~Fbx\+Entry\+View@{$\sim$\+Fbx\+Entry\+View}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Entry\+View()}{~FbxEntryView()}}
+{\footnotesize\ttfamily virtual Fbx\+Entry\+View\+::$\sim$\+Fbx\+Entry\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_entry_view_aeff9d8adb34fe45d338c65483b52d2fc}\label{class_fbx_entry_view_aeff9d8adb34fe45d338c65483b52d2fc}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!Create@{Create}}
+\index{Create@{Create}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Entry\+View\+::\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create a new entry view. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the entry view is created successfully, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_entry_view_a83ee50482b441ba8b0e6d7c2dba5432f}\label{class_fbx_entry_view_a83ee50482b441ba8b0e6d7c2dba5432f}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!Entry\+Type@{Entry\+Type}}
+\index{Entry\+Type@{Entry\+Type}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{Entry\+Type()}{EntryType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Entry\+View\+::\+Entry\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the entry type of this entry view. 
+
+\hyperlink{class_fbx_semantic_entry_view_afd242ecac3eaab584dffe108753aba1d}{Fbx\+Semantic\+Entry\+View}, \hyperlink{class_fbx_property_entry_view_a36affcd0bce8be2a4b5f94ccd60fa462}{Fbx\+Property\+Entry\+View}, \hyperlink{class_fbx_layer_entry_view_a283d8f57e186dd36c88589dc3f37a35e}{Fbx\+Layer\+Entry\+View}, \hyperlink{class_fbx_operator_entry_view_a7821c1bf43a30e4c8ba054c66f051ad0}{Fbx\+Operator\+Entry\+View}, \hyperlink{class_fbx_constant_entry_view_a7ea7fc9df5e1316854d18ffcc797e564}{Fbx\+Constant\+Entry\+View}, \hyperlink{class_fbx_bindings_entry_view_a25f821ea63f19592173e7785356c04f9}{Fbx\+Bindings\+Entry\+View}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_entry_view_a6bbdad937ef02ffbacd343fd71ed85d7}\label{class_fbx_entry_view_a6bbdad937ef02ffbacd343fd71ed85d7}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!Is\+Valid@{Is\+Valid}}
+\index{Is\+Valid@{Is\+Valid}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{Is\+Valid()}{IsValid()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Entry\+View\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check whether this entry view is valid or not. If this entry view corresponds with an valid entry which is not N\+U\+LL, and the entry type of this entry view is the same as that of the entry it corresponds with, then this entry view is valid. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the entry view is valid, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_entry_view_a274da88dfb87f2725f9c8fdbfe860c75}\label{class_fbx_entry_view_a274da88dfb87f2725f9c8fdbfe860c75}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!m\+As\+Source@{m\+As\+Source}}
+\index{m\+As\+Source@{m\+As\+Source}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{m\+As\+Source}{mAsSource}}
+{\footnotesize\ttfamily bool Fbx\+Entry\+View\+::m\+As\+Source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxentryview.\+h の 72 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_entry_view_a74afe18ad35e48e7bd6dce480ab49ad7}\label{class_fbx_entry_view_a74afe18ad35e48e7bd6dce480ab49ad7}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!m\+Entry@{m\+Entry}}
+\index{m\+Entry@{m\+Entry}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{m\+Entry}{mEntry}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry}$\ast$ Fbx\+Entry\+View\+::m\+Entry\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxentryview.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_entry_view_a483b58dc47c39143426afe0d2076b6f6}\label{class_fbx_entry_view_a483b58dc47c39143426afe0d2076b6f6}} 
+\index{Fbx\+Entry\+View@{Fbx\+Entry\+View}!s\+Entry\+Type@{s\+Entry\+Type}}
+\index{s\+Entry\+Type@{s\+Entry\+Type}!Fbx\+Entry\+View@{Fbx\+Entry\+View}}
+\subsubsection{\texorpdfstring{s\+Entry\+Type}{sEntryType}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Entry\+View\+::s\+Entry\+Type\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Entry type. 
+
+
+
+ fbxentryview.\+h の 31 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxentryview_8h}{fbxentryview.\+h}\end{DoxyCompactItemize}

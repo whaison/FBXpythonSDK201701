@@ -1,0 +1,167 @@
+\hypertarget{class_fbx_control_set_plug}{}\section{Fbx\+Control\+Set\+Plug クラス}
+\label{class_fbx_control_set_plug}\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+
+
+{\ttfamily \#include $<$fbxcontrolset.\+h$>$}
+
+Fbx\+Control\+Set\+Plug の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fbx_control_set_plug}
+\end{center}
+\end{figure}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_control_set_a13a51702c46fff33d50c05d20f3d9f04}{Fbx\+Control\+Set\+::\+E\+Type} $>$ \hyperlink{class_fbx_control_set_plug_ac721dfc2da9b51b8a90c1df5f679e496}{Control\+Set\+Type}
+\begin{DoxyCompactList}\small\item\em E\+Type property of control set. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_control_set_plug_a037aaf41be834256757d7bf874d7531b}{Use\+Axis}
+\begin{DoxyCompactList}\small\item\em Use axis flag. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_control_set_plug_ab6b2b323fb163f6c57121ff755fda602}{Character}
+\begin{DoxyCompactList}\small\item\em Reference character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_control_set_plug_a238ea564b568be5fadd03981570c2e47}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_control_set_plug_a9551bc59f788d2b0e44b7b8ba31188a6}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_control_set_plug_a3111172be32f425f4d9b3bf281d2b4d2}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_control_set_plug_abcc807c3523609e1c734764de626facc}{Fbx\+Scene}
+\item 
+class \hyperlink{class_fbx_control_set_plug_abb7258e30f1cd7963b2a91006c383c19}{Fbx\+Control\+Set}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Plug class for control set. 
+
+ fbxcontrolset.\+h の 339 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_control_set_plug_a238ea564b568be5fadd03981570c2e47}\label{class_fbx_control_set_plug_a238ea564b568be5fadd03981570c2e47}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Control\+Set\+Plug\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_control_set_plug_a9551bc59f788d2b0e44b7b8ba31188a6}\label{class_fbx_control_set_plug_a9551bc59f788d2b0e44b7b8ba31188a6}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Control\+Set\+Plug\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_control_set_plug_a3111172be32f425f4d9b3bf281d2b4d2}\label{class_fbx_control_set_plug_a3111172be32f425f4d9b3bf281d2b4d2}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Control\+Set\+Plug\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_control_set_plug_abb7258e30f1cd7963b2a91006c383c19}\label{class_fbx_control_set_plug_abb7258e30f1cd7963b2a91006c383c19}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Fbx\+Control\+Set@{Fbx\+Control\+Set}}
+\index{Fbx\+Control\+Set@{Fbx\+Control\+Set}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Fbx\+Control\+Set}{FbxControlSet}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_control_set}{Fbx\+Control\+Set}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxcontrolset.\+h の 363 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_control_set_plug_abcc807c3523609e1c734764de626facc}\label{class_fbx_control_set_plug_abcc807c3523609e1c734764de626facc}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Fbx\+Scene@{Fbx\+Scene}}
+\index{Fbx\+Scene@{Fbx\+Scene}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Fbx\+Scene}{FbxScene}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_scene}{Fbx\+Scene}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxcontrolset.\+h の 362 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_control_set_plug_ab6b2b323fb163f6c57121ff755fda602}\label{class_fbx_control_set_plug_ab6b2b323fb163f6c57121ff755fda602}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Character@{Character}}
+\index{Character@{Character}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Character}{Character}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Control\+Set\+Plug\+::\+Character}
+
+
+
+Reference character. 
+
+
+
+ fbxcontrolset.\+h の 351 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_control_set_plug_ac721dfc2da9b51b8a90c1df5f679e496}\label{class_fbx_control_set_plug_ac721dfc2da9b51b8a90c1df5f679e496}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Control\+Set\+Type@{Control\+Set\+Type}}
+\index{Control\+Set\+Type@{Control\+Set\+Type}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Control\+Set\+Type}{ControlSetType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_control_set_a13a51702c46fff33d50c05d20f3d9f04}{Fbx\+Control\+Set\+::\+E\+Type}$>$ Fbx\+Control\+Set\+Plug\+::\+Control\+Set\+Type}
+
+
+
+E\+Type property of control set. 
+
+
+
+ fbxcontrolset.\+h の 345 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_control_set_plug_a037aaf41be834256757d7bf874d7531b}\label{class_fbx_control_set_plug_a037aaf41be834256757d7bf874d7531b}} 
+\index{Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}!Use\+Axis@{Use\+Axis}}
+\index{Use\+Axis@{Use\+Axis}!Fbx\+Control\+Set\+Plug@{Fbx\+Control\+Set\+Plug}}
+\subsubsection{\texorpdfstring{Use\+Axis}{UseAxis}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Control\+Set\+Plug\+::\+Use\+Axis}
+
+
+
+Use axis flag. 
+
+
+
+ fbxcontrolset.\+h の 348 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxcontrolset_8h}{fbxcontrolset.\+h}\end{DoxyCompactItemize}

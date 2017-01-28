@@ -1,0 +1,682 @@
+\hypertarget{class_fbx_dual_quaternion}{}\section{Fbx\+Dual\+Quaternion クラス}
+\label{class_fbx_dual_quaternion}\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+
+
+{\ttfamily \#include $<$fbxdualquaternion.\+h$>$}
+
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_dual_quaternion_a254ddc7798c408f023ee7ab3f10c4980}{Fbx\+Dual\+Quaternion} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_dual_quaternion_aa8cb9c92f1ad60ff2146473f24922224}{Fbx\+Dual\+Quaternion} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+V1, const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+V2)
+\item 
+\hyperlink{class_fbx_dual_quaternion_a63f775c43b393723c50456d6eff24aff}{Fbx\+Dual\+Quaternion} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&pV)
+\item 
+\hyperlink{class_fbx_dual_quaternion_a77d73924d4fd8f1cc5eb9bf4a3e4946d}{Fbx\+Dual\+Quaternion} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Rotation, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Translation)
+\item 
+\hyperlink{class_fbx_dual_quaternion_addf50704bb3839f7c7ccafc5a0fac128}{Fbx\+Dual\+Quaternion} (double p\+X1, double p\+Y1, double p\+Z1, double p\+W1, double p\+X2, double p\+Y2, double p\+Z2, double p\+W2)
+\item 
+\hyperlink{class_fbx_dual_quaternion_a1b1a778a68116c8934ac76eb98958f48}{$\sim$\+Fbx\+Dual\+Quaternion} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Access}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_ad647f8f27c587a4cd254fc87c821bd49}{operator=} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion)
+\item 
+void \hyperlink{class_fbx_dual_quaternion_a660f19c5f442716489a29e842ea85d19}{Set} (double p\+X1, double p\+Y1, double p\+Z1, double p\+W1, double p\+X2, double p\+Y2, double p\+Z2, double p\+W2)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_aeec210c98cc1a64b097e4e9374a87e51}{Get\+First\+Quaternion} ()
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a23cf0592cadd1679222d884cb94719d7}{Get\+Second\+Quaternion} ()
+\item 
+const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a31eb96dba8793d778d486fb73534bfa1}{Get\+First\+Quaternion} () const
+\item 
+const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_ae19fde6e0e620ba28caf66f0ebf43965}{Get\+Second\+Quaternion} () const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a87dd60a786ce592ff03b1b9382548d41}{Get\+Rotation} () const
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_dual_quaternion_aba8ddeb900c37ca3a7de1b92b7f8312c}{Get\+Translation} () const
+\end{DoxyCompactItemize}
+\subsection*{Scalar Operations}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a0c49437e36f15a2c405e3f055ca615c4}{operator+} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a9900013ba99f3503e574e05516b47082}{operator-\/} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a70a637a6d19bfb510836a56799a96993}{operator$\ast$} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a4b1a647cdefe5a4005525230545be830}{operator/} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a0b701dcff5e3982a9728241932dff65a}{operator+=} (double p\+Value)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a7f4a57f4e63ea5eaa809e5af5e083828}{operator-\/=} (double p\+Value)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_af1410bc58c2d270f37a75f12e9aaedb1}{operator$\ast$=} (double p\+Value)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_acfcd7a62201e9b0f41bf5f1a6bd0d42c}{operator/=} (double p\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Vector Operations}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a167b1147fed330bb9b2083f3252f30f6}{operator-\/} () const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a7d1c0685181fa8bdffed35a70e99d2e2}{operator+} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a7ae142f9a03771efc12fbdb7a192e7cb}{operator-\/} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a232075a06a5afe2bdbdcb71611cd08de}{operator$\ast$} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a76538b4d54469e113b1a57881b0cc26a}{operator/} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a5fac21150ee0620e4cee681adc812e8c}{operator+=} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a51b0a1b4483267962470cb607754f508}{operator-\/=} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_ad111738104db31db04967420eea645a0}{operator$\ast$=} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \& \hyperlink{class_fbx_dual_quaternion_a9fd67ddddaf240850ce7c5fbe801e164}{operator/=} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion)
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_aa654ff2e0a7e803ece4ef9267af05dc5}{operator$\ast$} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} p\+Vector) const
+\item 
+\hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \hyperlink{class_fbx_dual_quaternion_a76ce93e64d63ea797fba4db42670de82}{Product} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&p\+Dual\+Quaternion) const
+\item 
+void \hyperlink{class_fbx_dual_quaternion_a542fd8a7cfd918eb3c8213c30c28269a}{Normalize} ()
+\item 
+void \hyperlink{class_fbx_dual_quaternion_ab27c0b36e0c9387448f7b00af47428dd}{Inverse} ()
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_dual_quaternion_a9a3380796ebd7bdcdc0c3f7363181b0f}{Deform} (\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Point)
+\end{DoxyCompactItemize}
+\subsection*{Conjugate Operations}
+\label{_amgrp955d608e1ce67d6afea90e8be242f06c}%
+Dual quaternion has three types of conjugate. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_dual_quaternion_a4b868a1951c6c4bdf81d30acbc5dec87}{Conjugate} ()
+\item 
+void \hyperlink{class_fbx_dual_quaternion_ac932bf84d0cf5a6e397de55fdde914a6}{Dual} ()
+\item 
+void \hyperlink{class_fbx_dual_quaternion_ad371018282581c2120cd5e0a9dfe456b}{Dual\+Conjugate} ()
+\end{DoxyCompactItemize}
+\subsection*{Boolean Operations}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_dual_quaternion_aeaf9715f0816c453828ebef237318151}{operator==} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&pV) const
+\item 
+bool \hyperlink{class_fbx_dual_quaternion_ad2de307a8df279d3c2beb098861ff573}{operator!=} (const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&pV) const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+F\+BX S\+DK dual quaternion class to represent rigid transformation, which is combined by two quaternions. A transformation is said to be rigid if it preserves relative distances and angles. That means rotation and translation. 
+
+ fbxdualquaternion.\+h の 27 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a254ddc7798c408f023ee7ab3f10c4980}\label{class_fbx_dual_quaternion_a254ddc7798c408f023ee7ab3f10c4980}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Dual\+Quaternion()}{FbxDualQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Fbx\+Dual\+Quaternion\+::\+Fbx\+Dual\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{class_fbx_dual_quaternion_aa8cb9c92f1ad60ff2146473f24922224}\label{class_fbx_dual_quaternion_aa8cb9c92f1ad60ff2146473f24922224}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Dual\+Quaternion()}{FbxDualQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Fbx\+Dual\+Quaternion\+::\+Fbx\+Dual\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+V1,  }\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+V2 }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+V1} & \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} object. \\
+\hline
+{\em p\+V2} & \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a63f775c43b393723c50456d6eff24aff}\label{class_fbx_dual_quaternion_a63f775c43b393723c50456d6eff24aff}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Dual\+Quaternion()}{FbxDualQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Fbx\+Dual\+Quaternion\+::\+Fbx\+Dual\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{pV }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em pV} & \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} object copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a77d73924d4fd8f1cc5eb9bf4a3e4946d}\label{class_fbx_dual_quaternion_a77d73924d4fd8f1cc5eb9bf4a3e4946d}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Dual\+Quaternion()}{FbxDualQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Fbx\+Dual\+Quaternion\+::\+Fbx\+Dual\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Rotation,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Translation }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Rotation} & The rotation the dual quaternion is going to represent. \\
+\hline
+{\em p\+Translation} & The translation the dual quaternion is going to represent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_addf50704bb3839f7c7ccafc5a0fac128}\label{class_fbx_dual_quaternion_addf50704bb3839f7c7ccafc5a0fac128}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Dual\+Quaternion()}{FbxDualQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Fbx\+Dual\+Quaternion\+::\+Fbx\+Dual\+Quaternion (\begin{DoxyParamCaption}\item[{double}]{p\+X1,  }\item[{double}]{p\+Y1,  }\item[{double}]{p\+Z1,  }\item[{double}]{p\+W1,  }\item[{double}]{p\+X2,  }\item[{double}]{p\+Y2,  }\item[{double}]{p\+Z2,  }\item[{double}]{p\+W2 }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+X1} & The X component of the first quaternion. \\
+\hline
+{\em p\+Y1} & The Y component of the first quaternion. \\
+\hline
+{\em p\+Z1} & The Z component of the first quaternion. \\
+\hline
+{\em p\+W1} & The W component of the first quaternion. \\
+\hline
+{\em p\+X2} & The X component of the second quaternion. \\
+\hline
+{\em p\+Y2} & The Y component of the second quaternion. \\
+\hline
+{\em p\+Z2} & The Z component of the second quaternion. \\
+\hline
+{\em p\+W2} & The W component of the second quaternion. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a1b1a778a68116c8934ac76eb98958f48}\label{class_fbx_dual_quaternion_a1b1a778a68116c8934ac76eb98958f48}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!````~Fbx\+Dual\+Quaternion@{$\sim$\+Fbx\+Dual\+Quaternion}}
+\index{````~Fbx\+Dual\+Quaternion@{$\sim$\+Fbx\+Dual\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Dual\+Quaternion()}{~FbxDualQuaternion()}}
+{\footnotesize\ttfamily Fbx\+Dual\+Quaternion\+::$\sim$\+Fbx\+Dual\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a4b868a1951c6c4bdf81d30acbc5dec87}\label{class_fbx_dual_quaternion_a4b868a1951c6c4bdf81d30acbc5dec87}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Conjugate()}{Conjugate()}}
+{\footnotesize\ttfamily void Fbx\+Dual\+Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conjugate both quaternions of this dual quaternion. \mbox{\Hypertarget{class_fbx_dual_quaternion_a9a3380796ebd7bdcdc0c3f7363181b0f}\label{class_fbx_dual_quaternion_a9a3380796ebd7bdcdc0c3f7363181b0f}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Deform@{Deform}}
+\index{Deform@{Deform}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Deform()}{Deform()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Dual\+Quaternion\+::\+Deform (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Point }\end{DoxyParamCaption})}
+
+Deform a point by this dual quaternion. \begin{DoxyReturn}{戻り値}
+The inverse of this quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_ac932bf84d0cf5a6e397de55fdde914a6}\label{class_fbx_dual_quaternion_ac932bf84d0cf5a6e397de55fdde914a6}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Dual@{Dual}}
+\index{Dual@{Dual}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Dual()}{Dual()}}
+{\footnotesize\ttfamily void Fbx\+Dual\+Quaternion\+::\+Dual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conjugate in dual space. \mbox{\Hypertarget{class_fbx_dual_quaternion_ad371018282581c2120cd5e0a9dfe456b}\label{class_fbx_dual_quaternion_ad371018282581c2120cd5e0a9dfe456b}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Dual\+Conjugate@{Dual\+Conjugate}}
+\index{Dual\+Conjugate@{Dual\+Conjugate}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Dual\+Conjugate()}{DualConjugate()}}
+{\footnotesize\ttfamily void Fbx\+Dual\+Quaternion\+::\+Dual\+Conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Conjugate both quaternions of this dual quaternion in dual space. \mbox{\Hypertarget{class_fbx_dual_quaternion_aeec210c98cc1a64b097e4e9374a87e51}\label{class_fbx_dual_quaternion_aeec210c98cc1a64b097e4e9374a87e51}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Get\+First\+Quaternion@{Get\+First\+Quaternion}}
+\index{Get\+First\+Quaternion@{Get\+First\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+First\+Quaternion()}{GetFirstQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Dual\+Quaternion\+::\+Get\+First\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the first quaternion of the dual quaternion. \begin{DoxyReturn}{戻り値}
+The first quaternion of the dual quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a31eb96dba8793d778d486fb73534bfa1}\label{class_fbx_dual_quaternion_a31eb96dba8793d778d486fb73534bfa1}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Get\+First\+Quaternion@{Get\+First\+Quaternion}}
+\index{Get\+First\+Quaternion@{Get\+First\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+First\+Quaternion()}{GetFirstQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Dual\+Quaternion\+::\+Get\+First\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the first quaternion of the dual quaternion. \begin{DoxyReturn}{戻り値}
+The first quaternion of the dual quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a87dd60a786ce592ff03b1b9382548d41}\label{class_fbx_dual_quaternion_a87dd60a786ce592ff03b1b9382548d41}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Get\+Rotation@{Get\+Rotation}}
+\index{Get\+Rotation@{Get\+Rotation}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+Rotation()}{GetRotation()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Dual\+Quaternion\+::\+Get\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the rotation part from the dual quaternion. \begin{DoxyReturn}{戻り値}
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} object to represent rotation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a23cf0592cadd1679222d884cb94719d7}\label{class_fbx_dual_quaternion_a23cf0592cadd1679222d884cb94719d7}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Get\+Second\+Quaternion@{Get\+Second\+Quaternion}}
+\index{Get\+Second\+Quaternion@{Get\+Second\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+Second\+Quaternion()}{GetSecondQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Dual\+Quaternion\+::\+Get\+Second\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the second quaternion of the dual quaternion. \begin{DoxyReturn}{戻り値}
+The second quaternion of the dual quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_ae19fde6e0e620ba28caf66f0ebf43965}\label{class_fbx_dual_quaternion_ae19fde6e0e620ba28caf66f0ebf43965}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Get\+Second\+Quaternion@{Get\+Second\+Quaternion}}
+\index{Get\+Second\+Quaternion@{Get\+Second\+Quaternion}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+Second\+Quaternion()}{GetSecondQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Dual\+Quaternion\+::\+Get\+Second\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the second quaternion of the dual quaternion. \begin{DoxyReturn}{戻り値}
+The second quaternion of the dual quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_aba8ddeb900c37ca3a7de1b92b7f8312c}\label{class_fbx_dual_quaternion_aba8ddeb900c37ca3a7de1b92b7f8312c}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Get\+Translation@{Get\+Translation}}
+\index{Get\+Translation@{Get\+Translation}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+Translation()}{GetTranslation()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Dual\+Quaternion\+::\+Get\+Translation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the translation part from the dual quaternion. \begin{DoxyReturn}{戻り値}
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} object to represent translation. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+A dual quaternion can represent rotation followed by translation, or translation followed by rotation. This method assumes that the rotation is expressed first, followed by translation, as is done by most D\+CC tools. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_ab27c0b36e0c9387448f7b00af47428dd}\label{class_fbx_dual_quaternion_ab27c0b36e0c9387448f7b00af47428dd}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily void Fbx\+Dual\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculate the dual quaternion\textquotesingle{}s inverse. \begin{DoxyReturn}{戻り値}
+The inverse of this dual quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a542fd8a7cfd918eb3c8213c30c28269a}\label{class_fbx_dual_quaternion_a542fd8a7cfd918eb3c8213c30c28269a}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void Fbx\+Dual\+Quaternion\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normalize the dual quaternion, length set to 1. \mbox{\Hypertarget{class_fbx_dual_quaternion_ad2de307a8df279d3c2beb098861ff573}\label{class_fbx_dual_quaternion_ad2de307a8df279d3c2beb098861ff573}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+Dual\+Quaternion\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{pV }\end{DoxyParamCaption}) const}
+
+Non equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pV} & The quaternion to be compared to {\itshape this}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily false} if the two quaternions are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily true} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a70a637a6d19bfb510836a56799a96993}\label{class_fbx_dual_quaternion_a70a637a6d19bfb510836a56799a96993}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Multiply all vector components by a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value multiplying each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+New vector. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a232075a06a5afe2bdbdcb71611cd08de}\label{class_fbx_dual_quaternion_a232075a06a5afe2bdbdcb71611cd08de}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption}) const}
+
+Memberwise multiplication of two vectors. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Multiplying dual quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this $\ast$ p\+Quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_aa654ff2e0a7e803ece4ef9267af05dc5}\label{class_fbx_dual_quaternion_aa654ff2e0a7e803ece4ef9267af05dc5}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4}}]{p\+Vector }\end{DoxyParamCaption}) const}
+
+Multiplication of a dual quaternion by a \hyperlink{class_fbx_vector4}{Fbx\+Vector4}. 
+\begin{DoxyParams}{引数}
+{\em p\+Vector} & The \hyperlink{class_fbx_vector4}{Fbx\+Vector4} to multiply with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}(m\+Q1, (m\+Q1 $\ast$ p\+Vector) + m\+Q2). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_af1410bc58c2d270f37a75f12e9aaedb1}\label{class_fbx_dual_quaternion_af1410bc58c2d270f37a75f12e9aaedb1}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Multiply a value to all vector elements. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value multiplying each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of multiplying each component of the vector by p\+Value, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_ad111738104db31db04967420eea645a0}\label{class_fbx_dual_quaternion_ad111738104db31db04967420eea645a0}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption})}
+
+Memberwise multiplication of two quaternions. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Multiplying dual quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this $\ast$ p\+Quaternion, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a0c49437e36f15a2c405e3f055ca615c4}\label{class_fbx_dual_quaternion_a0c49437e36f15a2c405e3f055ca615c4}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Add a value to all vector components. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to add to each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+New vector. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a7d1c0685181fa8bdffed35a70e99d2e2}\label{class_fbx_dual_quaternion_a7d1c0685181fa8bdffed35a70e99d2e2}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption}) const}
+
+Add two vectors together. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Dual quaternion to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this + p\+Dual\+Quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a0b701dcff5e3982a9728241932dff65a}\label{class_fbx_dual_quaternion_a0b701dcff5e3982a9728241932dff65a}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Add a value to all vector components. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to add to each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of adding p\+Value to each component of the vector, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a5fac21150ee0620e4cee681adc812e8c}\label{class_fbx_dual_quaternion_a5fac21150ee0620e4cee681adc812e8c}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption})}
+
+Add two quaternions together. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Dual quaternion to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this + p\+Quaternion, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a9900013ba99f3503e574e05516b47082}\label{class_fbx_dual_quaternion_a9900013ba99f3503e574e05516b47082}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Subtract a value from all vector components. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to subtract from each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+New vector. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a167b1147fed330bb9b2083f3252f30f6}\label{class_fbx_dual_quaternion_a167b1147fed330bb9b2083f3252f30f6}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Unary minus operator. \begin{DoxyReturn}{戻り値}
+A dual quaternion where each component is multiplied by -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a7ae142f9a03771efc12fbdb7a192e7cb}\label{class_fbx_dual_quaternion_a7ae142f9a03771efc12fbdb7a192e7cb}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption}) const}
+
+Subtract a quaternion from another quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Dual quaternion to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this -\/ p\+Dual\+Quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a7f4a57f4e63ea5eaa809e5af5e083828}\label{class_fbx_dual_quaternion_a7f4a57f4e63ea5eaa809e5af5e083828}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Subtract a value from all vector components. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to subtract from each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of subtracting p\+Value from each component of the vector, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a51b0a1b4483267962470cb607754f508}\label{class_fbx_dual_quaternion_a51b0a1b4483267962470cb607754f508}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption})}
+
+Subtract a dual quaternion from another vector. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Dual quaternion to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this -\/ p\+Quaternion, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a4b1a647cdefe5a4005525230545be830}\label{class_fbx_dual_quaternion_a4b1a647cdefe5a4005525230545be830}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Divide all vector components by a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value dividing each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+New vector. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a76538b4d54469e113b1a57881b0cc26a}\label{class_fbx_dual_quaternion_a76538b4d54469e113b1a57881b0cc26a}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption}) const}
+
+Memberwise division of a dual quaternion with another dual quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Dividing dual quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this / p\+Quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_acfcd7a62201e9b0f41bf5f1a6bd0d42c}\label{class_fbx_dual_quaternion_acfcd7a62201e9b0f41bf5f1a6bd0d42c}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Divide all vector elements by a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value dividing each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of dividing each component of the vector by p\+Value, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a9fd67ddddaf240850ce7c5fbe801e164}\label{class_fbx_dual_quaternion_a9fd67ddddaf240850ce7c5fbe801e164}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption})}
+
+Memberwise division of a dual quaternion by another dual quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Dividing dual quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion v\textquotesingle{} = this / p\+Quaternion, replacing this dual quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Dual\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_ad647f8f27c587a4cd254fc87c821bd49}\label{class_fbx_dual_quaternion_ad647f8f27c587a4cd254fc87c821bd49}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion}\& Fbx\+Dual\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption})}
+
+Assignment operation. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} object assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_aeaf9715f0816c453828ebef237318151}\label{class_fbx_dual_quaternion_aeaf9715f0816c453828ebef237318151}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Dual\+Quaternion\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{pV }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pV} & The quaternion to be compared to this quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the two quaternions are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a76ce93e64d63ea797fba4db42670de82}\label{class_fbx_dual_quaternion_a76ce93e64d63ea797fba4db42670de82}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Product@{Product}}
+\index{Product@{Product}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Product()}{Product()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} Fbx\+Dual\+Quaternion\+::\+Product (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_dual_quaternion}{Fbx\+Dual\+Quaternion} \&}]{p\+Dual\+Quaternion }\end{DoxyParamCaption}) const}
+
+Return dual quaternion product. 
+\begin{DoxyParams}{引数}
+{\em p\+Dual\+Quaternion} & Product dual quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dual quaternion that is the product of this and p\+Dual\+Quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_dual_quaternion_a660f19c5f442716489a29e842ea85d19}\label{class_fbx_dual_quaternion_a660f19c5f442716489a29e842ea85d19}} 
+\index{Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Dual\+Quaternion@{Fbx\+Dual\+Quaternion}}
+\subsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Fbx\+Dual\+Quaternion\+::\+Set (\begin{DoxyParamCaption}\item[{double}]{p\+X1,  }\item[{double}]{p\+Y1,  }\item[{double}]{p\+Z1,  }\item[{double}]{p\+W1,  }\item[{double}]{p\+X2,  }\item[{double}]{p\+Y2,  }\item[{double}]{p\+Z2,  }\item[{double}]{p\+W2 }\end{DoxyParamCaption})}
+
+Set vector. 
+\begin{DoxyParams}{引数}
+{\em p\+X1} & The X component of the first quaternion. \\
+\hline
+{\em p\+Y1} & The Y component of the first quaternion. \\
+\hline
+{\em p\+Z1} & The Z component of the first quaternion. \\
+\hline
+{\em p\+W1} & The W component of the first quaternion. \\
+\hline
+{\em p\+X2} & The X component of the second quaternion. \\
+\hline
+{\em p\+Y2} & The Y component of the second quaternion. \\
+\hline
+{\em p\+Z2} & The Z component of the second quaternion. \\
+\hline
+{\em p\+W2} & The W component of the second quaternion. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/math/\hyperlink{fbxdualquaternion_8h}{fbxdualquaternion.\+h}\end{DoxyCompactItemize}

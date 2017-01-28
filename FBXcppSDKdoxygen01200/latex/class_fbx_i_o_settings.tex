@@ -1,0 +1,1299 @@
+\hypertarget{class_fbx_i_o_settings}{}\section{Fbx\+I\+O\+Settings クラス}
+\label{class_fbx_i_o_settings}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+
+
+{\ttfamily \#include $<$fbxiosettings.\+h$>$}
+
+Fbx\+I\+O\+Settings の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fbx_i_o_settings}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}{E\+Language} \{ \newline
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa8fda898bdbd505592c7d7b5971ea07ed}{e\+E\+NU}, 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa3af1c95587007b95301ac8f2cf84f545}{e\+D\+EU}, 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa9880a81be07b871e6f4e38efc289442a}{e\+F\+RA}, 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa57a2d721392084f075cf5826aee4b806}{e\+J\+PN}, 
+\newline
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa733ed54132d846f72dccaf75e223a64e}{e\+K\+OR}, 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa9b82a38394a273566c671012ee996dbf}{e\+C\+HS}, 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa42634e3786b8c234b00490de78dd7760}{e\+Language\+Count}
+ \}\begin{DoxyCompactList}\small\item\em Supported languages enumeration list \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211}{E\+Load\+Mode} \{ \hyperlink{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211a0414070b97a5f0192827ac4f8217cf93}{e\+Create}, 
+\hyperlink{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211ae63d3a1974af470f16b65e334b22b4a7}{e\+Merge}, 
+\hyperlink{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211ad93bf1b6e8c1d02f5f7803826c808d30}{e\+Exclusive\+Merge}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dc}{E\+Quaternion\+Mode} \{ \hyperlink{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dca02a71d78d06c1acb57442bb9f221af79}{e\+As\+Quaternion}, 
+\hyperlink{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dcaf57f840eeb8641638f08fb004fac7009}{e\+As\+Euler}, 
+\hyperlink{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dcae417ce7633f52326a18a7aba3fa46b0a}{e\+Resample}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9}{E\+Object\+Derivation} \{ \hyperlink{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a5dfff368c195094a7bedaf97f9ec4b2e}{e\+By\+Layer}, 
+\hyperlink{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a7bc6999e9f14de08ad02f68ae3ad6549}{e\+By\+Entity}, 
+\hyperlink{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a18f677f8405bfeeca807ef4d91cfb195}{e\+By\+Block}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4}{E\+Sys\+Units} \{ \newline
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4adc735eedf95225f3ab9f4fbf57ec2b63}{e\+Units\+User}, 
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a81c1538b2da8359bf5c7a54ad34e1a51}{e\+Units\+Inches}, 
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a71b0ef47dabdaaacc92d0e9da706de98}{e\+Units\+Feet}, 
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4ae2d2d67e54c29b82ab0a95ef5a237ca4}{e\+Unit\+Yards}, 
+\newline
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4af4c0dac41a1ac2ae64f9c65ca68ed042}{e\+Units\+Miles}, 
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a83ef02314749b73676a0a4e003e09d36}{e\+Units\+Millimeters}, 
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a657f05ea2a2395602428a68526cd2ef1}{e\+Units\+Centimeters}, 
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a7889a6c0ad867a644960be0e034f1d31}{e\+Units\+Meters}, 
+\newline
+\hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a29dc672c7f9ac5174c903576954e90b0}{e\+Units\+Kilometers}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5c}{E\+Sys\+Frame\+Rate} \{ \newline
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5caad7291a5aa8ce938e83f458a849df372}{e\+Frame\+Rate\+User}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca66f90c6d0ab620c6362216bca345fdea}{e\+Frame\+Rate\+Hours}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5caf1453d43486377775a8181a53ab95e65}{e\+Frame\+Rate\+Minutes}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca6349f60ceb625b9cab9f7c66c1ed4c94}{e\+Frame\+Rate\+Seconds}, 
+\newline
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cab2b90bcba7b797fb678c948b1e4c03d0}{e\+Frame\+Rate\+Milliseconds}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cabccd307480c0da116803de0045ff388f}{e\+Frame\+Rate\+Games15}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cadc9fb55e5e0caee613088cf9a7a07638}{e\+Frame\+Rate\+Film24}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cadefff446c88c0e98b0bd25d40b6d6b0e}{e\+Frame\+Rate\+P\+A\+L25}, 
+\newline
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca983c3e426ca43a32ffde449a527f2a65}{e\+Frame\+Rate\+N\+T\+S\+C30}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca1f68b42188b0b7ae4607f59708018295}{e\+Frame\+Rate\+Show\+Scan48}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cae7a8177ef572a4255b731834b69bfbc3}{e\+Frame\+Rate\+P\+A\+L\+Field50}, 
+\hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca548291680fa488d1e199db24879bb93e}{e\+Frame\+Rate\+N\+T\+S\+C\+Field60}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779b}{E\+Enveloppe\+System} \{ \hyperlink{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba861df1e3409327955e2a94c080887385}{e\+Skin\+Modifier}, 
+\hyperlink{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba845d62bf580795a5a981f38baf5e59ed}{e\+Physic}, 
+\hyperlink{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba1be4e2ff5346232d45a255ca9fefd7e1}{e\+Bone\+Pro}, 
+\hyperlink{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba6747a96f533fb27d59ddfd99179a0a79}{e\+Enveloppe\+System\+Count}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363}{E\+Geometry\+Type} \{ \newline
+\hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a9069b9b39853310b5f33e1e61a667ce3}{e\+Triangle}, 
+\hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363ab46dcf358c1693009253f57ab459654e}{e\+Simplified\+Poly}, 
+\hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a7ab720510fd8497af92e680d07c3d4dc}{e\+Polygon}, 
+\hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a6c207a78287107392e5a57fe403424bb}{e\+Nurbs}, 
+\newline
+\hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a4d8f1d8ecbcf9122098a9e31359a02c7}{e\+Patch}, 
+\hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363afac7187ec5b77bf8e3dccfa0d81c64ab}{e\+Geometry\+Type\+Count}
+ \}
+\item 
+enum \hyperlink{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4}{E\+I\+K\+Type} \{ \hyperlink{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a4dc70ea9d0e84dac86a7e21208c30ea5}{e\+None}, 
+\hyperlink{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a5bd22e55b47f357e19b5b29e1f4a23ec}{e\+F\+B\+IK}, 
+\hyperlink{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a19b69a520421a5fa802285f7821b5f2d}{e\+Human\+IK}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_i_o_settings_abf6db228c12b2b36500eba034685b3cb}{Add\+Property\+Group} (const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type=\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}(), const char $\ast$p\+Label=\char`\"{}\char`\"{})
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_i_o_settings_a108fa53c9bd3d89963f098a18f97e349}{Add\+Property\+Group} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Parent\+Property, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type=\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}(), const char $\ast$p\+Label=\char`\"{}\char`\"{}, bool p\+Visible=true, bool p\+Savable=true, bool p\+Enabled=true)
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_i_o_settings_adcfa47da119520473f466bfff28cdbe2}{Add\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Parent\+Property, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type=\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}(), const char $\ast$p\+Label=\char`\"{}\char`\"{}, const void $\ast$p\+Value=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, bool p\+Visible=true, bool p\+Savable=true, bool p\+Enabled=true)
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_i_o_settings_a74e2aa168f3b0cac2a80ac355c5c4611}{Add\+Property\+Min\+Max} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Parent\+Property, const char $\ast$p\+Name, const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Data\+Type=\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}(), const char $\ast$p\+Label=\char`\"{}\char`\"{}, const void $\ast$p\+Value=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, const double $\ast$p\+Min\+Value=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, const double $\ast$p\+Max\+Value=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, bool p\+Visible=true, bool p\+Savable=true, bool p\+Enabled=true)
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_i_o_settings_aa02805702152a4ef56d337c25b12d42b}{Get\+Property} (const char $\ast$p\+Name) const
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_i_o_settings_aedc91a76523e1fb2fe015901afd5d8bc}{Get\+Property} (const \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Parent\+Property, const char $\ast$p\+Name) const
+\item 
+bool \hyperlink{class_fbx_i_o_settings_aa30a3e515f60aa1fcbd82b6b34994ad0}{Get\+Bool\+Prop} (const char $\ast$p\+Name, bool p\+Def\+Value) const
+\item 
+void \hyperlink{class_fbx_i_o_settings_ad2c660ef846b66dcf569079299391745}{Set\+Bool\+Prop} (const char $\ast$p\+Name, bool p\+Value)
+\item 
+double \hyperlink{class_fbx_i_o_settings_a4d068caa98d8183a45b520d6ade6ad41}{Get\+Double\+Prop} (const char $\ast$p\+Name, double p\+Def\+Value) const
+\item 
+void \hyperlink{class_fbx_i_o_settings_ae97bbc6c4ae0534788dba82e3cfd0c4f}{Set\+Double\+Prop} (const char $\ast$p\+Name, double p\+Value)
+\item 
+int \hyperlink{class_fbx_i_o_settings_a3ab14ccc4a1ecb92bc94c61597d50d08}{Get\+Int\+Prop} (const char $\ast$p\+Name, int p\+Def\+Value) const
+\item 
+void \hyperlink{class_fbx_i_o_settings_a5284810e44344eb94b1dcdd97af4a8a3}{Set\+Int\+Prop} (const char $\ast$p\+Name, int p\+Value)
+\item 
+\hyperlink{class_fbx_time}{Fbx\+Time} \hyperlink{class_fbx_i_o_settings_a369d87d5f1785484917a44abd5f70bd3}{Get\+Time\+Prop} (const char $\ast$p\+Name, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Def\+Value) const
+\item 
+void \hyperlink{class_fbx_i_o_settings_a780a8567ad7916be8914e9a22c09f1a5}{Set\+Time\+Prop} (const char $\ast$p\+Name, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Value)
+\item 
+bool \hyperlink{class_fbx_i_o_settings_a3a729325e682c916226227e4ebcebd58}{Set\+Flag} (const char $\ast$p\+Name, \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags} prop\+Flag, bool p\+Value)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_settings_ab3e057be50be4fbeae6e70ceb38cf1fa}{Get\+String\+Prop} (const char $\ast$p\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Def\+Value) const
+\item 
+void \hyperlink{class_fbx_i_o_settings_aadffc404d2cfc79ee842265c46abbc12}{Set\+String\+Prop} (const char $\ast$p\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Value)
+\item 
+\hyperlink{class_fbx_i_o_prop_info}{Fbx\+I\+O\+Prop\+Info} $\ast$ \hyperlink{class_fbx_i_o_settings_a04310e1fd32d0f8852eef9dae52aab54}{Get\+Prop\+Info} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_settings_a2588777e1bbeed1602e2538fa47cd986}{Get\+Language\+Label} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop)
+\item 
+void \hyperlink{class_fbx_i_o_settings_ac2fc08a0a553a6fc6c4e5e9891b6ad38}{Set\+Language\+Label} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Label)
+\item 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}{E\+Language} \hyperlink{class_fbx_i_o_settings_a253fc042fe3d373a9e1c369ac2d2bd27}{Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Reg\+Location)
+\item 
+void \hyperlink{class_fbx_i_o_settings_a23c19390ac805e94866ae738953bb479}{Set\+Prop\+Visible} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop, bool p\+With\+Children, bool p\+Visible)
+\item 
+bool \hyperlink{class_fbx_i_o_settings_a843dcbf01c90245e4bfc08effe999acc}{Read\+Xml\+Prop\+From\+My\+Document} (const \hyperlink{class_fbx_string}{Fbx\+String} \&sub\+Dir, const \hyperlink{class_fbx_string}{Fbx\+String} \&filename)
+\item 
+bool \hyperlink{class_fbx_i_o_settings_a7cdebdeff147dbdb99faaadc874e5d69}{Write\+Xml\+Prop\+To\+My\+Document} (const \hyperlink{class_fbx_string}{Fbx\+String} \&sub\+Dir, const \hyperlink{class_fbx_string}{Fbx\+String} \&filename, const \hyperlink{class_fbx_string}{Fbx\+String} \&prop\+Path)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Enum Properties}\par
+{\em An enum property is a list of \hyperlink{class_fbx_string}{Fbx\+String} and integer pairs. A current index value is available to get the selected pair of Fbx\+String+integer
+
+Ex\+: Content of an enum property 
+\begin{DoxyCode}
+0 -> (14, \textcolor{stringliteral}{"Bird"})
+1 -> (17, \textcolor{stringliteral}{"Horse"})
+2 -> (93, \textcolor{stringliteral}{"Cat"})
+3 -> (45, \textcolor{stringliteral}{"Dog"})
+\end{DoxyCode}
+
+
+If current index is 2\+: the current int value is 93, and the current \hyperlink{class_fbx_string}{Fbx\+String} value is \char`\"{}\+Cat\char`\"{} }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_settings_a4c34547b1b4267694f51ab159d95b9da}{Get\+Enum\+Prop} (const char $\ast$p\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Def\+Value) const
+\item 
+int \hyperlink{class_fbx_i_o_settings_a042c5ff793f455ef7e982fb2a9f01ce7}{Get\+Enum\+Prop} (const char $\ast$p\+Name, int p\+Def\+Value) const
+\item 
+int \hyperlink{class_fbx_i_o_settings_a0d328ff98e1cce8d911e78cfe83aa662}{Get\+Enum\+Index} (const char $\ast$p\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Value) const
+\item 
+void \hyperlink{class_fbx_i_o_settings_a26d37be8fcf5c4d74ee0dfb95b39923d}{Set\+Enum\+Prop} (const char $\ast$p\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Value)
+\item 
+void \hyperlink{class_fbx_i_o_settings_af1000ac57d0e7af9e55f9f629d50330f}{Set\+Enum\+Prop} (const char $\ast$p\+Name, int p\+Value)
+\item 
+void \hyperlink{class_fbx_i_o_settings_aebf0649980477e8ec80d1d9364304392}{Remove\+Enum\+Prop\+Value} (const char $\ast$p\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Value)
+\item 
+void \hyperlink{class_fbx_i_o_settings_a6f30f2ea6148cfe5070444c38842ed6f}{Empty\+Enum\+Prop} (const char $\ast$p\+Name)
+\item 
+bool \hyperlink{class_fbx_i_o_settings_a8276b09f853df8e836a9760fd8f8cbfb}{Is\+Enum\+Exist} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop, const \hyperlink{class_fbx_string}{Fbx\+String} \&enum\+String) const
+\item 
+int \hyperlink{class_fbx_i_o_settings_aef7ef50f0117516d9326b4b74e70f314}{Get\+Enum\+Index} (\hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop, const \hyperlink{class_fbx_string}{Fbx\+String} \&enum\+String, bool p\+No\+Case=false) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ X\+ML Serialization Functions}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_i_o_settings_a83350a45f6370913ca1b2c0527a07d8b}{Read\+X\+M\+L\+File} (const \hyperlink{class_fbx_string}{Fbx\+String} \&path)
+\item 
+virtual bool \hyperlink{class_fbx_i_o_settings_a5b8c0000832b00d77e469cfb1b8f4c81}{Write\+X\+M\+L\+File} (const \hyperlink{class_fbx_string}{Fbx\+String} \&path)
+\item 
+bool \hyperlink{class_fbx_i_o_settings_abd6cac9a8962bee693960397190a9771}{Write\+Xml\+Prop\+To\+File} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Full\+Path, const \hyperlink{class_fbx_string}{Fbx\+String} \&prop\+Path)
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_settings_a6ddfd3af6a5f6974d4bd3cd6b5315fd6}{Get\+User\+My\+Document\+Dir} ()
+\item 
+static const char $\ast$ \hyperlink{class_fbx_i_o_settings_ac44253178e75301e554ee8350274247c}{Get\+File\+Merge\+Description} (int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}{E\+Language} \hyperlink{class_fbx_i_o_settings_a66b062ff1bbcedce5978358a81ec9026}{U\+I\+Language}
+\item 
+\hyperlink{class_fbx_i_o_info}{Fbx\+I\+O\+Info} \hyperlink{class_fbx_i_o_settings_aa966915ec88f2963202d309e43b12e34}{imp\+Info}
+\item 
+\hyperlink{class_fbx_i_o_info}{Fbx\+I\+O\+Info} \hyperlink{class_fbx_i_o_settings_a138a9e01c4f15719b15710a0d9393623}{exp\+Info}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_i_o_settings_a7f722e05501bf87b108dbd6152bd2451}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_i_o_settings_a376a4234985ee351448dfe5b3ee8b128}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual void \hyperlink{class_fbx_i_o_settings_ab1680fefd56c9ad5abff5709b905a617}{Destruct} (bool p\+Recursive)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} is a collection of properties, arranged as a tree, that can be used by F\+BX file readers and writers to represent import and export options. It is primarily used by F\+BX importers (\hyperlink{class_fbx_importer}{Fbx\+Importer}) and F\+BX exporter (\hyperlink{class_fbx_exporter}{Fbx\+Exporter}) when reading or writing data from or to a disk. The F\+BX plugins of some Autodesk products expose a UI representing the content of those options to let users see and choose options when an import or export operation is about to be done. The tree of options is extensible.
+
+Options can be saved or loaded from an X\+ML file using the functions\+: \hyperlink{class_fbx_i_o_settings_a83350a45f6370913ca1b2c0527a07d8b}{Read\+X\+M\+L\+File()}, \hyperlink{class_fbx_i_o_settings_a5b8c0000832b00d77e469cfb1b8f4c81}{Write\+X\+M\+L\+File()}, \hyperlink{class_fbx_i_o_settings_abd6cac9a8962bee693960397190a9771}{Write\+Xml\+Prop\+To\+File()}. This functionality can be useful for plugins that use preset files.
+
+An instance of \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} must be created to be used before an import/export operation. When a new \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} instance is created, all options are created with default values. The new instance of \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} can be passed to the \hyperlink{class_fbx_manager}{Fbx\+Manager}, this way that instance will be used by all import/export operations.
+
+Ex\+: to set an instance of \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} to the \hyperlink{class_fbx_manager}{Fbx\+Manager}
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// First create a new instance of FbxIOSettings}
+\hyperlink{class_fbx_i_o_settings}{FbxIOSettings} * ios = FbxIOSettings::Create((\hyperlink{class_fbx_manager}{FbxManager} *) mManager, 
+      \hyperlink{fbxiosettingspath_8h_a57a5e54b72d0f2936d5ee84d8f510a0a}{IOSROOT});
+\textcolor{comment}{// then set the FbxManager}
+mManager->SetIOSettings(ios);
+\end{DoxyCode}
+
+
+It\textquotesingle{}s also possible for a developer to create another instance of \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings}, set particular options and use it for import/export operation.
+
+Ex\+: to set an instance of \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} to a Fbx\+Importer/\+Fbx\+Exporter 
+\begin{DoxyCode}
+mImporter->SetIOSettings(ios); / mExporter->SetIOSettings(ios);
+\end{DoxyCode}
+
+
+A schematic view of the \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} tree \+:
+
+\begin{DoxyVerb}                                       OPTION_GROUP_ROOT (IOSROOT)
+                                       |
+                                       |
+                   ________________________________________
+                   |                                      |     
+                   -OPTION_GROUP_EXPORT (IOSN_EXPORT)     -OPTION_GROUP_IMPORT (IOSN_IMPORT)
+                        |                                      |
+                        -OPTION_GROUP_A                        -OPTION_GROUP_A
+                        |     |                                |     |
+                        |     -OPTION_A                        |     -OPTION_A
+                        |     -OPTION_B                        |     -OPTION_B
+                        |                                      |
+                        -OPTION_GROUP_B                        -OPTION_GROUP_B
+                        |     |                                |     |
+                        |     -OPTION_GROUP_A                  |     -OPTION_GROUP_A
+                        |     |     |                          |     |     |
+                        |     |     -OPTION_A                  |     |     -OPTION_A
+                        |     |     -OPTION_B                  |     |     -OPTION_B
+                        |     |                                |     |
+                        |     -OPTION_GROUP_B                  |     -OPTION_GROUP_B
+                        |           |                          |           |
+                        |           -OPTION_A                  |           -OPTION_A
+                        |           -OPTION_B                  |           -OPTION_B 
+                        |                                      |
+                        -OPTION_GROUP_C                        -OPTION_GROUP_C
+                              |                                      |
+                              -OPTION_A                              -OPTION_A\end{DoxyVerb}
+
+
+Any group of options can contain sub options, or group of sub options. To access an option value, we must pass the full path to the Get/\+Set functions Ex\+: 
+\begin{DoxyCode}
+ios->\hyperlink{class_fbx_i_o_settings_aa30a3e515f60aa1fcbd82b6b34994ad0}{GetBoolProp}(\textcolor{stringliteral}{"Import|IncludeGrp|Animation"}, \textcolor{keyword}{true}); \textcolor{comment}{// the root node name is not required}
+\end{DoxyCode}
+
+
+All options path are defined in the file kfbxiosettingspath.\+h to ease the access of any options. Then \char`\"{}\+Import$\vert$\+Include\+Grp$\vert$\+Animation\char`\"{} == I\+M\+P\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON since I\+M\+P\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON is defined in kfbxiosettingspath.\+h All options defined path start with \char`\"{}\+I\+M\+P\+\_\+\char`\"{} for import branch or \char`\"{}\+E\+X\+P\+\_\+\char`\"{} for export branch.
+
+We strongly encourage to use the defined path in kfbxiosettingspath.\+h, this way if the parent group of an option is changed the change occur only in kfbxiosettingspath.\+h not in the code elsewhere.
+
+Ex\+: to get the boolean import \char`\"{}\+Animation\char`\"{} option 
+\begin{DoxyCode}
+\textcolor{keywordtype}{bool} anim = ios->\hyperlink{class_fbx_i_o_settings_aa30a3e515f60aa1fcbd82b6b34994ad0}{GetBoolProp}(\hyperlink{fbxiosettingspath_8h_a4725ab27021bd095307ee7337fd7ffe2}{IMP\_ANIMATION}, \textcolor{keyword}{true}); \textcolor{comment}{// will return true if not
+       found, since we pass true as second param}
+\end{DoxyCode}
+
+
+Ex\+: to set the boolean import \char`\"{}\+Animation\char`\"{} option to false 
+\begin{DoxyCode}
+ios->\hyperlink{class_fbx_i_o_settings_ad2c660ef846b66dcf569079299391745}{SetBoolProp}(\hyperlink{fbxiosettingspath_8h_a4725ab27021bd095307ee7337fd7ffe2}{IMP\_ANIMATION}, \textcolor{keyword}{false});
+\end{DoxyCode}
+
+
+Ex\+: to create a new option group under the \char`\"{}\+Import\char`\"{} branch 
+\begin{DoxyCode}
+\textcolor{comment}{// get the parent "Import" property}
+\hyperlink{class_fbx_property}{FbxProperty} import\_Group = ios->\hyperlink{class_fbx_i_o_settings_aa02805702152a4ef56d337c25b12d42b}{GetProperty}( \hyperlink{fbxiosettingspath_8h_aee0d01937267b561485abe6e148243ec}{IOSN\_IMPORT} ); \textcolor{comment}{// IOSN\_IMPORT
+       is defined as "Import" in kfbxiosettingspath.h}
+\textcolor{keywordflow}{if}(import\_Group.\hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{IsValid}()) \textcolor{comment}{// check if we have found the IOSN\_IMPORT parent option}
+\{
+    \textcolor{comment}{// add a new group of options "myOptionGroup"}
+      \hyperlink{class_fbx_property}{FbxProperty} myOptionGrp = ios->\hyperlink{class_fbx_i_o_settings_abf6db228c12b2b36500eba034685b3cb}{AddPropertyGroup}(import\_Group, \textcolor{stringliteral}{"
+      myOptionGroup"}, \hyperlink{fbxdatatypes_8h_aa8eb40f5777b46fb5f90c98e4cd58de4}{FbxStringDT}, \textcolor{stringliteral}{"My Option Group UI Label"});
+\}
+\end{DoxyCode}
+
+
+Ex\+: to create a new boolean option under the \char`\"{}my\+Option\+Group\char`\"{} 
+\begin{DoxyCode}
+\hyperlink{class_fbx_property}{FbxProperty} myOptionGrp = ios->\hyperlink{class_fbx_i_o_settings_aa02805702152a4ef56d337c25b12d42b}{GetProperty}( \textcolor{stringliteral}{"Import|myOptionGroup"} ); \textcolor{comment}{// can also use
+       IOSN\_IMPORT|"myOptionGroup"}
+\textcolor{keywordflow}{if}(myOptionGrp.\hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{IsValid}()) \textcolor{comment}{// check if we have found the "myOptionGroup"}
+\{
+    \textcolor{keywordtype}{bool} defaultValue = \textcolor{keyword}{true};
+      \hyperlink{class_fbx_property}{FbxProperty} myOption = ios->\hyperlink{class_fbx_i_o_settings_adcfa47da119520473f466bfff28cdbe2}{AddProperty}(myOptionGrp, \textcolor{stringliteral}{"myOptionName"}, 
+      \hyperlink{fbxdatatypes_8h_a7b9d9eb0294ea5d7afe3362f668f2c94}{FbxBoolDT}, \textcolor{stringliteral}{"My Option UI label"} , &defaultValue, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92a4d86dfd4dbf3125592aaff150ba4deb4}{eFbxBool});
+\}
+\end{DoxyCode}
+
+
+Ex\+: to set some flags to my\+Option 
+\begin{DoxyCode}
+\hyperlink{class_fbx_property}{FbxProperty} myOption = ios->\hyperlink{class_fbx_i_o_settings_aa02805702152a4ef56d337c25b12d42b}{GetProperty}( \textcolor{stringliteral}{"Import|myOptionGroup|myOptionName"} );
+\textcolor{keywordflow}{if}(myOption.\hyperlink{class_fbx_property_a1c40042c55d1f4a1d4837f06fbc1d764}{IsValid}())
+\{
+      myOPtion.\hyperlink{class_fbx_property_a16da0381546978afc477b033239f1fc9}{ModifyFlag}(\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99a4da19ebe24aecee0a09724a84142aaae}{FbxPropertyFlags::eUIHidden}, \textcolor{keyword}{true});   \textcolor{comment}{// to
+       make that option not visible to the UI}
+      myOPtion.ModifyFlag(\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99a11531771ac2c7b07d8b49641028f2b57}{FbxPropertyFlags::eNotSavable}, \textcolor{keyword}{true}); \textcolor{comment}{// to avoid
+       the read/save of that option in XML file}
+\}
+\end{DoxyCode}
+ 
+
+ fbxiosettings.\+h の 207 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779b}\label{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779b}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Enveloppe\+System@{E\+Enveloppe\+System}}
+\index{E\+Enveloppe\+System@{E\+Enveloppe\+System}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Enveloppe\+System}{EEnveloppeSystem}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779b}{Fbx\+I\+O\+Settings\+::\+E\+Enveloppe\+System}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Skin\+Modifier@{e\+Skin\+Modifier}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Skin\+Modifier@{e\+Skin\+Modifier}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba861df1e3409327955e2a94c080887385}\label{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba861df1e3409327955e2a94c080887385}} 
+e\+Skin\+Modifier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Physic@{e\+Physic}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Physic@{e\+Physic}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba845d62bf580795a5a981f38baf5e59ed}\label{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba845d62bf580795a5a981f38baf5e59ed}} 
+e\+Physic&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bone\+Pro@{e\+Bone\+Pro}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Bone\+Pro@{e\+Bone\+Pro}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba1be4e2ff5346232d45a255ca9fefd7e1}\label{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba1be4e2ff5346232d45a255ca9fefd7e1}} 
+e\+Bone\+Pro&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Enveloppe\+System\+Count@{e\+Enveloppe\+System\+Count}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Enveloppe\+System\+Count@{e\+Enveloppe\+System\+Count}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba6747a96f533fb27d59ddfd99179a0a79}\label{class_fbx_i_o_settings_a8a5d3220d6ca36856bb81bcb1f4c779ba6747a96f533fb27d59ddfd99179a0a79}} 
+e\+Enveloppe\+System\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 543 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Geometry\+Type@{E\+Geometry\+Type}}
+\index{E\+Geometry\+Type@{E\+Geometry\+Type}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Geometry\+Type}{EGeometryType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363}{Fbx\+I\+O\+Settings\+::\+E\+Geometry\+Type}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Triangle@{e\+Triangle}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Triangle@{e\+Triangle}}}\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a9069b9b39853310b5f33e1e61a667ce3}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a9069b9b39853310b5f33e1e61a667ce3}} 
+e\+Triangle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Simplified\+Poly@{e\+Simplified\+Poly}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Simplified\+Poly@{e\+Simplified\+Poly}}}\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363ab46dcf358c1693009253f57ab459654e}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363ab46dcf358c1693009253f57ab459654e}} 
+e\+Simplified\+Poly&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Polygon@{e\+Polygon}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Polygon@{e\+Polygon}}}\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a7ab720510fd8497af92e680d07c3d4dc}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a7ab720510fd8497af92e680d07c3d4dc}} 
+e\+Polygon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Nurbs@{e\+Nurbs}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Nurbs@{e\+Nurbs}}}\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a6c207a78287107392e5a57fe403424bb}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a6c207a78287107392e5a57fe403424bb}} 
+e\+Nurbs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Patch@{e\+Patch}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Patch@{e\+Patch}}}\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a4d8f1d8ecbcf9122098a9e31359a02c7}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363a4d8f1d8ecbcf9122098a9e31359a02c7}} 
+e\+Patch&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Geometry\+Type\+Count@{e\+Geometry\+Type\+Count}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Geometry\+Type\+Count@{e\+Geometry\+Type\+Count}}}\mbox{\Hypertarget{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363afac7187ec5b77bf8e3dccfa0d81c64ab}\label{class_fbx_i_o_settings_acd642ea393adab1f27f165c58aa44363afac7187ec5b77bf8e3dccfa0d81c64ab}} 
+e\+Geometry\+Type\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 552 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4}\label{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+I\+K\+Type@{E\+I\+K\+Type}}
+\index{E\+I\+K\+Type@{E\+I\+K\+Type}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+I\+K\+Type}{EIKType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4}{Fbx\+I\+O\+Settings\+::\+E\+I\+K\+Type}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a4dc70ea9d0e84dac86a7e21208c30ea5}\label{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a4dc70ea9d0e84dac86a7e21208c30ea5}} 
+e\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+F\+B\+IK@{e\+F\+B\+IK}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+F\+B\+IK@{e\+F\+B\+IK}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a5bd22e55b47f357e19b5b29e1f4a23ec}\label{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a5bd22e55b47f357e19b5b29e1f4a23ec}} 
+e\+F\+B\+IK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Human\+IK@{e\+Human\+IK}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Human\+IK@{e\+Human\+IK}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a19b69a520421a5fa802285f7821b5f2d}\label{class_fbx_i_o_settings_a070c54cdbc9eb2a8ffb34cab1cc6f7c4a19b69a520421a5fa802285f7821b5f2d}} 
+e\+Human\+IK&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 563 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Language@{E\+Language}}
+\index{E\+Language@{E\+Language}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Language}{ELanguage}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}{Fbx\+I\+O\+Settings\+::\+E\+Language}}
+
+
+
+Supported languages enumeration list 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+E\+NU@{e\+E\+NU}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+E\+NU@{e\+E\+NU}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa8fda898bdbd505592c7d7b5971ea07ed}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa8fda898bdbd505592c7d7b5971ea07ed}} 
+e\+E\+NU&409 English -\/ United States \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+D\+EU@{e\+D\+EU}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+D\+EU@{e\+D\+EU}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa3af1c95587007b95301ac8f2cf84f545}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa3af1c95587007b95301ac8f2cf84f545}} 
+e\+D\+EU&407 German -\/ Germany \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+F\+RA@{e\+F\+RA}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+F\+RA@{e\+F\+RA}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa9880a81be07b871e6f4e38efc289442a}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa9880a81be07b871e6f4e38efc289442a}} 
+e\+F\+RA&40c French -\/ France \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+J\+PN@{e\+J\+PN}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+J\+PN@{e\+J\+PN}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa57a2d721392084f075cf5826aee4b806}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa57a2d721392084f075cf5826aee4b806}} 
+e\+J\+PN&411 Japanese -\/ Japan \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+K\+OR@{e\+K\+OR}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+K\+OR@{e\+K\+OR}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa733ed54132d846f72dccaf75e223a64e}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa733ed54132d846f72dccaf75e223a64e}} 
+e\+K\+OR&412 Korean(\+Extended Wansung) -\/ Korea \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+C\+HS@{e\+C\+HS}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+C\+HS@{e\+C\+HS}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa9b82a38394a273566c671012ee996dbf}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa9b82a38394a273566c671012ee996dbf}} 
+e\+C\+HS&804 Chinese -\/ P\+RC \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Language\+Count@{e\+Language\+Count}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Language\+Count@{e\+Language\+Count}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa42634e3786b8c234b00490de78dd7760}\label{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323fa42634e3786b8c234b00490de78dd7760}} 
+e\+Language\+Count&Total language count \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 213 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211}\label{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Load\+Mode@{E\+Load\+Mode}}
+\index{E\+Load\+Mode@{E\+Load\+Mode}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Load\+Mode}{ELoadMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211}{Fbx\+I\+O\+Settings\+::\+E\+Load\+Mode}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Create@{e\+Create}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Create@{e\+Create}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211a0414070b97a5f0192827ac4f8217cf93}\label{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211a0414070b97a5f0192827ac4f8217cf93}} 
+e\+Create&Add to scene(duplicate the ones with the same name) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Merge@{e\+Merge}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Merge@{e\+Merge}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211ae63d3a1974af470f16b65e334b22b4a7}\label{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211ae63d3a1974af470f16b65e334b22b4a7}} 
+e\+Merge&Add to scene and update animation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Exclusive\+Merge@{e\+Exclusive\+Merge}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Exclusive\+Merge@{e\+Exclusive\+Merge}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211ad93bf1b6e8c1d02f5f7803826c808d30}\label{class_fbx_i_o_settings_a7c0c9b5df78863a5d9acdcac80a04211ad93bf1b6e8c1d02f5f7803826c808d30}} 
+e\+Exclusive\+Merge&Update animation \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 502 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9}\label{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Object\+Derivation@{E\+Object\+Derivation}}
+\index{E\+Object\+Derivation@{E\+Object\+Derivation}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Object\+Derivation}{EObjectDerivation}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9}{Fbx\+I\+O\+Settings\+::\+E\+Object\+Derivation}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Layer@{e\+By\+Layer}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+By\+Layer@{e\+By\+Layer}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a5dfff368c195094a7bedaf97f9ec4b2e}\label{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a5dfff368c195094a7bedaf97f9ec4b2e}} 
+e\+By\+Layer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Entity@{e\+By\+Entity}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+By\+Entity@{e\+By\+Entity}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a7bc6999e9f14de08ad02f68ae3ad6549}\label{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a7bc6999e9f14de08ad02f68ae3ad6549}} 
+e\+By\+Entity&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Block@{e\+By\+Block}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+By\+Block@{e\+By\+Block}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a18f677f8405bfeeca807ef4d91cfb195}\label{class_fbx_i_o_settings_a90ea127c2cba2c2a655708eba3a867a9a18f677f8405bfeeca807ef4d91cfb195}} 
+e\+By\+Block&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 511 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dc}\label{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dc}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Quaternion\+Mode@{E\+Quaternion\+Mode}}
+\index{E\+Quaternion\+Mode@{E\+Quaternion\+Mode}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Quaternion\+Mode}{EQuaternionMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dc}{Fbx\+I\+O\+Settings\+::\+E\+Quaternion\+Mode}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+As\+Quaternion@{e\+As\+Quaternion}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+As\+Quaternion@{e\+As\+Quaternion}}}\mbox{\Hypertarget{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dca02a71d78d06c1acb57442bb9f221af79}\label{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dca02a71d78d06c1acb57442bb9f221af79}} 
+e\+As\+Quaternion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+As\+Euler@{e\+As\+Euler}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+As\+Euler@{e\+As\+Euler}}}\mbox{\Hypertarget{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dcaf57f840eeb8641638f08fb004fac7009}\label{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dcaf57f840eeb8641638f08fb004fac7009}} 
+e\+As\+Euler&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Resample@{e\+Resample}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Resample@{e\+Resample}}}\mbox{\Hypertarget{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dcae417ce7633f52326a18a7aba3fa46b0a}\label{class_fbx_i_o_settings_aa09529ca078f2444cfe040c8030dd3dcae417ce7633f52326a18a7aba3fa46b0a}} 
+e\+Resample&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 510 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5c}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5c}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Sys\+Frame\+Rate@{E\+Sys\+Frame\+Rate}}
+\index{E\+Sys\+Frame\+Rate@{E\+Sys\+Frame\+Rate}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Sys\+Frame\+Rate}{ESysFrameRate}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5c}{Fbx\+I\+O\+Settings\+::\+E\+Sys\+Frame\+Rate}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+User@{e\+Frame\+Rate\+User}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+User@{e\+Frame\+Rate\+User}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5caad7291a5aa8ce938e83f458a849df372}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5caad7291a5aa8ce938e83f458a849df372}} 
+e\+Frame\+Rate\+User&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Hours@{e\+Frame\+Rate\+Hours}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Hours@{e\+Frame\+Rate\+Hours}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca66f90c6d0ab620c6362216bca345fdea}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca66f90c6d0ab620c6362216bca345fdea}} 
+e\+Frame\+Rate\+Hours&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Minutes@{e\+Frame\+Rate\+Minutes}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Minutes@{e\+Frame\+Rate\+Minutes}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5caf1453d43486377775a8181a53ab95e65}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5caf1453d43486377775a8181a53ab95e65}} 
+e\+Frame\+Rate\+Minutes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Seconds@{e\+Frame\+Rate\+Seconds}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Seconds@{e\+Frame\+Rate\+Seconds}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca6349f60ceb625b9cab9f7c66c1ed4c94}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca6349f60ceb625b9cab9f7c66c1ed4c94}} 
+e\+Frame\+Rate\+Seconds&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Milliseconds@{e\+Frame\+Rate\+Milliseconds}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Milliseconds@{e\+Frame\+Rate\+Milliseconds}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cab2b90bcba7b797fb678c948b1e4c03d0}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cab2b90bcba7b797fb678c948b1e4c03d0}} 
+e\+Frame\+Rate\+Milliseconds&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Games15@{e\+Frame\+Rate\+Games15}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Games15@{e\+Frame\+Rate\+Games15}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cabccd307480c0da116803de0045ff388f}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cabccd307480c0da116803de0045ff388f}} 
+e\+Frame\+Rate\+Games15&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Film24@{e\+Frame\+Rate\+Film24}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Film24@{e\+Frame\+Rate\+Film24}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cadc9fb55e5e0caee613088cf9a7a07638}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cadc9fb55e5e0caee613088cf9a7a07638}} 
+e\+Frame\+Rate\+Film24&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+P\+A\+L25@{e\+Frame\+Rate\+P\+A\+L25}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+P\+A\+L25@{e\+Frame\+Rate\+P\+A\+L25}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cadefff446c88c0e98b0bd25d40b6d6b0e}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cadefff446c88c0e98b0bd25d40b6d6b0e}} 
+e\+Frame\+Rate\+P\+A\+L25&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+N\+T\+S\+C30@{e\+Frame\+Rate\+N\+T\+S\+C30}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+N\+T\+S\+C30@{e\+Frame\+Rate\+N\+T\+S\+C30}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca983c3e426ca43a32ffde449a527f2a65}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca983c3e426ca43a32ffde449a527f2a65}} 
+e\+Frame\+Rate\+N\+T\+S\+C30&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+Show\+Scan48@{e\+Frame\+Rate\+Show\+Scan48}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+Show\+Scan48@{e\+Frame\+Rate\+Show\+Scan48}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca1f68b42188b0b7ae4607f59708018295}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca1f68b42188b0b7ae4607f59708018295}} 
+e\+Frame\+Rate\+Show\+Scan48&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+P\+A\+L\+Field50@{e\+Frame\+Rate\+P\+A\+L\+Field50}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+P\+A\+L\+Field50@{e\+Frame\+Rate\+P\+A\+L\+Field50}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cae7a8177ef572a4255b731834b69bfbc3}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5cae7a8177ef572a4255b731834b69bfbc3}} 
+e\+Frame\+Rate\+P\+A\+L\+Field50&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Frame\+Rate\+N\+T\+S\+C\+Field60@{e\+Frame\+Rate\+N\+T\+S\+C\+Field60}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Frame\+Rate\+N\+T\+S\+C\+Field60@{e\+Frame\+Rate\+N\+T\+S\+C\+Field60}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca548291680fa488d1e199db24879bb93e}\label{class_fbx_i_o_settings_a03174dad652b535bade6fc22dd02fe5ca548291680fa488d1e199db24879bb93e}} 
+e\+Frame\+Rate\+N\+T\+S\+C\+Field60&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 526 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!E\+Sys\+Units@{E\+Sys\+Units}}
+\index{E\+Sys\+Units@{E\+Sys\+Units}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{E\+Sys\+Units}{ESysUnits}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4}{Fbx\+I\+O\+Settings\+::\+E\+Sys\+Units}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+User@{e\+Units\+User}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+User@{e\+Units\+User}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4adc735eedf95225f3ab9f4fbf57ec2b63}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4adc735eedf95225f3ab9f4fbf57ec2b63}} 
+e\+Units\+User&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Inches@{e\+Units\+Inches}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Inches@{e\+Units\+Inches}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a81c1538b2da8359bf5c7a54ad34e1a51}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a81c1538b2da8359bf5c7a54ad34e1a51}} 
+e\+Units\+Inches&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Feet@{e\+Units\+Feet}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Feet@{e\+Units\+Feet}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a71b0ef47dabdaaacc92d0e9da706de98}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a71b0ef47dabdaaacc92d0e9da706de98}} 
+e\+Units\+Feet&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unit\+Yards@{e\+Unit\+Yards}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Unit\+Yards@{e\+Unit\+Yards}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4ae2d2d67e54c29b82ab0a95ef5a237ca4}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4ae2d2d67e54c29b82ab0a95ef5a237ca4}} 
+e\+Unit\+Yards&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Miles@{e\+Units\+Miles}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Miles@{e\+Units\+Miles}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4af4c0dac41a1ac2ae64f9c65ca68ed042}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4af4c0dac41a1ac2ae64f9c65ca68ed042}} 
+e\+Units\+Miles&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Millimeters@{e\+Units\+Millimeters}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Millimeters@{e\+Units\+Millimeters}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a83ef02314749b73676a0a4e003e09d36}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a83ef02314749b73676a0a4e003e09d36}} 
+e\+Units\+Millimeters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Centimeters@{e\+Units\+Centimeters}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Centimeters@{e\+Units\+Centimeters}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a657f05ea2a2395602428a68526cd2ef1}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a657f05ea2a2395602428a68526cd2ef1}} 
+e\+Units\+Centimeters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Meters@{e\+Units\+Meters}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Meters@{e\+Units\+Meters}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a7889a6c0ad867a644960be0e034f1d31}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a7889a6c0ad867a644960be0e034f1d31}} 
+e\+Units\+Meters&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Units\+Kilometers@{e\+Units\+Kilometers}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!e\+Units\+Kilometers@{e\+Units\+Kilometers}}}\mbox{\Hypertarget{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a29dc672c7f9ac5174c903576954e90b0}\label{class_fbx_i_o_settings_a76920697cb36d849e282f46aa6f722b4a29dc672c7f9ac5174c903576954e90b0}} 
+e\+Units\+Kilometers&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxiosettings.\+h の 513 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_i_o_settings_adcfa47da119520473f466bfff28cdbe2}\label{class_fbx_i_o_settings_adcfa47da119520473f466bfff28cdbe2}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Add\+Property@{Add\+Property}}
+\index{Add\+Property@{Add\+Property}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Add\+Property()}{AddProperty()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+I\+O\+Settings\+::\+Add\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Parent\+Property,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type = {\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}()},  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const void $\ast$}]{p\+Value = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{bool}]{p\+Visible = {\ttfamily true},  }\item[{bool}]{p\+Savable = {\ttfamily true},  }\item[{bool}]{p\+Enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Add a property under another parent property with a value to set 
+\begin{DoxyParams}{引数}
+{\em p\+Parent\+Property} & \\
+\hline
+{\em p\+Name} & \\
+\hline
+{\em p\+Data\+Type} & \\
+\hline
+{\em p\+Label} & (optional, used by the UI as widget label) \\
+\hline
+{\em p\+Value} & \\
+\hline
+{\em p\+Visible} & (used by the UI to show or not that property) \\
+\hline
+{\em p\+Savable} & (to enable a read \& write to an X\+ML file) \\
+\hline
+{\em p\+Enabled} & (used by the widget UI to show enabled or disabled) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a new \hyperlink{class_fbx_property}{Fbx\+Property} created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_abf6db228c12b2b36500eba034685b3cb}\label{class_fbx_i_o_settings_abf6db228c12b2b36500eba034685b3cb}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Add\+Property\+Group@{Add\+Property\+Group}}
+\index{Add\+Property\+Group@{Add\+Property\+Group}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Add\+Property\+Group()}{AddPropertyGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+I\+O\+Settings\+::\+Add\+Property\+Group (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type = {\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}()},  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Add a property group under the root prop to be a direct child of I\+O\+S\+R\+O\+OT 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Data\+Type} & \\
+\hline
+{\em p\+Label} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a new \hyperlink{class_fbx_property}{Fbx\+Property} created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a108fa53c9bd3d89963f098a18f97e349}\label{class_fbx_i_o_settings_a108fa53c9bd3d89963f098a18f97e349}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Add\+Property\+Group@{Add\+Property\+Group}}
+\index{Add\+Property\+Group@{Add\+Property\+Group}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Add\+Property\+Group()}{AddPropertyGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+I\+O\+Settings\+::\+Add\+Property\+Group (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Parent\+Property,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type = {\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}()},  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{p\+Visible = {\ttfamily true},  }\item[{bool}]{p\+Savable = {\ttfamily true},  }\item[{bool}]{p\+Enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Add a property group under another parent property 
+\begin{DoxyParams}{引数}
+{\em p\+Parent\+Property} & \\
+\hline
+{\em p\+Name} & \\
+\hline
+{\em p\+Data\+Type} & \\
+\hline
+{\em p\+Label} & (optional, used by the UI as widget label) \\
+\hline
+{\em p\+Visible} & (used by the UI to show or not that property) \\
+\hline
+{\em p\+Savable} & (to enable a read \& write to an X\+ML file) \\
+\hline
+{\em p\+Enabled} & (used by the widget UI to show enabled or disabled) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a new \hyperlink{class_fbx_property}{Fbx\+Property} created 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a74e2aa168f3b0cac2a80ac355c5c4611}\label{class_fbx_i_o_settings_a74e2aa168f3b0cac2a80ac355c5c4611}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Add\+Property\+Min\+Max@{Add\+Property\+Min\+Max}}
+\index{Add\+Property\+Min\+Max@{Add\+Property\+Min\+Max}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Add\+Property\+Min\+Max()}{AddPropertyMinMax()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+I\+O\+Settings\+::\+Add\+Property\+Min\+Max (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Parent\+Property,  }\item[{const char $\ast$}]{p\+Name,  }\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Data\+Type = {\ttfamily \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}()},  }\item[{const char $\ast$}]{p\+Label = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const void $\ast$}]{p\+Value = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{const double $\ast$}]{p\+Min\+Value = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{const double $\ast$}]{p\+Max\+Value = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{bool}]{p\+Visible = {\ttfamily true},  }\item[{bool}]{p\+Savable = {\ttfamily true},  }\item[{bool}]{p\+Enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Add a property under another parent property with a value to set and a min max values 
+\begin{DoxyParams}{引数}
+{\em p\+Parent\+Property} & \\
+\hline
+{\em p\+Name} & \\
+\hline
+{\em p\+Data\+Type} & \\
+\hline
+{\em p\+Label} & (optional, used by the UI as widget label) \\
+\hline
+{\em p\+Value} & \\
+\hline
+{\em p\+Min\+Value} & \\
+\hline
+{\em p\+Max\+Value} & \\
+\hline
+{\em p\+Visible} & (used by the UI to show or not that property) \\
+\hline
+{\em p\+Savable} & (to enable a read \& write to an X\+ML file) \\
+\hline
+{\em p\+Enabled} & (used by the widget UI to show enabled or disabled) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a new \hyperlink{class_fbx_property}{Fbx\+Property} created 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Normally used with numeric properties Ex\+: integer, float, double, etc. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a7f722e05501bf87b108dbd6152bd2451}\label{class_fbx_i_o_settings_a7f722e05501bf87b108dbd6152bd2451}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+I\+O\+Settings\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a376a4234985ee351448dfe5b3ee8b128}\label{class_fbx_i_o_settings_a376a4234985ee351448dfe5b3ee8b128}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+I\+O\+Settings\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_ab1680fefd56c9ad5abff5709b905a617}\label{class_fbx_i_o_settings_ab1680fefd56c9ad5abff5709b905a617}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+I\+O\+Settings\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a6f30f2ea6148cfe5070444c38842ed6f}\label{class_fbx_i_o_settings_a6f30f2ea6148cfe5070444c38842ed6f}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Empty\+Enum\+Prop@{Empty\+Enum\+Prop}}
+\index{Empty\+Enum\+Prop@{Empty\+Enum\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Empty\+Enum\+Prop()}{EmptyEnumProp()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Empty\+Enum\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Empty all the Fbx\+String+integer pair of the enum property 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a253fc042fe3d373a9e1c369ac2d2bd27}\label{class_fbx_i_o_settings_a253fc042fe3d373a9e1c369ac2d2bd27}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language@{Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language}}
+\index{Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language@{Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language()}{Get\_Max\_Runtime\_Language()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}{E\+Language} Fbx\+I\+O\+Settings\+::\+Get\+\_\+\+Max\+\_\+\+Runtime\+\_\+\+Language (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Reg\+Location }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_aa30a3e515f60aa1fcbd82b6b34994ad0}\label{class_fbx_i_o_settings_aa30a3e515f60aa1fcbd82b6b34994ad0}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Bool\+Prop@{Get\+Bool\+Prop}}
+\index{Get\+Bool\+Prop@{Get\+Bool\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Bool\+Prop()}{GetBoolProp()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Settings\+::\+Get\+Bool\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get a bool property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a4d068caa98d8183a45b520d6ade6ad41}\label{class_fbx_i_o_settings_a4d068caa98d8183a45b520d6ade6ad41}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Double\+Prop@{Get\+Double\+Prop}}
+\index{Get\+Double\+Prop@{Get\+Double\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Double\+Prop()}{GetDoubleProp()}}
+{\footnotesize\ttfamily double Fbx\+I\+O\+Settings\+::\+Get\+Double\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{double}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get a double property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a0d328ff98e1cce8d911e78cfe83aa662}\label{class_fbx_i_o_settings_a0d328ff98e1cce8d911e78cfe83aa662}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Enum\+Index@{Get\+Enum\+Index}}
+\index{Get\+Enum\+Index@{Get\+Enum\+Index}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Index()}{GetEnumIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Settings\+::\+Get\+Enum\+Index (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Get the index of a \hyperlink{class_fbx_string}{Fbx\+String} from the enum property using the full path. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & Return -\/1 if the \hyperlink{class_fbx_string}{Fbx\+String} is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_aef7ef50f0117516d9326b4b74e70f314}\label{class_fbx_i_o_settings_aef7ef50f0117516d9326b4b74e70f314}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Enum\+Index@{Get\+Enum\+Index}}
+\index{Get\+Enum\+Index@{Get\+Enum\+Index}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Index()}{GetEnumIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Settings\+::\+Get\+Enum\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{enum\+String,  }\item[{bool}]{p\+No\+Case = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+Get the enum index of a \hyperlink{class_fbx_string}{Fbx\+String} 
+\begin{DoxyParams}{引数}
+{\em \&p\+Prop} & a ref to an enum prop \\
+\hline
+{\em \&enum\+String} & ref to string to find \\
+\hline
+{\em p\+No\+Case} & To match case sensitive or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the index found or -\/1 if not found 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a4c34547b1b4267694f51ab159d95b9da}\label{class_fbx_i_o_settings_a4c34547b1b4267694f51ab159d95b9da}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Enum\+Prop@{Get\+Enum\+Prop}}
+\index{Get\+Enum\+Prop@{Get\+Enum\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Prop()}{GetEnumProp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+Settings\+::\+Get\+Enum\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get the \hyperlink{class_fbx_string}{Fbx\+String} at current index of an enum property using the full path. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a \hyperlink{class_fbx_string}{Fbx\+String} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a042c5ff793f455ef7e982fb2a9f01ce7}\label{class_fbx_i_o_settings_a042c5ff793f455ef7e982fb2a9f01ce7}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Enum\+Prop@{Get\+Enum\+Prop}}
+\index{Get\+Enum\+Prop@{Get\+Enum\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Enum\+Prop()}{GetEnumProp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Settings\+::\+Get\+Enum\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{int}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get the integer at current index of an enum property using the full path. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_ac44253178e75301e554ee8350274247c}\label{class_fbx_i_o_settings_ac44253178e75301e554ee8350274247c}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+File\+Merge\+Description@{Get\+File\+Merge\+Description}}
+\index{Get\+File\+Merge\+Description@{Get\+File\+Merge\+Description}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+File\+Merge\+Description()}{GetFileMergeDescription()}}
+{\footnotesize\ttfamily static const char$\ast$ Fbx\+I\+O\+Settings\+::\+Get\+File\+Merge\+Description (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a3ab14ccc4a1ecb92bc94c61597d50d08}\label{class_fbx_i_o_settings_a3ab14ccc4a1ecb92bc94c61597d50d08}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Int\+Prop@{Get\+Int\+Prop}}
+\index{Get\+Int\+Prop@{Get\+Int\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Int\+Prop()}{GetIntProp()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Settings\+::\+Get\+Int\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{int}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get a int property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a2588777e1bbeed1602e2538fa47cd986}\label{class_fbx_i_o_settings_a2588777e1bbeed1602e2538fa47cd986}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Language\+Label@{Get\+Language\+Label}}
+\index{Get\+Language\+Label@{Get\+Language\+Label}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Language\+Label()}{GetLanguageLabel()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+Settings\+::\+Get\+Language\+Label (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_aa02805702152a4ef56d337c25b12d42b}\label{class_fbx_i_o_settings_aa02805702152a4ef56d337c25b12d42b}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Property@{Get\+Property}}
+\index{Get\+Property@{Get\+Property}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Property()}{GetProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+I\+O\+Settings\+::\+Get\+Property (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const}
+
+Get a property using the full path in the tree ex\+: \char`\"{}\+Export$\vert$\+Include\+Grp$\vert$\+Animation\char`\"{} 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a \hyperlink{class_fbx_property}{Fbx\+Property} found 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+We strongly encourage to use the defined path in kfbxiosettingspath.\+h ex\+: E\+X\+P\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON == \char`\"{}\+Export$\vert$\+Include\+Grp$\vert$\+Animation\char`\"{} 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_aedc91a76523e1fb2fe015901afd5d8bc}\label{class_fbx_i_o_settings_aedc91a76523e1fb2fe015901afd5d8bc}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Property@{Get\+Property}}
+\index{Get\+Property@{Get\+Property}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Property()}{GetProperty()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+I\+O\+Settings\+::\+Get\+Property (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Parent\+Property,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const}
+
+Get a property using a short path found under the parent property. 
+\begin{DoxyParams}{引数}
+{\em p\+Parent\+Property} & \\
+\hline
+{\em p\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a \hyperlink{class_fbx_property}{Fbx\+Property} found 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This is a faster way to access a property when the parent is known 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a04310e1fd32d0f8852eef9dae52aab54}\label{class_fbx_i_o_settings_a04310e1fd32d0f8852eef9dae52aab54}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Prop\+Info@{Get\+Prop\+Info}}
+\index{Get\+Prop\+Info@{Get\+Prop\+Info}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Prop\+Info()}{GetPropInfo()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_prop_info}{Fbx\+I\+O\+Prop\+Info}$\ast$ Fbx\+I\+O\+Settings\+::\+Get\+Prop\+Info (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_ab3e057be50be4fbeae6e70ceb38cf1fa}\label{class_fbx_i_o_settings_ab3e057be50be4fbeae6e70ceb38cf1fa}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+String\+Prop@{Get\+String\+Prop}}
+\index{Get\+String\+Prop@{Get\+String\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+String\+Prop()}{GetStringProp()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+Settings\+::\+Get\+String\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get a \hyperlink{class_fbx_string}{Fbx\+String} property value using the full path. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The \hyperlink{class_fbx_string}{Fbx\+String} value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a369d87d5f1785484917a44abd5f70bd3}\label{class_fbx_i_o_settings_a369d87d5f1785484917a44abd5f70bd3}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+Time\+Prop@{Get\+Time\+Prop}}
+\index{Get\+Time\+Prop@{Get\+Time\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Time\+Prop()}{GetTimeProp()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_time}{Fbx\+Time} Fbx\+I\+O\+Settings\+::\+Get\+Time\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Def\+Value }\end{DoxyParamCaption}) const}
+
+Get a \hyperlink{class_fbx_time}{Fbx\+Time} property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Def\+Value} & Value returned if the property is not found \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a6ddfd3af6a5f6974d4bd3cd6b5315fd6}\label{class_fbx_i_o_settings_a6ddfd3af6a5f6974d4bd3cd6b5315fd6}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Get\+User\+My\+Document\+Dir@{Get\+User\+My\+Document\+Dir}}
+\index{Get\+User\+My\+Document\+Dir@{Get\+User\+My\+Document\+Dir}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Get\+User\+My\+Document\+Dir()}{GetUserMyDocumentDir()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+Settings\+::\+Get\+User\+My\+Document\+Dir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a8276b09f853df8e836a9760fd8f8cbfb}\label{class_fbx_i_o_settings_a8276b09f853df8e836a9760fd8f8cbfb}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Is\+Enum\+Exist@{Is\+Enum\+Exist}}
+\index{Is\+Enum\+Exist@{Is\+Enum\+Exist}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Is\+Enum\+Exist()}{IsEnumExist()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Settings\+::\+Is\+Enum\+Exist (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{enum\+String }\end{DoxyParamCaption}) const}
+
+Check if a \hyperlink{class_fbx_string}{Fbx\+String} is present in the enum property. 
+\begin{DoxyParams}{引数}
+{\em \&p\+Prop} & a ref to an enum prop \\
+\hline
+{\em \&enum\+String} & ref to a \hyperlink{class_fbx_string}{Fbx\+String} to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if found, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a83350a45f6370913ca1b2c0527a07d8b}\label{class_fbx_i_o_settings_a83350a45f6370913ca1b2c0527a07d8b}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Read\+X\+M\+L\+File@{Read\+X\+M\+L\+File}}
+\index{Read\+X\+M\+L\+File@{Read\+X\+M\+L\+File}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Read\+X\+M\+L\+File()}{ReadXMLFile()}}
+{\footnotesize\ttfamily virtual bool Fbx\+I\+O\+Settings\+::\+Read\+X\+M\+L\+File (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Load the settings values from an X\+ML file. 
+\begin{DoxyParams}{引数}
+{\em path} & The path of the X\+ML file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a843dcbf01c90245e4bfc08effe999acc}\label{class_fbx_i_o_settings_a843dcbf01c90245e4bfc08effe999acc}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Read\+Xml\+Prop\+From\+My\+Document@{Read\+Xml\+Prop\+From\+My\+Document}}
+\index{Read\+Xml\+Prop\+From\+My\+Document@{Read\+Xml\+Prop\+From\+My\+Document}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Read\+Xml\+Prop\+From\+My\+Document()}{ReadXmlPropFromMyDocument()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Settings\+::\+Read\+Xml\+Prop\+From\+My\+Document (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{sub\+Dir,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{filename }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_aebf0649980477e8ec80d1d9364304392}\label{class_fbx_i_o_settings_aebf0649980477e8ec80d1d9364304392}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Remove\+Enum\+Prop\+Value@{Remove\+Enum\+Prop\+Value}}
+\index{Remove\+Enum\+Prop\+Value@{Remove\+Enum\+Prop\+Value}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Remove\+Enum\+Prop\+Value()}{RemoveEnumPropValue()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Remove\+Enum\+Prop\+Value (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Value }\end{DoxyParamCaption})}
+
+Remove a pair of Fbx\+String+integer from an enum property. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & The \hyperlink{class_fbx_string}{Fbx\+String} to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The first \hyperlink{class_fbx_string}{Fbx\+String} found from 0 index will be removed only even if the same \hyperlink{class_fbx_string}{Fbx\+String} exist in other index, if the current index was on the \hyperlink{class_fbx_string}{Fbx\+String} found the current index will be set to 0 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_ad2c660ef846b66dcf569079299391745}\label{class_fbx_i_o_settings_ad2c660ef846b66dcf569079299391745}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Bool\+Prop@{Set\+Bool\+Prop}}
+\index{Set\+Bool\+Prop@{Set\+Bool\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Bool\+Prop()}{SetBoolProp()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Bool\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{bool}]{p\+Value }\end{DoxyParamCaption})}
+
+set a bool property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_settings_ae97bbc6c4ae0534788dba82e3cfd0c4f}\label{class_fbx_i_o_settings_ae97bbc6c4ae0534788dba82e3cfd0c4f}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Double\+Prop@{Set\+Double\+Prop}}
+\index{Set\+Double\+Prop@{Set\+Double\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Double\+Prop()}{SetDoubleProp()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Double\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Set a double property using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a26d37be8fcf5c4d74ee0dfb95b39923d}\label{class_fbx_i_o_settings_a26d37be8fcf5c4d74ee0dfb95b39923d}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Enum\+Prop@{Set\+Enum\+Prop}}
+\index{Set\+Enum\+Prop@{Set\+Enum\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Enum\+Prop()}{SetEnumProp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Enum\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Value }\end{DoxyParamCaption})}
+
+Set the current index using an existing \hyperlink{class_fbx_string}{Fbx\+String} of an enum property using the full path. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The current index will not change if the \hyperlink{class_fbx_string}{Fbx\+String} is not found 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_af1000ac57d0e7af9e55f9f629d50330f}\label{class_fbx_i_o_settings_af1000ac57d0e7af9e55f9f629d50330f}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Enum\+Prop@{Set\+Enum\+Prop}}
+\index{Set\+Enum\+Prop@{Set\+Enum\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Enum\+Prop()}{SetEnumProp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Enum\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{int}]{p\+Value }\end{DoxyParamCaption})}
+
+Set the current index of an enum property using the full path. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The current index will not change if the p\+Value is out of bound 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a3a729325e682c916226227e4ebcebd58}\label{class_fbx_i_o_settings_a3a729325e682c916226227e4ebcebd58}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Flag@{Set\+Flag}}
+\index{Set\+Flag@{Set\+Flag}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Flag()}{SetFlag()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Settings\+::\+Set\+Flag (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99}{Fbx\+Property\+Flags\+::\+E\+Flags}}]{prop\+Flag,  }\item[{bool}]{p\+Value }\end{DoxyParamCaption})}
+
+Set a specific flag value on a property using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em prop\+Flag} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Always true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a5284810e44344eb94b1dcdd97af4a8a3}\label{class_fbx_i_o_settings_a5284810e44344eb94b1dcdd97af4a8a3}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Int\+Prop@{Set\+Int\+Prop}}
+\index{Set\+Int\+Prop@{Set\+Int\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Int\+Prop()}{SetIntProp()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Int\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{int}]{p\+Value }\end{DoxyParamCaption})}
+
+Set a int property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_settings_ac2fc08a0a553a6fc6c4e5e9891b6ad38}\label{class_fbx_i_o_settings_ac2fc08a0a553a6fc6c4e5e9891b6ad38}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Language\+Label@{Set\+Language\+Label}}
+\index{Set\+Language\+Label@{Set\+Language\+Label}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Language\+Label()}{SetLanguageLabel()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Language\+Label (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Label }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a23c19390ac805e94866ae738953bb479}\label{class_fbx_i_o_settings_a23c19390ac805e94866ae738953bb479}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Prop\+Visible@{Set\+Prop\+Visible}}
+\index{Set\+Prop\+Visible@{Set\+Prop\+Visible}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Prop\+Visible()}{SetPropVisible()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Prop\+Visible (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop,  }\item[{bool}]{p\+With\+Children,  }\item[{bool}]{p\+Visible }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_aadffc404d2cfc79ee842265c46abbc12}\label{class_fbx_i_o_settings_aadffc404d2cfc79ee842265c46abbc12}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+String\+Prop@{Set\+String\+Prop}}
+\index{Set\+String\+Prop@{Set\+String\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+String\+Prop()}{SetStringProp()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+String\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Value }\end{DoxyParamCaption})}
+
+Set a \hyperlink{class_fbx_string}{Fbx\+String} property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a780a8567ad7916be8914e9a22c09f1a5}\label{class_fbx_i_o_settings_a780a8567ad7916be8914e9a22c09f1a5}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Set\+Time\+Prop@{Set\+Time\+Prop}}
+\index{Set\+Time\+Prop@{Set\+Time\+Prop}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Time\+Prop()}{SetTimeProp()}}
+{\footnotesize\ttfamily void Fbx\+I\+O\+Settings\+::\+Set\+Time\+Prop (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Value }\end{DoxyParamCaption})}
+
+Set a \hyperlink{class_fbx_time}{Fbx\+Time} property value using the full path 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \\
+\hline
+{\em p\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+a \hyperlink{class_fbx_time}{Fbx\+Time} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a5b8c0000832b00d77e469cfb1b8f4c81}\label{class_fbx_i_o_settings_a5b8c0000832b00d77e469cfb1b8f4c81}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Write\+X\+M\+L\+File@{Write\+X\+M\+L\+File}}
+\index{Write\+X\+M\+L\+File@{Write\+X\+M\+L\+File}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Write\+X\+M\+L\+File()}{WriteXMLFile()}}
+{\footnotesize\ttfamily virtual bool Fbx\+I\+O\+Settings\+::\+Write\+X\+M\+L\+File (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write the settings values to an X\+ML file. 
+\begin{DoxyParams}{引数}
+{\em path} & The path of the X\+ML file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The flag of the property must be \hyperlink{class_fbx_property_flags_afabfa7e0949aac8a7dcdf8a141867e99a11531771ac2c7b07d8b49641028f2b57}{Fbx\+Property\+Flags\+::e\+Not\+Savable} == false 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_abd6cac9a8962bee693960397190a9771}\label{class_fbx_i_o_settings_abd6cac9a8962bee693960397190a9771}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Write\+Xml\+Prop\+To\+File@{Write\+Xml\+Prop\+To\+File}}
+\index{Write\+Xml\+Prop\+To\+File@{Write\+Xml\+Prop\+To\+File}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Write\+Xml\+Prop\+To\+File()}{WriteXmlPropToFile()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Settings\+::\+Write\+Xml\+Prop\+To\+File (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Full\+Path,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{prop\+Path }\end{DoxyParamCaption})}
+
+Write the settings values to an X\+ML file. 
+\begin{DoxyParams}{引数}
+{\em p\+Full\+Path} & The path of the X\+ML file. \\
+\hline
+{\em prop\+Path} & a prop Path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To save only a branch of the settings ex\+: Import branch only 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a7cdebdeff147dbdb99faaadc874e5d69}\label{class_fbx_i_o_settings_a7cdebdeff147dbdb99faaadc874e5d69}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!Write\+Xml\+Prop\+To\+My\+Document@{Write\+Xml\+Prop\+To\+My\+Document}}
+\index{Write\+Xml\+Prop\+To\+My\+Document@{Write\+Xml\+Prop\+To\+My\+Document}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{Write\+Xml\+Prop\+To\+My\+Document()}{WriteXmlPropToMyDocument()}}
+{\footnotesize\ttfamily bool Fbx\+I\+O\+Settings\+::\+Write\+Xml\+Prop\+To\+My\+Document (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{sub\+Dir,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{filename,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{prop\+Path }\end{DoxyParamCaption})}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_i_o_settings_a138a9e01c4f15719b15710a0d9393623}\label{class_fbx_i_o_settings_a138a9e01c4f15719b15710a0d9393623}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!exp\+Info@{exp\+Info}}
+\index{exp\+Info@{exp\+Info}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{exp\+Info}{expInfo}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_info}{Fbx\+I\+O\+Info} Fbx\+I\+O\+Settings\+::exp\+Info}
+
+
+
+ fbxiosettings.\+h の 489 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_aa966915ec88f2963202d309e43b12e34}\label{class_fbx_i_o_settings_aa966915ec88f2963202d309e43b12e34}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!imp\+Info@{imp\+Info}}
+\index{imp\+Info@{imp\+Info}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{imp\+Info}{impInfo}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_info}{Fbx\+I\+O\+Info} Fbx\+I\+O\+Settings\+::imp\+Info}
+
+
+
+ fbxiosettings.\+h の 488 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_settings_a66b062ff1bbcedce5978358a81ec9026}\label{class_fbx_i_o_settings_a66b062ff1bbcedce5978358a81ec9026}} 
+\index{Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}!U\+I\+Language@{U\+I\+Language}}
+\index{U\+I\+Language@{U\+I\+Language}!Fbx\+I\+O\+Settings@{Fbx\+I\+O\+Settings}}
+\subsubsection{\texorpdfstring{U\+I\+Language}{UILanguage}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_settings_a84f2effd8e41c382faa5ca58046f323f}{E\+Language} Fbx\+I\+O\+Settings\+::\+U\+I\+Language}
+
+
+
+ fbxiosettings.\+h の 483 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxiosettings_8h}{fbxiosettings.\+h}\end{DoxyCompactItemize}

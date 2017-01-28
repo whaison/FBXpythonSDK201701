@@ -1,0 +1,522 @@
+\hypertarget{class_fbx_map}{}\section{Fbx\+Map$<$ Key, Type, Compare, Allocator $>$ クラステンプレート}
+\label{class_fbx_map}\index{Fbx\+Map$<$ Key, Type, Compare, Allocator $>$@{Fbx\+Map$<$ Key, Type, Compare, Allocator $>$}}
+
+
+{\ttfamily \#include $<$fbxmap.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_map_1_1_key_value_pair}{Key\+Value\+Pair}
+\begin{DoxyCompactList}\small\item\em This class defines the key-\/value pairs used by the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef Type \hyperlink{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}{Value\+Type}
+\item 
+typedef Key \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type}
+\item 
+typedef Storage\+Type\+::\+Record\+Type \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}
+\item 
+typedef \hyperlink{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}{Storage\+Type\+::\+Iterator\+Type} \hyperlink{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}{Iterator}
+\item 
+typedef \hyperlink{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}{Storage\+Type\+::\+Const\+Iterator\+Type} \hyperlink{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}{Const\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_map_ad9fcc220fda44cdd23ad848d1dcd5725}{Reserve} (unsigned int p\+Record\+Count)
+\item 
+int \hyperlink{class_fbx_map_a0dcb49b244b4de4a27b4157a5915d2ae}{Get\+Size} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the number of key-\/value pairs it holds. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_pair}{Fbx\+Pair}$<$ \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$, bool $>$ \hyperlink{class_fbx_map_a520c1d971dfe2401aa3d9824a0344ce4}{Insert} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key, const \hyperlink{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}{Value\+Type} \&p\+Value)
+\item 
+bool \hyperlink{class_fbx_map_ae4d2e72014223a8292472394d80e4909}{Remove} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key)
+\item 
+void \hyperlink{class_fbx_map_a4d7bc86f85835f091d6623d6e358d2ca}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the map. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_map_a64fb934f6378b6d41b383bdcfa3b5b26}{Empty} () const
+\begin{DoxyCompactList}\small\item\em Query whether the map is empty. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}{Iterator} \hyperlink{class_fbx_map_ae4c5e09fb73bde49ef7f53ab0ad11fbd}{Begin} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the begin iterator of the map. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}{Iterator} \hyperlink{class_fbx_map_aaaef5f105428c380732482c46ad4b826}{End} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the end iterator of the map. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}{Const\+Iterator} \hyperlink{class_fbx_map_af6956e55ea4b46656a9a357935d74b96}{Begin} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the begin iterator of the map. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}{Const\+Iterator} \hyperlink{class_fbx_map_a76fc48a3c9243bcd747e6725a1e148b5}{End} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the end iterator of the map. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_a39d841b85599678c497c960e060d3772}{Find} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key) const
+\item 
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_a3ed10339972bfa73f5123a871c1f7e5d}{Find} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key)
+\item 
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_a4ad230da7739de9f136a07d7565411ab}{Upper\+Bound} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key) const
+\item 
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_aaaa41638bc860b13b3abc232d1db08e7}{Upper\+Bound} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key)
+\item 
+\hyperlink{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}{Value\+Type} \& \hyperlink{class_fbx_map_a2c0f757eed20687c6b8fd3339c0f35ce}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&p\+Key)
+\item 
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_a12efe88fe10227cf0aca2284a3474193}{Minimum} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the key-\/value pair which is the minimum key in map. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_a5ea3f42780e9896b0503f9a67ee8607e}{Minimum} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the key-\/value pair which is the minimum key in map. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_af27d42885327b837114b1c51373be612}{Maximum} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the key-\/value pair which is the maximum key in map. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type} $\ast$ \hyperlink{class_fbx_map_a05a712e0a43083d5397ecda3003d81e1}{Maximum} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the key-\/value pair which is the maximum key in map. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_map_a273b204e69895fed84c1193491f992c8}{Fbx\+Map} ()
+\item 
+\hyperlink{class_fbx_map_a3b0b46c7a7698ab185aea731bfe52b69}{Fbx\+Map} (const \hyperlink{class_fbx_map}{Fbx\+Map} \&p\+Map)
+\item 
+\hyperlink{class_fbx_map_ac0883128b3b0a4c25e55d153841d2a01}{$\sim$\+Fbx\+Map} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ \hyperlink{class_fbx_map_1_1_key_value_pair}{Key\+Value\+Pair}, Compare, Allocator $>$ \hyperlink{class_fbx_map_ad7e4fa113e167dfd44f52993fa302c2d}{Storage\+Type}
+\begin{DoxyCompactList}\small\item\em Declaration of the storage type used by the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$\newline
+class Fbx\+Map$<$ Key, Type, Compare, Allocator $>$}
+
+This class implements an efficient map based on key comparison, which stores key-\/value pairs. It executes insertion, deletion and query operations in O(log(n)) time. 
+
+ fbxmap.\+h の 68 行目に定義があります。
+
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}\label{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}} 
+\index{Fbx\+Map@{Fbx\+Map}!Const\+Iterator@{Const\+Iterator}}
+\index{Const\+Iterator@{Const\+Iterator}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Const\+Iterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}{Storage\+Type\+::\+Const\+Iterator\+Type} \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}{Const\+Iterator}}
+
+
+
+ fbxmap.\+h の 100 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}\label{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}} 
+\index{Fbx\+Map@{Fbx\+Map}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}{Storage\+Type\+::\+Iterator\+Type} \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}{Iterator}}
+
+
+
+ fbxmap.\+h の 99 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}\label{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}} 
+\index{Fbx\+Map@{Fbx\+Map}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Key\+Type}{KeyType}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef Key \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type}}
+
+
+
+ fbxmap.\+h の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}\label{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}} 
+\index{Fbx\+Map@{Fbx\+Map}!Record\+Type@{Record\+Type}}
+\index{Record\+Type@{Record\+Type}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Record\+Type}{RecordType}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef Storage\+Type\+::\+Record\+Type \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}}
+
+
+
+ fbxmap.\+h の 98 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_ad7e4fa113e167dfd44f52993fa302c2d}\label{class_fbx_map_ad7e4fa113e167dfd44f52993fa302c2d}} 
+\index{Fbx\+Map@{Fbx\+Map}!Storage\+Type@{Storage\+Type}}
+\index{Storage\+Type@{Storage\+Type}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Storage\+Type}{StorageType}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$\hyperlink{class_fbx_map_1_1_key_value_pair}{Key\+Value\+Pair}, Compare, Allocator$>$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map_ad7e4fa113e167dfd44f52993fa302c2d}{Storage\+Type}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Declaration of the storage type used by the map. 
+
+
+
+ fbxmap.\+h の 93 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}\label{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}} 
+\index{Fbx\+Map@{Fbx\+Map}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Value\+Type}{ValueType}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef Type \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}{Value\+Type}}
+
+
+
+ fbxmap.\+h の 96 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_map_a273b204e69895fed84c1193491f992c8}\label{class_fbx_map_a273b204e69895fed84c1193491f992c8}} 
+\index{Fbx\+Map@{Fbx\+Map}!Fbx\+Map@{Fbx\+Map}}
+\index{Fbx\+Map@{Fbx\+Map}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Fbx\+Map()}{FbxMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map}{Fbx\+Map} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxmap.\+h の 244 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a3b0b46c7a7698ab185aea731bfe52b69}\label{class_fbx_map_a3b0b46c7a7698ab185aea731bfe52b69}} 
+\index{Fbx\+Map@{Fbx\+Map}!Fbx\+Map@{Fbx\+Map}}
+\index{Fbx\+Map@{Fbx\+Map}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Fbx\+Map()}{FbxMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_map}{Fbx\+Map} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$ \&}]{p\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxmap.\+h の 245 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_ac0883128b3b0a4c25e55d153841d2a01}\label{class_fbx_map_ac0883128b3b0a4c25e55d153841d2a01}} 
+\index{Fbx\+Map@{Fbx\+Map}!````~Fbx\+Map@{$\sim$\+Fbx\+Map}}
+\index{````~Fbx\+Map@{$\sim$\+Fbx\+Map}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Map()}{~FbxMap()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::$\sim$\hyperlink{class_fbx_map}{Fbx\+Map} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxmap.\+h の 246 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_map_ae4c5e09fb73bde49ef7f53ab0ad11fbd}\label{class_fbx_map_ae4c5e09fb73bde49ef7f53ab0ad11fbd}} 
+\index{Fbx\+Map@{Fbx\+Map}!Begin@{Begin}}
+\index{Begin@{Begin}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Begin()}{Begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}{Iterator} \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the begin iterator of the map. 
+
+
+
+ fbxmap.\+h の 145 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_af6956e55ea4b46656a9a357935d74b96}\label{class_fbx_map_af6956e55ea4b46656a9a357935d74b96}} 
+\index{Fbx\+Map@{Fbx\+Map}!Begin@{Begin}}
+\index{Begin@{Begin}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Begin()}{Begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}{Const\+Iterator} \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the begin iterator of the map. 
+
+
+
+ fbxmap.\+h の 157 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a4d7bc86f85835f091d6623d6e358d2ca}\label{class_fbx_map_a4d7bc86f85835f091d6623d6e358d2ca}} 
+\index{Fbx\+Map@{Fbx\+Map}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+void \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear the map. 
+
+
+
+ fbxmap.\+h の 133 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a64fb934f6378b6d41b383bdcfa3b5b26}\label{class_fbx_map_a64fb934f6378b6d41b383bdcfa3b5b26}} 
+\index{Fbx\+Map@{Fbx\+Map}!Empty@{Empty}}
+\index{Empty@{Empty}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+bool \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query whether the map is empty. 
+
+
+
+ fbxmap.\+h の 139 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_aaaef5f105428c380732482c46ad4b826}\label{class_fbx_map_aaaef5f105428c380732482c46ad4b826}} 
+\index{Fbx\+Map@{Fbx\+Map}!End@{End}}
+\index{End@{End}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{End()}{End()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_ab0989f3b30c0c8652ff9ee1b28b5c1af}{Iterator} \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the end iterator of the map. 
+
+
+
+ fbxmap.\+h の 151 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a76fc48a3c9243bcd747e6725a1e148b5}\label{class_fbx_map_a76fc48a3c9243bcd747e6725a1e148b5}} 
+\index{Fbx\+Map@{Fbx\+Map}!End@{End}}
+\index{End@{End}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{End()}{End()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_acf89f4bb5cf415e5e04087c2179bf367}{Const\+Iterator} \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the end iterator of the map. 
+
+
+
+ fbxmap.\+h の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a39d841b85599678c497c960e060d3772}\label{class_fbx_map_a39d841b85599678c497c960e060d3772}} 
+\index{Fbx\+Map@{Fbx\+Map}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Query a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A key-\/value pair if success, N\+U\+LL if the key is not found. 
+\end{DoxyReturn}
+
+
+ fbxmap.\+h の 171 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a3ed10339972bfa73f5123a871c1f7e5d}\label{class_fbx_map_a3ed10339972bfa73f5123a871c1f7e5d}} 
+\index{Fbx\+Map@{Fbx\+Map}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Query a key. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A key-\/value pair if success, N\+U\+LL if it\textquotesingle{}s not found. 
+\end{DoxyReturn}
+
+
+ fbxmap.\+h の 179 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a0dcb49b244b4de4a27b4157a5915d2ae}\label{class_fbx_map_a0dcb49b244b4de4a27b4157a5915d2ae}} 
+\index{Fbx\+Map@{Fbx\+Map}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+int \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the number of key-\/value pairs it holds. 
+
+
+
+ fbxmap.\+h の 110 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a520c1d971dfe2401aa3d9824a0344ce4}\label{class_fbx_map_a520c1d971dfe2401aa3d9824a0344ce4}} 
+\index{Fbx\+Map@{Fbx\+Map}!Insert@{Insert}}
+\index{Insert@{Insert}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_pair}{Fbx\+Pair}$<$\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$, bool$>$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Insert (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key,  }\item[{const \hyperlink{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}{Value\+Type} \&}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a key-\/value pair. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+{\em p\+Value} & The value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the key is already present in the map, returns the existing pair and false; else returns the pointer to the new key-\/value and true. 
+\end{DoxyReturn}
+
+
+ fbxmap.\+h の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_af27d42885327b837114b1c51373be612}\label{class_fbx_map_af27d42885327b837114b1c51373be612}} 
+\index{Fbx\+Map@{Fbx\+Map}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Maximum()}{Maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the key-\/value pair which is the maximum key in map. 
+
+
+
+ fbxmap.\+h の 229 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a05a712e0a43083d5397ecda3003d81e1}\label{class_fbx_map_a05a712e0a43083d5397ecda3003d81e1}} 
+\index{Fbx\+Map@{Fbx\+Map}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Maximum()}{Maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the key-\/value pair which is the maximum key in map. 
+
+
+
+ fbxmap.\+h の 235 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a12efe88fe10227cf0aca2284a3474193}\label{class_fbx_map_a12efe88fe10227cf0aca2284a3474193}} 
+\index{Fbx\+Map@{Fbx\+Map}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Minimum()}{Minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the key-\/value pair which is the minimum key in map. 
+
+
+
+ fbxmap.\+h の 217 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a5ea3f42780e9896b0503f9a67ee8607e}\label{class_fbx_map_a5ea3f42780e9896b0503f9a67ee8607e}} 
+\index{Fbx\+Map@{Fbx\+Map}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Minimum()}{Minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the key-\/value pair which is the minimum key in map. 
+
+
+
+ fbxmap.\+h の 223 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a2c0f757eed20687c6b8fd3339c0f35ce}\label{class_fbx_map_a2c0f757eed20687c6b8fd3339c0f35ce}} 
+\index{Fbx\+Map@{Fbx\+Map}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_abea530b1192b31c3cf05fbf247e3dcaa}{Value\+Type}\& \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieve the reference of the value in the key-\/value pairs in map. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The reference of the value. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the key is not found, a new key-\/value pair will be inserted. 
+\end{DoxyRemark}
+
+
+ fbxmap.\+h の 204 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_ae4d2e72014223a8292472394d80e4909}\label{class_fbx_map_ae4d2e72014223a8292472394d80e4909}} 
+\index{Fbx\+Map@{Fbx\+Map}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+bool \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Remove (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete a key-\/value pair. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if success, {\ttfamily false} if key is not found. 
+\end{DoxyReturn}
+
+
+ fbxmap.\+h の 127 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_ad9fcc220fda44cdd23ad848d1dcd5725}\label{class_fbx_map_ad9fcc220fda44cdd23ad848d1dcd5725}} 
+\index{Fbx\+Map@{Fbx\+Map}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Reserve()}{Reserve()}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+void \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Reserve (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Record\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Preallocate memory. 
+\begin{DoxyParams}{引数}
+{\em p\+Record\+Count} & The number of elements. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxmap.\+h の 104 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_a4ad230da7739de9f136a07d7565411ab}\label{class_fbx_map_a4ad230da7739de9f136a07d7565411ab}} 
+\index{Fbx\+Map@{Fbx\+Map}!Upper\+Bound@{Upper\+Bound}}
+\index{Upper\+Bound@{Upper\+Bound}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Upper\+Bound()}{UpperBound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Upper\+Bound (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find the key-\/value pair with the smallest key greater than a specified key. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The found key-\/value pair. 
+\end{DoxyReturn}
+
+
+ fbxmap.\+h の 187 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_map_aaaa41638bc860b13b3abc232d1db08e7}\label{class_fbx_map_aaaa41638bc860b13b3abc232d1db08e7}} 
+\index{Fbx\+Map@{Fbx\+Map}!Upper\+Bound@{Upper\+Bound}}
+\index{Upper\+Bound@{Upper\+Bound}!Fbx\+Map@{Fbx\+Map}}
+\subsubsection{\texorpdfstring{Upper\+Bound()}{UpperBound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Key, typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Key$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_map_af8fc887461b3bf29f41aa36d15ddb54f}{Record\+Type}$\ast$ \hyperlink{class_fbx_map}{Fbx\+Map}$<$ Key, Type, Compare, Allocator $>$\+::Upper\+Bound (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_map_ad8392c83b6f8eeb9e0706bcc8674270a}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find the key-\/value pair with the smallest key greater than a specified key. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The found key-\/value pair. 
+\end{DoxyReturn}
+
+
+ fbxmap.\+h の 195 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxmap_8h}{fbxmap.\+h}\end{DoxyCompactItemize}

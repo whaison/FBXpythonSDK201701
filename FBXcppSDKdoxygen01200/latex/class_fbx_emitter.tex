@@ -1,0 +1,158 @@
+\hypertarget{class_fbx_emitter}{}\section{Fbx\+Emitter クラス}
+\label{class_fbx_emitter}\index{Fbx\+Emitter@{Fbx\+Emitter}}
+
+
+{\ttfamily \#include $<$fbxemitter.\+h$>$}
+
+Fbx\+Emitter の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_fbx_emitter}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_emitter_1_1_event_data}{Event\+Data}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_emitter_ab8022a1fd620467f12f493673cfa16a9}{Add\+Listener} (\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \&p\+Handler)
+\item 
+void \hyperlink{class_fbx_emitter_a9d5e8f773a85bd9f7a88d9f01eb5463d}{Remove\+Listener} (\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \&p\+Handler)
+\item 
+{\footnotesize template$<$typename Event\+Type $>$ }\\void \hyperlink{class_fbx_emitter_ad541e3b06c0beeab71fcf066fc44c78d}{Emit} (const Event\+Type \&p\+Event) const
+\item 
+\hyperlink{class_fbx_emitter_a33a5aeaa15dd8c9fa66a97b3ab5db550}{Fbx\+Emitter} ()
+\item 
+\hyperlink{class_fbx_emitter_a58a10b2780c916dedd3ddbbf7ad62f3a}{$\sim$\+Fbx\+Emitter} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_intrusive_list}{Fbx\+Intrusive\+List}$<$ \hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler}, \hyperlink{class_fbx_event_handler_a47139da2cfd5abee91664d75c4fb577cae2c0d7da494cef8d787ee3495e24a6c0}{Fbx\+Event\+Handler\+::e\+Emitter} $>$ \hyperlink{class_fbx_emitter_a9ac3cddf1a246e71957e4b7db6c08fc1}{Event\+Handler\+List}
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_fbx_emitter_1_1_event_data}{Event\+Data} $\ast$ \hyperlink{class_fbx_emitter_ad2d8605b0a35c0fd4172ac0c55483582}{m\+Data}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Base class to emit event with the specified event type. The event type could be a specific class which derived from \hyperlink{class_fbx_event}{Fbx\+Event}. Please read \hyperlink{class_fbx_emitter_ad541e3b06c0beeab71fcf066fc44c78d}{Fbx\+Emitter\+::\+Emit()} for more details. Event emitter contains a list of event handlers. F\+BX object could be used as emitter, since \hyperlink{class_fbx_object}{Fbx\+Object} is derived from \hyperlink{class_fbx_emitter}{Fbx\+Emitter}. Before using emitter to emit an event, one or more event handlers must be added to the handlers list of current emitter. In other words, it\textquotesingle{}s \char`\"{}bind event handlers to emitter\char`\"{}. There are two ways to bind event handlers to emitter. \begin{DoxyItemize}
+\item 1. If you already got an event handler and would like to bind it to current emitter, please call \hyperlink{class_fbx_emitter_ab8022a1fd620467f12f493673cfa16a9}{Fbx\+Emitter\+::\+Add\+Listener()}. \item 2. Or you can create an event listener first and then call \hyperlink{class_fbx_listener_a7a3298b1f4fa347aaa2cb5136265a178}{Fbx\+Listener\+::\+Bind()}. It will create an event handler automatically and bind the handler to the specified emitter. It\textquotesingle{}s similar to unbind or remove an even handler. For more details, \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_emitter_a9d5e8f773a85bd9f7a88d9f01eb5463d}{Fbx\+Emitter\+::\+Remove\+Listener()} 
+
+\hyperlink{class_fbx_listener_a723ba6f82b533e427d72ab39da3f8aeb}{Fbx\+Listener\+::\+Unbind()} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{注釈}
+An object(emitter) can emit a certain type of event, the plug-\/in(listener) who are listening to that type of event, will receive a signal and take action to process the event data. 
+\end{DoxyRemark}
+\begin{DoxyParagraph}{The whole process of event is\+:}
+
+\end{DoxyParagraph}
+\item 1. Create an emitter and a listener, then bind them together via the same event handler. \item 2. Emitter can emit an event at certain conditions. The event could be handled by event handler. \item 3. Once an event is emitted, the listener to this event will receive a signal. \item 4. And then the listener could process the event data according to the types of event, by calling event handler. \begin{DoxyNote}{覚え書き}
+The event data is process by the callback function of event handler.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_listener}{Fbx\+Listener} \hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \hyperlink{class_fbx_event}{Fbx\+Event} \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} 
+\end{DoxySeeAlso}
+\end{DoxyItemize}
+
+
+ fbxemitter.\+h の 49 行目に定義があります。
+
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_emitter_a9ac3cddf1a246e71957e4b7db6c08fc1}\label{class_fbx_emitter_a9ac3cddf1a246e71957e4b7db6c08fc1}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!Event\+Handler\+List@{Event\+Handler\+List}}
+\index{Event\+Handler\+List@{Event\+Handler\+List}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{Event\+Handler\+List}{EventHandlerList}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_intrusive_list}{Fbx\+Intrusive\+List}$<$\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler}, \hyperlink{class_fbx_event_handler_a47139da2cfd5abee91664d75c4fb577cae2c0d7da494cef8d787ee3495e24a6c0}{Fbx\+Event\+Handler\+::e\+Emitter}$>$ \hyperlink{class_fbx_emitter_a9ac3cddf1a246e71957e4b7db6c08fc1}{Fbx\+Emitter\+::\+Event\+Handler\+List}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxemitter.\+h の 86 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_emitter_a33a5aeaa15dd8c9fa66a97b3ab5db550}\label{class_fbx_emitter_a33a5aeaa15dd8c9fa66a97b3ab5db550}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!Fbx\+Emitter@{Fbx\+Emitter}}
+\index{Fbx\+Emitter@{Fbx\+Emitter}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{Fbx\+Emitter()}{FbxEmitter()}}
+{\footnotesize\ttfamily Fbx\+Emitter\+::\+Fbx\+Emitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_emitter_a58a10b2780c916dedd3ddbbf7ad62f3a}\label{class_fbx_emitter_a58a10b2780c916dedd3ddbbf7ad62f3a}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!````~Fbx\+Emitter@{$\sim$\+Fbx\+Emitter}}
+\index{````~Fbx\+Emitter@{$\sim$\+Fbx\+Emitter}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Emitter()}{~FbxEmitter()}}
+{\footnotesize\ttfamily Fbx\+Emitter\+::$\sim$\+Fbx\+Emitter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_emitter_ab8022a1fd620467f12f493673cfa16a9}\label{class_fbx_emitter_ab8022a1fd620467f12f493673cfa16a9}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!Add\+Listener@{Add\+Listener}}
+\index{Add\+Listener@{Add\+Listener}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{Add\+Listener()}{AddListener()}}
+{\footnotesize\ttfamily void Fbx\+Emitter\+::\+Add\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \&}]{p\+Handler }\end{DoxyParamCaption})}
+
+Add the specified event handler to current emitter list. 
+\begin{DoxyParams}{引数}
+{\em p\+Handler} & The event handler will be added to the handlers list of current emitter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_emitter_ad541e3b06c0beeab71fcf066fc44c78d}\label{class_fbx_emitter_ad541e3b06c0beeab71fcf066fc44c78d}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!Emit@{Emit}}
+\index{Emit@{Emit}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{Emit()}{Emit()}}
+{\footnotesize\ttfamily template$<$typename Event\+Type $>$ \\
+void Fbx\+Emitter\+::\+Emit (\begin{DoxyParamCaption}\item[{const Event\+Type \&}]{p\+Event }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Emit an event with the specified the event type. One the event is emitted, the listener to this event will receive a signal. 
+\begin{DoxyParams}{引数}
+{\em p\+Event} & Specify the event type to emit. Could be a specific class which derived from \hyperlink{class_fbx_event}{Fbx\+Event}, such as \hyperlink{class_fbx_object_property_changed}{Fbx\+Object\+Property\+Changed}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} \hyperlink{class_fbx_object_property_changed}{Fbx\+Object\+Property\+Changed} \hyperlink{class_fbx_event_referenced_document}{Fbx\+Event\+Referenced\+Document} \hyperlink{class_fbx_event_post_export}{Fbx\+Event\+Post\+Export} 
+
+\hyperlink{class_fbx_event_post_import}{Fbx\+Event\+Post\+Import} \hyperlink{class_fbx_event_pre_export}{Fbx\+Event\+Pre\+Export} \hyperlink{class_fbx_event_pre_import}{Fbx\+Event\+Pre\+Import} \hyperlink{class_fbx_event_populate_system_library}{Fbx\+Event\+Populate\+System\+Library} 
+\end{DoxySeeAlso}
+
+
+ fbxemitter.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_emitter_a9d5e8f773a85bd9f7a88d9f01eb5463d}\label{class_fbx_emitter_a9d5e8f773a85bd9f7a88d9f01eb5463d}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!Remove\+Listener@{Remove\+Listener}}
+\index{Remove\+Listener@{Remove\+Listener}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{Remove\+Listener()}{RemoveListener()}}
+{\footnotesize\ttfamily void Fbx\+Emitter\+::\+Remove\+Listener (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \&}]{p\+Handler }\end{DoxyParamCaption})}
+
+Remove the specified event handler from current emitter list. 
+\begin{DoxyParams}{引数}
+{\em p\+Handler} & The event handler will be removed from the handlers list of current emitter. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_emitter_ad2d8605b0a35c0fd4172ac0c55483582}\label{class_fbx_emitter_ad2d8605b0a35c0fd4172ac0c55483582}} 
+\index{Fbx\+Emitter@{Fbx\+Emitter}!m\+Data@{m\+Data}}
+\index{m\+Data@{m\+Data}!Fbx\+Emitter@{Fbx\+Emitter}}
+\subsubsection{\texorpdfstring{m\+Data}{mData}}
+{\footnotesize\ttfamily \hyperlink{struct_fbx_emitter_1_1_event_data}{Event\+Data}$\ast$ Fbx\+Emitter\+::m\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxemitter.\+h の 88 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxemitter_8h}{fbxemitter.\+h}\end{DoxyCompactItemize}

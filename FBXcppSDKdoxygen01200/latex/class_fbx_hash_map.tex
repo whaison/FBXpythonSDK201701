@@ -1,0 +1,269 @@
+\hypertarget{class_fbx_hash_map}{}\section{Fbx\+Hash\+Map$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$ クラステンプレート}
+\label{class_fbx_hash_map}\index{Fbx\+Hash\+Map$<$ K\+E\+Y, V\+A\+L\+U\+E, H\+A\+S\+H, Destruct, Comparator $>$@{Fbx\+Hash\+Map$<$ K\+E\+Y, V\+A\+L\+U\+E, H\+A\+S\+H, Destruct, Comparator $>$}}
+
+
+This object represents a standard hash map. You must provide the typename of K\+EY and V\+A\+L\+UE as well as the typename of the class that contains the hash function to use to hash values. The hash class must overload operator() and be built like this.  
+
+
+
+
+{\ttfamily \#include $<$fbxhashmap.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef K\+EY \hyperlink{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}{Key\+Type}
+\item 
+typedef V\+A\+L\+UE \hyperlink{class_fbx_hash_map_a9c4cfd0138aa9233c119403f3cc85501}{Value\+Type}
+\item 
+typedef H\+A\+SH \hyperlink{class_fbx_hash_map_a254381e9c4bde567aaf9d7286d753bd7}{Hash\+Functor\+Type}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_hash_map_aa7eae049539759ac5dc0e058346da332}{Fbx\+Hash\+Map} (int p\+Bucket\+Size)
+\item 
+\hyperlink{class_fbx_hash_map_a398c0d23f439d50d12ff45f04d9c57f2}{Fbx\+Hash\+Map} ()
+\item 
+\hyperlink{class_fbx_hash_map_a9b75e6940b7ebb7c82628117ce8479e2}{$\sim$\+Fbx\+Hash\+Map} ()
+\item 
+void \hyperlink{class_fbx_hash_map_a93c7f218e1b8b337296b1758fbe962b9}{Clear} ()
+\item 
+const \hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} \hyperlink{class_fbx_hash_map_afdedadf0f0aaa2f3a14404515597c399}{Find} (const \hyperlink{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}{Key\+Type} \&p\+Key) const
+\item 
+V\+A\+L\+UE \hyperlink{class_fbx_hash_map_abe6d776a5b88b75b82d92e9c9dd5b513}{Remove} (const K\+EY \&p\+Key)
+\item 
+\hyperlink{class_fbx_hash_map_a9c4cfd0138aa9233c119403f3cc85501}{Value\+Type} \& \hyperlink{class_fbx_hash_map_a15e7a23bb44c1f0cd21b3b04f84c3fa9}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}{Key\+Type} \&p\+Key)
+\item 
+\hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} \hyperlink{class_fbx_hash_map_a57577e8a4b29826e68f61e0d086f90d8}{Start} () const
+\item 
+\hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} \hyperlink{class_fbx_hash_map_a1e7a9c35fff5bc4fb12f5bc49557ebef}{End} () const
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_hash_map_a9830fc407400559db7e7783cc10a9394}{Iterator}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$\newline
+class Fbx\+Hash\+Map$<$ K\+E\+Y, V\+A\+L\+U\+E, H\+A\+S\+H, Destruct, Comparator $>$}
+
+This object represents a standard hash map. You must provide the typename of K\+EY and V\+A\+L\+UE as well as the typename of the class that contains the hash function to use to hash values. The hash class must overload operator() and be built like this. 
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{class }SimpleHash
+\{
+\textcolor{keyword}{public}:
+    \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} operator() ( \textcolor{keyword}{const} \textcolor{keywordtype}{int} pKey )\textcolor{keyword}{ const}
+\textcolor{keyword}{    }\{
+        \textcolor{keywordflow}{return} pKey;
+    \}
+\};
+\end{DoxyCode}
+ 
+
+ fbxhashmap.\+h の 45 行目に定義があります。
+
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_hash_map_a254381e9c4bde567aaf9d7286d753bd7}\label{class_fbx_hash_map_a254381e9c4bde567aaf9d7286d753bd7}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Hash\+Functor\+Type@{Hash\+Functor\+Type}}
+\index{Hash\+Functor\+Type@{Hash\+Functor\+Type}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Hash\+Functor\+Type}{HashFunctorType}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+typedef H\+A\+SH \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::\hyperlink{class_fbx_hash_map_a254381e9c4bde567aaf9d7286d753bd7}{Hash\+Functor\+Type}}
+
+
+
+ fbxhashmap.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}\label{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Key\+Type@{Key\+Type}}
+\index{Key\+Type@{Key\+Type}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Key\+Type}{KeyType}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+typedef K\+EY \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::\hyperlink{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}{Key\+Type}}
+
+
+
+ fbxhashmap.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_a9c4cfd0138aa9233c119403f3cc85501}\label{class_fbx_hash_map_a9c4cfd0138aa9233c119403f3cc85501}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Value\+Type}{ValueType}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+typedef V\+A\+L\+UE \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::\hyperlink{class_fbx_hash_map_a9c4cfd0138aa9233c119403f3cc85501}{Value\+Type}}
+
+
+
+ fbxhashmap.\+h の 49 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_hash_map_aa7eae049539759ac5dc0e058346da332}\label{class_fbx_hash_map_aa7eae049539759ac5dc0e058346da332}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Fbx\+Hash\+Map()}{FbxHashMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+\hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::\hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map} (\begin{DoxyParamCaption}\item[{int}]{p\+Bucket\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map} with an user-\/defined maximum number of elements. 
+\begin{DoxyParams}{引数}
+{\em p\+Bucket\+Size} & Initial maximum number of elements. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxhashmap.\+h の 213 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_a398c0d23f439d50d12ff45f04d9c57f2}\label{class_fbx_hash_map_a398c0d23f439d50d12ff45f04d9c57f2}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Fbx\+Hash\+Map()}{FbxHashMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+\hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::\hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map} with the default maximum number of elements (30) 
+
+ fbxhashmap.\+h の 221 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_a9b75e6940b7ebb7c82628117ce8479e2}\label{class_fbx_hash_map_a9b75e6940b7ebb7c82628117ce8479e2}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!````~Fbx\+Hash\+Map@{$\sim$\+Fbx\+Hash\+Map}}
+\index{````~Fbx\+Hash\+Map@{$\sim$\+Fbx\+Hash\+Map}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Hash\+Map()}{~FbxHashMap()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+\hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::$\sim$\hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clear all elements in the hash map before destroying itself 
+
+ fbxhashmap.\+h の 229 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_hash_map_a93c7f218e1b8b337296b1758fbe962b9}\label{class_fbx_hash_map_a93c7f218e1b8b337296b1758fbe962b9}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+void \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calls operator delete on all elements of the hashmap, de-\/allocating all memory and destroying them 
+
+ fbxhashmap.\+h の 238 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_a1e7a9c35fff5bc4fb12f5bc49557ebef}\label{class_fbx_hash_map_a1e7a9c35fff5bc4fb12f5bc49557ebef}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!End@{End}}
+\index{End@{End}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+\hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an iterator pointing on the last element in the map. This is not an actual Key\+Value\+Pair but but an iterator pointing on a null element. \begin{DoxyReturn}{戻り値}
+\hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} pointing on a null value at the end of the map 
+\end{DoxyReturn}
+
+
+ fbxhashmap.\+h の 372 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_afdedadf0f0aaa2f3a14404515597c399}\label{class_fbx_hash_map_afdedadf0f0aaa2f3a14404515597c399}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+const \hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find an element in the hashmap. If no element exist with the specified key, returns an iterator pointing on the end of the map (not an actual Key\+Value\+Pair). 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The value of the key corresponding to the element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+An \hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} referencing that element 
+\end{DoxyReturn}
+
+
+ fbxhashmap.\+h の 264 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_a15e7a23bb44c1f0cd21b3b04f84c3fa9}\label{class_fbx_hash_map_a15e7a23bb44c1f0cd21b3b04f84c3fa9}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+\hyperlink{class_fbx_hash_map_a9c4cfd0138aa9233c119403f3cc85501}{Value\+Type}\& \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_hash_map_ab56799173b6c58b676a94370b64ddbb0}{Key\+Type} \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add or retrieve a Key\+Value\+Pair from the Hashmap. If there is already an entry in the map for an element with key value specified in parameter, the value will be returned. Otherwise, a new entry will be created with this key value and the default value for Value\+Type will be returned. It can be modified using the assignment operator 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key for which to retrieve/add a value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Value of the element referenced by the key specified in parameter. 
+\end{DoxyReturn}
+
+
+ fbxhashmap.\+h の 324 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_abe6d776a5b88b75b82d92e9c9dd5b513}\label{class_fbx_hash_map_abe6d776a5b88b75b82d92e9c9dd5b513}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+V\+A\+L\+UE \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::Remove (\begin{DoxyParamCaption}\item[{const K\+EY \&}]{p\+Key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Remove an element in the hashmap. 
+\begin{DoxyParams}{引数}
+{\em p\+Key} & The key value of the element to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value of the element that was just deleted. If the element does not exist, a value created with its default constructor will be returned 
+\end{DoxyReturn}
+
+
+ fbxhashmap.\+h の 287 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_hash_map_a57577e8a4b29826e68f61e0d086f90d8}\label{class_fbx_hash_map_a57577e8a4b29826e68f61e0d086f90d8}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Start@{Start}}
+\index{Start@{Start}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+\hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator} \hyperlink{class_fbx_hash_map}{Fbx\+Hash\+Map}$<$ K\+EY, V\+A\+L\+UE, H\+A\+SH, Destruct, Comparator $>$\+::Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns an iterator pointing on the first non-\/null element in the map \begin{DoxyReturn}{戻り値}
+An iterator pointing on the first non-\/null element in the map. 
+\end{DoxyReturn}
+
+
+ fbxhashmap.\+h の 354 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_hash_map_a9830fc407400559db7e7783cc10a9394}\label{class_fbx_hash_map_a9830fc407400559db7e7783cc10a9394}} 
+\index{Fbx\+Hash\+Map@{Fbx\+Hash\+Map}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Fbx\+Hash\+Map@{Fbx\+Hash\+Map}}
+\subsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename K\+EY, typename V\+A\+L\+UE, typename H\+A\+SH, class Destruct = Fbx\+No\+Op\+Destruct$<$\+V\+A\+L\+U\+E$>$, class Comparator = Fbx\+Default\+Comparator$<$\+K\+E\+Y$>$$>$ \\
+friend class \hyperlink{class_fbx_hash_map_1_1_iterator}{Iterator}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxhashmap.\+h の 406 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxhashmap_8h}{fbxhashmap.\+h}\end{DoxyCompactItemize}

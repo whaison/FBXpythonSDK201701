@@ -1,0 +1,785 @@
+\hypertarget{class_fbx_geometry}{}\section{Fbx\+Geometry クラス}
+\label{class_fbx_geometry}\index{Fbx\+Geometry@{Fbx\+Geometry}}
+
+
+{\ttfamily \#include $<$fbxgeometry.\+h$>$}
+
+Fbx\+Geometry の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_fbx_geometry}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{E\+Surface\+Mode} \{ \newline
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dbabebe9705fadfcfd4ef100fc493f60412}{e\+Raw}, 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba81ece06944d07ab68b5a08a1cb084c55}{e\+Low\+No\+Normals}, 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba6da9dccab2d42ec6361050c2deb070a9}{e\+Low}, 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dbab835bcc45db6e23ee9dc6703614e5300}{e\+High\+No\+Normals}, 
+\newline
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba3f948522e0f01dcacbd6503a3d1e6423}{e\+High}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Get\+Attribute\+Type} () const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_geometry_aab95116993bd539bb870897d005d44de}{Clone} (\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} p\+Clone\+Type=\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, void $\ast$p\+Set=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+void \hyperlink{class_fbx_geometry_ad7d877cff6187c93064395a71b25ecce}{Clean\+Shape\+Channels} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer)
+\item 
+void \hyperlink{class_fbx_geometry_abd8e2642fa8ca94c88afaeafd0267bd0}{Clean\+Shape\+Channel} (\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, int p\+Shape\+Index)
+\item 
+void \hyperlink{class_fbx_geometry_ac9c89d3dfee003accd6092682664501b}{Create\+Shape\+Channel\+Properties} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+Shape\+Name)
+\item 
+void \hyperlink{class_fbx_geometry_a2b135cea388e72bff364a6fa8714a38b}{Convert\+Shape\+Names\+To\+V5\+Format} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Take\+Node\+Name)
+\item 
+void \hyperlink{class_fbx_geometry_aa1806aadaf07dac7d895e65f731f1679}{Convert\+Shape\+Names\+To\+V5\+Format} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Take\+Node\+Name, int p\+Shape\+Index)
+\item 
+void \hyperlink{class_fbx_geometry_a891f23fed585b15503cdf8a38b424e14}{Revert\+Shape\+Names\+To\+V6\+Format} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Take\+Node\+Name)
+\item 
+void \hyperlink{class_fbx_geometry_a408862417553440cefa975d1366985bb}{Revert\+Shape\+Names\+To\+V6\+Format} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Take\+Node\+Name, int p\+Shape\+Index)
+\item 
+void \hyperlink{class_fbx_geometry_a2959da5506f3499fdb644a82843a64cd}{Clear\+Temporary\+Shape\+Names} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Deformer Management}\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_geometry_a2f7e48a2faaf3893bc28eb8b684da908}{Add\+Deformer} (\hyperlink{class_fbx_deformer}{Fbx\+Deformer} $\ast$p\+Deformer)
+\item 
+\hyperlink{class_fbx_deformer}{Fbx\+Deformer} $\ast$ \hyperlink{class_fbx_geometry_a49e920f4c7a2179ef3297e7c5f2cf31a}{Remove\+Deformer} (int p\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+int \hyperlink{class_fbx_geometry_a8cca6f160b52ee1ffd799c599c36f784}{Get\+Deformer\+Count} () const
+\item 
+\hyperlink{class_fbx_deformer}{Fbx\+Deformer} $\ast$ \hyperlink{class_fbx_geometry_a3a6bd565c4a5a3a8b5daa3b653cc8a0a}{Get\+Deformer} (int p\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+int \hyperlink{class_fbx_geometry_a3eaf9796d935cd523d0a85a7f0c018fc}{Get\+Deformer\+Count} (\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{Fbx\+Deformer\+::\+E\+Deformer\+Type} p\+Type) const
+\item 
+\hyperlink{class_fbx_deformer}{Fbx\+Deformer} $\ast$ \hyperlink{class_fbx_geometry_aa283c85cdc0c5c3d2eae56952b6a41a0}{Get\+Deformer} (int p\+Index, \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{Fbx\+Deformer\+::\+E\+Deformer\+Type} p\+Type, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Geometry Weighted Maps Management}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_geometry_weighted_map}{Fbx\+Geometry\+Weighted\+Map} $\ast$ \hyperlink{class_fbx_geometry_a2d8cd2e9bf5a91fedcc1039dc4dce31d}{Get\+Source\+Geometry\+Weighted\+Map} ()
+\item 
+int \hyperlink{class_fbx_geometry_a7bebc9194083c5bacf77389b98ff906f}{Get\+Destination\+Geometry\+Weighted\+Map\+Count} () const
+\item 
+\hyperlink{class_fbx_geometry_weighted_map}{Fbx\+Geometry\+Weighted\+Map} $\ast$ \hyperlink{class_fbx_geometry_a377769a99e12dc765ac9ea49282ad1bf}{Get\+Destination\+Geometry\+Weighted\+Map} (int p\+Index)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Shape Management}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_geometry_a4b9464c1f35f6bad8f2f19e427e70c9f}{Add\+Shape} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index, \hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$p\+Shape, double p\+Percent=100, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_geometry_a6f5e46228d45b12e4f513abb56b8226d}{Clear\+Shape} ()
+\item 
+int \hyperlink{class_fbx_geometry_a9aa043cfb8856ef48b53b8cb7c8191b3}{Get\+Shape\+Count} () const
+\item 
+int \hyperlink{class_fbx_geometry_a34b10144646e4788f3702b9ebfa06dc2}{Get\+Shape\+Count} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$ \hyperlink{class_fbx_geometry_a8a60c0db307689b6d4fb6055055a1601}{Get\+Shape} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index, int p\+Shape\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+const \hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$ \hyperlink{class_fbx_geometry_a8e9fba2b422ca2f4f5b4deda107fce7f}{Get\+Shape} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index, int p\+Shape\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{class_fbx_geometry_a5a0e6869e72e17e9d0e7d2bb20264828}{Get\+Shape\+Channel} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Layer, bool p\+Create\+As\+Needed=false, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Pivot Management}\par
+{\em The geometry pivot is used to specify additional translation, rotation, and scaling information applied to all control points when the model is exported. }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \& \hyperlink{class_fbx_geometry_abba9072e0a3f1ad52033996f9809df80}{Get\+Pivot} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+X\+Matrix) const
+\item 
+void \hyperlink{class_fbx_geometry_a0b6b14186134a64ad55a47bcac865d70}{Set\+Pivot} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+X\+Matrix)
+\item 
+void \hyperlink{class_fbx_geometry_a34819c9209a0594344780f117bc641e1}{Apply\+Pivot} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Default Animation Values}\par
+{\em These functions provides direct access to default animation values that are specific to a geometry. These functions only work if the geometry has been associated with a node. }\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_geometry_a6f8337a6336fc2e9bc0ea3d2d04c5ad1}{Set\+Default\+Shape} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index, double p\+Percent)
+\item 
+void \hyperlink{class_fbx_geometry_a33ac7c5dc4a3001948b18696f47af802}{Set\+Default\+Shape} (\hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$p\+Blend\+Shape\+Channel, double p\+Percent)
+\item 
+double \hyperlink{class_fbx_geometry_ae3dfb076c1d8729413588b4a934b036b}{Get\+Default\+Shape} (int p\+Blend\+Shape\+Index, int p\+Blend\+Shape\+Channel\+Index) const
+\item 
+double \hyperlink{class_fbx_geometry_a178e8125306a0e7bb66f71e5472d381f}{Get\+Default\+Shape} (\hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$p\+Blend\+Shape\+Channel) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_geometry_a26ca96a86f17783c45ff83b33d2b5324}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_geometry_a07e94f7801067d66429afbf1799795cd}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_geometry_a4e28b47a5f6dba7d53e692486d69c126}{Set\+Document} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_geometry_ad79e9244da135a8fd62e47932ea68112}{Create\+Shape\+Channel\+Name} (int p\+Shape\+Index)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_geometry_a0f8e33ca5bf929614ffba6893079c136}{Create\+Shape\+Channel\+Name} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Shape\+Name)
+\item 
+void \hyperlink{class_fbx_geometry_a0fa8343b20fb5a9c0b0bc15a83967972}{Copy\+Deformers} (const \hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Geometry)
+\item 
+void \hyperlink{class_fbx_geometry_a97edd8b50b825e220a2c246936480160}{Copy\+Pivot} (const \hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Source)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$ $>$ \hyperlink{class_fbx_geometry_a7f09646b7a716f58932d9be9c4a34486}{m\+Shape\+Name\+Array\+V6}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$ $>$ \hyperlink{class_fbx_geometry_a2a38009f990f6dfa9ca81ee2b24b024b}{m\+Shape\+Name\+Array\+V5}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$ $>$ \hyperlink{class_fbx_geometry_a8752a5800b261d678592dc7a81dad4b0}{m\+Shape\+Channel\+Name\+Array\+V5}
+\item 
+\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} $\ast$ \hyperlink{class_fbx_geometry_ab9f5852d38a38a9efb0ab63bd74503c0}{m\+Pivot}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+The base class of geometric objects that support control point deformations (e.\+g. \hyperlink{class_fbx_mesh}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}, and \hyperlink{class_fbx_patch}{Fbx\+Patch}). The \hyperlink{class_fbx_geometry}{Fbx\+Geometry} provides support for the following kinds of deformations.
+
+\begin{DoxyItemize}
+\item Skin deformation deformers \item Vertex cache deformers \item Geometry weighted maps \item Shapes\end{DoxyItemize}
+Most of the methods of \hyperlink{class_fbx_geometry}{Fbx\+Geometry} are wrappers to simplify the access/manipulation of the connections to the deformers. For example, calling the \hyperlink{class_fbx_geometry_a8cca6f160b52ee1ffd799c599c36f784}{Get\+Deformer\+Count()} method is the same thing as calling\+:
+
+
+\begin{DoxyCode}
+geometry.GetSrcObjectCount(FbxDeformer::ClassId)
+\end{DoxyCode}
+ 
+
+ fbxgeometry.\+h の 45 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}\label{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!E\+Surface\+Mode@{E\+Surface\+Mode}}
+\index{E\+Surface\+Mode@{E\+Surface\+Mode}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{E\+Surface\+Mode}{ESurfaceMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode}}
+
+N\+U\+R\+BS and Patches surface modes. This information is never directly used inside the F\+BX S\+DK. Applications can use these values if they wish to carry the \char`\"{}rendering\char`\"{} details of the N\+U\+R\+BS and Patches. The F\+BX S\+DK guarantee that the value (member of the \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}, \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} and \hyperlink{class_fbx_patch}{Fbx\+Patch} classes) is stored to F\+BX files and retrieved from them. \begin{DoxyRemark}{注釈}
+The enum has been defined in this class to avoid symbols duplication. 
+\end{DoxyRemark}
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Raw@{e\+Raw}!Fbx\+Geometry@{Fbx\+Geometry}}\index{Fbx\+Geometry@{Fbx\+Geometry}!e\+Raw@{e\+Raw}}}\mbox{\Hypertarget{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dbabebe9705fadfcfd4ef100fc493f60412}\label{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dbabebe9705fadfcfd4ef100fc493f60412}} 
+e\+Raw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Low\+No\+Normals@{e\+Low\+No\+Normals}!Fbx\+Geometry@{Fbx\+Geometry}}\index{Fbx\+Geometry@{Fbx\+Geometry}!e\+Low\+No\+Normals@{e\+Low\+No\+Normals}}}\mbox{\Hypertarget{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba81ece06944d07ab68b5a08a1cb084c55}\label{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba81ece06944d07ab68b5a08a1cb084c55}} 
+e\+Low\+No\+Normals&Raw. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Low@{e\+Low}!Fbx\+Geometry@{Fbx\+Geometry}}\index{Fbx\+Geometry@{Fbx\+Geometry}!e\+Low@{e\+Low}}}\mbox{\Hypertarget{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba6da9dccab2d42ec6361050c2deb070a9}\label{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba6da9dccab2d42ec6361050c2deb070a9}} 
+e\+Low&Low and no normals. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+High\+No\+Normals@{e\+High\+No\+Normals}!Fbx\+Geometry@{Fbx\+Geometry}}\index{Fbx\+Geometry@{Fbx\+Geometry}!e\+High\+No\+Normals@{e\+High\+No\+Normals}}}\mbox{\Hypertarget{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dbab835bcc45db6e23ee9dc6703614e5300}\label{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dbab835bcc45db6e23ee9dc6703614e5300}} 
+e\+High\+No\+Normals&Low. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+High@{e\+High}!Fbx\+Geometry@{Fbx\+Geometry}}\index{Fbx\+Geometry@{Fbx\+Geometry}!e\+High@{e\+High}}}\mbox{\Hypertarget{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba3f948522e0f01dcacbd6503a3d1e6423}\label{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794dba3f948522e0f01dcacbd6503a3d1e6423}} 
+e\+High&High and no normals. High. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxgeometry.\+h の 200 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_geometry_a2f7e48a2faaf3893bc28eb8b684da908}\label{class_fbx_geometry_a2f7e48a2faaf3893bc28eb8b684da908}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Add\+Deformer@{Add\+Deformer}}
+\index{Add\+Deformer@{Add\+Deformer}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Add\+Deformer()}{AddDeformer()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+::\+Add\+Deformer (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_deformer}{Fbx\+Deformer} $\ast$}]{p\+Deformer }\end{DoxyParamCaption})}
+
+Adds a deformer to this geometry (as mentioned in the description of this class, adding a deformer is a synonym for \char`\"{}connect a deformer\char`\"{}). 
+\begin{DoxyParams}{引数}
+{\em p\+Deformer} & Pointer to the deformer to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of the added deformer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a4b9464c1f35f6bad8f2f19e427e70c9f}\label{class_fbx_geometry_a4b9464c1f35f6bad8f2f19e427e70c9f}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Add\+Shape@{Add\+Shape}}
+\index{Add\+Shape@{Add\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Add\+Shape()}{AddShape()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+::\+Add\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index,  }\item[{\hyperlink{class_fbx_shape}{Fbx\+Shape} $\ast$}]{p\+Shape,  }\item[{double}]{p\+Percent = {\ttfamily 100},  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Add a shape to the specified blend shape deformer and blend shape channel of this geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+{\em p\+Shape} & Pointer to the shape object to be added. \\
+\hline
+{\em p\+Percent} & The full deform percentage of this shape. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a34819c9209a0594344780f117bc641e1}\label{class_fbx_geometry_a34819c9209a0594344780f117bc641e1}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Apply\+Pivot@{Apply\+Pivot}}
+\index{Apply\+Pivot@{Apply\+Pivot}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Apply\+Pivot()}{ApplyPivot()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Apply\+Pivot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Applies the pivot matrix to all vertices/normals of the geometry. \mbox{\Hypertarget{class_fbx_geometry_abd8e2642fa8ca94c88afaeafd0267bd0}\label{class_fbx_geometry_abd8e2642fa8ca94c88afaeafd0267bd0}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Clean\+Shape\+Channel@{Clean\+Shape\+Channel}}
+\index{Clean\+Shape\+Channel@{Clean\+Shape\+Channel}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Clean\+Shape\+Channel()}{CleanShapeChannel()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Clean\+Shape\+Channel (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{int}]{p\+Shape\+Index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_ad7d877cff6187c93064395a71b25ecce}\label{class_fbx_geometry_ad7d877cff6187c93064395a71b25ecce}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Clean\+Shape\+Channels@{Clean\+Shape\+Channels}}
+\index{Clean\+Shape\+Channels@{Clean\+Shape\+Channels}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Clean\+Shape\+Channels()}{CleanShapeChannels()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Clean\+Shape\+Channels (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_a6f5e46228d45b12e4f513abb56b8226d}\label{class_fbx_geometry_a6f5e46228d45b12e4f513abb56b8226d}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Clear\+Shape@{Clear\+Shape}}
+\index{Clear\+Shape@{Clear\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Clear\+Shape()}{ClearShape()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Clear\+Shape (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all the shapes without destroying them. If shapes aren\textquotesingle{}t explicitly destroyed before calling this function, they will be destroyed along with the S\+DK manager that created them. \mbox{\Hypertarget{class_fbx_geometry_a2959da5506f3499fdb644a82843a64cd}\label{class_fbx_geometry_a2959da5506f3499fdb644a82843a64cd}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Clear\+Temporary\+Shape\+Names@{Clear\+Temporary\+Shape\+Names}}
+\index{Clear\+Temporary\+Shape\+Names@{Clear\+Temporary\+Shape\+Names}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Clear\+Temporary\+Shape\+Names()}{ClearTemporaryShapeNames()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Clear\+Temporary\+Shape\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_aab95116993bd539bb870897d005d44de}\label{class_fbx_geometry_aab95116993bd539bb870897d005d44de}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Clone@{Clone}}
+\index{Clone@{Clone}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Geometry\+::\+Clone (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type}}]{p\+Clone\+Type = {\ttfamily \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}},  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{void $\ast$}]{p\+Set = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a clone of this object. By default, the connections are N\+OT cloned. If the desired effect is to clone the connections as well, you must clone using the \hyperlink{class_fbx_clone_manager}{Fbx\+Clone\+Manager} (refer to this class documentation for further details).
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Clone\+Type} & The type of clone to be created. By default, the clone type is e\+Deep\+Clone. \\
+\hline
+{\em p\+Container} & An optional parameter to specify which object will \char`\"{}contain\char`\"{} the new object. By contain, we mean the new object will become a source to the container, connection-\/wise. \\
+\hline
+{\em p\+Set} & See remark section. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new clone, or N\+U\+LL (if the specified clone type is not supported). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When doing either a \char`\"{}deep\char`\"{} or \char`\"{}reference\char`\"{} clone type, the clone will always get its properties values set from the source object properties values. 
+
+Since this is a virtual function, some classes might do additional tasks. 
+
+The {\itshape p\+Set} argument is not used in the default implementation of this method. Specialized implementations should cast this pointer to \hyperlink{class_fbx_clone_manager_aeb8a9c04c9c36eb7e551186a0b18f10d}{Fbx\+Clone\+Manager\+::\+Clone\+Set} to have access to the cloned objects so far. Typically, this pointer is set by the clone manager. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad553a4262b09cb57c3171a93edadbab8}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_geometry_a26ca96a86f17783c45ff83b33d2b5324}\label{class_fbx_geometry_a26ca96a86f17783c45ff83b33d2b5324}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_mesh_a230787ca87312437d427d9ec7c150565}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs_surface_a3487d194007af1729d31dc9dfa0b12c9}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_a1d62f29d7315e343d5c0c414dab3fabb}{Fbx\+Nurbs}, \hyperlink{class_fbx_trim_nurbs_surface_a95ea54578a57e9038ae67cb2b6b26f82}{Fbx\+Trim\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_curve_ac730e9ec1d56724f8495725b0491ddd8}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_patch_a82fbbc0a7ec019bbe69c976ab755b23e}{Fbx\+Patch}, \hyperlink{class_fbx_line_a42d7e3fb4684712df04464644abee11a}{Fbx\+Line}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_a2b135cea388e72bff364a6fa8714a38b}\label{class_fbx_geometry_a2b135cea388e72bff364a6fa8714a38b}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Convert\+Shape\+Names\+To\+V5\+Format@{Convert\+Shape\+Names\+To\+V5\+Format}}
+\index{Convert\+Shape\+Names\+To\+V5\+Format@{Convert\+Shape\+Names\+To\+V5\+Format}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Convert\+Shape\+Names\+To\+V5\+Format()}{ConvertShapeNamesToV5Format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Convert\+Shape\+Names\+To\+V5\+Format (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Take\+Node\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_aa1806aadaf07dac7d895e65f731f1679}\label{class_fbx_geometry_aa1806aadaf07dac7d895e65f731f1679}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Convert\+Shape\+Names\+To\+V5\+Format@{Convert\+Shape\+Names\+To\+V5\+Format}}
+\index{Convert\+Shape\+Names\+To\+V5\+Format@{Convert\+Shape\+Names\+To\+V5\+Format}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Convert\+Shape\+Names\+To\+V5\+Format()}{ConvertShapeNamesToV5Format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Convert\+Shape\+Names\+To\+V5\+Format (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Take\+Node\+Name,  }\item[{int}]{p\+Shape\+Index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}\label{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Geometry\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_a2c3754831338327259c35caebbf379d3}{Fbx\+Geometry\+Base}を再実装しています。
+
+
+
+\hyperlink{class_fbx_mesh_a0f041743536ee5ccbc9a086e3ef1c663}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs_surface_a1da47f75af4920a3fb4a94690d8ada8c}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_ac7c9a9018b4fdbe72b258a2fa0a3367d}{Fbx\+Nurbs}, \hyperlink{class_fbx_trim_nurbs_surface_a4407d30e83346ab3cb30ccf67d7bb289}{Fbx\+Trim\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_curve_ad48046242c0a63d929b5440563668f79}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_patch_a424542a42ec75d3c5236cc366adecd89}{Fbx\+Patch}, \hyperlink{class_fbx_line_aeb9e0c53cf02d3e4e206b25c87c06256}{Fbx\+Line}, \hyperlink{class_fbx_boundary_a6fe59f45c17eeebbabaeff235058ac70}{Fbx\+Boundary}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_a0fa8343b20fb5a9c0b0bc15a83967972}\label{class_fbx_geometry_a0fa8343b20fb5a9c0b0bc15a83967972}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Copy\+Deformers@{Copy\+Deformers}}
+\index{Copy\+Deformers@{Copy\+Deformers}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Copy\+Deformers()}{CopyDeformers()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Copy\+Deformers (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Geometry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_geometry_a97edd8b50b825e220a2c246936480160}\label{class_fbx_geometry_a97edd8b50b825e220a2c246936480160}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Copy\+Pivot@{Copy\+Pivot}}
+\index{Copy\+Pivot@{Copy\+Pivot}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Copy\+Pivot()}{CopyPivot()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Copy\+Pivot (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_geometry_ad79e9244da135a8fd62e47932ea68112}\label{class_fbx_geometry_ad79e9244da135a8fd62e47932ea68112}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Create\+Shape\+Channel\+Name@{Create\+Shape\+Channel\+Name}}
+\index{Create\+Shape\+Channel\+Name@{Create\+Shape\+Channel\+Name}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Create\+Shape\+Channel\+Name()}{CreateShapeChannelName()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Geometry\+::\+Create\+Shape\+Channel\+Name (\begin{DoxyParamCaption}\item[{int}]{p\+Shape\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_geometry_a0f8e33ca5bf929614ffba6893079c136}\label{class_fbx_geometry_a0f8e33ca5bf929614ffba6893079c136}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Create\+Shape\+Channel\+Name@{Create\+Shape\+Channel\+Name}}
+\index{Create\+Shape\+Channel\+Name@{Create\+Shape\+Channel\+Name}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Create\+Shape\+Channel\+Name()}{CreateShapeChannelName()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Geometry\+::\+Create\+Shape\+Channel\+Name (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Shape\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_geometry_ac9c89d3dfee003accd6092682664501b}\label{class_fbx_geometry_ac9c89d3dfee003accd6092682664501b}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Create\+Shape\+Channel\+Properties@{Create\+Shape\+Channel\+Properties}}
+\index{Create\+Shape\+Channel\+Properties@{Create\+Shape\+Channel\+Properties}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Create\+Shape\+Channel\+Properties()}{CreateShapeChannelProperties()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Create\+Shape\+Channel\+Properties (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Shape\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_a07e94f7801067d66429afbf1799795cd}\label{class_fbx_geometry_a07e94f7801067d66429afbf1799795cd}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_layer_container_aefb90aadf569c7ebbbd3672e9c45776f}{Fbx\+Layer\+Container}を再実装しています。
+
+
+
+\hyperlink{class_fbx_mesh_a1755e89d515fadbc2d52924917b618f7}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs_surface_ab9ff252170ad2dc35958af782962a5c9}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_a8a5ea388bc948e47ab65e1705f98f402}{Fbx\+Nurbs}, \hyperlink{class_fbx_nurbs_curve_a8c562cccf434c37cb3aad0df27d60e86}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_patch_a7e094310626891214577dabe4ff145f9}{Fbx\+Patch}, \hyperlink{class_fbx_line_a92abd64f6b58057c899bf5733a2e2275}{Fbx\+Line}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}\label{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Geometry\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the node attribute type. This method is derived in the more high level classes (\hyperlink{class_fbx_mesh}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}, etc...) and returns the actual type of the geometry object.
+
+\begin{DoxyReturn}{戻り値}
+{\itshape e\+Unknown} 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_layer_container_a578a24bfcd49464813a4b5b08a12ec59}{Fbx\+Layer\+Container}を再実装しています。
+
+
+
+\hyperlink{class_fbx_trim_nurbs_surface_a2d60f9613978db561ac32e2efff35104}{Fbx\+Trim\+Nurbs\+Surface}, \hyperlink{class_fbx_boundary_a093be9c6c0c0f13a337e9b6815aed9d0}{Fbx\+Boundary}, \hyperlink{class_fbx_sub_div_ac109cef6a177563eab80e28d414289a3}{Fbx\+Sub\+Div}, \hyperlink{class_fbx_nurbs_curve_aa6ec087af306c42ac814d43ea80c60b3}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_line_a3307097464d924b2c95c6687e41d69c9}{Fbx\+Line}, \hyperlink{class_fbx_mesh_a5a52e41ccf1382c40d3361ec3cfbb68a}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs_surface_a7c075984ec95a01b9cb6031e19cbd0cf}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_a6c810e3a50538b346cbbf61338dca907}{Fbx\+Nurbs}, \hyperlink{class_fbx_patch_a4eb7de708949e012e0dcae2cb87a2ef4}{Fbx\+Patch}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_geometry_ae3dfb076c1d8729413588b4a934b036b}\label{class_fbx_geometry_ae3dfb076c1d8729413588b4a934b036b}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Default\+Shape@{Get\+Default\+Shape}}
+\index{Get\+Default\+Shape@{Get\+Default\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Default\+Shape()}{GetDefaultShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double Fbx\+Geometry\+::\+Get\+Default\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index }\end{DoxyParamCaption}) const}
+
+Returns the default deformation value for the specified shape. The default shape property has a value range from 0 to 100 (with 100 being full shape deformation). The default value is 0. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The deformation value for the specified shape, or 0 if p\+Index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a178e8125306a0e7bb66f71e5472d381f}\label{class_fbx_geometry_a178e8125306a0e7bb66f71e5472d381f}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Default\+Shape@{Get\+Default\+Shape}}
+\index{Get\+Default\+Shape@{Get\+Default\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Default\+Shape()}{GetDefaultShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Fbx\+Geometry\+::\+Get\+Default\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$}]{p\+Blend\+Shape\+Channel }\end{DoxyParamCaption}) const}
+
+Returns the default deformation value for the specified channel. The default shape property has a value range from 0 to 100 (with 100 being full shape deformation). The default value is 0. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Channel} & The blend shape channel. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The deformation value for the specified shape, or 0 if p\+Shape\+Name is invalid. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a3a6bd565c4a5a3a8b5daa3b653cc8a0a}\label{class_fbx_geometry_a3a6bd565c4a5a3a8b5daa3b653cc8a0a}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Deformer@{Get\+Deformer}}
+\index{Get\+Deformer@{Get\+Deformer}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Deformer()}{GetDeformer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_deformer}{Fbx\+Deformer}$\ast$ Fbx\+Geometry\+::\+Get\+Deformer (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the deformer at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified deformer index. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the deformer (or {\ttfamily N\+U\+LL} if p\+Index is out of range). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_aa283c85cdc0c5c3d2eae56952b6a41a0}\label{class_fbx_geometry_aa283c85cdc0c5c3d2eae56952b6a41a0}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Deformer@{Get\+Deformer}}
+\index{Get\+Deformer@{Get\+Deformer}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Deformer()}{GetDeformer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_deformer}{Fbx\+Deformer}$\ast$ Fbx\+Geometry\+::\+Get\+Deformer (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{Fbx\+Deformer\+::\+E\+Deformer\+Type}}]{p\+Type,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the deformer of a specified type at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified deformer index. \\
+\hline
+{\em p\+Type} & The specified deformer type. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the deformer (or {\ttfamily N\+U\+LL} if p\+Index is out of range). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a8cca6f160b52ee1ffd799c599c36f784}\label{class_fbx_geometry_a8cca6f160b52ee1ffd799c599c36f784}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Deformer\+Count@{Get\+Deformer\+Count}}
+\index{Get\+Deformer\+Count@{Get\+Deformer\+Count}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Deformer\+Count()}{GetDeformerCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+::\+Get\+Deformer\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of deformers. \begin{DoxyReturn}{戻り値}
+The number of deformers that are connected to this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a3eaf9796d935cd523d0a85a7f0c018fc}\label{class_fbx_geometry_a3eaf9796d935cd523d0a85a7f0c018fc}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Deformer\+Count@{Get\+Deformer\+Count}}
+\index{Get\+Deformer\+Count@{Get\+Deformer\+Count}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Deformer\+Count()}{GetDeformerCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+::\+Get\+Deformer\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{Fbx\+Deformer\+::\+E\+Deformer\+Type}}]{p\+Type }\end{DoxyParamCaption}) const}
+
+Returns the number of deformers of a specified type. 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The specified deformer type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of deformers of the specified type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a377769a99e12dc765ac9ea49282ad1bf}\label{class_fbx_geometry_a377769a99e12dc765ac9ea49282ad1bf}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Destination\+Geometry\+Weighted\+Map@{Get\+Destination\+Geometry\+Weighted\+Map}}
+\index{Get\+Destination\+Geometry\+Weighted\+Map@{Get\+Destination\+Geometry\+Weighted\+Map}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Destination\+Geometry\+Weighted\+Map()}{GetDestinationGeometryWeightedMap()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry_weighted_map}{Fbx\+Geometry\+Weighted\+Map}$\ast$ Fbx\+Geometry\+::\+Get\+Destination\+Geometry\+Weighted\+Map (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Returns the destination geometry weighted map at a specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the destination geometry weighted map at the specified index (if any). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a7bebc9194083c5bacf77389b98ff906f}\label{class_fbx_geometry_a7bebc9194083c5bacf77389b98ff906f}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Destination\+Geometry\+Weighted\+Map\+Count@{Get\+Destination\+Geometry\+Weighted\+Map\+Count}}
+\index{Get\+Destination\+Geometry\+Weighted\+Map\+Count@{Get\+Destination\+Geometry\+Weighted\+Map\+Count}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Destination\+Geometry\+Weighted\+Map\+Count()}{GetDestinationGeometryWeightedMapCount()}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+::\+Get\+Destination\+Geometry\+Weighted\+Map\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of destination geometry weighted map(s) that are connected to this geometry. \begin{DoxyReturn}{戻り値}
+The number of destination geometry weighted map(s) that are connected to this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_abba9072e0a3f1ad52033996f9809df80}\label{class_fbx_geometry_abba9072e0a3f1ad52033996f9809df80}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Pivot@{Get\+Pivot}}
+\index{Get\+Pivot@{Get\+Pivot}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Pivot()}{GetPivot()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix}\& Fbx\+Geometry\+::\+Get\+Pivot (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+X\+Matrix }\end{DoxyParamCaption}) const}
+
+Returns the pivot matrix. 
+\begin{DoxyParams}{引数}
+{\em p\+X\+Matrix} & Placeholder for the returned matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Reference to the passed argument. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a8a60c0db307689b6d4fb6055055a1601}\label{class_fbx_geometry_a8a60c0db307689b6d4fb6055055a1601}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Shape@{Get\+Shape}}
+\index{Get\+Shape@{Get\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Shape()}{GetShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_shape}{Fbx\+Shape}$\ast$ Fbx\+Geometry\+::\+Get\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index,  }\item[{int}]{p\+Shape\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Returns the shape found at the specified index on a blend shape channel of a blend shape deformer. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+{\em p\+Shape\+Index} & The specified shape index. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the shape (or {\ttfamily N\+U\+LL} if p\+Index is out of range). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a8e9fba2b422ca2f4f5b4deda107fce7f}\label{class_fbx_geometry_a8e9fba2b422ca2f4f5b4deda107fce7f}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Shape@{Get\+Shape}}
+\index{Get\+Shape@{Get\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Shape()}{GetShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_shape}{Fbx\+Shape}$\ast$ Fbx\+Geometry\+::\+Get\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index,  }\item[{int}]{p\+Shape\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the shape found at the specified index on a blend shape channel of a blend shape deformer. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+{\em p\+Shape\+Index} & The specified shape index. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the shape (or {\ttfamily N\+U\+LL} if p\+Index is out of range). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a5a0e6869e72e17e9d0e7d2bb20264828}\label{class_fbx_geometry_a5a0e6869e72e17e9d0e7d2bb20264828}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Shape\+Channel@{Get\+Shape\+Channel}}
+\index{Get\+Shape\+Channel@{Get\+Shape\+Channel}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Shape\+Channel()}{GetShapeChannel()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve}$\ast$ Fbx\+Geometry\+::\+Get\+Shape\+Channel (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Layer,  }\item[{bool}]{p\+Create\+As\+Needed = {\ttfamily false},  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the shape animation curve. The shape channel is an animatable property with a value range from 0 to 100 (with 100 being full shape deformation). The default value is 0. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+{\em p\+Layer} & The animation layer from which we want to get the requested animation curve. \\
+\hline
+{\em p\+Create\+As\+Needed} & If {\ttfamily true}, creates the animation curve if it is not already present. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Animation curve (or N\+U\+LL if an error occurred). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If p\+Layer is left at N\+U\+LL, the method will use the first layer of the Animation stack. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_a9aa043cfb8856ef48b53b8cb7c8191b3}\label{class_fbx_geometry_a9aa043cfb8856ef48b53b8cb7c8191b3}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Shape\+Count@{Get\+Shape\+Count}}
+\index{Get\+Shape\+Count@{Get\+Shape\+Count}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Shape\+Count()}{GetShapeCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+::\+Get\+Shape\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of shapes. \begin{DoxyReturn}{戻り値}
+The number of shapes that have been added to this geometry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a34b10144646e4788f3702b9ebfa06dc2}\label{class_fbx_geometry_a34b10144646e4788f3702b9ebfa06dc2}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Shape\+Count@{Get\+Shape\+Count}}
+\index{Get\+Shape\+Count@{Get\+Shape\+Count}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Shape\+Count()}{GetShapeCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+Geometry\+::\+Get\+Shape\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Returns the number of shapes. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of shapes that have been added to this blend shape channel of this blend shape deformer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a2d8cd2e9bf5a91fedcc1039dc4dce31d}\label{class_fbx_geometry_a2d8cd2e9bf5a91fedcc1039dc4dce31d}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Get\+Source\+Geometry\+Weighted\+Map@{Get\+Source\+Geometry\+Weighted\+Map}}
+\index{Get\+Source\+Geometry\+Weighted\+Map@{Get\+Source\+Geometry\+Weighted\+Map}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Get\+Source\+Geometry\+Weighted\+Map()}{GetSourceGeometryWeightedMap()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry_weighted_map}{Fbx\+Geometry\+Weighted\+Map}$\ast$ Fbx\+Geometry\+::\+Get\+Source\+Geometry\+Weighted\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the source geometry weighted map that is connected to this geometry. \begin{DoxyReturn}{戻り値}
+Pointer to the source geometry weighted map that is connected to this geometry if any. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a49e920f4c7a2179ef3297e7c5f2cf31a}\label{class_fbx_geometry_a49e920f4c7a2179ef3297e7c5f2cf31a}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Remove\+Deformer@{Remove\+Deformer}}
+\index{Remove\+Deformer@{Remove\+Deformer}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Remove\+Deformer()}{RemoveDeformer()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_deformer}{Fbx\+Deformer}$\ast$ Fbx\+Geometry\+::\+Remove\+Deformer (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Remove a deformer. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of deformer to remove. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the removed deformer (or {\ttfamily N\+U\+LL} if p\+Index is out of range). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_a891f23fed585b15503cdf8a38b424e14}\label{class_fbx_geometry_a891f23fed585b15503cdf8a38b424e14}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Revert\+Shape\+Names\+To\+V6\+Format@{Revert\+Shape\+Names\+To\+V6\+Format}}
+\index{Revert\+Shape\+Names\+To\+V6\+Format@{Revert\+Shape\+Names\+To\+V6\+Format}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Revert\+Shape\+Names\+To\+V6\+Format()}{RevertShapeNamesToV6Format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Revert\+Shape\+Names\+To\+V6\+Format (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Take\+Node\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_a408862417553440cefa975d1366985bb}\label{class_fbx_geometry_a408862417553440cefa975d1366985bb}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Revert\+Shape\+Names\+To\+V6\+Format@{Revert\+Shape\+Names\+To\+V6\+Format}}
+\index{Revert\+Shape\+Names\+To\+V6\+Format@{Revert\+Shape\+Names\+To\+V6\+Format}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Revert\+Shape\+Names\+To\+V6\+Format()}{RevertShapeNamesToV6Format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Revert\+Shape\+Names\+To\+V6\+Format (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Take\+Node\+Name,  }\item[{int}]{p\+Shape\+Index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_a6f8337a6336fc2e9bc0ea3d2d04c5ad1}\label{class_fbx_geometry_a6f8337a6336fc2e9bc0ea3d2d04c5ad1}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Set\+Default\+Shape@{Set\+Default\+Shape}}
+\index{Set\+Default\+Shape@{Set\+Default\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Set\+Default\+Shape()}{SetDefaultShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Set\+Default\+Shape (\begin{DoxyParamCaption}\item[{int}]{p\+Blend\+Shape\+Index,  }\item[{int}]{p\+Blend\+Shape\+Channel\+Index,  }\item[{double}]{p\+Percent }\end{DoxyParamCaption})}
+
+Sets the default deformation for a specified shape. The default shape property has a value range from 0 to 100 (with 100 being full shape deformation). The default value is 0. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Index} & The blend shape deformer index. \\
+\hline
+{\em p\+Blend\+Shape\+Channel\+Index} & The blend shape channel index. \\
+\hline
+{\em p\+Percent} & Deformation percentage (on a scale ranging from 0 to 100). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function has no effect if p\+Index is out of range. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_a33ac7c5dc4a3001948b18696f47af802}\label{class_fbx_geometry_a33ac7c5dc4a3001948b18696f47af802}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Set\+Default\+Shape@{Set\+Default\+Shape}}
+\index{Set\+Default\+Shape@{Set\+Default\+Shape}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Set\+Default\+Shape()}{SetDefaultShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Set\+Default\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$}]{p\+Blend\+Shape\+Channel,  }\item[{double}]{p\+Percent }\end{DoxyParamCaption})}
+
+Sets the default deformation for a specified channel. The default shape property has a value range from 0 to 100 (with 100 being full shape deformation). The default value is 0. 
+\begin{DoxyParams}{引数}
+{\em p\+Blend\+Shape\+Channel} & The blend shape channel. \\
+\hline
+{\em p\+Percent} & Deformation percentage (on a scale ranging from 0 to 100). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function has no effect if p\+Shape\+Name is invalid. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_a4e28b47a5f6dba7d53e692486d69c126}\label{class_fbx_geometry_a4e28b47a5f6dba7d53e692486d69c126}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Set\+Document@{Set\+Document}}
+\index{Set\+Document@{Set\+Document}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Set\+Document()}{SetDocument()}}
+{\footnotesize\ttfamily virtual void Fbx\+Geometry\+::\+Set\+Document (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_container_a1743b1727b9f522d69bbf0d65c2a5073}{Fbx\+Layer\+Container}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_geometry_a0b6b14186134a64ad55a47bcac865d70}\label{class_fbx_geometry_a0b6b14186134a64ad55a47bcac865d70}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!Set\+Pivot@{Set\+Pivot}}
+\index{Set\+Pivot@{Set\+Pivot}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{Set\+Pivot()}{SetPivot()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+::\+Set\+Pivot (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+X\+Matrix }\end{DoxyParamCaption})}
+
+Sets the pivot matrix. 
+\begin{DoxyParams}{引数}
+{\em p\+X\+Matrix} & The transformation matrix that is assigned to the pivot matrix. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_geometry_ab9f5852d38a38a9efb0ab63bd74503c0}\label{class_fbx_geometry_ab9f5852d38a38a9efb0ab63bd74503c0}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!m\+Pivot@{m\+Pivot}}
+\index{m\+Pivot@{m\+Pivot}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{m\+Pivot}{mPivot}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix}$\ast$ Fbx\+Geometry\+::m\+Pivot\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxgeometry.\+h の 311 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_geometry_a8752a5800b261d678592dc7a81dad4b0}\label{class_fbx_geometry_a8752a5800b261d678592dc7a81dad4b0}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!m\+Shape\+Channel\+Name\+Array\+V5@{m\+Shape\+Channel\+Name\+Array\+V5}}
+\index{m\+Shape\+Channel\+Name\+Array\+V5@{m\+Shape\+Channel\+Name\+Array\+V5}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{m\+Shape\+Channel\+Name\+Array\+V5}{mShapeChannelNameArrayV5}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_string}{Fbx\+String}$\ast$$>$ Fbx\+Geometry\+::m\+Shape\+Channel\+Name\+Array\+V5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxgeometry.\+h の 309 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_geometry_a2a38009f990f6dfa9ca81ee2b24b024b}\label{class_fbx_geometry_a2a38009f990f6dfa9ca81ee2b24b024b}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!m\+Shape\+Name\+Array\+V5@{m\+Shape\+Name\+Array\+V5}}
+\index{m\+Shape\+Name\+Array\+V5@{m\+Shape\+Name\+Array\+V5}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{m\+Shape\+Name\+Array\+V5}{mShapeNameArrayV5}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_string}{Fbx\+String}$\ast$$>$ Fbx\+Geometry\+::m\+Shape\+Name\+Array\+V5\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxgeometry.\+h の 308 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_geometry_a7f09646b7a716f58932d9be9c4a34486}\label{class_fbx_geometry_a7f09646b7a716f58932d9be9c4a34486}} 
+\index{Fbx\+Geometry@{Fbx\+Geometry}!m\+Shape\+Name\+Array\+V6@{m\+Shape\+Name\+Array\+V6}}
+\index{m\+Shape\+Name\+Array\+V6@{m\+Shape\+Name\+Array\+V6}!Fbx\+Geometry@{Fbx\+Geometry}}
+\subsubsection{\texorpdfstring{m\+Shape\+Name\+Array\+V6}{mShapeNameArrayV6}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_string}{Fbx\+String}$\ast$$>$ Fbx\+Geometry\+::m\+Shape\+Name\+Array\+V6\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxgeometry.\+h の 307 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxgeometry_8h}{fbxgeometry.\+h}\end{DoxyCompactItemize}

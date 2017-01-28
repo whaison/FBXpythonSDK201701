@@ -1,0 +1,766 @@
+\hypertarget{class_fbx_matrix}{}\section{Fbx\+Matrix クラス}
+\label{class_fbx_matrix}\index{Fbx\+Matrix@{Fbx\+Matrix}}
+
+
+{\ttfamily \#include $<$fbxmatrix.\+h$>$}
+
+Fbx\+Matrix の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_matrix}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_matrix_a4a2be0a35135b34744cb909d98c54993}{Compare} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} pM, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p\+Threshold=\hyperlink{fbxtypes_8h_acf3cd6f208edb42ad9c9abbc1f7feea0}{F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}) const
+\item 
+int \hyperlink{class_fbx_matrix_af70d97ac4256207042f4aeb933bfae99}{Compare} (const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} pM, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p\+Threshold=\hyperlink{fbxtypes_8h_acf3cd6f208edb42ad9c9abbc1f7feea0}{F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}) const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_a456c331260776abbc6773ce327437cac}{operator$\ast$} (\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p\+Value) const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \& \hyperlink{class_fbx_matrix_a29c75e711021d29d9b046f7f0b5119cf}{operator$\ast$=} (\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p\+Value)
+\item 
+\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \hyperlink{class_fbx_matrix_a54c603f422d3a39bdf0bc6c4f3e14436}{L\+U\+Decomposition} (\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Vector)
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_ab6757b8b980b7408507a8fe95a954872}{L\+U\+Mult} (\hyperlink{class_fbx_matrix}{Fbx\+Matrix} pM, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Vector) const
+\item 
+\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \hyperlink{class_fbx_matrix_add2807a6e072d224b95ec69f584a3600}{Determinant} () const
+\end{DoxyCompactItemize}
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_matrix_a06dc051202b75dec9827f9bddaae2007}{Fbx\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Constructor (initialize to an identity matrix) \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_matrix_a4f9893c514abe0902a9558f3c28994db}{Fbx\+Matrix} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&pM)
+\item 
+\hyperlink{class_fbx_matrix_ae287393a31e964e17b8869355464684a}{Fbx\+Matrix} (const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&pM)
+\item 
+\hyperlink{class_fbx_matrix_ac6c1fba6a322eaf372da4e925999b319}{Fbx\+Matrix} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pT, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pR, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pS)
+\item 
+\hyperlink{class_fbx_matrix_a9e45338c462c5ca2f2167e24aef42d4e}{Fbx\+Matrix} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pT, const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&pQ, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pS)
+\item 
+\hyperlink{class_fbx_matrix_a38ea1e3dfa6b3224134d74ae616e8342}{Fbx\+Matrix} (const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p00, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p10, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p20, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p30, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p01, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p11, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p21, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p31, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p02, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p12, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p22, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p32, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p03, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p13, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p23, const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p33)
+\item 
+\hyperlink{class_fbx_matrix_ab8028e6c54a9a017cc83a0a3de222275}{$\sim$\+Fbx\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Access}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \hyperlink{class_fbx_matrix_a4efcbbd102b39375a1415b496c302ada}{Get} (int pY, int pX) const
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_matrix_a753fd8b28ef58c5e6601e41b1a6e4a56}{Get\+Row} (int pY) const
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_matrix_a1954028d6d499f4e5abb3395dd44b973}{Get\+Column} (int pX) const
+\item 
+void \hyperlink{class_fbx_matrix_a960df088b3de9b92b6d1a0a5a7c92f96}{Set} (int pY, int pX, \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} p\+Value)
+\item 
+void \hyperlink{class_fbx_matrix_a253b113324411e4207128ec8a8c5615a}{Set\+T\+RS} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pT, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pR, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pS)
+\item 
+void \hyperlink{class_fbx_matrix_ab6dfb720064c2d0b289deadccdd05b59}{Set\+T\+QS} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pT, const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&pQ, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&pS)
+\item 
+void \hyperlink{class_fbx_matrix_a0bb42e2e2674690feb0ba822c935df0e}{Set\+Row} (int pY, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Row)
+\item 
+void \hyperlink{class_fbx_matrix_a574c58718a4e83c822ac226e20d1bd9e}{Set\+Column} (int pX, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Column)
+\item 
+void \hyperlink{class_fbx_matrix_ac3746a3f250c31b261b92131f3658dc5}{Get\+Elements} (\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Translation, \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Rotation, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Shearing, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Scaling, \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \&p\+Sign) const
+\item 
+void \hyperlink{class_fbx_matrix_a4f2ed6466e4887e6ebd30af2f4cda963}{Get\+Elements} (\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Translation, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Rotation, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Shearing, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Scaling, \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \&p\+Sign) const
+\end{DoxyCompactItemize}
+\subsection*{Operators}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \& \hyperlink{class_fbx_matrix_a45fad935c08ef083dddd3adddc3d6884}{operator=} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix)
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_a598bafa12879f9f233d8b5524ebdaad2}{operator-\/} () const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_a34275146ae0b453898798760fe340650}{operator+} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix) const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_a5a8209e3a84baf3961be72e9e7fa5c69}{operator-\/} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix) const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_ae0fa68fdfa8db6ba53ec5a57ae6fc7d4}{operator$\ast$} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix) const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \& \hyperlink{class_fbx_matrix_a9a4f35c24f2907b4d170bbd361d69fa6}{operator+=} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix)
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \& \hyperlink{class_fbx_matrix_a915b0943d6c81166423360bdd913d1d3}{operator-\/=} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix)
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \& \hyperlink{class_fbx_matrix_a1ef7240d9cedabb803a3701a0002ad33}{operator$\ast$=} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix)
+\item 
+bool \hyperlink{class_fbx_matrix_af6bccfe44b18342ed8dd8c9240ff1485}{operator==} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&pM) const
+\item 
+bool \hyperlink{class_fbx_matrix_afe922424fb80e6508ece592785719ebc}{operator==} (const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&pM) const
+\item 
+bool \hyperlink{class_fbx_matrix_af6010241ffcf7a98b0b3df64602cae41}{operator!=} (const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&pM) const
+\item 
+bool \hyperlink{class_fbx_matrix_a970735bf1972ec0d7bca51fd9bea48e7}{operator!=} (const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&pM) const
+\end{DoxyCompactItemize}
+\subsection*{Casting}
+\begin{DoxyCompactItemize}
+\item 
+typedef const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}(k\+Double44)\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em Define 4$\ast$4 array as a new type. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_matrix_aef325dea7b08df3c2703e05403a431e8}{operator double $\ast$} ()
+\begin{DoxyCompactList}\small\item\em Cast the vector in a double pointer. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_matrix_affabd5f07e4286c8da7faedee32c054f}{operator const double $\ast$} () const
+\begin{DoxyCompactList}\small\item\em Cast the vector in a const double pointer. \end{DoxyCompactList}\item 
+k\+Double44 \& \hyperlink{class_fbx_matrix_a0bb3a6188a337f2ae4e92bef4d2a0a3a}{Double44} () const
+\begin{DoxyCompactList}\small\item\em Cast the matrix in a reference to a 4$\ast$4 array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Math Operations}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_ad08366052eb8d9df5f453c7b6045d433}{Inverse} () const
+\item 
+\hyperlink{class_fbx_matrix}{Fbx\+Matrix} \hyperlink{class_fbx_matrix_ad71dfeec606708fa105cc4fec4b92027}{Transpose} () const
+\item 
+void \hyperlink{class_fbx_matrix_aa9ae7a84a1c18119a7259a5e904c2103}{Set\+Identity} ()
+\begin{DoxyCompactList}\small\item\em Set matrix to identity. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_matrix_a12d8f9a36c338d81a9807029adaf8af7}{Set\+Look\+To\+LH} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Eye\+Position, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Eye\+Direction, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Up\+Direction)
+\item 
+void \hyperlink{class_fbx_matrix_ac5615b560c64d77ced2e0848e5414b09}{Set\+Look\+To\+RH} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Eye\+Position, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Eye\+Direction, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Up\+Direction)
+\item 
+void \hyperlink{class_fbx_matrix_a4fc44b7575600ae53d954a9732fc6d56}{Set\+Look\+At\+LH} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Eye\+Position, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Look\+At, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Up\+Direction)
+\item 
+void \hyperlink{class_fbx_matrix_a9c7d26723434b5bbe31fdac94d4eb820}{Set\+Look\+At\+RH} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Eye\+Position, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Look\+At, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Up\+Direction)
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_matrix_a6c0d007cd876405973411e185aabe8a9}{Mult\+Normalize} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Vector) const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+F\+BX S\+DK basic 4x4 double matrix class. 
+
+ fbxmatrix.\+h の 27 行目に定義があります。
+
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}\label{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!double@{double}}
+\index{double@{double}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{double}{double}}
+{\footnotesize\ttfamily typedef const Fbx\+Matrix\+::double(k\+Double44)\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+
+
+Define 4$\ast$4 array as a new type. 
+
+
+
+ fbxmatrix.\+h の 214 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_matrix_a06dc051202b75dec9827f9bddaae2007}\label{class_fbx_matrix_a06dc051202b75dec9827f9bddaae2007}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Fbx\+Matrix()}{FbxMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::\+Fbx\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor (initialize to an identity matrix) 
+
+\mbox{\Hypertarget{class_fbx_matrix_a4f9893c514abe0902a9558f3c28994db}\label{class_fbx_matrix_a4f9893c514abe0902a9558f3c28994db}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Fbx\+Matrix()}{FbxMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::\+Fbx\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{pM }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em pM} & Another \hyperlink{class_fbx_matrix}{Fbx\+Matrix} object copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_ae287393a31e964e17b8869355464684a}\label{class_fbx_matrix_ae287393a31e964e17b8869355464684a}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Fbx\+Matrix()}{FbxMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::\+Fbx\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{pM }\end{DoxyParamCaption})}
+
+Copy constructor for affine matrix. 
+\begin{DoxyParams}{引数}
+{\em pM} & Affine matrix \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_ac6c1fba6a322eaf372da4e925999b319}\label{class_fbx_matrix_ac6c1fba6a322eaf372da4e925999b319}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Fbx\+Matrix()}{FbxMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::\+Fbx\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pT,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pR,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pS }\end{DoxyParamCaption})}
+
+T\+RS Constructor. 
+\begin{DoxyParams}{引数}
+{\em pT} & Translation vector. \\
+\hline
+{\em pR} & Euler rotation vector. \\
+\hline
+{\em pS} & Scale vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a9e45338c462c5ca2f2167e24aef42d4e}\label{class_fbx_matrix_a9e45338c462c5ca2f2167e24aef42d4e}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Fbx\+Matrix()}{FbxMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::\+Fbx\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pT,  }\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{pQ,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pS }\end{DoxyParamCaption})}
+
+T\+QS Constructor. 
+\begin{DoxyParams}{引数}
+{\em pT} & Translation vector. \\
+\hline
+{\em pQ} & Quaternion. \\
+\hline
+{\em pS} & Scale vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a38ea1e3dfa6b3224134d74ae616e8342}\label{class_fbx_matrix_a38ea1e3dfa6b3224134d74ae616e8342}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Fbx\+Matrix()}{FbxMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::\+Fbx\+Matrix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p00,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p10,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p20,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p30,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p01,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p11,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p21,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p31,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p02,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p12,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p22,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p32,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p03,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p13,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p23,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p33 }\end{DoxyParamCaption})}
+
+16 double constructor. 
+\begin{DoxyParams}{引数}
+{\em p00} & Value at column 0 row 0. \\
+\hline
+{\em p10} & Value at column 1 row 0. \\
+\hline
+{\em p20} & Value at column 2 row 0. \\
+\hline
+{\em p30} & Value at column 3 row 0. \\
+\hline
+{\em p01} & Value at column 0 row 1. \\
+\hline
+{\em p11} & Value at column 1 row 1. \\
+\hline
+{\em p21} & Value at column 2 row 1. \\
+\hline
+{\em p31} & Value at column 3 row 1. \\
+\hline
+{\em p02} & Value at column 0 row 2. \\
+\hline
+{\em p12} & Value at column 1 row 2. \\
+\hline
+{\em p22} & Value at column 2 row 2. \\
+\hline
+{\em p32} & Value at column 3 row 2. \\
+\hline
+{\em p03} & Value at column 0 row 3. \\
+\hline
+{\em p13} & Value at column 1 row 3. \\
+\hline
+{\em p23} & Value at column 2 row 3. \\
+\hline
+{\em p33} & Value at column 3 row 3. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_ab8028e6c54a9a017cc83a0a3de222275}\label{class_fbx_matrix_ab8028e6c54a9a017cc83a0a3de222275}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!````~Fbx\+Matrix@{$\sim$\+Fbx\+Matrix}}
+\index{````~Fbx\+Matrix@{$\sim$\+Fbx\+Matrix}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Matrix()}{~FbxMatrix()}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::$\sim$\+Fbx\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_matrix_a4a2be0a35135b34744cb909d98c54993}\label{class_fbx_matrix_a4a2be0a35135b34744cb909d98c54993}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Compare@{Compare}}
+\index{Compare@{Compare}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Compare()}{Compare()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Matrix\+::\+Compare (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix}}]{pM,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p\+Threshold = {\ttfamily \hyperlink{fbxtypes_8h_acf3cd6f208edb42ad9c9abbc1f7feea0}{F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_matrix_af70d97ac4256207042f4aeb933bfae99}\label{class_fbx_matrix_af70d97ac4256207042f4aeb933bfae99}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Compare@{Compare}}
+\index{Compare@{Compare}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Compare()}{Compare()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+Matrix\+::\+Compare (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix}}]{pM,  }\item[{const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p\+Threshold = {\ttfamily \hyperlink{fbxtypes_8h_acf3cd6f208edb42ad9c9abbc1f7feea0}{F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_matrix_add2807a6e072d224b95ec69f584a3600}\label{class_fbx_matrix_add2807a6e072d224b95ec69f584a3600}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Determinant@{Determinant}}
+\index{Determinant@{Determinant}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Determinant()}{Determinant()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} Fbx\+Matrix\+::\+Determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_matrix_a0bb3a6188a337f2ae4e92bef4d2a0a3a}\label{class_fbx_matrix_a0bb3a6188a337f2ae4e92bef4d2a0a3a}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Double44@{Double44}}
+\index{Double44@{Double44}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Double44()}{Double44()}}
+{\footnotesize\ttfamily k\+Double44\& Fbx\+Matrix\+::\+Double44 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cast the matrix in a reference to a 4$\ast$4 array. 
+
+
+
+ fbxmatrix.\+h の 217 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_matrix_a4efcbbd102b39375a1415b496c302ada}\label{class_fbx_matrix_a4efcbbd102b39375a1415b496c302ada}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} Fbx\+Matrix\+::\+Get (\begin{DoxyParamCaption}\item[{int}]{pY,  }\item[{int}]{pX }\end{DoxyParamCaption}) const}
+
+Retrieve matrix element. 
+\begin{DoxyParams}{引数}
+{\em pY} & Row index. \\
+\hline
+{\em pX} & Column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Value at element \mbox{[} pX, pY \mbox{]} of the matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a1954028d6d499f4e5abb3395dd44b973}\label{class_fbx_matrix_a1954028d6d499f4e5abb3395dd44b973}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Get\+Column@{Get\+Column}}
+\index{Get\+Column@{Get\+Column}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Get\+Column()}{GetColumn()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Matrix\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{int}]{pX }\end{DoxyParamCaption}) const}
+
+Extract a column vector. 
+\begin{DoxyParams}{引数}
+{\em pX} & Column index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The column vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_ac3746a3f250c31b261b92131f3658dc5}\label{class_fbx_matrix_ac3746a3f250c31b261b92131f3658dc5}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Get\+Elements@{Get\+Elements}}
+\index{Get\+Elements@{Get\+Elements}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Get\+Elements()}{GetElements()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Get\+Elements (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Translation,  }\item[{\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Rotation,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Shearing,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Scaling,  }\item[{\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \&}]{p\+Sign }\end{DoxyParamCaption}) const}
+
+Decompose the affine matrix into elements of translation, rotation, shearing, scaling and sign of determinant. 
+\begin{DoxyParams}{引数}
+{\em p\+Translation} & Translation element. \\
+\hline
+{\em p\+Rotation} & Rotation element. \\
+\hline
+{\em p\+Shearing} & Shearing element. \\
+\hline
+{\em p\+Scaling} & Scaling element. \\
+\hline
+{\em p\+Sign} & Sign of determinant. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a4f2ed6466e4887e6ebd30af2f4cda963}\label{class_fbx_matrix_a4f2ed6466e4887e6ebd30af2f4cda963}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Get\+Elements@{Get\+Elements}}
+\index{Get\+Elements@{Get\+Elements}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Get\+Elements()}{GetElements()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Get\+Elements (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Translation,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Rotation,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Shearing,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Scaling,  }\item[{\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} \&}]{p\+Sign }\end{DoxyParamCaption}) const}
+
+Decompose the affine matrix into elements of translation, rotation, shearing, scaling and sign of determinant. 
+\begin{DoxyParams}{引数}
+{\em p\+Translation} & Translation element. \\
+\hline
+{\em p\+Rotation} & Rotation element. \\
+\hline
+{\em p\+Shearing} & Shearing element. \\
+\hline
+{\em p\+Scaling} & Scaling element. \\
+\hline
+{\em p\+Sign} & Sign of determinant. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a753fd8b28ef58c5e6601e41b1a6e4a56}\label{class_fbx_matrix_a753fd8b28ef58c5e6601e41b1a6e4a56}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Get\+Row@{Get\+Row}}
+\index{Get\+Row@{Get\+Row}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Get\+Row()}{GetRow()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Matrix\+::\+Get\+Row (\begin{DoxyParamCaption}\item[{int}]{pY }\end{DoxyParamCaption}) const}
+
+Extract a row vector. 
+\begin{DoxyParams}{引数}
+{\em pY} & Row index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The row vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_ad08366052eb8d9df5f453c7b6045d433}\label{class_fbx_matrix_ad08366052eb8d9df5f453c7b6045d433}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Calculate the matrix inverse. \begin{DoxyReturn}{戻り値}
+The inverse matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a54c603f422d3a39bdf0bc6c4f3e14436}\label{class_fbx_matrix_a54c603f422d3a39bdf0bc6c4f3e14436}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!L\+U\+Decomposition@{L\+U\+Decomposition}}
+\index{L\+U\+Decomposition@{L\+U\+Decomposition}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{L\+U\+Decomposition()}{LUDecomposition()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} Fbx\+Matrix\+::\+L\+U\+Decomposition (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Vector }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_matrix_ab6757b8b980b7408507a8fe95a954872}\label{class_fbx_matrix_ab6757b8b980b7408507a8fe95a954872}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!L\+U\+Mult@{L\+U\+Mult}}
+\index{L\+U\+Mult@{L\+U\+Mult}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{L\+U\+Mult()}{LUMult()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::\+L\+U\+Mult (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_matrix}{Fbx\+Matrix}}]{pM,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Vector }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_matrix_a6c0d007cd876405973411e185aabe8a9}\label{class_fbx_matrix_a6c0d007cd876405973411e185aabe8a9}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Mult\+Normalize@{Mult\+Normalize}}
+\index{Mult\+Normalize@{Mult\+Normalize}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Mult\+Normalize()}{MultNormalize()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Matrix\+::\+Mult\+Normalize (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Vector }\end{DoxyParamCaption}) const}
+
+Multiply this matrix by p\+Vector, the w component is normalized to 1. 
+\begin{DoxyParams}{引数}
+{\em p\+Vector} & A vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix $\ast$ p\+Vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_affabd5f07e4286c8da7faedee32c054f}\label{class_fbx_matrix_affabd5f07e4286c8da7faedee32c054f}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator const double $\ast$@{operator const double $\ast$}}
+\index{operator const double $\ast$@{operator const double $\ast$}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator const double $\ast$()}{operator const double *()}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::operator const \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Cast the vector in a const double pointer. 
+
+\mbox{\Hypertarget{class_fbx_matrix_aef325dea7b08df3c2703e05403a431e8}\label{class_fbx_matrix_aef325dea7b08df3c2703e05403a431e8}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator double $\ast$@{operator double $\ast$}}
+\index{operator double $\ast$@{operator double $\ast$}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator double $\ast$()}{operator double *()}}
+{\footnotesize\ttfamily Fbx\+Matrix\+::operator \hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double} $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cast the vector in a double pointer. 
+
+\mbox{\Hypertarget{class_fbx_matrix_af6010241ffcf7a98b0b3df64602cae41}\label{class_fbx_matrix_af6010241ffcf7a98b0b3df64602cae41}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Matrix\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{pM }\end{DoxyParamCaption}) const}
+
+Non-\/equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pM} & The matrix to be compared against this matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily false} if the two matrices are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily true} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a970735bf1972ec0d7bca51fd9bea48e7}\label{class_fbx_matrix_a970735bf1972ec0d7bca51fd9bea48e7}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Matrix\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{pM }\end{DoxyParamCaption}) const}
+
+Non-\/equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pM} & The affine matrix to be compared against this matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily false} if the two matrices are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily true} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_ae0fa68fdfa8db6ba53ec5a57ae6fc7d4}\label{class_fbx_matrix_ae0fa68fdfa8db6ba53ec5a57ae6fc7d4}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption}) const}
+
+Multiply two matrices. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & A matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix $\ast$ p\+Matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a456c331260776abbc6773ce327437cac}\label{class_fbx_matrix_a456c331260776abbc6773ce327437cac}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p\+Value }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_matrix_a1ef7240d9cedabb803a3701a0002ad33}\label{class_fbx_matrix_a1ef7240d9cedabb803a3701a0002ad33}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix}\& Fbx\+Matrix\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption})}
+
+Multiply two matrices. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & A matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix $\ast$ p\+Matrix, replacing this matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a29c75e711021d29d9b046f7f0b5119cf}\label{class_fbx_matrix_a29c75e711021d29d9b046f7f0b5119cf}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix}\& Fbx\+Matrix\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_matrix_a34275146ae0b453898798760fe340650}\label{class_fbx_matrix_a34275146ae0b453898798760fe340650}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption}) const}
+
+Add two matrices together. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & A matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix + p\+Matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a9a4f35c24f2907b4d170bbd361d69fa6}\label{class_fbx_matrix_a9a4f35c24f2907b4d170bbd361d69fa6}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix}\& Fbx\+Matrix\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption})}
+
+Add two matrices together. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & A matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix + p\+Matrix, replacing this matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a598bafa12879f9f233d8b5524ebdaad2}\label{class_fbx_matrix_a598bafa12879f9f233d8b5524ebdaad2}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Unary minus operator. \begin{DoxyReturn}{戻り値}
+A matrix where each element is multiplied by -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a5a8209e3a84baf3961be72e9e7fa5c69}\label{class_fbx_matrix_a5a8209e3a84baf3961be72e9e7fa5c69}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption}) const}
+
+Subtract a matrix from another matrix. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & A matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix -\/ p\+Matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a915b0943d6c81166423360bdd913d1d3}\label{class_fbx_matrix_a915b0943d6c81166423360bdd913d1d3}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix}\& Fbx\+Matrix\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption})}
+
+Subtract a matrix from another matrix. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & A matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of this matrix -\/ p\+Matrix, replacing this matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a45fad935c08ef083dddd3adddc3d6884}\label{class_fbx_matrix_a45fad935c08ef083dddd3adddc3d6884}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix}\& Fbx\+Matrix\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Matrix} & Source matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_af6bccfe44b18342ed8dd8c9240ff1485}\label{class_fbx_matrix_af6bccfe44b18342ed8dd8c9240ff1485}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Matrix\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{pM }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pM} & The matrix to be compared against this matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the two matrices are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_afe922424fb80e6508ece592785719ebc}\label{class_fbx_matrix_afe922424fb80e6508ece592785719ebc}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Matrix\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{pM }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pM} & The affine matrix to be compared against this matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the two matrices are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_matrix_a960df088b3de9b92b6d1a0a5a7c92f96}\label{class_fbx_matrix_a960df088b3de9b92b6d1a0a5a7c92f96}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set (\begin{DoxyParamCaption}\item[{int}]{pY,  }\item[{int}]{pX,  }\item[{\hyperlink{class_fbx_matrix_a01f8be57393e5d9973b23897c29d5520}{double}}]{p\+Value }\end{DoxyParamCaption})}
+
+Set matrix element. 
+\begin{DoxyParams}{引数}
+{\em pY} & Row index. \\
+\hline
+{\em pX} & Column index. \\
+\hline
+{\em p\+Value} & New component value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a574c58718a4e83c822ac226e20d1bd9e}\label{class_fbx_matrix_a574c58718a4e83c822ac226e20d1bd9e}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Column@{Set\+Column}}
+\index{Set\+Column@{Set\+Column}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Column()}{SetColumn()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Column (\begin{DoxyParamCaption}\item[{int}]{pX,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Column }\end{DoxyParamCaption})}
+
+Set a matrix column. 
+\begin{DoxyParams}{引数}
+{\em pX} & Column index. \\
+\hline
+{\em p\+Column} & Column vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_aa9ae7a84a1c18119a7259a5e904c2103}\label{class_fbx_matrix_aa9ae7a84a1c18119a7259a5e904c2103}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Identity@{Set\+Identity}}
+\index{Set\+Identity@{Set\+Identity}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Identity()}{SetIdentity()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set matrix to identity. 
+
+\mbox{\Hypertarget{class_fbx_matrix_a4fc44b7575600ae53d954a9732fc6d56}\label{class_fbx_matrix_a4fc44b7575600ae53d954a9732fc6d56}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Look\+At\+LH@{Set\+Look\+At\+LH}}
+\index{Set\+Look\+At\+LH@{Set\+Look\+At\+LH}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Look\+At\+L\+H()}{SetLookAtLH()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Look\+At\+LH (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Eye\+Position,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Look\+At,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Up\+Direction }\end{DoxyParamCaption})}
+
+Set the matrix to a \char`\"{}\+Look At\char`\"{} left handed. 
+\begin{DoxyParams}{引数}
+{\em p\+Eye\+Position} & The position of the eye. \\
+\hline
+{\em p\+Look\+At} & The look at position of the eye focus. \\
+\hline
+{\em p\+Up\+Direction} & The up direction of the eye. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a9c7d26723434b5bbe31fdac94d4eb820}\label{class_fbx_matrix_a9c7d26723434b5bbe31fdac94d4eb820}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Look\+At\+RH@{Set\+Look\+At\+RH}}
+\index{Set\+Look\+At\+RH@{Set\+Look\+At\+RH}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Look\+At\+R\+H()}{SetLookAtRH()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Look\+At\+RH (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Eye\+Position,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Look\+At,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Up\+Direction }\end{DoxyParamCaption})}
+
+Set the matrix values as a \char`\"{}\+Look At\char`\"{} right handed. 
+\begin{DoxyParams}{引数}
+{\em p\+Eye\+Position} & The position of the eye. \\
+\hline
+{\em p\+Look\+At} & The look at position of the eye focus. \\
+\hline
+{\em p\+Up\+Direction} & The up direction of the eye. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a12d8f9a36c338d81a9807029adaf8af7}\label{class_fbx_matrix_a12d8f9a36c338d81a9807029adaf8af7}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Look\+To\+LH@{Set\+Look\+To\+LH}}
+\index{Set\+Look\+To\+LH@{Set\+Look\+To\+LH}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Look\+To\+L\+H()}{SetLookToLH()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Look\+To\+LH (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Eye\+Position,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Eye\+Direction,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Up\+Direction }\end{DoxyParamCaption})}
+
+Set the matrix to a \char`\"{}\+Look To\char`\"{} left handed. 
+\begin{DoxyParams}{引数}
+{\em p\+Eye\+Position} & The position of the eye. \\
+\hline
+{\em p\+Eye\+Direction} & The direction of the eye. \\
+\hline
+{\em p\+Up\+Direction} & The up direction of the eye. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_ac5615b560c64d77ced2e0848e5414b09}\label{class_fbx_matrix_ac5615b560c64d77ced2e0848e5414b09}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Look\+To\+RH@{Set\+Look\+To\+RH}}
+\index{Set\+Look\+To\+RH@{Set\+Look\+To\+RH}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Look\+To\+R\+H()}{SetLookToRH()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Look\+To\+RH (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Eye\+Position,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Eye\+Direction,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Up\+Direction }\end{DoxyParamCaption})}
+
+Set the matrix to a \char`\"{}\+Look To\char`\"{} right handed. 
+\begin{DoxyParams}{引数}
+{\em p\+Eye\+Position} & The position of the eye. \\
+\hline
+{\em p\+Eye\+Direction} & The direction of the eye. \\
+\hline
+{\em p\+Up\+Direction} & The up direction of the eye. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a0bb42e2e2674690feb0ba822c935df0e}\label{class_fbx_matrix_a0bb42e2e2674690feb0ba822c935df0e}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+Row@{Set\+Row}}
+\index{Set\+Row@{Set\+Row}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+Row()}{SetRow()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+Row (\begin{DoxyParamCaption}\item[{int}]{pY,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Row }\end{DoxyParamCaption})}
+
+Set a matrix row. 
+\begin{DoxyParams}{引数}
+{\em pY} & Row index. \\
+\hline
+{\em p\+Row} & Row vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_ab6dfb720064c2d0b289deadccdd05b59}\label{class_fbx_matrix_ab6dfb720064c2d0b289deadccdd05b59}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+T\+QS@{Set\+T\+QS}}
+\index{Set\+T\+QS@{Set\+T\+QS}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+T\+Q\+S()}{SetTQS()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+T\+QS (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pT,  }\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{pQ,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pS }\end{DoxyParamCaption})}
+
+Set matrix. 
+\begin{DoxyParams}{引数}
+{\em pT} & Translation vector. \\
+\hline
+{\em pQ} & Quaternion. \\
+\hline
+{\em pS} & Scale vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_a253b113324411e4207128ec8a8c5615a}\label{class_fbx_matrix_a253b113324411e4207128ec8a8c5615a}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Set\+T\+RS@{Set\+T\+RS}}
+\index{Set\+T\+RS@{Set\+T\+RS}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Set\+T\+R\+S()}{SetTRS()}}
+{\footnotesize\ttfamily void Fbx\+Matrix\+::\+Set\+T\+RS (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pT,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pR,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{pS }\end{DoxyParamCaption})}
+
+Set matrix. 
+\begin{DoxyParams}{引数}
+{\em pT} & Translation vector. \\
+\hline
+{\em pR} & Euler rotation vector. \\
+\hline
+{\em pS} & Scale vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_matrix_ad71dfeec606708fa105cc4fec4b92027}\label{class_fbx_matrix_ad71dfeec606708fa105cc4fec4b92027}} 
+\index{Fbx\+Matrix@{Fbx\+Matrix}!Transpose@{Transpose}}
+\index{Transpose@{Transpose}!Fbx\+Matrix@{Fbx\+Matrix}}
+\subsubsection{\texorpdfstring{Transpose()}{Transpose()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_matrix}{Fbx\+Matrix} Fbx\+Matrix\+::\+Transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Calculate the matrix transpose. \begin{DoxyReturn}{戻り値}
+This matrix transposed. 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/math/\hyperlink{fbxmatrix_8h}{fbxmatrix.\+h}\end{DoxyCompactItemize}

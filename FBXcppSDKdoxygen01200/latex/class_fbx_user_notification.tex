@@ -1,0 +1,675 @@
+\hypertarget{class_fbx_user_notification}{}\section{Fbx\+User\+Notification クラス}
+\label{class_fbx_user_notification}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+
+
+{\ttfamily \#include $<$fbxusernotification.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_user_notification_1_1_a_e_sequence}{A\+E\+Sequence}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831}{E\+Entry\+ID} \{ \newline
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a4c254f676384d2e30d404b332edf6443}{e\+Bind\+Pose\+Invalid\+Object}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a53378acb296bacae72a0e4d340800329}{e\+Bind\+Pose\+Invalid\+Root}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a08c89d7d58c3a7b586c1a217e731434c}{e\+Bind\+Pose\+Not\+All\+Ancestors\+Nodes}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a3022bae2c03d5844c71174cc75ff4f85}{e\+Bind\+Pose\+Not\+All\+Deforming\+Nodes}, 
+\newline
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a8c586171379b87b37b16e67efaf9103e}{e\+Bind\+Pose\+Not\+All\+Ancestors\+Definition\+Nodes}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a4e1de0bd5563b049f8943483a9c0d568}{e\+Bind\+Pose\+Relative\+Matrix}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a38a82b2a39e3cf06f806d6ac94d8cc32}{e\+Embed\+Media\+Notify}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831afda820169b24edb2d185f5922c033287}{e\+File\+I\+O\+Notify}, 
+\newline
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831acfc6140ed3213475ad3fcc573bd57b28}{e\+File\+I\+O\+Notify\+Material}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a27cc25ab372d4d9626b914ff9a2128f2}{e\+File\+I\+O\+Notify\+D\+X\+F\+Not\+Support\+Nurbs}, 
+\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a29ef5b9c768f0018d9352cd78c9fe5de}{e\+Entry\+Start\+ID}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_user_notification_a77144b139bd98ffa8fe879e79edf0374}{Fbx\+User\+Notification} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, \hyperlink{class_fbx_string}{Fbx\+String} const \&p\+Log\+File\+Name, \hyperlink{class_fbx_string}{Fbx\+String} const \&p\+Session\+Description)
+\item 
+virtual \hyperlink{class_fbx_user_notification_a74a886b6fd62277275a953841f19400b}{$\sim$\+Fbx\+User\+Notification} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_user_notification_a1ed0d1420841b06af2b361dc0c3d7017}{Init\+Accumulator} ()
+\item 
+void \hyperlink{class_fbx_user_notification_a8e810f0860b43bf2b080f93acb3aaa50}{Clear\+Accumulator} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Accumulator Management}\par
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_user_notification_afc393d96ae3c3d826f3947507dcaa656}{Add\+Entry} (const int p\+ID, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Descr, \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{Fbx\+Accumulator\+Entry\+::\+E\+Class} p\+Class=\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a02238ae4f2cce7a190dad59cfb3e9c19}{Fbx\+Accumulator\+Entry\+::e\+Warning})
+\item 
+int \hyperlink{class_fbx_user_notification_a612d9fbba6d767dcd4614e4f4934298a}{Add\+Detail} (int p\+Entry\+Id)
+\item 
+int \hyperlink{class_fbx_user_notification_a3b675ae36a5f91c34f80edd417e1bec9}{Add\+Detail} (int p\+Entry\+Id, \hyperlink{class_fbx_string}{Fbx\+String} p\+String)
+\item 
+int \hyperlink{class_fbx_user_notification_a7e15dc53d4431dcc1411d9ae05498349}{Add\+Detail} (int p\+Entry\+Id, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+int \hyperlink{class_fbx_user_notification_af952064b707c1a6165590e83497940af}{Get\+Nb\+Entries} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of Accumulator\+Entries currently stored in this accumulator. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$ \hyperlink{class_fbx_user_notification_afde8bbb200efe632e2df0a81413f4476}{Get\+Entry} (int p\+Entry\+Id)
+\item 
+const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$ \hyperlink{class_fbx_user_notification_a78fc0966bfef1ea2a17f7a4ccd4a7318}{Get\+Entry\+At} (int p\+Entry\+Index) const
+\item 
+int \hyperlink{class_fbx_user_notification_a1c5bdc6db66e58957abec1cc7d5349a2}{Get\+Nb\+Details} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of Details recorded so far in this accumulator. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_user_notification_ae006edb0dda9a27ef1773494d254906e}{Get\+Detail} (int p\+Detail\+Id, const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$\&p\+AE) const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Utilities}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_user_notification_af261ffb4073bb573710dc59b4881b759}{Get\+Log\+File\+Path} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+Path)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_user_notification_a65aaed76d9cba16e213bf548b10e64fd}{Get\+Log\+File\+Name} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} $\ast$ \hyperlink{class_fbx_user_notification_a2b8ff6004f61e7c60b3b66e7a02fafdb}{Create} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Log\+File\+Name, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Session\+Description)
+\item 
+static void \hyperlink{class_fbx_user_notification_aebf93d0a30ccd330c04e424a6c461be1}{Destroy} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_user_notification_a1cdf9a0fb7ec5e1f455f95b41d7440cc}{Post\+Terminate} ()
+\item 
+virtual void \hyperlink{class_fbx_user_notification_a07fd5ef9836a3c445641dbbab9900ecd}{Accumulator\+Init} ()
+\item 
+virtual void \hyperlink{class_fbx_user_notification_a3ac8af5a7f64cdd9926080b0c439e21d}{Accumulator\+Clear} ()
+\item 
+virtual void \hyperlink{class_fbx_user_notification_a769c1f94ef0032d465c777ff78dc698b}{Open\+Extra\+Devices} ()
+\item 
+virtual bool \hyperlink{class_fbx_user_notification_a8606241edfd85444dee6a5c924947830}{Send\+To\+Extra\+Devices} (bool p\+Output\+Now, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$$>$ \&p\+Entries)
+\item 
+virtual bool \hyperlink{class_fbx_user_notification_a12d7a9462d6f95d1fa8f6f6673595fb7}{Send\+To\+Extra\+Devices} (bool p\+Output\+Now, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_user_notification_1_1_a_e_sequence}{A\+E\+Sequence} $\ast$$>$ \&p\+A\+E\+Sequence)
+\item 
+virtual bool \hyperlink{class_fbx_user_notification_a34a14bfbded4d19df3d3da02d9ec38b7}{Send\+To\+Extra\+Devices} (bool p\+Output\+Now, const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$p\+Acc\+Entry, int p\+Detail\+Id=-\/1)
+\item 
+virtual void \hyperlink{class_fbx_user_notification_a337f7ce9500c5d7264c22763e986e0b7}{Close\+Extra\+Devices} ()
+\item 
+void \hyperlink{class_fbx_user_notification_ac22297d000470fb8317a37631a651405}{Reset\+Accumulator} ()
+\begin{DoxyCompactList}\small\item\em Clears the Accumulator list, remove all user notification entries.. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_user_notification_af86faaf21fa589ddaeca8289449e0fb4}{Reset\+Sequence} ()
+\begin{DoxyCompactList}\small\item\em Clears the Sequence list. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_user_notification_a5c474638feeb169465ad788135f02567}{Send\+To\+Log} (\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source} p\+Out\+Src, int p\+Id)
+\item 
+void \hyperlink{class_fbx_user_notification_a30f2f9c1bfee2dc9ab6b17285e3719bc}{Send\+To\+Log} (const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$p\+Acc\+Entry, int p\+Detail\+Id=-\/1)
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_user_notification_a991cf5f73d3877784532bf31cbf31c4a}{Fbx\+User\+Notification\+Filtered\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Accumulator Output}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source} \{ \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}{e\+Accumulator\+Entry}, 
+\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a4f1172f3c9c59d12a175a66c71be2101}{e\+Sequenced\+Details}
+ \}
+\item 
+bool \hyperlink{class_fbx_user_notification_a0bcf59aa5f9923410bc150a73b088017}{Output} (\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source} p\+Out\+Src=\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}{e\+Accumulator\+Entry}, int p\+Index=-\/1, bool p\+Extra\+Devices\+Only=false)
+\item 
+bool \hyperlink{class_fbx_user_notification_a22dade0b65bc7f09650539dbb6cb8741}{Output\+By\+Id} (\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831}{E\+Entry\+ID} p\+Id, \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source} p\+Out\+Src=\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}{e\+Accumulator\+Entry}, bool p\+Extra\+Devices\+Only=false)
+\item 
+bool \hyperlink{class_fbx_user_notification_ac1554ef15d2ea0357f22d58a75bb3754}{Output} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Descr, \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{Fbx\+Accumulator\+Entry\+::\+E\+Class} p\+Class, bool p\+Extra\+Devices\+Only=false)
+\item 
+bool \hyperlink{class_fbx_user_notification_a42fbce70476e34410d36cfb456a4d55f}{Output} (\hyperlink{class_fbx_user_notification_filtered_iterator}{Fbx\+User\+Notification\+Filtered\+Iterator} \&p\+A\+E\+F\+Iter, bool p\+Extra\+Devices\+Only=false)
+\item 
+void \hyperlink{class_fbx_user_notification_ab58b3104014b80b853b43f1a264bb999}{Set\+Log\+Message\+Emitter} (Fbx\+Message\+Emitter $\ast$p\+Log\+Message\+Emitter)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class accumulates user notifications and sends them to any device opened by the derived classes. If this class is not derived, the data can only be sent to a log file. To send data to a log file, it must be opened before attempting to send data, otherwise, the messages will be lost. 
+
+ fbxusernotification.\+h の 111 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!E\+Entry\+ID@{E\+Entry\+ID}}
+\index{E\+Entry\+ID@{E\+Entry\+ID}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{E\+Entry\+ID}{EEntryID}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831}{Fbx\+User\+Notification\+::\+E\+Entry\+ID}}
+
+I\+Ds for pre-\/defined message entries. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bind\+Pose\+Invalid\+Object@{e\+Bind\+Pose\+Invalid\+Object}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Bind\+Pose\+Invalid\+Object@{e\+Bind\+Pose\+Invalid\+Object}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a4c254f676384d2e30d404b332edf6443}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a4c254f676384d2e30d404b332edf6443}} 
+e\+Bind\+Pose\+Invalid\+Object&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bind\+Pose\+Invalid\+Root@{e\+Bind\+Pose\+Invalid\+Root}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Bind\+Pose\+Invalid\+Root@{e\+Bind\+Pose\+Invalid\+Root}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a53378acb296bacae72a0e4d340800329}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a53378acb296bacae72a0e4d340800329}} 
+e\+Bind\+Pose\+Invalid\+Root&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bind\+Pose\+Not\+All\+Ancestors\+Nodes@{e\+Bind\+Pose\+Not\+All\+Ancestors\+Nodes}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Bind\+Pose\+Not\+All\+Ancestors\+Nodes@{e\+Bind\+Pose\+Not\+All\+Ancestors\+Nodes}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a08c89d7d58c3a7b586c1a217e731434c}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a08c89d7d58c3a7b586c1a217e731434c}} 
+e\+Bind\+Pose\+Not\+All\+Ancestors\+Nodes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bind\+Pose\+Not\+All\+Deforming\+Nodes@{e\+Bind\+Pose\+Not\+All\+Deforming\+Nodes}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Bind\+Pose\+Not\+All\+Deforming\+Nodes@{e\+Bind\+Pose\+Not\+All\+Deforming\+Nodes}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a3022bae2c03d5844c71174cc75ff4f85}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a3022bae2c03d5844c71174cc75ff4f85}} 
+e\+Bind\+Pose\+Not\+All\+Deforming\+Nodes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bind\+Pose\+Not\+All\+Ancestors\+Definition\+Nodes@{e\+Bind\+Pose\+Not\+All\+Ancestors\+Definition\+Nodes}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Bind\+Pose\+Not\+All\+Ancestors\+Definition\+Nodes@{e\+Bind\+Pose\+Not\+All\+Ancestors\+Definition\+Nodes}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a8c586171379b87b37b16e67efaf9103e}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a8c586171379b87b37b16e67efaf9103e}} 
+e\+Bind\+Pose\+Not\+All\+Ancestors\+Definition\+Nodes&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bind\+Pose\+Relative\+Matrix@{e\+Bind\+Pose\+Relative\+Matrix}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Bind\+Pose\+Relative\+Matrix@{e\+Bind\+Pose\+Relative\+Matrix}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a4e1de0bd5563b049f8943483a9c0d568}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a4e1de0bd5563b049f8943483a9c0d568}} 
+e\+Bind\+Pose\+Relative\+Matrix&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Embed\+Media\+Notify@{e\+Embed\+Media\+Notify}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Embed\+Media\+Notify@{e\+Embed\+Media\+Notify}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a38a82b2a39e3cf06f806d6ac94d8cc32}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a38a82b2a39e3cf06f806d6ac94d8cc32}} 
+e\+Embed\+Media\+Notify&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+File\+I\+O\+Notify@{e\+File\+I\+O\+Notify}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+File\+I\+O\+Notify@{e\+File\+I\+O\+Notify}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831afda820169b24edb2d185f5922c033287}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831afda820169b24edb2d185f5922c033287}} 
+e\+File\+I\+O\+Notify&this is generic for reader and writer to log notifications. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+File\+I\+O\+Notify\+Material@{e\+File\+I\+O\+Notify\+Material}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+File\+I\+O\+Notify\+Material@{e\+File\+I\+O\+Notify\+Material}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831acfc6140ed3213475ad3fcc573bd57b28}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831acfc6140ed3213475ad3fcc573bd57b28}} 
+e\+File\+I\+O\+Notify\+Material&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+File\+I\+O\+Notify\+D\+X\+F\+Not\+Support\+Nurbs@{e\+File\+I\+O\+Notify\+D\+X\+F\+Not\+Support\+Nurbs}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+File\+I\+O\+Notify\+D\+X\+F\+Not\+Support\+Nurbs@{e\+File\+I\+O\+Notify\+D\+X\+F\+Not\+Support\+Nurbs}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a27cc25ab372d4d9626b914ff9a2128f2}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a27cc25ab372d4d9626b914ff9a2128f2}} 
+e\+File\+I\+O\+Notify\+D\+X\+F\+Not\+Support\+Nurbs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Entry\+Start\+ID@{e\+Entry\+Start\+ID}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Entry\+Start\+ID@{e\+Entry\+Start\+ID}}}\mbox{\Hypertarget{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a29ef5b9c768f0018d9352cd78c9fe5de}\label{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831a29ef5b9c768f0018d9352cd78c9fe5de}} 
+e\+Entry\+Start\+ID&Starting ID for any Accumulator entry added by derived classes. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxusernotification.\+h の 171 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}\label{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!E\+Output\+Source@{E\+Output\+Source}}
+\index{E\+Output\+Source@{E\+Output\+Source}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{E\+Output\+Source}{EOutputSource}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{Fbx\+User\+Notification\+::\+E\+Output\+Source}}
+
+Specify send what kind of data to output device. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Accumulator\+Entry@{e\+Accumulator\+Entry}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Accumulator\+Entry@{e\+Accumulator\+Entry}}}\mbox{\Hypertarget{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}\label{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}} 
+e\+Accumulator\+Entry&Entry with its details. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Sequenced\+Details@{e\+Sequenced\+Details}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!e\+Sequenced\+Details@{e\+Sequenced\+Details}}}\mbox{\Hypertarget{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a4f1172f3c9c59d12a175a66c71be2101}\label{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a4f1172f3c9c59d12a175a66c71be2101}} 
+e\+Sequenced\+Details&Details in the recorded order. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxusernotification.\+h の 270 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_user_notification_a77144b139bd98ffa8fe879e79edf0374}\label{class_fbx_user_notification_a77144b139bd98ffa8fe879e79edf0374}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Fbx\+User\+Notification()}{FbxUserNotification()}}
+{\footnotesize\ttfamily Fbx\+User\+Notification\+::\+Fbx\+User\+Notification (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} const \&}]{p\+Log\+File\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} const \&}]{p\+Session\+Description }\end{DoxyParamCaption})}
+
+Instantiate a \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} but leave it uninitialized. The caller must explicitly call Init\+Accumulator to initialize it and Clear\+Accumulator when finished using it. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & \\
+\hline
+{\em p\+Log\+File\+Name} & Name of the log file that will be open in the directory defined by the Get\+Log\+File\+Path method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If p\+Log\+File\+Name is an empty string the log file does not get created and any output sent to it is lost. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{引数}
+{\em p\+Session\+Description} & This string is used to separate session logs in the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the specified log file already exists, messages are appended to it. This class never deletes the log file. Derived classes may delete the log file before opening (it must be done in the constructor because the log file is opened in the Init\+Accumulator) or at the end of the processing in the Post\+Terminate method. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_a74a886b6fd62277275a953841f19400b}\label{class_fbx_user_notification_a74a886b6fd62277275a953841f19400b}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!````~Fbx\+User\+Notification@{$\sim$\+Fbx\+User\+Notification}}
+\index{````~Fbx\+User\+Notification@{$\sim$\+Fbx\+User\+Notification}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+User\+Notification()}{~FbxUserNotification()}}
+{\footnotesize\ttfamily virtual Fbx\+User\+Notification\+::$\sim$\+Fbx\+User\+Notification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_user_notification_a3ac8af5a7f64cdd9926080b0c439e21d}\label{class_fbx_user_notification_a3ac8af5a7f64cdd9926080b0c439e21d}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Accumulator\+Clear@{Accumulator\+Clear}}
+\index{Accumulator\+Clear@{Accumulator\+Clear}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Accumulator\+Clear()}{AccumulatorClear()}}
+{\footnotesize\ttfamily virtual void Fbx\+User\+Notification\+::\+Accumulator\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to perform accumulator clear after the Extra devices are closed. By default this method does nothing. \mbox{\Hypertarget{class_fbx_user_notification_a07fd5ef9836a3c445641dbbab9900ecd}\label{class_fbx_user_notification_a07fd5ef9836a3c445641dbbab9900ecd}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Accumulator\+Init@{Accumulator\+Init}}
+\index{Accumulator\+Init@{Accumulator\+Init}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Accumulator\+Init()}{AccumulatorInit()}}
+{\footnotesize\ttfamily virtual void Fbx\+User\+Notification\+::\+Accumulator\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to perform accumulator initializations before the Extra devices are opened. By default this method does nothing. \mbox{\Hypertarget{class_fbx_user_notification_a612d9fbba6d767dcd4614e4f4934298a}\label{class_fbx_user_notification_a612d9fbba6d767dcd4614e4f4934298a}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Add\+Detail@{Add\+Detail}}
+\index{Add\+Detail@{Add\+Detail}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Add\+Detail()}{AddDetail()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Add\+Detail (\begin{DoxyParamCaption}\item[{int}]{p\+Entry\+Id }\end{DoxyParamCaption})}
+
+Completes the accumulator entry (there can be more that one detail for each entry) and implicitly defines the sequence of events. Each call to this method is internally recorded, making it possible to output each notification in the order they have been defined. Also, when a detail is added to an entry, it is automatically unmuted so it can be sent to the devices (muted \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} objects are not processed). 
+\begin{DoxyParams}{引数}
+{\em p\+Entry\+Id} & The entry index (as returned by Add\+Entry). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The id of the detail in the recorded sequence of events. This Id should be used when the call to Output has the e\+Sequenced\+Details set as a source. If an error occurs, the returned value is -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a3b675ae36a5f91c34f80edd417e1bec9}\label{class_fbx_user_notification_a3b675ae36a5f91c34f80edd417e1bec9}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Add\+Detail@{Add\+Detail}}
+\index{Add\+Detail@{Add\+Detail}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Add\+Detail()}{AddDetail()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Add\+Detail (\begin{DoxyParamCaption}\item[{int}]{p\+Entry\+Id,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+String }\end{DoxyParamCaption})}
+
+Completes the accumulator entry (there can be more that one detail for each entry) and implicitly defines the sequence of events. Each call to this method is internally recorded, making it possible to output each notification in the order they have been defined. Also, when a detail is added to an entry, it is automatically unmuted so it can be sent to the devices (muted \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} objects are not processed). 
+\begin{DoxyParams}{引数}
+{\em p\+Entry\+Id} & The entry index (as returned by Add\+Entry). \\
+\hline
+{\em p\+String} & The detail string to add to the entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The id of the detail in the recorded sequence of events. This Id should be used when the call to Output has the e\+Sequenced\+Details set as a source. If an error occurs, the returned value is -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a7e15dc53d4431dcc1411d9ae05498349}\label{class_fbx_user_notification_a7e15dc53d4431dcc1411d9ae05498349}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Add\+Detail@{Add\+Detail}}
+\index{Add\+Detail@{Add\+Detail}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Add\+Detail()}{AddDetail()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Add\+Detail (\begin{DoxyParamCaption}\item[{int}]{p\+Entry\+Id,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Completes the accumulator entry (there can be more that one detail for each entry) and implicitly defines the sequence of events. Each call to this method is internally recorded, making it possible to output each notification in the order they have been defined. Also, when a detail is added to an entry, it is automatically unmuted so it can be sent to the devices (muted \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} objects are not processed). 
+\begin{DoxyParams}{引数}
+{\em p\+Entry\+Id} & The entry index (as returned by Add\+Entry). \\
+\hline
+{\em p\+Node} & The node to add to the entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The id of the detail in the recorded sequence of events. This Id should be used when the call to Output has the e\+Sequenced\+Details set as a source. If an error occurs, the returned value is -\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_afc393d96ae3c3d826f3947507dcaa656}\label{class_fbx_user_notification_afc393d96ae3c3d826f3947507dcaa656}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Add\+Entry@{Add\+Entry}}
+\index{Add\+Entry@{Add\+Entry}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Add\+Entry()}{AddEntry()}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Add\+Entry (\begin{DoxyParamCaption}\item[{const int}]{p\+ID,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Descr,  }\item[{\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{Fbx\+Accumulator\+Entry\+::\+E\+Class}}]{p\+Class = {\ttfamily \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a02238ae4f2cce7a190dad59cfb3e9c19}{Fbx\+Accumulator\+Entry\+::e\+Warning}} }\end{DoxyParamCaption})}
+
+Adds one entry into the accumulator. 
+\begin{DoxyParams}{引数}
+{\em p\+ID} & This entry unique ID. \\
+\hline
+{\em p\+Name} & This entry name. \\
+\hline
+{\em p\+Descr} & The description of this entry. \\
+\hline
+{\em p\+Class} & The category of this entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The ID of the newly allocated entry. This ID is p\+Entry\+Id. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a8e810f0860b43bf2b080f93acb3aaa50}\label{class_fbx_user_notification_a8e810f0860b43bf2b080f93acb3aaa50}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Clear\+Accumulator@{Clear\+Accumulator}}
+\index{Clear\+Accumulator@{Clear\+Accumulator}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Clear\+Accumulator()}{ClearAccumulator()}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Clear\+Accumulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This method must be called when the Accumulator is no longer needed. It calls Close\+Extra\+Devices, followed by the Accumulator\+Clear, and then closes the log file. \mbox{\Hypertarget{class_fbx_user_notification_a337f7ce9500c5d7264c22763e986e0b7}\label{class_fbx_user_notification_a337f7ce9500c5d7264c22763e986e0b7}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Close\+Extra\+Devices@{Close\+Extra\+Devices}}
+\index{Close\+Extra\+Devices@{Close\+Extra\+Devices}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Close\+Extra\+Devices()}{CloseExtraDevices()}}
+{\footnotesize\ttfamily virtual void Fbx\+User\+Notification\+::\+Close\+Extra\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to close it\textquotesingle{}s output devices (called in the Clear\+Accumulator) By default this method does nothing. \mbox{\Hypertarget{class_fbx_user_notification_a2b8ff6004f61e7c60b3b66e7a02fafdb}\label{class_fbx_user_notification_a2b8ff6004f61e7c60b3b66e7a02fafdb}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Create@{Create}}
+\index{Create@{Create}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification}$\ast$ Fbx\+User\+Notification\+::\+Create (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Log\+File\+Name,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Session\+Description }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Create and initialize user notification object for the S\+DK manager. One S\+DK manager has one global user notification object. If the S\+DK manager already has global user notification object, the function will do nothing.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & \\
+\hline
+{\em p\+Log\+File\+Name} & Name of the log file that will be open in the directory defined by the Get\+Log\+File\+Path method. \\
+\hline
+{\em p\+Session\+Description} & This string is used to separate session logs in the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the global user notification object owned by the S\+DK manager. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_aebf93d0a30ccd330c04e424a6c461be1}\label{class_fbx_user_notification_aebf93d0a30ccd330c04e424a6c461be1}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily static void Fbx\+User\+Notification\+::\+Destroy (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Destroy the global user notification object owned by the S\+DK manager. \mbox{\Hypertarget{class_fbx_user_notification_ae006edb0dda9a27ef1773494d254906e}\label{class_fbx_user_notification_ae006edb0dda9a27ef1773494d254906e}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Detail@{Get\+Detail}}
+\index{Get\+Detail@{Get\+Detail}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Detail()}{GetDetail()}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Get\+Detail (\begin{DoxyParamCaption}\item[{int}]{p\+Detail\+Id,  }\item[{const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$\&}]{p\+AE }\end{DoxyParamCaption}) const}
+
+Get the specified detail. 
+\begin{DoxyParams}{引数}
+{\em p\+Detail\+Id} & Index of the detail. This is the id-\/th detail of type p\+Class as inserted when the Add\+Detail \\
+\hline
+{\em p\+AE} & Pointer to the \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} object that contains the requested detail. The returned valued can be N\+U\+LL if an error occurred. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the detail to be used when calling the Get\+Detail of the \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+A value of -\/1 is acceptable and means that the \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} has no details. However, if p\+AE is N\+U\+LL, the return value is meaningless. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_afde8bbb200efe632e2df0a81413f4476}\label{class_fbx_user_notification_afde8bbb200efe632e2df0a81413f4476}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Entry@{Get\+Entry}}
+\index{Get\+Entry@{Get\+Entry}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Entry()}{GetEntry()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}$\ast$ Fbx\+User\+Notification\+::\+Get\+Entry (\begin{DoxyParamCaption}\item[{int}]{p\+Entry\+Id }\end{DoxyParamCaption})}
+
+Get the specified \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry\+Id} & ID of the entry to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the specified entry, otherwise {\ttfamily N\+U\+LL} if either the id is invalid or the Accumulator is not properly initialized. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a78fc0966bfef1ea2a17f7a4ccd4a7318}\label{class_fbx_user_notification_a78fc0966bfef1ea2a17f7a4ccd4a7318}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Entry\+At@{Get\+Entry\+At}}
+\index{Get\+Entry\+At@{Get\+Entry\+At}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Entry\+At()}{GetEntryAt()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry}$\ast$ Fbx\+User\+Notification\+::\+Get\+Entry\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Entry\+Index }\end{DoxyParamCaption}) const}
+
+Get the \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry\+Index} & index of the entry to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the specified entry, otherwise {\ttfamily N\+U\+LL} if either the index is invalid or the Accumulator is not properly initialized.. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a65aaed76d9cba16e213bf548b10e64fd}\label{class_fbx_user_notification_a65aaed76d9cba16e213bf548b10e64fd}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Log\+File\+Name@{Get\+Log\+File\+Name}}
+\index{Get\+Log\+File\+Name@{Get\+Log\+File\+Name}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Log\+File\+Name()}{GetLogFileName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+User\+Notification\+::\+Get\+Log\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the log file name. 
+
+ fbxusernotification.\+h の 335 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_user_notification_af261ffb4073bb573710dc59b4881b759}\label{class_fbx_user_notification_af261ffb4073bb573710dc59b4881b759}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Log\+File\+Path@{Get\+Log\+File\+Path}}
+\index{Get\+Log\+File\+Path@{Get\+Log\+File\+Path}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Log\+File\+Path()}{GetLogFilePath()}}
+{\footnotesize\ttfamily virtual void Fbx\+User\+Notification\+::\+Get\+Log\+File\+Path (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the absolute path to the log file. If this method is not overridden in a derived class, it returns the T\+E\+MP directory. 
+\begin{DoxyParams}{引数}
+{\em p\+Path} & The returned path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_user_notification_a1c5bdc6db66e58957abec1cc7d5349a2}\label{class_fbx_user_notification_a1c5bdc6db66e58957abec1cc7d5349a2}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Nb\+Details@{Get\+Nb\+Details}}
+\index{Get\+Nb\+Details@{Get\+Nb\+Details}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Nb\+Details()}{GetNbDetails()}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Get\+Nb\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of Details recorded so far in this accumulator. 
+
+\mbox{\Hypertarget{class_fbx_user_notification_af952064b707c1a6165590e83497940af}\label{class_fbx_user_notification_af952064b707c1a6165590e83497940af}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Get\+Nb\+Entries@{Get\+Nb\+Entries}}
+\index{Get\+Nb\+Entries@{Get\+Nb\+Entries}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Get\+Nb\+Entries()}{GetNbEntries()}}
+{\footnotesize\ttfamily int Fbx\+User\+Notification\+::\+Get\+Nb\+Entries (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of Accumulator\+Entries currently stored in this accumulator. 
+
+\mbox{\Hypertarget{class_fbx_user_notification_a1ed0d1420841b06af2b361dc0c3d7017}\label{class_fbx_user_notification_a1ed0d1420841b06af2b361dc0c3d7017}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Init\+Accumulator@{Init\+Accumulator}}
+\index{Init\+Accumulator@{Init\+Accumulator}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Init\+Accumulator()}{InitAccumulator()}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Init\+Accumulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accumulator is to hold the notification entries. User can add entries to it. This method must be called before using the Accumulator. It opens the log file and calls Accumulator\+Init followed by Open\+Extra\+Devices. Failing to call this method will prevent other actions except Clear\+Accumulator, Get\+Log\+File\+Name and Get\+Log\+File\+Path. \mbox{\Hypertarget{class_fbx_user_notification_a769c1f94ef0032d465c777ff78dc698b}\label{class_fbx_user_notification_a769c1f94ef0032d465c777ff78dc698b}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Open\+Extra\+Devices@{Open\+Extra\+Devices}}
+\index{Open\+Extra\+Devices@{Open\+Extra\+Devices}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Open\+Extra\+Devices()}{OpenExtraDevices()}}
+{\footnotesize\ttfamily virtual void Fbx\+User\+Notification\+::\+Open\+Extra\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to opens its output devices (called by Init\+Accumulator). By default this method does nothing. \mbox{\Hypertarget{class_fbx_user_notification_a0bcf59aa5f9923410bc150a73b088017}\label{class_fbx_user_notification_a0bcf59aa5f9923410bc150a73b088017}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Output@{Output}}
+\index{Output@{Output}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Fbx\+User\+Notification\+::\+Output (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source}}]{p\+Out\+Src = {\ttfamily \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}{e\+Accumulator\+Entry}},  }\item[{int}]{p\+Index = {\ttfamily -\/1},  }\item[{bool}]{p\+Extra\+Devices\+Only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send the accumulator entries to the output devices. This method needs to be explicitly called by the program that uses this class. 
+\begin{DoxyParams}{引数}
+{\em p\+Out\+Src} & Specify which data has to be sent to the output devices. Set to S\+E\+Q\+U\+E\+N\+C\+E\+D\+\_\+\+D\+E\+T\+A\+I\+LS to send the Details in the recorded order. Set to A\+C\+C\+U\+M\+U\+L\+A\+T\+O\+R\+\_\+\+E\+N\+T\+RY to send each entry with its details regardless of the order in which the events occurred. \\
+\hline
+{\em p\+Index} & If this parameter $>$= 0, only send the specified entry/detail index to the output devices. Otherwise send all of them. \\
+\hline
+{\em p\+Extra\+Devices\+Only} & If this parameter is True, the output is not sent to the log file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The p\+Extra\+Devices\+Only parameter is ignored if the log file has been disabled. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_ac1554ef15d2ea0357f22d58a75bb3754}\label{class_fbx_user_notification_ac1554ef15d2ea0357f22d58a75bb3754}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Output@{Output}}
+\index{Output@{Output}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Fbx\+User\+Notification\+::\+Output (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Descr,  }\item[{\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{Fbx\+Accumulator\+Entry\+::\+E\+Class}}]{p\+Class,  }\item[{bool}]{p\+Extra\+Devices\+Only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send an immediate entry to the output devices. This method bypasses the accumulator by sending the entry directly to the output devices and discarding it right after. The internal accumulator lists are left unchanged by this call. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & This entry name. \\
+\hline
+{\em p\+Descr} & The description of this entry. \\
+\hline
+{\em p\+Class} & The category of this entry. \\
+\hline
+{\em p\+Extra\+Devices\+Only} & If this parameter is True, the output is not sent to the log file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The p\+Extra\+Devices\+Only parameter is ignored if the log file has been disabled. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_a42fbce70476e34410d36cfb456a4d55f}\label{class_fbx_user_notification_a42fbce70476e34410d36cfb456a4d55f}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Output@{Output}}
+\index{Output@{Output}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Output()}{Output()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Fbx\+User\+Notification\+::\+Output (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification_filtered_iterator}{Fbx\+User\+Notification\+Filtered\+Iterator} \&}]{p\+A\+E\+F\+Iter,  }\item[{bool}]{p\+Extra\+Devices\+Only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Sends the content of the iterator to the output devices. This method bypasses the accumulator by sending each entry in the iterator directly to the output devices. The internal accumulator lists are left unchanged by this call. 
+\begin{DoxyParams}{引数}
+{\em p\+A\+E\+F\+Iter} & The Filtered \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} iterator object. \\
+\hline
+{\em p\+Extra\+Devices\+Only} & If this parameter is True, the output is not sent to the log file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The p\+Extra\+Devices\+Only parameter is ignored if the log file has been disabled. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_a22dade0b65bc7f09650539dbb6cb8741}\label{class_fbx_user_notification_a22dade0b65bc7f09650539dbb6cb8741}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Output\+By\+Id@{Output\+By\+Id}}
+\index{Output\+By\+Id@{Output\+By\+Id}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Output\+By\+Id()}{OutputById()}}
+{\footnotesize\ttfamily bool Fbx\+User\+Notification\+::\+Output\+By\+Id (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification_a88d8e70c3d6881a5bfe7531079ac6831}{E\+Entry\+ID}}]{p\+Id,  }\item[{\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source}}]{p\+Out\+Src = {\ttfamily \hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184a04843bd5dec0b90ac08d75d8f33309af}{e\+Accumulator\+Entry}},  }\item[{bool}]{p\+Extra\+Devices\+Only = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Send the accumulator entry to the output devices. 
+\begin{DoxyParams}{引数}
+{\em p\+Id} & Send the entry/detail that matching p\+Idx to the output devices, otherwise send all of them. \\
+\hline
+{\em p\+Out\+Src} & Specify which data has to be sent to the output devices. Set to S\+E\+Q\+U\+E\+N\+C\+E\+D\+\_\+\+D\+E\+T\+A\+I\+LS to send the Details in the recorded order. Set to A\+C\+C\+U\+M\+U\+L\+A\+T\+O\+R\+\_\+\+E\+N\+T\+RY to send each entry with its details regardless of the order in which the events occurred.. \\
+\hline
+{\em p\+Extra\+Devices\+Only} & If this parameter is True, the output is not sent to the log file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_user_notification_a1cdf9a0fb7ec5e1f455f95b41d7440cc}\label{class_fbx_user_notification_a1cdf9a0fb7ec5e1f455f95b41d7440cc}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Post\+Terminate@{Post\+Terminate}}
+\index{Post\+Terminate@{Post\+Terminate}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Post\+Terminate()}{PostTerminate()}}
+{\footnotesize\ttfamily virtual bool Fbx\+User\+Notification\+::\+Post\+Terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow a derived class to finalize processing A\+F\+T\+ER the log file handle has been deleted. This may be required if the log file needs to be moved or shown. \begin{DoxyReturn}{戻り値}
+True if the object is properly cleaned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_ac22297d000470fb8317a37631a651405}\label{class_fbx_user_notification_ac22297d000470fb8317a37631a651405}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Reset\+Accumulator@{Reset\+Accumulator}}
+\index{Reset\+Accumulator@{Reset\+Accumulator}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Reset\+Accumulator()}{ResetAccumulator()}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Reset\+Accumulator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clears the Accumulator list, remove all user notification entries.. 
+
+\mbox{\Hypertarget{class_fbx_user_notification_af86faaf21fa589ddaeca8289449e0fb4}\label{class_fbx_user_notification_af86faaf21fa589ddaeca8289449e0fb4}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Reset\+Sequence@{Reset\+Sequence}}
+\index{Reset\+Sequence@{Reset\+Sequence}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Reset\+Sequence()}{ResetSequence()}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Reset\+Sequence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clears the Sequence list. 
+
+\mbox{\Hypertarget{class_fbx_user_notification_a8606241edfd85444dee6a5c924947830}\label{class_fbx_user_notification_a8606241edfd85444dee6a5c924947830}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Send\+To\+Extra\+Devices@{Send\+To\+Extra\+Devices}}
+\index{Send\+To\+Extra\+Devices@{Send\+To\+Extra\+Devices}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Send\+To\+Extra\+Devices()}{SendToExtraDevices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual bool Fbx\+User\+Notification\+::\+Send\+To\+Extra\+Devices (\begin{DoxyParamCaption}\item[{bool}]{p\+Output\+Now,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$$>$ \&}]{p\+Entries }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to send all the accumulator entries to the devices. By default this method loop trough all the elements of the received array and call the Send\+To\+Extra\+Devices method with the appropriate \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} element and id. 
+\begin{DoxyParams}{引数}
+{\em p\+Output\+Now} & Flag indicates whether to output now. \\
+\hline
+{\em p\+Entries} & Accumulator entries to output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a12d7a9462d6f95d1fa8f6f6673595fb7}\label{class_fbx_user_notification_a12d7a9462d6f95d1fa8f6f6673595fb7}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Send\+To\+Extra\+Devices@{Send\+To\+Extra\+Devices}}
+\index{Send\+To\+Extra\+Devices@{Send\+To\+Extra\+Devices}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Send\+To\+Extra\+Devices()}{SendToExtraDevices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool Fbx\+User\+Notification\+::\+Send\+To\+Extra\+Devices (\begin{DoxyParamCaption}\item[{bool}]{p\+Output\+Now,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_user_notification_1_1_a_e_sequence}{A\+E\+Sequence} $\ast$$>$ \&}]{p\+A\+E\+Sequence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to send all the accumulator entries to the devices. By default this method loop trough all the elements of the received array and call the Send\+To\+Extra\+Devices method with the appropriate \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} element and id. 
+\begin{DoxyParams}{引数}
+{\em p\+Output\+Now} & Flag indicates whether to output now. \\
+\hline
+{\em p\+A\+E\+Sequence} & Accumulator entries to output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_user_notification_a34a14bfbded4d19df3d3da02d9ec38b7}\label{class_fbx_user_notification_a34a14bfbded4d19df3d3da02d9ec38b7}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Send\+To\+Extra\+Devices@{Send\+To\+Extra\+Devices}}
+\index{Send\+To\+Extra\+Devices@{Send\+To\+Extra\+Devices}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Send\+To\+Extra\+Devices()}{SendToExtraDevices()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual bool Fbx\+User\+Notification\+::\+Send\+To\+Extra\+Devices (\begin{DoxyParamCaption}\item[{bool}]{p\+Output\+Now,  }\item[{const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$}]{p\+Acc\+Entry,  }\item[{int}]{p\+Detail\+Id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Allow the implementation class to send one accumulator entry to the devices. By default this method does nothing. 
+\begin{DoxyParams}{引数}
+{\em p\+Output\+Now} & Flag indicates whether to output now. \\
+\hline
+{\em p\+Acc\+Entry} & Accumulator entry to output. \\
+\hline
+{\em p\+Detail\+Id} & Detail id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Derived methods should check for the Is\+Muted() state to decide if the accumulator entry should get through or get discarded. See Add\+Detail for more details. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_user_notification_a5c474638feeb169465ad788135f02567}\label{class_fbx_user_notification_a5c474638feeb169465ad788135f02567}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Send\+To\+Log@{Send\+To\+Log}}
+\index{Send\+To\+Log@{Send\+To\+Log}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Send\+To\+Log()}{SendToLog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Send\+To\+Log (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_user_notification_a45290aa788e47fce1d7b8a88687aa184}{E\+Output\+Source}}]{p\+Out\+Src,  }\item[{int}]{p\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send the p\+Idth element of the accumulator or sequence list to the log file. 
+\begin{DoxyParams}{引数}
+{\em p\+Out\+Src} & The output source, accumulator or sequence list. \\
+\hline
+{\em p\+Id} & Element id. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_user_notification_a30f2f9c1bfee2dc9ab6b17285e3719bc}\label{class_fbx_user_notification_a30f2f9c1bfee2dc9ab6b17285e3719bc}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Send\+To\+Log@{Send\+To\+Log}}
+\index{Send\+To\+Log@{Send\+To\+Log}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Send\+To\+Log()}{SendToLog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Send\+To\+Log (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} $\ast$}]{p\+Acc\+Entry,  }\item[{int}]{p\+Detail\+Id = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send the accumulator entry to the log file. 
+\begin{DoxyParams}{引数}
+{\em p\+Acc\+Entry} & The accumulator entry. \\
+\hline
+{\em p\+Detail\+Id} & Detail id. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_user_notification_ab58b3104014b80b853b43f1a264bb999}\label{class_fbx_user_notification_ab58b3104014b80b853b43f1a264bb999}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Set\+Log\+Message\+Emitter@{Set\+Log\+Message\+Emitter}}
+\index{Set\+Log\+Message\+Emitter@{Set\+Log\+Message\+Emitter}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Set\+Log\+Message\+Emitter()}{SetLogMessageEmitter()}}
+{\footnotesize\ttfamily void Fbx\+User\+Notification\+::\+Set\+Log\+Message\+Emitter (\begin{DoxyParamCaption}\item[{Fbx\+Message\+Emitter $\ast$}]{p\+Log\+Message\+Emitter }\end{DoxyParamCaption})}
+
+Set log message emitter. 
+\begin{DoxyParams}{引数}
+{\em p\+Log\+Message\+Emitter} & The new log message emitter. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_user_notification_a991cf5f73d3877784532bf31cbf31c4a}\label{class_fbx_user_notification_a991cf5f73d3877784532bf31cbf31c4a}} 
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}}
+\index{Fbx\+User\+Notification\+Filtered\+Iterator@{Fbx\+User\+Notification\+Filtered\+Iterator}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\subsubsection{\texorpdfstring{Fbx\+User\+Notification\+Filtered\+Iterator}{FbxUserNotificationFilteredIterator}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_user_notification_filtered_iterator}{Fbx\+User\+Notification\+Filtered\+Iterator}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxusernotification.\+h の 361 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxusernotification_8h}{fbxusernotification.\+h}\end{DoxyCompactItemize}

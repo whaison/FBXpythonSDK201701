@@ -1,0 +1,222 @@
+\hypertarget{class_fbx_shared_ptr}{}\section{Fbx\+Shared\+Ptr$<$ Type, Policy $>$ クラステンプレート}
+\label{class_fbx_shared_ptr}\index{Fbx\+Shared\+Ptr$<$ Type, Policy $>$@{Fbx\+Shared\+Ptr$<$ Type, Policy $>$}}
+
+
+{\ttfamily \#include $<$fbxalloc.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_shared_ptr_a660b09efbcf67f747cb72163dccf1e11}{Fbx\+Shared\+Ptr} ()
+\item 
+\hyperlink{class_fbx_shared_ptr_a694b2cfd410b1e18b87d697f30518af8}{Fbx\+Shared\+Ptr} (Type $\ast$p\+Ptr)
+\begin{DoxyCompactList}\small\item\em Construct from a pointer. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_shared_ptr_a7e6b1c33f8f837c6389ba99f88faafff}{Fbx\+Shared\+Ptr} (const \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} \&p\+S\+Ptr)
+\begin{DoxyCompactList}\small\item\em Copy constructor \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} \& \hyperlink{class_fbx_shared_ptr_aab1f664cd0b649231f359554129a1dc5}{operator=} (const \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} \&p\+S\+Ptr)
+\item 
+\hyperlink{class_fbx_shared_ptr_a15061ed1e4085e6a053c66b88c509ae6}{$\sim$\+Fbx\+Shared\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_shared_ptr_a706fe3ede6f8a43589348169f4803c75}{Destroy} ()
+\item 
+Type $\ast$ \hyperlink{class_fbx_shared_ptr_a3bc4c8f7e69da6a3f53157a895ee345e}{Get} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the pointer it holds. \end{DoxyCompactList}\item 
+Type $\ast$ \hyperlink{class_fbx_shared_ptr_ab52fbd8433b61e009074282c88814f7c}{operator-\/$>$} () const
+\begin{DoxyCompactList}\small\item\em Member access operator. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_shared_ptr_a4204201633921f32c564bd9329fe78fb}{operator Type $\ast$} () const
+\begin{DoxyCompactList}\small\item\em Convert to a Type pointer. \end{DoxyCompactList}\item 
+Type \& \hyperlink{class_fbx_shared_ptr_afc7cbb06097e354e016dbc58a2bd06a4}{operator$\ast$} () const
+\begin{DoxyCompactList}\small\item\em Dereference operator. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_shared_ptr_ac52a41b234d83cb8fa5deb75e740d950}{operator!} () const
+\begin{DoxyCompactList}\small\item\em Logical not operator. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_shared_ptr_a5e33203c68a6b6afe36eab50c491ff95}{operator bool} () const
+\begin{DoxyCompactList}\small\item\em Convert to boolean value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$\newline
+class Fbx\+Shared\+Ptr$<$ Type, Policy $>$}
+
+
+
+ fbxalloc.\+h の 294 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_shared_ptr_a660b09efbcf67f747cb72163dccf1e11}\label{class_fbx_shared_ptr_a660b09efbcf67f747cb72163dccf1e11}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{Fbx\+Shared\+Ptr()}{FbxSharedPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxalloc.\+h の 298 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_a694b2cfd410b1e18b87d697f30518af8}\label{class_fbx_shared_ptr_a694b2cfd410b1e18b87d697f30518af8}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{Fbx\+Shared\+Ptr()}{FbxSharedPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} (\begin{DoxyParamCaption}\item[{Type $\ast$}]{p\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct from a pointer. 
+
+
+
+ fbxalloc.\+h の 304 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_a7e6b1c33f8f837c6389ba99f88faafff}\label{class_fbx_shared_ptr_a7e6b1c33f8f837c6389ba99f88faafff}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{Fbx\+Shared\+Ptr()}{FbxSharedPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$ \&}]{p\+S\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor 
+
+
+
+ fbxalloc.\+h の 317 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_a15061ed1e4085e6a053c66b88c509ae6}\label{class_fbx_shared_ptr_a15061ed1e4085e6a053c66b88c509ae6}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!````~Fbx\+Shared\+Ptr@{$\sim$\+Fbx\+Shared\+Ptr}}
+\index{````~Fbx\+Shared\+Ptr@{$\sim$\+Fbx\+Shared\+Ptr}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Shared\+Ptr()}{~FbxSharedPtr()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::$\sim$\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+ fbxalloc.\+h の 344 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_shared_ptr_a706fe3ede6f8a43589348169f4803c75}\label{class_fbx_shared_ptr_a706fe3ede6f8a43589348169f4803c75}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+void \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxalloc.\+h の 346 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_a3bc4c8f7e69da6a3f53157a895ee345e}\label{class_fbx_shared_ptr_a3bc4c8f7e69da6a3f53157a895ee345e}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type$\ast$ \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the pointer it holds. 
+
+
+
+ fbxalloc.\+h の 349 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_a5e33203c68a6b6afe36eab50c491ff95}\label{class_fbx_shared_ptr_a5e33203c68a6b6afe36eab50c491ff95}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to boolean value. 
+
+
+
+ fbxalloc.\+h の 364 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_a4204201633921f32c564bd9329fe78fb}\label{class_fbx_shared_ptr_a4204201633921f32c564bd9329fe78fb}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!operator Type $\ast$@{operator Type $\ast$}}
+\index{operator Type $\ast$@{operator Type $\ast$}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{operator Type $\ast$()}{operator Type *()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::operator Type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to a Type pointer. 
+
+
+
+ fbxalloc.\+h の 355 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_ac52a41b234d83cb8fa5deb75e740d950}\label{class_fbx_shared_ptr_ac52a41b234d83cb8fa5deb75e740d950}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+bool \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logical not operator. 
+
+
+
+ fbxalloc.\+h の 361 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_afc7cbb06097e354e016dbc58a2bd06a4}\label{class_fbx_shared_ptr_afc7cbb06097e354e016dbc58a2bd06a4}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type\& \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dereference operator. 
+
+
+
+ fbxalloc.\+h の 358 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_ab52fbd8433b61e009074282c88814f7c}\label{class_fbx_shared_ptr_ab52fbd8433b61e009074282c88814f7c}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type$\ast$ \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member access operator. 
+
+
+
+ fbxalloc.\+h の 352 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_shared_ptr_aab1f664cd0b649231f359554129a1dc5}\label{class_fbx_shared_ptr_aab1f664cd0b649231f359554129a1dc5}} 
+\index{Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Shared\+Ptr@{Fbx\+Shared\+Ptr}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}\& \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_shared_ptr}{Fbx\+Shared\+Ptr}$<$ Type, Policy $>$ \&}]{p\+S\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxalloc.\+h の 326 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/arch/\hyperlink{fbxalloc_8h}{fbxalloc.\+h}\end{DoxyCompactItemize}

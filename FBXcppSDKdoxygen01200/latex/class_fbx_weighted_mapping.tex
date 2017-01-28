@@ -1,0 +1,237 @@
+\hypertarget{class_fbx_weighted_mapping}{}\section{Fbx\+Weighted\+Mapping クラス}
+\label{class_fbx_weighted_mapping}\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+
+
+{\ttfamily \#include $<$fbxweightedmapping.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_weighted_mapping_1_1_element}{Element}
+\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} \{ \hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6a9b018f20eabb78c563fc6ba8dfbc2e80}{e\+Source}, 
+\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6a1ac5282e4d3bea4d16503bc5e0c021a8}{e\+Destination}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_weighted_mapping_ae0bba66321c38e91d5910cfb0306dc57}{Reset} (int p\+Source\+Size, int p\+Destination\+Size)
+\item 
+void \hyperlink{class_fbx_weighted_mapping_a371482b940f4616b6f255309ed6be0aa}{Add} (int p\+Source\+Index, int p\+Destination\+Index, double p\+Weight)
+\item 
+int \hyperlink{class_fbx_weighted_mapping_a5037a5d025ca8544e453508e12aab6fb}{Get\+Element\+Count} (\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} p\+Set) const
+\item 
+int \hyperlink{class_fbx_weighted_mapping_aa7886f54860c52c0530a3813f99da400}{Get\+Relation\+Count} (\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} p\+Set, int p\+Element) const
+\item 
+\hyperlink{struct_fbx_weighted_mapping_1_1_element}{Element} \& \hyperlink{class_fbx_weighted_mapping_a7bfbaef7f0113abda83e7b6bbbe34859}{Get\+Relation} (\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} p\+Set, int p\+Element, int p\+Index)
+\item 
+int \hyperlink{class_fbx_weighted_mapping_a0903c7af1875b82c0c1edcc315d0ad3b}{Get\+Relation\+Index} (\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} p\+Set, int p\+Element\+In\+Set, int p\+Element\+In\+Other\+Set) const
+\item 
+double \hyperlink{class_fbx_weighted_mapping_a85e417a74b9c1cc40c04ff95ba0c0b5d}{Get\+Relation\+Sum} (\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} p\+Set, int p\+Element, bool p\+Absolute\+Value) const
+\item 
+void \hyperlink{class_fbx_weighted_mapping_a874bbc1592ffd77932008e3ea79cbdf8}{Normalize} (\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set} p\+Set, bool p\+Absolute\+Value)
+\item 
+\hyperlink{class_fbx_weighted_mapping}{Fbx\+Weighted\+Mapping} \& \hyperlink{class_fbx_weighted_mapping_a7cf51cc13e95c389364fbfb8d7847c2d}{operator=} (const \hyperlink{class_fbx_weighted_mapping}{Fbx\+Weighted\+Mapping} \&p\+W\+Map)
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_weighted_mapping_a2ba4f4ee1f96910ed1931d83eee5fcaa}{Fbx\+Weighted\+Mapping} (int p\+Source\+Size, int p\+Destination\+Size)
+\item 
+\hyperlink{class_fbx_weighted_mapping_a30ea1b9d4a140bb8689c01619b5a0e93}{$\sim$\+Fbx\+Weighted\+Mapping} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Define a weighted bidirectional mapping relation on objects.
+
+There are two object set. The source object of mapping is in source set. The destination object is in destination set. Each object can have multiple mapping relation with other objects. 
+
+ fbxweightedmapping.\+h の 28 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}\label{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!E\+Set@{E\+Set}}
+\index{E\+Set@{E\+Set}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{E\+Set}{ESet}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{Fbx\+Weighted\+Mapping\+::\+E\+Set}}
+
+Object set type in the mapping relation. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Source@{e\+Source}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!e\+Source@{e\+Source}}}\mbox{\Hypertarget{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6a9b018f20eabb78c563fc6ba8dfbc2e80}\label{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6a9b018f20eabb78c563fc6ba8dfbc2e80}} 
+e\+Source&Object is as source. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Destination@{e\+Destination}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!e\+Destination@{e\+Destination}}}\mbox{\Hypertarget{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6a1ac5282e4d3bea4d16503bc5e0c021a8}\label{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6a1ac5282e4d3bea4d16503bc5e0c021a8}} 
+e\+Destination&Object is as destination. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxweightedmapping.\+h の 33 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a2ba4f4ee1f96910ed1931d83eee5fcaa}\label{class_fbx_weighted_mapping_a2ba4f4ee1f96910ed1931d83eee5fcaa}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Fbx\+Weighted\+Mapping()}{FbxWeightedMapping()}}
+{\footnotesize\ttfamily Fbx\+Weighted\+Mapping\+::\+Fbx\+Weighted\+Mapping (\begin{DoxyParamCaption}\item[{int}]{p\+Source\+Size,  }\item[{int}]{p\+Destination\+Size }\end{DoxyParamCaption})}
+
+Constructor. Initialize the source set and destination set. 
+\begin{DoxyParams}{引数}
+{\em p\+Source\+Size} & Source set size \\
+\hline
+{\em p\+Destination\+Size} & Destination set size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a30ea1b9d4a140bb8689c01619b5a0e93}\label{class_fbx_weighted_mapping_a30ea1b9d4a140bb8689c01619b5a0e93}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!````~Fbx\+Weighted\+Mapping@{$\sim$\+Fbx\+Weighted\+Mapping}}
+\index{````~Fbx\+Weighted\+Mapping@{$\sim$\+Fbx\+Weighted\+Mapping}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Weighted\+Mapping()}{~FbxWeightedMapping()}}
+{\footnotesize\ttfamily Fbx\+Weighted\+Mapping\+::$\sim$\+Fbx\+Weighted\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a371482b940f4616b6f255309ed6be0aa}\label{class_fbx_weighted_mapping_a371482b940f4616b6f255309ed6be0aa}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Add@{Add}}
+\index{Add@{Add}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Fbx\+Weighted\+Mapping\+::\+Add (\begin{DoxyParamCaption}\item[{int}]{p\+Source\+Index,  }\item[{int}]{p\+Destination\+Index,  }\item[{double}]{p\+Weight }\end{DoxyParamCaption})}
+
+Add a weighted mapping relation. 
+\begin{DoxyParams}{引数}
+{\em p\+Source\+Index} & Index of the source object. \\
+\hline
+{\em p\+Destination\+Index} & Index of the destination object. \\
+\hline
+{\em p\+Weight} & Weight of the mapping. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a5037a5d025ca8544e453508e12aab6fb}\label{class_fbx_weighted_mapping_a5037a5d025ca8544e453508e12aab6fb}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Get\+Element\+Count@{Get\+Element\+Count}}
+\index{Get\+Element\+Count@{Get\+Element\+Count}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Get\+Element\+Count()}{GetElementCount()}}
+{\footnotesize\ttfamily int Fbx\+Weighted\+Mapping\+::\+Get\+Element\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set}}]{p\+Set }\end{DoxyParamCaption}) const}
+
+Get the number of elements of a set. 
+\begin{DoxyParams}{引数}
+{\em p\+Set} & source or destination set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a7bfbaef7f0113abda83e7b6bbbe34859}\label{class_fbx_weighted_mapping_a7bfbaef7f0113abda83e7b6bbbe34859}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Get\+Relation@{Get\+Relation}}
+\index{Get\+Relation@{Get\+Relation}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Get\+Relation()}{GetRelation()}}
+{\footnotesize\ttfamily \hyperlink{struct_fbx_weighted_mapping_1_1_element}{Element}\& Fbx\+Weighted\+Mapping\+::\+Get\+Relation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set}}]{p\+Set,  }\item[{int}]{p\+Element,  }\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get one of the relations an element of a set is linked to. 
+\begin{DoxyParams}{引数}
+{\em p\+Set} & Source or destination set. \\
+\hline
+{\em p\+Element} & Object index in the set. \\
+\hline
+{\em p\+Index} & Relation index of the object linked to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+\hyperlink{struct_fbx_weighted_mapping_1_1_element}{Element} gives the index of an element in the other set and the assigned weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_aa7886f54860c52c0530a3813f99da400}\label{class_fbx_weighted_mapping_aa7886f54860c52c0530a3813f99da400}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Get\+Relation\+Count@{Get\+Relation\+Count}}
+\index{Get\+Relation\+Count@{Get\+Relation\+Count}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Get\+Relation\+Count()}{GetRelationCount()}}
+{\footnotesize\ttfamily int Fbx\+Weighted\+Mapping\+::\+Get\+Relation\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set}}]{p\+Set,  }\item[{int}]{p\+Element }\end{DoxyParamCaption}) const}
+
+Get the number of relations an element of a set is linked to. For example, for one object (which index is specified by p\+Element) in source set (specified by p\+Set), the function return how many objects (as destination) the object (as source) mapping to. 
+\begin{DoxyParams}{引数}
+{\em p\+Set} & Source or destination set. \\
+\hline
+{\em p\+Element} & Object index in the set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a0903c7af1875b82c0c1edcc315d0ad3b}\label{class_fbx_weighted_mapping_a0903c7af1875b82c0c1edcc315d0ad3b}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Get\+Relation\+Index@{Get\+Relation\+Index}}
+\index{Get\+Relation\+Index@{Get\+Relation\+Index}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Get\+Relation\+Index()}{GetRelationIndex()}}
+{\footnotesize\ttfamily int Fbx\+Weighted\+Mapping\+::\+Get\+Relation\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set}}]{p\+Set,  }\item[{int}]{p\+Element\+In\+Set,  }\item[{int}]{p\+Element\+In\+Other\+Set }\end{DoxyParamCaption}) const}
+
+Given the index of an element in the other set, get the index of one of the relations an element of a set is linked to. Returns -\/1 if there is not relation between these elements. 
+\begin{DoxyParams}{引数}
+{\em p\+Set} & Source or destination set. \\
+\hline
+{\em p\+Element\+In\+Set} & Object index in the set. \\
+\hline
+{\em p\+Element\+In\+Other\+Set} & Object index in another set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of one of the relations, -\/1 if there is not relation between these elements. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a85e417a74b9c1cc40c04ff95ba0c0b5d}\label{class_fbx_weighted_mapping_a85e417a74b9c1cc40c04ff95ba0c0b5d}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Get\+Relation\+Sum@{Get\+Relation\+Sum}}
+\index{Get\+Relation\+Sum@{Get\+Relation\+Sum}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Get\+Relation\+Sum()}{GetRelationSum()}}
+{\footnotesize\ttfamily double Fbx\+Weighted\+Mapping\+::\+Get\+Relation\+Sum (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set}}]{p\+Set,  }\item[{int}]{p\+Element,  }\item[{bool}]{p\+Absolute\+Value }\end{DoxyParamCaption}) const}
+
+Get the sum of the weights from the relations an element of a set is linked to. 
+\begin{DoxyParams}{引数}
+{\em p\+Set} & Source or destination set. \\
+\hline
+{\em p\+Element} & Object index in the set. \\
+\hline
+{\em p\+Absolute\+Value} & Flag to convert negative value to positive value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The sum of the weights from the relations. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a874bbc1592ffd77932008e3ea79cbdf8}\label{class_fbx_weighted_mapping_a874bbc1592ffd77932008e3ea79cbdf8}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void Fbx\+Weighted\+Mapping\+::\+Normalize (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_weighted_mapping_a3fb59c162b0c5b278f00e7bad4c578c6}{E\+Set}}]{p\+Set,  }\item[{bool}]{p\+Absolute\+Value }\end{DoxyParamCaption})}
+
+Normalize the weights of the relations of all the elements of a set. 
+\begin{DoxyParams}{引数}
+{\em p\+Set} & Source or destination set. \\
+\hline
+{\em p\+Absolute\+Value} & Flag to convert negative value to positive value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_weighted_mapping_a7cf51cc13e95c389364fbfb8d7847c2d}\label{class_fbx_weighted_mapping_a7cf51cc13e95c389364fbfb8d7847c2d}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_weighted_mapping}{Fbx\+Weighted\+Mapping}\& Fbx\+Weighted\+Mapping\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_weighted_mapping}{Fbx\+Weighted\+Mapping} \&}]{p\+W\+Map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_weighted_mapping_ae0bba66321c38e91d5910cfb0306dc57}\label{class_fbx_weighted_mapping_ae0bba66321c38e91d5910cfb0306dc57}} 
+\index{Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Weighted\+Mapping@{Fbx\+Weighted\+Mapping}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Weighted\+Mapping\+::\+Reset (\begin{DoxyParamCaption}\item[{int}]{p\+Source\+Size,  }\item[{int}]{p\+Destination\+Size }\end{DoxyParamCaption})}
+
+Remove all weighted relations and give new source and destination sets sizes. 
+\begin{DoxyParams}{引数}
+{\em p\+Source\+Size} & New source set size. \\
+\hline
+{\em p\+Destination\+Size} & New destination set size. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxweightedmapping_8h}{fbxweightedmapping.\+h}\end{DoxyCompactItemize}

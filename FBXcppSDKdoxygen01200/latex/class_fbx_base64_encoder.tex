@@ -1,0 +1,66 @@
+\hypertarget{class_fbx_base64_encoder}{}\section{Fbx\+Base64\+Encoder クラス}
+\label{class_fbx_base64_encoder}\index{Fbx\+Base64\+Encoder@{Fbx\+Base64\+Encoder}}
+
+
+{\ttfamily \#include $<$fbxbase64coder.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_base64_encoder_a53124f67f78035c7c024da2ee7ba2063}{Encode} (const void $\ast$p\+In\+Buffer, int p\+In\+Size, void $\ast$p\+Out\+Buffer, int p\+Out\+Size)
+\item 
+int \hyperlink{class_fbx_base64_encoder_afe16a82c30d642c73f78df4d648765c8}{Encode} (const void $\ast$p\+In\+Buffer, int p\+In\+Size, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Out\+Buffer)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class encodes data in the Base64 format. 
+
+ fbxbase64coder.\+h の 43 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_base64_encoder_a53124f67f78035c7c024da2ee7ba2063}\label{class_fbx_base64_encoder_a53124f67f78035c7c024da2ee7ba2063}} 
+\index{Fbx\+Base64\+Encoder@{Fbx\+Base64\+Encoder}!Encode@{Encode}}
+\index{Encode@{Encode}!Fbx\+Base64\+Encoder@{Fbx\+Base64\+Encoder}}
+\subsubsection{\texorpdfstring{Encode()}{Encode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Base64\+Encoder\+::\+Encode (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+In\+Buffer,  }\item[{int}]{p\+In\+Size,  }\item[{void $\ast$}]{p\+Out\+Buffer,  }\item[{int}]{p\+Out\+Size }\end{DoxyParamCaption})}
+
+Encodes the input buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+In\+Buffer} & the input buffer containing data. \\
+\hline
+{\em p\+In\+Size} & the size of the input data in bytes. \\
+\hline
+{\em p\+Out\+Buffer} & the destination buffer, receives data encoded in Base64. \\
+\hline
+{\em p\+Out\+Size} & the capacity of the output buffer in bytes, which should be at least 33\% larger than the input buffer size, or 4 bytes whichever is more. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the number of bytes put in the output buffer, or -\/1 if we ran out of room. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_base64_encoder_afe16a82c30d642c73f78df4d648765c8}\label{class_fbx_base64_encoder_afe16a82c30d642c73f78df4d648765c8}} 
+\index{Fbx\+Base64\+Encoder@{Fbx\+Base64\+Encoder}!Encode@{Encode}}
+\index{Encode@{Encode}!Fbx\+Base64\+Encoder@{Fbx\+Base64\+Encoder}}
+\subsubsection{\texorpdfstring{Encode()}{Encode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+Base64\+Encoder\+::\+Encode (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+In\+Buffer,  }\item[{int}]{p\+In\+Size,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Out\+Buffer }\end{DoxyParamCaption})}
+
+Encodes the input buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+In\+Buffer} & the input buffer containing data. \\
+\hline
+{\em p\+In\+Size} & the size of the input data in bytes. \\
+\hline
+{\em p\+Out\+Buffer} & the destination buffer; data is set, not appended. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the number of bytes put in the output buffer. 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxbase64coder_8h}{fbxbase64coder.\+h}\end{DoxyCompactItemize}

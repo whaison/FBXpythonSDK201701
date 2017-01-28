@@ -1,0 +1,198 @@
+\hypertarget{fbxcolladaelement_8h}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/include/fbxsdk/fileio/collada/fbxcolladaelement.h ファイル}
+\label{fbxcolladaelement_8h}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/collada/fbxcolladaelement.\+h@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/collada/fbxcolladaelement.\+h}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_element_content_accessor}{Element\+Content\+Accessor}
+\item 
+struct \hyperlink{struct_source_element_content_accessor}{Source\+Element\+Content\+Accessor$<$ T\+Y\+P\+E $>$}
+\item 
+class \hyperlink{class_element_base}{Element\+Base}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a4c5783f2a36bb36c930dc471ff817e60}{Type\+To\+Array\+Tag} ()
+\item 
+{\footnotesize template$<$$>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a9a23f4cd51d08df6c715aa3e9af9aa75}{Type\+To\+Array\+Tag$<$ bool $>$} ()
+\item 
+{\footnotesize template$<$$>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_afa751d06fd0bf9a3d2f10cc3be341486}{Type\+To\+Array\+Tag$<$ int $>$} ()
+\item 
+{\footnotesize template$<$$>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_ada08bfb28ab74c5dcf44699c0934bd79}{Type\+To\+Array\+Tag$<$ Fbx\+String $>$} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a65706c85c0304d57d3cf7b9f7796abf2}{Type\+To\+Parameter\+Tag} ()
+\item 
+{\footnotesize template$<$$>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a08012272a6d6d9540b1dc703dff14be6}{Type\+To\+Parameter\+Tag$<$ bool $>$} ()
+\item 
+{\footnotesize template$<$$>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_acff148034f972c08b8019bec0e34a29b}{Type\+To\+Parameter\+Tag$<$ int $>$} ()
+\item 
+{\footnotesize template$<$$>$ }\\const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_aaec09c380c0fc2b9433dbdd48d85b243}{Type\+To\+Parameter\+Tag$<$ Fbx\+String $>$} ()
+\item 
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a82253dcb098d615368fe4c777c2a9289}{U\+RL} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+ID)
+\item 
+{\footnotesize template$<$typename T $>$ }\\xml\+Node $\ast$ \hyperlink{fbxcolladaelement_8h_a0b2bfa0261f7e12aa46598f5b3042b77}{Add\+Source\+Element} (xml\+Node $\ast$p\+Parent\+Element, const char $\ast$p\+ID, const T $\ast$p\+Data, int p\+Count, int p\+Stride=1)
+\item 
+{\footnotesize template$<$typename T\+Y\+PE $>$ }\\\hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array} $\ast$ \hyperlink{fbxcolladaelement_8h_ae6fd8b5216bfe38c512c544171f5c783}{Populate\+Layer\+Element\+Direct\+Array} (\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} $\ast$p\+Layer\+Element, xml\+Node $\ast$p\+Source\+Element, int p\+Size)
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxcolladaelement_8h_a0b2bfa0261f7e12aa46598f5b3042b77}\label{fbxcolladaelement_8h_a0b2bfa0261f7e12aa46598f5b3042b77}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Add\+Source\+Element@{Add\+Source\+Element}}
+\index{Add\+Source\+Element@{Add\+Source\+Element}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Add\+Source\+Element()}{AddSourceElement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+xml\+Node$\ast$ Add\+Source\+Element (\begin{DoxyParamCaption}\item[{xml\+Node $\ast$}]{p\+Parent\+Element,  }\item[{const char $\ast$}]{p\+ID,  }\item[{const T $\ast$}]{p\+Data,  }\item[{int}]{p\+Count,  }\item[{int}]{p\+Stride = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Convert the array data to a source element under specific parent element. 
+\begin{DoxyParams}{引数}
+{\em p\+Parent\+Element} & The parent element. \\
+\hline
+{\em p\+ID} & The ID of the new source element. \\
+\hline
+{\em p\+Data} & The array data. \\
+\hline
+{\em p\+Count} & The length of the array. \\
+\hline
+{\em p\+Stride} & The stride of each unit in the array. For example, when you export an array of Fbx\+Double3 of size 10, you convert it to a double array of size 30 with a stride 3 and call this method. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new source element. 
+\end{DoxyReturn}
+
+
+ fbxcolladaelement.\+h の 209 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_ae6fd8b5216bfe38c512c544171f5c783}\label{fbxcolladaelement_8h_ae6fd8b5216bfe38c512c544171f5c783}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Populate\+Layer\+Element\+Direct\+Array@{Populate\+Layer\+Element\+Direct\+Array}}
+\index{Populate\+Layer\+Element\+Direct\+Array@{Populate\+Layer\+Element\+Direct\+Array}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Populate\+Layer\+Element\+Direct\+Array()}{PopulateLayerElementDirectArray()}}
+{\footnotesize\ttfamily template$<$typename T\+Y\+PE $>$ \\
+\hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array}$\ast$ Populate\+Layer\+Element\+Direct\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} $\ast$}]{p\+Layer\+Element,  }\item[{xml\+Node $\ast$}]{p\+Source\+Element,  }\item[{int}]{p\+Size }\end{DoxyParamCaption})}
+
+Populate the layer element with direct array and return index array for later use. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Element} & The layer element to be populated. \\
+\hline
+{\em p\+Source\+Element} & The source element containing the direct array data. \\
+\hline
+{\em p\+Size} & The count of double data of direct array element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return the index array of the layer element. 
+\end{DoxyReturn}
+
+
+ fbxcolladaelement.\+h の 255 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_a4c5783f2a36bb36c930dc471ff817e60}\label{fbxcolladaelement_8h_a4c5783f2a36bb36c930dc471ff817e60}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Array\+Tag@{Type\+To\+Array\+Tag}}
+\index{Type\+To\+Array\+Tag@{Type\+To\+Array\+Tag}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Array\+Tag()}{TypeToArrayTag()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} Type\+To\+Array\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 22 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_a9a23f4cd51d08df6c715aa3e9af9aa75}\label{fbxcolladaelement_8h_a9a23f4cd51d08df6c715aa3e9af9aa75}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Array\+Tag$<$ bool $>$@{Type\+To\+Array\+Tag$<$ bool $>$}}
+\index{Type\+To\+Array\+Tag$<$ bool $>$@{Type\+To\+Array\+Tag$<$ bool $>$}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Array\+Tag$<$ bool $>$()}{TypeToArrayTag< bool >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a4c5783f2a36bb36c930dc471ff817e60}{Type\+To\+Array\+Tag}$<$ bool $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 28 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_ada08bfb28ab74c5dcf44699c0934bd79}\label{fbxcolladaelement_8h_ada08bfb28ab74c5dcf44699c0934bd79}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Array\+Tag$<$ Fbx\+String $>$@{Type\+To\+Array\+Tag$<$ Fbx\+String $>$}}
+\index{Type\+To\+Array\+Tag$<$ Fbx\+String $>$@{Type\+To\+Array\+Tag$<$ Fbx\+String $>$}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Array\+Tag$<$ Fbx\+String $>$()}{TypeToArrayTag< FbxString >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a4c5783f2a36bb36c930dc471ff817e60}{Type\+To\+Array\+Tag}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 40 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_afa751d06fd0bf9a3d2f10cc3be341486}\label{fbxcolladaelement_8h_afa751d06fd0bf9a3d2f10cc3be341486}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Array\+Tag$<$ int $>$@{Type\+To\+Array\+Tag$<$ int $>$}}
+\index{Type\+To\+Array\+Tag$<$ int $>$@{Type\+To\+Array\+Tag$<$ int $>$}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Array\+Tag$<$ int $>$()}{TypeToArrayTag< int >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a4c5783f2a36bb36c930dc471ff817e60}{Type\+To\+Array\+Tag}$<$ int $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 34 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_a65706c85c0304d57d3cf7b9f7796abf2}\label{fbxcolladaelement_8h_a65706c85c0304d57d3cf7b9f7796abf2}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Parameter\+Tag@{Type\+To\+Parameter\+Tag}}
+\index{Type\+To\+Parameter\+Tag@{Type\+To\+Parameter\+Tag}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Parameter\+Tag()}{TypeToParameterTag()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} Type\+To\+Parameter\+Tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 47 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_a08012272a6d6d9540b1dc703dff14be6}\label{fbxcolladaelement_8h_a08012272a6d6d9540b1dc703dff14be6}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Parameter\+Tag$<$ bool $>$@{Type\+To\+Parameter\+Tag$<$ bool $>$}}
+\index{Type\+To\+Parameter\+Tag$<$ bool $>$@{Type\+To\+Parameter\+Tag$<$ bool $>$}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Parameter\+Tag$<$ bool $>$()}{TypeToParameterTag< bool >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a65706c85c0304d57d3cf7b9f7796abf2}{Type\+To\+Parameter\+Tag}$<$ bool $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_aaec09c380c0fc2b9433dbdd48d85b243}\label{fbxcolladaelement_8h_aaec09c380c0fc2b9433dbdd48d85b243}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Parameter\+Tag$<$ Fbx\+String $>$@{Type\+To\+Parameter\+Tag$<$ Fbx\+String $>$}}
+\index{Type\+To\+Parameter\+Tag$<$ Fbx\+String $>$@{Type\+To\+Parameter\+Tag$<$ Fbx\+String $>$}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Parameter\+Tag$<$ Fbx\+String $>$()}{TypeToParameterTag< FbxString >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a65706c85c0304d57d3cf7b9f7796abf2}{Type\+To\+Parameter\+Tag}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 65 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_acff148034f972c08b8019bec0e34a29b}\label{fbxcolladaelement_8h_acff148034f972c08b8019bec0e34a29b}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!Type\+To\+Parameter\+Tag$<$ int $>$@{Type\+To\+Parameter\+Tag$<$ int $>$}}
+\index{Type\+To\+Parameter\+Tag$<$ int $>$@{Type\+To\+Parameter\+Tag$<$ int $>$}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{Type\+To\+Parameter\+Tag$<$ int $>$()}{TypeToParameterTag< int >()}}
+{\footnotesize\ttfamily template$<$$>$ \\
+const \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{fbxcolladaelement_8h_a65706c85c0304d57d3cf7b9f7796abf2}{Type\+To\+Parameter\+Tag}$<$ int $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxcolladaelement.\+h の 59 行目に定義があります。
+
+\mbox{\Hypertarget{fbxcolladaelement_8h_a82253dcb098d615368fe4c777c2a9289}\label{fbxcolladaelement_8h_a82253dcb098d615368fe4c777c2a9289}} 
+\index{fbxcolladaelement.\+h@{fbxcolladaelement.\+h}!U\+RL@{U\+RL}}
+\index{U\+RL@{U\+RL}!fbxcolladaelement.\+h@{fbxcolladaelement.\+h}}
+\subsubsection{\texorpdfstring{U\+R\+L()}{URL()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_string}{Fbx\+String} U\+RL (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Convert from ID to U\+RL, just add a prefix \char`\"{}\#\char`\"{}. 
+\begin{DoxyParams}{引数}
+{\em p\+ID} & The ID string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return the U\+RL string. 
+\end{DoxyReturn}
+
+
+ fbxcolladaelement.\+h の 193 行目に定義があります。
+

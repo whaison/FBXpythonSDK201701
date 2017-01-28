@@ -1,0 +1,179 @@
+\hypertarget{class_fbx_container}{}\section{Fbx\+Container クラス}
+\label{class_fbx_container}\index{Fbx\+Container@{Fbx\+Container}}
+
+
+{\ttfamily \#include $<$fbxcontainer.\+h$>$}
+
+Fbx\+Container の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fbx_container}
+\end{center}
+\end{figure}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_container_template}{Fbx\+Container\+Template} $\ast$ \hyperlink{class_fbx_container_ade609786f173965289c16e2537927bd8}{m\+Container\+Template}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_container_a65204439a64fd2184467e41d994bec0a}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_container_a27222c85d2076c036d1596c25cbc9cd0}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Container dynamic attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_container_aba24a2e2319b0111980eb198f8e726b1}{Create\+Property} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Name, \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&p\+Type, \hyperlink{class_fbx_string}{Fbx\+String} p\+Label)
+\end{DoxyCompactItemize}
+\subsection*{Public and fast access Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_container_a44b1cee6dbe9941f8fdfa25937d85ce2}{Template\+Name}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_container_a8d66563e359fda83e5b67017140e97d1}{Template\+Path}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_container_a0fcd3f02b0b9df51cfd82902c794e709}{Template\+Version}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_container_afdbbb7add5452cf3ee2fcf13c47a00cf}{View\+Name}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Generic container for object grouping and encapsulation. 
+
+ fbxcontainer.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_container_a65204439a64fd2184467e41d994bec0a}\label{class_fbx_container_a65204439a64fd2184467e41d994bec0a}} 
+\index{Fbx\+Container@{Fbx\+Container}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Container\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_container_a27222c85d2076c036d1596c25cbc9cd0}\label{class_fbx_container_a27222c85d2076c036d1596c25cbc9cd0}} 
+\index{Fbx\+Container@{Fbx\+Container}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Container\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_container_aba24a2e2319b0111980eb198f8e726b1}\label{class_fbx_container_aba24a2e2319b0111980eb198f8e726b1}} 
+\index{Fbx\+Container@{Fbx\+Container}!Create\+Property@{Create\+Property}}
+\index{Create\+Property@{Create\+Property}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{Create\+Property()}{CreateProperty()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Container\+::\+Create\+Property (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Name,  }\item[{\hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \&}]{p\+Type,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Label }\end{DoxyParamCaption})}
+
+Create a new property. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name of the property \\
+\hline
+{\em p\+Type} & Type of the property \\
+\hline
+{\em p\+Label} & Label of the property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the newly created property 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_container_ade609786f173965289c16e2537927bd8}\label{class_fbx_container_ade609786f173965289c16e2537927bd8}} 
+\index{Fbx\+Container@{Fbx\+Container}!m\+Container\+Template@{m\+Container\+Template}}
+\index{m\+Container\+Template@{m\+Container\+Template}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{m\+Container\+Template}{mContainerTemplate}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_container_template}{Fbx\+Container\+Template}$\ast$ Fbx\+Container\+::m\+Container\+Template}
+
+
+
+ fbxcontainer.\+h の 89 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_container_a44b1cee6dbe9941f8fdfa25937d85ce2}\label{class_fbx_container_a44b1cee6dbe9941f8fdfa25937d85ce2}} 
+\index{Fbx\+Container@{Fbx\+Container}!Template\+Name@{Template\+Name}}
+\index{Template\+Name@{Template\+Name}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{Template\+Name}{TemplateName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Container\+::\+Template\+Name}
+
+This property contains the template name information of the container
+
+To access this property do\+: Template\+Name.\+Get(). To set this property do\+: Template\+Name.\+Set(\+Fbx\+String).
+
+Default value is \char`\"{}\char`\"{}. 
+
+ fbxcontainer.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_container_a8d66563e359fda83e5b67017140e97d1}\label{class_fbx_container_a8d66563e359fda83e5b67017140e97d1}} 
+\index{Fbx\+Container@{Fbx\+Container}!Template\+Path@{Template\+Path}}
+\index{Template\+Path@{Template\+Path}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{Template\+Path}{TemplatePath}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Container\+::\+Template\+Path}
+
+This property contains the template path information of the container
+
+To access this property do\+: Template\+Path.\+Get(). To set this property do\+: Template\+Path.\+Set(\+Fbx\+String).
+
+Default value is \char`\"{}\char`\"{}. 
+
+ fbxcontainer.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_container_a0fcd3f02b0b9df51cfd82902c794e709}\label{class_fbx_container_a0fcd3f02b0b9df51cfd82902c794e709}} 
+\index{Fbx\+Container@{Fbx\+Container}!Template\+Version@{Template\+Version}}
+\index{Template\+Version@{Template\+Version}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{Template\+Version}{TemplateVersion}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Container\+::\+Template\+Version}
+
+This property contains the template version information of the container
+
+To access this property do\+: Template\+Version.\+Get(). To set this property do\+: Template\+Version.\+Set(\+Fbx\+String).
+
+Default value is \char`\"{}\char`\"{}. 
+
+ fbxcontainer.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_container_afdbbb7add5452cf3ee2fcf13c47a00cf}\label{class_fbx_container_afdbbb7add5452cf3ee2fcf13c47a00cf}} 
+\index{Fbx\+Container@{Fbx\+Container}!View\+Name@{View\+Name}}
+\index{View\+Name@{View\+Name}!Fbx\+Container@{Fbx\+Container}}
+\subsubsection{\texorpdfstring{View\+Name}{ViewName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Container\+::\+View\+Name}
+
+This property contains the view name information of the container
+
+To access this property do\+: View\+Name.\+Get(). To set this property do\+: View\+Name.\+Set(\+Fbx\+String).
+
+Default value is \char`\"{}\char`\"{}. 
+
+ fbxcontainer.\+h の 82 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxcontainer_8h}{fbxcontainer.\+h}\end{DoxyCompactItemize}

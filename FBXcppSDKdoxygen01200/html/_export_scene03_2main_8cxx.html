@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/samples/ExportScene03/main.cxx ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_71525f077f4c780a76a234e0971e4aab.html">samples</a></li><li class="navelem"><a class="el" href="dir_4a06b400a2b89666ddb3451ba462e456.html">ExportScene03</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">main.cxx ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="fbxsdk_8h_source.html">fbxsdk.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="_common_8h_source.html">../Common/Common.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_my_k_fbx_mesh_8h_source.html">MyKFbxMesh.h</a>&quot;</code><br />
+</div>
+<p><a href="_export_scene03_2main_8cxx_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:afa23c122376cefc7f50b36937faf7d75"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#afa23c122376cefc7f50b36937faf7d75">SAMPLE_FILENAME_MC</a>&#160;&#160;&#160;&quot;ExportScene03_MC.fbx&quot;</td></tr>
+<tr class="separator:afa23c122376cefc7f50b36937faf7d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76276c450570aea959c562bb32cbefd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#ae76276c450570aea959c562bb32cbefd">SAMPLE_FILENAME_PC2</a>&#160;&#160;&#160;&quot;ExportScene03_PC2.fbx&quot;</td></tr>
+<tr class="separator:ae76276c450570aea959c562bb32cbefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17beffaec095b735c7b88fd5266ed329"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a17beffaec095b735c7b88fd5266ed329">SAMPLE_CACHE_TYPE</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a17beffaec095b735c7b88fd5266ed329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae124a4e61f1b6cd70d223bd2706d72f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#aae124a4e61f1b6cd70d223bd2706d72f">PID_MY_GEOMETRY_LEMENT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aae124a4e61f1b6cd70d223bd2706d72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ba1cbad842f9c8e2db807f2bb029e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#ac4ba1cbad842f9c8e2db807f2bb029e9">AbsFlt</a>(a)&#160;&#160;&#160;(((a) &lt; 0) ? -(a) : (a))</td></tr>
+<tr class="separator:ac4ba1cbad842f9c8e2db807f2bb029e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3171b9ffd346c694a747f095fe9145af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a3171b9ffd346c694a747f095fe9145af">CmpFlt</a>(a,  b)&#160;&#160;&#160;(<a class="el" href="_export_scene03_2main_8cxx.html#ac4ba1cbad842f9c8e2db807f2bb029e9">AbsFlt</a>((a)-(b)) &gt; 1e-5)</td></tr>
+<tr class="separator:a3171b9ffd346c694a747f095fe9145af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a366ae44bc50eefd9d936d90710f7bc1a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a366ae44bc50eefd9d936d90710f7bc1a">CreateScene</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, char *pSampleFileName)</td></tr>
+<tr class="separator:a366ae44bc50eefd9d936d90710f7bc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23986a0be09ba0db81f633ad3b98e6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#af23986a0be09ba0db81f633ad3b98e6c">CreateCubeWithTexture</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:af23986a0be09ba0db81f633ad3b98e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1083a6a6a123398118d5bf34478b1667"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a1083a6a6a123398118d5bf34478b1667">CreatePyramidWithMaterials</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:a1083a6a6a123398118d5bf34478b1667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d406c39671ad6dcf586502ff6d26262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a9d406c39671ad6dcf586502ff6d26262">CreateTriangle</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:a9d406c39671ad6dcf586502ff6d26262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4317cee99f838a8b7ef2d0bcac9cb5c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a4317cee99f838a8b7ef2d0bcac9cb5c0">CreateCubeWithMaterialAndMyKFbxMesh</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:a4317cee99f838a8b7ef2d0bcac9cb5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb62001fd1f82ee89d98b95bb4fb6a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a5cb62001fd1f82ee89d98b95bb4fb6a2">CreateTexture</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_mesh.html">FbxMesh</a> *pMesh)</td></tr>
+<tr class="separator:a5cb62001fd1f82ee89d98b95bb4fb6a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fde41147ec13fe0ca8904dbd5dbbd77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a1fde41147ec13fe0ca8904dbd5dbbd77">CreateMaterials</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_mesh.html">FbxMesh</a> *pMesh)</td></tr>
+<tr class="separator:a1fde41147ec13fe0ca8904dbd5dbbd77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617e2435859683b5f6358ada46d1b673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a617e2435859683b5f6358ada46d1b673">CreateMaterialsWithMyKFbxMesh</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_my_k_fbx_mesh.html">MyKFbxMesh</a> *pMyKFbxMesh)</td></tr>
+<tr class="separator:a617e2435859683b5f6358ada46d1b673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf03ae563b784c337daec245954b5749"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#abf03ae563b784c337daec245954b5749">MapShapeOnPyramid</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_node.html">FbxNode</a> *pPyramid)</td></tr>
+<tr class="separator:abf03ae563b784c337daec245954b5749"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7239df8f1e7b0f6a333aae4be67450c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a7239df8f1e7b0f6a333aae4be67450c3">MapVertexCacheOnTriangle</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_node.html">FbxNode</a> *pTriangle, char *pSampleFileName)</td></tr>
+<tr class="separator:a7239df8f1e7b0f6a333aae4be67450c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566a55ab3d921a14300d1503faa3acf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a566a55ab3d921a14300d1503faa3acf6">SetCubeDefaultPosition</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pCube)</td></tr>
+<tr class="separator:a566a55ab3d921a14300d1503faa3acf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19f085a34f5164afaf149352bbce6515"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a19f085a34f5164afaf149352bbce6515">SetPyramidDefaultPosition</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pPyramid)</td></tr>
+<tr class="separator:a19f085a34f5164afaf149352bbce6515"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd96c0f7a1e5931ab081d497ebc6b092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#acd96c0f7a1e5931ab081d497ebc6b092">SetTriangleDefaultPosition</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pTriangle)</td></tr>
+<tr class="separator:acd96c0f7a1e5931ab081d497ebc6b092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ae490af9eab56988f944a156c4cf86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a76ae490af9eab56988f944a156c4cf86">SetMyKFbxMeshCubeDefaultPosition</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pMyKFbxCube)</td></tr>
+<tr class="separator:a76ae490af9eab56988f944a156c4cf86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ed5cc8c7cad8950a00b41909d01a7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a89ed5cc8c7cad8950a00b41909d01a7a">Animate</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode, <a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *pAnimLayer)</td></tr>
+<tr class="separator:a89ed5cc8c7cad8950a00b41909d01a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7ad3b5de08e6fb995278fc4faf3532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a0f7ad3b5de08e6fb995278fc4faf3532">AnimateVertexCacheOnTriangleDoubleVertex</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode, double pFrameRate)</td></tr>
+<tr class="separator:a0f7ad3b5de08e6fb995278fc4faf3532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec939aa366ddb2b43f2c63e588e7fd3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#aec939aa366ddb2b43f2c63e588e7fd3c">AnimateVertexCacheOnTriangleInt32</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode, double pFrameRate)</td></tr>
+<tr class="separator:aec939aa366ddb2b43f2c63e588e7fd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15daa05f61aa4bbebc9e25e3fd8ed978"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a15daa05f61aa4bbebc9e25e3fd8ed978">AnimateVertexCacheOnTriangleFloat</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode, double pFrameRate)</td></tr>
+<tr class="separator:a15daa05f61aa4bbebc9e25e3fd8ed978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a03b1b0023fac94a7a5acfef16a76c3d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#a03b1b0023fac94a7a5acfef16a76c3d6">gExportVertexCacheMCFormat</a> = true</td></tr>
+<tr class="separator:a03b1b0023fac94a7a5acfef16a76c3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5669a5972a4251d30719e78acdebacb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_export_scene03_2main_8cxx.html#aa5669a5972a4251d30719e78acdebacb">gCacheType</a> = -1</td></tr>
+<tr class="separator:aa5669a5972a4251d30719e78acdebacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ac4ba1cbad842f9c8e2db807f2bb029e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ba1cbad842f9c8e2db807f2bb029e9">&#9670;&nbsp;</a></span>AbsFlt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AbsFlt</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a</td><td>)</td>
+          <td>&#160;&#160;&#160;(((a) &lt; 0) ? -(a) : (a))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3171b9ffd346c694a747f095fe9145af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3171b9ffd346c694a747f095fe9145af">&#9670;&nbsp;</a></span>CmpFlt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CmpFlt</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(<a class="el" href="_export_scene03_2main_8cxx.html#ac4ba1cbad842f9c8e2db807f2bb029e9">AbsFlt</a>((a)-(b)) &gt; 1e-5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae124a4e61f1b6cd70d223bd2706d72f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae124a4e61f1b6cd70d223bd2706d72f">&#9670;&nbsp;</a></span>PID_MY_GEOMETRY_LEMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PID_MY_GEOMETRY_LEMENT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00052">52</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a17beffaec095b735c7b88fd5266ed329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17beffaec095b735c7b88fd5266ed329">&#9670;&nbsp;</a></span>SAMPLE_CACHE_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_CACHE_TYPE&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00050">50</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afa23c122376cefc7f50b36937faf7d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa23c122376cefc7f50b36937faf7d75">&#9670;&nbsp;</a></span>SAMPLE_FILENAME_MC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_FILENAME_MC&#160;&#160;&#160;&quot;ExportScene03_MC.fbx&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00048">48</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae76276c450570aea959c562bb32cbefd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76276c450570aea959c562bb32cbefd">&#9670;&nbsp;</a></span>SAMPLE_FILENAME_PC2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_FILENAME_PC2&#160;&#160;&#160;&quot;ExportScene03_PC2.fbx&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a89ed5cc8c7cad8950a00b41909d01a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ed5cc8c7cad8950a00b41909d01a7a">&#9670;&nbsp;</a></span>Animate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Animate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *&#160;</td>
+          <td class="paramname"><em>pAnimLayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01173">1173</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0f7ad3b5de08e6fb995278fc4faf3532"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f7ad3b5de08e6fb995278fc4faf3532">&#9670;&nbsp;</a></span>AnimateVertexCacheOnTriangleDoubleVertex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimateVertexCacheOnTriangleDoubleVertex </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pFrameRate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01268">1268</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a15daa05f61aa4bbebc9e25e3fd8ed978"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15daa05f61aa4bbebc9e25e3fd8ed978">&#9670;&nbsp;</a></span>AnimateVertexCacheOnTriangleFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimateVertexCacheOnTriangleFloat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pFrameRate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01469">1469</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aec939aa366ddb2b43f2c63e588e7fd3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec939aa366ddb2b43f2c63e588e7fd3c">&#9670;&nbsp;</a></span>AnimateVertexCacheOnTriangleInt32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnimateVertexCacheOnTriangleInt32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pFrameRate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01363">1363</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4317cee99f838a8b7ef2d0bcac9cb5c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4317cee99f838a8b7ef2d0bcac9cb5c0">&#9670;&nbsp;</a></span>CreateCubeWithMaterialAndMyKFbxMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_node.html">FbxNode</a> * CreateCubeWithMaterialAndMyKFbxMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00593">593</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af23986a0be09ba0db81f633ad3b98e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23986a0be09ba0db81f633ad3b98e6c">&#9670;&nbsp;</a></span>CreateCubeWithTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_node.html">FbxNode</a> * CreateCubeWithTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00222">222</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1fde41147ec13fe0ca8904dbd5dbbd77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fde41147ec13fe0ca8904dbd5dbbd77">&#9670;&nbsp;</a></span>CreateMaterials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateMaterials </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_mesh.html">FbxMesh</a> *&#160;</td>
+          <td class="paramname"><em>pMesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00939">939</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a617e2435859683b5f6358ada46d1b673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a617e2435859683b5f6358ada46d1b673">&#9670;&nbsp;</a></span>CreateMaterialsWithMyKFbxMesh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateMaterialsWithMyKFbxMesh </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_my_k_fbx_mesh.html">MyKFbxMesh</a> *&#160;</td>
+          <td class="paramname"><em>pMyKFbxMesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00972">972</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1083a6a6a123398118d5bf34478b1667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1083a6a6a123398118d5bf34478b1667">&#9670;&nbsp;</a></span>CreatePyramidWithMaterials()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_node.html">FbxNode</a> * CreatePyramidWithMaterials </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00454">454</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a366ae44bc50eefd9d936d90710f7bc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a366ae44bc50eefd9d936d90710f7bc1a">&#9670;&nbsp;</a></span>CreateScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateScene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pSampleFileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00148">148</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5cb62001fd1f82ee89d98b95bb4fb6a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb62001fd1f82ee89d98b95bb4fb6a2">&#9670;&nbsp;</a></span>CreateTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CreateTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_mesh.html">FbxMesh</a> *&#160;</td>
+          <td class="paramname"><em>pMesh</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00831">831</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9d406c39671ad6dcf586502ff6d26262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d406c39671ad6dcf586502ff6d26262">&#9670;&nbsp;</a></span>CreateTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_node.html">FbxNode</a> * CreateTriangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00563">563</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00092">92</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abf03ae563b784c337daec245954b5749"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf03ae563b784c337daec245954b5749">&#9670;&nbsp;</a></span>MapShapeOnPyramid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapShapeOnPyramid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pPyramid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01006">1006</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7239df8f1e7b0f6a333aae4be67450c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7239df8f1e7b0f6a333aae4be67450c3">&#9670;&nbsp;</a></span>MapVertexCacheOnTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapVertexCacheOnTriangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pTriangle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pSampleFileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01073">1073</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a566a55ab3d921a14300d1503faa3acf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566a55ab3d921a14300d1503faa3acf6">&#9670;&nbsp;</a></span>SetCubeDefaultPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCubeDefaultPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pCube</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01143">1143</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a76ae490af9eab56988f944a156c4cf86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ae490af9eab56988f944a156c4cf86">&#9670;&nbsp;</a></span>SetMyKFbxMeshCubeDefaultPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetMyKFbxMeshCubeDefaultPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pMyKFbxCube</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01165">1165</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a19f085a34f5164afaf149352bbce6515"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f085a34f5164afaf149352bbce6515">&#9670;&nbsp;</a></span>SetPyramidDefaultPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetPyramidDefaultPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pPyramid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01151">1151</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acd96c0f7a1e5931ab081d497ebc6b092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd96c0f7a1e5931ab081d497ebc6b092">&#9670;&nbsp;</a></span>SetTriangleDefaultPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTriangleDefaultPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pTriangle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l01158">1158</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="aa5669a5972a4251d30719e78acdebacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5669a5972a4251d30719e78acdebacb">&#9670;&nbsp;</a></span>gCacheType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gCacheType = -1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00090">90</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a03b1b0023fac94a7a5acfef16a76c3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b1b0023fac94a7a5acfef16a76c3d6">&#9670;&nbsp;</a></span>gExportVertexCacheMCFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool gExportVertexCacheMCFormat = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_export_scene03_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_export_scene03_2main_8cxx_source.html#l00079">79</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

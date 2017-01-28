@@ -1,0 +1,144 @@
+\hypertarget{class_fbx_renaming_strategy_utils}{}\section{Fbx\+Renaming\+Strategy\+Utils クラス}
+\label{class_fbx_renaming_strategy_utils}\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+
+
+This class contains a set of utilities, which are used by the F\+BX renaming strategy.  
+
+
+
+
+{\ttfamily \#include $<$fbxrenamingstrategyutilities.\+h$>$}
+
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{class_fbx_renaming_strategy_utils_aa17397b689280294198b5d445c67c95b}{Encode\+Non\+Alpha} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+String, bool p\+First\+Char\+Must\+Be\+Alpha\+Only=false, \hyperlink{class_fbx_string}{Fbx\+String} p\+Permitted\+Chars=\char`\"{}\char`\"{}, bool p8bit\+Chars\+Only=true)
+\item 
+static bool \hyperlink{class_fbx_renaming_strategy_utils_a9ba422882bbd76f388037c75c06ff0e5}{Decode\+Non\+Alpha} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+String)
+\item 
+static bool \hyperlink{class_fbx_renaming_strategy_utils_a0d730b3587ae258f9ba1396080a3028f}{Encode\+Duplicate} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+String, int p\+Instance\+Number=0)
+\item 
+static bool \hyperlink{class_fbx_renaming_strategy_utils_a52105ea9c53b3a5bdb064435b6027f7b}{Decode\+Duplicate} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+String)
+\item 
+static bool \hyperlink{class_fbx_renaming_strategy_utils_a8f0edabcf187fd49359f095008e38df1}{Encode\+Case\+Insensitive} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+String, const \hyperlink{class_fbx_string}{Fbx\+String} p\+String2)
+\item 
+static bool \hyperlink{class_fbx_renaming_strategy_utils_a9f252cd7a3b44f25e7bb421e11acc512}{Decode\+Case\+Insensitive} (\hyperlink{class_fbx_string}{Fbx\+String} \&p\+String)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class contains a set of utilities, which are used by the F\+BX renaming strategy. 
+
+ fbxrenamingstrategyutilities.\+h の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_utils_a9f252cd7a3b44f25e7bb421e11acc512}\label{class_fbx_renaming_strategy_utils_a9f252cd7a3b44f25e7bb421e11acc512}} 
+\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}!Decode\+Case\+Insensitive@{Decode\+Case\+Insensitive}}
+\index{Decode\+Case\+Insensitive@{Decode\+Case\+Insensitive}!Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+\subsubsection{\texorpdfstring{Decode\+Case\+Insensitive()}{DecodeCaseInsensitive()}}
+{\footnotesize\ttfamily static bool Fbx\+Renaming\+Strategy\+Utils\+::\+Decode\+Case\+Insensitive (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method will decode a string that has a ncl2 to it 
+\begin{DoxyParams}{引数}
+{\em p\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if the p\+String has been modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_utils_a52105ea9c53b3a5bdb064435b6027f7b}\label{class_fbx_renaming_strategy_utils_a52105ea9c53b3a5bdb064435b6027f7b}} 
+\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}!Decode\+Duplicate@{Decode\+Duplicate}}
+\index{Decode\+Duplicate@{Decode\+Duplicate}!Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+\subsubsection{\texorpdfstring{Decode\+Duplicate()}{DecodeDuplicate()}}
+{\footnotesize\ttfamily static bool Fbx\+Renaming\+Strategy\+Utils\+::\+Decode\+Duplicate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method will remove the \+\_\+ncl1\+\_\+xxx from the given string 
+\begin{DoxyParams}{引数}
+{\em p\+String} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if the p\+String has been modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_utils_a9ba422882bbd76f388037c75c06ff0e5}\label{class_fbx_renaming_strategy_utils_a9ba422882bbd76f388037c75c06ff0e5}} 
+\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}!Decode\+Non\+Alpha@{Decode\+Non\+Alpha}}
+\index{Decode\+Non\+Alpha@{Decode\+Non\+Alpha}!Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+\subsubsection{\texorpdfstring{Decode\+Non\+Alpha()}{DecodeNonAlpha()}}
+{\footnotesize\ttfamily static bool Fbx\+Renaming\+Strategy\+Utils\+::\+Decode\+Non\+Alpha (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Take a string that has been encoded by Encode\+Non\+Alpha and re-\/extract the non-\/alphanumeric values. 
+\begin{DoxyParams}{引数}
+{\em p\+String} & String to be processed. The result of the conversion is also returned in this string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns {\ttfamily true} if the {\ttfamily p\+String} argument has been decoded. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_utils_a8f0edabcf187fd49359f095008e38df1}\label{class_fbx_renaming_strategy_utils_a8f0edabcf187fd49359f095008e38df1}} 
+\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}!Encode\+Case\+Insensitive@{Encode\+Case\+Insensitive}}
+\index{Encode\+Case\+Insensitive@{Encode\+Case\+Insensitive}!Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+\subsubsection{\texorpdfstring{Encode\+Case\+Insensitive()}{EncodeCaseInsensitive()}}
+{\footnotesize\ttfamily static bool Fbx\+Renaming\+Strategy\+Utils\+::\+Encode\+Case\+Insensitive (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+String,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String}}]{p\+String2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method will compare p\+String and p\+String2, set p\+String to p\+String2 and append the ncl2 suffix to it 
+\begin{DoxyParams}{引数}
+{\em p\+String} & \\
+\hline
+{\em p\+String2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns true if the p\+String has been modified 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+String and p\+String2 must be identical except for casing. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_utils_a0d730b3587ae258f9ba1396080a3028f}\label{class_fbx_renaming_strategy_utils_a0d730b3587ae258f9ba1396080a3028f}} 
+\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}!Encode\+Duplicate@{Encode\+Duplicate}}
+\index{Encode\+Duplicate@{Encode\+Duplicate}!Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+\subsubsection{\texorpdfstring{Encode\+Duplicate()}{EncodeDuplicate()}}
+{\footnotesize\ttfamily static bool Fbx\+Renaming\+Strategy\+Utils\+::\+Encode\+Duplicate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+String,  }\item[{int}]{p\+Instance\+Number = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+This method will add the {\itshape ncl1} with the provided p\+Instance\+Number to the string 
+\begin{DoxyParams}{引数}
+{\em p\+String} & \\
+\hline
+{\em p\+Instance\+Number} & Its default value is 0. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Always returns true. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+please A\+L\+W\+A\+YS call Encode Duplicate B\+E\+F\+O\+RE Encode Case Insensitive. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_renaming_strategy_utils_aa17397b689280294198b5d445c67c95b}\label{class_fbx_renaming_strategy_utils_aa17397b689280294198b5d445c67c95b}} 
+\index{Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}!Encode\+Non\+Alpha@{Encode\+Non\+Alpha}}
+\index{Encode\+Non\+Alpha@{Encode\+Non\+Alpha}!Fbx\+Renaming\+Strategy\+Utils@{Fbx\+Renaming\+Strategy\+Utils}}
+\subsubsection{\texorpdfstring{Encode\+Non\+Alpha()}{EncodeNonAlpha()}}
+{\footnotesize\ttfamily static bool Fbx\+Renaming\+Strategy\+Utils\+::\+Encode\+Non\+Alpha (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+String,  }\item[{bool}]{p\+First\+Char\+Must\+Be\+Alpha\+Only = {\ttfamily false},  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Permitted\+Chars = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{p8bit\+Chars\+Only = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Check if the string has non alphanumeric characters and replace them with a special string containing a prefix and the character code. 
+\begin{DoxyParams}{引数}
+{\em p\+String} & String to be processed. The result of the conversion is also returned in this string. \\
+\hline
+{\em p\+First\+Char\+Must\+Be\+Alpha\+Only} & This flag tells whether the first char of the string must be alpha only. Its default value is {\ttfamily false}. \\
+\hline
+{\em p\+Permitted\+Chars} & List of non alphanumeric characters that do not require to be converted because already supported by the destination application. When encountered, these characters are simply skipped and left as is. \\
+\hline
+{\em p8bit\+Chars\+Only} & When {\ttfamily true}, this flag tells the routine that only 8 bit coded characters can be represented by the encoding format (see note below). If set to {\ttfamily false}, the range of supported character is increased and the memory usage may be less. But the routine will perform slower because of the internal conversions required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns {\ttfamily true} if at least one character in {\ttfamily p\+String} has been encoded. 
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+The encoding string depends on the value of {\ttfamily p8bit\+Chars\+Only} argument. When this parameter value is {\ttfamily true}, each non-\/alphanumeric character is replaced with F\+B\+X\+A\+SC\#\#\# (where \#\#\# is the decimal code of the character). Inversely, when the value is {\ttfamily false}, each non-\/alphanumeric characters is replaced with F\+B\+X\+C\+HR\#\#\#\#\# (where \subparagraph*{is the hexadecimal representation of the character code).}
+\end{DoxyNote}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxrenamingstrategyutilities_8h}{fbxrenamingstrategyutilities.\+h}\end{DoxyCompactItemize}

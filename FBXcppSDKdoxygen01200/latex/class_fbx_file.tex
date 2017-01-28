@@ -1,0 +1,470 @@
+\hypertarget{class_fbx_file}{}\section{Fbx\+File クラス}
+\label{class_fbx_file}\index{Fbx\+File@{Fbx\+File}}
+
+
+{\ttfamily \#include $<$fbxfile.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode} \{ \newline
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a176e2ccdd9e671698ea8f6f16e41d906}{e\+None}, 
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a7b582fd52d7c01e076ef4d30d3ca7151}{e\+Read\+Only}, 
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a6210f903e353d976f304563453cf34da}{e\+Read\+Write}, 
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462ae329198f644b68a3bbf655309eff07c9}{e\+Create\+Write\+Only}, 
+\newline
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49}{e\+Create\+Read\+Write}, 
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a7b54172ce9f59ecc1746a4b6df0a064e}{e\+Create\+Append}
+ \}
+\item 
+enum \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}{E\+Seek\+Pos} \{ \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e}{e\+Begin}, 
+\hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deecaf2653dc9849e794feee37a015d80b098}{e\+Current}, 
+\hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca1ab3eb84e8694fd4e63d0c864b12508d}{e\+End}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_file_a863a523033dcdf07ad32c257c64d9e61}{Fbx\+File} ()
+\item 
+virtual \hyperlink{class_fbx_file_a2dd86a0057e7caa4865a92508cc9b56d}{$\sim$\+Fbx\+File} ()
+\item 
+virtual bool \hyperlink{class_fbx_file_a1942c2245eabf7f0507118226af13727}{Open} (const char $\ast$p\+File\+Name\+\_\+\+U\+T\+F8, const \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode} p\+Mode=\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49}{e\+Create\+Read\+Write}, const bool p\+Binary=true)
+\item 
+virtual bool \hyperlink{class_fbx_file_a32456c88ed5a970971facea637ba96b1}{Open} (\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$p\+Stream, void $\ast$p\+Stream\+Data, const char $\ast$p\+Mode)
+\item 
+virtual bool \hyperlink{class_fbx_file_ae8028a6bb80f3ebe4f6fcbaab367228b}{Close} ()
+\item 
+virtual void \hyperlink{class_fbx_file_af12434c7b2bf0cd193d3327180186901}{Seek} (const \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} p\+Offset, const \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}{E\+Seek\+Pos} p\+Seek\+Pos=\hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e}{e\+Begin})
+\item 
+virtual \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} \hyperlink{class_fbx_file_aa32606ad8b5a8163f04c38b3020ec826}{Tell} () const
+\item 
+virtual size\+\_\+t \hyperlink{class_fbx_file_a9d2eb8ec7b9a877dd7aa9b2950287285}{Read} (void $\ast$p\+Dst\+Buf, const size\+\_\+t p\+Size)
+\item 
+virtual char $\ast$ \hyperlink{class_fbx_file_aad1b9e2c0f770ebfac6d00ebfc0927dd}{Read\+String} (char $\ast$p\+Dst\+Buf, const size\+\_\+t p\+Dst\+Size, bool p\+Stop\+At\+First\+White\+Space=false)
+\item 
+virtual size\+\_\+t \hyperlink{class_fbx_file_a8fff74d83402e939b69ac4c25a5bc689}{Write} (const void $\ast$p\+Src\+Buf, const size\+\_\+t p\+Size)
+\item 
+virtual bool \hyperlink{class_fbx_file_a64271cf33bdcd55d35502cd46ab910a5}{Write\+Format} (const char $\ast$p\+Format,...)
+\item 
+virtual bool \hyperlink{class_fbx_file_aa93638b789020857a19306175a921271}{Truncate} (const \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} p\+Size)
+\item 
+virtual bool \hyperlink{class_fbx_file_a3e438294b7e07dbc3b672ba771ebdd51}{End\+Of\+File} () const
+\item 
+virtual \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} \hyperlink{class_fbx_file_aa7d93faa5ec8ef431b6c9b82845e8271}{Get\+Size} ()
+\item 
+virtual void \hyperlink{class_fbx_file_ab603c8d30f989a0d195cc720181b18b3}{Get\+Memory\+File\+Info} (void $\ast$$\ast$p\+Mem\+Ptr, size\+\_\+t p\+Size)
+\item 
+bool \hyperlink{class_fbx_file_acf436397d99f8b7fb5baf5b32eac26b1}{Is\+Open} () const
+\item 
+bool \hyperlink{class_fbx_file_ae515a0ebd07a7ebedd0a62b5299cd417}{Is\+Stream} () const
+\item 
+const char $\ast$ \hyperlink{class_fbx_file_ace17e0fc453b1fa2f565af58eb16ad26}{Get\+File\+Path\+Name} () const
+\item 
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode} \hyperlink{class_fbx_file_a26175571d3f5682ea7af8ac5ba1f640f}{Get\+File\+Mode} () const
+\item 
+int \hyperlink{class_fbx_file_a797c6a169a44de27d96d991e884dafed}{Get\+Last\+Error} ()
+\item 
+void \hyperlink{class_fbx_file_abaf8e0ca1c1f47a349848ec49966cc6a}{Clear\+Error} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+F\+I\+LE $\ast$ \hyperlink{class_fbx_file_a2be552f90b28c49c17626fe52309694a}{m\+File\+Ptr}
+\item 
+\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$ \hyperlink{class_fbx_file_ad2c5d8c4cc9284b848f2283af005325f}{m\+Stream\+Ptr}
+\item 
+bool \hyperlink{class_fbx_file_a88370b753b3632ed4970357a2ec290d4}{m\+Is\+Open}
+\item 
+bool \hyperlink{class_fbx_file_ada5a1b024c0b9b67aede8605c4565013}{m\+Is\+Stream}
+\item 
+\hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode} \hyperlink{class_fbx_file_ad9b7111817531ba69e1abddc7cc6d247}{m\+Mode}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_file_a47455f1ec52460e17c7a687f2e873128}{m\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Class for interfacing with files, providing a similar interface for files independant of the OS or filesystem. 
+
+ fbxfile.\+h の 27 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}} 
+\index{Fbx\+File@{Fbx\+File}!E\+Mode@{E\+Mode}}
+\index{E\+Mode@{E\+Mode}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{E\+Mode}{EMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{Fbx\+File\+::\+E\+Mode}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a176e2ccdd9e671698ea8f6f16e41d906}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a176e2ccdd9e671698ea8f6f16e41d906}} 
+e\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Read\+Only@{e\+Read\+Only}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Read\+Only@{e\+Read\+Only}}}\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a7b582fd52d7c01e076ef4d30d3ca7151}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a7b582fd52d7c01e076ef4d30d3ca7151}} 
+e\+Read\+Only&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Read\+Write@{e\+Read\+Write}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Read\+Write@{e\+Read\+Write}}}\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a6210f903e353d976f304563453cf34da}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a6210f903e353d976f304563453cf34da}} 
+e\+Read\+Write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Create\+Write\+Only@{e\+Create\+Write\+Only}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Create\+Write\+Only@{e\+Create\+Write\+Only}}}\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462ae329198f644b68a3bbf655309eff07c9}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462ae329198f644b68a3bbf655309eff07c9}} 
+e\+Create\+Write\+Only&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Create\+Read\+Write@{e\+Create\+Read\+Write}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Create\+Read\+Write@{e\+Create\+Read\+Write}}}\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49}} 
+e\+Create\+Read\+Write&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Create\+Append@{e\+Create\+Append}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Create\+Append@{e\+Create\+Append}}}\mbox{\Hypertarget{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a7b54172ce9f59ecc1746a4b6df0a064e}\label{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462a7b54172ce9f59ecc1746a4b6df0a064e}} 
+e\+Create\+Append&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxfile.\+h の 30 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}\label{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}} 
+\index{Fbx\+File@{Fbx\+File}!E\+Seek\+Pos@{E\+Seek\+Pos}}
+\index{E\+Seek\+Pos@{E\+Seek\+Pos}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{E\+Seek\+Pos}{ESeekPos}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}{Fbx\+File\+::\+E\+Seek\+Pos}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Begin@{e\+Begin}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Begin@{e\+Begin}}}\mbox{\Hypertarget{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e}\label{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e}} 
+e\+Begin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Current@{e\+Current}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+Current@{e\+Current}}}\mbox{\Hypertarget{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deecaf2653dc9849e794feee37a015d80b098}\label{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deecaf2653dc9849e794feee37a015d80b098}} 
+e\+Current&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+End@{e\+End}!Fbx\+File@{Fbx\+File}}\index{Fbx\+File@{Fbx\+File}!e\+End@{e\+End}}}\mbox{\Hypertarget{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca1ab3eb84e8694fd4e63d0c864b12508d}\label{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca1ab3eb84e8694fd4e63d0c864b12508d}} 
+e\+End&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxfile.\+h の 31 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_file_a863a523033dcdf07ad32c257c64d9e61}\label{class_fbx_file_a863a523033dcdf07ad32c257c64d9e61}} 
+\index{Fbx\+File@{Fbx\+File}!Fbx\+File@{Fbx\+File}}
+\index{Fbx\+File@{Fbx\+File}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Fbx\+File()}{FbxFile()}}
+{\footnotesize\ttfamily Fbx\+File\+::\+Fbx\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_file_a2dd86a0057e7caa4865a92508cc9b56d}\label{class_fbx_file_a2dd86a0057e7caa4865a92508cc9b56d}} 
+\index{Fbx\+File@{Fbx\+File}!````~Fbx\+File@{$\sim$\+Fbx\+File}}
+\index{````~Fbx\+File@{$\sim$\+Fbx\+File}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+File()}{~FbxFile()}}
+{\footnotesize\ttfamily virtual Fbx\+File\+::$\sim$\+Fbx\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_file_abaf8e0ca1c1f47a349848ec49966cc6a}\label{class_fbx_file_abaf8e0ca1c1f47a349848ec49966cc6a}} 
+\index{Fbx\+File@{Fbx\+File}!Clear\+Error@{Clear\+Error}}
+\index{Clear\+Error@{Clear\+Error}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Clear\+Error()}{ClearError()}}
+{\footnotesize\ttfamily void Fbx\+File\+::\+Clear\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets the current error code and the end of file indicator of the opened file \mbox{\Hypertarget{class_fbx_file_ae8028a6bb80f3ebe4f6fcbaab367228b}\label{class_fbx_file_ae8028a6bb80f3ebe4f6fcbaab367228b}} 
+\index{Fbx\+File@{Fbx\+File}!Close@{Close}}
+\index{Close@{Close}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily virtual bool Fbx\+File\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Closes a file, freeing its handle. \begin{DoxyReturn}{戻り値}
+True if closing is successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a3e438294b7e07dbc3b672ba771ebdd51}\label{class_fbx_file_a3e438294b7e07dbc3b672ba771ebdd51}} 
+\index{Fbx\+File@{Fbx\+File}!End\+Of\+File@{End\+Of\+File}}
+\index{End\+Of\+File@{End\+Of\+File}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{End\+Of\+File()}{EndOfFile()}}
+{\footnotesize\ttfamily virtual bool Fbx\+File\+::\+End\+Of\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks whether the current file cursor position is at the end of file. \begin{DoxyReturn}{戻り値}
+True if the cursor is at the end of file, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a26175571d3f5682ea7af8ac5ba1f640f}\label{class_fbx_file_a26175571d3f5682ea7af8ac5ba1f640f}} 
+\index{Fbx\+File@{Fbx\+File}!Get\+File\+Mode@{Get\+File\+Mode}}
+\index{Get\+File\+Mode@{Get\+File\+Mode}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Get\+File\+Mode()}{GetFileMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode} Fbx\+File\+::\+Get\+File\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the mode with which the file was opened, when calling the \hyperlink{class_fbx_file_a1942c2245eabf7f0507118226af13727}{Open()} method. \begin{DoxyReturn}{戻り値}
+Mode with which the file was opened 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_ace17e0fc453b1fa2f565af58eb16ad26}\label{class_fbx_file_ace17e0fc453b1fa2f565af58eb16ad26}} 
+\index{Fbx\+File@{Fbx\+File}!Get\+File\+Path\+Name@{Get\+File\+Path\+Name}}
+\index{Get\+File\+Path\+Name@{Get\+File\+Path\+Name}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Get\+File\+Path\+Name()}{GetFilePathName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+File\+::\+Get\+File\+Path\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the full file path name, as provided when opening it. \begin{DoxyReturn}{戻り値}
+File full path 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a797c6a169a44de27d96d991e884dafed}\label{class_fbx_file_a797c6a169a44de27d96d991e884dafed}} 
+\index{Fbx\+File@{Fbx\+File}!Get\+Last\+Error@{Get\+Last\+Error}}
+\index{Get\+Last\+Error@{Get\+Last\+Error}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Get\+Last\+Error()}{GetLastError()}}
+{\footnotesize\ttfamily int Fbx\+File\+::\+Get\+Last\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns last encountered error when performing any operation on the file. \begin{DoxyReturn}{戻り値}
+Last error code 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_ab603c8d30f989a0d195cc720181b18b3}\label{class_fbx_file_ab603c8d30f989a0d195cc720181b18b3}} 
+\index{Fbx\+File@{Fbx\+File}!Get\+Memory\+File\+Info@{Get\+Memory\+File\+Info}}
+\index{Get\+Memory\+File\+Info@{Get\+Memory\+File\+Info}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Get\+Memory\+File\+Info()}{GetMemoryFileInfo()}}
+{\footnotesize\ttfamily virtual void Fbx\+File\+::\+Get\+Memory\+File\+Info (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Mem\+Ptr,  }\item[{size\+\_\+t}]{p\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Unused function in this default implementation. Must be implemented by memory files. 
+\begin{DoxyParams}{引数}
+{\em p\+Mem\+Ptr} & Unused \\
+\hline
+{\em p\+Size} & Unused \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_file_aa7d93faa5ec8ef431b6c9b82845e8271}\label{class_fbx_file_aa7d93faa5ec8ef431b6c9b82845e8271}} 
+\index{Fbx\+File@{Fbx\+File}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily virtual \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} Fbx\+File\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Gets the size of the currently opened file. \begin{DoxyReturn}{戻り値}
+File size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_acf436397d99f8b7fb5baf5b32eac26b1}\label{class_fbx_file_acf436397d99f8b7fb5baf5b32eac26b1}} 
+\index{Fbx\+File@{Fbx\+File}!Is\+Open@{Is\+Open}}
+\index{Is\+Open@{Is\+Open}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Is\+Open()}{IsOpen()}}
+{\footnotesize\ttfamily bool Fbx\+File\+::\+Is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks whether the file is currently opened. \begin{DoxyReturn}{戻り値}
+True if file is opened, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_ae515a0ebd07a7ebedd0a62b5299cd417}\label{class_fbx_file_ae515a0ebd07a7ebedd0a62b5299cd417}} 
+\index{Fbx\+File@{Fbx\+File}!Is\+Stream@{Is\+Stream}}
+\index{Is\+Stream@{Is\+Stream}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Is\+Stream()}{IsStream()}}
+{\footnotesize\ttfamily bool Fbx\+File\+::\+Is\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Checks whether the file is currently opened with a user-\/provided streaming interface instead of just the file name \begin{DoxyReturn}{戻り値}
+True if file has been opened with a stream interface, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a1942c2245eabf7f0507118226af13727}\label{class_fbx_file_a1942c2245eabf7f0507118226af13727}} 
+\index{Fbx\+File@{Fbx\+File}!Open@{Open}}
+\index{Open@{Open}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Open()}{Open()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+File\+::\+Open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name\+\_\+\+U\+T\+F8,  }\item[{const \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode}}]{p\+Mode = {\ttfamily \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462afce41267d2567926e7983b1193991a49}{e\+Create\+Read\+Write}},  }\item[{const bool}]{p\+Binary = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Opens a file on disk using the specified read/write mode. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name\+\_\+\+U\+T\+F8} & Filename in U\+T\+F8 (compatible with A\+S\+C\+II) \\
+\hline
+{\em p\+Mode} & Mode in which to open the file, e.\+g. e\+Read\+Only, e\+Create\+Read\+Write, etc. \\
+\hline
+{\em p\+Binary} & Whether the file is to be opened in binary or text mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if opening is successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a32456c88ed5a970971facea637ba96b1}\label{class_fbx_file_a32456c88ed5a970971facea637ba96b1}} 
+\index{Fbx\+File@{Fbx\+File}!Open@{Open}}
+\index{Open@{Open}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Open()}{Open()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+File\+::\+Open (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$}]{p\+Stream,  }\item[{void $\ast$}]{p\+Stream\+Data,  }\item[{const char $\ast$}]{p\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Opens a file from a data stream using the specified read/write mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & Stream instance with which the file will be read/written \\
+\hline
+{\em p\+Stream\+Data} & User-\/defined data to pass as a parameter to the stream\textquotesingle{}s \hyperlink{class_fbx_file_a1942c2245eabf7f0507118226af13727}{Open()} method. \\
+\hline
+{\em p\+Mode} & Deprecated/\+Unused. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if opening is successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a9d2eb8ec7b9a877dd7aa9b2950287285}\label{class_fbx_file_a9d2eb8ec7b9a877dd7aa9b2950287285}} 
+\index{Fbx\+File@{Fbx\+File}!Read@{Read}}
+\index{Read@{Read}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Fbx\+File\+::\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Dst\+Buf,  }\item[{const size\+\_\+t}]{p\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Read a part of the file into a buffer 
+\begin{DoxyParams}{引数}
+{\em p\+Dst\+Buf} & Pre-\/allocated buffer in which to read data \\
+\hline
+{\em p\+Size} & Size of the data chunk to be read in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Number of bytes read. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_aad1b9e2c0f770ebfac6d00ebfc0927dd}\label{class_fbx_file_aad1b9e2c0f770ebfac6d00ebfc0927dd}} 
+\index{Fbx\+File@{Fbx\+File}!Read\+String@{Read\+String}}
+\index{Read\+String@{Read\+String}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Read\+String()}{ReadString()}}
+{\footnotesize\ttfamily virtual char$\ast$ Fbx\+File\+::\+Read\+String (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Dst\+Buf,  }\item[{const size\+\_\+t}]{p\+Dst\+Size,  }\item[{bool}]{p\+Stop\+At\+First\+White\+Space = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Read a part of the file as a string into a buffer 
+\begin{DoxyParams}{引数}
+{\em p\+Dst\+Buf} & Pre-\/allocated buffer in which to read the string \\
+\hline
+{\em p\+Dst\+Size} & Size of the data chunk to be read in characters \\
+\hline
+{\em p\+Stop\+At\+First\+White\+Space} & If true, will stop reading at first white space, otherwise it will stop at the first line feed (~\newline
+) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer on the data read. Equivalent to parameter p\+Dst\+Buf 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_af12434c7b2bf0cd193d3327180186901}\label{class_fbx_file_af12434c7b2bf0cd193d3327180186901}} 
+\index{Fbx\+File@{Fbx\+File}!Seek@{Seek}}
+\index{Seek@{Seek}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily virtual void Fbx\+File\+::\+Seek (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64}}]{p\+Offset,  }\item[{const \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}{E\+Seek\+Pos}}]{p\+Seek\+Pos = {\ttfamily \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e}{e\+Begin}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Seek to a specific position in the file, starting from either beginning, current position or end 
+\begin{DoxyParams}{引数}
+{\em p\+Offset} & Offset to seek to (advance the file position cursor) starting from p\+Seek\+Pos \\
+\hline
+{\em p\+Seek\+Pos} & Starting position from which to seek to. Beginning, current position or end. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_file_aa32606ad8b5a8163f04c38b3020ec826}\label{class_fbx_file_aa32606ad8b5a8163f04c38b3020ec826}} 
+\index{Fbx\+File@{Fbx\+File}!Tell@{Tell}}
+\index{Tell@{Tell}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Tell()}{Tell()}}
+{\footnotesize\ttfamily virtual \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} Fbx\+File\+::\+Tell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the position at which the file cursor currently is. For example, will be ==0 for beginning and ==File\+Size for end. \begin{DoxyReturn}{戻り値}
+The position at which the file cursor currently is. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_aa93638b789020857a19306175a921271}\label{class_fbx_file_aa93638b789020857a19306175a921271}} 
+\index{Fbx\+File@{Fbx\+File}!Truncate@{Truncate}}
+\index{Truncate@{Truncate}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Truncate()}{Truncate()}}
+{\footnotesize\ttfamily virtual bool Fbx\+File\+::\+Truncate (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64}}]{p\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Modify the size of a file. Null characters (\textquotesingle{}\textbackslash{}0\textquotesingle{}) are appended if the file is extended. If the file is truncated, all data from the end of the shortened file to the original length of the file is lost. Please note that this function considers the current file cursor as the beginning of the file. It is therefore required to use Seek(0) prior to calling it if we want the size specified by the p\+Size parameter to be absolute. 
+\begin{DoxyParams}{引数}
+{\em p\+Size} & New desired file size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if file was successfully truncated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a8fff74d83402e939b69ac4c25a5bc689}\label{class_fbx_file_a8fff74d83402e939b69ac4c25a5bc689}} 
+\index{Fbx\+File@{Fbx\+File}!Write@{Write}}
+\index{Write@{Write}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Fbx\+File\+::\+Write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Src\+Buf,  }\item[{const size\+\_\+t}]{p\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write a buffer to an opened file 
+\begin{DoxyParams}{引数}
+{\em p\+Src\+Buf} & Pre-\/allocated buffer from which to write data \\
+\hline
+{\em p\+Size} & Size of the data chunk to be written in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Number of bytes written. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_file_a64271cf33bdcd55d35502cd46ab910a5}\label{class_fbx_file_a64271cf33bdcd55d35502cd46ab910a5}} 
+\index{Fbx\+File@{Fbx\+File}!Write\+Format@{Write\+Format}}
+\index{Write\+Format@{Write\+Format}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{Write\+Format()}{WriteFormat()}}
+{\footnotesize\ttfamily virtual bool Fbx\+File\+::\+Write\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Format,  }\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write a formatted string to an opened file 
+\begin{DoxyParams}{引数}
+{\em p\+Format} & Pre-\/allocated format buffer from which to write data \\
+\hline
+{\em ...} & Variable number of arguments describing the values in the previous parameter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if data was successfully written 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_file_a47455f1ec52460e17c7a687f2e873128}\label{class_fbx_file_a47455f1ec52460e17c7a687f2e873128}} 
+\index{Fbx\+File@{Fbx\+File}!m\+File\+Name@{m\+File\+Name}}
+\index{m\+File\+Name@{m\+File\+Name}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{m\+File\+Name}{mFileName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+File\+::m\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxfile.\+h の 158 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_file_a2be552f90b28c49c17626fe52309694a}\label{class_fbx_file_a2be552f90b28c49c17626fe52309694a}} 
+\index{Fbx\+File@{Fbx\+File}!m\+File\+Ptr@{m\+File\+Ptr}}
+\index{m\+File\+Ptr@{m\+File\+Ptr}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{m\+File\+Ptr}{mFilePtr}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Fbx\+File\+::m\+File\+Ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxfile.\+h の 153 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_file_a88370b753b3632ed4970357a2ec290d4}\label{class_fbx_file_a88370b753b3632ed4970357a2ec290d4}} 
+\index{Fbx\+File@{Fbx\+File}!m\+Is\+Open@{m\+Is\+Open}}
+\index{m\+Is\+Open@{m\+Is\+Open}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{m\+Is\+Open}{mIsOpen}}
+{\footnotesize\ttfamily bool Fbx\+File\+::m\+Is\+Open\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxfile.\+h の 155 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_file_ada5a1b024c0b9b67aede8605c4565013}\label{class_fbx_file_ada5a1b024c0b9b67aede8605c4565013}} 
+\index{Fbx\+File@{Fbx\+File}!m\+Is\+Stream@{m\+Is\+Stream}}
+\index{m\+Is\+Stream@{m\+Is\+Stream}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{m\+Is\+Stream}{mIsStream}}
+{\footnotesize\ttfamily bool Fbx\+File\+::m\+Is\+Stream\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxfile.\+h の 156 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_file_ad9b7111817531ba69e1abddc7cc6d247}\label{class_fbx_file_ad9b7111817531ba69e1abddc7cc6d247}} 
+\index{Fbx\+File@{Fbx\+File}!m\+Mode@{m\+Mode}}
+\index{m\+Mode@{m\+Mode}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{m\+Mode}{mMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_file_a0370e8fd17b3658f718e1350a6a6f462}{E\+Mode} Fbx\+File\+::m\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxfile.\+h の 157 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_file_ad2c5d8c4cc9284b848f2283af005325f}\label{class_fbx_file_ad2c5d8c4cc9284b848f2283af005325f}} 
+\index{Fbx\+File@{Fbx\+File}!m\+Stream\+Ptr@{m\+Stream\+Ptr}}
+\index{m\+Stream\+Ptr@{m\+Stream\+Ptr}!Fbx\+File@{Fbx\+File}}
+\subsubsection{\texorpdfstring{m\+Stream\+Ptr}{mStreamPtr}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_stream}{Fbx\+Stream}$\ast$ Fbx\+File\+::m\+Stream\+Ptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxfile.\+h の 154 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxfile_8h}{fbxfile.\+h}\end{DoxyCompactItemize}

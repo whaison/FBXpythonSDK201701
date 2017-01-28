@@ -1,0 +1,379 @@
+\hypertarget{class_fbx_character_link}{}\section{Fbx\+Character\+Link クラス}
+\label{class_fbx_character_link}\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+
+
+This class represents a link between a given F\+BX node and the associated node in the character hierarchy. It also contains the transform matrix (offset) for the linked character\textquotesingle{}s node.  
+
+
+
+
+{\ttfamily \#include $<$fbxcharacter.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdce}{E\+Type} \{ \hyperlink{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea3c6edcc191bd2ae7b38dd3dae622664e}{e\+Character\+Link}, 
+\hyperlink{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea7be82df8ca326a6f5c9b0ab941eac56a}{e\+Control\+Set\+Link}, 
+\hyperlink{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdceab6d996b0d5953868166ee20d85efd04e}{e\+Control\+Set\+Effector}, 
+\hyperlink{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea6c5f01876533ecb6dfd92b2bd6969666}{e\+Control\+Set\+Effector\+Aux}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_character_link_ab2f755a75b24f1e1ffbe21f61b4f718f}{Fbx\+Character\+Link} ()
+\item 
+\hyperlink{class_fbx_character_link_a8f9d5ca289fe6fc60e6d3648112f8dcc}{Fbx\+Character\+Link} (const \hyperlink{class_fbx_character_link}{Fbx\+Character\+Link} \&p\+Character\+Link)
+\item 
+\hyperlink{class_fbx_character_link}{Fbx\+Character\+Link} \& \hyperlink{class_fbx_character_link_ace29a4d8c4a64bd6325513e6348c2504}{operator=} (const \hyperlink{class_fbx_character_link}{Fbx\+Character\+Link} \&p\+Character\+Link)
+\item 
+void \hyperlink{class_fbx_character_link_a9d0e6c6b7fc03ccb93283d79f763403f}{Reset} ()
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_character_link_a1f8cdbd468b8bdb070ada229984c094e}{m\+Node}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_character_link_a57e20720f9a533670e5b003f9a3d05f2}{m\+Template\+Name}
+\begin{DoxyCompactList}\small\item\em The character\textquotesingle{}s node in hierarchy linked to this character link. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_character_link_a3baf29ae4a06587d77e8a8ac9fef225d}{m\+OffsetT}
+\begin{DoxyCompactList}\small\item\em A template name is a naming convention that is used to automatically map the nodes of other skeletons that use the same naming convention. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_character_link_aab8ab2a895523dce65a76ea68a732960}{m\+OffsetR}
+\begin{DoxyCompactList}\small\item\em Get offset position of this character link. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_character_link_acf71e4b7ea7b661ec5efa22a090e0a18}{m\+OffsetS}
+\begin{DoxyCompactList}\small\item\em Get offset rotation of this character link. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_character_link_a82c5bd03f0927e100bd8ee6315cd5db0}{m\+Parent\+R\+Offset}
+\begin{DoxyCompactList}\small\item\em Get offset scale of this character link. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_character_link_a013df32c72b266e1b0c23ed6e88d6723}{m\+Has\+Rot\+Space}
+\begin{DoxyCompactList}\small\item\em Get the parent offset rotation of this character link \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_limits}{Fbx\+Limits} \hyperlink{class_fbx_character_link_a54890e0bba0ad7aa9e345a5a907258d9}{m\+R\+Limits}
+\begin{DoxyCompactList}\small\item\em {\ttfamily true} if this character link has a defined rotation space \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_character_link_ad72d5286a98d4e83b71bb2c53885d6ce}{m\+Pre\+Rotation}
+\begin{DoxyCompactList}\small\item\em Get the rotation limits of this character link \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_character_link_a35c2a40e3cbf60ed88c23487c3c57526}{m\+Post\+Rotation}
+\begin{DoxyCompactList}\small\item\em Get the Pre\+Rotation of this character link \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_character_link_ae55332d252f95e91e842117a566f53d7}{m\+Rot\+Order}
+\begin{DoxyCompactList}\small\item\em Get the Post\+Rotation of this character link \end{DoxyCompactList}\item 
+double \hyperlink{class_fbx_character_link_a9d523e0ad398dcbab03548d725ed7d4e}{m\+Axis\+Len}
+\begin{DoxyCompactList}\small\item\em Get the rotation order of this character link \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_character_link_aa0e1f2f48f9da2baca38191023b55e10}{m\+Property\+Link}
+\begin{DoxyCompactList}\small\item\em Get the axis length of this character link \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_character_link_a18377611c261651720685a86ef9667c9}{m\+Property\+OffsetT}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_character_link_a9fb8ef5de919ec31a796862a4ed03887}{m\+Property\+OffsetR}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_character_link_a4e7c76fa3879a30381b75d331cc1e7fb}{m\+Property\+OffsetS}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_character_link_a535d899bd4df8b1c000bf3c54d1b7bb3}{m\+Property\+Parent\+OffsetR}
+\item 
+\hyperlink{class_fbx_property}{Fbx\+Property} \hyperlink{class_fbx_character_link_a342f087e28119642e18d2339a32eb17d}{m\+Property\+Template\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class represents a link between a given F\+BX node and the associated node in the character hierarchy. It also contains the transform matrix (offset) for the linked character\textquotesingle{}s node. 
+
+ fbxcharacter.\+h の 30 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdce}\label{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdce}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdce}{Fbx\+Character\+Link\+::\+E\+Type}}
+
+Character link type \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Character\+Link@{e\+Character\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!e\+Character\+Link@{e\+Character\+Link}}}\mbox{\Hypertarget{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea3c6edcc191bd2ae7b38dd3dae622664e}\label{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea3c6edcc191bd2ae7b38dd3dae622664e}} 
+e\+Character\+Link&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Control\+Set\+Link@{e\+Control\+Set\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!e\+Control\+Set\+Link@{e\+Control\+Set\+Link}}}\mbox{\Hypertarget{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea7be82df8ca326a6f5c9b0ab941eac56a}\label{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea7be82df8ca326a6f5c9b0ab941eac56a}} 
+e\+Control\+Set\+Link&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Control\+Set\+Effector@{e\+Control\+Set\+Effector}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!e\+Control\+Set\+Effector@{e\+Control\+Set\+Effector}}}\mbox{\Hypertarget{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdceab6d996b0d5953868166ee20d85efd04e}\label{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdceab6d996b0d5953868166ee20d85efd04e}} 
+e\+Control\+Set\+Effector&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Control\+Set\+Effector\+Aux@{e\+Control\+Set\+Effector\+Aux}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!e\+Control\+Set\+Effector\+Aux@{e\+Control\+Set\+Effector\+Aux}}}\mbox{\Hypertarget{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea6c5f01876533ecb6dfd92b2bd6969666}\label{class_fbx_character_link_ae90994844e941f231b6be3d59e21cdcea6c5f01876533ecb6dfd92b2bd6969666}} 
+e\+Control\+Set\+Effector\+Aux&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxcharacter.\+h の 34 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_character_link_ab2f755a75b24f1e1ffbe21f61b4f718f}\label{class_fbx_character_link_ab2f755a75b24f1e1ffbe21f61b4f718f}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{Fbx\+Character\+Link()}{FbxCharacterLink()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Character\+Link\+::\+Fbx\+Character\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default Constructor. \mbox{\Hypertarget{class_fbx_character_link_a8f9d5ca289fe6fc60e6d3648112f8dcc}\label{class_fbx_character_link_a8f9d5ca289fe6fc60e6d3648112f8dcc}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{Fbx\+Character\+Link()}{FbxCharacterLink()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Character\+Link\+::\+Fbx\+Character\+Link (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_character_link}{Fbx\+Character\+Link} \&}]{p\+Character\+Link }\end{DoxyParamCaption})}
+
+Copy Constructor. 
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_character_link_ace29a4d8c4a64bd6325513e6348c2504}\label{class_fbx_character_link_ace29a4d8c4a64bd6325513e6348c2504}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_character_link}{Fbx\+Character\+Link}\& Fbx\+Character\+Link\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_character_link}{Fbx\+Character\+Link} \&}]{p\+Character\+Link }\end{DoxyParamCaption})}
+
+Assignment operation 
+\begin{DoxyParams}{引数}
+{\em p\+Character\+Link} & Another \hyperlink{class_fbx_character_link}{Fbx\+Character\+Link} object assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_character_link_a9d0e6c6b7fc03ccb93283d79f763403f}\label{class_fbx_character_link_a9d0e6c6b7fc03ccb93283d79f763403f}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Character\+Link\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset to default values. 
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_character_link_a9d523e0ad398dcbab03548d725ed7d4e}\label{class_fbx_character_link_a9d523e0ad398dcbab03548d725ed7d4e}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Axis\+Len@{m\+Axis\+Len}}
+\index{m\+Axis\+Len@{m\+Axis\+Len}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Axis\+Len}{mAxisLen}}
+{\footnotesize\ttfamily double Fbx\+Character\+Link\+::m\+Axis\+Len}
+
+
+
+Get the rotation order of this character link 
+
+
+
+ fbxcharacter.\+h の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a013df32c72b266e1b0c23ed6e88d6723}\label{class_fbx_character_link_a013df32c72b266e1b0c23ed6e88d6723}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Has\+Rot\+Space@{m\+Has\+Rot\+Space}}
+\index{m\+Has\+Rot\+Space@{m\+Has\+Rot\+Space}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Has\+Rot\+Space}{mHasRotSpace}}
+{\footnotesize\ttfamily bool Fbx\+Character\+Link\+::m\+Has\+Rot\+Space}
+
+
+
+Get the parent offset rotation of this character link 
+
+
+
+ fbxcharacter.\+h の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a1f8cdbd468b8bdb070ada229984c094e}\label{class_fbx_character_link_a1f8cdbd468b8bdb070ada229984c094e}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Node@{m\+Node}}
+\index{m\+Node@{m\+Node}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Node}{mNode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Character\+Link\+::m\+Node}
+
+
+
+ fbxcharacter.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_aab8ab2a895523dce65a76ea68a732960}\label{class_fbx_character_link_aab8ab2a895523dce65a76ea68a732960}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+OffsetR@{m\+OffsetR}}
+\index{m\+OffsetR@{m\+OffsetR}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+OffsetR}{mOffsetR}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Character\+Link\+::m\+OffsetR}
+
+
+
+Get offset position of this character link. 
+
+
+
+ fbxcharacter.\+h の 59 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_acf71e4b7ea7b661ec5efa22a090e0a18}\label{class_fbx_character_link_acf71e4b7ea7b661ec5efa22a090e0a18}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+OffsetS@{m\+OffsetS}}
+\index{m\+OffsetS@{m\+OffsetS}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+OffsetS}{mOffsetS}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Character\+Link\+::m\+OffsetS}
+
+
+
+Get offset rotation of this character link. 
+
+
+
+ fbxcharacter.\+h の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a3baf29ae4a06587d77e8a8ac9fef225d}\label{class_fbx_character_link_a3baf29ae4a06587d77e8a8ac9fef225d}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+OffsetT@{m\+OffsetT}}
+\index{m\+OffsetT@{m\+OffsetT}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+OffsetT}{mOffsetT}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Character\+Link\+::m\+OffsetT}
+
+
+
+A template name is a naming convention that is used to automatically map the nodes of other skeletons that use the same naming convention. 
+
+
+
+ fbxcharacter.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a82c5bd03f0927e100bd8ee6315cd5db0}\label{class_fbx_character_link_a82c5bd03f0927e100bd8ee6315cd5db0}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Parent\+R\+Offset@{m\+Parent\+R\+Offset}}
+\index{m\+Parent\+R\+Offset@{m\+Parent\+R\+Offset}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Parent\+R\+Offset}{mParentROffset}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Character\+Link\+::m\+Parent\+R\+Offset}
+
+
+
+Get offset scale of this character link. 
+
+
+
+ fbxcharacter.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a35c2a40e3cbf60ed88c23487c3c57526}\label{class_fbx_character_link_a35c2a40e3cbf60ed88c23487c3c57526}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Post\+Rotation@{m\+Post\+Rotation}}
+\index{m\+Post\+Rotation@{m\+Post\+Rotation}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Post\+Rotation}{mPostRotation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Character\+Link\+::m\+Post\+Rotation}
+
+
+
+Get the Pre\+Rotation of this character link 
+
+
+
+ fbxcharacter.\+h の 65 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_ad72d5286a98d4e83b71bb2c53885d6ce}\label{class_fbx_character_link_ad72d5286a98d4e83b71bb2c53885d6ce}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Pre\+Rotation@{m\+Pre\+Rotation}}
+\index{m\+Pre\+Rotation@{m\+Pre\+Rotation}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Pre\+Rotation}{mPreRotation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Character\+Link\+::m\+Pre\+Rotation}
+
+
+
+Get the rotation limits of this character link 
+
+
+
+ fbxcharacter.\+h の 64 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_aa0e1f2f48f9da2baca38191023b55e10}\label{class_fbx_character_link_aa0e1f2f48f9da2baca38191023b55e10}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Property\+Link@{m\+Property\+Link}}
+\index{m\+Property\+Link@{m\+Property\+Link}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Property\+Link}{mPropertyLink}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Character\+Link\+::m\+Property\+Link}
+
+
+
+Get the axis length of this character link 
+
+
+
+ fbxcharacter.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a9fb8ef5de919ec31a796862a4ed03887}\label{class_fbx_character_link_a9fb8ef5de919ec31a796862a4ed03887}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Property\+OffsetR@{m\+Property\+OffsetR}}
+\index{m\+Property\+OffsetR@{m\+Property\+OffsetR}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Property\+OffsetR}{mPropertyOffsetR}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Character\+Link\+::m\+Property\+OffsetR}
+
+
+
+ fbxcharacter.\+h の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a4e7c76fa3879a30381b75d331cc1e7fb}\label{class_fbx_character_link_a4e7c76fa3879a30381b75d331cc1e7fb}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Property\+OffsetS@{m\+Property\+OffsetS}}
+\index{m\+Property\+OffsetS@{m\+Property\+OffsetS}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Property\+OffsetS}{mPropertyOffsetS}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Character\+Link\+::m\+Property\+OffsetS}
+
+
+
+ fbxcharacter.\+h の 76 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a18377611c261651720685a86ef9667c9}\label{class_fbx_character_link_a18377611c261651720685a86ef9667c9}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Property\+OffsetT@{m\+Property\+OffsetT}}
+\index{m\+Property\+OffsetT@{m\+Property\+OffsetT}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Property\+OffsetT}{mPropertyOffsetT}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Character\+Link\+::m\+Property\+OffsetT}
+
+
+
+ fbxcharacter.\+h の 74 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a535d899bd4df8b1c000bf3c54d1b7bb3}\label{class_fbx_character_link_a535d899bd4df8b1c000bf3c54d1b7bb3}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Property\+Parent\+OffsetR@{m\+Property\+Parent\+OffsetR}}
+\index{m\+Property\+Parent\+OffsetR@{m\+Property\+Parent\+OffsetR}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Property\+Parent\+OffsetR}{mPropertyParentOffsetR}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Character\+Link\+::m\+Property\+Parent\+OffsetR}
+
+
+
+ fbxcharacter.\+h の 77 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a342f087e28119642e18d2339a32eb17d}\label{class_fbx_character_link_a342f087e28119642e18d2339a32eb17d}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Property\+Template\+Name@{m\+Property\+Template\+Name}}
+\index{m\+Property\+Template\+Name@{m\+Property\+Template\+Name}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Property\+Template\+Name}{mPropertyTemplateName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property}{Fbx\+Property} Fbx\+Character\+Link\+::m\+Property\+Template\+Name}
+
+
+
+ fbxcharacter.\+h の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a54890e0bba0ad7aa9e345a5a907258d9}\label{class_fbx_character_link_a54890e0bba0ad7aa9e345a5a907258d9}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+R\+Limits@{m\+R\+Limits}}
+\index{m\+R\+Limits@{m\+R\+Limits}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+R\+Limits}{mRLimits}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_limits}{Fbx\+Limits} Fbx\+Character\+Link\+::m\+R\+Limits}
+
+
+
+{\ttfamily true} if this character link has a defined rotation space 
+
+
+
+ fbxcharacter.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_ae55332d252f95e91e842117a566f53d7}\label{class_fbx_character_link_ae55332d252f95e91e842117a566f53d7}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Rot\+Order@{m\+Rot\+Order}}
+\index{m\+Rot\+Order@{m\+Rot\+Order}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Rot\+Order}{mRotOrder}}
+{\footnotesize\ttfamily int Fbx\+Character\+Link\+::m\+Rot\+Order}
+
+
+
+Get the Post\+Rotation of this character link 
+
+
+
+ fbxcharacter.\+h の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_character_link_a57e20720f9a533670e5b003f9a3d05f2}\label{class_fbx_character_link_a57e20720f9a533670e5b003f9a3d05f2}} 
+\index{Fbx\+Character\+Link@{Fbx\+Character\+Link}!m\+Template\+Name@{m\+Template\+Name}}
+\index{m\+Template\+Name@{m\+Template\+Name}!Fbx\+Character\+Link@{Fbx\+Character\+Link}}
+\subsubsection{\texorpdfstring{m\+Template\+Name}{mTemplateName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Character\+Link\+::m\+Template\+Name}
+
+
+
+The character\textquotesingle{}s node in hierarchy linked to this character link. 
+
+
+
+ fbxcharacter.\+h の 57 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxcharacter_8h}{fbxcharacter.\+h}\end{DoxyCompactItemize}

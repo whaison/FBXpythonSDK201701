@@ -1,0 +1,137 @@
+\hypertarget{class_fbx_event}{}\section{Fbx\+Event$<$ T $>$ クラステンプレート}
+\label{class_fbx_event}\index{Fbx\+Event$<$ T $>$@{Fbx\+Event$<$ T $>$}}
+
+
+{\ttfamily \#include $<$fbxevent.\+h$>$}
+
+Fbx\+Event$<$ T $>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_event}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_event_a57f0d84cc53c4d29bcff0dceb091eed4}{$\sim$\+Fbx\+Event} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}{Get\+Type\+Id} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_fbx_event_a0e3fe581649a5917208561a03ad61295}{Force\+Type\+Id} (int p\+Type\+Id)
+\item 
+static int \hyperlink{class_fbx_event_a9f2329973ee8cb60860d004cc2823c70}{Get\+Static\+Type\+Id} ()
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename T$>$\newline
+class Fbx\+Event$<$ T $>$}
+
+F\+BX event class, derived from \hyperlink{class_fbx_event_base}{Fbx\+Event\+Base}, and it contains a type ID for event. It\textquotesingle{}s a template class. You can derive your own types of even. Such as\+: 
+\begin{DoxyCode}
+\textcolor{keyword}{class }FbxEventCustom : \textcolor{keyword}{public} \hyperlink{class_fbx_event}{FbxEvent}<FbxEventCustom> 
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_object_property_changed}{Fbx\+Object\+Property\+Changed} \hyperlink{class_fbx_event_referenced_document}{Fbx\+Event\+Referenced\+Document} \hyperlink{class_fbx_event_post_export}{Fbx\+Event\+Post\+Export} 
+
+\hyperlink{class_fbx_event_post_import}{Fbx\+Event\+Post\+Import} \hyperlink{class_fbx_event_pre_export}{Fbx\+Event\+Pre\+Export} \hyperlink{class_fbx_event_pre_import}{Fbx\+Event\+Pre\+Import} \hyperlink{class_fbx_event_populate_system_library}{Fbx\+Event\+Populate\+System\+Library}
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{注釈}
+A F\+BX event is something that is emitted by an emitter, with the goal of being filled by the listener that listen to it. An object(emitter) can emit a certain type of event, the plug-\/in(listener) who are listening to that type of event, will receive a signal and take action to process the event data. 
+\end{DoxyRemark}
+\begin{DoxyParagraph}{The whole process of event is\+:}
+\begin{DoxyItemize}
+\item 1. Create an emitter and a listener, then bind them together via the same event handler. \item 2. Emitter can emit an event at certain conditions. The event could be handled by event handler. \item 3. Once an event is emitted, the listener to this event will receive a signal. \item 4. And then the listener could process the event data according to the types of event, by calling event handler. \end{DoxyItemize}
+
+\end{DoxyParagraph}
+\begin{DoxyNote}{覚え書き}
+The event data is process by the callback function of event handler. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_event_base}{Fbx\+Event\+Base} \hyperlink{class_fbx_event_handler}{Fbx\+Event\+Handler} \hyperlink{class_fbx_listener}{Fbx\+Listener} \hyperlink{class_fbx_emitter}{Fbx\+Emitter} 
+\end{DoxySeeAlso}
+
+
+ fbxevent.\+h の 134 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_event_a57f0d84cc53c4d29bcff0dceb091eed4}\label{class_fbx_event_a57f0d84cc53c4d29bcff0dceb091eed4}} 
+\index{Fbx\+Event@{Fbx\+Event}!````~Fbx\+Event@{$\sim$\+Fbx\+Event}}
+\index{````~Fbx\+Event@{$\sim$\+Fbx\+Event}!Fbx\+Event@{Fbx\+Event}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Event()}{~FbxEvent()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual \hyperlink{class_fbx_event}{Fbx\+Event}$<$ T $>$\+::$\sim$\hyperlink{class_fbx_event}{Fbx\+Event} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+
+
+ fbxevent.\+h の 138 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_event_a0e3fe581649a5917208561a03ad61295}\label{class_fbx_event_a0e3fe581649a5917208561a03ad61295}} 
+\index{Fbx\+Event@{Fbx\+Event}!Force\+Type\+Id@{Force\+Type\+Id}}
+\index{Force\+Type\+Id@{Force\+Type\+Id}!Fbx\+Event@{Fbx\+Event}}
+\subsubsection{\texorpdfstring{Force\+Type\+Id()}{ForceTypeId()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static void \hyperlink{class_fbx_event}{Fbx\+Event}$<$ T $>$\+::Force\+Type\+Id (\begin{DoxyParamCaption}\item[{int}]{p\+Type\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Update the type ID of current event with the given type ID. 
+\begin{DoxyParams}{引数}
+{\em p\+Type\+Id} & the new type ID. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxevent.\+h の 143 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_event_a9f2329973ee8cb60860d004cc2823c70}\label{class_fbx_event_a9f2329973ee8cb60860d004cc2823c70}} 
+\index{Fbx\+Event@{Fbx\+Event}!Get\+Static\+Type\+Id@{Get\+Static\+Type\+Id}}
+\index{Get\+Static\+Type\+Id@{Get\+Static\+Type\+Id}!Fbx\+Event@{Fbx\+Event}}
+\subsubsection{\texorpdfstring{Get\+Static\+Type\+Id()}{GetStaticTypeId()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+static int \hyperlink{class_fbx_event}{Fbx\+Event}$<$ T $>$\+::Get\+Static\+Type\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Retrieve the event type ID \begin{DoxyReturn}{戻り値}
+type id 
+\end{DoxyReturn}
+
+
+ fbxevent.\+h の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}\label{class_fbx_event_a96ae7ea5ee46f040f6493f6acecd5bba}} 
+\index{Fbx\+Event@{Fbx\+Event}!Get\+Type\+Id@{Get\+Type\+Id}}
+\index{Get\+Type\+Id@{Get\+Type\+Id}!Fbx\+Event@{Fbx\+Event}}
+\subsubsection{\texorpdfstring{Get\+Type\+Id()}{GetTypeId()}}
+{\footnotesize\ttfamily template$<$typename T$>$ \\
+virtual int \hyperlink{class_fbx_event}{Fbx\+Event}$<$ T $>$\+::Get\+Type\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Retrieve the event type ID \begin{DoxyNote}{覚え書き}
+This may be called from multiple threads. 
+\end{DoxyNote}
+\begin{DoxyReturn}{戻り値}
+type id 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_event_base_ac7a558ec38bc899bd705786620582b8b}{Fbx\+Event\+Base}を実装しています。
+
+
+
+ fbxevent.\+h の 155 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxevent_8h}{fbxevent.\+h}\end{DoxyCompactItemize}

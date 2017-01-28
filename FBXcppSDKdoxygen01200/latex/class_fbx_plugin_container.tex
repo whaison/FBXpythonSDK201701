@@ -1,0 +1,136 @@
+\hypertarget{class_fbx_plugin_container}{}\section{Fbx\+Plugin\+Container クラス}
+\label{class_fbx_plugin_container}\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+
+
+{\ttfamily \#include $<$fbxplugincontainer.\+h$>$}
+
+Fbx\+Plugin\+Container の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_plugin_container}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_intrusive_list}{Fbx\+Intrusive\+List}$<$ \hyperlink{class_fbx_plugin}{Fbx\+Plugin} $>$ \hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List}
+\begin{DoxyCompactList}\small\item\em Definition of a plug-\/in list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_plugin_container_a3fc28ffe0296973afb3014112b4b0df0}{Register} (\hyperlink{class_fbx_plugin}{Fbx\+Plugin} \&p\+Plugin)
+\item 
+void \hyperlink{class_fbx_plugin_container_af4b2068d41d0e87e97135e9effea55f7}{Unregister} (\hyperlink{class_fbx_plugin}{Fbx\+Plugin} \&p\+Plugin)
+\item 
+const \hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List} \& \hyperlink{class_fbx_plugin_container_a5fb043debeddd64f7e0f6c34b882b3a9}{Get\+Plugins} () const
+\item 
+\hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List} \& \hyperlink{class_fbx_plugin_container_a7afab0ebbb775ef23ea541bec3adc301}{Get\+Plugins} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_plugin_container_a8c4030ad7c08c7fdab1b34b7d37ed88e}{$\sim$\+Fbx\+Plugin\+Container} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List} \hyperlink{class_fbx_plugin_container_a89a3739ecdf85a1eaeb72ad8bd8a0587}{m\+Plugins}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Manages registration and ownership of F\+BX S\+DK plug-\/ins (\hyperlink{class_fbx_plugin}{Fbx\+Plugin}). The F\+BX S\+DK will provide a pointer to \hyperlink{class_fbx_plugin_container}{Fbx\+Plugin\+Container} as an argument to the F\+B\+X\+Plugin\+Registration() function exported from a plug-\/in\textquotesingle{}s D\+LL. A plug-\/in must register itself explicitly with the \hyperlink{class_fbx_plugin_container}{Fbx\+Plugin\+Container} by calling \hyperlink{class_fbx_plugin_container_a3fc28ffe0296973afb3014112b4b0df0}{Fbx\+Plugin\+Container\+::\+Register()} after it is constructed. For an example of this process see the code example in the \hyperlink{class_fbx_plugin}{Fbx\+Plugin} class documentation. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_plugin}{Fbx\+Plugin} 
+\end{DoxySeeAlso}
+
+
+ fbxplugincontainer.\+h の 34 行目に定義があります。
+
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}\label{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!Plugin\+List@{Plugin\+List}}
+\index{Plugin\+List@{Plugin\+List}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{Plugin\+List}{PluginList}}
+{\footnotesize\ttfamily typedef \hyperlink{class_fbx_intrusive_list}{Fbx\+Intrusive\+List}$<$\hyperlink{class_fbx_plugin}{Fbx\+Plugin}$>$ \hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Fbx\+Plugin\+Container\+::\+Plugin\+List}}
+
+
+
+Definition of a plug-\/in list. 
+
+
+
+ fbxplugincontainer.\+h の 38 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_plugin_container_a8c4030ad7c08c7fdab1b34b7d37ed88e}\label{class_fbx_plugin_container_a8c4030ad7c08c7fdab1b34b7d37ed88e}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!````~Fbx\+Plugin\+Container@{$\sim$\+Fbx\+Plugin\+Container}}
+\index{````~Fbx\+Plugin\+Container@{$\sim$\+Fbx\+Plugin\+Container}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Plugin\+Container()}{~FbxPluginContainer()}}
+{\footnotesize\ttfamily virtual Fbx\+Plugin\+Container\+::$\sim$\+Fbx\+Plugin\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_plugin_container_a5fb043debeddd64f7e0f6c34b882b3a9}\label{class_fbx_plugin_container_a5fb043debeddd64f7e0f6c34b882b3a9}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!Get\+Plugins@{Get\+Plugins}}
+\index{Get\+Plugins@{Get\+Plugins}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{Get\+Plugins()}{GetPlugins()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List}\& Fbx\+Plugin\+Container\+::\+Get\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Const accessor to the list of plug-\/ins owned by the container. \begin{DoxyReturn}{戻り値}
+A list of plug-\/in registered to this container. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_plugin_container_a7afab0ebbb775ef23ea541bec3adc301}\label{class_fbx_plugin_container_a7afab0ebbb775ef23ea541bec3adc301}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!Get\+Plugins@{Get\+Plugins}}
+\index{Get\+Plugins@{Get\+Plugins}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{Get\+Plugins()}{GetPlugins()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List}\& Fbx\+Plugin\+Container\+::\+Get\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Accessor to the list of plug-\/ins owned by the container. \begin{DoxyReturn}{戻り値}
+A list of plug-\/in registered to this container. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_plugin_container_a3fc28ffe0296973afb3014112b4b0df0}\label{class_fbx_plugin_container_a3fc28ffe0296973afb3014112b4b0df0}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!Register@{Register}}
+\index{Register@{Register}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily void Fbx\+Plugin\+Container\+::\+Register (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_plugin}{Fbx\+Plugin} \&}]{p\+Plugin }\end{DoxyParamCaption})}
+
+The registration function that must be called when the module containing the plug-\/in is loaded. 
+\begin{DoxyParams}{引数}
+{\em p\+Plugin} & The plug-\/in to register. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_plugin_container_af4b2068d41d0e87e97135e9effea55f7}\label{class_fbx_plugin_container_af4b2068d41d0e87e97135e9effea55f7}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!Unregister@{Unregister}}
+\index{Unregister@{Unregister}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{Unregister()}{Unregister()}}
+{\footnotesize\ttfamily void Fbx\+Plugin\+Container\+::\+Unregister (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_plugin}{Fbx\+Plugin} \&}]{p\+Plugin }\end{DoxyParamCaption})}
+
+The unregistration function that must be called when the module containing the plug-\/in is unloaded. 
+\begin{DoxyParams}{引数}
+{\em p\+Plugin} & The plug-\/in to unregister. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_plugin_container_a89a3739ecdf85a1eaeb72ad8bd8a0587}\label{class_fbx_plugin_container_a89a3739ecdf85a1eaeb72ad8bd8a0587}} 
+\index{Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}!m\+Plugins@{m\+Plugins}}
+\index{m\+Plugins@{m\+Plugins}!Fbx\+Plugin\+Container@{Fbx\+Plugin\+Container}}
+\subsubsection{\texorpdfstring{m\+Plugins}{mPlugins}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_plugin_container_a42abd8471efa91f56de2c4c64c220972}{Plugin\+List} Fbx\+Plugin\+Container\+::m\+Plugins\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxplugincontainer.\+h の 66 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxplugincontainer_8h}{fbxplugincontainer.\+h}\end{DoxyCompactItemize}

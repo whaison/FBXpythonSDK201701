@@ -1,0 +1,497 @@
+\hypertarget{class_fbx_skeleton}{}\section{Fbx\+Skeleton クラス}
+\label{class_fbx_skeleton}\index{Fbx\+Skeleton@{Fbx\+Skeleton}}
+
+
+{\ttfamily \#include $<$fbxskeleton.\+h$>$}
+
+Fbx\+Skeleton の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_skeleton}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_skeleton_a3ff6cd0cae408860585d954b7249a4d9}{Get\+Attribute\+Type} () const
+\begin{DoxyCompactList}\small\item\em Return the type of node attribute (i.\+e\+: Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Skeleton). \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_skeleton_a622069fcb67d773d755e96b321df1094}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the skeleton to default values and type to {\ttfamily e\+Root}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Skeleton Properties}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} \{ \hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6badba2b7b1d083860ecf47c6a8452650db}{e\+Root}, 
+\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6baa70a0ce093f640d2408f48d6f9fbb3c8}{e\+Limb}, 
+\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6ba7b14ed4192bd34fd66f6b435df95ed0c}{e\+Limb\+Node}, 
+\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6ba5434375572a5528813528d553ffb758b}{e\+Effector}
+ \}
+\item 
+void \hyperlink{class_fbx_skeleton_af74812971091ce9ece00a145d6f35d48}{Set\+Skeleton\+Type} (\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} p\+Skeleton\+Type)
+\item 
+\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} \hyperlink{class_fbx_skeleton_ae3c3a66d78d51d4decf90df544b63cf9}{Get\+Skeleton\+Type} () const
+\item 
+bool \hyperlink{class_fbx_skeleton_a50697039232e872c5c2a7beb281d55e6}{Get\+Skeleton\+Type\+Is\+Set} () const
+\item 
+\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} \hyperlink{class_fbx_skeleton_a1bff92888a3546492bf12c00b9b43e6e}{Get\+Skeleton\+Type\+Default\+Value} () const
+\item 
+double \hyperlink{class_fbx_skeleton_ab8ee3f4396ea5cc10988bdc4bb11a993}{Get\+Limb\+Length\+Default\+Value} () const
+\item 
+double \hyperlink{class_fbx_skeleton_abd7f96a297890ce535821905386b53c9}{Get\+Limb\+Node\+Size\+Default\+Value} () const
+\item 
+bool \hyperlink{class_fbx_skeleton_a19297c7b85e06e47c34e2a97964d7de8}{Set\+Limb\+Node\+Color} (const \hyperlink{class_fbx_color}{Fbx\+Color} \&p\+Color)
+\item 
+\hyperlink{class_fbx_color}{Fbx\+Color} \hyperlink{class_fbx_skeleton_a5f3f54bac15d4a4fd51dcb53d987fbf9}{Get\+Limb\+Node\+Color} () const
+\item 
+bool \hyperlink{class_fbx_skeleton_aebddf26b8d688674a4122c7853419b62}{Get\+Limb\+Node\+Color\+Is\+Set} () const
+\item 
+\hyperlink{class_fbx_color}{Fbx\+Color} \hyperlink{class_fbx_skeleton_a3d19bee1e36bc2d7285751c3cf62e9b7}{Get\+Limb\+Node\+Color\+Default\+Value} () const
+\item 
+bool \hyperlink{class_fbx_skeleton_add6b0c308a1a815d0354066420a4bb17}{Is\+Skeleton\+Root} () const
+\end{DoxyCompactItemize}
+\subsection*{Property Names}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_skeleton_a311e444376931fb3c3b0ce1b7444eddb}{s\+Size}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_skeleton_ac243ade080949dfcaa564d95e2f4aa6b}{s\+Limb\+Length}
+\end{DoxyCompactItemize}
+\subsection*{Property Default Values}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} \hyperlink{class_fbx_skeleton_aabac60f53d2b665f37ac74e7ac9a402a}{s\+Default\+Size}
+\item 
+static const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} \hyperlink{class_fbx_skeleton_a61aa3623c65047b3e7e66a173711b1ef}{s\+Default\+Limb\+Length}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_skeleton_aecaa95bc659ea1804ec5885d9116c1c6}{Size}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} $>$ \hyperlink{class_fbx_skeleton_ac86811d94d673bbc1558eca1066311a2}{Limb\+Length}
+\item 
+\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} \hyperlink{class_fbx_skeleton_a8c5424b8334b260fc668a42df4cb8558}{m\+Skeleton\+Type}
+\item 
+bool \hyperlink{class_fbx_skeleton_a59c001b86207731c5c26ca38ec1e78f6}{m\+Limb\+Length\+Is\+Set}
+\item 
+bool \hyperlink{class_fbx_skeleton_a1e0cfb9088fa334ff5c97b92a5d510dd}{m\+Limb\+Node\+Size\+Is\+Set}
+\item 
+bool \hyperlink{class_fbx_skeleton_a9efa86b9d964e60e8a9ed67a4851fc9f}{m\+Limb\+Node\+Color\+Is\+Set}
+\item 
+bool \hyperlink{class_fbx_skeleton_a0db3601d505f1e70eb64dbbfa881a91a}{m\+Skeleton\+Type\+Is\+Set}
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_skeleton_a86ed7d693e2f77267a7e07c0db5023d7}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual void \hyperlink{class_fbx_skeleton_a76c2cdc12c50e753bf2510aa9c18c594}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_skeleton_aa1e8d4dbe577415b4e00914ae75d46a0}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+void \hyperlink{class_fbx_skeleton_a1ffc5d46440a35d2ddfa75f20918c1b4}{Reset} (bool p\+Reset\+Properties)
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_skeleton_a95bceb7989084e51a450525b4f57698b}{Get\+Type\+Name} () const
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_skeleton_a8407f2dbece8af886d80b5a024626d54}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class specializes a node attribute to represent the elements forming \char`\"{}bone\char`\"{} chains. The \hyperlink{class_fbx_skeleton}{Fbx\+Skeleton} name of the class comes from the analogy with the human body skeletal structure. In fact, an object of this type is nothing more than a transform node with special properties that are useful for its graphical representation and during I\+K/\+FK and skin deformation computations. Typically, a scene will contain chains of \hyperlink{class_fbx_skeleton}{Fbx\+Skeleton} node attributes that, together, form a skeleton segment. For instance, the representation of the leg of a character can be achieved using one parent node with the attribute e\+Root, followed by one child (femur) of type e\+Limb, this child having a child also (tibia) of the same type. Finally, terminated with a last node attribute of type e\+Effector (ankle). 
+
+ fbxskeleton.\+h の 34 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}\label{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{Fbx\+Skeleton\+::\+E\+Type}}
+
+Skeleton types. \begin{DoxyRemark}{注釈}
+{\itshape e\+Effector} is synonymous to {\itshape e\+Root}. 
+
+The {\itshape e\+Limb\+Node} type is a bone defined uniquely by a transform and a size value while 
+
+the {\itshape e\+Limb} type is a bone defined by a transform and a length. 
+\end{DoxyRemark}
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Root@{e\+Root}!Fbx\+Skeleton@{Fbx\+Skeleton}}\index{Fbx\+Skeleton@{Fbx\+Skeleton}!e\+Root@{e\+Root}}}\mbox{\Hypertarget{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6badba2b7b1d083860ecf47c6a8452650db}\label{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6badba2b7b1d083860ecf47c6a8452650db}} 
+e\+Root&First element of a chain. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Limb@{e\+Limb}!Fbx\+Skeleton@{Fbx\+Skeleton}}\index{Fbx\+Skeleton@{Fbx\+Skeleton}!e\+Limb@{e\+Limb}}}\mbox{\Hypertarget{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6baa70a0ce093f640d2408f48d6f9fbb3c8}\label{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6baa70a0ce093f640d2408f48d6f9fbb3c8}} 
+e\+Limb&Chain element. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Limb\+Node@{e\+Limb\+Node}!Fbx\+Skeleton@{Fbx\+Skeleton}}\index{Fbx\+Skeleton@{Fbx\+Skeleton}!e\+Limb\+Node@{e\+Limb\+Node}}}\mbox{\Hypertarget{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6ba7b14ed4192bd34fd66f6b435df95ed0c}\label{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6ba7b14ed4192bd34fd66f6b435df95ed0c}} 
+e\+Limb\+Node&Chain element. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Effector@{e\+Effector}!Fbx\+Skeleton@{Fbx\+Skeleton}}\index{Fbx\+Skeleton@{Fbx\+Skeleton}!e\+Effector@{e\+Effector}}}\mbox{\Hypertarget{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6ba5434375572a5528813528d553ffb758b}\label{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6ba5434375572a5528813528d553ffb758b}} 
+e\+Effector&Last element of a chain. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxskeleton.\+h の 55 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_skeleton_a76c2cdc12c50e753bf2510aa9c18c594}\label{class_fbx_skeleton_a76c2cdc12c50e753bf2510aa9c18c594}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Skeleton\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skeleton_aa1e8d4dbe577415b4e00914ae75d46a0}\label{class_fbx_skeleton_aa1e8d4dbe577415b4e00914ae75d46a0}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Skeleton\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}{Fbx\+Node\+Attribute}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a86ed7d693e2f77267a7e07c0db5023d7}\label{class_fbx_skeleton_a86ed7d693e2f77267a7e07c0db5023d7}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Skeleton\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a3ff6cd0cae408860585d954b7249a4d9}\label{class_fbx_skeleton_a3ff6cd0cae408860585d954b7249a4d9}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Skeleton\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return the type of node attribute (i.\+e\+: Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Skeleton). 
+
+
+
+\hyperlink{class_fbx_node_attribute_a1c2116756906127145a2b8721fc26752}{Fbx\+Node\+Attribute}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skeleton_ab8ee3f4396ea5cc10988bdc4bb11a993}\label{class_fbx_skeleton_ab8ee3f4396ea5cc10988bdc4bb11a993}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Limb\+Length\+Default\+Value@{Get\+Limb\+Length\+Default\+Value}}
+\index{Get\+Limb\+Length\+Default\+Value@{Get\+Limb\+Length\+Default\+Value}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Limb\+Length\+Default\+Value()}{GetLimbLengthDefaultValue()}}
+{\footnotesize\ttfamily double Fbx\+Skeleton\+::\+Get\+Limb\+Length\+Default\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the default value for the limb length. \begin{DoxyReturn}{戻り値}
+1.\+0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skeleton_a5f3f54bac15d4a4fd51dcb53d987fbf9}\label{class_fbx_skeleton_a5f3f54bac15d4a4fd51dcb53d987fbf9}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Limb\+Node\+Color@{Get\+Limb\+Node\+Color}}
+\index{Get\+Limb\+Node\+Color@{Get\+Limb\+Node\+Color}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Limb\+Node\+Color()}{GetLimbNodeColor()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_color}{Fbx\+Color} Fbx\+Skeleton\+::\+Get\+Limb\+Node\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get limb or limb node color. \begin{DoxyReturn}{戻り値}
+Currently set limb color. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Limb or limb node color is only valid if skeleton type is {\ttfamily e\+Limb} or {\ttfamily e\+Limb\+Node}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_skeleton_a3d19bee1e36bc2d7285751c3cf62e9b7}\label{class_fbx_skeleton_a3d19bee1e36bc2d7285751c3cf62e9b7}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Limb\+Node\+Color\+Default\+Value@{Get\+Limb\+Node\+Color\+Default\+Value}}
+\index{Get\+Limb\+Node\+Color\+Default\+Value@{Get\+Limb\+Node\+Color\+Default\+Value}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Limb\+Node\+Color\+Default\+Value()}{GetLimbNodeColorDefaultValue()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_color}{Fbx\+Color} Fbx\+Skeleton\+::\+Get\+Limb\+Node\+Color\+Default\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the default value for the limb node color. \begin{DoxyReturn}{戻り値}
+R=0.\+8, G=0.\+8, B=0.\+8 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skeleton_aebddf26b8d688674a4122c7853419b62}\label{class_fbx_skeleton_aebddf26b8d688674a4122c7853419b62}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Limb\+Node\+Color\+Is\+Set@{Get\+Limb\+Node\+Color\+Is\+Set}}
+\index{Get\+Limb\+Node\+Color\+Is\+Set@{Get\+Limb\+Node\+Color\+Is\+Set}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Limb\+Node\+Color\+Is\+Set()}{GetLimbNodeColorIsSet()}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::\+Get\+Limb\+Node\+Color\+Is\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get a flag to know if the limb node color was set. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if a call to \hyperlink{class_fbx_skeleton_a19297c7b85e06e47c34e2a97964d7de8}{Set\+Limb\+Node\+Color()} has been made. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When the attribute is not set, the application can choose to ignore the attribute or use the default value. 
+
+The flag is set back to {\ttfamily false} when \hyperlink{class_fbx_skeleton_a622069fcb67d773d755e96b321df1094}{Reset()} is called. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_skeleton_abd7f96a297890ce535821905386b53c9}\label{class_fbx_skeleton_abd7f96a297890ce535821905386b53c9}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Limb\+Node\+Size\+Default\+Value@{Get\+Limb\+Node\+Size\+Default\+Value}}
+\index{Get\+Limb\+Node\+Size\+Default\+Value@{Get\+Limb\+Node\+Size\+Default\+Value}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Limb\+Node\+Size\+Default\+Value()}{GetLimbNodeSizeDefaultValue()}}
+{\footnotesize\ttfamily double Fbx\+Skeleton\+::\+Get\+Limb\+Node\+Size\+Default\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the default value for the limb node size. \begin{DoxyReturn}{戻り値}
+100.\+0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skeleton_ae3c3a66d78d51d4decf90df544b63cf9}\label{class_fbx_skeleton_ae3c3a66d78d51d4decf90df544b63cf9}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Skeleton\+Type@{Get\+Skeleton\+Type}}
+\index{Get\+Skeleton\+Type@{Get\+Skeleton\+Type}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Skeleton\+Type()}{GetSkeletonType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} Fbx\+Skeleton\+::\+Get\+Skeleton\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the skeleton type. \begin{DoxyReturn}{戻り値}
+Skeleton type identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skeleton_a1bff92888a3546492bf12c00b9b43e6e}\label{class_fbx_skeleton_a1bff92888a3546492bf12c00b9b43e6e}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Skeleton\+Type\+Default\+Value@{Get\+Skeleton\+Type\+Default\+Value}}
+\index{Get\+Skeleton\+Type\+Default\+Value@{Get\+Skeleton\+Type\+Default\+Value}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Skeleton\+Type\+Default\+Value()}{GetSkeletonTypeDefaultValue()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} Fbx\+Skeleton\+::\+Get\+Skeleton\+Type\+Default\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the default value for the skeleton type. \begin{DoxyReturn}{戻り値}
+{\ttfamily e\+Root} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skeleton_a50697039232e872c5c2a7beb281d55e6}\label{class_fbx_skeleton_a50697039232e872c5c2a7beb281d55e6}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Skeleton\+Type\+Is\+Set@{Get\+Skeleton\+Type\+Is\+Set}}
+\index{Get\+Skeleton\+Type\+Is\+Set@{Get\+Skeleton\+Type\+Is\+Set}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Skeleton\+Type\+Is\+Set()}{GetSkeletonTypeIsSet()}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::\+Get\+Skeleton\+Type\+Is\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get a flag to know if the skeleton type was set. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if a call to \hyperlink{class_fbx_skeleton_af74812971091ce9ece00a145d6f35d48}{Set\+Skeleton\+Type()} has been made. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When the attribute is not set, the application can choose to ignore the attribute or use the default value. 
+
+The flag is set back to {\ttfamily false} when \hyperlink{class_fbx_skeleton_a622069fcb67d773d755e96b321df1094}{Reset()} is called. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_skeleton_a8407f2dbece8af886d80b5a024626d54}\label{class_fbx_skeleton_a8407f2dbece8af886d80b5a024626d54}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Skeleton\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a6d30a5d00400039a248977cf9f9255b2}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a95bceb7989084e51a450525b4f57698b}\label{class_fbx_skeleton_a95bceb7989084e51a450525b4f57698b}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Get\+Type\+Name@{Get\+Type\+Name}}
+\index{Get\+Type\+Name@{Get\+Type\+Name}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Get\+Type\+Name()}{GetTypeName()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Skeleton\+::\+Get\+Type\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_object_a817dcfa8f7f7e2437324e1e71377c4b2}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skeleton_add6b0c308a1a815d0354066420a4bb17}\label{class_fbx_skeleton_add6b0c308a1a815d0354066420a4bb17}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Is\+Skeleton\+Root@{Is\+Skeleton\+Root}}
+\index{Is\+Skeleton\+Root@{Is\+Skeleton\+Root}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Is\+Skeleton\+Root()}{IsSkeletonRoot()}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::\+Is\+Skeleton\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+To see if this skeleton is Root. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if this is root of the skeleton, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+if a skeleton node do not have a parent or its parent is not a skeleton node itself, then this skeleton is root in the hierarchy. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_skeleton_a622069fcb67d773d755e96b321df1094}\label{class_fbx_skeleton_a622069fcb67d773d755e96b321df1094}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Skeleton\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reset the skeleton to default values and type to {\ttfamily e\+Root}. 
+
+\mbox{\Hypertarget{class_fbx_skeleton_a1ffc5d46440a35d2ddfa75f20918c1b4}\label{class_fbx_skeleton_a1ffc5d46440a35d2ddfa75f20918c1b4}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Skeleton\+::\+Reset (\begin{DoxyParamCaption}\item[{bool}]{p\+Reset\+Properties }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_skeleton_a19297c7b85e06e47c34e2a97964d7de8}\label{class_fbx_skeleton_a19297c7b85e06e47c34e2a97964d7de8}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Set\+Limb\+Node\+Color@{Set\+Limb\+Node\+Color}}
+\index{Set\+Limb\+Node\+Color@{Set\+Limb\+Node\+Color}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Set\+Limb\+Node\+Color()}{SetLimbNodeColor()}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::\+Set\+Limb\+Node\+Color (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_color}{Fbx\+Color} \&}]{p\+Color }\end{DoxyParamCaption})}
+
+Set limb or limb node color. 
+\begin{DoxyParams}{引数}
+{\em p\+Color} & R\+GB values for the limb color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if skeleton type is {\ttfamily e\+Limb} or {\ttfamily e\+Limb\+Node}, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Limb or limb node color is only set if skeleton type is {\ttfamily e\+Limb} or {\ttfamily e\+Limb\+Node}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_skeleton_af74812971091ce9ece00a145d6f35d48}\label{class_fbx_skeleton_af74812971091ce9ece00a145d6f35d48}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Set\+Skeleton\+Type@{Set\+Skeleton\+Type}}
+\index{Set\+Skeleton\+Type@{Set\+Skeleton\+Type}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Set\+Skeleton\+Type()}{SetSkeletonType()}}
+{\footnotesize\ttfamily void Fbx\+Skeleton\+::\+Set\+Skeleton\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type}}]{p\+Skeleton\+Type }\end{DoxyParamCaption})}
+
+Set the skeleton type. 
+\begin{DoxyParams}{引数}
+{\em p\+Skeleton\+Type} & Skeleton type identifier. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_skeleton_ac86811d94d673bbc1558eca1066311a2}\label{class_fbx_skeleton_ac86811d94d673bbc1558eca1066311a2}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Limb\+Length@{Limb\+Length}}
+\index{Limb\+Length@{Limb\+Length}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Limb\+Length}{LimbLength}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Skeleton\+::\+Limb\+Length}
+
+This property handles the skeleton limb length.
+
+To access this property do\+: Limb\+Length.\+Get(). To set this property do\+: Limb\+Length.\+Set(\+Fbx\+Double).
+
+\hyperlink{class_fbx_skeleton}{Fbx\+Skeleton} is a node attribute and it will be attached to a \hyperlink{class_fbx_node}{Fbx\+Node} which represents the transform. Given a chain of skeleton nodes the parent and child skeletons will be attached to a parent node and a child node. The orientation of the limb is computed from the vector between the parent and child position (from parent to child). The Limb\+Length represents the proportion of the parent node\textquotesingle{}s position to the child node\textquotesingle{}s position which is used to compute the actual limb length. The default value of 1.\+0 means the Limb\+Length is equal to the length between the parent and child node\textquotesingle{}s position. So if the value is 0.\+5, it means the Limb\+Length will be half of the length between the parent and child node\textquotesingle{}s position. 
+
+ fbxskeleton.\+h の 172 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a59c001b86207731c5c26ca38ec1e78f6}\label{class_fbx_skeleton_a59c001b86207731c5c26ca38ec1e78f6}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!m\+Limb\+Length\+Is\+Set@{m\+Limb\+Length\+Is\+Set}}
+\index{m\+Limb\+Length\+Is\+Set@{m\+Limb\+Length\+Is\+Set}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{m\+Limb\+Length\+Is\+Set}{mLimbLengthIsSet}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::m\+Limb\+Length\+Is\+Set\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskeleton.\+h の 191 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a9efa86b9d964e60e8a9ed67a4851fc9f}\label{class_fbx_skeleton_a9efa86b9d964e60e8a9ed67a4851fc9f}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!m\+Limb\+Node\+Color\+Is\+Set@{m\+Limb\+Node\+Color\+Is\+Set}}
+\index{m\+Limb\+Node\+Color\+Is\+Set@{m\+Limb\+Node\+Color\+Is\+Set}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{m\+Limb\+Node\+Color\+Is\+Set}{mLimbNodeColorIsSet}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::m\+Limb\+Node\+Color\+Is\+Set\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskeleton.\+h の 193 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a1e0cfb9088fa334ff5c97b92a5d510dd}\label{class_fbx_skeleton_a1e0cfb9088fa334ff5c97b92a5d510dd}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!m\+Limb\+Node\+Size\+Is\+Set@{m\+Limb\+Node\+Size\+Is\+Set}}
+\index{m\+Limb\+Node\+Size\+Is\+Set@{m\+Limb\+Node\+Size\+Is\+Set}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{m\+Limb\+Node\+Size\+Is\+Set}{mLimbNodeSizeIsSet}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::m\+Limb\+Node\+Size\+Is\+Set\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskeleton.\+h の 192 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a8c5424b8334b260fc668a42df4cb8558}\label{class_fbx_skeleton_a8c5424b8334b260fc668a42df4cb8558}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!m\+Skeleton\+Type@{m\+Skeleton\+Type}}
+\index{m\+Skeleton\+Type@{m\+Skeleton\+Type}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{m\+Skeleton\+Type}{mSkeletonType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_skeleton_ae067f8fec201e5e3572f039e37ee1c6b}{E\+Type} Fbx\+Skeleton\+::m\+Skeleton\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskeleton.\+h の 189 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a0db3601d505f1e70eb64dbbfa881a91a}\label{class_fbx_skeleton_a0db3601d505f1e70eb64dbbfa881a91a}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!m\+Skeleton\+Type\+Is\+Set@{m\+Skeleton\+Type\+Is\+Set}}
+\index{m\+Skeleton\+Type\+Is\+Set@{m\+Skeleton\+Type\+Is\+Set}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{m\+Skeleton\+Type\+Is\+Set}{mSkeletonTypeIsSet}}
+{\footnotesize\ttfamily bool Fbx\+Skeleton\+::m\+Skeleton\+Type\+Is\+Set\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskeleton.\+h の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a61aa3623c65047b3e7e66a173711b1ef}\label{class_fbx_skeleton_a61aa3623c65047b3e7e66a173711b1ef}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!s\+Default\+Limb\+Length@{s\+Default\+Limb\+Length}}
+\index{s\+Default\+Limb\+Length@{s\+Default\+Limb\+Length}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{s\+Default\+Limb\+Length}{sDefaultLimbLength}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} Fbx\+Skeleton\+::s\+Default\+Limb\+Length\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ fbxskeleton.\+h の 141 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_aabac60f53d2b665f37ac74e7ac9a402a}\label{class_fbx_skeleton_aabac60f53d2b665f37ac74e7ac9a402a}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!s\+Default\+Size@{s\+Default\+Size}}
+\index{s\+Default\+Size@{s\+Default\+Size}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{s\+Default\+Size}{sDefaultSize}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} Fbx\+Skeleton\+::s\+Default\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ fbxskeleton.\+h の 140 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_aecaa95bc659ea1804ec5885d9116c1c6}\label{class_fbx_skeleton_aecaa95bc659ea1804ec5885d9116c1c6}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!Size@{Size}}
+\index{Size@{Size}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}$>$ Fbx\+Skeleton\+::\+Size}
+
+This property handles the limb node size.
+
+To access this property do\+: Size.\+Get(). To set this property do\+: Size.\+Set(\+Fbx\+Double).
+
+Default value is 100.\+0 
+
+ fbxskeleton.\+h の 157 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_ac243ade080949dfcaa564d95e2f4aa6b}\label{class_fbx_skeleton_ac243ade080949dfcaa564d95e2f4aa6b}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!s\+Limb\+Length@{s\+Limb\+Length}}
+\index{s\+Limb\+Length@{s\+Limb\+Length}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{s\+Limb\+Length}{sLimbLength}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Skeleton\+::s\+Limb\+Length\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ fbxskeleton.\+h の 134 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skeleton_a311e444376931fb3c3b0ce1b7444eddb}\label{class_fbx_skeleton_a311e444376931fb3c3b0ce1b7444eddb}} 
+\index{Fbx\+Skeleton@{Fbx\+Skeleton}!s\+Size@{s\+Size}}
+\index{s\+Size@{s\+Size}!Fbx\+Skeleton@{Fbx\+Skeleton}}
+\subsubsection{\texorpdfstring{s\+Size}{sSize}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Skeleton\+::s\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ fbxskeleton.\+h の 133 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxskeleton_8h}{fbxskeleton.\+h}\end{DoxyCompactItemize}

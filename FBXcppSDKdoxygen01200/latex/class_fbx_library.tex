@@ -1,0 +1,449 @@
+\hypertarget{class_fbx_library}{}\section{Fbx\+Library クラス}
+\label{class_fbx_library}\index{Fbx\+Library@{Fbx\+Library}}
+
+
+{\ttfamily \#include $<$fbxlibrary.\+h$>$}
+
+Fbx\+Library の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_fbx_library}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$ \hyperlink{class_fbx_library_a8733a34df39aefd786bd792ee646d3ca}{Get\+Parent\+Library} (void) const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the parent library if one exists. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_library_a4746780aa4ba19fdbf1462fb371967c9}{System\+Library} (bool p\+System\+Library)
+\item 
+bool \hyperlink{class_fbx_library_ad0e5e2ea87d5a993ed5a70a27671f9ac}{Is\+System\+Library} () const
+\begin{DoxyCompactList}\small\item\em Returns whether or not this library is a system library. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_library_a31ee4d35fbd0ae97fdb0470a487ae5ff}{Localization\+Base\+Name\+Prefix} (const char $\ast$p\+Prefix)
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_library_acfd1439811766c38c8b3fce758787603}{Localization\+Base\+Name\+Prefix} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the localization prefix. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_library_a0c3b1e44376fbbad1d85d35aadcedec4}{Add\+Sub\+Library} (\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$p\+Sub\+Library)
+\item 
+bool \hyperlink{class_fbx_library_af49b9811d383dbdc86bc805b72970ad9}{Remove\+Sub\+Library} (\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$p\+Sub\+Library)
+\item 
+int \hyperlink{class_fbx_library_aa5c3590309cfdf028cf367f6d9431ce2}{Get\+Sub\+Library\+Count} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the total number of sub-\/libraries \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$ \hyperlink{class_fbx_library_a3a6f41a432b2f0db2966f51d8ccc511e}{Get\+Sub\+Library} (int p\+Index) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_library_ad1c56ae40f4e371c7e0395ce3362dbcc}{Clone\+Asset} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+To\+Clone, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Optional\+Destination\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+bool \hyperlink{class_fbx_library_a1b1dd291ec8d1858225190ae40600581}{Import\+Assets} (\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$p\+Src\+Library)
+\item 
+bool \hyperlink{class_fbx_library_a2970dc9bde3b76130571ad959cd58389}{Import\+Assets} (\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$p\+Src\+Library, const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&p\+Asset\+Filter)
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_library_a9b4d4a5327f1ef11bd0251a968ce9452}{Instantiate\+Member} (const T $\ast$p\+F\+B\+X\+\_\+\+T\+Y\+PE, const \hyperlink{class_fbx_object_filter}{Fbx\+Object\+Filter} \&p\+Filter, bool p\+Recurse=true, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Opt\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+Fbx\+Localization\+Manager \& \hyperlink{class_fbx_library_a4fefd2b63aa4db5519af446945c0adef}{Get\+Localization\+Manager} () const
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_library_a6f71bf208f95cc8033123e173e64b298}{Localize} (const char $\ast$p\+ID, const char $\ast$p\+Default=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+bool \hyperlink{class_fbx_library_a041b82a3689dbf2912d81d0f69218ab7}{Add\+Shading\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Shading\+Object)
+\item 
+bool \hyperlink{class_fbx_library_aafacfb4acfe28124217e4b0ffb0dcadc}{Remove\+Shading\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Shading\+Object)
+\item 
+int \hyperlink{class_fbx_library_a0b5b034aeeb0d6a0f671fa4020ea1e07}{Get\+Shading\+Object\+Count} (void) const
+\begin{DoxyCompactList}\small\item\em Returns the total number of shading objects \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_library_ae7783de818ed0eca3fa34ff6378685fb}{Get\+Shading\+Object} (int p\+Index) const
+\item 
+int \hyperlink{class_fbx_library_a5b43bbc0e02d7d48628c2dc18980fdd8}{Get\+Shading\+Object\+Count} (const \hyperlink{class_fbx_implementation_filter}{Fbx\+Implementation\+Filter} \&p\+Criteria) const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_library_a1eb2147612d1073d6afbf562adfe3c25}{Get\+Shading\+Object} (int p\+Index, const \hyperlink{class_fbx_implementation_filter}{Fbx\+Implementation\+Filter} \&p\+Criteria) const
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \hyperlink{class_fbx_library_a562702d3ba172e178bf0d63ba5b9974b}{Get\+Asset\+Criteria\+Filter} ()
+\item 
+static \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \hyperlink{class_fbx_library_a88507d4654d1a906ea7999165af7d92b}{Get\+Asset\+Dependents\+Filter} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_library_a8e9fbf97f6753d859411f284db16f964}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_library_ad763dd7c511f4c97d1163545de1bbbe9}{Destruct} (bool p\+Recursive)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Fbx\+Localization\+Manager $\ast$ \hyperlink{class_fbx_library_ac240173ce32053acf9cc390b82dc69e5}{m\+Localization\+Manager}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This library class represents libraries that store sub-\/libraries and shading objects. Shading objects are objects of class \hyperlink{class_fbx_texture}{Fbx\+Texture}, \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}, and \hyperlink{class_fbx_light}{Fbx\+Light}. 
+
+ fbxlibrary.\+h の 30 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_library_a041b82a3689dbf2912d81d0f69218ab7}\label{class_fbx_library_a041b82a3689dbf2912d81d0f69218ab7}} 
+\index{Fbx\+Library@{Fbx\+Library}!Add\+Shading\+Object@{Add\+Shading\+Object}}
+\index{Add\+Shading\+Object@{Add\+Shading\+Object}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Add\+Shading\+Object()}{AddShadingObject()}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Add\+Shading\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Shading\+Object }\end{DoxyParamCaption})}
+
+Adds a shading object. 
+\begin{DoxyParams}{引数}
+{\em p\+Shading\+Object} & The shading object to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_library_a0c3b1e44376fbbad1d85d35aadcedec4}\label{class_fbx_library_a0c3b1e44376fbbad1d85d35aadcedec4}} 
+\index{Fbx\+Library@{Fbx\+Library}!Add\+Sub\+Library@{Add\+Sub\+Library}}
+\index{Add\+Sub\+Library@{Add\+Sub\+Library}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Add\+Sub\+Library()}{AddSubLibrary()}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Add\+Sub\+Library (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$}]{p\+Sub\+Library }\end{DoxyParamCaption})}
+
+Adds a sub-\/library 
+\begin{DoxyParams}{引数}
+{\em p\+Sub\+Library} & The sub-\/library to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if adding the sub-\/library is successful, returns {\ttfamily false} if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_ad1c56ae40f4e371c7e0395ce3362dbcc}\label{class_fbx_library_ad1c56ae40f4e371c7e0395ce3362dbcc}} 
+\index{Fbx\+Library@{Fbx\+Library}!Clone\+Asset@{Clone\+Asset}}
+\index{Clone\+Asset@{Clone\+Asset}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Clone\+Asset()}{CloneAsset()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Library\+::\+Clone\+Asset (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+To\+Clone,  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Optional\+Destination\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Clones the specified asset. 
+\begin{DoxyParams}{引数}
+{\em p\+To\+Clone} & The asset to be cloned. \\
+\hline
+{\em p\+Optional\+Destination\+Container} & The container for the asset copy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The asset and all its dependents are cloned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_library_a8e9fbf97f6753d859411f284db16f964}\label{class_fbx_library_a8e9fbf97f6753d859411f284db16f964}} 
+\index{Fbx\+Library@{Fbx\+Library}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Library\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_document_a9bc37787619a99fca90b839c16e4f2b8}{Fbx\+Document}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_library_ad763dd7c511f4c97d1163545de1bbbe9}\label{class_fbx_library_ad763dd7c511f4c97d1163545de1bbbe9}} 
+\index{Fbx\+Library@{Fbx\+Library}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Library\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_document_a172d19ae540cbd086ade62adaf1a54b8}{Fbx\+Document}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_library_a562702d3ba172e178bf0d63ba5b9974b}\label{class_fbx_library_a562702d3ba172e178bf0d63ba5b9974b}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Asset\+Criteria\+Filter@{Get\+Asset\+Criteria\+Filter}}
+\index{Get\+Asset\+Criteria\+Filter@{Get\+Asset\+Criteria\+Filter}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Asset\+Criteria\+Filter()}{GetAssetCriteriaFilter()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_criteria}{Fbx\+Criteria} Fbx\+Library\+::\+Get\+Asset\+Criteria\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a criteria filter which you can use to filter objects when iterating items in the library. Only real \textquotesingle{}assets\textquotesingle{} are returned, rather than F\+BX support objects. This currently includes lights, environments, materials and textures (maps). This is typically used to I\+M\+P\+O\+RT from a library. \mbox{\Hypertarget{class_fbx_library_a88507d4654d1a906ea7999165af7d92b}\label{class_fbx_library_a88507d4654d1a906ea7999165af7d92b}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Asset\+Dependents\+Filter@{Get\+Asset\+Dependents\+Filter}}
+\index{Get\+Asset\+Dependents\+Filter@{Get\+Asset\+Dependents\+Filter}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Asset\+Dependents\+Filter()}{GetAssetDependentsFilter()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_criteria}{Fbx\+Criteria} Fbx\+Library\+::\+Get\+Asset\+Dependents\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns a filter which you should use when you clone / export objects. This filters out objects that should remain in the asset library.
+
+Use this to E\+X\+P\+O\+RT from a library (or C\+L\+O\+NE from a library). \mbox{\Hypertarget{class_fbx_library_a4fefd2b63aa4db5519af446945c0adef}\label{class_fbx_library_a4fefd2b63aa4db5519af446945c0adef}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Localization\+Manager@{Get\+Localization\+Manager}}
+\index{Get\+Localization\+Manager@{Get\+Localization\+Manager}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Localization\+Manager()}{GetLocalizationManager()}}
+{\footnotesize\ttfamily Fbx\+Localization\+Manager\& Fbx\+Library\+::\+Get\+Localization\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the localization manager for the library. \mbox{\Hypertarget{class_fbx_library_a8733a34df39aefd786bd792ee646d3ca}\label{class_fbx_library_a8733a34df39aefd786bd792ee646d3ca}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Parent\+Library@{Get\+Parent\+Library}}
+\index{Get\+Parent\+Library@{Get\+Parent\+Library}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Parent\+Library()}{GetParentLibrary()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_library}{Fbx\+Library}$\ast$ Fbx\+Library\+::\+Get\+Parent\+Library (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a pointer to the parent library if one exists. 
+
+\mbox{\Hypertarget{class_fbx_library_ae7783de818ed0eca3fa34ff6378685fb}\label{class_fbx_library_ae7783de818ed0eca3fa34ff6378685fb}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Shading\+Object@{Get\+Shading\+Object}}
+\index{Get\+Shading\+Object@{Get\+Shading\+Object}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Shading\+Object()}{GetShadingObject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Library\+::\+Get\+Shading\+Object (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the shading object at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Shading object index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The shading object located at the specified index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_a1eb2147612d1073d6afbf562adfe3c25}\label{class_fbx_library_a1eb2147612d1073d6afbf562adfe3c25}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Shading\+Object@{Get\+Shading\+Object}}
+\index{Get\+Shading\+Object@{Get\+Shading\+Object}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Shading\+Object()}{GetShadingObject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Library\+::\+Get\+Shading\+Object (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const \hyperlink{class_fbx_implementation_filter}{Fbx\+Implementation\+Filter} \&}]{p\+Criteria }\end{DoxyParamCaption}) const}
+
+Returns a handle on the shading object at the specified index that corresponds to the given filtering parameters. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Shading object index. \\
+\hline
+{\em p\+Criteria} & Filtering criteria that identifies what kind of implementations to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A handle on the shading object at the specified index that corresponds to the given filtering parameters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_a0b5b034aeeb0d6a0f671fa4020ea1e07}\label{class_fbx_library_a0b5b034aeeb0d6a0f671fa4020ea1e07}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Shading\+Object\+Count@{Get\+Shading\+Object\+Count}}
+\index{Get\+Shading\+Object\+Count@{Get\+Shading\+Object\+Count}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Shading\+Object\+Count()}{GetShadingObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Library\+::\+Get\+Shading\+Object\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the total number of shading objects 
+
+\mbox{\Hypertarget{class_fbx_library_a5b43bbc0e02d7d48628c2dc18980fdd8}\label{class_fbx_library_a5b43bbc0e02d7d48628c2dc18980fdd8}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Shading\+Object\+Count@{Get\+Shading\+Object\+Count}}
+\index{Get\+Shading\+Object\+Count@{Get\+Shading\+Object\+Count}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Shading\+Object\+Count()}{GetShadingObjectCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Fbx\+Library\+::\+Get\+Shading\+Object\+Count (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_implementation_filter}{Fbx\+Implementation\+Filter} \&}]{p\+Criteria }\end{DoxyParamCaption}) const}
+
+Returns the number of shading objects according to their implementations. 
+\begin{DoxyParams}{引数}
+{\em p\+Criteria} & Filtering criteria that identifies what kind of implementations to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of shading objects corresponding to the filtering parameters 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_a3a6f41a432b2f0db2966f51d8ccc511e}\label{class_fbx_library_a3a6f41a432b2f0db2966f51d8ccc511e}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Sub\+Library@{Get\+Sub\+Library}}
+\index{Get\+Sub\+Library@{Get\+Sub\+Library}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Sub\+Library()}{GetSubLibrary()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_library}{Fbx\+Library}$\ast$ Fbx\+Library\+::\+Get\+Sub\+Library (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the sub-\/library at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The sub-\/library index. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_library_aa5c3590309cfdf028cf367f6d9431ce2}\label{class_fbx_library_aa5c3590309cfdf028cf367f6d9431ce2}} 
+\index{Fbx\+Library@{Fbx\+Library}!Get\+Sub\+Library\+Count@{Get\+Sub\+Library\+Count}}
+\index{Get\+Sub\+Library\+Count@{Get\+Sub\+Library\+Count}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Get\+Sub\+Library\+Count()}{GetSubLibraryCount()}}
+{\footnotesize\ttfamily int Fbx\+Library\+::\+Get\+Sub\+Library\+Count (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the total number of sub-\/libraries 
+
+\mbox{\Hypertarget{class_fbx_library_a1b1dd291ec8d1858225190ae40600581}\label{class_fbx_library_a1b1dd291ec8d1858225190ae40600581}} 
+\index{Fbx\+Library@{Fbx\+Library}!Import\+Assets@{Import\+Assets}}
+\index{Import\+Assets@{Import\+Assets}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Import\+Assets()}{ImportAssets()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Import\+Assets (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$}]{p\+Src\+Library }\end{DoxyParamCaption})}
+
+Transfers ownership from the source library to this library for any assets passing through the filter. It is assumed that name conflicts and other details have been resolved beforehand.
+
+External asset files required by the assets are copied (not moved). It\textquotesingle{}s up to the owner of the source library to clean up the files if the files are not on a read-\/only transport. If this document hasn\textquotesingle{}t been committed yet, the assets will not be copied.
+
+Returns true if no filtered assets were skipped. If no assets pass through the filter, it returns true, because nothing has been skipped.
+
+This may leave the source library in an invalid state. For example, the source library would be in an invalid state if you had decided to transfer texture objects to the library, but materials were kept in the source library.
+
+To safeguard against this, the transfer disconnects objects, and thus materials are left without textures.
+
+When you transfer an object, all its dependents come with it. If you move a material, it takes the associated textures as well. Although if you moved a texture, the material would not be transferred with it. 
+\begin{DoxyParams}{引数}
+{\em p\+Src\+Library} & The source library to be imported. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if no filtered assets are skipped. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_a2970dc9bde3b76130571ad959cd58389}\label{class_fbx_library_a2970dc9bde3b76130571ad959cd58389}} 
+\index{Fbx\+Library@{Fbx\+Library}!Import\+Assets@{Import\+Assets}}
+\index{Import\+Assets@{Import\+Assets}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Import\+Assets()}{ImportAssets()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Import\+Assets (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$}]{p\+Src\+Library,  }\item[{const \hyperlink{class_fbx_criteria}{Fbx\+Criteria} \&}]{p\+Asset\+Filter }\end{DoxyParamCaption})}
+
+Transfers ownership from the source library to this library for any assets passing through the filter. It is assumed that name conflicts and other details have been resolved beforehand.
+
+External asset files required by the assets are copied (not moved). It\textquotesingle{}s up to the owner of the source library to clean up the files if the files are not on a read-\/only transport. If this document hasn\textquotesingle{}t been committed yet, the assets will not be copied.
+
+Returns true if no filtered assets were skipped. If no assets pass through the filter, it returns true, because nothing has been skipped.
+
+This may leave the source library in an invalid state. For example, the source library would be in an invalid state if you had decided to transfer texture objects to the library, but materials were kept in the source library.
+
+To safeguard against this, the transfer disconnects objects, and thus materials are left without textures.
+
+When you transfer an object, all its dependents come with it. If you move a material, it takes the associated textures as well. Although if you moved a texture, the material would not be transferred with it. 
+\begin{DoxyParams}{引数}
+{\em p\+Src\+Library} & The source library to be imported. \\
+\hline
+{\em p\+Asset\+Filter} & The asset filter. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if no filtered assets are skipped. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_a9b4d4a5327f1ef11bd0251a968ce9452}\label{class_fbx_library_a9b4d4a5327f1ef11bd0251a968ce9452}} 
+\index{Fbx\+Library@{Fbx\+Library}!Instantiate\+Member@{Instantiate\+Member}}
+\index{Instantiate\+Member@{Instantiate\+Member}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Instantiate\+Member()}{InstantiateMember()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T $\ast$ Fbx\+Library\+::\+Instantiate\+Member (\begin{DoxyParamCaption}\item[{const T $\ast$}]{p\+F\+B\+X\+\_\+\+T\+Y\+PE,  }\item[{const \hyperlink{class_fbx_object_filter}{Fbx\+Object\+Filter} \&}]{p\+Filter,  }\item[{bool}]{p\+Recurse = {\ttfamily true},  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Opt\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Returns a new instance of a library member. This instantiates the first object found that matches the filter. 
+\begin{DoxyParams}{引数}
+{\em p\+F\+B\+X\+\_\+\+T\+Y\+PE} & The type of member \\
+\hline
+{\em p\+Filter} & A user specified filter \\
+\hline
+{\em p\+Recurse} & A flag that indicates whether to check sub-\/libraries \\
+\hline
+{\em p\+Opt\+Container} & Optional container for the cloned asset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A new instance of the member. Note that the new member is not included with this library. 
+\end{DoxyReturn}
+
+
+ fbxlibrary.\+h の 247 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_library_ad0e5e2ea87d5a993ed5a70a27671f9ac}\label{class_fbx_library_ad0e5e2ea87d5a993ed5a70a27671f9ac}} 
+\index{Fbx\+Library@{Fbx\+Library}!Is\+System\+Library@{Is\+System\+Library}}
+\index{Is\+System\+Library@{Is\+System\+Library}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Is\+System\+Library()}{IsSystemLibrary()}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Is\+System\+Library (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether or not this library is a system library. 
+
+\mbox{\Hypertarget{class_fbx_library_a31ee4d35fbd0ae97fdb0470a487ae5ff}\label{class_fbx_library_a31ee4d35fbd0ae97fdb0470a487ae5ff}} 
+\index{Fbx\+Library@{Fbx\+Library}!Localization\+Base\+Name\+Prefix@{Localization\+Base\+Name\+Prefix}}
+\index{Localization\+Base\+Name\+Prefix@{Localization\+Base\+Name\+Prefix}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Localization\+Base\+Name\+Prefix()}{LocalizationBaseNamePrefix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Library\+::\+Localization\+Base\+Name\+Prefix (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Prefix }\end{DoxyParamCaption})}
+
+The prefix must not include the dash and language code, nor can it contain the extension. But if you want, it can contain a folder or sub-\/folder, such as\+: locales/mydocloc. This is resolved using the X\+Ref Manager, with priority given to the library\textquotesingle{}s \char`\"{}.\+fbm\char`\"{} folder, if one exists. 
+\begin{DoxyParams}{引数}
+{\em p\+Prefix} & New prefix to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_library_acfd1439811766c38c8b3fce758787603}\label{class_fbx_library_acfd1439811766c38c8b3fce758787603}} 
+\index{Fbx\+Library@{Fbx\+Library}!Localization\+Base\+Name\+Prefix@{Localization\+Base\+Name\+Prefix}}
+\index{Localization\+Base\+Name\+Prefix@{Localization\+Base\+Name\+Prefix}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Localization\+Base\+Name\+Prefix()}{LocalizationBaseNamePrefix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Library\+::\+Localization\+Base\+Name\+Prefix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the localization prefix. 
+
+\mbox{\Hypertarget{class_fbx_library_a6f71bf208f95cc8033123e173e64b298}\label{class_fbx_library_a6f71bf208f95cc8033123e173e64b298}} 
+\index{Fbx\+Library@{Fbx\+Library}!Localize@{Localize}}
+\index{Localize@{Localize}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Localize()}{Localize()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Library\+::\+Localize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+ID,  }\item[{const char $\ast$}]{p\+Default = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Localization helper function. Calls the F\+BX S\+DK manager implementation. Sub-\/classes that manage their own localization can over-\/ride this function. 
+\begin{DoxyParams}{引数}
+{\em p\+ID} & The identifier for the text to localize. \\
+\hline
+{\em p\+Default} & The default text. Uses p\+ID if N\+U\+LL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The potentially localized text. May return the parameter passed in. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_object_a9b8ae43ccdd09be07b450e0ed54788ab}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_library_aafacfb4acfe28124217e4b0ffb0dcadc}\label{class_fbx_library_aafacfb4acfe28124217e4b0ffb0dcadc}} 
+\index{Fbx\+Library@{Fbx\+Library}!Remove\+Shading\+Object@{Remove\+Shading\+Object}}
+\index{Remove\+Shading\+Object@{Remove\+Shading\+Object}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Remove\+Shading\+Object()}{RemoveShadingObject()}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Remove\+Shading\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Shading\+Object }\end{DoxyParamCaption})}
+
+Removes a shading object. 
+\begin{DoxyParams}{引数}
+{\em p\+Shading\+Object} & The shading object to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_library_af49b9811d383dbdc86bc805b72970ad9}\label{class_fbx_library_af49b9811d383dbdc86bc805b72970ad9}} 
+\index{Fbx\+Library@{Fbx\+Library}!Remove\+Sub\+Library@{Remove\+Sub\+Library}}
+\index{Remove\+Sub\+Library@{Remove\+Sub\+Library}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{Remove\+Sub\+Library()}{RemoveSubLibrary()}}
+{\footnotesize\ttfamily bool Fbx\+Library\+::\+Remove\+Sub\+Library (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_library}{Fbx\+Library} $\ast$}]{p\+Sub\+Library }\end{DoxyParamCaption})}
+
+Removes a sub-\/library 
+\begin{DoxyParams}{引数}
+{\em p\+Sub\+Library} & The sub-\/library to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the sub-\/library is removed, {\ttfamily false} if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_library_a4746780aa4ba19fdbf1462fb371967c9}\label{class_fbx_library_a4746780aa4ba19fdbf1462fb371967c9}} 
+\index{Fbx\+Library@{Fbx\+Library}!System\+Library@{System\+Library}}
+\index{System\+Library@{System\+Library}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{System\+Library()}{SystemLibrary()}}
+{\footnotesize\ttfamily void Fbx\+Library\+::\+System\+Library (\begin{DoxyParamCaption}\item[{bool}]{p\+System\+Library }\end{DoxyParamCaption})}
+
+Sets whether not this library is a system library. 
+\begin{DoxyParams}{引数}
+{\em p\+System\+Library} & A flag which indicates whether or not this library is a system library. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_library_ac240173ce32053acf9cc390b82dc69e5}\label{class_fbx_library_ac240173ce32053acf9cc390b82dc69e5}} 
+\index{Fbx\+Library@{Fbx\+Library}!m\+Localization\+Manager@{m\+Localization\+Manager}}
+\index{m\+Localization\+Manager@{m\+Localization\+Manager}!Fbx\+Library@{Fbx\+Library}}
+\subsubsection{\texorpdfstring{m\+Localization\+Manager}{mLocalizationManager}}
+{\footnotesize\ttfamily Fbx\+Localization\+Manager$\ast$ Fbx\+Library\+::m\+Localization\+Manager\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}
+
+
+
+ fbxlibrary.\+h の 238 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxlibrary_8h}{fbxlibrary.\+h}\end{DoxyCompactItemize}

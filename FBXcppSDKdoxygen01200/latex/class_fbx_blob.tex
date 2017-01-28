@@ -1,0 +1,255 @@
+\hypertarget{class_fbx_blob}{}\section{Fbx\+Blob クラス}
+\label{class_fbx_blob}\index{Fbx\+Blob@{Fbx\+Blob}}
+
+
+{\ttfamily \#include $<$fbxpropertytypes.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_fbx_blob_a18bd3fbf233e39091ffcf0ef65123023}{Modify} ()
+\begin{DoxyCompactList}\small\item\em Make a copy if the reference count $>$ 1 (i.\+e. if the buffer is shared). \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_blob_abd720fef7ed5feacc8ef21d669e26cce}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Free the memory if this blob is the last one to hold it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{class_fbx_blob_ac25ef6a057beb9d5f1d072a77833b910}{m\+Ref\+Count}
+\item 
+void $\ast$ \hyperlink{class_fbx_blob_af397c288f865eefa5e1fde8be443d9c2}{m\+Data}
+\item 
+int \hyperlink{class_fbx_blob_a3c92f0ad0ff306800df7be4d94ac7528}{m\+Size}
+\end{DoxyCompactItemize}
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_blob_ad1013b102b7e2b54e5cb3ffe326e0738}{Fbx\+Blob} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Set attributes to 0. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_blob_aaab0ee64d11daa7aff57542daad4105e}{Fbx\+Blob} (int p\+Size)
+\item 
+\hyperlink{class_fbx_blob_a2636c1976b481f86ee4393c0d50b0470}{Fbx\+Blob} (const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&p\+R\+HS)
+\item 
+\hyperlink{class_fbx_blob_a2359aefdd7854a89d3d4bff0980696c1}{Fbx\+Blob} (const void $\ast$p\+Data, int p\+Size)
+\item 
+\hyperlink{class_fbx_blob_ab0e197c8fc8bd7ff64d1d95501984132}{$\sim$\+Fbx\+Blob} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Assignment.}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_blob}{Fbx\+Blob} \& \hyperlink{class_fbx_blob_aaa69c14d3d6ad7c6720957cd6c08712a}{operator=} (const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&p\+Value)
+\item 
+void \hyperlink{class_fbx_blob_a9370942703afba1f51798ff5ac2b0ec5}{Assign} (const void $\ast$p\+Data, int p\+Size)
+\end{DoxyCompactItemize}
+\subsection*{Boolean operation}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_blob_ad8de66a73abbec7cb602653ca2008a6d}{operator==} (const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&p\+R\+HS) const
+\item 
+bool \hyperlink{class_fbx_blob_a8a37da8658286521abc8c085f1fdbb69}{operator!=} (const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&p\+R\+HS) const
+\end{DoxyCompactItemize}
+\subsection*{Access}
+\begin{DoxyCompactItemize}
+\item 
+const void $\ast$ \hyperlink{class_fbx_blob_a5fb39826dd62378bcf18b4de9db38509}{Access} () const
+\item 
+int \hyperlink{class_fbx_blob_a4b391b461d5303f6a1f24ae910b4e5c8}{Size} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+F\+BX S\+DK blob class. Uninitialized data of a specified size, to be filled by the user. 
+
+ fbxpropertytypes.\+h の 233 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_blob_ad1013b102b7e2b54e5cb3ffe326e0738}\label{class_fbx_blob_ad1013b102b7e2b54e5cb3ffe326e0738}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Fbx\+Blob()}{FbxBlob()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Fbx\+Blob\+::\+Fbx\+Blob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. Set attributes to 0. 
+
+\mbox{\Hypertarget{class_fbx_blob_aaab0ee64d11daa7aff57542daad4105e}\label{class_fbx_blob_aaab0ee64d11daa7aff57542daad4105e}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Fbx\+Blob()}{FbxBlob()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Fbx\+Blob\+::\+Fbx\+Blob (\begin{DoxyParamCaption}\item[{int}]{p\+Size }\end{DoxyParamCaption})}
+
+Constructor. Construct a buffer with uninitialized data of a specified size, to be filled by the user. 
+\begin{DoxyParams}{引数}
+{\em p\+Size} & Buffer size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_blob_a2636c1976b481f86ee4393c0d50b0470}\label{class_fbx_blob_a2636c1976b481f86ee4393c0d50b0470}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Fbx\+Blob()}{FbxBlob()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Fbx\+Blob\+::\+Fbx\+Blob (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&}]{p\+R\+HS }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+R\+HS} & The blob to be copied to this blob. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_blob_a2359aefdd7854a89d3d4bff0980696c1}\label{class_fbx_blob_a2359aefdd7854a89d3d4bff0980696c1}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\index{Fbx\+Blob@{Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Fbx\+Blob()}{FbxBlob()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Fbx\+Blob\+::\+Fbx\+Blob (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Data,  }\item[{int}]{p\+Size }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & The data to be filled in the buffer. \\
+\hline
+{\em p\+Size} & Buffer size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_blob_ab0e197c8fc8bd7ff64d1d95501984132}\label{class_fbx_blob_ab0e197c8fc8bd7ff64d1d95501984132}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!````~Fbx\+Blob@{$\sim$\+Fbx\+Blob}}
+\index{````~Fbx\+Blob@{$\sim$\+Fbx\+Blob}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Blob()}{~FbxBlob()}}
+{\footnotesize\ttfamily Fbx\+Blob\+::$\sim$\+Fbx\+Blob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_blob_a5fb39826dd62378bcf18b4de9db38509}\label{class_fbx_blob_a5fb39826dd62378bcf18b4de9db38509}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Access@{Access}}
+\index{Access@{Access}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Access()}{Access()}}
+{\footnotesize\ttfamily const void$\ast$ Fbx\+Blob\+::\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the buffer pointer. \begin{DoxyReturn}{戻り値}
+The buffer pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blob_a9370942703afba1f51798ff5ac2b0ec5}\label{class_fbx_blob_a9370942703afba1f51798ff5ac2b0ec5}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Assign@{Assign}}
+\index{Assign@{Assign}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Assign()}{Assign()}}
+{\footnotesize\ttfamily void Fbx\+Blob\+::\+Assign (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Data,  }\item[{int}]{p\+Size }\end{DoxyParamCaption})}
+
+Copy the data in the buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & The buffer to be copied data from. \\
+\hline
+{\em p\+Size} & Buffer size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_blob_abd720fef7ed5feacc8ef21d669e26cce}\label{class_fbx_blob_abd720fef7ed5feacc8ef21d669e26cce}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Blob\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Free the memory if this blob is the last one to hold it. 
+
+\mbox{\Hypertarget{class_fbx_blob_a18bd3fbf233e39091ffcf0ef65123023}\label{class_fbx_blob_a18bd3fbf233e39091ffcf0ef65123023}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Modify@{Modify}}
+\index{Modify@{Modify}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Modify()}{Modify()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Blob\+::\+Modify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Make a copy if the reference count $>$ 1 (i.\+e. if the buffer is shared). 
+
+\mbox{\Hypertarget{class_fbx_blob_a8a37da8658286521abc8c085f1fdbb69}\label{class_fbx_blob_a8a37da8658286521abc8c085f1fdbb69}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+Blob\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&}]{p\+R\+HS }\end{DoxyParamCaption}) const}
+
+Inequality operator. 
+\begin{DoxyParams}{引数}
+{\em p\+R\+HS} & The blob to be compared with this blob. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True}, if the two blobs are unequal, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blob_aaa69c14d3d6ad7c6720957cd6c08712a}\label{class_fbx_blob_aaa69c14d3d6ad7c6720957cd6c08712a}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_blob}{Fbx\+Blob}\& Fbx\+Blob\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&}]{p\+Value }\end{DoxyParamCaption})}
+
+Share the buffer of the specified blob with this blob. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The blob whose buffer is shared with this blob. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+This blob. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blob_ad8de66a73abbec7cb602653ca2008a6d}\label{class_fbx_blob_ad8de66a73abbec7cb602653ca2008a6d}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Blob\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_blob}{Fbx\+Blob} \&}]{p\+R\+HS }\end{DoxyParamCaption}) const}
+
+Equality operator. 
+\begin{DoxyParams}{引数}
+{\em p\+R\+HS} & The blob to be compared with this blob. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True}, if the two blobs are equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_blob_a4b391b461d5303f6a1f24ae910b4e5c8}\label{class_fbx_blob_a4b391b461d5303f6a1f24ae910b4e5c8}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!Size@{Size}}
+\index{Size@{Size}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily int Fbx\+Blob\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the buffer size \begin{DoxyReturn}{戻り値}
+The buffer size. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_blob_af397c288f865eefa5e1fde8be443d9c2}\label{class_fbx_blob_af397c288f865eefa5e1fde8be443d9c2}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!m\+Data@{m\+Data}}
+\index{m\+Data@{m\+Data}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{m\+Data}{mData}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Blob\+::m\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpropertytypes.\+h の 321 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_blob_ac25ef6a057beb9d5f1d072a77833b910}\label{class_fbx_blob_ac25ef6a057beb9d5f1d072a77833b910}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!m\+Ref\+Count@{m\+Ref\+Count}}
+\index{m\+Ref\+Count@{m\+Ref\+Count}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{m\+Ref\+Count}{mRefCount}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Blob\+::m\+Ref\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpropertytypes.\+h の 320 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_blob_a3c92f0ad0ff306800df7be4d94ac7528}\label{class_fbx_blob_a3c92f0ad0ff306800df7be4d94ac7528}} 
+\index{Fbx\+Blob@{Fbx\+Blob}!m\+Size@{m\+Size}}
+\index{m\+Size@{m\+Size}!Fbx\+Blob@{Fbx\+Blob}}
+\subsubsection{\texorpdfstring{m\+Size}{mSize}}
+{\footnotesize\ttfamily int Fbx\+Blob\+::m\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpropertytypes.\+h の 322 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxpropertytypes_8h}{fbxpropertytypes.\+h}\end{DoxyCompactItemize}

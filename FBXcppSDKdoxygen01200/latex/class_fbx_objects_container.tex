@@ -1,0 +1,210 @@
+\hypertarget{class_fbx_objects_container}{}\section{Fbx\+Objects\+Container クラス}
+\label{class_fbx_objects_container}\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+
+
+{\ttfamily \#include $<$fbxobjectscontainer.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth} \{ \hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a8f0f79eb5473a347f5438586ef1d6874}{e\+Child\+Only}, 
+\hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a21904d2f9ea16c484da380962349eb83}{e\+Child\+And\+Sub\+Child}, 
+\hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a14f4e784039822e94a23b24d3f4c9bd5}{e\+Sub\+Child\+With\+No\+Scale\+Inherit}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_objects_container_a48d3e8b9458cd4ec7ba67c02b537f353}{Fbx\+Objects\+Container} ()
+\item 
+virtual \hyperlink{class_fbx_objects_container_a1c5d2be12ce25c7f996f16dcc0b98c35}{$\sim$\+Fbx\+Objects\+Container} ()
+\item 
+void \hyperlink{class_fbx_objects_container_a1d60cd980f37affb7bcb64f9cf53f710}{Extract\+Scene\+Objects} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth} p\+Depth, const \hyperlink{fbxobjectscontainer_8h_a74af631b21bcb9d44e73d3293bf785df}{Fbx\+Attribute\+Filters} \&p\+Filters)
+\item 
+void \hyperlink{class_fbx_objects_container_a7fdcdc24f3c61c3f2001b13f16d7528d}{Extract\+Scene\+Objects} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Root\+Node, \hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth} p\+Depth, const \hyperlink{fbxobjectscontainer_8h_a74af631b21bcb9d44e73d3293bf785df}{Fbx\+Attribute\+Filters} \&p\+Filters)
+\item 
+void \hyperlink{class_fbx_objects_container_aef67efbc03df0eb8c643a680bab44737}{Clear} ()
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ $>$ \hyperlink{class_fbx_objects_container_afc9a94566abf02db4959f4d2e4ec30a4}{m\+F\+CurvesT}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ $>$ \hyperlink{class_fbx_objects_container_ac8fd85a4ea028cfcd8012f4c0e3c215b}{m\+F\+CurvesR}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node} $\ast$ $>$ \hyperlink{class_fbx_objects_container_a97e083e6505a8ba39f596c8a3d708734}{m\+F\+CurvesS}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ $>$ \hyperlink{class_fbx_objects_container_a8d0ede6ba6ec874eb841593af719f063}{m\+Nodes}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_objects_container_aee1c40996023d5bc366599a64e609ccc}{Extract\+Nodes\+Anim\+Curve\+Nodes} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth} p\+Depth, const \hyperlink{fbxobjectscontainer_8h_a74af631b21bcb9d44e73d3293bf785df}{Fbx\+Attribute\+Filters} \&p\+Filters)
+\item 
+void \hyperlink{class_fbx_objects_container_a649c2ed49d0c9f7b06cd241ab1a35686}{Extract\+Anim\+Curve\+Nodes} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+bool \hyperlink{class_fbx_objects_container_aede371a48bdbbdf4095ea95fe314ebb8}{Inherits\+Scale} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_objects_container_a650407ad105a3029d29ac5b68e94b062}{m\+Start\+Node}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+
+
+ fbxobjectscontainer.\+h の 27 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}\label{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!E\+Depth@{E\+Depth}}
+\index{E\+Depth@{E\+Depth}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{E\+Depth}{EDepth}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{Fbx\+Objects\+Container\+::\+E\+Depth}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Child\+Only@{e\+Child\+Only}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!e\+Child\+Only@{e\+Child\+Only}}}\mbox{\Hypertarget{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a8f0f79eb5473a347f5438586ef1d6874}\label{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a8f0f79eb5473a347f5438586ef1d6874}} 
+e\+Child\+Only&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Child\+And\+Sub\+Child@{e\+Child\+And\+Sub\+Child}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!e\+Child\+And\+Sub\+Child@{e\+Child\+And\+Sub\+Child}}}\mbox{\Hypertarget{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a21904d2f9ea16c484da380962349eb83}\label{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a21904d2f9ea16c484da380962349eb83}} 
+e\+Child\+And\+Sub\+Child&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Sub\+Child\+With\+No\+Scale\+Inherit@{e\+Sub\+Child\+With\+No\+Scale\+Inherit}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!e\+Sub\+Child\+With\+No\+Scale\+Inherit@{e\+Sub\+Child\+With\+No\+Scale\+Inherit}}}\mbox{\Hypertarget{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a14f4e784039822e94a23b24d3f4c9bd5}\label{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5a14f4e784039822e94a23b24d3f4c9bd5}} 
+e\+Sub\+Child\+With\+No\+Scale\+Inherit&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxobjectscontainer.\+h の 30 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_objects_container_a48d3e8b9458cd4ec7ba67c02b537f353}\label{class_fbx_objects_container_a48d3e8b9458cd4ec7ba67c02b537f353}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Fbx\+Objects\+Container()}{FbxObjectsContainer()}}
+{\footnotesize\ttfamily Fbx\+Objects\+Container\+::\+Fbx\+Objects\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxobjectscontainer.\+h の 37 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_objects_container_a1c5d2be12ce25c7f996f16dcc0b98c35}\label{class_fbx_objects_container_a1c5d2be12ce25c7f996f16dcc0b98c35}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!````~Fbx\+Objects\+Container@{$\sim$\+Fbx\+Objects\+Container}}
+\index{````~Fbx\+Objects\+Container@{$\sim$\+Fbx\+Objects\+Container}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Objects\+Container()}{~FbxObjectsContainer()}}
+{\footnotesize\ttfamily virtual Fbx\+Objects\+Container\+::$\sim$\+Fbx\+Objects\+Container (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+ fbxobjectscontainer.\+h の 38 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_objects_container_aef67efbc03df0eb8c643a680bab44737}\label{class_fbx_objects_container_aef67efbc03df0eb8c643a680bab44737}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Objects\+Container\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxobjectscontainer.\+h の 53 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_objects_container_a649c2ed49d0c9f7b06cd241ab1a35686}\label{class_fbx_objects_container_a649c2ed49d0c9f7b06cd241ab1a35686}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Extract\+Anim\+Curve\+Nodes@{Extract\+Anim\+Curve\+Nodes}}
+\index{Extract\+Anim\+Curve\+Nodes@{Extract\+Anim\+Curve\+Nodes}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Extract\+Anim\+Curve\+Nodes()}{ExtractAnimCurveNodes()}}
+{\footnotesize\ttfamily void Fbx\+Objects\+Container\+::\+Extract\+Anim\+Curve\+Nodes (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_objects_container_aee1c40996023d5bc366599a64e609ccc}\label{class_fbx_objects_container_aee1c40996023d5bc366599a64e609ccc}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Extract\+Nodes\+Anim\+Curve\+Nodes@{Extract\+Nodes\+Anim\+Curve\+Nodes}}
+\index{Extract\+Nodes\+Anim\+Curve\+Nodes@{Extract\+Nodes\+Anim\+Curve\+Nodes}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Extract\+Nodes\+Anim\+Curve\+Nodes()}{ExtractNodesAnimCurveNodes()}}
+{\footnotesize\ttfamily void Fbx\+Objects\+Container\+::\+Extract\+Nodes\+Anim\+Curve\+Nodes (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth}}]{p\+Depth,  }\item[{const \hyperlink{fbxobjectscontainer_8h_a74af631b21bcb9d44e73d3293bf785df}{Fbx\+Attribute\+Filters} \&}]{p\+Filters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_objects_container_a1d60cd980f37affb7bcb64f9cf53f710}\label{class_fbx_objects_container_a1d60cd980f37affb7bcb64f9cf53f710}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Extract\+Scene\+Objects@{Extract\+Scene\+Objects}}
+\index{Extract\+Scene\+Objects@{Extract\+Scene\+Objects}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Extract\+Scene\+Objects()}{ExtractSceneObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Objects\+Container\+::\+Extract\+Scene\+Objects (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth}}]{p\+Depth,  }\item[{const \hyperlink{fbxobjectscontainer_8h_a74af631b21bcb9d44e73d3293bf785df}{Fbx\+Attribute\+Filters} \&}]{p\+Filters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_objects_container_a7fdcdc24f3c61c3f2001b13f16d7528d}\label{class_fbx_objects_container_a7fdcdc24f3c61c3f2001b13f16d7528d}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Extract\+Scene\+Objects@{Extract\+Scene\+Objects}}
+\index{Extract\+Scene\+Objects@{Extract\+Scene\+Objects}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Extract\+Scene\+Objects()}{ExtractSceneObjects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Objects\+Container\+::\+Extract\+Scene\+Objects (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Root\+Node,  }\item[{\hyperlink{class_fbx_objects_container_a70f47fef529be83cb1b45c0e067d73e5}{E\+Depth}}]{p\+Depth,  }\item[{const \hyperlink{fbxobjectscontainer_8h_a74af631b21bcb9d44e73d3293bf785df}{Fbx\+Attribute\+Filters} \&}]{p\+Filters }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_objects_container_aede371a48bdbbdf4095ea95fe314ebb8}\label{class_fbx_objects_container_aede371a48bdbbdf4095ea95fe314ebb8}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!Inherits\+Scale@{Inherits\+Scale}}
+\index{Inherits\+Scale@{Inherits\+Scale}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{Inherits\+Scale()}{InheritsScale()}}
+{\footnotesize\ttfamily bool Fbx\+Objects\+Container\+::\+Inherits\+Scale (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_objects_container_ac8fd85a4ea028cfcd8012f4c0e3c215b}\label{class_fbx_objects_container_ac8fd85a4ea028cfcd8012f4c0e3c215b}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!m\+F\+CurvesR@{m\+F\+CurvesR}}
+\index{m\+F\+CurvesR@{m\+F\+CurvesR}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{m\+F\+CurvesR}{mFCurvesR}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$$>$ Fbx\+Objects\+Container\+::m\+F\+CurvesR}
+
+
+
+ fbxobjectscontainer.\+h の 42 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_objects_container_a97e083e6505a8ba39f596c8a3d708734}\label{class_fbx_objects_container_a97e083e6505a8ba39f596c8a3d708734}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!m\+F\+CurvesS@{m\+F\+CurvesS}}
+\index{m\+F\+CurvesS@{m\+F\+CurvesS}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{m\+F\+CurvesS}{mFCurvesS}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$$>$ Fbx\+Objects\+Container\+::m\+F\+CurvesS}
+
+
+
+ fbxobjectscontainer.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_objects_container_afc9a94566abf02db4959f4d2e4ec30a4}\label{class_fbx_objects_container_afc9a94566abf02db4959f4d2e4ec30a4}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!m\+F\+CurvesT@{m\+F\+CurvesT}}
+\index{m\+F\+CurvesT@{m\+F\+CurvesT}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{m\+F\+CurvesT}{mFCurvesT}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_anim_curve_node}{Fbx\+Anim\+Curve\+Node}$\ast$$>$ Fbx\+Objects\+Container\+::m\+F\+CurvesT}
+
+
+
+ fbxobjectscontainer.\+h の 41 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_objects_container_a8d0ede6ba6ec874eb841593af719f063}\label{class_fbx_objects_container_a8d0ede6ba6ec874eb841593af719f063}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!m\+Nodes@{m\+Nodes}}
+\index{m\+Nodes@{m\+Nodes}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{m\+Nodes}{mNodes}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_node}{Fbx\+Node}$\ast$$>$ Fbx\+Objects\+Container\+::m\+Nodes}
+
+
+
+ fbxobjectscontainer.\+h の 46 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_objects_container_a650407ad105a3029d29ac5b68e94b062}\label{class_fbx_objects_container_a650407ad105a3029d29ac5b68e94b062}} 
+\index{Fbx\+Objects\+Container@{Fbx\+Objects\+Container}!m\+Start\+Node@{m\+Start\+Node}}
+\index{m\+Start\+Node@{m\+Start\+Node}!Fbx\+Objects\+Container@{Fbx\+Objects\+Container}}
+\subsubsection{\texorpdfstring{m\+Start\+Node}{mStartNode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Objects\+Container\+::m\+Start\+Node\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxobjectscontainer.\+h の 61 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxobjectscontainer_8h}{fbxobjectscontainer.\+h}\end{DoxyCompactItemize}

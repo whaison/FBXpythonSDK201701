@@ -1,0 +1,310 @@
+\hypertarget{class_fbx_status}{}\section{Fbx\+Status クラス}
+\label{class_fbx_status}\index{Fbx\+Status@{Fbx\+Status}}
+
+
+{\ttfamily \#include $<$fbxstatus.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} \{ \newline
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca2b9268ddcf14e019fdc7f0ba7d0c8c65}{e\+Success} = 0, 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca82a312d3d317510ac68036063f925bc6}{e\+Failure}, 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca01fdc2630da56d2572b505ca8c19cb65}{e\+Insufficient\+Memory}, 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca11e1b245afeb838408e7a7797a5e09ae}{e\+Invalid\+Parameter}, 
+\newline
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca799b1782f07189a0a2fb51763a57cca6}{e\+Index\+Out\+Of\+Range}, 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809eccaac3f30237566cb5a030bc0366afb5131}{e\+Password\+Error}, 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca9af08cdb4d0c4db0a7969e5ad4e4ede1}{e\+Invalid\+File\+Version}, 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca09c6c98d4cb558de5efc53f60368f082}{e\+Invalid\+File}, 
+\newline
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809eccaefa45d20d51d4d33a02abc2adf646025}{e\+Scene\+Check\+Fail}
+ \}\begin{DoxyCompactList}\small\item\em Available status codes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_status_aab737630a70f9f68c4cf4ee136b42971}{Fbx\+Status} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_status_aec4436e434f39c73dd3e4dfb784c14b0}{Fbx\+Status} (\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} p\+Code)
+\item 
+\hyperlink{class_fbx_status_a6e535b54d854836d79e5a0d4ccac3fd7}{Fbx\+Status} (const \hyperlink{class_fbx_status}{Fbx\+Status} \&rhs)
+\item 
+\hyperlink{class_fbx_status}{Fbx\+Status} \& \hyperlink{class_fbx_status_a014bcc7b3ccd713f98f87d9eac77b579}{operator=} (const \hyperlink{class_fbx_status}{Fbx\+Status} \&rhs)
+\item 
+bool \hyperlink{class_fbx_status_a7dfb7606bdb3fb0df2cceb9edc01c4df}{operator==} (const \hyperlink{class_fbx_status}{Fbx\+Status} \&rhs) const
+\item 
+bool \hyperlink{class_fbx_status_aaee475035201b4873ce60261e8a92072}{operator==} (const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} p\+Code) const
+\item 
+bool \hyperlink{class_fbx_status_a832f10e5d0469a191a0cd845c60525b3}{operator!=} (const \hyperlink{class_fbx_status}{Fbx\+Status} \&rhs) const
+\item 
+bool \hyperlink{class_fbx_status_a1f05b05e754a2a8f763f567b0b458010}{operator!=} (const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} rhs) const
+\item 
+\hyperlink{class_fbx_status_af364552fc78b2b02f09bc7dcccbbbe92}{operator bool} () const
+\item 
+bool \hyperlink{class_fbx_status_ab698013e2bdef14baef8842d0dfa00ea}{Error} () const
+\item 
+void \hyperlink{class_fbx_status_ae99f70d26d755bb65af9593cf515a4ed}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear error code and message from the instance. After this call, it will behave as if it contained e\+Success. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} \hyperlink{class_fbx_status_a342ecfe81651d2c99785cac9592a41dc}{Get\+Code} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the type of error that occurred, as specified in the enumeration. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_status_a906fe62e4753eb13571c359daf07cbf3}{Set\+Code} (const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} rhs)
+\item 
+void \hyperlink{class_fbx_status_a6991ae689fa0c9f5f72449f531772deb}{Set\+Code} (const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} rhs, const char $\ast$p\+Error\+Msg,...)
+\item 
+const char $\ast$ \hyperlink{class_fbx_status_aa36b462a6c63105538c483518415fb66}{Get\+Error\+String} () const
+\begin{DoxyCompactList}\small\item\em Get the error message string corresponding to the current code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class facilitates the testing/reporting of errors. It encapsulates the status code and the internal F\+B\+X\+S\+DK error code as returned by the A\+PI functions. 
+
+ fbxstatus.\+h の 26 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}} 
+\index{Fbx\+Status@{Fbx\+Status}!E\+Status\+Code@{E\+Status\+Code}}
+\index{E\+Status\+Code@{E\+Status\+Code}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{E\+Status\+Code}{EStatusCode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{Fbx\+Status\+::\+E\+Status\+Code}}
+
+
+
+Available status codes. 
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Success@{e\+Success}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Success@{e\+Success}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca2b9268ddcf14e019fdc7f0ba7d0c8c65}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca2b9268ddcf14e019fdc7f0ba7d0c8c65}} 
+e\+Success&Operation was successful \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Failure@{e\+Failure}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Failure@{e\+Failure}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca82a312d3d317510ac68036063f925bc6}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca82a312d3d317510ac68036063f925bc6}} 
+e\+Failure&Operation failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Insufficient\+Memory@{e\+Insufficient\+Memory}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Insufficient\+Memory@{e\+Insufficient\+Memory}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca01fdc2630da56d2572b505ca8c19cb65}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca01fdc2630da56d2572b505ca8c19cb65}} 
+e\+Insufficient\+Memory&Operation failed due to insufficient memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Invalid\+Parameter@{e\+Invalid\+Parameter}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Invalid\+Parameter@{e\+Invalid\+Parameter}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca11e1b245afeb838408e7a7797a5e09ae}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca11e1b245afeb838408e7a7797a5e09ae}} 
+e\+Invalid\+Parameter&An invalid parameter was provided \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Index\+Out\+Of\+Range@{e\+Index\+Out\+Of\+Range}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Index\+Out\+Of\+Range@{e\+Index\+Out\+Of\+Range}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca799b1782f07189a0a2fb51763a57cca6}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca799b1782f07189a0a2fb51763a57cca6}} 
+e\+Index\+Out\+Of\+Range&Index value outside the valid range \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Password\+Error@{e\+Password\+Error}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Password\+Error@{e\+Password\+Error}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809eccaac3f30237566cb5a030bc0366afb5131}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809eccaac3f30237566cb5a030bc0366afb5131}} 
+e\+Password\+Error&Operation on F\+BX file password failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Invalid\+File\+Version@{e\+Invalid\+File\+Version}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Invalid\+File\+Version@{e\+Invalid\+File\+Version}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca9af08cdb4d0c4db0a7969e5ad4e4ede1}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca9af08cdb4d0c4db0a7969e5ad4e4ede1}} 
+e\+Invalid\+File\+Version&File version not supported (anymore or yet) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Invalid\+File@{e\+Invalid\+File}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Invalid\+File@{e\+Invalid\+File}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca09c6c98d4cb558de5efc53f60368f082}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecca09c6c98d4cb558de5efc53f60368f082}} 
+e\+Invalid\+File&Operation on the file access failed \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Scene\+Check\+Fail@{e\+Scene\+Check\+Fail}!Fbx\+Status@{Fbx\+Status}}\index{Fbx\+Status@{Fbx\+Status}!e\+Scene\+Check\+Fail@{e\+Scene\+Check\+Fail}}}\mbox{\Hypertarget{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809eccaefa45d20d51d4d33a02abc2adf646025}\label{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809eccaefa45d20d51d4d33a02abc2adf646025}} 
+e\+Scene\+Check\+Fail&Scene validation failure \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxstatus.\+h の 32 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_status_aab737630a70f9f68c4cf4ee136b42971}\label{class_fbx_status_aab737630a70f9f68c4cf4ee136b42971}} 
+\index{Fbx\+Status@{Fbx\+Status}!Fbx\+Status@{Fbx\+Status}}
+\index{Fbx\+Status@{Fbx\+Status}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Fbx\+Status()}{FbxStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Fbx\+Status\+::\+Fbx\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_fbx_status_aec4436e434f39c73dd3e4dfb784c14b0}\label{class_fbx_status_aec4436e434f39c73dd3e4dfb784c14b0}} 
+\index{Fbx\+Status@{Fbx\+Status}!Fbx\+Status@{Fbx\+Status}}
+\index{Fbx\+Status@{Fbx\+Status}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Fbx\+Status()}{FbxStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Fbx\+Status\+::\+Fbx\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code}}]{p\+Code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_status_a6e535b54d854836d79e5a0d4ccac3fd7}\label{class_fbx_status_a6e535b54d854836d79e5a0d4ccac3fd7}} 
+\index{Fbx\+Status@{Fbx\+Status}!Fbx\+Status@{Fbx\+Status}}
+\index{Fbx\+Status@{Fbx\+Status}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Fbx\+Status()}{FbxStatus()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Fbx\+Status\+::\+Fbx\+Status (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status}{Fbx\+Status} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_status_ae99f70d26d755bb65af9593cf515a4ed}\label{class_fbx_status_ae99f70d26d755bb65af9593cf515a4ed}} 
+\index{Fbx\+Status@{Fbx\+Status}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Status\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear error code and message from the instance. After this call, it will behave as if it contained e\+Success. 
+
+\mbox{\Hypertarget{class_fbx_status_ab698013e2bdef14baef8842d0dfa00ea}\label{class_fbx_status_ab698013e2bdef14baef8842d0dfa00ea}} 
+\index{Fbx\+Status@{Fbx\+Status}!Error@{Error}}
+\index{Error@{Error}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Error()}{Error()}}
+{\footnotesize\ttfamily bool Fbx\+Status\+::\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determines whether there is an error. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if an error occured and {\ttfamily False} if the operation was sucessful. 
+\end{DoxyReturn}
+
+
+ fbxstatus.\+h の 82 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_a342ecfe81651d2c99785cac9592a41dc}\label{class_fbx_status_a342ecfe81651d2c99785cac9592a41dc}} 
+\index{Fbx\+Status@{Fbx\+Status}!Get\+Code@{Get\+Code}}
+\index{Get\+Code@{Get\+Code}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Get\+Code()}{GetCode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code} Fbx\+Status\+::\+Get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the type of error that occurred, as specified in the enumeration. 
+
+
+
+ fbxstatus.\+h の 88 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_aa36b462a6c63105538c483518415fb66}\label{class_fbx_status_aa36b462a6c63105538c483518415fb66}} 
+\index{Fbx\+Status@{Fbx\+Status}!Get\+Error\+String@{Get\+Error\+String}}
+\index{Get\+Error\+String@{Get\+Error\+String}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Get\+Error\+String()}{GetErrorString()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Status\+::\+Get\+Error\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the error message string corresponding to the current code. 
+
+\mbox{\Hypertarget{class_fbx_status_af364552fc78b2b02f09bc7dcccbbbe92}\label{class_fbx_status_af364552fc78b2b02f09bc7dcccbbbe92}} 
+\index{Fbx\+Status@{Fbx\+Status}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Fbx\+Status\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+The conversion operator that converts a \hyperlink{class_fbx_status}{Fbx\+Status} object to bool. The result it returns will be {\ttfamily True} if the \hyperlink{class_fbx_status}{Fbx\+Status} does not contain an error, and {\ttfamily False} if it does. 
+
+ fbxstatus.\+h の 77 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_a832f10e5d0469a191a0cd845c60525b3}\label{class_fbx_status_a832f10e5d0469a191a0cd845c60525b3}} 
+\index{Fbx\+Status@{Fbx\+Status}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Status\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status}{Fbx\+Status} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Non-\/\+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em rhs} & Status object to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if at least one member of {\itshape rhs} is not equal to this instance member and {\ttfamily True} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxstatus.\+h の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_a1f05b05e754a2a8f763f567b0b458010}\label{class_fbx_status_a1f05b05e754a2a8f763f567b0b458010}} 
+\index{Fbx\+Status@{Fbx\+Status}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Status\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code}}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Non-\/\+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em rhs} & Status code to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the code member of this instance equals {\itshape rhs} and {\ttfamily False} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxstatus.\+h の 71 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_a014bcc7b3ccd713f98f87d9eac77b579}\label{class_fbx_status_a014bcc7b3ccd713f98f87d9eac77b579}} 
+\index{Fbx\+Status@{Fbx\+Status}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_status}{Fbx\+Status}\& Fbx\+Status\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status}{Fbx\+Status} \&}]{rhs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_status_a7dfb7606bdb3fb0df2cceb9edc01c4df}\label{class_fbx_status_a7dfb7606bdb3fb0df2cceb9edc01c4df}} 
+\index{Fbx\+Status@{Fbx\+Status}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Status\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status}{Fbx\+Status} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em rhs} & Status object to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if all the members of {\itshape rhs} are equal to this instance members and {\ttfamily False} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxstatus.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_aaee475035201b4873ce60261e8a92072}\label{class_fbx_status_aaee475035201b4873ce60261e8a92072}} 
+\index{Fbx\+Status@{Fbx\+Status}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Status\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code}}]{p\+Code }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Code} & Status code to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the code member of this instance equals {\itshape p\+Code} and {\ttfamily False} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxstatus.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_status_a906fe62e4753eb13571c359daf07cbf3}\label{class_fbx_status_a906fe62e4753eb13571c359daf07cbf3}} 
+\index{Fbx\+Status@{Fbx\+Status}!Set\+Code@{Set\+Code}}
+\index{Set\+Code@{Set\+Code}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Set\+Code()}{SetCode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Status\+::\+Set\+Code (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code}}]{rhs }\end{DoxyParamCaption})}
+
+Change the current code of the instance. 
+\begin{DoxyParams}{引数}
+{\em rhs} & New code value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_status_a6991ae689fa0c9f5f72449f531772deb}\label{class_fbx_status_a6991ae689fa0c9f5f72449f531772deb}} 
+\index{Fbx\+Status@{Fbx\+Status}!Set\+Code@{Set\+Code}}
+\index{Set\+Code@{Set\+Code}!Fbx\+Status@{Fbx\+Status}}
+\subsubsection{\texorpdfstring{Set\+Code()}{SetCode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Status\+::\+Set\+Code (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_status_a6a631d5d95b28e31a19aabd5f5809ecc}{E\+Status\+Code}}]{rhs,  }\item[{const char $\ast$}]{p\+Error\+Msg,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+Change the current code of the instance. 
+\begin{DoxyParams}{引数}
+{\em rhs} & New code value. \\
+\hline
+{\em p\+Error\+Msg} & Optional error description string. This string can have formatting characters The function will use the vsnprintf function to assemble the final string using an internal buffer of 4096 characters. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxstatus_8h}{fbxstatus.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,251 @@
+\hypertarget{class_fbx_thread}{}\section{Fbx\+Thread クラス}
+\label{class_fbx_thread}\index{Fbx\+Thread@{Fbx\+Thread}}
+
+
+{\ttfamily \#include $<$fbxthread.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ff}{E\+State} \{ \hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffa7f6b0ac2980557bf8caec0ef4358fa2b}{e\+Unknown}, 
+\hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffaa1f5be66ae4462a8a3c14ed992694ef6}{e\+Running}, 
+\hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffaefbf269eef72eafe1490b5763e371ef7}{e\+Dead}
+ \}
+\item 
+enum \hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority} \{ \newline
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a486f95ff1bf1e4b7e5a91a2dbb599ce2}{e\+None}, 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2ab86476336f21b901f6d8565d34d491d1}{e\+Idle}, 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a61388ca111b65f21b9827f4ab2e83f80}{e\+Lowest}, 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2ad9ca31e9e733dae665c4686c1fe2eeb8}{e\+Low}, 
+\newline
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a8492d4d5399f261abe00d5645e496027}{e\+Normal}, 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2afbf320e49b66d3d74630034e2d85bd1b}{e\+High}, 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2adc9f3aeca8cedcbd2beddad919b31855}{e\+Highest}, 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a4a30e49c3822b1307c03a04c958acbcc}{e\+Real\+Time}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_thread_ae95d08575b6b014f703d41c2a5b4ac4f}{Fbx\+Thread} (\hyperlink{fbxthread_8h_a3532e8b93c1a30a69124bf8d89280573}{Fbx\+Thread\+Proc} p\+Proc, void $\ast$p\+Arg, bool p\+Suspend=false)
+\item 
+\hyperlink{class_fbx_thread_a650dcba123703d9da75a2223453d4fd9}{Fbx\+Thread} (\hyperlink{fbxthread_8h_a3532e8b93c1a30a69124bf8d89280573}{Fbx\+Thread\+Proc} p\+Proc, void $\ast$p\+Arg, \hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority} p\+Priority, bool p\+Suspend=false)
+\item 
+virtual \hyperlink{class_fbx_thread_a1d367585d9ee649aefc1ad6d3625bbfe}{$\sim$\+Fbx\+Thread} ()
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_thread_a41702b06399443c91e60c70be333d2a5}{Suspend} ()
+\item 
+bool \hyperlink{class_fbx_thread_a829e856a545af8ca53ac10241f5388fc}{Resume} ()
+\item 
+bool \hyperlink{class_fbx_thread_a784d4eb2cd3ca88f9f9283c1488467fa}{Join} ()
+\item 
+bool \hyperlink{class_fbx_thread_a24115ea67bd15a8181051693aef22ba1}{Kill} ()
+\item 
+\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority} \hyperlink{class_fbx_thread_a6c7859fdc523e2a4628931a0daf139d0}{Get\+Priority} ()
+\item 
+bool \hyperlink{class_fbx_thread_a3aad216865d1009cd14bedfcd31bd79e}{Set\+Priority} (\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority} p\+Priority)
+\item 
+\hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ff}{E\+State} \hyperlink{class_fbx_thread_a49873956e4054a30dc7e5cc5766b74ca}{Get\+State} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class implement a standard way to use threads across platforms. 
+
+ fbxthread.\+h の 29 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!E\+Priority@{E\+Priority}}
+\index{E\+Priority@{E\+Priority}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{E\+Priority}{EPriority}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{Fbx\+Thread\+::\+E\+Priority}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a486f95ff1bf1e4b7e5a91a2dbb599ce2}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a486f95ff1bf1e4b7e5a91a2dbb599ce2}} 
+e\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Idle@{e\+Idle}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Idle@{e\+Idle}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2ab86476336f21b901f6d8565d34d491d1}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2ab86476336f21b901f6d8565d34d491d1}} 
+e\+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Lowest@{e\+Lowest}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Lowest@{e\+Lowest}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a61388ca111b65f21b9827f4ab2e83f80}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a61388ca111b65f21b9827f4ab2e83f80}} 
+e\+Lowest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Low@{e\+Low}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Low@{e\+Low}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2ad9ca31e9e733dae665c4686c1fe2eeb8}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2ad9ca31e9e733dae665c4686c1fe2eeb8}} 
+e\+Low&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Normal@{e\+Normal}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Normal@{e\+Normal}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a8492d4d5399f261abe00d5645e496027}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a8492d4d5399f261abe00d5645e496027}} 
+e\+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+High@{e\+High}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+High@{e\+High}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2afbf320e49b66d3d74630034e2d85bd1b}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2afbf320e49b66d3d74630034e2d85bd1b}} 
+e\+High&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Highest@{e\+Highest}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Highest@{e\+Highest}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2adc9f3aeca8cedcbd2beddad919b31855}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2adc9f3aeca8cedcbd2beddad919b31855}} 
+e\+Highest&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Real\+Time@{e\+Real\+Time}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Real\+Time@{e\+Real\+Time}}}\mbox{\Hypertarget{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a4a30e49c3822b1307c03a04c958acbcc}\label{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2a4a30e49c3822b1307c03a04c958acbcc}} 
+e\+Real\+Time&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxthread.\+h の 33 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ff}\label{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ff}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!E\+State@{E\+State}}
+\index{E\+State@{E\+State}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{E\+State}{EState}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ff}{Fbx\+Thread\+::\+E\+State}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown@{e\+Unknown}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Unknown@{e\+Unknown}}}\mbox{\Hypertarget{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffa7f6b0ac2980557bf8caec0ef4358fa2b}\label{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffa7f6b0ac2980557bf8caec0ef4358fa2b}} 
+e\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Running@{e\+Running}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Running@{e\+Running}}}\mbox{\Hypertarget{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffaa1f5be66ae4462a8a3c14ed992694ef6}\label{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffaa1f5be66ae4462a8a3c14ed992694ef6}} 
+e\+Running&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Dead@{e\+Dead}!Fbx\+Thread@{Fbx\+Thread}}\index{Fbx\+Thread@{Fbx\+Thread}!e\+Dead@{e\+Dead}}}\mbox{\Hypertarget{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffaefbf269eef72eafe1490b5763e371ef7}\label{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ffaefbf269eef72eafe1490b5763e371ef7}} 
+e\+Dead&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxthread.\+h の 32 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_thread_ae95d08575b6b014f703d41c2a5b4ac4f}\label{class_fbx_thread_ae95d08575b6b014f703d41c2a5b4ac4f}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Fbx\+Thread@{Fbx\+Thread}}
+\index{Fbx\+Thread@{Fbx\+Thread}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Fbx\+Thread()}{FbxThread()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Thread\+::\+Fbx\+Thread (\begin{DoxyParamCaption}\item[{\hyperlink{fbxthread_8h_a3532e8b93c1a30a69124bf8d89280573}{Fbx\+Thread\+Proc}}]{p\+Proc,  }\item[{void $\ast$}]{p\+Arg,  }\item[{bool}]{p\+Suspend = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{引数}
+{\em p\+Proc} & The procedure called upon thread startup. \\
+\hline
+{\em p\+Arg} & The arguments passed to the procedure. \\
+\hline
+{\em p\+Suspend} & Start the thread suspended. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_thread_a650dcba123703d9da75a2223453d4fd9}\label{class_fbx_thread_a650dcba123703d9da75a2223453d4fd9}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Fbx\+Thread@{Fbx\+Thread}}
+\index{Fbx\+Thread@{Fbx\+Thread}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Fbx\+Thread()}{FbxThread()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Thread\+::\+Fbx\+Thread (\begin{DoxyParamCaption}\item[{\hyperlink{fbxthread_8h_a3532e8b93c1a30a69124bf8d89280573}{Fbx\+Thread\+Proc}}]{p\+Proc,  }\item[{void $\ast$}]{p\+Arg,  }\item[{\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority}}]{p\+Priority,  }\item[{bool}]{p\+Suspend = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor 
+\begin{DoxyParams}{引数}
+{\em p\+Proc} & The procedure called upon thread startup. \\
+\hline
+{\em p\+Arg} & The arguments passed to the procedure. \\
+\hline
+{\em p\+Priority} & The thread priority to set upon creation. \\
+\hline
+{\em p\+Suspend} & Start the thread suspended. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_thread_a1d367585d9ee649aefc1ad6d3625bbfe}\label{class_fbx_thread_a1d367585d9ee649aefc1ad6d3625bbfe}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!````~Fbx\+Thread@{$\sim$\+Fbx\+Thread}}
+\index{````~Fbx\+Thread@{$\sim$\+Fbx\+Thread}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Thread()}{~FbxThread()}}
+{\footnotesize\ttfamily virtual Fbx\+Thread\+::$\sim$\+Fbx\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_thread_a6c7859fdc523e2a4628931a0daf139d0}\label{class_fbx_thread_a6c7859fdc523e2a4628931a0daf139d0}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Get\+Priority@{Get\+Priority}}
+\index{Get\+Priority@{Get\+Priority}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Get\+Priority()}{GetPriority()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority} Fbx\+Thread\+::\+Get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the priority of the thread. \begin{DoxyReturn}{戻り値}
+The thread\textquotesingle{}s priority. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_thread_a49873956e4054a30dc7e5cc5766b74ca}\label{class_fbx_thread_a49873956e4054a30dc7e5cc5766b74ca}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Get\+State@{Get\+State}}
+\index{Get\+State@{Get\+State}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Get\+State()}{GetState()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_thread_a82f55f0fc5f947d4357c8175d05782ff}{E\+State} Fbx\+Thread\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the thread current state. \begin{DoxyReturn}{戻り値}
+The state of the thread. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_thread_a784d4eb2cd3ca88f9f9283c1488467fa}\label{class_fbx_thread_a784d4eb2cd3ca88f9f9283c1488467fa}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Join@{Join}}
+\index{Join@{Join}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Join()}{Join()}}
+{\footnotesize\ttfamily bool Fbx\+Thread\+::\+Join (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Wait for the thread completion. \begin{DoxyReturn}{戻り値}
+True if the thread successfully returned from its procedure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_thread_a24115ea67bd15a8181051693aef22ba1}\label{class_fbx_thread_a24115ea67bd15a8181051693aef22ba1}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Kill@{Kill}}
+\index{Kill@{Kill}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Kill()}{Kill()}}
+{\footnotesize\ttfamily bool Fbx\+Thread\+::\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Do not wait for the thread completion and terminate it. \begin{DoxyReturn}{戻り値}
+True if the thread successfully died. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_thread_a829e856a545af8ca53ac10241f5388fc}\label{class_fbx_thread_a829e856a545af8ca53ac10241f5388fc}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Resume@{Resume}}
+\index{Resume@{Resume}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Resume()}{Resume()}}
+{\footnotesize\ttfamily bool Fbx\+Thread\+::\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resume the execution of the thread. \begin{DoxyReturn}{戻り値}
+Return true if the thread was successfully resumed, otherwise false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_thread_a3aad216865d1009cd14bedfcd31bd79e}\label{class_fbx_thread_a3aad216865d1009cd14bedfcd31bd79e}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Set\+Priority@{Set\+Priority}}
+\index{Set\+Priority@{Set\+Priority}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Set\+Priority()}{SetPriority()}}
+{\footnotesize\ttfamily bool Fbx\+Thread\+::\+Set\+Priority (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_thread_a1b7d46235dd8589e03f7a29777f083f2}{E\+Priority}}]{p\+Priority }\end{DoxyParamCaption})}
+
+Set the thread priority. 
+\begin{DoxyParams}{引数}
+{\em p\+Priority} & The priority to set to this thread. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the thread priority was successfully changed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_thread_a41702b06399443c91e60c70be333d2a5}\label{class_fbx_thread_a41702b06399443c91e60c70be333d2a5}} 
+\index{Fbx\+Thread@{Fbx\+Thread}!Suspend@{Suspend}}
+\index{Suspend@{Suspend}!Fbx\+Thread@{Fbx\+Thread}}
+\subsubsection{\texorpdfstring{Suspend()}{Suspend()}}
+{\footnotesize\ttfamily bool Fbx\+Thread\+::\+Suspend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Suspend the execution of the thread. \begin{DoxyReturn}{戻り値}
+Return true if the thread was successfully suspended, otherwise false. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+It should be used only if you can control where the thread will be suspended in its procedure, otherwise the state of the thread and its memory is unknown, since the code will stop anywhere. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/sync/\hyperlink{fbxthread_8h}{fbxthread.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,306 @@
+\hypertarget{class_custom_stream_class}{}\section{Custom\+Stream\+Class クラス}
+\label{class_custom_stream_class}\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+Custom\+Stream\+Class の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_custom_stream_class}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_custom_stream_class_ad41bc5e727544febeb587de0717126fc}{Custom\+Stream\+Class} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Sdk\+Manager, const char $\ast$mode)
+\item 
+\hyperlink{class_custom_stream_class_a7bf1141f1e3a335cbe1c88f15c6e3cb1}{$\sim$\+Custom\+Stream\+Class} ()
+\item 
+virtual \hyperlink{class_fbx_stream_adc469d38eb30339fa4190eb6c66ec8f7}{E\+State} \hyperlink{class_custom_stream_class_a75de6f5f3a8ea2d51a40ebfa34f20448}{Get\+State} ()
+\item 
+virtual bool \hyperlink{class_custom_stream_class_ade734834eb279b5b3fde05b6fb3cb352}{Open} (void $\ast$)
+\item 
+virtual bool \hyperlink{class_custom_stream_class_a8871348021c69d6912a12298626195f6}{Close} ()
+\item 
+virtual bool \hyperlink{class_custom_stream_class_a4b5d2980af50604d2cb5ec900ef8488a}{Flush} ()
+\item 
+virtual int \hyperlink{class_custom_stream_class_a952b5466395a669fb9f8458faf2f3046}{Write} (const void $\ast$p\+Data, int p\+Size)
+\item 
+virtual int \hyperlink{class_custom_stream_class_a4b1260bd3c889278862f794ca9280bcb}{Read} (void $\ast$p\+Data, int p\+Size) const
+\item 
+virtual int \hyperlink{class_custom_stream_class_a7587c69f5f569528a3084d3919fa21f9}{Get\+Reader\+ID} () const
+\item 
+virtual int \hyperlink{class_custom_stream_class_a4fec56a5a7f65604c6e3eb2ce66fb3fb}{Get\+Writer\+ID} () const
+\item 
+void \hyperlink{class_custom_stream_class_aa4b267f0e7bb68f020bf53ac3a7a316e}{Seek} (const \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} \&p\+Offset, const \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}{Fbx\+File\+::\+E\+Seek\+Pos} \&p\+Seek\+Pos)
+\item 
+virtual long \hyperlink{class_custom_stream_class_ad8b406d43faa137290bf9527badeb27d}{Get\+Position} () const
+\item 
+virtual void \hyperlink{class_custom_stream_class_a93d790e1ed854c5383b7854719e2f2c8}{Set\+Position} (long p\+Position)
+\item 
+virtual int \hyperlink{class_custom_stream_class_a127e5bdb249b98bf93fb50b3731747a6}{Get\+Error} () const
+\item 
+virtual void \hyperlink{class_custom_stream_class_a4eb6319d8b82c6f520465e90f0165449}{Clear\+Error} ()
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+
+
+ main.\+cxx の 25 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_custom_stream_class_ad41bc5e727544febeb587de0717126fc}\label{class_custom_stream_class_ad41bc5e727544febeb587de0717126fc}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Custom\+Stream\+Class()}{CustomStreamClass()}}
+{\footnotesize\ttfamily Custom\+Stream\+Class\+::\+Custom\+Stream\+Class (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Sdk\+Manager,  }\item[{const char $\ast$}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ main.\+cxx の 28 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a7bf1141f1e3a335cbe1c88f15c6e3cb1}\label{class_custom_stream_class_a7bf1141f1e3a335cbe1c88f15c6e3cb1}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!````~Custom\+Stream\+Class@{$\sim$\+Custom\+Stream\+Class}}
+\index{````~Custom\+Stream\+Class@{$\sim$\+Custom\+Stream\+Class}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{$\sim$\+Custom\+Stream\+Class()}{~CustomStreamClass()}}
+{\footnotesize\ttfamily Custom\+Stream\+Class\+::$\sim$\+Custom\+Stream\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ main.\+cxx の 53 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_custom_stream_class_a4eb6319d8b82c6f520465e90f0165449}\label{class_custom_stream_class_a4eb6319d8b82c6f520465e90f0165449}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Clear\+Error@{Clear\+Error}}
+\index{Clear\+Error@{Clear\+Error}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Clear\+Error()}{ClearError()}}
+{\footnotesize\ttfamily virtual void Custom\+Stream\+Class\+::\+Clear\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Clear current error condition by setting the current error value to 0. 
+
+\hyperlink{class_fbx_stream_ad90dfab257677bb8cd62efb9d65d3a02}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 169 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a8871348021c69d6912a12298626195f6}\label{class_custom_stream_class_a8871348021c69d6912a12298626195f6}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Close@{Close}}
+\index{Close@{Close}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Close()}{Close()}}
+{\footnotesize\ttfamily virtual bool Custom\+Stream\+Class\+::\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Close the stream. \begin{DoxyReturn}{戻り値}
+True if successful. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_stream_a6779ab0ccbe8e14e5cf5cf47f5206519}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a4b5d2980af50604d2cb5ec900ef8488a}\label{class_custom_stream_class_a4b5d2980af50604d2cb5ec900ef8488a}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Flush@{Flush}}
+\index{Flush@{Flush}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Flush()}{Flush()}}
+{\footnotesize\ttfamily virtual bool Custom\+Stream\+Class\+::\+Flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Empties the internal data of the stream. \begin{DoxyReturn}{戻り値}
+True if successful. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_stream_a9174d1c9a10e7f0f6f283c6b7f9a1dce}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 96 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a127e5bdb249b98bf93fb50b3731747a6}\label{class_custom_stream_class_a127e5bdb249b98bf93fb50b3731747a6}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Get\+Error@{Get\+Error}}
+\index{Get\+Error@{Get\+Error}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Get\+Error()}{GetError()}}
+{\footnotesize\ttfamily virtual int Custom\+Stream\+Class\+::\+Get\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return 0 if no errors occurred. Otherwise, return 1 to indicate an error. This method will be invoked whenever F\+BX needs to verify that the last operation succeeded. 
+
+\hyperlink{class_fbx_stream_adec0d602a55d05e923980e048b8d5b54}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_ad8b406d43faa137290bf9527badeb27d}\label{class_custom_stream_class_ad8b406d43faa137290bf9527badeb27d}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Get\+Position@{Get\+Position}}
+\index{Get\+Position@{Get\+Position}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Get\+Position()}{GetPosition()}}
+{\footnotesize\ttfamily virtual long Custom\+Stream\+Class\+::\+Get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get the current stream position. \begin{DoxyReturn}{戻り値}
+Current number of bytes from the beginning of the stream. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_stream_aa63da9f62321748910acaa808322a794}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 151 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a7587c69f5f569528a3084d3919fa21f9}\label{class_custom_stream_class_a7587c69f5f569528a3084d3919fa21f9}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Get\+Reader\+ID@{Get\+Reader\+ID}}
+\index{Get\+Reader\+ID@{Get\+Reader\+ID}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Get\+Reader\+I\+D()}{GetReaderID()}}
+{\footnotesize\ttfamily virtual int Custom\+Stream\+Class\+::\+Get\+Reader\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+If not specified by K\+Fbx\+Importer\+::\+Initialize(), the importer will ask the stream to select an appropriate reader ID to associate with the stream. \hyperlink{class_fbx_i_o_plugin_registry}{Fbx\+I\+O\+Plugin\+Registry} can be used to locate id by extension or description. Return -\/1 to allow F\+BX to select an appropriate default. 
+
+\hyperlink{class_fbx_stream_ae2a7513a648cde508d00f5172ba2843d}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a75de6f5f3a8ea2d51a40ebfa34f20448}\label{class_custom_stream_class_a75de6f5f3a8ea2d51a40ebfa34f20448}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Get\+State@{Get\+State}}
+\index{Get\+State@{Get\+State}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Get\+State()}{GetState()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_stream_adc469d38eb30339fa4190eb6c66ec8f7}{E\+State} Custom\+Stream\+Class\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Query the current state of the stream. 
+
+\hyperlink{class_fbx_stream_a602172d138a0fc5c4cb3443b2b925296}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 58 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a4fec56a5a7f65604c6e3eb2ce66fb3fb}\label{class_custom_stream_class_a4fec56a5a7f65604c6e3eb2ce66fb3fb}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Get\+Writer\+ID@{Get\+Writer\+ID}}
+\index{Get\+Writer\+ID@{Get\+Writer\+ID}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Get\+Writer\+I\+D()}{GetWriterID()}}
+{\footnotesize\ttfamily virtual int Custom\+Stream\+Class\+::\+Get\+Writer\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+If not specified by K\+Fbx\+Exporter\+::\+Initialize(), the exporter will ask the stream to select an appropriate writer ID to associate with the stream. K\+Fbx\+I\+O\+Plugin\+Registry can be used to locate id by extension or description. Return -\/1 to allow F\+BX to select an appropriate default. 
+
+\hyperlink{class_fbx_stream_af39d714bf396c28252772b5d8e7caa47}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 130 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_ade734834eb279b5b3fde05b6fb3cb352}\label{class_custom_stream_class_ade734834eb279b5b3fde05b6fb3cb352}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Open@{Open}}
+\index{Open@{Open}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Open()}{Open()}}
+{\footnotesize\ttfamily virtual bool Custom\+Stream\+Class\+::\+Open (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Open the stream. \begin{DoxyReturn}{戻り値}
+True if successful. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_stream_ab8b3c6e904344c1b1d74e457ae8a74e7}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 66 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a4b1260bd3c889278862f794ca9280bcb}\label{class_custom_stream_class_a4b1260bd3c889278862f794ca9280bcb}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Read@{Read}}
+\index{Read@{Read}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily virtual int Custom\+Stream\+Class\+::\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Data,  }\item[{int}]{p\+Size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Read bytes from the stream and store them in the memory block. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & Pointer to the memory block where the read bytes are stored. \\
+\hline
+{\em p\+Size} & Number of bytes read from the stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The actual number of bytes successfully read from the stream. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_stream_a2621d456bfda1f0e4e3492bcc81ec2e6}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 118 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_aa4b267f0e7bb68f020bf53ac3a7a316e}\label{class_custom_stream_class_aa4b267f0e7bb68f020bf53ac3a7a316e}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Seek@{Seek}}
+\index{Seek@{Seek}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Seek()}{Seek()}}
+{\footnotesize\ttfamily void Custom\+Stream\+Class\+::\+Seek (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ac7e1334c7c6aacc9c8a9dccddebb4368}{Fbx\+Int64} \&}]{p\+Offset,  }\item[{const \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deec}{Fbx\+File\+::\+E\+Seek\+Pos} \&}]{p\+Seek\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Adjust the current stream position. 
+\begin{DoxyParams}{引数}
+{\em p\+Seek\+Pos} & Pre-\/defined position where offset is added (\hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca7a474ae0aa6f46b8becdfe54208f928e}{Fbx\+File\+::e\+Begin}, \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deecaf2653dc9849e794feee37a015d80b098}{Fbx\+File\+::e\+Current}\+:, \hyperlink{class_fbx_file_aba91fe59f9c0a4c84a92f13c0c27deeca1ab3eb84e8694fd4e63d0c864b12508d}{Fbx\+File\+::e\+End}) \\
+\hline
+{\em p\+Offset} & Number of bytes to offset from p\+Seek\+Pos. \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_stream_a00041c3874c430a77fb7e69a9adc894f}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 135 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a93d790e1ed854c5383b7854719e2f2c8}\label{class_custom_stream_class_a93d790e1ed854c5383b7854719e2f2c8}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Set\+Position()}{SetPosition()}}
+{\footnotesize\ttfamily virtual void Custom\+Stream\+Class\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{long}]{p\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Set the current stream position. 
+\begin{DoxyParams}{引数}
+{\em p\+Position} & Number of bytes from the beginning of the stream to seek to. \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_stream_aeb8843a4daec9d82187cc3eea5bb9baa}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 157 行目に定義があります。
+
+\mbox{\Hypertarget{class_custom_stream_class_a952b5466395a669fb9f8458faf2f3046}\label{class_custom_stream_class_a952b5466395a669fb9f8458faf2f3046}} 
+\index{Custom\+Stream\+Class@{Custom\+Stream\+Class}!Write@{Write}}
+\index{Write@{Write}!Custom\+Stream\+Class@{Custom\+Stream\+Class}}
+\subsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily virtual int Custom\+Stream\+Class\+::\+Write (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Data,  }\item[{int}]{p\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Writes a memory block. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & Pointer to the memory block to write. \\
+\hline
+{\em p\+Size} & Size (in bytes) of the memory block to write. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of bytes written in the stream. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_stream_a0bd0142e0acd244bc4342381c28b7a9a}{Fbx\+Stream}を実装しています。
+
+
+
+ main.\+cxx の 106 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+File\+Stream/\hyperlink{_file_stream_2main_8cxx}{main.\+cxx}\end{DoxyCompactItemize}

@@ -1,0 +1,159 @@
+\hypertarget{_export_document_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Export\+Document/main.cxx ファイル}
+\label{_export_document_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Document/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Document/main.\+cxx}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_export_document_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}Export\+Document.\+fbx\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_export_document_2main_8cxx_ad20f2c555b7e080bb36d567cb976408d}{Create\+Document} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document)
+\item 
+void \hyperlink{_export_document_2main_8cxx_a8fc2759f99fae85f3a537fcd1d0e8e4a}{Create\+Mat\+Document} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Mat\+Document)
+\item 
+void \hyperlink{_export_document_2main_8cxx_a17bea9205b474f1e71f46b7bef232801}{Create\+Light\+Document} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Light\+Document)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_export_document_2main_8cxx_a21d5d4717b0c39122a55c186c44c3d46}{Create\+Plane} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_export_document_2main_8cxx_a32cc322a07b22239fd2710234a3da8c1}{Create\+Material} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager)
+\item 
+\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$ \hyperlink{_export_document_2main_8cxx_a412d99db8258714a76e40100f3aa2970}{Create\+Texture} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_export_document_2main_8cxx_a8b6c15f76bb437cbf67ea87e4446a729}{Create\+Light} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, \hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}{Fbx\+Light\+::\+E\+Type} p\+Type)
+\item 
+void \hyperlink{_export_document_2main_8cxx_a4be0024f6a7550ab5d5af18878379f88}{Initialize\+Sdk\+Objects} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$\&p\+Manager)
+\item 
+void \hyperlink{_export_document_2main_8cxx_a7ac84f43f8294550afec605b53a6eee4}{Destroy\+Sdk\+Objects} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, bool p\+Exit\+Status)
+\item 
+bool \hyperlink{_export_document_2main_8cxx_a840652753d2fb575e5cf65d42d566f36}{Save\+Document} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager, \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document, const char $\ast$p\+Filename, int p\+File\+Format=-\/1, bool p\+Embed\+Media=false)
+\item 
+int \hyperlink{_export_document_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_export_document_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_export_document_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}Export\+Document.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 34 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_export_document_2main_8cxx_ad20f2c555b7e080bb36d567cb976408d}\label{_export_document_2main_8cxx_ad20f2c555b7e080bb36d567cb976408d}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Document@{Create\+Document}}
+\index{Create\+Document@{Create\+Document}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Document()}{CreateDocument()}}
+{\footnotesize\ttfamily bool Create\+Document (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 168 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a8b6c15f76bb437cbf67ea87e4446a729}\label{_export_document_2main_8cxx_a8b6c15f76bb437cbf67ea87e4446a729}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Light@{Create\+Light}}
+\index{Create\+Light@{Create\+Light}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Light()}{CreateLight()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Light (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{\hyperlink{class_fbx_light_ace4ba495501bddf1341600bea7ed8daf}{Fbx\+Light\+::\+E\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 433 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a17bea9205b474f1e71f46b7bef232801}\label{_export_document_2main_8cxx_a17bea9205b474f1e71f46b7bef232801}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Light\+Document@{Create\+Light\+Document}}
+\index{Create\+Light\+Document@{Create\+Light\+Document}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Light\+Document()}{CreateLightDocument()}}
+{\footnotesize\ttfamily void Create\+Light\+Document (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Light\+Document }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 241 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a8fc2759f99fae85f3a537fcd1d0e8e4a}\label{_export_document_2main_8cxx_a8fc2759f99fae85f3a537fcd1d0e8e4a}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Mat\+Document@{Create\+Mat\+Document}}
+\index{Create\+Mat\+Document@{Create\+Mat\+Document}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Mat\+Document()}{CreateMatDocument()}}
+{\footnotesize\ttfamily void Create\+Mat\+Document (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Mat\+Document }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 222 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a32cc322a07b22239fd2710234a3da8c1}\label{_export_document_2main_8cxx_a32cc322a07b22239fd2710234a3da8c1}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Material@{Create\+Material}}
+\index{Create\+Material@{Create\+Material}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Material()}{CreateMaterial()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ Create\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 407 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a21d5d4717b0c39122a55c186c44c3d46}\label{_export_document_2main_8cxx_a21d5d4717b0c39122a55c186c44c3d46}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Plane@{Create\+Plane}}
+\index{Create\+Plane@{Create\+Plane}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Plane()}{CreatePlane()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Plane (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 261 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a412d99db8258714a76e40100f3aa2970}\label{_export_document_2main_8cxx_a412d99db8258714a76e40100f3aa2970}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Create\+Texture@{Create\+Texture}}
+\index{Create\+Texture@{Create\+Texture}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Texture()}{CreateTexture()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$ Create\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 381 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a7ac84f43f8294550afec605b53a6eee4}\label{_export_document_2main_8cxx_a7ac84f43f8294550afec605b53a6eee4}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Destroy\+Sdk\+Objects@{Destroy\+Sdk\+Objects}}
+\index{Destroy\+Sdk\+Objects@{Destroy\+Sdk\+Objects}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Destroy\+Sdk\+Objects()}{DestroySdkObjects()}}
+{\footnotesize\ttfamily void Destroy\+Sdk\+Objects (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{bool}]{p\+Exit\+Status }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 61 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a4be0024f6a7550ab5d5af18878379f88}\label{_export_document_2main_8cxx_a4be0024f6a7550ab5d5af18878379f88}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Initialize\+Sdk\+Objects@{Initialize\+Sdk\+Objects}}
+\index{Initialize\+Sdk\+Objects@{Initialize\+Sdk\+Objects}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Initialize\+Sdk\+Objects()}{InitializeSdkObjects()}}
+{\footnotesize\ttfamily void Initialize\+Sdk\+Objects (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$\&}]{p\+Manager }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 45 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_export_document_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!main@{main}}
+\index{main@{main}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 131 行目に定義があります。
+
+\mbox{\Hypertarget{_export_document_2main_8cxx_a840652753d2fb575e5cf65d42d566f36}\label{_export_document_2main_8cxx_a840652753d2fb575e5cf65d42d566f36}} 
+\index{Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}!Save\+Document@{Save\+Document}}
+\index{Save\+Document@{Save\+Document}!Export\+Document/main.\+cxx@{Export\+Document/main.\+cxx}}
+\subsubsection{\texorpdfstring{Save\+Document()}{SaveDocument()}}
+{\footnotesize\ttfamily bool Save\+Document (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager,  }\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document,  }\item[{const char $\ast$}]{p\+Filename,  }\item[{int}]{p\+File\+Format = {\ttfamily -\/1},  }\item[{bool}]{p\+Embed\+Media = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 69 行目に定義があります。
+

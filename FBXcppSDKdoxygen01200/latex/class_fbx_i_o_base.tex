@@ -1,0 +1,163 @@
+\hypertarget{class_fbx_i_o_base}{}\section{Fbx\+I\+O\+Base クラス}
+\label{class_fbx_i_o_base}\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+
+
+Base class for F\+BX file importer and exporter.  
+
+
+
+
+{\ttfamily \#include $<$fbxiobase.\+h$>$}
+
+Fbx\+I\+O\+Base の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_i_o_base}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_i_o_base_a01d70175d09a1e791e2ce38a9ae3c265}{Initialize} (const char $\ast$p\+File\+Name, int p\+File\+Format=-\/1, \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$p\+I\+O\+Settings=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_base_ace2742dc782d87dc5bb08bceacb451b7}{Get\+File\+Name} ()
+\item 
+\hyperlink{class_fbx_status}{Fbx\+Status} \& \hyperlink{class_fbx_i_o_base_a078e47a99b119278ca3ee639e2da5b6d}{Get\+Status} ()
+\begin{DoxyCompactList}\small\item\em Get the status object containing the success or failure state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_i_o_base_aed70ed1326f8fb1cc96e2086c73722f8}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+int \hyperlink{class_fbx_i_o_base_aeeed7fece0297ede49ba8ceda58b2743}{Detect\+Reader\+File\+Format} (const char $\ast$p\+File\+Name)
+\item 
+int \hyperlink{class_fbx_i_o_base_ab33025566a08451ec2cffedfc1130ad4}{Detect\+Writer\+File\+Format} (const char $\ast$p\+File\+Name)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_status}{Fbx\+Status} \hyperlink{class_fbx_i_o_base_a7fd6efae8ba3697e4d242dc5412289aa}{m\+Status}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_i_o_base_a62dd6d12440a14577414ba18ed8dfa9f}{m\+Filename}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Base class for F\+BX file importer and exporter. 
+
+ fbxiobase.\+h の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_i_o_base_aed70ed1326f8fb1cc96e2086c73722f8}\label{class_fbx_i_o_base_aed70ed1326f8fb1cc96e2086c73722f8}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+I\+O\+Base\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a313503bc645af3fdceb4a99ef5cea7eb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_importer_ada4dcdb8770ebe90bacd9adcb3f562c0}{Fbx\+Importer}, \hyperlink{class_fbx_exporter_aa308b9a9901e8c98d0b54f0bd20daad2}{Fbx\+Exporter}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_i_o_base_aeeed7fece0297ede49ba8ceda58b2743}\label{class_fbx_i_o_base_aeeed7fece0297ede49ba8ceda58b2743}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!Detect\+Reader\+File\+Format@{Detect\+Reader\+File\+Format}}
+\index{Detect\+Reader\+File\+Format@{Detect\+Reader\+File\+Format}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{Detect\+Reader\+File\+Format()}{DetectReaderFileFormat()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Base\+::\+Detect\+Reader\+File\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_i_o_base_ab33025566a08451ec2cffedfc1130ad4}\label{class_fbx_i_o_base_ab33025566a08451ec2cffedfc1130ad4}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!Detect\+Writer\+File\+Format@{Detect\+Writer\+File\+Format}}
+\index{Detect\+Writer\+File\+Format@{Detect\+Writer\+File\+Format}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{Detect\+Writer\+File\+Format()}{DetectWriterFileFormat()}}
+{\footnotesize\ttfamily int Fbx\+I\+O\+Base\+::\+Detect\+Writer\+File\+Format (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_i_o_base_ace2742dc782d87dc5bb08bceacb451b7}\label{class_fbx_i_o_base_ace2742dc782d87dc5bb08bceacb451b7}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!Get\+File\+Name@{Get\+File\+Name}}
+\index{Get\+File\+Name@{Get\+File\+Name}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{Get\+File\+Name()}{GetFileName()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+Base\+::\+Get\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the file name. \begin{DoxyReturn}{戻り値}
+The file name or an empty string if no filename has been set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_i_o_base_a078e47a99b119278ca3ee639e2da5b6d}\label{class_fbx_i_o_base_a078e47a99b119278ca3ee639e2da5b6d}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!Get\+Status@{Get\+Status}}
+\index{Get\+Status@{Get\+Status}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{Get\+Status()}{GetStatus()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_status}{Fbx\+Status}\& Fbx\+I\+O\+Base\+::\+Get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the status object containing the success or failure state. 
+
+
+
+ fbxiobase.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_base_a01d70175d09a1e791e2ce38a9ae3c265}\label{class_fbx_i_o_base_a01d70175d09a1e791e2ce38a9ae3c265}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily virtual bool Fbx\+I\+O\+Base\+::\+Initialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name,  }\item[{int}]{p\+File\+Format = {\ttfamily -\/1},  }\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$}]{p\+I\+O\+Settings = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initializes the object. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & The name of the file to access. \\
+\hline
+{\em p\+File\+Format} & Unused in this class implementation. \\
+\hline
+{\em p\+I\+O\+Settings} & Unused in this class implementation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if successful, returns {\ttfamily False} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To identify the error, inspect {\itshape m\+Status}. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_importer_a70528a9ca1ff737bda9696a2073acd13}{Fbx\+Importer}, \hyperlink{class_fbx_exporter_acab60199145f0c86b80fac8ed7e1b239}{Fbx\+Exporter}で再実装されています。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_i_o_base_a62dd6d12440a14577414ba18ed8dfa9f}\label{class_fbx_i_o_base_a62dd6d12440a14577414ba18ed8dfa9f}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!m\+Filename@{m\+Filename}}
+\index{m\+Filename@{m\+Filename}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{m\+Filename}{mFilename}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+I\+O\+Base\+::m\+Filename\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxiobase.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_i_o_base_a7fd6efae8ba3697e4d242dc5412289aa}\label{class_fbx_i_o_base_a7fd6efae8ba3697e4d242dc5412289aa}} 
+\index{Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}!m\+Status@{m\+Status}}
+\index{m\+Status@{m\+Status}!Fbx\+I\+O\+Base@{Fbx\+I\+O\+Base}}
+\subsubsection{\texorpdfstring{m\+Status}{mStatus}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_status}{Fbx\+Status} Fbx\+I\+O\+Base\+::m\+Status\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxiobase.\+h の 60 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxiobase_8h}{fbxiobase.\+h}\end{DoxyCompactItemize}

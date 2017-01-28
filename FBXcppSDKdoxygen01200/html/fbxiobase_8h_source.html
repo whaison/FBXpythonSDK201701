@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/fileio/fbxiobase.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_1ce401db224ad750f31980d76a4b573f.html">include</a></li><li class="navelem"><a class="el" href="dir_035686f885016bbe7a8de4bfce896a3f.html">fbxsdk</a></li><li class="navelem"><a class="el" href="dir_0a04d0ae7d8dc790ba07041c5ccbb736.html">fileio</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fbxiobase.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fbxiobase_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">   Copyright (C) 2015 Autodesk, Inc.</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">   All rights reserved.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">   Use of this software is subject to the terms of the Autodesk license agreement</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">   provided at the time of installation or download, or which otherwise accompanies</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">   this software in either electronic or hard copy form.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">****************************************************************************************/</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef _FBXSDK_FILEIO_IO_BASE_H_</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define _FBXSDK_FILEIO_IO_BASE_H_</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__def_8h.html">fbxsdk/fbxsdk_def.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxobject_8h.html">fbxsdk/core/fbxobject.h</a>&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxstatus_8h.html">fbxsdk/core/base/fbxstatus.h</a>&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsbegin_8h.html">fbxsdk/fbxsdk_nsbegin.h</a>&gt;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="fbxiobase_8h.html#a44398e930f9ab8dfd9041aae1eb273ba">   23</a></span>&#160;<span class="preprocessor">#define FBXSDK_IO_END_NODE_STR &quot;_End&quot;</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_fbx_i_o_base.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a> <a class="code" href="class_fbx_i_o_base.html">FbxIOBase</a> : <span class="keyword">public</span> <a class="code" href="class_fbx_object.html">FbxObject</a></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="fbxobject_8h.html#a1628eb1d9b23ef9ce13f4406689fe50e">FBXSDK_OBJECT_DECLARE</a>(<a class="code" href="class_fbx_i_o_base.html">FbxIOBase</a>, <a class="code" href="class_fbx_object.html">FbxObject</a>);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Initialize(<span class="keyword">const</span> <span class="keywordtype">char</span> *pFileName, <span class="keywordtype">int</span> pFileFormat=-1, <a class="code" href="class_fbx_i_o_settings.html">FbxIOSettings</a>* pIOSettings=<a class="code" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_fbx_string.html">FbxString</a> GetFileName();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_fbx_i_o_base.html#a078e47a99b119278ca3ee639e2da5b6d">   48</a></span>&#160;    <a class="code" href="class_fbx_status.html">FbxStatus</a>&amp; <a class="code" href="class_fbx_i_o_base.html#a078e47a99b119278ca3ee639e2da5b6d">GetStatus</a>() { <span class="keywordflow">return</span> mStatus; }</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/*****************************************************************************************************************************</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">** WARNING! Anything beyond these lines is for internal use, may not be documented and is subject to change without notice! **</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="comment">*****************************************************************************************************************************/</span></div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">protected</span>:</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_fbx_object.html#a313503bc645af3fdceb4a99ef5cea7eb">Construct</a>(<span class="keyword">const</span> <a class="code" href="class_fbx_object.html">FbxObject</a>* pFrom);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> DetectReaderFileFormat(<span class="keyword">const</span> <span class="keywordtype">char</span> *pFileName);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">int</span> DetectWriterFileFormat(<span class="keyword">const</span> <span class="keywordtype">char</span> *pFileName);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div><div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_fbx_i_o_base.html#a7fd6efae8ba3697e4d242dc5412289aa">   60</a></span>&#160;    <a class="code" href="class_fbx_status.html">FbxStatus</a>   <a class="code" href="class_fbx_i_o_base.html#a7fd6efae8ba3697e4d242dc5412289aa">mStatus</a>;</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_fbx_i_o_base.html#a62dd6d12440a14577414ba18ed8dfa9f">   61</a></span>&#160;    <a class="code" href="class_fbx_string.html">FbxString</a>   <a class="code" href="class_fbx_i_o_base.html#a62dd6d12440a14577414ba18ed8dfa9f">mFilename</a>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !DOXYGEN_SHOULD_SKIP_THIS *****************************************************************************************/</span><span class="preprocessor"></span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsend_8h.html">fbxsdk/fbxsdk_nsend.h</a>&gt;</span></div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FBXSDK_FILEIO_IO_BASE_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="fbxobject_8h_html_a1628eb1d9b23ef9ce13f4406689fe50e"><div class="ttname"><a href="fbxobject_8h.html#a1628eb1d9b23ef9ce13f4406689fe50e">FBXSDK_OBJECT_DECLARE</a></div><div class="ttdeci">#define FBXSDK_OBJECT_DECLARE(Class, Parent)</div><div class="ttdoc">Macro used to declare a new class derived from FbxObject. </div><div class="ttdef"><b>Definition:</b> <a href="fbxobject_8h_source.html#l00061">fbxobject.h:61</a></div></div>
+<div class="ttc" id="fbxsdk__def_8h_html"><div class="ttname"><a href="fbxsdk__def_8h.html">fbxsdk_def.h</a></div></div>
+<div class="ttc" id="class_fbx_i_o_base_html_a62dd6d12440a14577414ba18ed8dfa9f"><div class="ttname"><a href="class_fbx_i_o_base.html#a62dd6d12440a14577414ba18ed8dfa9f">FbxIOBase::mFilename</a></div><div class="ttdeci">FbxString mFilename</div><div class="ttdef"><b>Definition:</b> <a href="fbxiobase_8h_source.html#l00061">fbxiobase.h:61</a></div></div>
+<div class="ttc" id="fbxarch_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="fbxarch_8h_source.html#l00210">fbxarch.h:210</a></div></div>
+<div class="ttc" id="class_fbx_string_html"><div class="ttname"><a href="class_fbx_string.html">FbxString</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxstring_8h_source.html#l00066">fbxstring.h:66</a></div></div>
+<div class="ttc" id="fbxsdk__nsbegin_8h_html"><div class="ttname"><a href="fbxsdk__nsbegin_8h.html">fbxsdk_nsbegin.h</a></div></div>
+<div class="ttc" id="class_fbx_status_html"><div class="ttname"><a href="class_fbx_status.html">FbxStatus</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxstatus_8h_source.html#l00026">fbxstatus.h:26</a></div></div>
+<div class="ttc" id="class_fbx_i_o_settings_html"><div class="ttname"><a href="class_fbx_i_o_settings.html">FbxIOSettings</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxiosettings_8h_source.html#l00207">fbxiosettings.h:207</a></div></div>
+<div class="ttc" id="class_fbx_object_html_a313503bc645af3fdceb4a99ef5cea7eb"><div class="ttname"><a href="class_fbx_object.html#a313503bc645af3fdceb4a99ef5cea7eb">FbxObject::Construct</a></div><div class="ttdeci">virtual void Construct(const FbxObject *pFrom)</div></div>
+<div class="ttc" id="class_fbx_i_o_base_html"><div class="ttname"><a href="class_fbx_i_o_base.html">FbxIOBase</a></div><div class="ttdoc">Base class for FBX file importer and exporter. </div><div class="ttdef"><b>Definition:</b> <a href="fbxiobase_8h_source.html#l00028">fbxiobase.h:28</a></div></div>
+<div class="ttc" id="class_fbx_i_o_base_html_a078e47a99b119278ca3ee639e2da5b6d"><div class="ttname"><a href="class_fbx_i_o_base.html#a078e47a99b119278ca3ee639e2da5b6d">FbxIOBase::GetStatus</a></div><div class="ttdeci">FbxStatus &amp; GetStatus()</div><div class="ttdoc">Get the status object containing the success or failure state. </div><div class="ttdef"><b>Definition:</b> <a href="fbxiobase_8h_source.html#l00048">fbxiobase.h:48</a></div></div>
+<div class="ttc" id="class_fbx_object_html"><div class="ttname"><a href="class_fbx_object.html">FbxObject</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxobject_8h_source.html#l00157">fbxobject.h:157</a></div></div>
+<div class="ttc" id="fbxsdk__nsend_8h_html"><div class="ttname"><a href="fbxsdk__nsend_8h.html">fbxsdk_nsend.h</a></div></div>
+<div class="ttc" id="fbxstatus_8h_html"><div class="ttname"><a href="fbxstatus_8h.html">fbxstatus.h</a></div></div>
+<div class="ttc" id="fbxobject_8h_html"><div class="ttname"><a href="fbxobject_8h.html">fbxobject.h</a></div></div>
+<div class="ttc" id="class_fbx_i_o_base_html_a7fd6efae8ba3697e4d242dc5412289aa"><div class="ttname"><a href="class_fbx_i_o_base.html#a7fd6efae8ba3697e4d242dc5412289aa">FbxIOBase::mStatus</a></div><div class="ttdeci">FbxStatus mStatus</div><div class="ttdef"><b>Definition:</b> <a href="fbxiobase_8h_source.html#l00060">fbxiobase.h:60</a></div></div>
+<div class="ttc" id="fbxarch_8h_html_a25d1298b33c31da5dbed969e0d4b4bc1"><div class="ttname"><a href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a></div><div class="ttdeci">#define FBXSDK_DLL</div><div class="ttdef"><b>Definition:</b> <a href="fbxarch_8h_source.html#l00173">fbxarch.h:173</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

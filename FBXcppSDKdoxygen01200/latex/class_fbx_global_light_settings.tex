@@ -1,0 +1,412 @@
+\hypertarget{class_fbx_global_light_settings}{}\section{Fbx\+Global\+Light\+Settings クラス}
+\label{class_fbx_global_light_settings}\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+
+
+{\ttfamily \#include $<$fbxgloballightsettings.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_global_light_settings_1_1_shadow_plane}{Shadow\+Plane}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_global_light_settings_a75e0ecfb557240691dbaf02364c7d536}{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW} ()
+\item 
+void \hyperlink{class_fbx_global_light_settings_a9f9a67ac3a66bb905d987a0838c9e30e}{Restore\+Default\+Settings} ()
+\begin{DoxyCompactList}\small\item\em Restores default settings. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings} \& \hyperlink{class_fbx_global_light_settings_a9a3f96233b7ede9ad5f804d10f5e024b}{operator=} (const \hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings} \&p\+Global\+Light\+Settings)
+\end{DoxyCompactItemize}
+\subsection*{Ambient Color}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_global_light_settings_adad3dc92c22ba63443bf2421e6e257cc}{Set\+Ambient\+Color} (\hyperlink{class_fbx_color}{Fbx\+Color} p\+Ambient\+Color)
+\item 
+\hyperlink{class_fbx_color}{Fbx\+Color} \hyperlink{class_fbx_global_light_settings_aa57a507a5e0058d481c8a58ba04f11e2}{Get\+Ambient\+Color} () const
+\end{DoxyCompactItemize}
+\subsection*{Fog Option}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}{E\+Fog\+Mode} \{ \hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6da646b9c79dbeb8d2d8ac6768e6e33d07c}{e\+Linear}, 
+\hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6dac83435f2003c3a89d206f49ce9396562}{e\+Exponential}, 
+\hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6da498e5d24544400cc9a9c959eadb3064c}{e\+Exponential\+Square\+Root}
+ \}
+\item 
+void \hyperlink{class_fbx_global_light_settings_a8236e86da20394c673183e762760d6f0}{Set\+Fog\+Enable} (bool p\+Enable)
+\item 
+bool \hyperlink{class_fbx_global_light_settings_abceecba4b43b858168125d70c5d451ec}{Get\+Fog\+Enable} () const
+\item 
+void \hyperlink{class_fbx_global_light_settings_a021ab12c926a62587c8e97b579f3d1d6}{Set\+Fog\+Color} (\hyperlink{class_fbx_color}{Fbx\+Color} p\+Color)
+\item 
+\hyperlink{class_fbx_color}{Fbx\+Color} \hyperlink{class_fbx_global_light_settings_a78ab759ac52d0d618eb275a9149feedd}{Get\+Fog\+Color} () const
+\item 
+void \hyperlink{class_fbx_global_light_settings_a61010aa498fa159fa6fa91cf77d78501}{Set\+Fog\+Mode} (\hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}{E\+Fog\+Mode} p\+Mode)
+\item 
+\hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}{E\+Fog\+Mode} \hyperlink{class_fbx_global_light_settings_a29f90b9f3f5c1a9057cf226c80892df1}{Get\+Fog\+Mode} () const
+\item 
+void \hyperlink{class_fbx_global_light_settings_a9aa9fb5c44351b8b4ef9caf1968ca32f}{Set\+Fog\+Density} (double p\+Density)
+\item 
+double \hyperlink{class_fbx_global_light_settings_ad69be94b5061ada689c5103f8b3c44c2}{Get\+Fog\+Density} () const
+\item 
+void \hyperlink{class_fbx_global_light_settings_a5d8cf2b4c90e5cfedcd2169aa8321ebf}{Set\+Fog\+Start} (double p\+Start)
+\item 
+double \hyperlink{class_fbx_global_light_settings_a36162af4c56d06d37ce07ebd7a4d52a6}{Get\+Fog\+Start} () const
+\item 
+void \hyperlink{class_fbx_global_light_settings_a3408c6c5b1cf643ebe81cd4daaac82dc}{Set\+Fog\+End} (double p\+End)
+\item 
+double \hyperlink{class_fbx_global_light_settings_a04ed07f18330b888bd4439038e3dad2a}{Get\+Fog\+End} () const
+\end{DoxyCompactItemize}
+\subsection*{Shadow Planes}
+\label{_amgrp417ef26c4f8335433984ca856eab8c61}%
+The functions in this section are supported only by Fi\+L\+M\+B\+OX version 2.\+7 and earlier. Fi\+L\+M\+B\+OX 3.\+0 supports shadow planes within a specific shader, which is not supported by the F\+BX S\+DK. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_global_light_settings_a0e50d74c9f7f9be8446dde2e8c42ea31}{Set\+Shadow\+Enable} (bool p\+Shadow\+Enable)
+\item 
+bool \hyperlink{class_fbx_global_light_settings_afd139497270cca9fd2deaa03e2ec1fe7}{Get\+Shadow\+Enable} () const
+\item 
+void \hyperlink{class_fbx_global_light_settings_a6835a1d9ee52474a1c5c52dc855a1ba9}{Set\+Shadow\+Intensity} (double p\+Shadow\+Intensity)
+\item 
+double \hyperlink{class_fbx_global_light_settings_a86101dda291ce7b103a7fe77ecb0a876}{Get\+Shadow\+Intensity} () const
+\item 
+int \hyperlink{class_fbx_global_light_settings_ac859310b4945161a224a512b1de5288d}{Get\+Shadow\+Plane\+Count} () const
+\item 
+\hyperlink{struct_fbx_global_light_settings_1_1_shadow_plane}{Shadow\+Plane} $\ast$ \hyperlink{class_fbx_global_light_settings_aa4eb1de6e7b85273bb761b4dfc782d1d}{Get\+Shadow\+Plane} (int p\+Index, \hyperlink{class_fbx_status}{Fbx\+Status} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_global_light_settings_aeaceb6574694ab589f88f8a100fea9f0}{Add\+Shadow\+Plane} (\hyperlink{struct_fbx_global_light_settings_1_1_shadow_plane}{Shadow\+Plane} p\+Shadow\+Plane)
+\item 
+void \hyperlink{class_fbx_global_light_settings_af46551f80ebf82ab4d9d338ba41fce8c}{Remove\+All\+Shadow\+Planes} ()
+\begin{DoxyCompactList}\small\item\em Removes all shadow planes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class contains functions for accessing global light settings.
+
+\begin{DoxyRemark}{注釈}
+This class exists for F\+BX version 6.\+x and earlier. The new F\+BX v7.\+x file format that is now the default no longer uses it. The relevant data (a subset of this class) has been moved to the \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings} object and should be used instead. 
+\end{DoxyRemark}
+
+
+ fbxgloballightsettings.\+h の 30 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}\label{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!E\+Fog\+Mode@{E\+Fog\+Mode}}
+\index{E\+Fog\+Mode@{E\+Fog\+Mode}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{E\+Fog\+Mode}{EFogMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}{Fbx\+Global\+Light\+Settings\+::\+E\+Fog\+Mode}}
+
+Fog types. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear@{e\+Linear}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!e\+Linear@{e\+Linear}}}\mbox{\Hypertarget{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6da646b9c79dbeb8d2d8ac6768e6e33d07c}\label{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6da646b9c79dbeb8d2d8ac6768e6e33d07c}} 
+e\+Linear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Exponential@{e\+Exponential}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!e\+Exponential@{e\+Exponential}}}\mbox{\Hypertarget{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6dac83435f2003c3a89d206f49ce9396562}\label{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6dac83435f2003c3a89d206f49ce9396562}} 
+e\+Exponential&Linear fog mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Exponential\+Square\+Root@{e\+Exponential\+Square\+Root}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!e\+Exponential\+Square\+Root@{e\+Exponential\+Square\+Root}}}\mbox{\Hypertarget{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6da498e5d24544400cc9a9c959eadb3064c}\label{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6da498e5d24544400cc9a9c959eadb3064c}} 
+e\+Exponential\+Square\+Root&Exponential fog mode. Exponential square root fog mode. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxgloballightsettings.\+h の 82 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_global_light_settings_aeaceb6574694ab589f88f8a100fea9f0}\label{class_fbx_global_light_settings_aeaceb6574694ab589f88f8a100fea9f0}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Add\+Shadow\+Plane@{Add\+Shadow\+Plane}}
+\index{Add\+Shadow\+Plane@{Add\+Shadow\+Plane}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Add\+Shadow\+Plane()}{AddShadowPlane()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Add\+Shadow\+Plane (\begin{DoxyParamCaption}\item[{\hyperlink{struct_fbx_global_light_settings_1_1_shadow_plane}{Shadow\+Plane}}]{p\+Shadow\+Plane }\end{DoxyParamCaption})}
+
+Adds a shadow plane. 
+\begin{DoxyParams}{引数}
+{\em p\+Shadow\+Plane} & The shadow plane to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a75e0ecfb557240691dbaf02364c7d536}\label{class_fbx_global_light_settings_a75e0ecfb557240691dbaf02364c7d536}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW@{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW@{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+E\+W()}{FBXSDK\_FRIEND\_NEW()}}
+{\footnotesize\ttfamily Fbx\+Global\+Light\+Settings\+::\+F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_global_light_settings_aa57a507a5e0058d481c8a58ba04f11e2}\label{class_fbx_global_light_settings_aa57a507a5e0058d481c8a58ba04f11e2}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Ambient\+Color@{Get\+Ambient\+Color}}
+\index{Get\+Ambient\+Color@{Get\+Ambient\+Color}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Ambient\+Color()}{GetAmbientColor()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_color}{Fbx\+Color} Fbx\+Global\+Light\+Settings\+::\+Get\+Ambient\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the ambient color. \begin{DoxyReturn}{戻り値}
+The ambient color. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a78ab759ac52d0d618eb275a9149feedd}\label{class_fbx_global_light_settings_a78ab759ac52d0d618eb275a9149feedd}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Fog\+Color@{Get\+Fog\+Color}}
+\index{Get\+Fog\+Color@{Get\+Fog\+Color}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Fog\+Color()}{GetFogColor()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_color}{Fbx\+Color} Fbx\+Global\+Light\+Settings\+::\+Get\+Fog\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the fog color. \begin{DoxyReturn}{戻り値}
+The fog color. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The fog color only uses R\+GB channels. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_ad69be94b5061ada689c5103f8b3c44c2}\label{class_fbx_global_light_settings_ad69be94b5061ada689c5103f8b3c44c2}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Fog\+Density@{Get\+Fog\+Density}}
+\index{Get\+Fog\+Density@{Get\+Fog\+Density}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Fog\+Density()}{GetFogDensity()}}
+{\footnotesize\ttfamily double Fbx\+Global\+Light\+Settings\+::\+Get\+Fog\+Density (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the fog density. \begin{DoxyReturn}{戻り値}
+The currently set fog density. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only used when the fog mode is set to exponential or square root exponential. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_abceecba4b43b858168125d70c5d451ec}\label{class_fbx_global_light_settings_abceecba4b43b858168125d70c5d451ec}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Fog\+Enable@{Get\+Fog\+Enable}}
+\index{Get\+Fog\+Enable@{Get\+Fog\+Enable}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Fog\+Enable()}{GetFogEnable()}}
+{\footnotesize\ttfamily bool Fbx\+Global\+Light\+Settings\+::\+Get\+Fog\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the fog option\textquotesingle{}s current state. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if fog is activated, returns {\ttfamily false} if fog is disabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a04ed07f18330b888bd4439038e3dad2a}\label{class_fbx_global_light_settings_a04ed07f18330b888bd4439038e3dad2a}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Fog\+End@{Get\+Fog\+End}}
+\index{Get\+Fog\+End@{Get\+Fog\+End}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Fog\+End()}{GetFogEnd()}}
+{\footnotesize\ttfamily double Fbx\+Global\+Light\+Settings\+::\+Get\+Fog\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the distance from the view where the fog ends. \begin{DoxyReturn}{戻り値}
+The distance from the view where the fog ends. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only used when the fog mode is set to linear. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a29f90b9f3f5c1a9057cf226c80892df1}\label{class_fbx_global_light_settings_a29f90b9f3f5c1a9057cf226c80892df1}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Fog\+Mode@{Get\+Fog\+Mode}}
+\index{Get\+Fog\+Mode@{Get\+Fog\+Mode}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Fog\+Mode()}{GetFogMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}{E\+Fog\+Mode} Fbx\+Global\+Light\+Settings\+::\+Get\+Fog\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the fog mode. \begin{DoxyReturn}{戻り値}
+The currently set fog mode. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a36162af4c56d06d37ce07ebd7a4d52a6}\label{class_fbx_global_light_settings_a36162af4c56d06d37ce07ebd7a4d52a6}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Fog\+Start@{Get\+Fog\+Start}}
+\index{Get\+Fog\+Start@{Get\+Fog\+Start}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Fog\+Start()}{GetFogStart()}}
+{\footnotesize\ttfamily double Fbx\+Global\+Light\+Settings\+::\+Get\+Fog\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the distance from the view where the fog begins. \begin{DoxyReturn}{戻り値}
+The distance from the view where the fog begins. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is only used when the fog mode is set to linear. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_afd139497270cca9fd2deaa03e2ec1fe7}\label{class_fbx_global_light_settings_afd139497270cca9fd2deaa03e2ec1fe7}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Shadow\+Enable@{Get\+Shadow\+Enable}}
+\index{Get\+Shadow\+Enable@{Get\+Shadow\+Enable}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Shadow\+Enable()}{GetShadowEnable()}}
+{\footnotesize\ttfamily bool Fbx\+Global\+Light\+Settings\+::\+Get\+Shadow\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the current state of the shadow enable flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if shadow planes are set to be displayed in the scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a86101dda291ce7b103a7fe77ecb0a876}\label{class_fbx_global_light_settings_a86101dda291ce7b103a7fe77ecb0a876}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Shadow\+Intensity@{Get\+Shadow\+Intensity}}
+\index{Get\+Shadow\+Intensity@{Get\+Shadow\+Intensity}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Shadow\+Intensity()}{GetShadowIntensity()}}
+{\footnotesize\ttfamily double Fbx\+Global\+Light\+Settings\+::\+Get\+Shadow\+Intensity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the shadow intensity applied to all shadow planes. \begin{DoxyReturn}{戻り値}
+The intensity applied to all shadow planes in the scene. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Ranges from 0 to 300. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_aa4eb1de6e7b85273bb761b4dfc782d1d}\label{class_fbx_global_light_settings_aa4eb1de6e7b85273bb761b4dfc782d1d}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Shadow\+Plane@{Get\+Shadow\+Plane}}
+\index{Get\+Shadow\+Plane@{Get\+Shadow\+Plane}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Shadow\+Plane()}{GetShadowPlane()}}
+{\footnotesize\ttfamily \hyperlink{struct_fbx_global_light_settings_1_1_shadow_plane}{Shadow\+Plane}$\ast$ Fbx\+Global\+Light\+Settings\+::\+Get\+Shadow\+Plane (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Returns a shadow plane at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Shadow plane index. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer the shadow plane, or {\ttfamily N\+U\+LL} if the index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_light_settings_ac859310b4945161a224a512b1de5288d}\label{class_fbx_global_light_settings_ac859310b4945161a224a512b1de5288d}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Get\+Shadow\+Plane\+Count@{Get\+Shadow\+Plane\+Count}}
+\index{Get\+Shadow\+Plane\+Count@{Get\+Shadow\+Plane\+Count}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Get\+Shadow\+Plane\+Count()}{GetShadowPlaneCount()}}
+{\footnotesize\ttfamily int Fbx\+Global\+Light\+Settings\+::\+Get\+Shadow\+Plane\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of shadow planes. \begin{DoxyReturn}{戻り値}
+Number of shadow planes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a9a3f96233b7ede9ad5f804d10f5e024b}\label{class_fbx_global_light_settings_a9a3f96233b7ede9ad5f804d10f5e024b}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings}\& Fbx\+Global\+Light\+Settings\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings} \&}]{p\+Global\+Light\+Settings }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Global\+Light\+Settings} & \hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings} object assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_light_settings_af46551f80ebf82ab4d9d338ba41fce8c}\label{class_fbx_global_light_settings_af46551f80ebf82ab4d9d338ba41fce8c}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Remove\+All\+Shadow\+Planes@{Remove\+All\+Shadow\+Planes}}
+\index{Remove\+All\+Shadow\+Planes@{Remove\+All\+Shadow\+Planes}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Remove\+All\+Shadow\+Planes()}{RemoveAllShadowPlanes()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Remove\+All\+Shadow\+Planes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes all shadow planes. 
+
+\mbox{\Hypertarget{class_fbx_global_light_settings_a9f9a67ac3a66bb905d987a0838c9e30e}\label{class_fbx_global_light_settings_a9f9a67ac3a66bb905d987a0838c9e30e}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Restore\+Default\+Settings@{Restore\+Default\+Settings}}
+\index{Restore\+Default\+Settings@{Restore\+Default\+Settings}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Restore\+Default\+Settings()}{RestoreDefaultSettings()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Restore\+Default\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restores default settings. 
+
+\mbox{\Hypertarget{class_fbx_global_light_settings_adad3dc92c22ba63443bf2421e6e257cc}\label{class_fbx_global_light_settings_adad3dc92c22ba63443bf2421e6e257cc}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Ambient\+Color@{Set\+Ambient\+Color}}
+\index{Set\+Ambient\+Color@{Set\+Ambient\+Color}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Ambient\+Color()}{SetAmbientColor()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Ambient\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_color}{Fbx\+Color}}]{p\+Ambient\+Color }\end{DoxyParamCaption})}
+
+Sets the ambient color. 
+\begin{DoxyParams}{引数}
+{\em p\+Ambient\+Color} & The ambient color to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The ambient color only use R\+GB channels. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a021ab12c926a62587c8e97b579f3d1d6}\label{class_fbx_global_light_settings_a021ab12c926a62587c8e97b579f3d1d6}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Fog\+Color@{Set\+Fog\+Color}}
+\index{Set\+Fog\+Color@{Set\+Fog\+Color}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Fog\+Color()}{SetFogColor()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Fog\+Color (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_color}{Fbx\+Color}}]{p\+Color }\end{DoxyParamCaption})}
+
+Sets the fog color. 
+\begin{DoxyParams}{引数}
+{\em p\+Color} & The fog color to be set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The fog color only uses R\+GB channels. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a9aa9fb5c44351b8b4ef9caf1968ca32f}\label{class_fbx_global_light_settings_a9aa9fb5c44351b8b4ef9caf1968ca32f}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Fog\+Density@{Set\+Fog\+Density}}
+\index{Set\+Fog\+Density@{Set\+Fog\+Density}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Fog\+Density()}{SetFogDensity()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Fog\+Density (\begin{DoxyParamCaption}\item[{double}]{p\+Density }\end{DoxyParamCaption})}
+
+Sets the fog density. 
+\begin{DoxyParams}{引数}
+{\em p\+Density} & The fog density to be set. It can be any double value, however it can happen that other sections of F\+BX S\+DK may clamp values to reasonable values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only used when the fog mode is set to exponential or square root exponential. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a8236e86da20394c673183e762760d6f0}\label{class_fbx_global_light_settings_a8236e86da20394c673183e762760d6f0}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Fog\+Enable@{Set\+Fog\+Enable}}
+\index{Set\+Fog\+Enable@{Set\+Fog\+Enable}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Fog\+Enable()}{SetFogEnable()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Fog\+Enable (\begin{DoxyParamCaption}\item[{bool}]{p\+Enable }\end{DoxyParamCaption})}
+
+Activates or disables the fog. 
+\begin{DoxyParams}{引数}
+{\em p\+Enable} & Set to {\ttfamily true} to activate the fog option or set to {\ttfamily false} to disable the fog option. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a3408c6c5b1cf643ebe81cd4daaac82dc}\label{class_fbx_global_light_settings_a3408c6c5b1cf643ebe81cd4daaac82dc}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Fog\+End@{Set\+Fog\+End}}
+\index{Set\+Fog\+End@{Set\+Fog\+End}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Fog\+End()}{SetFogEnd()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Fog\+End (\begin{DoxyParamCaption}\item[{double}]{p\+End }\end{DoxyParamCaption})}
+
+Sets the distance from the view where the fog ends. 
+\begin{DoxyParams}{引数}
+{\em p\+End} & Distance where the fog ends. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only used when the fog mode is set to linear. The new value is adjusted to fit within the interval \mbox{[}Fog\+Start(), inf). 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a61010aa498fa159fa6fa91cf77d78501}\label{class_fbx_global_light_settings_a61010aa498fa159fa6fa91cf77d78501}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Fog\+Mode@{Set\+Fog\+Mode}}
+\index{Set\+Fog\+Mode@{Set\+Fog\+Mode}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Fog\+Mode()}{SetFogMode()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Fog\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_global_light_settings_a2d6040cb267cbdb092bdf9fb73de8d6d}{E\+Fog\+Mode}}]{p\+Mode }\end{DoxyParamCaption})}
+
+Sets the fog mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Mode} & The fog type to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a5d8cf2b4c90e5cfedcd2169aa8321ebf}\label{class_fbx_global_light_settings_a5d8cf2b4c90e5cfedcd2169aa8321ebf}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Fog\+Start@{Set\+Fog\+Start}}
+\index{Set\+Fog\+Start@{Set\+Fog\+Start}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Fog\+Start()}{SetFogStart()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Fog\+Start (\begin{DoxyParamCaption}\item[{double}]{p\+Start }\end{DoxyParamCaption})}
+
+Sets the distance from the view where the fog begins. 
+\begin{DoxyParams}{引数}
+{\em p\+Start} & Distance where the fog begins. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function is only used when the fog mode is set to linear. The new value is clamped to fit inside the interval \mbox{[}0, Fog\+End()\mbox{]}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a0e50d74c9f7f9be8446dde2e8c42ea31}\label{class_fbx_global_light_settings_a0e50d74c9f7f9be8446dde2e8c42ea31}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Shadow\+Enable@{Set\+Shadow\+Enable}}
+\index{Set\+Shadow\+Enable@{Set\+Shadow\+Enable}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Shadow\+Enable()}{SetShadowEnable()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Shadow\+Enable (\begin{DoxyParamCaption}\item[{bool}]{p\+Shadow\+Enable }\end{DoxyParamCaption})}
+
+Activates or disables the display of shadow planes. 
+\begin{DoxyParams}{引数}
+{\em p\+Shadow\+Enable} & Set to {\ttfamily true} to display shadow planes in the scene. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_global_light_settings_a6835a1d9ee52474a1c5c52dc855a1ba9}\label{class_fbx_global_light_settings_a6835a1d9ee52474a1c5c52dc855a1ba9}} 
+\index{Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}!Set\+Shadow\+Intensity@{Set\+Shadow\+Intensity}}
+\index{Set\+Shadow\+Intensity@{Set\+Shadow\+Intensity}!Fbx\+Global\+Light\+Settings@{Fbx\+Global\+Light\+Settings}}
+\subsubsection{\texorpdfstring{Set\+Shadow\+Intensity()}{SetShadowIntensity()}}
+{\footnotesize\ttfamily void Fbx\+Global\+Light\+Settings\+::\+Set\+Shadow\+Intensity (\begin{DoxyParamCaption}\item[{double}]{p\+Shadow\+Intensity }\end{DoxyParamCaption})}
+
+Sets the shadow intensity that is applied to all shadow planes. 
+\begin{DoxyParams}{引数}
+{\em p\+Shadow\+Intensity} & Intensity applied to all the shadow planes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Ranges from 0 to 300. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxgloballightsettings_8h}{fbxgloballightsettings.\+h}\end{DoxyCompactItemize}

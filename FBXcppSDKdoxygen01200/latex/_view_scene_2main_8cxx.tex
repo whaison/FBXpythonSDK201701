@@ -1,0 +1,435 @@
+\hypertarget{_view_scene_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+View\+Scene/main.cxx ファイル}
+\label{_view_scene_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/main.\+cxx}}
+{\ttfamily \#include \char`\"{}Scene\+Context.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+L/glut.\+h\char`\"{}}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_my_memory_allocator}{My\+Memory\+Allocator}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_aacfa0cadc1cf2a5425eb0f410e0f11d1}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM}~100
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_aa47dd76d5846c2db8ae6faac7943b809}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM}~101
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_aa2f8388746c07a8bc92e4bbb6efc489e}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM}~102
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_ade151083c1c6b78e3795aac47c854ef6}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM}~103
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_a9420229f10f12d4555678c371d54fefc}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM}~104
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_a383ad95023bf5a340b8759ce5cbb7e5e}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM}~105
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_a0558c45f48de2378eb2abe8641888472}{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM}~106
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_ae850088825ecc01716c9f0c022da22da}{C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM}~107
+\item 
+\#define \hyperlink{_view_scene_2main_8cxx_a8bfc0270d68bb2258b6f9b62c1c6b629}{P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}~200
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_view_scene_2main_8cxx_aa74a275df5939588743260600ab0ac54}{Exit\+Function} ()
+\item 
+void \hyperlink{_view_scene_2main_8cxx_ae8db99b3d6f34e25c0985ed73f139305}{Create\+Menus} ()
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a2ac81de58bf1bb734b2d5cabd8ab21a4}{Camera\+Selection\+Callback} (int p\+Item)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_afddcb93843e8a821f01d90388a152081}{Camera\+Zoom\+Mode\+Callback} (int p\+Item)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a15cbc985b5821aa91f886c23a7a11f23}{Anim\+Stack\+Selection\+Callback} (int p\+Item)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a900b59b47093ed19659ad34c80fe7057}{Menu\+Selection\+Callback} (int p\+Item)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a6d406deecaef1b7119e55be5bf6d5042}{Pose\+Selection\+Callback} (int p\+Item)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a736707c30b055008d1585b69eddd9a7f}{Shading\+Mode\+Selection\+Callback} (int p\+Item)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a0a87a287562fef38ceca922df4be9b90}{Timer\+Callback} (int)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a31ba5b90c0d43bb7bf4f05648d137df4}{Display\+Callback} ()
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a224aa456a38398d173552e071b66e1be}{Reshape\+Callback} (int p\+Width, int p\+Height)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_aa47d6fa2fccca9d76907f75b7f9d3b1b}{Keyboard\+Callback} (unsigned char p\+Key, int, int)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a4804e9490dc70603eea16677388a6cc6}{Mouse\+Callback} (int button, int state, int x, int y)
+\item 
+void \hyperlink{_view_scene_2main_8cxx_a28ac1947e2e58c07d289c0ae27fbfedf}{Motion\+Callback} (int x, int y)
+\item 
+int \hyperlink{_view_scene_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_context}{Scene\+Context} $\ast$ \hyperlink{_view_scene_2main_8cxx_a7285e846b2e871fac5a9c7b606d3f37b}{g\+Scene\+Context}
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_aa81017d0a479f7ad4b1cff2582a65bd2}{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME} = 300
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_a151f5ff652e8217f3eb41ea54f118249}{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED} = 301
+\item 
+const char $\ast$ \hyperlink{_view_scene_2main_8cxx_aabb8aba220bd4dfc5fe02722ff4c4f98}{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME} = \char`\"{}Wireframe\char`\"{}
+\item 
+const char $\ast$ \hyperlink{_view_scene_2main_8cxx_a5d2abdbeae808fd3dc1d9c6d028e38ab}{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED} = \char`\"{}Shaded\char`\"{}
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_abfb3d9f7886033cc315aa37ac0dffb63}{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH} = 401
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_a11e77d16168b22e99533af996ff1434b}{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON} = 402
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_a26dd0accd561b4bfe425571ecd1b1429}{M\+E\+N\+U\+\_\+\+E\+X\+IT} = 400
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_ab2dff4b7d1e578cbd9569167b1563eba}{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH} = 720
+\item 
+const int \hyperlink{_view_scene_2main_8cxx_a375165dfee23c3a3587d36b7078e12ad}{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT} = 486
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_view_scene_2main_8cxx_ae850088825ecc01716c9f0c022da22da}\label{_view_scene_2main_8cxx_ae850088825ecc01716c9f0c022da22da}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM@{C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM}}
+\index{C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM@{C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM}{CAMERA\_SWITCHER\_ITEM}}
+{\footnotesize\ttfamily \#define C\+A\+M\+E\+R\+A\+\_\+\+S\+W\+I\+T\+C\+H\+E\+R\+\_\+\+I\+T\+EM~107}
+
+
+
+ main.\+cxx の 68 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a8bfc0270d68bb2258b6f9b62c1c6b629}\label{_view_scene_2main_8cxx_a8bfc0270d68bb2258b6f9b62c1c6b629}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON@{P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}}
+\index{P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON@{P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON}{PLAY\_ANIMATION}}
+{\footnotesize\ttfamily \#define P\+L\+A\+Y\+\_\+\+A\+N\+I\+M\+A\+T\+I\+ON~200}
+
+
+
+ main.\+cxx の 69 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a9420229f10f12d4555678c371d54fefc}\label{_view_scene_2main_8cxx_a9420229f10f12d4555678c371d54fefc}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM}{PRODUCER\_BACK\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+A\+C\+K\+\_\+\+I\+T\+EM~104}
+
+
+
+ main.\+cxx の 65 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aa2f8388746c07a8bc92e4bbb6efc489e}\label{_view_scene_2main_8cxx_aa2f8388746c07a8bc92e4bbb6efc489e}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM}{PRODUCER\_BOTTOM\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+I\+T\+EM~102}
+
+
+
+ main.\+cxx の 63 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_ade151083c1c6b78e3795aac47c854ef6}\label{_view_scene_2main_8cxx_ade151083c1c6b78e3795aac47c854ef6}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM}{PRODUCER\_FRONT\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+F\+R\+O\+N\+T\+\_\+\+I\+T\+EM~103}
+
+
+
+ main.\+cxx の 64 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a0558c45f48de2378eb2abe8641888472}\label{_view_scene_2main_8cxx_a0558c45f48de2378eb2abe8641888472}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM}{PRODUCER\_LEFT\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+L\+E\+F\+T\+\_\+\+I\+T\+EM~106}
+
+
+
+ main.\+cxx の 67 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aacfa0cadc1cf2a5425eb0f410e0f11d1}\label{_view_scene_2main_8cxx_aacfa0cadc1cf2a5425eb0f410e0f11d1}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM}{PRODUCER\_PERSPECTIVE\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+P\+E\+R\+S\+P\+E\+C\+T\+I\+V\+E\+\_\+\+I\+T\+EM~100}
+
+
+
+ main.\+cxx の 61 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a383ad95023bf5a340b8759ce5cbb7e5e}\label{_view_scene_2main_8cxx_a383ad95023bf5a340b8759ce5cbb7e5e}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM}{PRODUCER\_RIGHT\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+R\+I\+G\+H\+T\+\_\+\+I\+T\+EM~105}
+
+
+
+ main.\+cxx の 66 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aa47dd76d5846c2db8ae6faac7943b809}\label{_view_scene_2main_8cxx_aa47dd76d5846c2db8ae6faac7943b809}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM}}
+\index{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM@{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM}{PRODUCER\_TOP\_ITEM}}
+{\footnotesize\ttfamily \#define P\+R\+O\+D\+U\+C\+E\+R\+\_\+\+T\+O\+P\+\_\+\+I\+T\+EM~101}
+
+
+
+ main.\+cxx の 62 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a15cbc985b5821aa91f886c23a7a11f23}\label{_view_scene_2main_8cxx_a15cbc985b5821aa91f886c23a7a11f23}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Anim\+Stack\+Selection\+Callback@{Anim\+Stack\+Selection\+Callback}}
+\index{Anim\+Stack\+Selection\+Callback@{Anim\+Stack\+Selection\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Anim\+Stack\+Selection\+Callback()}{AnimStackSelectionCallback()}}
+{\footnotesize\ttfamily void Anim\+Stack\+Selection\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 357 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a2ac81de58bf1bb734b2d5cabd8ab21a4}\label{_view_scene_2main_8cxx_a2ac81de58bf1bb734b2d5cabd8ab21a4}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Camera\+Selection\+Callback@{Camera\+Selection\+Callback}}
+\index{Camera\+Selection\+Callback@{Camera\+Selection\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Camera\+Selection\+Callback()}{CameraSelectionCallback()}}
+{\footnotesize\ttfamily void Camera\+Selection\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 307 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_afddcb93843e8a821f01d90388a152081}\label{_view_scene_2main_8cxx_afddcb93843e8a821f01d90388a152081}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Camera\+Zoom\+Mode\+Callback@{Camera\+Zoom\+Mode\+Callback}}
+\index{Camera\+Zoom\+Mode\+Callback@{Camera\+Zoom\+Mode\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Camera\+Zoom\+Mode\+Callback()}{CameraZoomModeCallback()}}
+{\footnotesize\ttfamily void Camera\+Zoom\+Mode\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 348 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_ae8db99b3d6f34e25c0985ed73f139305}\label{_view_scene_2main_8cxx_ae8db99b3d6f34e25c0985ed73f139305}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Create\+Menus@{Create\+Menus}}
+\index{Create\+Menus@{Create\+Menus}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Menus()}{CreateMenus()}}
+{\footnotesize\ttfamily void Create\+Menus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 196 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a31ba5b90c0d43bb7bf4f05648d137df4}\label{_view_scene_2main_8cxx_a31ba5b90c0d43bb7bf4f05648d137df4}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Display\+Callback@{Display\+Callback}}
+\index{Display\+Callback@{Display\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Display\+Callback()}{DisplayCallback()}}
+{\footnotesize\ttfamily void Display\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 410 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aa74a275df5939588743260600ab0ac54}\label{_view_scene_2main_8cxx_aa74a275df5939588743260600ab0ac54}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Exit\+Function@{Exit\+Function}}
+\index{Exit\+Function@{Exit\+Function}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Exit\+Function()}{ExitFunction()}}
+{\footnotesize\ttfamily void Exit\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 190 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aa47d6fa2fccca9d76907f75b7f9d3b1b}\label{_view_scene_2main_8cxx_aa47d6fa2fccca9d76907f75b7f9d3b1b}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Keyboard\+Callback@{Keyboard\+Callback}}
+\index{Keyboard\+Callback@{Keyboard\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Keyboard\+Callback()}{KeyboardCallback()}}
+{\footnotesize\ttfamily void Keyboard\+Callback (\begin{DoxyParamCaption}\item[{unsigned char}]{p\+Key,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 441 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_view_scene_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!main@{main}}
+\index{main@{main}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 146 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a900b59b47093ed19659ad34c80fe7057}\label{_view_scene_2main_8cxx_a900b59b47093ed19659ad34c80fe7057}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Menu\+Selection\+Callback@{Menu\+Selection\+Callback}}
+\index{Menu\+Selection\+Callback@{Menu\+Selection\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Menu\+Selection\+Callback()}{MenuSelectionCallback()}}
+{\footnotesize\ttfamily void Menu\+Selection\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 380 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a28ac1947e2e58c07d289c0ae27fbfedf}\label{_view_scene_2main_8cxx_a28ac1947e2e58c07d289c0ae27fbfedf}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Motion\+Callback@{Motion\+Callback}}
+\index{Motion\+Callback@{Motion\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Motion\+Callback()}{MotionCallback()}}
+{\footnotesize\ttfamily void Motion\+Callback (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 458 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a4804e9490dc70603eea16677388a6cc6}\label{_view_scene_2main_8cxx_a4804e9490dc70603eea16677388a6cc6}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Mouse\+Callback@{Mouse\+Callback}}
+\index{Mouse\+Callback@{Mouse\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Mouse\+Callback()}{MouseCallback()}}
+{\footnotesize\ttfamily void Mouse\+Callback (\begin{DoxyParamCaption}\item[{int}]{button,  }\item[{int}]{state,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 452 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a6d406deecaef1b7119e55be5bf6d5042}\label{_view_scene_2main_8cxx_a6d406deecaef1b7119e55be5bf6d5042}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Pose\+Selection\+Callback@{Pose\+Selection\+Callback}}
+\index{Pose\+Selection\+Callback@{Pose\+Selection\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Pose\+Selection\+Callback()}{PoseSelectionCallback()}}
+{\footnotesize\ttfamily void Pose\+Selection\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 362 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a224aa456a38398d173552e071b66e1be}\label{_view_scene_2main_8cxx_a224aa456a38398d173552e071b66e1be}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Reshape\+Callback@{Reshape\+Callback}}
+\index{Reshape\+Callback@{Reshape\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Reshape\+Callback()}{ReshapeCallback()}}
+{\footnotesize\ttfamily void Reshape\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Width,  }\item[{int}]{p\+Height }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 435 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a736707c30b055008d1585b69eddd9a7f}\label{_view_scene_2main_8cxx_a736707c30b055008d1585b69eddd9a7f}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Shading\+Mode\+Selection\+Callback@{Shading\+Mode\+Selection\+Callback}}
+\index{Shading\+Mode\+Selection\+Callback@{Shading\+Mode\+Selection\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Shading\+Mode\+Selection\+Callback()}{ShadingModeSelectionCallback()}}
+{\footnotesize\ttfamily void Shading\+Mode\+Selection\+Callback (\begin{DoxyParamCaption}\item[{int}]{p\+Item }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 367 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a0a87a287562fef38ceca922df4be9b90}\label{_view_scene_2main_8cxx_a0a87a287562fef38ceca922df4be9b90}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!Timer\+Callback@{Timer\+Callback}}
+\index{Timer\+Callback@{Timer\+Callback}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{Timer\+Callback()}{TimerCallback()}}
+{\footnotesize\ttfamily void Timer\+Callback (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 394 行目に定義があります。
+
+
+
+\subsection{変数詳解}
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a375165dfee23c3a3587d36b7078e12ad}\label{_view_scene_2main_8cxx_a375165dfee23c3a3587d36b7078e12ad}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT@{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT}{DEFAULT\_WINDOW\_HEIGHT}}
+{\footnotesize\ttfamily const int D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+H\+E\+I\+G\+HT = 486}
+
+
+
+ main.\+cxx の 83 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_ab2dff4b7d1e578cbd9569167b1563eba}\label{_view_scene_2main_8cxx_ab2dff4b7d1e578cbd9569167b1563eba}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH@{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH}{DEFAULT\_WINDOW\_WIDTH}}
+{\footnotesize\ttfamily const int D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+W\+I\+D\+TH = 720}
+
+
+
+ main.\+cxx の 82 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a7285e846b2e871fac5a9c7b606d3f37b}\label{_view_scene_2main_8cxx_a7285e846b2e871fac5a9c7b606d3f37b}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!g\+Scene\+Context@{g\+Scene\+Context}}
+\index{g\+Scene\+Context@{g\+Scene\+Context}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Scene\+Context}{gSceneContext}}
+{\footnotesize\ttfamily \hyperlink{class_scene_context}{Scene\+Context}$\ast$ g\+Scene\+Context}
+
+
+
+ main.\+cxx の 58 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a26dd0accd561b4bfe425571ecd1b1429}\label{_view_scene_2main_8cxx_a26dd0accd561b4bfe425571ecd1b1429}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+E\+X\+IT@{M\+E\+N\+U\+\_\+\+E\+X\+IT}}
+\index{M\+E\+N\+U\+\_\+\+E\+X\+IT@{M\+E\+N\+U\+\_\+\+E\+X\+IT}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+E\+X\+IT}{MENU\_EXIT}}
+{\footnotesize\ttfamily const int M\+E\+N\+U\+\_\+\+E\+X\+IT = 400}
+
+
+
+ main.\+cxx の 80 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a151f5ff652e8217f3eb41ea54f118249}\label{_view_scene_2main_8cxx_a151f5ff652e8217f3eb41ea54f118249}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED@{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED}}
+\index{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED@{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED}{MENU\_SHADING\_MODE\_SHADED}}
+{\footnotesize\ttfamily const int M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED = 301}
+
+
+
+ main.\+cxx の 73 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aa81017d0a479f7ad4b1cff2582a65bd2}\label{_view_scene_2main_8cxx_aa81017d0a479f7ad4b1cff2582a65bd2}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME@{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME}}
+\index{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME@{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME}{MENU\_SHADING\_MODE\_WIREFRAME}}
+{\footnotesize\ttfamily const int M\+E\+N\+U\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME = 300}
+
+
+
+ main.\+cxx の 72 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a5d2abdbeae808fd3dc1d9c6d028e38ab}\label{_view_scene_2main_8cxx_a5d2abdbeae808fd3dc1d9c6d028e38ab}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED@{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED}}
+\index{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED@{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED}{MENU\_STRING\_SHADING\_MODE\_SHADED}}
+{\footnotesize\ttfamily const char$\ast$ M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+S\+H\+A\+D\+ED = \char`\"{}Shaded\char`\"{}}
+
+
+
+ main.\+cxx の 75 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_aabb8aba220bd4dfc5fe02722ff4c4f98}\label{_view_scene_2main_8cxx_aabb8aba220bd4dfc5fe02722ff4c4f98}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME@{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME}}
+\index{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME@{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME}{MENU\_STRING\_SHADING\_MODE\_WIREFRAME}}
+{\footnotesize\ttfamily const char$\ast$ M\+E\+N\+U\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+S\+H\+A\+D\+I\+N\+G\+\_\+\+M\+O\+D\+E\+\_\+\+W\+I\+R\+E\+F\+R\+A\+ME = \char`\"{}Wireframe\char`\"{}}
+
+
+
+ main.\+cxx の 74 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_abfb3d9f7886033cc315aa37ac0dffb63}\label{_view_scene_2main_8cxx_abfb3d9f7886033cc315aa37ac0dffb63}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH@{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH}}
+\index{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH@{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH}{MENU\_ZOOM\_FOCAL\_LENGTH}}
+{\footnotesize\ttfamily const int M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+F\+O\+C\+A\+L\+\_\+\+L\+E\+N\+G\+TH = 401}
+
+
+
+ main.\+cxx の 77 行目に定義があります。
+
+\mbox{\Hypertarget{_view_scene_2main_8cxx_a11e77d16168b22e99533af996ff1434b}\label{_view_scene_2main_8cxx_a11e77d16168b22e99533af996ff1434b}} 
+\index{View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}!M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}
+\index{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON@{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}!View\+Scene/main.\+cxx@{View\+Scene/main.\+cxx}}
+\subsubsection{\texorpdfstring{M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON}{MENU\_ZOOM\_POSITION}}
+{\footnotesize\ttfamily const int M\+E\+N\+U\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+O\+S\+I\+T\+I\+ON = 402}
+
+
+
+ main.\+cxx の 78 行目に定義があります。
+

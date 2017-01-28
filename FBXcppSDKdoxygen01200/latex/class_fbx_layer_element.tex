@@ -1,0 +1,942 @@
+\hypertarget{class_fbx_layer_element}{}\section{Fbx\+Layer\+Element クラス}
+\label{class_fbx_layer_element}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+
+
+{\ttfamily \#include $<$fbxlayer.\+h$>$}
+
+Fbx\+Layer\+Element の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.903537cm]{class_fbx_layer_element}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{E\+Type} \{ \newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}{e\+Unknown}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cae9b273e2ecbd6c3d1443447d85787f14}{e\+Normal}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca1c6b8d970e3f0d3baabeeb9ccf3e7adf}{e\+Bi\+Normal}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca96bd14320ac3622b6a6c1b7904064244}{e\+Tangent}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca595126582083f962d49d342392bbb847}{e\+Material}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cabad421535bc02ce35b95bc68019191ba}{e\+Polygon\+Group}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca8b70d2a9b7a39d7a2f9bf8ea5fe7967d}{e\+UV}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca61e561a079e40b3ff18a6c3666aa6395}{e\+Vertex\+Color}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca403e47b23cd7a0693610cc1fd21de60e}{e\+Smoothing}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca7b639bff1426d7f7e52bcc6de4c24463}{e\+Vertex\+Crease}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca28616ca98fdfd405d95c116bd7b7dd01}{e\+Edge\+Crease}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab38d7c677d06f709e5321d841afdc1b8}{e\+Hole}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca63ef416d6f8a42e7018e1dcc1c5c78fe}{e\+User\+Data}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf85ca5a4db121af287f52758964e0511}{e\+Visibility}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{e\+Texture\+Diffuse}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caa5929a5d10523098168d41e140839da4}{e\+Texture\+Diffuse\+Factor}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6dd478366b784d3e9b498b6d8c17a88f}{e\+Texture\+Emissive}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca7e5f99d3e45f8770c41a153c423a0d5d}{e\+Texture\+Emissive\+Factor}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca96598ce315fefca5cfd42ce666f7cfcc}{e\+Texture\+Ambient}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0f1ea4b318bc6b9c34cb4412cd40c5e1}{e\+Texture\+Ambient\+Factor}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6c52f0bda9a1b7242642a2750e165f81}{e\+Texture\+Specular}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cadc486f9c31cb15169b8db0b31dc83db7}{e\+Texture\+Specular\+Factor}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caef51e1644a278785fe7d18960033ccba}{e\+Texture\+Shininess}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca15e609e51ebb800df93f2de62fcccdba}{e\+Texture\+Normal\+Map}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6e99984f1c8cc6f7df53565dfdc96060}{e\+Texture\+Bump}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca316e1aff57bfa401d7d0479ef0463cdf}{e\+Texture\+Transparency}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf35ae504b664176ee948c0c238badcf0}{e\+Texture\+Transparency\+Factor}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca3de70dec8f2ad77c06b261b4a6819a26}{e\+Texture\+Reflection}, 
+\newline
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca3b8e1ee7f8fa8ceb3358a541aca70256}{e\+Texture\+Reflection\+Factor}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca877d8a8c0ec7ac527b5ad580976396f0}{e\+Texture\+Displacement}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca922491d438001c25b030d30499a03c0d}{e\+Texture\+Displacement\+Vector}, 
+\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0facfbd6e8c7e8dab94db7b1b68166d5}{e\+Type\+Count}
+ \}
+\item 
+enum \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode} \{ \newline
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a969b0013216b3064e56dd722dbc30635}{e\+None}, 
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ad64b7f5885f295d3eacb5fed40bb0cad}{e\+By\+Control\+Point}, 
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ac349f84b4b32c8052c25cd99bdd55fb1}{e\+By\+Polygon\+Vertex}, 
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a228dc5a768f2137313858ce986cba4cf}{e\+By\+Polygon}, 
+\newline
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a07df52042604ab15db372850399b2858}{e\+By\+Edge}, 
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ab42522efc125ff87d80ba08267a8624f}{e\+All\+Same}
+ \}
+\item 
+enum \hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode} \{ \hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca5fc55c27657e58417ca58fa80aad38a7}{e\+Direct}, 
+\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fcafe20ebd670da52d46b24290fdaa55579}{e\+Index}, 
+\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca8b63b8c77788659ed9d519115da84367}{e\+Index\+To\+Direct}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_layer_element_af6918a0a87c5df4d257198d3c6a12ee2}{Set\+Mapping\+Mode} (\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode} p\+Mapping\+Mode)
+\item 
+void \hyperlink{class_fbx_layer_element_a725681d86b87ca356eda6bb681026257}{Set\+Reference\+Mode} (\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode} p\+Reference\+Mode)
+\item 
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode} \hyperlink{class_fbx_layer_element_a3b20bf41d0b5abc9661b8b93e033cddb}{Get\+Mapping\+Mode} () const
+\item 
+\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode} \hyperlink{class_fbx_layer_element_ae135c9331612660680a0acc97de02d60}{Get\+Reference\+Mode} () const
+\item 
+void \hyperlink{class_fbx_layer_element_a6b7d11d4cc2732537377f9483bac4d52}{Set\+Name} (const char $\ast$p\+Name)
+\item 
+const char $\ast$ \hyperlink{class_fbx_layer_element_af6ca442eaaaac61cec689cf7e39138a6}{Get\+Name} () const
+\item 
+bool \hyperlink{class_fbx_layer_element_a3ee62705102c228619427b17361073b7}{operator==} (const \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} \& \hyperlink{class_fbx_layer_element_a86eb3d2fb38fe2624b4e00369d6a25ea}{operator=} (\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} const \&p\+Other)
+\item 
+void \hyperlink{class_fbx_layer_element_aa9a90be7d41c6b5e3b7813ea6967b8a4}{Destroy} ()
+\begin{DoxyCompactList}\small\item\em Removes this layer element from its owner and delete it. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_fbx_layer_element_a6ab41d0a26802a359efbbc3b2b12dd3d}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clears all the data from this layer element. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_layer_element_a017f6f6c44dd71778739b7d909c35fa8}{Set\+Type} (const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $\ast$p\+Type)
+\item 
+const \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$ \hyperlink{class_fbx_layer_element_a1e83210626684c844505ffd115c27dfd}{Get\+Owner} () const
+\item 
+void \hyperlink{class_fbx_layer_element_a00a11912a2cca47c811c8d23bb3ede51}{Inc\+Ref\+Count} ()
+\item 
+int \hyperlink{class_fbx_layer_element_a80d83d36366e1cf1f79b0e1479b5a692}{Dec\+Ref\+Count} ()
+\item 
+virtual int \hyperlink{class_fbx_layer_element_a15654a170f2d2952bf1eafad65262b8b}{Memory\+Size} () const
+\item 
+virtual bool \hyperlink{class_fbx_layer_element_aa60d2178a7601f0e78a472fa7fd774aa}{Content\+Write\+To} (\hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream) const
+\item 
+virtual bool \hyperlink{class_fbx_layer_element_a407c679ef12336f2cf916f598053bf02}{Content\+Read\+From} (const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream)
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{s\+Type\+Texture\+Start\+Index} = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{e\+Texture\+Diffuse})
+\begin{DoxyCompactList}\small\item\em The start index of texture type layer elements. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_fbx_layer_element_aba954f68e4ad849fe7bd18dcd1d2b3ff}{s\+Type\+Texture\+End\+Index} = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0facfbd6e8c7e8dab94db7b1b68166d5}{e\+Type\+Count}) -\/ 1
+\begin{DoxyCompactList}\small\item\em The end index of texture type layer elements. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_fbx_layer_element_ae7a09ea6aa90f96d37a9e161b9f54094}{s\+Type\+Texture\+Count} = \hyperlink{class_fbx_layer_element_aba954f68e4ad849fe7bd18dcd1d2b3ff}{s\+Type\+Texture\+End\+Index} -\/ \hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{s\+Type\+Texture\+Start\+Index} + 1
+\begin{DoxyCompactList}\small\item\em The count of texture type layer elements. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{s\+Type\+Non\+Texture\+Start\+Index} = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cae9b273e2ecbd6c3d1443447d85787f14}{e\+Normal})
+\begin{DoxyCompactList}\small\item\em The start index of non-\/texture type layer elements. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_fbx_layer_element_a5f1b9591af5822bec240657d21261b43}{s\+Type\+Non\+Texture\+End\+Index} = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf85ca5a4db121af287f52758964e0511}{e\+Visibility})
+\begin{DoxyCompactList}\small\item\em The end index of non-\/texture type layer elements. \end{DoxyCompactList}\item 
+static const int \hyperlink{class_fbx_layer_element_a97147949d75646270ceee636624c0bba}{s\+Type\+Non\+Texture\+Count} = \hyperlink{class_fbx_layer_element_a5f1b9591af5822bec240657d21261b43}{s\+Type\+Non\+Texture\+End\+Index} -\/ \hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{s\+Type\+Non\+Texture\+Start\+Index} + 1
+\begin{DoxyCompactList}\small\item\em The count of non-\/texture type layer elements. \end{DoxyCompactList}\item 
+static const char $\ast$const \hyperlink{class_fbx_layer_element_a70bc77c1478a82df7baa7bba04babc87}{s\+Texture\+Names} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of names of texture type layer elements. \end{DoxyCompactList}\item 
+static const char $\ast$const \hyperlink{class_fbx_layer_element_aa397609e5ddc5c1a603cfcc65ff34552}{s\+Texture\+U\+V\+Names} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of names of UV layer elements. \end{DoxyCompactList}\item 
+static const char $\ast$const \hyperlink{class_fbx_layer_element_a787e39c12e1718d35f9c0168eeee1091}{s\+Non\+Texture\+Names} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of names of non-\/texture type layer elements. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} \hyperlink{class_fbx_layer_element_a8fd9e526f65ca7e33947c9fba6a7e0d0}{s\+Texture\+Data\+Types} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of texture types. \end{DoxyCompactList}\item 
+static const char $\ast$const \hyperlink{class_fbx_layer_element_abebd9e62e1c7b06e471cf00173904aec}{s\+Texture\+Channel\+Names} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Array of texture channels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_aa7d11ce8bf1766a2225d7f6b653c4ece}{Fbx\+Layer\+Element} ()
+\item 
+virtual \hyperlink{class_fbx_layer_element_a291502ffa72d9feed2e31813471f6a46}{$\sim$\+Fbx\+Layer\+Element} ()
+\item 
+void \hyperlink{class_fbx_layer_element_a18763978aa1301d695390a1a2e4a1eec}{Destruct} ()
+\item 
+virtual void \hyperlink{class_fbx_layer_element_ab4740c4774c0600f91515fb2c022f0ef}{Set\+Owner} (\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$p\+Owner, int p\+Instance=0)
+\item 
+\hyperlink{class_fbx_layer_element_ace07aa541a334c865247ff8793ac1b16}{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode} \hyperlink{class_fbx_layer_element_a3fb1be862396ae7716fe2a1935197ef4}{m\+Mapping\+Mode}
+\item 
+\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode} \hyperlink{class_fbx_layer_element_a6b4c1f36ba113330cbfbd534ed74363f}{m\+Reference\+Mode}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_layer_element_a11749a38f06c531163b5889f95b87418}{m\+Name}
+\item 
+const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $\ast$ \hyperlink{class_fbx_layer_element_a062940cef629ccfeb464fe88caa5bdcf}{m\+Type}
+\item 
+\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$ \hyperlink{class_fbx_layer_element_a30cec55ccd979c6715e935dbbc68c7a1}{m\+Owner}
+\item 
+int \hyperlink{class_fbx_layer_element_a78a94fc56ae2687184a4d620118a6387}{m\+Ref\+Count}
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_layer_element_a791d2046ce60bf6f5fb85d9dc6242f2e}{Fbx\+Layer\+Container}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+Base class for elements of layers (\hyperlink{class_fbx_layer}{Fbx\+Layer}). A layer element type is identified by E\+Type. A \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} describes how the layer element is mapped to a geometry surface and how the mapping information is arranged in memory. A \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} contains Normals, U\+Vs or other kind of information.
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_layer}{Fbx\+Layer} 
+
+\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} 
+
+\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{Fbx\+Layer\+Element\+::\+E\+Reference\+Mode} 
+\end{DoxySeeAlso}
+
+
+ fbxlayer.\+h の 38 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!E\+Mapping\+Mode@{E\+Mapping\+Mode}}
+\index{E\+Mapping\+Mode@{E\+Mapping\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{E\+Mapping\+Mode}{EMappingMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}
+
+Determines how the element is mapped to a surface.
+\begin{DoxyItemize}
+\item {\itshape e\+None} The mapping is undetermined.
+\item {\itshape e\+By\+Control\+Point} There will be one mapping coordinate for each surface control point/vertex.
+\item {\itshape e\+By\+Polygon\+Vertex} There will be one mapping coordinate for each vertex, for every polygon of which it is a part. This means that a vertex will have as many mapping coordinates as polygons of which it is a part.
+\item {\itshape e\+By\+Polygon} There can be only one mapping coordinate for the whole polygon.
+\item {\itshape e\+By\+Edge} There will be one mapping coordinate for each unique edge in the mesh. This is meant to be used with smoothing layer elements.
+\item {\itshape e\+All\+Same} There can be only one mapping coordinate for the whole surface. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+None@{e\+None}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+None@{e\+None}}}\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a969b0013216b3064e56dd722dbc30635}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a969b0013216b3064e56dd722dbc30635}} 
+e\+None&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Control\+Point@{e\+By\+Control\+Point}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+By\+Control\+Point@{e\+By\+Control\+Point}}}\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ad64b7f5885f295d3eacb5fed40bb0cad}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ad64b7f5885f295d3eacb5fed40bb0cad}} 
+e\+By\+Control\+Point&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Polygon\+Vertex@{e\+By\+Polygon\+Vertex}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+By\+Polygon\+Vertex@{e\+By\+Polygon\+Vertex}}}\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ac349f84b4b32c8052c25cd99bdd55fb1}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ac349f84b4b32c8052c25cd99bdd55fb1}} 
+e\+By\+Polygon\+Vertex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Polygon@{e\+By\+Polygon}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+By\+Polygon@{e\+By\+Polygon}}}\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a228dc5a768f2137313858ce986cba4cf}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a228dc5a768f2137313858ce986cba4cf}} 
+e\+By\+Polygon&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+By\+Edge@{e\+By\+Edge}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+By\+Edge@{e\+By\+Edge}}}\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a07df52042604ab15db372850399b2858}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a07df52042604ab15db372850399b2858}} 
+e\+By\+Edge&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+All\+Same@{e\+All\+Same}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+All\+Same@{e\+All\+Same}}}\mbox{\Hypertarget{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ab42522efc125ff87d80ba08267a8624f}\label{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ab42522efc125ff87d80ba08267a8624f}} 
+e\+All\+Same&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlayer.\+h の 140 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}\label{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!E\+Reference\+Mode@{E\+Reference\+Mode}}
+\index{E\+Reference\+Mode@{E\+Reference\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{E\+Reference\+Mode}{EReferenceMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{Fbx\+Layer\+Element\+::\+E\+Reference\+Mode}}
+
+Determines how the mapping information is stored in the array of coordinates.
+\begin{DoxyItemize}
+\item {\itshape e\+Direct} This indicates that the mapping information for the n\textquotesingle{}th element is found in the n\textquotesingle{}th place of \hyperlink{class_fbx_layer_element_template_a0c7242aa361d91031b5137fbece371f3}{Fbx\+Layer\+Element\+Template\+::m\+Direct\+Array}.
+\item {\itshape e\+Index}, This symbol is kept for backward compatibility with F\+BX v5.\+0 files. In F\+BX v6.\+0 and higher, this symbol is replaced with e\+Index\+To\+Direct.
+\item {\itshape e\+Index\+To\+Direct} This indicates that the \hyperlink{class_fbx_layer_element_template_a4aa88a6936b2ab08e150ff6336a91a7d}{Fbx\+Layer\+Element\+Template\+::m\+Index\+Array} contains, for the n\textquotesingle{}th element, an index in the \hyperlink{class_fbx_layer_element_template_a0c7242aa361d91031b5137fbece371f3}{Fbx\+Layer\+Element\+Template\+::m\+Direct\+Array} array of mapping elements. e\+Index\+To\+Direct is usually useful for storing e\+By\+Polygon\+Vertex mapping mode elements coordinates. Since the same coordinates are usually repeated many times, this saves spaces by storing the coordinate only one time and then referring to them with an index. Materials and Textures are also referenced with this mode and the actual Material/\+Texture can be accessed via the \hyperlink{class_fbx_layer_element_template_a0c7242aa361d91031b5137fbece371f3}{Fbx\+Layer\+Element\+Template\+::m\+Direct\+Array} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Direct@{e\+Direct}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Direct@{e\+Direct}}}\mbox{\Hypertarget{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca5fc55c27657e58417ca58fa80aad38a7}\label{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca5fc55c27657e58417ca58fa80aad38a7}} 
+e\+Direct&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Index@{e\+Index}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Index@{e\+Index}}}\mbox{\Hypertarget{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fcafe20ebd670da52d46b24290fdaa55579}\label{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fcafe20ebd670da52d46b24290fdaa55579}} 
+e\+Index&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Index\+To\+Direct@{e\+Index\+To\+Direct}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Index\+To\+Direct@{e\+Index\+To\+Direct}}}\mbox{\Hypertarget{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca8b63b8c77788659ed9d519115da84367}\label{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fca8b63b8c77788659ed9d519115da84367}} 
+e\+Index\+To\+Direct&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlayer.\+h の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}
+
+Layer Element type identifier.
+\begin{DoxyItemize}
+\item {\itshape e\+Unknown} Undefined Layer Element class.
+\item {\itshape e\+Normal} Layer Element of type \hyperlink{class_fbx_layer_element_normal}{Fbx\+Layer\+Element\+Normal}.
+\item {\itshape e\+Bi\+Normal} Layer Element of type \hyperlink{class_fbx_layer_element_binormal}{Fbx\+Layer\+Element\+Binormal}.
+\item {\itshape e\+Tangent} Layer Element of type \hyperlink{class_fbx_layer_element_tangent}{Fbx\+Layer\+Element\+Tangent}.
+\item {\itshape e\+Material} Layer Element of type \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material}.
+\item {\itshape e\+Texture\+Diffuse} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Polygon\+Group} Layer Element of type \hyperlink{class_fbx_layer_element_polygon_group}{Fbx\+Layer\+Element\+Polygon\+Group}.
+\item {\itshape e\+UV} Layer Element of type \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV}.
+\item {\itshape e\+Vertex\+Color} Layer Element of type \hyperlink{class_fbx_layer_element_vertex_color}{Fbx\+Layer\+Element\+Vertex\+Color}.
+\item {\itshape e\+Smoothing} Layer Element of type \hyperlink{class_fbx_layer_element_smoothing}{Fbx\+Layer\+Element\+Smoothing}.
+\item {\itshape e\+Vertex\+Crease} Layer Element of type \hyperlink{class_fbx_layer_element_crease}{Fbx\+Layer\+Element\+Crease}.
+\item {\itshape e\+Edge\+Crease} Layer Element of type \hyperlink{class_fbx_layer_element_crease}{Fbx\+Layer\+Element\+Crease}.
+\item {\itshape e\+Hole} Layer Element of type \hyperlink{class_fbx_layer_element_hole}{Fbx\+Layer\+Element\+Hole}.
+\item {\itshape e\+User\+Data} Layer Element of type \hyperlink{class_fbx_layer_element_user_data}{Fbx\+Layer\+Element\+User\+Data}.
+\item {\itshape e\+Visibility} Layer Element of type \hyperlink{class_fbx_layer_element_visibility}{Fbx\+Layer\+Element\+Visibility}.
+\item {\itshape e\+Texture\+Emissive} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Emissive\+Factor} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Ambient} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Ambient\+Factor} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Diffuse\+Factor} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Specular} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Normal\+Map} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Specular\+Factor} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Shininess} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Bump} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Transparency} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Transparency\+Factor} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Reflection} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Reflection\+Factor} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Displacement} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Texture\+Displacement\+Vector} Layer Element of type \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}.
+\item {\itshape e\+Type\+Count} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown@{e\+Unknown}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Unknown@{e\+Unknown}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab3768744dc14ef9fcf6631d3ade97e54}} 
+e\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Normal@{e\+Normal}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Normal@{e\+Normal}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cae9b273e2ecbd6c3d1443447d85787f14}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cae9b273e2ecbd6c3d1443447d85787f14}} 
+e\+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bi\+Normal@{e\+Bi\+Normal}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Bi\+Normal@{e\+Bi\+Normal}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca1c6b8d970e3f0d3baabeeb9ccf3e7adf}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca1c6b8d970e3f0d3baabeeb9ccf3e7adf}} 
+e\+Bi\+Normal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Tangent@{e\+Tangent}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Tangent@{e\+Tangent}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca96bd14320ac3622b6a6c1b7904064244}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca96bd14320ac3622b6a6c1b7904064244}} 
+e\+Tangent&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Material@{e\+Material}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Material@{e\+Material}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca595126582083f962d49d342392bbb847}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca595126582083f962d49d342392bbb847}} 
+e\+Material&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Polygon\+Group@{e\+Polygon\+Group}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Polygon\+Group@{e\+Polygon\+Group}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cabad421535bc02ce35b95bc68019191ba}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cabad421535bc02ce35b95bc68019191ba}} 
+e\+Polygon\+Group&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+UV@{e\+UV}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+UV@{e\+UV}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca8b70d2a9b7a39d7a2f9bf8ea5fe7967d}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca8b70d2a9b7a39d7a2f9bf8ea5fe7967d}} 
+e\+UV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Vertex\+Color@{e\+Vertex\+Color}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Vertex\+Color@{e\+Vertex\+Color}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca61e561a079e40b3ff18a6c3666aa6395}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca61e561a079e40b3ff18a6c3666aa6395}} 
+e\+Vertex\+Color&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Smoothing@{e\+Smoothing}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Smoothing@{e\+Smoothing}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca403e47b23cd7a0693610cc1fd21de60e}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca403e47b23cd7a0693610cc1fd21de60e}} 
+e\+Smoothing&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Vertex\+Crease@{e\+Vertex\+Crease}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Vertex\+Crease@{e\+Vertex\+Crease}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca7b639bff1426d7f7e52bcc6de4c24463}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca7b639bff1426d7f7e52bcc6de4c24463}} 
+e\+Vertex\+Crease&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Edge\+Crease@{e\+Edge\+Crease}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Edge\+Crease@{e\+Edge\+Crease}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca28616ca98fdfd405d95c116bd7b7dd01}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca28616ca98fdfd405d95c116bd7b7dd01}} 
+e\+Edge\+Crease&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hole@{e\+Hole}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Hole@{e\+Hole}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab38d7c677d06f709e5321d841afdc1b8}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cab38d7c677d06f709e5321d841afdc1b8}} 
+e\+Hole&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+User\+Data@{e\+User\+Data}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+User\+Data@{e\+User\+Data}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca63ef416d6f8a42e7018e1dcc1c5c78fe}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca63ef416d6f8a42e7018e1dcc1c5c78fe}} 
+e\+User\+Data&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Visibility@{e\+Visibility}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Visibility@{e\+Visibility}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf85ca5a4db121af287f52758964e0511}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf85ca5a4db121af287f52758964e0511}} 
+e\+Visibility&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Diffuse@{e\+Texture\+Diffuse}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Diffuse@{e\+Texture\+Diffuse}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}} 
+e\+Texture\+Diffuse&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Diffuse\+Factor@{e\+Texture\+Diffuse\+Factor}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Diffuse\+Factor@{e\+Texture\+Diffuse\+Factor}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caa5929a5d10523098168d41e140839da4}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caa5929a5d10523098168d41e140839da4}} 
+e\+Texture\+Diffuse\+Factor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Emissive@{e\+Texture\+Emissive}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Emissive@{e\+Texture\+Emissive}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6dd478366b784d3e9b498b6d8c17a88f}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6dd478366b784d3e9b498b6d8c17a88f}} 
+e\+Texture\+Emissive&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Emissive\+Factor@{e\+Texture\+Emissive\+Factor}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Emissive\+Factor@{e\+Texture\+Emissive\+Factor}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca7e5f99d3e45f8770c41a153c423a0d5d}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca7e5f99d3e45f8770c41a153c423a0d5d}} 
+e\+Texture\+Emissive\+Factor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Ambient@{e\+Texture\+Ambient}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Ambient@{e\+Texture\+Ambient}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca96598ce315fefca5cfd42ce666f7cfcc}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca96598ce315fefca5cfd42ce666f7cfcc}} 
+e\+Texture\+Ambient&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Ambient\+Factor@{e\+Texture\+Ambient\+Factor}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Ambient\+Factor@{e\+Texture\+Ambient\+Factor}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0f1ea4b318bc6b9c34cb4412cd40c5e1}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0f1ea4b318bc6b9c34cb4412cd40c5e1}} 
+e\+Texture\+Ambient\+Factor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Specular@{e\+Texture\+Specular}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Specular@{e\+Texture\+Specular}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6c52f0bda9a1b7242642a2750e165f81}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6c52f0bda9a1b7242642a2750e165f81}} 
+e\+Texture\+Specular&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Specular\+Factor@{e\+Texture\+Specular\+Factor}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Specular\+Factor@{e\+Texture\+Specular\+Factor}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cadc486f9c31cb15169b8db0b31dc83db7}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cadc486f9c31cb15169b8db0b31dc83db7}} 
+e\+Texture\+Specular\+Factor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Shininess@{e\+Texture\+Shininess}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Shininess@{e\+Texture\+Shininess}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caef51e1644a278785fe7d18960033ccba}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caef51e1644a278785fe7d18960033ccba}} 
+e\+Texture\+Shininess&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Normal\+Map@{e\+Texture\+Normal\+Map}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Normal\+Map@{e\+Texture\+Normal\+Map}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca15e609e51ebb800df93f2de62fcccdba}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca15e609e51ebb800df93f2de62fcccdba}} 
+e\+Texture\+Normal\+Map&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Bump@{e\+Texture\+Bump}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Bump@{e\+Texture\+Bump}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6e99984f1c8cc6f7df53565dfdc96060}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca6e99984f1c8cc6f7df53565dfdc96060}} 
+e\+Texture\+Bump&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Transparency@{e\+Texture\+Transparency}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Transparency@{e\+Texture\+Transparency}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca316e1aff57bfa401d7d0479ef0463cdf}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca316e1aff57bfa401d7d0479ef0463cdf}} 
+e\+Texture\+Transparency&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Transparency\+Factor@{e\+Texture\+Transparency\+Factor}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Transparency\+Factor@{e\+Texture\+Transparency\+Factor}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf35ae504b664176ee948c0c238badcf0}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf35ae504b664176ee948c0c238badcf0}} 
+e\+Texture\+Transparency\+Factor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Reflection@{e\+Texture\+Reflection}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Reflection@{e\+Texture\+Reflection}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca3de70dec8f2ad77c06b261b4a6819a26}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca3de70dec8f2ad77c06b261b4a6819a26}} 
+e\+Texture\+Reflection&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Reflection\+Factor@{e\+Texture\+Reflection\+Factor}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Reflection\+Factor@{e\+Texture\+Reflection\+Factor}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca3b8e1ee7f8fa8ceb3358a541aca70256}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca3b8e1ee7f8fa8ceb3358a541aca70256}} 
+e\+Texture\+Reflection\+Factor&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Displacement@{e\+Texture\+Displacement}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Displacement@{e\+Texture\+Displacement}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca877d8a8c0ec7ac527b5ad580976396f0}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca877d8a8c0ec7ac527b5ad580976396f0}} 
+e\+Texture\+Displacement&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Texture\+Displacement\+Vector@{e\+Texture\+Displacement\+Vector}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Texture\+Displacement\+Vector@{e\+Texture\+Displacement\+Vector}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca922491d438001c25b030d30499a03c0d}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca922491d438001c25b030d30499a03c0d}} 
+e\+Texture\+Displacement\+Vector&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Type\+Count@{e\+Type\+Count}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!e\+Type\+Count@{e\+Type\+Count}}}\mbox{\Hypertarget{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0facfbd6e8c7e8dab94db7b1b68166d5}\label{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0facfbd6e8c7e8dab94db7b1b68166d5}} 
+e\+Type\+Count&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlayer.\+h の 75 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_layer_element_aa7d11ce8bf1766a2225d7f6b653c4ece}\label{class_fbx_layer_element_aa7d11ce8bf1766a2225d7f6b653c4ece}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element()}{FbxLayerElement()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+::\+Fbx\+Layer\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 247 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a291502ffa72d9feed2e31813471f6a46}\label{class_fbx_layer_element_a291502ffa72d9feed2e31813471f6a46}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!````~Fbx\+Layer\+Element@{$\sim$\+Fbx\+Layer\+Element}}
+\index{````~Fbx\+Layer\+Element@{$\sim$\+Fbx\+Layer\+Element}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Layer\+Element()}{~FbxLayerElement()}}
+{\footnotesize\ttfamily virtual Fbx\+Layer\+Element\+::$\sim$\+Fbx\+Layer\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+ fbxlayer.\+h の 256 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_a6ab41d0a26802a359efbbc3b2b12dd3d}\label{class_fbx_layer_element_a6ab41d0a26802a359efbbc3b2b12dd3d}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Layer\+Element\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Clears all the data from this layer element. 
+
+
+
+\hyperlink{class_fbx_layer_element_user_data_aa945631c932f3c811013c903e5ecf55e}{Fbx\+Layer\+Element\+User\+Data}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ Type $>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ void $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Surface\+Material $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Texture $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ double $>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ int $>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Color $>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ bool $>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector4 $>$}, \hyperlink{class_fbx_layer_element_template_abe029dd81aa956b415b9534aa3536bf0}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector2 $>$}で再実装されています。
+
+
+
+ fbxlayer.\+h の 229 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a407c679ef12336f2cf916f598053bf02}\label{class_fbx_layer_element_a407c679ef12336f2cf916f598053bf02}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Content\+Read\+From@{Content\+Read\+From}}
+\index{Content\+Read\+From@{Content\+Read\+From}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Content\+Read\+From()}{ContentReadFrom()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Layer\+Element\+::\+Content\+Read\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ Type $>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ void $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Surface\+Material $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Texture $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ double $>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ int $>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Color $>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ bool $>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector4 $>$}, \hyperlink{class_fbx_layer_element_template_a19424f43272601bf018b8a0ba843b094}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector2 $>$}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_layer_element_aa60d2178a7601f0e78a472fa7fd774aa}\label{class_fbx_layer_element_aa60d2178a7601f0e78a472fa7fd774aa}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Content\+Write\+To@{Content\+Write\+To}}
+\index{Content\+Write\+To@{Content\+Write\+To}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Content\+Write\+To()}{ContentWriteTo()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Layer\+Element\+::\+Content\+Write\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ Type $>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ void $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Surface\+Material $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Texture $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ double $>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ int $>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Color $>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ bool $>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector4 $>$}, \hyperlink{class_fbx_layer_element_template_a035bb7adbe8edf5a861d6154c7ebeb8b}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector2 $>$}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a80d83d36366e1cf1f79b0e1479b5a692}\label{class_fbx_layer_element_a80d83d36366e1cf1f79b0e1479b5a692}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Dec\+Ref\+Count@{Dec\+Ref\+Count}}
+\index{Dec\+Ref\+Count@{Dec\+Ref\+Count}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Dec\+Ref\+Count()}{DecRefCount()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+::\+Dec\+Ref\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 244 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_aa9a90be7d41c6b5e3b7813ea6967b8a4}\label{class_fbx_layer_element_aa9a90be7d41c6b5e3b7813ea6967b8a4}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes this layer element from its owner and delete it. 
+
+\mbox{\Hypertarget{class_fbx_layer_element_a18763978aa1301d695390a1a2e4a1eec}\label{class_fbx_layer_element_a18763978aa1301d695390a1a2e4a1eec}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Destruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 268 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_ace07aa541a334c865247ff8793ac1b16}\label{class_fbx_layer_element_ace07aa541a334c865247ff8793ac1b16}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW@{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW}}
+\index{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW@{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+E\+W()}{FBXSDK\_FRIEND\_NEW()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+::\+F\+B\+X\+S\+D\+K\+\_\+\+F\+R\+I\+E\+N\+D\+\_\+\+N\+EW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_a3b20bf41d0b5abc9661b8b93e033cddb}\label{class_fbx_layer_element_a3b20bf41d0b5abc9661b8b93e033cddb}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Get\+Mapping\+Mode@{Get\+Mapping\+Mode}}
+\index{Get\+Mapping\+Mode@{Get\+Mapping\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Get\+Mapping\+Mode()}{GetMappingMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode} Fbx\+Layer\+Element\+::\+Get\+Mapping\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Mapping Mode. \begin{DoxyReturn}{戻り値}
+The current Mapping Mode. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 184 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_af6ca442eaaaac61cec689cf7e39138a6}\label{class_fbx_layer_element_af6ca442eaaaac61cec689cf7e39138a6}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Layer\+Element\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the name of this object. \begin{DoxyReturn}{戻り値}
+The current name of this Layer\+Element object. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 199 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a1e83210626684c844505ffd115c27dfd}\label{class_fbx_layer_element_a1e83210626684c844505ffd115c27dfd}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Get\+Owner@{Get\+Owner}}
+\index{Get\+Owner@{Get\+Owner}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Get\+Owner()}{GetOwner()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container}$\ast$ Fbx\+Layer\+Element\+::\+Get\+Owner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 239 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_ae135c9331612660680a0acc97de02d60}\label{class_fbx_layer_element_ae135c9331612660680a0acc97de02d60}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Get\+Reference\+Mode@{Get\+Reference\+Mode}}
+\index{Get\+Reference\+Mode@{Get\+Reference\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Get\+Reference\+Mode()}{GetReferenceMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode} Fbx\+Layer\+Element\+::\+Get\+Reference\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Reference Mode. \begin{DoxyReturn}{戻り値}
+The current Reference Mode. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 189 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a00a11912a2cca47c811c8d23bb3ede51}\label{class_fbx_layer_element_a00a11912a2cca47c811c8d23bb3ede51}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Inc\+Ref\+Count@{Inc\+Ref\+Count}}
+\index{Inc\+Ref\+Count@{Inc\+Ref\+Count}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Inc\+Ref\+Count()}{IncRefCount()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Inc\+Ref\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 243 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a15654a170f2d2952bf1eafad65262b8b}\label{class_fbx_layer_element_a15654a170f2d2952bf1eafad65262b8b}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Memory\+Size@{Memory\+Size}}
+\index{Memory\+Size@{Memory\+Size}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Memory\+Size()}{MemorySize()}}
+{\footnotesize\ttfamily virtual int Fbx\+Layer\+Element\+::\+Memory\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_texture_aa6ee4c7c56a71d1a3f70fa4e0806e1f5}{Fbx\+Layer\+Element\+Texture}, \hyperlink{class_fbx_layer_element_user_data_aa02fc5861dec4da68293f9660d4ff13b}{Fbx\+Layer\+Element\+User\+Data}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ Type $>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ void $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Surface\+Material $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Texture $\ast$$>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ double $>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ int $>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Color $>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ bool $>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector4 $>$}, \hyperlink{class_fbx_layer_element_template_aa6a7b5ed38b51d4a903f9ed2e715ee79}{Fbx\+Layer\+Element\+Template$<$ Fbx\+Vector2 $>$}で再実装されています。
+
+
+
+ fbxlayer.\+h の 274 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a86eb3d2fb38fe2624b4e00369d6a25ea}\label{class_fbx_layer_element_a86eb3d2fb38fe2624b4e00369d6a25ea}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element}\& Fbx\+Layer\+Element\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} const \&}]{p\+Other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assignment operator 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Layer element assigned to this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+This layer element after assignment. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 216 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a3ee62705102c228619427b17361073b7}\label{class_fbx_layer_element_a3ee62705102c228619427b17361073b7}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} \&}]{p\+Other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Equivalence operator 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Layer element to be compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 205 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_af6918a0a87c5df4d257198d3c6a12ee2}\label{class_fbx_layer_element_af6918a0a87c5df4d257198d3c6a12ee2}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Set\+Mapping\+Mode@{Set\+Mapping\+Mode}}
+\index{Set\+Mapping\+Mode@{Set\+Mapping\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Set\+Mapping\+Mode()}{SetMappingMode()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Set\+Mapping\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode}}]{p\+Mapping\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the Mapping Mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Mapping\+Mode} & Specifies the way that layer element is mapped to a surface. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxlayer.\+h の 174 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a6b7d11d4cc2732537377f9483bac4d52}\label{class_fbx_layer_element_a6b7d11d4cc2732537377f9483bac4d52}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Set\+Name@{Set\+Name}}
+\index{Set\+Name@{Set\+Name}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Set\+Name()}{SetName()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the name of this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Specifies the name of this Layer\+Element object. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxlayer.\+h の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_ab4740c4774c0600f91515fb2c022f0ef}\label{class_fbx_layer_element_ab4740c4774c0600f91515fb2c022f0ef}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Set\+Owner@{Set\+Owner}}
+\index{Set\+Owner@{Set\+Owner}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Set\+Owner()}{SetOwner()}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+::\+Set\+Owner (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$}]{p\+Owner,  }\item[{int}]{p\+Instance = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_layer_element_material_afe025ea61981c53c05cb97bcd9174631}{Fbx\+Layer\+Element\+Material}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a725681d86b87ca356eda6bb681026257}\label{class_fbx_layer_element_a725681d86b87ca356eda6bb681026257}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Set\+Reference\+Mode@{Set\+Reference\+Mode}}
+\index{Set\+Reference\+Mode@{Set\+Reference\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Set\+Reference\+Mode()}{SetReferenceMode()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Set\+Reference\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode}}]{p\+Reference\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the Reference Mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Reference\+Mode} & Specifies the reference mode. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxlayer.\+h の 179 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a017f6f6c44dd71778739b7d909c35fa8}\label{class_fbx_layer_element_a017f6f6c44dd71778739b7d909c35fa8}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Set\+Type@{Set\+Type}}
+\index{Set\+Type@{Set\+Type}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Set\+Type()}{SetType()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+::\+Set\+Type (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} $\ast$}]{p\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxlayer.\+h の 238 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_a791d2046ce60bf6f5fb85d9dc6242f2e}\label{class_fbx_layer_element_a791d2046ce60bf6f5fb85d9dc6242f2e}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!Fbx\+Layer\+Container@{Fbx\+Layer\+Container}}
+\index{Fbx\+Layer\+Container@{Fbx\+Layer\+Container}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Container}{FbxLayerContainer}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxlayer.\+h の 278 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_a3fb1be862396ae7716fe2a1935197ef4}\label{class_fbx_layer_element_a3fb1be862396ae7716fe2a1935197ef4}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!m\+Mapping\+Mode@{m\+Mapping\+Mode}}
+\index{m\+Mapping\+Mode@{m\+Mapping\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{m\+Mapping\+Mode}{mMappingMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{E\+Mapping\+Mode} Fbx\+Layer\+Element\+::m\+Mapping\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 260 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a11749a38f06c531163b5889f95b87418}\label{class_fbx_layer_element_a11749a38f06c531163b5889f95b87418}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!m\+Name@{m\+Name}}
+\index{m\+Name@{m\+Name}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{m\+Name}{mName}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Layer\+Element\+::m\+Name\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 263 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a30cec55ccd979c6715e935dbbc68c7a1}\label{class_fbx_layer_element_a30cec55ccd979c6715e935dbbc68c7a1}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!m\+Owner@{m\+Owner}}
+\index{m\+Owner@{m\+Owner}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{m\+Owner}{mOwner}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container}$\ast$ Fbx\+Layer\+Element\+::m\+Owner\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 265 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a78a94fc56ae2687184a4d620118a6387}\label{class_fbx_layer_element_a78a94fc56ae2687184a4d620118a6387}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!m\+Ref\+Count@{m\+Ref\+Count}}
+\index{m\+Ref\+Count@{m\+Ref\+Count}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{m\+Ref\+Count}{mRefCount}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+::m\+Ref\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 266 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a6b4c1f36ba113330cbfbd534ed74363f}\label{class_fbx_layer_element_a6b4c1f36ba113330cbfbd534ed74363f}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!m\+Reference\+Mode@{m\+Reference\+Mode}}
+\index{m\+Reference\+Mode@{m\+Reference\+Mode}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{m\+Reference\+Mode}{mReferenceMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element_a00f04654580ca9b2f5d292c11abd83fc}{E\+Reference\+Mode} Fbx\+Layer\+Element\+::m\+Reference\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 261 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a062940cef629ccfeb464fe88caa5bdcf}\label{class_fbx_layer_element_a062940cef629ccfeb464fe88caa5bdcf}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!m\+Type@{m\+Type}}
+\index{m\+Type@{m\+Type}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{m\+Type}{mType}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type}$\ast$ Fbx\+Layer\+Element\+::m\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 264 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a787e39c12e1718d35f9c0168eeee1091}\label{class_fbx_layer_element_a787e39c12e1718d35f9c0168eeee1091}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Non\+Texture\+Names@{s\+Non\+Texture\+Names}}
+\index{s\+Non\+Texture\+Names@{s\+Non\+Texture\+Names}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Non\+Texture\+Names}{sNonTextureNames}}
+{\footnotesize\ttfamily const char$\ast$ const Fbx\+Layer\+Element\+::s\+Non\+Texture\+Names\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Array of names of non-\/texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 126 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_abebd9e62e1c7b06e471cf00173904aec}\label{class_fbx_layer_element_abebd9e62e1c7b06e471cf00173904aec}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Texture\+Channel\+Names@{s\+Texture\+Channel\+Names}}
+\index{s\+Texture\+Channel\+Names@{s\+Texture\+Channel\+Names}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Texture\+Channel\+Names}{sTextureChannelNames}}
+{\footnotesize\ttfamily const char$\ast$ const Fbx\+Layer\+Element\+::s\+Texture\+Channel\+Names\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Array of texture channels. 
+
+
+
+ fbxlayer.\+h の 128 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a8fd9e526f65ca7e33947c9fba6a7e0d0}\label{class_fbx_layer_element_a8fd9e526f65ca7e33947c9fba6a7e0d0}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Texture\+Data\+Types@{s\+Texture\+Data\+Types}}
+\index{s\+Texture\+Data\+Types@{s\+Texture\+Data\+Types}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Texture\+Data\+Types}{sTextureDataTypes}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_data_type}{Fbx\+Data\+Type} Fbx\+Layer\+Element\+::s\+Texture\+Data\+Types\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Array of texture types. 
+
+
+
+ fbxlayer.\+h の 127 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a70bc77c1478a82df7baa7bba04babc87}\label{class_fbx_layer_element_a70bc77c1478a82df7baa7bba04babc87}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Texture\+Names@{s\+Texture\+Names}}
+\index{s\+Texture\+Names@{s\+Texture\+Names}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Texture\+Names}{sTextureNames}}
+{\footnotesize\ttfamily const char$\ast$ const Fbx\+Layer\+Element\+::s\+Texture\+Names\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Array of names of texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 124 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_aa397609e5ddc5c1a603cfcc65ff34552}\label{class_fbx_layer_element_aa397609e5ddc5c1a603cfcc65ff34552}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Texture\+U\+V\+Names@{s\+Texture\+U\+V\+Names}}
+\index{s\+Texture\+U\+V\+Names@{s\+Texture\+U\+V\+Names}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Texture\+U\+V\+Names}{sTextureUVNames}}
+{\footnotesize\ttfamily const char$\ast$ const Fbx\+Layer\+Element\+::s\+Texture\+U\+V\+Names\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Array of names of UV layer elements. 
+
+
+
+ fbxlayer.\+h の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a97147949d75646270ceee636624c0bba}\label{class_fbx_layer_element_a97147949d75646270ceee636624c0bba}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Type\+Non\+Texture\+Count@{s\+Type\+Non\+Texture\+Count}}
+\index{s\+Type\+Non\+Texture\+Count@{s\+Type\+Non\+Texture\+Count}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Type\+Non\+Texture\+Count}{sTypeNonTextureCount}}
+{\footnotesize\ttfamily const int Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Count = \hyperlink{class_fbx_layer_element_a5f1b9591af5822bec240657d21261b43}{s\+Type\+Non\+Texture\+End\+Index} -\/ \hyperlink{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}{s\+Type\+Non\+Texture\+Start\+Index} + 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The count of non-\/texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 123 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a5f1b9591af5822bec240657d21261b43}\label{class_fbx_layer_element_a5f1b9591af5822bec240657d21261b43}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Type\+Non\+Texture\+End\+Index@{s\+Type\+Non\+Texture\+End\+Index}}
+\index{s\+Type\+Non\+Texture\+End\+Index@{s\+Type\+Non\+Texture\+End\+Index}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Type\+Non\+Texture\+End\+Index}{sTypeNonTextureEndIndex}}
+{\footnotesize\ttfamily const int Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+End\+Index = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42caf85ca5a4db121af287f52758964e0511}{e\+Visibility})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The end index of non-\/texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}\label{class_fbx_layer_element_a13fe30eb6e884901f5ce503f095c716e}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Type\+Non\+Texture\+Start\+Index@{s\+Type\+Non\+Texture\+Start\+Index}}
+\index{s\+Type\+Non\+Texture\+Start\+Index@{s\+Type\+Non\+Texture\+Start\+Index}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Type\+Non\+Texture\+Start\+Index}{sTypeNonTextureStartIndex}}
+{\footnotesize\ttfamily const int Fbx\+Layer\+Element\+::s\+Type\+Non\+Texture\+Start\+Index = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42cae9b273e2ecbd6c3d1443447d85787f14}{e\+Normal})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The start index of non-\/texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 121 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_ae7a09ea6aa90f96d37a9e161b9f54094}\label{class_fbx_layer_element_ae7a09ea6aa90f96d37a9e161b9f54094}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Type\+Texture\+Count@{s\+Type\+Texture\+Count}}
+\index{s\+Type\+Texture\+Count@{s\+Type\+Texture\+Count}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Type\+Texture\+Count}{sTypeTextureCount}}
+{\footnotesize\ttfamily const int Fbx\+Layer\+Element\+::s\+Type\+Texture\+Count = \hyperlink{class_fbx_layer_element_aba954f68e4ad849fe7bd18dcd1d2b3ff}{s\+Type\+Texture\+End\+Index} -\/ \hyperlink{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}{s\+Type\+Texture\+Start\+Index} + 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The count of texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 120 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_aba954f68e4ad849fe7bd18dcd1d2b3ff}\label{class_fbx_layer_element_aba954f68e4ad849fe7bd18dcd1d2b3ff}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Type\+Texture\+End\+Index@{s\+Type\+Texture\+End\+Index}}
+\index{s\+Type\+Texture\+End\+Index@{s\+Type\+Texture\+End\+Index}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Type\+Texture\+End\+Index}{sTypeTextureEndIndex}}
+{\footnotesize\ttfamily const int Fbx\+Layer\+Element\+::s\+Type\+Texture\+End\+Index = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca0facfbd6e8c7e8dab94db7b1b68166d5}{e\+Type\+Count}) -\/ 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The end index of texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}\label{class_fbx_layer_element_a207301b1a6ecb7cdbce89cb44093d0b7}} 
+\index{Fbx\+Layer\+Element@{Fbx\+Layer\+Element}!s\+Type\+Texture\+Start\+Index@{s\+Type\+Texture\+Start\+Index}}
+\index{s\+Type\+Texture\+Start\+Index@{s\+Type\+Texture\+Start\+Index}!Fbx\+Layer\+Element@{Fbx\+Layer\+Element}}
+\subsubsection{\texorpdfstring{s\+Type\+Texture\+Start\+Index}{sTypeTextureStartIndex}}
+{\footnotesize\ttfamily const int Fbx\+Layer\+Element\+::s\+Type\+Texture\+Start\+Index = int(\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{e\+Texture\+Diffuse})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The start index of texture type layer elements. 
+
+
+
+ fbxlayer.\+h の 118 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxlayer_8h}{fbxlayer.\+h}\end{DoxyCompactItemize}

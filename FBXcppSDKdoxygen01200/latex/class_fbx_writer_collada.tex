@@ -1,0 +1,203 @@
+\hypertarget{class_fbx_writer_collada}{}\section{Fbx\+Writer\+Collada クラス}
+\label{class_fbx_writer_collada}\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+
+
+Class to export F\+BX scene into a Collada file.  
+
+
+
+
+{\ttfamily \#include $<$fbxwritercollada14.\+h$>$}
+
+Fbx\+Writer\+Collada の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_writer_collada}
+\end{center}
+\end{figure}
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_writer_collada_aed549791a8dec6dbeba7a6293c098cdb}{Fbx\+Writer\+Collada} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, int p\+ID, \hyperlink{class_fbx_status}{Fbx\+Status} \&p\+Status)
+\item 
+virtual \hyperlink{class_fbx_writer_collada_a115ea7677c58adb2761c2d7e5c17ac6d}{$\sim$\+Fbx\+Writer\+Collada} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{File Management}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_writer_collada_a973e285681d8486e74a200812eeee70a}{File\+Create} (char $\ast$p\+File\+Name)
+\item 
+virtual bool \hyperlink{class_fbx_writer_collada_ae33b59a7bdbd04cca55a4632c7204f5e}{File\+Close} ()
+\item 
+virtual bool \hyperlink{class_fbx_writer_collada_a77c117aa61d57faf57e6810823938cbd}{Is\+File\+Open} ()
+\end{DoxyCompactItemize}
+\subsection*{Write Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_writer_collada_a64fdc18e00335c37acf279a5ef0d3711}{Get\+Write\+Options} ()
+\item 
+virtual bool \hyperlink{class_fbx_writer_collada_aaf5a632f5fa72c521d578ad17ae0aea1}{Write} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document)
+\item 
+virtual bool \hyperlink{class_fbx_writer_collada_aee5b9934adfdd982e0c33373ddf77121}{Preprocess\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\item 
+virtual bool \hyperlink{class_fbx_writer_collada_a3f03c5f945df442ecba81efa7d531c64}{Postprocess\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Class to export F\+BX scene into a Collada file. 
+
+ fbxwritercollada14.\+h の 25 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_writer_collada_aed549791a8dec6dbeba7a6293c098cdb}\label{class_fbx_writer_collada_aed549791a8dec6dbeba7a6293c098cdb}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{Fbx\+Writer\+Collada()}{FbxWriterCollada()}}
+{\footnotesize\ttfamily Fbx\+Writer\+Collada\+::\+Fbx\+Writer\+Collada (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{int}]{p\+ID,  }\item[{\hyperlink{class_fbx_status}{Fbx\+Status} \&}]{p\+Status }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Manager} & F\+BX S\+DK object Manager. \\
+\hline
+{\em p\+ID} & Internal ID. \\
+\hline
+{\em p\+Status} & The \hyperlink{class_fbx_status}{Fbx\+Status} object to hold error codes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_writer_collada_a115ea7677c58adb2761c2d7e5c17ac6d}\label{class_fbx_writer_collada_a115ea7677c58adb2761c2d7e5c17ac6d}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!````~Fbx\+Writer\+Collada@{$\sim$\+Fbx\+Writer\+Collada}}
+\index{````~Fbx\+Writer\+Collada@{$\sim$\+Fbx\+Writer\+Collada}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Writer\+Collada()}{~FbxWriterCollada()}}
+{\footnotesize\ttfamily virtual Fbx\+Writer\+Collada\+::$\sim$\+Fbx\+Writer\+Collada (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_writer_collada_ae33b59a7bdbd04cca55a4632c7204f5e}\label{class_fbx_writer_collada_ae33b59a7bdbd04cca55a4632c7204f5e}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!File\+Close@{File\+Close}}
+\index{File\+Close@{File\+Close}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{File\+Close()}{FileClose()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Writer\+Collada\+::\+File\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Close file. \begin{DoxyReturn}{戻り値}
+Return true if file is closed successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_writer_a0387142f55d0020fd5360759c12aa121}{Fbx\+Writer}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_writer_collada_a973e285681d8486e74a200812eeee70a}\label{class_fbx_writer_collada_a973e285681d8486e74a200812eeee70a}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!File\+Create@{File\+Create}}
+\index{File\+Create@{File\+Create}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{File\+Create()}{FileCreate()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Writer\+Collada\+::\+File\+Create (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Create and open file with the given name. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & the name of file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if the specified file is created and opened. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_writer_abe6729227cd6e3be5ee3ab0c1b8b0eda}{Fbx\+Writer}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_writer_collada_a64fdc18e00335c37acf279a5ef0d3711}\label{class_fbx_writer_collada_a64fdc18e00335c37acf279a5ef0d3711}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Get\+Write\+Options@{Get\+Write\+Options}}
+\index{Get\+Write\+Options@{Get\+Write\+Options}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{Get\+Write\+Options()}{GetWriteOptions()}}
+{\footnotesize\ttfamily virtual void Fbx\+Writer\+Collada\+::\+Get\+Write\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get Collada export options settings. 
+
+\hyperlink{class_fbx_writer_ad237f5cd183ae29f744aee32b7aa5525}{Fbx\+Writer}を実装しています。
+
+
+
+ fbxwritercollada14.\+h の 75 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_writer_collada_a77c117aa61d57faf57e6810823938cbd}\label{class_fbx_writer_collada_a77c117aa61d57faf57e6810823938cbd}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Is\+File\+Open@{Is\+File\+Open}}
+\index{Is\+File\+Open@{Is\+File\+Open}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{Is\+File\+Open()}{IsFileOpen()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Writer\+Collada\+::\+Is\+File\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Check if current file is open. \begin{DoxyReturn}{戻り値}
+Return true if file is open, false otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_writer_ab70be3aaebd304af11cdce5e225cce68}{Fbx\+Writer}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_writer_collada_a3f03c5f945df442ecba81efa7d531c64}\label{class_fbx_writer_collada_a3f03c5f945df442ecba81efa7d531c64}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Postprocess\+Scene@{Postprocess\+Scene}}
+\index{Postprocess\+Scene@{Postprocess\+Scene}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{Postprocess\+Scene()}{PostprocessScene()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Writer\+Collada\+::\+Postprocess\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Process F\+BX scene after exporting F\+BX scene to Collada file. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & the F\+BX scene to precess. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if the given scene is processed successfully. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_writer_a1cfdf59f72ebe777484862e4b64b5d65}{Fbx\+Writer}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_writer_collada_aee5b9934adfdd982e0c33373ddf77121}\label{class_fbx_writer_collada_aee5b9934adfdd982e0c33373ddf77121}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Preprocess\+Scene@{Preprocess\+Scene}}
+\index{Preprocess\+Scene@{Preprocess\+Scene}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{Preprocess\+Scene()}{PreprocessScene()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Writer\+Collada\+::\+Preprocess\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Process F\+BX scene before exporting F\+BX scene to Collada file. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & the F\+BX scene to precess. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if the given scene is processed successfully. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function is processing name clash, special transformation conversion etc. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_writer_a0fd62ec785e7108924975591ee8fbf30}{Fbx\+Writer}を実装しています。
+
+\mbox{\Hypertarget{class_fbx_writer_collada_aaf5a632f5fa72c521d578ad17ae0aea1}\label{class_fbx_writer_collada_aaf5a632f5fa72c521d578ad17ae0aea1}} 
+\index{Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}!Write@{Write}}
+\index{Write@{Write}!Fbx\+Writer\+Collada@{Fbx\+Writer\+Collada}}
+\subsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Writer\+Collada\+::\+Write (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Export the F\+BX document to Collada file, according to the given options settings. 
+\begin{DoxyParams}{引数}
+{\em p\+Document} & F\+BX Document to export. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, false otherwise. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_writer_aa8c0277611da0fdb0b9a184c55c30c2c}{Fbx\+Writer}を実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/collada/\hyperlink{fbxwritercollada14_8h}{fbxwritercollada14.\+h}\end{DoxyCompactItemize}

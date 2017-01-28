@@ -1,0 +1,153 @@
+\hypertarget{_export_scene02_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Export\+Scene02/main.cxx ファイル}
+\label{_export_scene02_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Scene02/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Scene02/main.\+cxx}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Common.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_export_scene02_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}Export\+Scene02.\+fbx\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_export_scene02_2main_8cxx_a08e6979c3b1a6b42b5e86d4824b4c764}{Create\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_export_scene02_2main_8cxx_a2ef27b281cfc657019a9af1a7cfba288}{Create\+Nurbs} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_a1340cf78dcdb3db805b139f13a6fd6ed}{Map\+Stretched\+Shape} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Nurbs)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_aa76b07f7841d34cd4d6c62ab60114668}{Map\+Box\+Shape} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Nurbs)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_ac12df59b81e11e4ca7c2d9c0ca6e25c7}{Map\+Shapes\+On\+Nurbs} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Nurbs)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_aa9f1ad8cd3dd875ffb08798bc7dc6a24}{Map\+Texture} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Nurbs)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_aa3f11c39f89373bc9c059f24e566b6d5}{Map\+Material} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Nurbs)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_abb08cb5d68a846fc537ca53f86fc3cb5}{Animate\+Nurbs} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Nurbs, \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+int \hyperlink{_export_scene02_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_afd7502de9ce3c038da0fb629618f9fb4}{Map\+Stretched\+Shape} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$l\+Blend\+Shape\+Channel)
+\item 
+void \hyperlink{_export_scene02_2main_8cxx_a16b87c77f2b3d2192e041537eaa3070e}{Map\+Box\+Shape} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$l\+Blend\+Shape\+Channel)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_export_scene02_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}Export\+Scene02.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 34 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_abb08cb5d68a846fc537ca53f86fc3cb5}\label{_export_scene02_2main_8cxx_abb08cb5d68a846fc537ca53f86fc3cb5}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Animate\+Nurbs@{Animate\+Nurbs}}
+\index{Animate\+Nurbs@{Animate\+Nurbs}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+Nurbs()}{AnimateNurbs()}}
+{\footnotesize\ttfamily void Animate\+Nurbs (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Nurbs,  }\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 324 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_a2ef27b281cfc657019a9af1a7cfba288}\label{_export_scene02_2main_8cxx_a2ef27b281cfc657019a9af1a7cfba288}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Create\+Nurbs@{Create\+Nurbs}}
+\index{Create\+Nurbs@{Create\+Nurbs}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Nurbs()}{CreateNurbs()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Nurbs (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 113 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_a08e6979c3b1a6b42b5e86d4824b4c764}\label{_export_scene02_2main_8cxx_a08e6979c3b1a6b42b5e86d4824b4c764}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Create\+Scene@{Create\+Scene}}
+\index{Create\+Scene@{Create\+Scene}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Scene()}{CreateScene()}}
+{\footnotesize\ttfamily bool Create\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 96 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_export_scene02_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!main@{main}}
+\index{main@{main}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 51 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_aa76b07f7841d34cd4d6c62ab60114668}\label{_export_scene02_2main_8cxx_aa76b07f7841d34cd4d6c62ab60114668}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Box\+Shape@{Map\+Box\+Shape}}
+\index{Map\+Box\+Shape@{Map\+Box\+Shape}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Box\+Shape()}{MapBoxShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Map\+Box\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_a16b87c77f2b3d2192e041537eaa3070e}\label{_export_scene02_2main_8cxx_a16b87c77f2b3d2192e041537eaa3070e}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Box\+Shape@{Map\+Box\+Shape}}
+\index{Map\+Box\+Shape@{Map\+Box\+Shape}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Box\+Shape()}{MapBoxShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Map\+Box\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$}]{l\+Blend\+Shape\+Channel }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 189 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_aa3f11c39f89373bc9c059f24e566b6d5}\label{_export_scene02_2main_8cxx_aa3f11c39f89373bc9c059f24e566b6d5}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Material@{Map\+Material}}
+\index{Map\+Material@{Map\+Material}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Material()}{MapMaterial()}}
+{\footnotesize\ttfamily void Map\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 293 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_ac12df59b81e11e4ca7c2d9c0ca6e25c7}\label{_export_scene02_2main_8cxx_ac12df59b81e11e4ca7c2d9c0ca6e25c7}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Shapes\+On\+Nurbs@{Map\+Shapes\+On\+Nurbs}}
+\index{Map\+Shapes\+On\+Nurbs@{Map\+Shapes\+On\+Nurbs}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Shapes\+On\+Nurbs()}{MapShapesOnNurbs()}}
+{\footnotesize\ttfamily void Map\+Shapes\+On\+Nurbs (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 229 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_a1340cf78dcdb3db805b139f13a6fd6ed}\label{_export_scene02_2main_8cxx_a1340cf78dcdb3db805b139f13a6fd6ed}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Stretched\+Shape@{Map\+Stretched\+Shape}}
+\index{Map\+Stretched\+Shape@{Map\+Stretched\+Shape}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Stretched\+Shape()}{MapStretchedShape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Map\+Stretched\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_afd7502de9ce3c038da0fb629618f9fb4}\label{_export_scene02_2main_8cxx_afd7502de9ce3c038da0fb629618f9fb4}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Stretched\+Shape@{Map\+Stretched\+Shape}}
+\index{Map\+Stretched\+Shape@{Map\+Stretched\+Shape}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Stretched\+Shape()}{MapStretchedShape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Map\+Stretched\+Shape (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_blend_shape_channel}{Fbx\+Blend\+Shape\+Channel} $\ast$}]{l\+Blend\+Shape\+Channel }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 157 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene02_2main_8cxx_aa9f1ad8cd3dd875ffb08798bc7dc6a24}\label{_export_scene02_2main_8cxx_aa9f1ad8cd3dd875ffb08798bc7dc6a24}} 
+\index{Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}!Map\+Texture@{Map\+Texture}}
+\index{Map\+Texture@{Map\+Texture}!Export\+Scene02/main.\+cxx@{Export\+Scene02/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Texture()}{MapTexture()}}
+{\footnotesize\ttfamily void Map\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 251 行目に定義があります。
+

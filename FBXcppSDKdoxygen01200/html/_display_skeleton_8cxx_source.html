@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/samples/ImportScene/DisplaySkeleton.cxx ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_71525f077f4c780a76a234e0971e4aab.html">samples</a></li><li class="navelem"><a class="el" href="dir_cafcbb9f14566044a614574fa42ff323.html">ImportScene</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DisplaySkeleton.cxx</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_display_skeleton_8cxx.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">   Copyright (C) 2015 Autodesk, Inc.</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">   All rights reserved.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"></span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">   Use of this software is subject to the terms of the Autodesk license agreement</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">   provided at the time of installation or download, or which otherwise accompanies</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">   this software in either electronic or hard copy form.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">****************************************************************************************/</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk_8h.html">fbxsdk.h</a>&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_import_scene_2_display_common_8h.html">DisplayCommon.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="_display_skeleton_8h.html#afed6785e936cafd85bba92bc6e5e8102">   16</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="_display_skeleton_8cxx.html#afed6785e936cafd85bba92bc6e5e8102">DisplaySkeleton</a>(<a class="code" href="class_fbx_node.html">FbxNode</a>* pNode)</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{ </div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_fbx_skeleton.html">FbxSkeleton</a>* lSkeleton = (<a class="code" href="class_fbx_skeleton.html">FbxSkeleton</a>*) pNode-&gt;<a class="code" href="class_fbx_node.html#a9a64977e72b4da5dcbd80673c444b848">GetNodeAttribute</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="_import_scene_2_display_common_8cxx.html#ad1c8e3b673acb90074abce14c9852779">DisplayString</a>(<span class="stringliteral">&quot;Skeleton Name: &quot;</span>, (<span class="keywordtype">char</span> *) pNode-&gt;<a class="code" href="class_fbx_object.html#adb6c3656e49af96b64020991b5406ce2">GetName</a>());</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="_import_scene_2_display_common_8cxx.html#a7bad80e1c7c6d8708e1cebe6e9dfb46e">DisplayMetaDataConnections</a>(lSkeleton);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* lSkeletonTypes[] = { <span class="stringliteral">&quot;Root&quot;</span>, <span class="stringliteral">&quot;Limb&quot;</span>, <span class="stringliteral">&quot;Limb Node&quot;</span>, <span class="stringliteral">&quot;Effector&quot;</span> };</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="_import_scene_2_display_common_8cxx.html#ad1c8e3b673acb90074abce14c9852779">DisplayString</a>(<span class="stringliteral">&quot;    Type: &quot;</span>, lSkeletonTypes[lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#ae3c3a66d78d51d4decf90df544b63cf9">GetSkeletonType</a>()]);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span> (lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#ae3c3a66d78d51d4decf90df544b63cf9">GetSkeletonType</a>() == <a class="code" href="class_fbx_skeleton.html#ae067f8fec201e5e3572f039e37ee1c6baa70a0ce093f640d2408f48d6f9fbb3c8">FbxSkeleton::eLimb</a>)</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="_import_scene_2_display_common_8cxx.html#add2dca28b7d226a82226006a201591b7">DisplayDouble</a>(<span class="stringliteral">&quot;    Limb Length: &quot;</span>, lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#ac86811d94d673bbc1558eca1066311a2">LimbLength</a>.<a class="code" href="class_fbx_property_t.html#aed683fb109a3a7b1fa4eacd648ae2478">Get</a>());</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#ae3c3a66d78d51d4decf90df544b63cf9">GetSkeletonType</a>() == <a class="code" href="class_fbx_skeleton.html#ae067f8fec201e5e3572f039e37ee1c6ba7b14ed4192bd34fd66f6b435df95ed0c">FbxSkeleton::eLimbNode</a>)</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="_import_scene_2_display_common_8cxx.html#add2dca28b7d226a82226006a201591b7">DisplayDouble</a>(<span class="stringliteral">&quot;    Limb Node Size: &quot;</span>, lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#aecaa95bc659ea1804ec5885d9116c1c6">Size</a>.<a class="code" href="class_fbx_property_t.html#aed683fb109a3a7b1fa4eacd648ae2478">Get</a>());</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#ae3c3a66d78d51d4decf90df544b63cf9">GetSkeletonType</a>() == <a class="code" href="class_fbx_skeleton.html#ae067f8fec201e5e3572f039e37ee1c6badba2b7b1d083860ecf47c6a8452650db">FbxSkeleton::eRoot</a>)</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="_import_scene_2_display_common_8cxx.html#add2dca28b7d226a82226006a201591b7">DisplayDouble</a>(<span class="stringliteral">&quot;    Limb Root Size: &quot;</span>, lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#aecaa95bc659ea1804ec5885d9116c1c6">Size</a>.<a class="code" href="class_fbx_property_t.html#aed683fb109a3a7b1fa4eacd648ae2478">Get</a>());</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="_import_scene_2_display_common_8cxx.html#a07d75133952fe7357a7704d867ad7f44">DisplayColor</a>(<span class="stringliteral">&quot;    Color: &quot;</span>, lSkeleton-&gt;<a class="code" href="class_fbx_skeleton.html#a5f3f54bac15d4a4fd51dcb53d987fbf9">GetLimbNodeColor</a>());</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="_import_scene_2_display_common_8cxx_html_add2dca28b7d226a82226006a201591b7"><div class="ttname"><a href="_import_scene_2_display_common_8cxx.html#add2dca28b7d226a82226006a201591b7">DisplayDouble</a></div><div class="ttdeci">void DisplayDouble(const char *pHeader, double pValue, const char *pSuffix)</div><div class="ttdef"><b>Definition:</b> <a href="_import_scene_2_display_common_8cxx_source.html#l00068">DisplayCommon.cxx:68</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_ac86811d94d673bbc1558eca1066311a2"><div class="ttname"><a href="class_fbx_skeleton.html#ac86811d94d673bbc1558eca1066311a2">FbxSkeleton::LimbLength</a></div><div class="ttdeci">FbxPropertyT&lt; FbxDouble &gt; LimbLength</div><div class="ttdef"><b>Definition:</b> <a href="fbxskeleton_8h_source.html#l00172">fbxskeleton.h:172</a></div></div>
+<div class="ttc" id="_import_scene_2_display_common_8cxx_html_a7bad80e1c7c6d8708e1cebe6e9dfb46e"><div class="ttname"><a href="_import_scene_2_display_common_8cxx.html#a7bad80e1c7c6d8708e1cebe6e9dfb46e">DisplayMetaDataConnections</a></div><div class="ttdeci">void DisplayMetaDataConnections(FbxObject *pObject)</div><div class="ttdef"><b>Definition:</b> <a href="_import_scene_2_display_common_8cxx_source.html#l00019">DisplayCommon.cxx:19</a></div></div>
+<div class="ttc" id="class_fbx_node_html_a9a64977e72b4da5dcbd80673c444b848"><div class="ttname"><a href="class_fbx_node.html#a9a64977e72b4da5dcbd80673c444b848">FbxNode::GetNodeAttribute</a></div><div class="ttdeci">FbxNodeAttribute * GetNodeAttribute()</div></div>
+<div class="ttc" id="_import_scene_2_display_common_8cxx_html_ad1c8e3b673acb90074abce14c9852779"><div class="ttname"><a href="_import_scene_2_display_common_8cxx.html#ad1c8e3b673acb90074abce14c9852779">DisplayString</a></div><div class="ttdeci">void DisplayString(const char *pHeader, const char *pValue, const char *pSuffix)</div><div class="ttdef"><b>Definition:</b> <a href="_import_scene_2_display_common_8cxx_source.html#l00032">DisplayCommon.cxx:32</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_ae067f8fec201e5e3572f039e37ee1c6badba2b7b1d083860ecf47c6a8452650db"><div class="ttname"><a href="class_fbx_skeleton.html#ae067f8fec201e5e3572f039e37ee1c6badba2b7b1d083860ecf47c6a8452650db">FbxSkeleton::eRoot</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxskeleton_8h_source.html#l00057">fbxskeleton.h:57</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_a5f3f54bac15d4a4fd51dcb53d987fbf9"><div class="ttname"><a href="class_fbx_skeleton.html#a5f3f54bac15d4a4fd51dcb53d987fbf9">FbxSkeleton::GetLimbNodeColor</a></div><div class="ttdeci">FbxColor GetLimbNodeColor() const</div></div>
+<div class="ttc" id="class_fbx_node_html"><div class="ttname"><a href="class_fbx_node.html">FbxNode</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxnode_8h_source.html#l00072">fbxnode.h:72</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_aecaa95bc659ea1804ec5885d9116c1c6"><div class="ttname"><a href="class_fbx_skeleton.html#aecaa95bc659ea1804ec5885d9116c1c6">FbxSkeleton::Size</a></div><div class="ttdeci">FbxPropertyT&lt; FbxDouble &gt; Size</div><div class="ttdef"><b>Definition:</b> <a href="fbxskeleton_8h_source.html#l00157">fbxskeleton.h:157</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_ae067f8fec201e5e3572f039e37ee1c6ba7b14ed4192bd34fd66f6b435df95ed0c"><div class="ttname"><a href="class_fbx_skeleton.html#ae067f8fec201e5e3572f039e37ee1c6ba7b14ed4192bd34fd66f6b435df95ed0c">FbxSkeleton::eLimbNode</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxskeleton_8h_source.html#l00059">fbxskeleton.h:59</a></div></div>
+<div class="ttc" id="class_fbx_object_html_adb6c3656e49af96b64020991b5406ce2"><div class="ttname"><a href="class_fbx_object.html#adb6c3656e49af96b64020991b5406ce2">FbxObject::GetName</a></div><div class="ttdeci">const char * GetName() const</div></div>
+<div class="ttc" id="_display_skeleton_8cxx_html_afed6785e936cafd85bba92bc6e5e8102"><div class="ttname"><a href="_display_skeleton_8cxx.html#afed6785e936cafd85bba92bc6e5e8102">DisplaySkeleton</a></div><div class="ttdeci">void DisplaySkeleton(FbxNode *pNode)</div><div class="ttdef"><b>Definition:</b> <a href="_display_skeleton_8cxx_source.html#l00016">DisplaySkeleton.cxx:16</a></div></div>
+<div class="ttc" id="_import_scene_2_display_common_8cxx_html_a07d75133952fe7357a7704d867ad7f44"><div class="ttname"><a href="_import_scene_2_display_common_8cxx.html#a07d75133952fe7357a7704d867ad7f44">DisplayColor</a></div><div class="ttdeci">void DisplayColor(const char *pHeader, FbxPropertyT&lt; FbxDouble3 &gt; pValue, const char *pSuffix)</div><div class="ttdef"><b>Definition:</b> <a href="_import_scene_2_display_common_8cxx_source.html#l00161">DisplayCommon.cxx:161</a></div></div>
+<div class="ttc" id="fbxsdk_8h_html"><div class="ttname"><a href="fbxsdk_8h.html">fbxsdk.h</a></div></div>
+<div class="ttc" id="_import_scene_2_display_common_8h_html"><div class="ttname"><a href="_import_scene_2_display_common_8h.html">DisplayCommon.h</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html"><div class="ttname"><a href="class_fbx_skeleton.html">FbxSkeleton</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxskeleton_8h_source.html#l00034">fbxskeleton.h:34</a></div></div>
+<div class="ttc" id="class_fbx_property_t_html_aed683fb109a3a7b1fa4eacd648ae2478"><div class="ttname"><a href="class_fbx_property_t.html#aed683fb109a3a7b1fa4eacd648ae2478">FbxPropertyT::Get</a></div><div class="ttdeci">T Get() const</div><div class="ttdef"><b>Definition:</b> <a href="fbxproperty_8h_source.html#l01141">fbxproperty.h:1141</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_ae067f8fec201e5e3572f039e37ee1c6baa70a0ce093f640d2408f48d6f9fbb3c8"><div class="ttname"><a href="class_fbx_skeleton.html#ae067f8fec201e5e3572f039e37ee1c6baa70a0ce093f640d2408f48d6f9fbb3c8">FbxSkeleton::eLimb</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxskeleton_8h_source.html#l00058">fbxskeleton.h:58</a></div></div>
+<div class="ttc" id="class_fbx_skeleton_html_ae3c3a66d78d51d4decf90df544b63cf9"><div class="ttname"><a href="class_fbx_skeleton.html#ae3c3a66d78d51d4decf90df544b63cf9">FbxSkeleton::GetSkeletonType</a></div><div class="ttdeci">EType GetSkeletonType() const</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,194 @@
+\hypertarget{class_my_own_reader}{}\section{My\+Own\+Reader クラス}
+\label{class_my_own_reader}\index{My\+Own\+Reader@{My\+Own\+Reader}}
+
+
+{\ttfamily \#include $<$My\+Own\+Reader.\+h$>$}
+
+My\+Own\+Reader の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_own_reader}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_my_own_reader_ae08ec70c8c7814b36681599259e31904}{My\+Own\+Reader} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&p\+Manager, int p\+ID)
+\item 
+virtual \hyperlink{class_my_own_reader_abd01d1e784497c26760db38ae18ee709}{$\sim$\+My\+Own\+Reader} ()
+\item 
+virtual void \hyperlink{class_my_own_reader_aa57a92ed234912fb6d570a03fe265124}{Get\+Version} (int \&p\+Major, int \&p\+Minor, int \&p\+Revision)
+\item 
+virtual bool \hyperlink{class_my_own_reader_a77f7f753ea30442895994a0f6c0479d8}{File\+Open} (char $\ast$p\+File\+Name)
+\item 
+virtual bool \hyperlink{class_my_own_reader_abc7f3b49b51e2e59e502e774c78443d8}{File\+Close} ()
+\item 
+virtual bool \hyperlink{class_my_own_reader_a31426db70bc2b4e7382563713952111a}{Is\+File\+Open} ()
+\item 
+virtual bool \hyperlink{class_my_own_reader_a0ce8b8bc4f216b5e87574796aa973219}{Get\+Read\+Options} (bool p\+Parse\+File\+As\+Needed=true)
+\item 
+virtual bool \hyperlink{class_my_own_reader_a0b742b5ba8aa552aa4968349a0068673}{Read} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+
+
+ My\+Own\+Reader.\+h の 19 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_my_own_reader_ae08ec70c8c7814b36681599259e31904}\label{class_my_own_reader_ae08ec70c8c7814b36681599259e31904}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!My\+Own\+Reader@{My\+Own\+Reader}}
+\index{My\+Own\+Reader@{My\+Own\+Reader}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{My\+Own\+Reader()}{MyOwnReader()}}
+{\footnotesize\ttfamily My\+Own\+Reader\+::\+My\+Own\+Reader (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{p\+Manager,  }\item[{int}]{p\+ID }\end{DoxyParamCaption})}
+
+
+
+ My\+Own\+Reader.\+cxx の 14 行目に定義があります。
+
+\mbox{\Hypertarget{class_my_own_reader_abd01d1e784497c26760db38ae18ee709}\label{class_my_own_reader_abd01d1e784497c26760db38ae18ee709}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!````~My\+Own\+Reader@{$\sim$\+My\+Own\+Reader}}
+\index{````~My\+Own\+Reader@{$\sim$\+My\+Own\+Reader}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{$\sim$\+My\+Own\+Reader()}{~MyOwnReader()}}
+{\footnotesize\ttfamily My\+Own\+Reader\+::$\sim$\+My\+Own\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+ My\+Own\+Reader.\+cxx の 21 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_my_own_reader_abc7f3b49b51e2e59e502e774c78443d8}\label{class_my_own_reader_abc7f3b49b51e2e59e502e774c78443d8}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!File\+Close@{File\+Close}}
+\index{File\+Close@{File\+Close}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{File\+Close()}{FileClose()}}
+{\footnotesize\ttfamily bool My\+Own\+Reader\+::\+File\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Closes the file stream \begin{DoxyReturn}{戻り値}
+{\ttfamily false} 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a327df94e5c24315fc5cbcedf0e7bb615}{Fbx\+Reader}を実装しています。
+
+
+
+ My\+Own\+Reader.\+cxx の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_my_own_reader_a77f7f753ea30442895994a0f6c0479d8}\label{class_my_own_reader_a77f7f753ea30442895994a0f6c0479d8}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!File\+Open@{File\+Open}}
+\index{File\+Open@{File\+Open}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{File\+Open()}{FileOpen()}}
+{\footnotesize\ttfamily bool My\+Own\+Reader\+::\+File\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+File\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Opens the file with default flag 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & Name of the File to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the file opens successfully return {\ttfamily true}, otherwise return {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a6105bd37ae86c03f35aee6f62901856d}{Fbx\+Reader}を実装しています。
+
+
+
+ My\+Own\+Reader.\+cxx の 34 行目に定義があります。
+
+\mbox{\Hypertarget{class_my_own_reader_a0ce8b8bc4f216b5e87574796aa973219}\label{class_my_own_reader_a0ce8b8bc4f216b5e87574796aa973219}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!Get\+Read\+Options@{Get\+Read\+Options}}
+\index{Get\+Read\+Options@{Get\+Read\+Options}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{Get\+Read\+Options()}{GetReadOptions()}}
+{\footnotesize\ttfamily bool My\+Own\+Reader\+::\+Get\+Read\+Options (\begin{DoxyParamCaption}\item[{bool}]{p\+Parse\+File\+As\+Needed = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns file stream options 
+\begin{DoxyParams}{引数}
+{\em p\+Parse\+File\+As\+Needed} & Sets whether to parse file as read options \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, otherwise return false. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_acea3c118db490378c9aed17512396932}{Fbx\+Reader}を実装しています。
+
+
+
+ My\+Own\+Reader.\+cxx の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_my_own_reader_aa57a92ed234912fb6d570a03fe265124}\label{class_my_own_reader_aa57a92ed234912fb6d570a03fe265124}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!Get\+Version@{Get\+Version}}
+\index{Get\+Version@{Get\+Version}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{Get\+Version()}{GetVersion()}}
+{\footnotesize\ttfamily void My\+Own\+Reader\+::\+Get\+Version (\begin{DoxyParamCaption}\item[{int \&}]{p\+Major,  }\item[{int \&}]{p\+Minor,  }\item[{int \&}]{p\+Revision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the file version. 
+\begin{DoxyParams}{引数}
+{\em p\+Major} & Major version. \\
+\hline
+{\em p\+Minor} & Minor version. \\
+\hline
+{\em p\+Revision} & Revision version. \\
+\hline
+\end{DoxyParams}
+
+
+\hyperlink{class_fbx_reader_aa16aacbaa1c1e16fc208624b55dd6767}{Fbx\+Reader}を再実装しています。
+
+
+
+ My\+Own\+Reader.\+cxx の 26 行目に定義があります。
+
+\mbox{\Hypertarget{class_my_own_reader_a31426db70bc2b4e7382563713952111a}\label{class_my_own_reader_a31426db70bc2b4e7382563713952111a}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!Is\+File\+Open@{Is\+File\+Open}}
+\index{Is\+File\+Open@{Is\+File\+Open}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{Is\+File\+Open()}{IsFileOpen()}}
+{\footnotesize\ttfamily bool My\+Own\+Reader\+::\+Is\+File\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks if the file stream is open. \begin{DoxyReturn}{戻り値}
+{\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_af86b437702ffc840cfab52185cbc7232}{Fbx\+Reader}を実装しています。
+
+
+
+ My\+Own\+Reader.\+cxx の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_my_own_reader_a0b742b5ba8aa552aa4968349a0068673}\label{class_my_own_reader_a0b742b5ba8aa552aa4968349a0068673}} 
+\index{My\+Own\+Reader@{My\+Own\+Reader}!Read@{Read}}
+\index{Read@{Read}!My\+Own\+Reader@{My\+Own\+Reader}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily bool My\+Own\+Reader\+::\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reads file with stream options 
+\begin{DoxyParams}{引数}
+{\em p\+Document} & \hyperlink{class_fbx_document}{Fbx\+Document} to store the file data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_reader_a29941746acc73d7ffd2411a9be9d2525}{Fbx\+Reader}を実装しています。
+
+
+
+ My\+Own\+Reader.\+cxx の 63 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+My\+Own\+Writer\+Reader/\hyperlink{_my_own_reader_8h}{My\+Own\+Reader.\+h}\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+My\+Own\+Writer\+Reader/\hyperlink{_my_own_reader_8cxx}{My\+Own\+Reader.\+cxx}\end{DoxyCompactItemize}

@@ -1,0 +1,517 @@
+\hypertarget{class_fbx_set}{}\section{Fbx\+Set$<$ Type, Compare, Allocator $>$ クラステンプレート}
+\label{class_fbx_set}\index{Fbx\+Set$<$ Type, Compare, Allocator $>$@{Fbx\+Set$<$ Type, Compare, Allocator $>$}}
+
+
+{\ttfamily \#include $<$fbxset.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_set_1_1_value}{Value}
+\begin{DoxyCompactList}\small\item\em This class defines the value type used by the set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef Type \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type}
+\item 
+typedef Storage\+Type\+::\+Record\+Type \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}
+\item 
+typedef \hyperlink{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}{Storage\+Type\+::\+Iterator\+Type} \hyperlink{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}{Iterator}
+\item 
+typedef \hyperlink{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}{Storage\+Type\+::\+Const\+Iterator\+Type} \hyperlink{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}{Const\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_set_ac7d73b7db8fe03350e2ced16ffff1c36}{Reserve} (unsigned int p\+Record\+Count)
+\item 
+int \hyperlink{class_fbx_set_a461c8f7332c997970eeb89cf7920b509}{Get\+Size} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the number of values it holds. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_pair}{Fbx\+Pair}$<$ \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$, bool $>$ \hyperlink{class_fbx_set_a6663843db5bbd2335842fc77c02f7197}{Insert} (const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&p\+Value)
+\item 
+int \hyperlink{class_fbx_set_a12e704b8d6f84a349c27cd40ef4dde11}{Remove} (const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&p\+Value)
+\item 
+void \hyperlink{class_fbx_set_afc01fe172f741a42492831b57d44ed8f}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the set. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_set_a453c342954283c8c7add25804a915b44}{Empty} () const
+\begin{DoxyCompactList}\small\item\em Query whether the set is empty. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}{Iterator} \hyperlink{class_fbx_set_a77e36a10cf4707bce192e1b6fb8dd404}{Begin} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the begin iterator of the set. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}{Iterator} \hyperlink{class_fbx_set_aff72352a00b11a896a960f4b562971de}{End} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the end iterator of the set. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}{Const\+Iterator} \hyperlink{class_fbx_set_a1435632a44bad20741d19be792f0b6c0}{Begin} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the begin iterator of the set. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}{Const\+Iterator} \hyperlink{class_fbx_set_a2d12954434e697202a703cb574072e9d}{End} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the end iterator of the set. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$ \hyperlink{class_fbx_set_a49f1d5af6cdfb5a27af1624c7c2463ae}{Find} (const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&p\+Value) const
+\item 
+\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$ \hyperlink{class_fbx_set_ac5bd4cb3958389b323d8375b5b17958f}{Find} (const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&p\+Value)
+\item 
+const \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$ \hyperlink{class_fbx_set_a11cee93b66335569aa45fbcd886ae9ff}{Minimum} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the minimum value in the set. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$ \hyperlink{class_fbx_set_a26fc1b8f0649dc4e12ad440169260df7}{Minimum} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the minimum value in the set. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$ \hyperlink{class_fbx_set_af9e8e6c464ef4f379218c3ae85e211da}{Maximum} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the maximum value in the set. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type} $\ast$ \hyperlink{class_fbx_set_a81b244938a3b473b59d146336737f8ed}{Maximum} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the maximum value in the set. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_set_a69388720587c95840cc36384f33a9484}{operator==} (const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&p\+Other) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_set_ab1734439d5a1bb4b4e2c6bd45b18ecd2}{operator!=} (const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&p\+Other) const
+\begin{DoxyCompactList}\small\item\em Inequality operator. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_set}{Fbx\+Set} \hyperlink{class_fbx_set_abea1a48c480a2f3ac236f8ff198fc2ce}{Intersect} (const \hyperlink{class_fbx_set}{Fbx\+Set} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_set}{Fbx\+Set} \hyperlink{class_fbx_set_a2a1a03dffe4d1b40a04bd48e4b6b3c10}{Union} (const \hyperlink{class_fbx_set}{Fbx\+Set} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_set_ae540e486ff517af7f865c8a1c499df79}{Fbx\+Set} ()
+\item 
+\hyperlink{class_fbx_set_a83bf0b02ec208241ffbc725db1d9c70d}{Fbx\+Set} (const \hyperlink{class_fbx_set}{Fbx\+Set} \&p\+Set)
+\item 
+\hyperlink{class_fbx_set_ace2b54de05237b1ad7223cb51a8f319a}{$\sim$\+Fbx\+Set} ()
+\end{DoxyCompactItemize}
+\subsection*{限定公開型}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$ \hyperlink{class_fbx_set_1_1_value}{Value}, Compare, Allocator $>$ \hyperlink{class_fbx_set_a6d908b9bc11d5418cd2fcceda1342e90}{Storage\+Type}
+\begin{DoxyCompactList}\small\item\em Declaration of the storage type used by the set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$\newline
+class Fbx\+Set$<$ Type, Compare, Allocator $>$}
+
+This class implements an efficient set based on value comparison, which stores values. It executes insertion, deletion and query operations in O(log(n)) time. 
+
+ fbxset.\+h の 25 行目に定義があります。
+
+
+
+\subsection{型定義メンバ詳解}
+\mbox{\Hypertarget{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}\label{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}} 
+\index{Fbx\+Set@{Fbx\+Set}!Const\+Iterator@{Const\+Iterator}}
+\index{Const\+Iterator@{Const\+Iterator}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Const\+Iterator}{ConstIterator}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_tree_a7309ae5e1bb24e7e3da94fef975d10c4}{Storage\+Type\+::\+Const\+Iterator\+Type} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}{Const\+Iterator}}
+
+
+
+ fbxset.\+h の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}\label{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}} 
+\index{Fbx\+Set@{Fbx\+Set}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Iterator}{Iterator}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_tree_af7b6209131012ec5aa33e0286c956cd6}{Storage\+Type\+::\+Iterator\+Type} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}{Iterator}}
+
+
+
+ fbxset.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}\label{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}} 
+\index{Fbx\+Set@{Fbx\+Set}!Record\+Type@{Record\+Type}}
+\index{Record\+Type@{Record\+Type}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Record\+Type}{RecordType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef Storage\+Type\+::\+Record\+Type \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}}
+
+
+
+ fbxset.\+h の 60 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a6d908b9bc11d5418cd2fcceda1342e90}\label{class_fbx_set_a6d908b9bc11d5418cd2fcceda1342e90}} 
+\index{Fbx\+Set@{Fbx\+Set}!Storage\+Type@{Storage\+Type}}
+\index{Storage\+Type@{Storage\+Type}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Storage\+Type}{StorageType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef \hyperlink{class_fbx_red_black_tree}{Fbx\+Red\+Black\+Tree}$<$\hyperlink{class_fbx_set_1_1_value}{Value}, Compare, Allocator$>$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set_a6d908b9bc11d5418cd2fcceda1342e90}{Storage\+Type}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Declaration of the storage type used by the set. 
+
+
+
+ fbxset.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_abb0f1b628634e07825532526e2e92baf}\label{class_fbx_set_abb0f1b628634e07825532526e2e92baf}} 
+\index{Fbx\+Set@{Fbx\+Set}!Value\+Type@{Value\+Type}}
+\index{Value\+Type@{Value\+Type}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Value\+Type}{ValueType}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+typedef Type \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type}}
+
+
+
+ fbxset.\+h の 59 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_set_ae540e486ff517af7f865c8a1c499df79}\label{class_fbx_set_ae540e486ff517af7f865c8a1c499df79}} 
+\index{Fbx\+Set@{Fbx\+Set}!Fbx\+Set@{Fbx\+Set}}
+\index{Fbx\+Set@{Fbx\+Set}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Fbx\+Set()}{FbxSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set}{Fbx\+Set} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxset.\+h の 216 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a83bf0b02ec208241ffbc725db1d9c70d}\label{class_fbx_set_a83bf0b02ec208241ffbc725db1d9c70d}} 
+\index{Fbx\+Set@{Fbx\+Set}!Fbx\+Set@{Fbx\+Set}}
+\index{Fbx\+Set@{Fbx\+Set}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Fbx\+Set()}{FbxSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::\hyperlink{class_fbx_set}{Fbx\+Set} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&}]{p\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxset.\+h の 217 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_ace2b54de05237b1ad7223cb51a8f319a}\label{class_fbx_set_ace2b54de05237b1ad7223cb51a8f319a}} 
+\index{Fbx\+Set@{Fbx\+Set}!````~Fbx\+Set@{$\sim$\+Fbx\+Set}}
+\index{````~Fbx\+Set@{$\sim$\+Fbx\+Set}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Set()}{~FbxSet()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::$\sim$\hyperlink{class_fbx_set}{Fbx\+Set} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxset.\+h の 218 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_set_a77e36a10cf4707bce192e1b6fb8dd404}\label{class_fbx_set_a77e36a10cf4707bce192e1b6fb8dd404}} 
+\index{Fbx\+Set@{Fbx\+Set}!Begin@{Begin}}
+\index{Begin@{Begin}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Begin()}{Begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}{Iterator} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the begin iterator of the set. 
+
+
+
+ fbxset.\+h の 107 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a1435632a44bad20741d19be792f0b6c0}\label{class_fbx_set_a1435632a44bad20741d19be792f0b6c0}} 
+\index{Fbx\+Set@{Fbx\+Set}!Begin@{Begin}}
+\index{Begin@{Begin}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Begin()}{Begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}{Const\+Iterator} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the begin iterator of the set. 
+
+
+
+ fbxset.\+h の 119 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_afc01fe172f741a42492831b57d44ed8f}\label{class_fbx_set_afc01fe172f741a42492831b57d44ed8f}} 
+\index{Fbx\+Set@{Fbx\+Set}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+void \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clear the set. 
+
+
+
+ fbxset.\+h の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a453c342954283c8c7add25804a915b44}\label{class_fbx_set_a453c342954283c8c7add25804a915b44}} 
+\index{Fbx\+Set@{Fbx\+Set}!Empty@{Empty}}
+\index{Empty@{Empty}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+bool \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Query whether the set is empty. 
+
+
+
+ fbxset.\+h の 101 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_aff72352a00b11a896a960f4b562971de}\label{class_fbx_set_aff72352a00b11a896a960f4b562971de}} 
+\index{Fbx\+Set@{Fbx\+Set}!End@{End}}
+\index{End@{End}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{End()}{End()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_ad1b543e0f63f04f4d2dc8e9e3da9bcaa}{Iterator} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the end iterator of the set. 
+
+
+
+ fbxset.\+h の 113 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a2d12954434e697202a703cb574072e9d}\label{class_fbx_set_a2d12954434e697202a703cb574072e9d}} 
+\index{Fbx\+Set@{Fbx\+Set}!End@{End}}
+\index{End@{End}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{End()}{End()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_af9aee2f7b6a6638b816ea95bd510928c}{Const\+Iterator} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the end iterator of the set. 
+
+
+
+ fbxset.\+h の 125 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a49f1d5af6cdfb5a27af1624c7c2463ae}\label{class_fbx_set_a49f1d5af6cdfb5a27af1624c7c2463ae}} 
+\index{Fbx\+Set@{Fbx\+Set}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&}]{p\+Value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find a given value in the set. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value in the set, or N\+U\+LL if the value is not found in the set. 
+\end{DoxyReturn}
+
+
+ fbxset.\+h の 133 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_ac5bd4cb3958389b323d8375b5b17958f}\label{class_fbx_set_ac5bd4cb3958389b323d8375b5b17958f}} 
+\index{Fbx\+Set@{Fbx\+Set}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Find (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Find a given value in the set. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value in the set, or N\+U\+LL if the value is not found in the set. 
+\end{DoxyReturn}
+
+
+ fbxset.\+h の 141 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a461c8f7332c997970eeb89cf7920b509}\label{class_fbx_set_a461c8f7332c997970eeb89cf7920b509}} 
+\index{Fbx\+Set@{Fbx\+Set}!Get\+Size@{Get\+Size}}
+\index{Get\+Size@{Get\+Size}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Get\+Size()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+int \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the number of values it holds. 
+
+
+
+ fbxset.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a6663843db5bbd2335842fc77c02f7197}\label{class_fbx_set_a6663843db5bbd2335842fc77c02f7197}} 
+\index{Fbx\+Set@{Fbx\+Set}!Insert@{Insert}}
+\index{Insert@{Insert}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_pair}{Fbx\+Pair}$<$\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$, bool$>$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Insert (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Insert a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the value is already present in the map, returns the existing value and false; else returns the pointer to the new value and true. 
+\end{DoxyReturn}
+
+
+ fbxset.\+h の 81 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_abea1a48c480a2f3ac236f8ff198fc2ce}\label{class_fbx_set_abea1a48c480a2f3ac236f8ff198fc2ce}} 
+\index{Fbx\+Set@{Fbx\+Set}!Intersect@{Intersect}}
+\index{Intersect@{Intersect}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Intersect()}{Intersect()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set}{Fbx\+Set} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Intersect (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&}]{p\+Other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Intersect with another set. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The other set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The intersection set of the two sets. 
+\end{DoxyReturn}
+
+
+ fbxset.\+h の 185 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_af9e8e6c464ef4f379218c3ae85e211da}\label{class_fbx_set_af9e8e6c464ef4f379218c3ae85e211da}} 
+\index{Fbx\+Set@{Fbx\+Set}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Maximum()}{Maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the maximum value in the set. 
+
+
+
+ fbxset.\+h の 159 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a81b244938a3b473b59d146336737f8ed}\label{class_fbx_set_a81b244938a3b473b59d146336737f8ed}} 
+\index{Fbx\+Set@{Fbx\+Set}!Maximum@{Maximum}}
+\index{Maximum@{Maximum}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Maximum()}{Maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the maximum value in the set. 
+
+
+
+ fbxset.\+h の 165 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a11cee93b66335569aa45fbcd886ae9ff}\label{class_fbx_set_a11cee93b66335569aa45fbcd886ae9ff}} 
+\index{Fbx\+Set@{Fbx\+Set}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Minimum()}{Minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+const \hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the minimum value in the set. 
+
+
+
+ fbxset.\+h の 147 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a26fc1b8f0649dc4e12ad440169260df7}\label{class_fbx_set_a26fc1b8f0649dc4e12ad440169260df7}} 
+\index{Fbx\+Set@{Fbx\+Set}!Minimum@{Minimum}}
+\index{Minimum@{Minimum}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Minimum()}{Minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set_aa3934cd434a09288204f5e6c99b9cd01}{Record\+Type}$\ast$ \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the minimum value in the set. 
+
+
+
+ fbxset.\+h の 153 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_ab1734439d5a1bb4b4e2c6bd45b18ecd2}\label{class_fbx_set_ab1734439d5a1bb4b4e2c6bd45b18ecd2}} 
+\index{Fbx\+Set@{Fbx\+Set}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+bool \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&}]{p\+Other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inequality operator. 
+
+
+
+ fbxset.\+h の 177 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a69388720587c95840cc36384f33a9484}\label{class_fbx_set_a69388720587c95840cc36384f33a9484}} 
+\index{Fbx\+Set@{Fbx\+Set}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+bool \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&}]{p\+Other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality operator. 
+
+
+
+ fbxset.\+h の 171 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a12e704b8d6f84a349c27cd40ef4dde11}\label{class_fbx_set_a12e704b8d6f84a349c27cd40ef4dde11}} 
+\index{Fbx\+Set@{Fbx\+Set}!Remove@{Remove}}
+\index{Remove@{Remove}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+int \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Remove (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set_abb0f1b628634e07825532526e2e92baf}{Value\+Type} \&}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if success, {\ttfamily false} if value is not found. 
+\end{DoxyReturn}
+
+
+ fbxset.\+h の 89 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_ac7d73b7db8fe03350e2ced16ffff1c36}\label{class_fbx_set_ac7d73b7db8fe03350e2ced16ffff1c36}} 
+\index{Fbx\+Set@{Fbx\+Set}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Reserve()}{Reserve()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+void \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Reserve (\begin{DoxyParamCaption}\item[{unsigned int}]{p\+Record\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Preallocate memory. 
+\begin{DoxyParams}{引数}
+{\em p\+Record\+Count} & The number of elements. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxset.\+h の 67 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_set_a2a1a03dffe4d1b40a04bd48e4b6b3c10}\label{class_fbx_set_a2a1a03dffe4d1b40a04bd48e4b6b3c10}} 
+\index{Fbx\+Set@{Fbx\+Set}!Union@{Union}}
+\index{Union@{Union}!Fbx\+Set@{Fbx\+Set}}
+\subsubsection{\texorpdfstring{Union()}{Union()}}
+{\footnotesize\ttfamily template$<$typename Type, typename Compare = Fbx\+Less\+Compare$<$\+Type$>$, typename Allocator = Fbx\+Base\+Allocator$>$ \\
+\hyperlink{class_fbx_set}{Fbx\+Set} \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$\+::Union (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_set}{Fbx\+Set}$<$ Type, Compare, Allocator $>$ \&}]{p\+Other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unite with another set. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The other set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The union set of the two sets (no duplicated items). 
+\end{DoxyReturn}
+
+
+ fbxset.\+h の 200 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxset_8h}{fbxset.\+h}\end{DoxyCompactItemize}

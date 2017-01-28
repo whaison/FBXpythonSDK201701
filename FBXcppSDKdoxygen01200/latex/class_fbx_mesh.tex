@@ -1,0 +1,1995 @@
+\hypertarget{class_fbx_mesh}{}\section{Fbx\+Mesh クラス}
+\label{class_fbx_mesh}\index{Fbx\+Mesh@{Fbx\+Mesh}}
+
+
+{\ttfamily \#include $<$fbxmesh.\+h$>$}
+
+Fbx\+Mesh の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=8.000000cm]{class_fbx_mesh}
+\end{center}
+\end{figure}
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_component_map}{Component\+Map}
+\item 
+class \hyperlink{class_fbx_mesh_1_1_control_point_to_vertices_map}{Control\+Point\+To\+Vertices\+Map}
+\item 
+class \hyperlink{class_fbx_mesh_1_1_duplicate_vertex}{Duplicate\+Vertex}
+\begin{DoxyCompactList}\small\item\em Internal structure used to keep the duplicate vertex information. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_fbx_mesh_1_1_edge_lookup_def}{Edge\+Lookup\+Def}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_polygon_def}{Polygon\+Def}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_polygon_index_def}{Polygon\+Index\+Def}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_split_edge_data}{Split\+Edge\+Data}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_v2_p_v_map}{V2\+P\+V\+Map}
+\item 
+class \hyperlink{class_fbx_mesh_1_1_vertex_normal_info}{Vertex\+Normal\+Info}
+\begin{DoxyCompactList}\small\item\em Internal structure used to compute the normals on a mesh \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_mesh_a5a52e41ccf1382c40d3361ec3cfbb68a}{Get\+Attribute\+Type} () const
+\item 
+void \hyperlink{class_fbx_mesh_ab7d47000aac6c7de0a6fe0ccaff248cd}{Reserve\+Polygon\+Count} (int p\+Count)
+\item 
+void \hyperlink{class_fbx_mesh_a6cb8ace34a7b945a249a73f5293075e4}{Reserve\+Polygon\+Vertex\+Count} (int p\+Count)
+\item 
+bool \hyperlink{class_fbx_mesh_acb576494ab0812b3a81207d4b3423a5c}{Get\+Texture\+UV} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector2}{Fbx\+Vector2} $>$ $\ast$$\ast$p\+Lockable\+Array, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}) const
+\item 
+bool \hyperlink{class_fbx_mesh_a1929aa2f73049a3c6d07b06b5e8db233}{Get\+Material\+Indices} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$p\+Lockable\+Array) const
+\item 
+bool \hyperlink{class_fbx_mesh_a33c7d29e88d7bb03e0343daca267d770}{Get\+Texture\+Indices} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$p\+Lockable\+Array, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Texture\+Type) const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_mesh_a0f041743536ee5ccbc9a086e3ef1c663}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual void \hyperlink{class_fbx_mesh_a05ca6a8fbd028777c91931ce6edf4b19}{Compact} ()
+\item 
+void \hyperlink{class_fbx_mesh_add00ef9f41759119264e83765697564e}{Compute\+Component\+Maps} (\hyperlink{struct_fbx_mesh_1_1_component_map}{Component\+Map} \&p\+Edge\+To\+Poly\+Map, \hyperlink{struct_fbx_mesh_1_1_component_map}{Component\+Map} \&p\+Poly\+To\+Edge\+Map)
+\item 
+void \hyperlink{class_fbx_mesh_a6e64bf4157a20a29bf548be6dd8d90df}{Compute\+Control\+Point\+To\+Vertices\+Map} (\hyperlink{class_fbx_mesh_1_1_control_point_to_vertices_map}{Control\+Point\+To\+Vertices\+Map} \&p\+Map)
+\item 
+bool \hyperlink{class_fbx_mesh_ac6499edbc0a86efac04bf2591756ed1e}{Conform\+Normals\+To} (const \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{struct_fbx_mesh_1_1_polygon_def}{Polygon\+Def} $>$ \hyperlink{class_fbx_mesh_a61a2707539a87a8637353b6dccbb9782}{m\+Polygons}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \hyperlink{class_fbx_mesh_a61068fac65d5a770ebf815fd24772a99}{m\+Polygon\+Vertices}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \hyperlink{class_fbx_mesh_a33ccd3fb9c9b146f0bdc2e91fbbb6426}{m\+Edge\+Array}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{struct_fbx_mesh_1_1_polygon_def}{Polygon\+Def} $>$ $\ast$ \hyperlink{class_fbx_mesh_a700722838ae66d0331d6ea718fe27640}{m\+Original\+Polygons}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ $\ast$ \hyperlink{class_fbx_mesh_aeb42ac5dd106b366aa0f65c98e7d13d2}{m\+Original\+Polygon\+Vertices}
+\item 
+int \hyperlink{class_fbx_mesh_a2d8025b8f248af85fa7ae99638fb41c4}{m\+Original\+Control\+Points\+Count}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_mesh_a230787ca87312437d427d9ec7c150565}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_mesh_a1755e89d515fadbc2d52924917b618f7}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_mesh_aacd77ff7908d897c73983919c4aade72}{Content\+Clear} ()
+\item 
+void \hyperlink{class_fbx_mesh_a79732f5b5d10581887b78877cd67b003}{Init\+Texture\+Indices} (\hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture} $\ast$p\+Layer\+Element\+Texture, \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} p\+Mapping\+Mode)
+\item 
+void \hyperlink{class_fbx_mesh_a7ae53a8f960212268fbfa5d5a63333ee}{Remove\+Texture\+Index} (\hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture} $\ast$p\+Layer\+Element\+Textures, int p\+Polygon\+Index, int p\+Offset)
+\item 
+void \hyperlink{class_fbx_mesh_addc0a339c2d452b4a1d8d6a465aa9c62}{Remove\+U\+V\+Index} (\hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} $\ast$p\+Layer\+Element\+UV, int p\+Polygon\+Index, int p\+Offset)
+\item 
+bool \hyperlink{class_fbx_mesh_ae2148a3e615dac499fbbbe57a714547e}{Get\+Bad\+Poly\+Indices} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Array\+Bad\+Poly\+Indices, bool p\+Check\+One) const
+\item 
+int \hyperlink{class_fbx_mesh_adccc8b864012541903afb1df02654161}{Find\+Polygon\+Index} (int p\+Edge\+Index)
+\item 
+void \hyperlink{class_fbx_mesh_a9a333d725455805aa0fa2dae26a85929}{Poly\+Set\+Texture} (\hyperlink{class_fbx_layer}{Fbx\+Layer} $\ast$p\+Layer, int p\+Texture\+Index, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Texture\+Type)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_mesh_a68a6816acf0eaacc995144b14a28c856}{Get\+Polygon\+Vertex\+Layer\+Element\+Index} (const \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ T $>$ $\ast$p\+Layer\+Element, int p\+Poly\+Index, int p\+Vertex\+Index, int \&p\+Index) const
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_mesh_aaa40241afa27d42fbacb6d78f00a947b}{Get\+Polygon\+Vertex\+Layer\+Element\+Value} (const \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ T $>$ $\ast$p\+Layer\+Element, int p\+Poly\+Index, int p\+Vertex\+Index, T \&p\+Value, bool p\+Allow\+Unmapped) const
+\end{DoxyCompactItemize}
+\subsection*{静的限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{class_fbx_mesh_acbc149091e1be99e9555abbd81f03981}{Polygon\+Index\+Compare} (const void $\ast$p1, const void $\ast$p2)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{E\+Smoothness} \hyperlink{class_fbx_mesh_ac4b9e270e53db167213a43bfa49e2d2b}{m\+Smoothness}
+\item 
+int \hyperlink{class_fbx_mesh_abf407e3dc0f8e13664528fcadd5035ee}{m\+Preview\+Division\+Levels}
+\item 
+int \hyperlink{class_fbx_mesh_a1c5f079f731567bbbc1b5af7527e6aa6}{m\+Render\+Division\+Levels}
+\item 
+bool \hyperlink{class_fbx_mesh_ae9005285762c3272f560c2f63a398cd4}{m\+Display\+Subdivisions}
+\item 
+\hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule} \hyperlink{class_fbx_mesh_a18ab74b81af5df2f4e1b4a02c84f56b8}{m\+Boundary\+Rule}
+\item 
+bool \hyperlink{class_fbx_mesh_a05de09199525ca131c28f4f8eed8260e}{m\+Preserve\+Borders}
+\item 
+bool \hyperlink{class_fbx_mesh_ad87b5da0ae447da265cef23b479f3a79}{m\+Preserve\+Hard\+Edges}
+\item 
+bool \hyperlink{class_fbx_mesh_a1ff440a236f927098cfbb41c46fb2b59}{m\+Propagate\+Edge\+Hardness}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_v2_p_v_map}{Fbx\+Mesh\+::\+V2\+P\+V\+Map} \hyperlink{class_fbx_mesh_ad0d46d5f839a3b62fe97684629bfa639}{m\+V2\+P\+V\+Map}
+\item 
+struct \hyperlink{struct_fbx_mesh_1_1_edge_lookup_def}{Fbx\+Mesh\+::\+Edge\+Lookup\+Def} \hyperlink{class_fbx_mesh_af8a2af0c1c6432f6ca488a8eaeda722e}{m\+P\+V\+End\+Flags}
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_mesh_a2c65afd59c2bab21d92824fbe4422545}{Fbx\+Geometry\+Converter}
+\end{DoxyCompactItemize}
+\subsection*{Polygon Management}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_mesh_aebaf7be01966e5a365a0bc49b8d15b3b}{Begin\+Polygon} (int p\+Material=-\/1, int p\+Texture=-\/1, int p\+Group=-\/1, bool p\+Legacy=true)
+\item 
+void \hyperlink{class_fbx_mesh_a0c81b70dd5b832d34841b7a5111be8b9}{Begin\+Polygon\+Ext} (int p\+Material, int $\ast$p\+Textures)
+\item 
+void \hyperlink{class_fbx_mesh_ab483f915e44a3a3613da51bcbe1a2ad6}{Add\+Polygon} (int p\+Index, int p\+Texture\+U\+V\+Index=-\/1)
+\item 
+void \hyperlink{class_fbx_mesh_a50b65ca7dca5c691bc50db6f55e0d0c9}{End\+Polygon} ()
+\begin{DoxyCompactList}\small\item\em End writing a polygon, it should be called after adding one polygon. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_mesh_a0f443f6d64284e6b60bdd52fb1f53ea7}{Get\+Polygon\+Count} () const
+\item 
+int \hyperlink{class_fbx_mesh_a775d0e10dc67bbcb9f7368d828588e55}{Get\+Polygon\+Size} (int p\+Polygon\+Index) const
+\item 
+int \hyperlink{class_fbx_mesh_aca17b9c024aa056115bdb173daf25e8c}{Get\+Polygon\+Group} (int p\+Polygon\+Index) const
+\item 
+void \hyperlink{class_fbx_mesh_ab7c7d2325c2afa2c7bd0099b9a0f24dc}{Set\+Polygon\+Group} (int p\+Polygon\+Index, int p\+Group) const
+\item 
+int \hyperlink{class_fbx_mesh_ad1875b3c43e44bf960e371cd668734b3}{Get\+Polygon\+Vertex} (int p\+Polygon\+Index, int p\+Position\+In\+Polygon) const
+\item 
+bool \hyperlink{class_fbx_mesh_a0a761b70353b1ac6ed016fba192ee667}{Get\+Polygon\+Vertex\+Normal} (int p\+Poly\+Index, int p\+Vertex\+Index, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Normal) const
+\item 
+bool \hyperlink{class_fbx_mesh_a84574b6ee629f27da2ca2be6c6f42e80}{Get\+Polygon\+Vertex\+Normals} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ \&p\+Normals) const
+\item 
+bool \hyperlink{class_fbx_mesh_ab620226c1d138f01121c7bdc16945d92}{Get\+Polygon\+Vertex\+UV} (int p\+Poly\+Index, int p\+Vertex\+Index, const char $\ast$p\+U\+V\+Set\+Name, \hyperlink{class_fbx_vector2}{Fbx\+Vector2} \&p\+UV, bool \&p\+Unmapped) const
+\item 
+bool \hyperlink{class_fbx_mesh_afb155cdf892fb81276718913eae02e85}{Get\+Polygon\+Vertex\+U\+Vs} (const char $\ast$p\+U\+V\+Set\+Name, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_vector2}{Fbx\+Vector2} $>$ \&p\+U\+Vs, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ $\ast$p\+Unmapped\+U\+V\+Id=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+int $\ast$ \hyperlink{class_fbx_mesh_a0c29a17dfc1db3644772acb5c32a63b0}{Get\+Polygon\+Vertices} () const
+\item 
+int \hyperlink{class_fbx_mesh_a46cdb95dfe5052564aeeba288474076e}{Get\+Polygon\+Vertex\+Count} () const
+\item 
+int \hyperlink{class_fbx_mesh_a942e182a7c27fa11464b9adb0c9cdc3b}{Get\+Polygon\+Vertex\+Index} (int p\+Polygon\+Index) const
+\item 
+int \hyperlink{class_fbx_mesh_aad5e2768669d5c94e8d96d7d65fcab68}{Remove\+Polygon} (int p\+Polygon\+Index)
+\item 
+int \hyperlink{class_fbx_mesh_a5e7104d87f03542c0fc040ae1f7f593d}{Remove\+Duplicated\+Edges} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Edge\+Index\+List)
+\end{DoxyCompactItemize}
+\subsection*{Texture UV Utility Functions.}
+\label{_amgrp0a785870c9dbfdfb55a4e6d5166ccdfc}%
+The methods found in this section are utility functions used to handle UV coordinates quickly. Internally, they refer to {\ttfamily \hyperlink{class_fbx_layer}{Fbx\+Layer}} and {\ttfamily \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV}} methods to do the job. Except for the \hyperlink{class_fbx_mesh_a85b62b9c7da656bec19a362d60160836}{Get\+All\+Channel\+U\+V(int p\+Layer)}, all the methods are implicitly working on Layer 0. Use the {\ttfamily \hyperlink{class_fbx_layer}{Fbx\+Layer}} methods to have access to the other layers. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_mesh_a40d57aa570c080f2f692728118b5bc04}{Init\+Texture\+UV} (int p\+Count, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+void \hyperlink{class_fbx_mesh_a306f0e4f4a05de664327bb4389d0bfbf}{Add\+Texture\+UV} (\hyperlink{class_fbx_vector2}{Fbx\+Vector2} p\+UV, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+int \hyperlink{class_fbx_mesh_a8a32eaf0ce16becd8e7de6c2783e61b9}{Get\+Texture\+U\+V\+Count} (\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+int \hyperlink{class_fbx_mesh_a1600702ceabd1ab9c36c91019318c6da}{Get\+U\+V\+Layer\+Count} () const
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} $>$ \hyperlink{class_fbx_mesh_a85b62b9c7da656bec19a362d60160836}{Get\+All\+Channel\+UV} (int p\+Layer)
+\end{DoxyCompactItemize}
+\subsection*{Material, Texture and UV Indices Utility Functions.}
+\label{_amgrpc3ba4f77c022cd0ffc78df514307fa12}%
+The methods found in this section are utility functions used to handle Material, Texture and UV indices quickly. Internally, they refer to {\ttfamily \hyperlink{class_fbx_layer}{Fbx\+Layer}} and {\ttfamily \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV}} methods to do the job. These functions are only working on Layer 0. Use the {\ttfamily \hyperlink{class_fbx_layer}{Fbx\+Layer}} methods directly to access other layers. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_mesh_afb22daa8a980e8946abed7cbf39ce4f0}{Init\+Material\+Indices} (\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} p\+Mapping\+Mode)
+\item 
+void \hyperlink{class_fbx_mesh_a7400d37014c8a84a5c356f1deef1761d}{Init\+Texture\+Indices} (\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} p\+Mapping\+Mode, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Texture\+Type)
+\item 
+void \hyperlink{class_fbx_mesh_a1b6a5d5371f59f8cda80f8cbcfefadf7}{Init\+Texture\+U\+V\+Indices} (\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode} p\+Mapping\+Mode, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+int \hyperlink{class_fbx_mesh_aa62de6d7883e85e0efda70d37329d98a}{Get\+Texture\+U\+V\+Index} (int p\+Polygon\+Index, int p\+Position\+In\+Polygon, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+void \hyperlink{class_fbx_mesh_a1e74780d575f601d6e28c52ff36b555d}{Set\+Texture\+U\+V\+Index} (int p\+Polygon\+Index, int p\+Position\+In\+Polygon, int p\+Index, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier)
+\end{DoxyCompactItemize}
+\subsection*{Utility functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_mesh_addb08ad4590a4fcdaf575dbf16c490fd}{Reset} ()
+\item 
+bool \hyperlink{class_fbx_mesh_abad423b322685ad1c788516e41a3c60f}{Generate\+Normals} (bool p\+Overwrite=false, bool p\+By\+Ctrl\+Point=false, bool p\+CW=false)
+\item 
+bool \hyperlink{class_fbx_mesh_ae78fd7bf1ee7986774560ed29915189a}{Check\+If\+Vertex\+Normals\+C\+CW} ()
+\item 
+bool \hyperlink{class_fbx_mesh_a4f49af18c3d12d2436b0547a10ebc262}{Check\+Same\+Point\+Twice} () const
+\item 
+int \hyperlink{class_fbx_mesh_a90bd43a9b7cc882a78af1e3ed0cf9171}{Remove\+Bad\+Polygons} ()
+\end{DoxyCompactItemize}
+\subsection*{Point Splitting/\+Merging utility functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_mesh_a3b2104f5d0942fd1e74bc62ec1bc4d52}{Split\+Points} (\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type\+Identifier=\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse})
+\item 
+bool \hyperlink{class_fbx_mesh_a4f8376d3f9476bf4c3e7d5db4ac1fa9f}{Build\+Merge\+List} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Merge\+List, bool p\+Export=false)
+\item 
+void \hyperlink{class_fbx_mesh_a77960edb068c0323698bae275281f920}{Merge\+Points\+For\+Polygon\+Verte\+Normals} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Merge\+List)
+\end{DoxyCompactItemize}
+\subsection*{Edge management functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_mesh_af1c0926731661cbdc52ec90032462ef2}{Build\+Mesh\+Edge\+Array} ()
+\item 
+int \hyperlink{class_fbx_mesh_a74e9f89067b21a959c68d44bea963608}{Get\+Mesh\+Edge\+Count} () const
+\item 
+int \hyperlink{class_fbx_mesh_aa13c433e2d1733a37a74de640d22a13f}{Get\+Mesh\+Edge\+Index} (int p\+Start\+Vertex\+Index, int p\+End\+Vertex\+Index, bool \&p\+Reversed, int p\+Existed\+Edge\+Count=-\/1)
+\item 
+void \hyperlink{class_fbx_mesh_a68a92dfeaad020596eb730c4bba6df26}{Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon} ()
+\item 
+void \hyperlink{class_fbx_mesh_accc59f6a71fd42bdf4d547c14f98bd90}{End\+Get\+Mesh\+Edge\+Index\+For\+Polygon} ()
+\item 
+int \hyperlink{class_fbx_mesh_adefa62c43b2d97d5ce122d58542f9cd3}{Get\+Mesh\+Edge\+Index\+For\+Polygon} (int p\+Polygon, int p\+Position\+In\+Polygon)
+\item 
+void \hyperlink{class_fbx_mesh_a326d8c17181238499d628ea719531fa3}{Get\+Mesh\+Edge\+Vertices} (int p\+Edge\+Index, int \&p\+Start\+Vertex\+Index, int \&p\+End\+Vertex\+Index) const
+\item 
+void \hyperlink{class_fbx_mesh_a7eed368fb6a1e11dc2b1e69271e46252}{Begin\+Get\+Mesh\+Edge\+Vertices} ()
+\item 
+void \hyperlink{class_fbx_mesh_ad78469b758835d9ffda31a85df03f35c}{End\+Get\+Mesh\+Edge\+Vertices} ()
+\item 
+void \hyperlink{class_fbx_mesh_a8a0ca6b1202ad971d3f504e801bf53ac}{Set\+Mesh\+Edge\+Count} (int p\+Edge\+Count)
+\item 
+void \hyperlink{class_fbx_mesh_a0a1288c874a40992ae4db6c0905ca2c0}{Set\+Mesh\+Edge} (int p\+Edge\+Index, int p\+Value)
+\item 
+int \hyperlink{class_fbx_mesh_a16e82b52c2485fcdd2456e1a7e8da197}{Add\+Mesh\+Edge\+Index} (int p\+Start\+Vertex\+Index, int p\+End\+Vertex\+Index, bool p\+Check\+For\+Duplicates)
+\item 
+int \hyperlink{class_fbx_mesh_aa5b7cc2518716a2718aa4dc74c028bfa}{Set\+Mesh\+Edge\+Index} (int p\+Edge\+Index, int p\+Start\+Vertex\+Index, int p\+End\+Vertex\+Index, bool p\+Check\+For\+Duplicates, int p\+Existed\+Edge\+Count=-\/1)
+\item 
+void \hyperlink{class_fbx_mesh_ae2f6092e07e43deff8ac6764ba4a3fdd}{Begin\+Add\+Mesh\+Edge\+Index} ()
+\item 
+void \hyperlink{class_fbx_mesh_a933636875bbe11e0a214644d96194079}{End\+Add\+Mesh\+Edge\+Index} ()
+\item 
+int \hyperlink{class_fbx_mesh_a59aca5c258a089ef46db51016ccd0621}{Add\+Mesh\+Edge\+Index\+For\+Polygon} (int p\+Polygon\+Index, int p\+Position\+In\+Polygon)
+\item 
+bool \hyperlink{class_fbx_mesh_aac8b592569f7454ea4a4881e3ce40fed}{Set\+Mesh\+Edge\+Index} (int p\+Edge\+Index, int p\+Polygon\+Index, int p\+Position\+In\+Polygon)
+\item 
+bool \hyperlink{class_fbx_mesh_ac361286e901ffa6a3e651bf8ba71be26}{Is\+Triangle\+Mesh} () const
+\end{DoxyCompactItemize}
+\subsection*{Crease utility functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_fbx_mesh_aef4f5b60a40bb28395bc784be6ec1f63}{Get\+Edge\+Crease\+Info} (int p\+Edge\+Index)
+\item 
+bool \hyperlink{class_fbx_mesh_a5d234684ab39de2e06af7a79a1f7721d}{Get\+Edge\+Crease\+Info\+Array} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ double $>$ $\ast$$\ast$p\+Crease\+Array)
+\item 
+double \hyperlink{class_fbx_mesh_a9c74158d50e75f30e82715fde2eca434}{Get\+Vertex\+Crease\+Info} (int p\+Vertex\+Index)
+\item 
+bool \hyperlink{class_fbx_mesh_a4c62415bddc677a16c9794189b23eeba}{Get\+Vertex\+Crease\+Info\+Array} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ double $>$ $\ast$$\ast$p\+Crease\+Array)
+\item 
+bool \hyperlink{class_fbx_mesh_a78f36e935449e10bf16da30f0657d5d5}{Set\+Edge\+Crease\+Info} (int p\+Edge\+Index, double p\+Weight)
+\item 
+bool \hyperlink{class_fbx_mesh_a7b6ac7bf75d56cfce591c516c2635936}{Set\+Edge\+Crease\+Info\+Array} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ double $>$ $\ast$p\+Weight\+Array)
+\item 
+bool \hyperlink{class_fbx_mesh_aa715baf272e681060762171c9647c543}{Set\+Vertex\+Crease\+Info} (int p\+Vertex\+Index, double p\+Weight)
+\item 
+bool \hyperlink{class_fbx_mesh_aef55378b9360b005b736c5e67d19041e}{Set\+Vertex\+Crease\+Info\+Array} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ double $>$ $\ast$p\+Weight\+Array)
+\end{DoxyCompactItemize}
+\subsection*{Smooth mesh preview utility functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{E\+Smoothness} \{ \hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3a61535903625ba3bc7ccdc3cc5ee033d2}{e\+Hull}, 
+\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3a9ff959ffb9b9b71b38bfe00b075761e5}{e\+Rough}, 
+\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3a7c2545de5f52e18d4e4710afe3e281f7}{e\+Medium}, 
+\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3aec8790ff635fec3367a3b8eedbd9b77b}{e\+Fine}
+ \}
+\item 
+enum \hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule} \{ \hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a0501acd66025ba08d7add2fa09805731}{e\+Legacy}, 
+\hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a796c15aa83f0cd6bf190d963c0c7d728}{e\+Crease\+All}, 
+\hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a05e4c2c5eee265c654273b2902f246e1}{e\+Crease\+Edge}
+ \}
+\item 
+\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{Fbx\+Mesh\+::\+E\+Smoothness} \hyperlink{class_fbx_mesh_a6833d3eb2e1fe34a5073149a2eb5544a}{Get\+Mesh\+Smoothness} () const
+\item 
+void \hyperlink{class_fbx_mesh_ab07446f1c0dd0bae4597bb20a9d27265}{Set\+Mesh\+Smoothness} (\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{Fbx\+Mesh\+::\+E\+Smoothness} p\+Smoothness)
+\item 
+int \hyperlink{class_fbx_mesh_a59da6ff39a8d5247e1b6d996aecf8dab}{Get\+Mesh\+Preview\+Division\+Levels} () const
+\item 
+void \hyperlink{class_fbx_mesh_ab995458b16288d77cd44487a9f63369a}{Set\+Mesh\+Preview\+Division\+Levels} (int p\+Preview\+Division\+Levels)
+\item 
+int \hyperlink{class_fbx_mesh_adbcf24d50b58f317654fc771f11fe35c}{Get\+Mesh\+Render\+Division\+Levels} () const
+\item 
+void \hyperlink{class_fbx_mesh_a3926ddbfb4988f931ffdceef555243a6}{Set\+Mesh\+Render\+Division\+Levels} (int p\+Render\+Division\+Levels)
+\item 
+bool \hyperlink{class_fbx_mesh_ad1eee689b760a6147a2ee8090453ea9b}{Get\+Display\+Subdivisions} () const
+\item 
+void \hyperlink{class_fbx_mesh_ae9cf093a067ebc761231f1f186695d67}{Set\+Display\+Subdivisions} (bool p\+Disply\+Subdivisions)
+\item 
+\hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule} \hyperlink{class_fbx_mesh_a14ac6bb49f273e5a57301a22c0957025}{Get\+Boundary\+Rule} () const
+\item 
+void \hyperlink{class_fbx_mesh_a36ab48a31065c607af8ad8a554fab6c6}{Set\+Boundary\+Rule} (\hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule} p\+Boundary\+Rule)
+\item 
+bool \hyperlink{class_fbx_mesh_aa2ee9371868bd2cf625f96e31ef44577}{Get\+Preserve\+Borders} () const
+\item 
+void \hyperlink{class_fbx_mesh_a462b090d01499b85ed9b19f42cdcef76}{Set\+Preserve\+Borders} (bool p\+Preserve\+Borders)
+\item 
+bool \hyperlink{class_fbx_mesh_a93c3cec3811368e69f968b9e84a96a31}{Get\+Preserve\+Hard\+Edges} () const
+\item 
+void \hyperlink{class_fbx_mesh_adfaa804cd76983fc6a2603aef0c25acd}{Set\+Preserve\+Hard\+Edges} (bool p\+Preserve\+Hard\+Edges)
+\item 
+bool \hyperlink{class_fbx_mesh_a146004786d53607346507bef4bd12101}{Get\+Propagate\+Edge\+Hardness} () const
+\item 
+void \hyperlink{class_fbx_mesh_a1908668e29bfe832de7eec520d0d5cba}{Set\+Propagate\+Edge\+Hardness} (bool p\+Propagate\+Edge\+Hardness)
+\end{DoxyCompactItemize}
+\subsection*{Geometry hole management utility functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_mesh_aefe03c32a3743332101cdcbac963d64b}{Get\+Poly\+Hole\+Info} (int p\+Face\+Index)
+\item 
+bool \hyperlink{class_fbx_mesh_a8b512771bbaf8243e24e649d253003a3}{Get\+Poly\+Hole\+Info\+Array} (\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ bool $>$ $\ast$$\ast$p\+Hole\+Array)
+\item 
+bool \hyperlink{class_fbx_mesh_af13ce6ba20ce1920120a8b7b6d6854ed}{Set\+Poly\+Hole\+Info} (int p\+Face\+Index, bool p\+Is\+Hole)
+\item 
+bool \hyperlink{class_fbx_mesh_ae1392c998ffe508d66284c5615b17f15}{Set\+Poly\+Hole\+Info\+Array} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ bool $>$ $\ast$p\+Hole\+Array)
+\end{DoxyCompactItemize}
+\subsection*{Tangents data management utility functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_mesh_a7e8edf6f1cb66039f1a4aad23354a474}{Generate\+Tangents\+Data} (const char $\ast$p\+U\+V\+Set\+Name=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, bool p\+Overwrite=false)
+\item 
+bool \hyperlink{class_fbx_mesh_aca440ad11eb2fbeaa36cdeeff37e2551}{Generate\+Tangents\+Data} (int p\+U\+V\+Set\+Layer\+Index, bool p\+Overwrite=false)
+\item 
+bool \hyperlink{class_fbx_mesh_a0939d342aa2c0420c755dc1aa2594363}{Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets} (bool p\+Overwrite=false)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+A mesh is a geometry made of polygons. The class can define a geometry with as many n-\/sided polygons as needed. Users can freely mix triangles, quadrilaterals, and other polygons. Since the mesh-\/related terminology of the F\+BX S\+DK differs a little from the known standards, here are our definitions\+: \begin{DoxyItemize}
+\item A control point is an X\+YZ coordinate, it is synonym of vertex. \item A polygon vertex is an index to a control point (the same control point can be referenced by multiple polygon vertices). \item A polygon is a group of polygon vertices. The minimum valid number of polygon vertices to define a polygon is 3.\end{DoxyItemize}
+Methods to initialize, set and access control points are provided in the \hyperlink{class_fbx_geometry_base}{Fbx\+Geometry\+Base} class. 
+
+ fbxmesh.\+h の 32 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}\label{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!E\+Boundary\+Rule@{E\+Boundary\+Rule}}
+\index{E\+Boundary\+Rule@{E\+Boundary\+Rule}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{E\+Boundary\+Rule}{EBoundaryRule}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{Fbx\+Mesh\+::\+E\+Boundary\+Rule}}
+
+the boundary rule. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Legacy@{e\+Legacy}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Legacy@{e\+Legacy}}}\mbox{\Hypertarget{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a0501acd66025ba08d7add2fa09805731}\label{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a0501acd66025ba08d7add2fa09805731}} 
+e\+Legacy&Default value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Crease\+All@{e\+Crease\+All}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Crease\+All@{e\+Crease\+All}}}\mbox{\Hypertarget{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a796c15aa83f0cd6bf190d963c0c7d728}\label{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a796c15aa83f0cd6bf190d963c0c7d728}} 
+e\+Crease\+All&Used for hard corner. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Crease\+Edge@{e\+Crease\+Edge}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Crease\+Edge@{e\+Crease\+Edge}}}\mbox{\Hypertarget{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a05e4c2c5eee265c654273b2902f246e1}\label{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561a05e4c2c5eee265c654273b2902f246e1}} 
+e\+Crease\+Edge&Used for round corner. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxmesh.\+h の 570 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a7ac812140810290f718863c170279cf3}\label{class_fbx_mesh_a7ac812140810290f718863c170279cf3}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!E\+Smoothness@{E\+Smoothness}}
+\index{E\+Smoothness@{E\+Smoothness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{E\+Smoothness}{ESmoothness}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{Fbx\+Mesh\+::\+E\+Smoothness}}
+
+Display Smoothness. It represents smooth mesh preview mode. This concept is not used in the F\+BX S\+DK but simply carried over so applications can access it and perform the appropriate tasks. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hull@{e\+Hull}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Hull@{e\+Hull}}}\mbox{\Hypertarget{class_fbx_mesh_a7ac812140810290f718863c170279cf3a61535903625ba3bc7ccdc3cc5ee033d2}\label{class_fbx_mesh_a7ac812140810290f718863c170279cf3a61535903625ba3bc7ccdc3cc5ee033d2}} 
+e\+Hull&Default value, not active \char`\"{}smooth mesh preview\char`\"{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rough@{e\+Rough}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Rough@{e\+Rough}}}\mbox{\Hypertarget{class_fbx_mesh_a7ac812140810290f718863c170279cf3a9ff959ffb9b9b71b38bfe00b075761e5}\label{class_fbx_mesh_a7ac812140810290f718863c170279cf3a9ff959ffb9b9b71b38bfe00b075761e5}} 
+e\+Rough&Not active \char`\"{}smooth mesh preview\char`\"{}. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Medium@{e\+Medium}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Medium@{e\+Medium}}}\mbox{\Hypertarget{class_fbx_mesh_a7ac812140810290f718863c170279cf3a7c2545de5f52e18d4e4710afe3e281f7}\label{class_fbx_mesh_a7ac812140810290f718863c170279cf3a7c2545de5f52e18d4e4710afe3e281f7}} 
+e\+Medium&Both display cage and smooth mesh. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Fine@{e\+Fine}!Fbx\+Mesh@{Fbx\+Mesh}}\index{Fbx\+Mesh@{Fbx\+Mesh}!e\+Fine@{e\+Fine}}}\mbox{\Hypertarget{class_fbx_mesh_a7ac812140810290f718863c170279cf3aec8790ff635fec3367a3b8eedbd9b77b}\label{class_fbx_mesh_a7ac812140810290f718863c170279cf3aec8790ff635fec3367a3b8eedbd9b77b}} 
+e\+Fine&Display smooth mesh. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxmesh.\+h の 561 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_mesh_a16e82b52c2485fcdd2456e1a7e8da197}\label{class_fbx_mesh_a16e82b52c2485fcdd2456e1a7e8da197}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Add\+Mesh\+Edge\+Index@{Add\+Mesh\+Edge\+Index}}
+\index{Add\+Mesh\+Edge\+Index@{Add\+Mesh\+Edge\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Mesh\+Edge\+Index()}{AddMeshEdgeIndex()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Add\+Mesh\+Edge\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Start\+Vertex\+Index,  }\item[{int}]{p\+End\+Vertex\+Index,  }\item[{bool}]{p\+Check\+For\+Duplicates }\end{DoxyParamCaption})}
+
+Add an edge with the given start/end points. Note that the inserted edge may start at the given end point, and end at the given start point. 
+\begin{DoxyParams}{引数}
+{\em p\+Start\+Vertex\+Index} & The starting point of the edge. \\
+\hline
+{\em p\+End\+Vertex\+Index} & The ending point of the edge. \\
+\hline
+{\em p\+Check\+For\+Duplicates} & Set to true to check if the mesh already contains an edge with these two points. Can be set to false to speed up this method, when the incoming edges are known to be consistent. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Edge index of the new edge, or -\/1 on failure (edge/reverse edge already exists, no face using these 2 points consecutively ) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a59aca5c258a089ef46db51016ccd0621}\label{class_fbx_mesh_a59aca5c258a089ef46db51016ccd0621}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Add\+Mesh\+Edge\+Index\+For\+Polygon@{Add\+Mesh\+Edge\+Index\+For\+Polygon}}
+\index{Add\+Mesh\+Edge\+Index\+For\+Polygon@{Add\+Mesh\+Edge\+Index\+For\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Mesh\+Edge\+Index\+For\+Polygon()}{AddMeshEdgeIndexForPolygon()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Add\+Mesh\+Edge\+Index\+For\+Polygon (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Position\+In\+Polygon }\end{DoxyParamCaption})}
+
+Adds an edge for the specified polygon, and edge number within the polygon. See Set\+Mesh\+Edge\+Index for notes the the parameters. 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & The polygon of interest. \\
+\hline
+{\em p\+Position\+In\+Polygon} & The edge within the polygon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+edge index or -\/1 if failed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_ab483f915e44a3a3613da51bcbe1a2ad6}\label{class_fbx_mesh_ab483f915e44a3a3613da51bcbe1a2ad6}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Add\+Polygon@{Add\+Polygon}}
+\index{Add\+Polygon@{Add\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Polygon()}{AddPolygon()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Add\+Polygon (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{int}]{p\+Texture\+U\+V\+Index = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Add a polygon vertex to the current polygon. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index in the table of the control points. \\
+\hline
+{\em p\+Texture\+U\+V\+Index} & Index of texture UV coordinates to assign to this polygon if texture UV mapping type is {\itshape e\+By\+Polygon\+Vertex}. Otherwise it must be {\ttfamily -\/1}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+After adding all the polygons of the mesh, call function \char`\"{}\+Build\+Mesh\+Edge\+Array\char`\"{} to generate edge data for the mesh. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a306f0e4f4a05de664327bb4389d0bfbf}\label{class_fbx_mesh_a306f0e4f4a05de664327bb4389d0bfbf}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Add\+Texture\+UV@{Add\+Texture\+UV}}
+\index{Add\+Texture\+UV@{Add\+Texture\+UV}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Add\+Texture\+U\+V()}{AddTextureUV()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Add\+Texture\+UV (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_vector2}{Fbx\+Vector2}}]{p\+UV,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Add texture UV coordinates. Appends a new element at the end of the array of texture UV coordinates. 
+\begin{DoxyParams}{引数}
+{\em p\+UV} & Texture UV coordinates, ranging between {\ttfamily 0} and {\ttfamily 1}. \\
+\hline
+{\em p\+Type\+Identifier} & Specifies which texture channel this UV refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The final number of texture UV elements must equal the number of control points if the UV mapping mode is {\itshape \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ad64b7f5885f295d3eacb5fed40bb0cad}{Fbx\+Layer\+Element\+::e\+By\+Control\+Point}}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_ae2f6092e07e43deff8ac6764ba4a3fdd}\label{class_fbx_mesh_ae2f6092e07e43deff8ac6764ba4a3fdd}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Begin\+Add\+Mesh\+Edge\+Index@{Begin\+Add\+Mesh\+Edge\+Index}}
+\index{Begin\+Add\+Mesh\+Edge\+Index@{Begin\+Add\+Mesh\+Edge\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Begin\+Add\+Mesh\+Edge\+Index()}{BeginAddMeshEdgeIndex()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Begin\+Add\+Mesh\+Edge\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call this before calling Add\+Mesh\+Edge\+Index or Set\+Mesh\+Edge\+Index to increase performance. Once finished adding/setting edges End\+Add\+Mesh\+Edge\+Index should be called. \mbox{\Hypertarget{class_fbx_mesh_a68a92dfeaad020596eb730c4bba6df26}\label{class_fbx_mesh_a68a92dfeaad020596eb730c4bba6df26}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon@{Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon}}
+\index{Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon@{Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon()}{BeginGetMeshEdgeIndexForPolygon()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Use this method before calling Get\+Mesh\+Edge\+Index\+For\+Polygon if making several calls to that method. Once done calling Get\+Mesh\+Edge\+Index\+For\+Polygon, call End\+Get\+Mesh\+Edge\+Index. This will optimize access time. Do not modify the mesh between calls to Begin\+Get\+Mesh\+Edge\+Index and End\+Get\+Mesh\+Edge\+Index. \mbox{\Hypertarget{class_fbx_mesh_a7eed368fb6a1e11dc2b1e69271e46252}\label{class_fbx_mesh_a7eed368fb6a1e11dc2b1e69271e46252}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Begin\+Get\+Mesh\+Edge\+Vertices@{Begin\+Get\+Mesh\+Edge\+Vertices}}
+\index{Begin\+Get\+Mesh\+Edge\+Vertices@{Begin\+Get\+Mesh\+Edge\+Vertices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Begin\+Get\+Mesh\+Edge\+Vertices()}{BeginGetMeshEdgeVertices()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Begin\+Get\+Mesh\+Edge\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Use this method before calling Get\+Mesh\+Edge\+Vertices if making several calls to that method. Once done calling Get\+Mesh\+Edge\+Vertices, call End\+Get\+Mesh\+Edge\+Vertices. This will optimize access time. Do not modify the mesh between calls to Begin\+Get\+Mesh\+Edge\+Vertices and End\+Get\+Mesh\+Edge\+Vertices. \mbox{\Hypertarget{class_fbx_mesh_aebaf7be01966e5a365a0bc49b8d15b3b}\label{class_fbx_mesh_aebaf7be01966e5a365a0bc49b8d15b3b}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Begin\+Polygon@{Begin\+Polygon}}
+\index{Begin\+Polygon@{Begin\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Begin\+Polygon()}{BeginPolygon()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Begin\+Polygon (\begin{DoxyParamCaption}\item[{int}]{p\+Material = {\ttfamily -\/1},  }\item[{int}]{p\+Texture = {\ttfamily -\/1},  }\item[{int}]{p\+Group = {\ttfamily -\/1},  }\item[{bool}]{p\+Legacy = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Begins the process of adding a polygon to the mesh. Add vertexes to the polygon using Add\+Polygon. When the polygon is complete call End\+Polygon to complete the creation of the polygon. 
+\begin{DoxyParams}{引数}
+{\em p\+Material} & Index of material to assign to this polygon if material mapping type is {\itshape e\+By\+Polygon}. Otherwise it must be {\ttfamily -\/1}. \\
+\hline
+{\em p\+Texture} & Index of texture to assign to this polygon if texture mapping type is {\itshape e\+By\+Polygon}. Otherwise it must be {\ttfamily -\/1}. \\
+\hline
+{\em p\+Group} & Group index assigned to polygon. \\
+\hline
+{\em p\+Legacy} & When set to {\ttfamily true}, automatically create a Layer\+Element of type Texture; This was the default behavior of earlier versions of the F\+BX S\+DK. Since version 2010, the textures are connected to the material object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function must be called before \hyperlink{class_fbx_mesh_ab483f915e44a3a3613da51bcbe1a2ad6}{Add\+Polygon()}. 
+
+If used, the p\+Texture index will reference textures assigned to the D\+I\+F\+F\+U\+SE channel (\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}). 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a0c81b70dd5b832d34841b7a5111be8b9}\label{class_fbx_mesh_a0c81b70dd5b832d34841b7a5111be8b9}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Begin\+Polygon\+Ext@{Begin\+Polygon\+Ext}}
+\index{Begin\+Polygon\+Ext@{Begin\+Polygon\+Ext}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Begin\+Polygon\+Ext()}{BeginPolygonExt()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Begin\+Polygon\+Ext (\begin{DoxyParamCaption}\item[{int}]{p\+Material,  }\item[{int $\ast$}]{p\+Textures }\end{DoxyParamCaption})}
+
+Begin writing a polygon. Add vertexes to the polygon using Add\+Polygon. When the polygon is complete call End\+Polygon to complete the creation of the polygon. 
+\begin{DoxyParams}{引数}
+{\em p\+Material} & Index of material to assign to this polygon if material mapping type is {\itshape e\+By\+Polygon}. Otherwise it must be {\ttfamily -\/1}. \\
+\hline
+{\em p\+Textures} & Array of index of texture (by texture type) to assign to this polygon if texture mapping type is {\itshape e\+By\+Polygon}. Otherwise it must be an array of {\ttfamily -\/1}. This array is expected to be of size\+: \hyperlink{class_fbx_layer_element_ae7a09ea6aa90f96d37a9e161b9f54094}{Fbx\+Layer\+Element\+::s\+Type\+Texture\+Count}. If one texture type is not used, the corresponding entry must be left at {\ttfamily -\/1}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_a4f8376d3f9476bf4c3e7d5db4ac1fa9f}\label{class_fbx_mesh_a4f8376d3f9476bf4c3e7d5db4ac1fa9f}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Build\+Merge\+List@{Build\+Merge\+List}}
+\index{Build\+Merge\+List@{Build\+Merge\+List}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Build\+Merge\+List()}{BuildMergeList()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Build\+Merge\+List (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Merge\+List,  }\item[{bool}]{p\+Export = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Insert the new indexes of the object that have to be merged. 
+\begin{DoxyParams}{引数}
+{\em p\+Merge\+List} & The list that will contain the indexes of the objects to merge. \\
+\hline
+{\em p\+Export} & If set to {\ttfamily true}, include the duplicate indexes in the merge list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_af1c0926731661cbdc52ec90032462ef2}\label{class_fbx_mesh_af1c0926731661cbdc52ec90032462ef2}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Build\+Mesh\+Edge\+Array@{Build\+Mesh\+Edge\+Array}}
+\index{Build\+Mesh\+Edge\+Array@{Build\+Mesh\+Edge\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Build\+Mesh\+Edge\+Array()}{BuildMeshEdgeArray()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Build\+Mesh\+Edge\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Automatically generate edge data for the mesh. Clears all previously stored edge information \mbox{\Hypertarget{class_fbx_mesh_ae78fd7bf1ee7986774560ed29915189a}\label{class_fbx_mesh_ae78fd7bf1ee7986774560ed29915189a}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Check\+If\+Vertex\+Normals\+C\+CW@{Check\+If\+Vertex\+Normals\+C\+CW}}
+\index{Check\+If\+Vertex\+Normals\+C\+CW@{Check\+If\+Vertex\+Normals\+C\+CW}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Check\+If\+Vertex\+Normals\+C\+C\+W()}{CheckIfVertexNormalsCCW()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Check\+If\+Vertex\+Normals\+C\+CW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compares the normals calculated by doing cross-\/products between the polygon vertex and by the ones stored in the normal array. \begin{DoxyReturn}{戻り値}
+{\ttfamily false} if A\+LL of them are Clockwise. Returns {\ttfamily true} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a4f49af18c3d12d2436b0547a10ebc262}\label{class_fbx_mesh_a4f49af18c3d12d2436b0547a10ebc262}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Check\+Same\+Point\+Twice@{Check\+Same\+Point\+Twice}}
+\index{Check\+Same\+Point\+Twice@{Check\+Same\+Point\+Twice}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Check\+Same\+Point\+Twice()}{CheckSamePointTwice()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Check\+Same\+Point\+Twice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Verify if the mesh has polygons that are defined on the same point more than once. \begin{DoxyReturn}{戻り値}
+true if the mesh has that kind of polygon, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a05ca6a8fbd028777c91931ce6edf4b19}\label{class_fbx_mesh_a05ca6a8fbd028777c91931ce6edf4b19}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Compact@{Compact}}
+\index{Compact@{Compact}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Compact()}{Compact()}}
+{\footnotesize\ttfamily virtual void Fbx\+Mesh\+::\+Compact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Compact the memory used by this object. \begin{DoxyRemark}{注釈}
+Note that this function might not result in saved memory because it depends if the sub-\/class implements it, or if any memory can actually be saved. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_a66146155ecad4e6f6f2e8cf52e0340f6}{Fbx\+Geometry\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_mesh_add00ef9f41759119264e83765697564e}\label{class_fbx_mesh_add00ef9f41759119264e83765697564e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Compute\+Component\+Maps@{Compute\+Component\+Maps}}
+\index{Compute\+Component\+Maps@{Compute\+Component\+Maps}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Compute\+Component\+Maps()}{ComputeComponentMaps()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Compute\+Component\+Maps (\begin{DoxyParamCaption}\item[{\hyperlink{struct_fbx_mesh_1_1_component_map}{Component\+Map} \&}]{p\+Edge\+To\+Poly\+Map,  }\item[{\hyperlink{struct_fbx_mesh_1_1_component_map}{Component\+Map} \&}]{p\+Poly\+To\+Edge\+Map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_mesh_a6e64bf4157a20a29bf548be6dd8d90df}\label{class_fbx_mesh_a6e64bf4157a20a29bf548be6dd8d90df}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Compute\+Control\+Point\+To\+Vertices\+Map@{Compute\+Control\+Point\+To\+Vertices\+Map}}
+\index{Compute\+Control\+Point\+To\+Vertices\+Map@{Compute\+Control\+Point\+To\+Vertices\+Map}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Compute\+Control\+Point\+To\+Vertices\+Map()}{ComputeControlPointToVerticesMap()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Compute\+Control\+Point\+To\+Vertices\+Map (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh_1_1_control_point_to_vertices_map}{Control\+Point\+To\+Vertices\+Map} \&}]{p\+Map }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_mesh_ac6499edbc0a86efac04bf2591756ed1e}\label{class_fbx_mesh_ac6499edbc0a86efac04bf2591756ed1e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Conform\+Normals\+To@{Conform\+Normals\+To}}
+\index{Conform\+Normals\+To@{Conform\+Normals\+To}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Conform\+Normals\+To()}{ConformNormalsTo()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Conform\+Normals\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_mesh_a230787ca87312437d427d9ec7c150565}\label{class_fbx_mesh_a230787ca87312437d427d9ec7c150565}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Mesh\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_a26ca96a86f17783c45ff83b33d2b5324}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_mesh_aacd77ff7908d897c73983919c4aade72}\label{class_fbx_mesh_aacd77ff7908d897c73983919c4aade72}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Content\+Clear@{Content\+Clear}}
+\index{Content\+Clear@{Content\+Clear}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Content\+Clear()}{ContentClear()}}
+{\footnotesize\ttfamily virtual void Fbx\+Mesh\+::\+Content\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Clears this object\textquotesingle{}s content from memory. This method must be overridden in the derived classes. \begin{DoxyRemark}{注釈}
+This method is called by \hyperlink{class_fbx_object_ac28653a3c65e840498eebfb54276e483}{Content\+Unload()} if the object content\textquotesingle{}s unloading is successful. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_acf13ddd2717d2f1ca4dc57b5ea0801b1}{Fbx\+Geometry\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_mesh_a0f041743536ee5ccbc9a086e3ef1c663}\label{class_fbx_mesh_a0f041743536ee5ccbc9a086e3ef1c663}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Mesh\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_mesh_a1755e89d515fadbc2d52924917b618f7}\label{class_fbx_mesh_a1755e89d515fadbc2d52924917b618f7}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Mesh\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_a07e94f7801067d66429afbf1799795cd}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_mesh_a933636875bbe11e0a214644d96194079}\label{class_fbx_mesh_a933636875bbe11e0a214644d96194079}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!End\+Add\+Mesh\+Edge\+Index@{End\+Add\+Mesh\+Edge\+Index}}
+\index{End\+Add\+Mesh\+Edge\+Index@{End\+Add\+Mesh\+Edge\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{End\+Add\+Mesh\+Edge\+Index()}{EndAddMeshEdgeIndex()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+End\+Add\+Mesh\+Edge\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+After calling Add\+Mesh\+Edge\+Index or Set\+Mesh\+Edge\+Index, End\+Add\+Mesh\+Edge\+Index should be called. \mbox{\Hypertarget{class_fbx_mesh_accc59f6a71fd42bdf4d547c14f98bd90}\label{class_fbx_mesh_accc59f6a71fd42bdf4d547c14f98bd90}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!End\+Get\+Mesh\+Edge\+Index\+For\+Polygon@{End\+Get\+Mesh\+Edge\+Index\+For\+Polygon}}
+\index{End\+Get\+Mesh\+Edge\+Index\+For\+Polygon@{End\+Get\+Mesh\+Edge\+Index\+For\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{End\+Get\+Mesh\+Edge\+Index\+For\+Polygon()}{EndGetMeshEdgeIndexForPolygon()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+End\+Get\+Mesh\+Edge\+Index\+For\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Use this method after calling Get\+Mesh\+Edge\+Index\+For\+Polygon if making several calls to that method. This will optimize access time. Do not modify the mesh between calls to Begin\+Get\+Mesh\+Edge\+Index and End\+Get\+Mesh\+Edge\+Index. \mbox{\Hypertarget{class_fbx_mesh_ad78469b758835d9ffda31a85df03f35c}\label{class_fbx_mesh_ad78469b758835d9ffda31a85df03f35c}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!End\+Get\+Mesh\+Edge\+Vertices@{End\+Get\+Mesh\+Edge\+Vertices}}
+\index{End\+Get\+Mesh\+Edge\+Vertices@{End\+Get\+Mesh\+Edge\+Vertices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{End\+Get\+Mesh\+Edge\+Vertices()}{EndGetMeshEdgeVertices()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+End\+Get\+Mesh\+Edge\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Use this method after calling Get\+Mesh\+Edge\+Vertices if making several calls to that method. This will optimize access time. Do not modify the mesh between calls to Begin\+Get\+Mesh\+Edge\+Vertices and End\+Get\+Mesh\+Edge\+Vertices. \mbox{\Hypertarget{class_fbx_mesh_a50b65ca7dca5c691bc50db6f55e0d0c9}\label{class_fbx_mesh_a50b65ca7dca5c691bc50db6f55e0d0c9}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!End\+Polygon@{End\+Polygon}}
+\index{End\+Polygon@{End\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{End\+Polygon()}{EndPolygon()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+End\+Polygon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+End writing a polygon, it should be called after adding one polygon. 
+
+\mbox{\Hypertarget{class_fbx_mesh_adccc8b864012541903afb1df02654161}\label{class_fbx_mesh_adccc8b864012541903afb1df02654161}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Find\+Polygon\+Index@{Find\+Polygon\+Index}}
+\index{Find\+Polygon\+Index@{Find\+Polygon\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Find\+Polygon\+Index()}{FindPolygonIndex()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Find\+Polygon\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_abad423b322685ad1c788516e41a3c60f}\label{class_fbx_mesh_abad423b322685ad1c788516e41a3c60f}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Generate\+Normals@{Generate\+Normals}}
+\index{Generate\+Normals@{Generate\+Normals}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Generate\+Normals()}{GenerateNormals()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Generate\+Normals (\begin{DoxyParamCaption}\item[{bool}]{p\+Overwrite = {\ttfamily false},  }\item[{bool}]{p\+By\+Ctrl\+Point = {\ttfamily false},  }\item[{bool}]{p\+CW = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Generate vertex normals on the mesh. The normal computation takes into consideration, as much as possible, the smoothing groups. 
+\begin{DoxyParams}{引数}
+{\em p\+Overwrite} & If true, re-\/generate normals data regardless of availability, otherwise left untouched if exist. \\
+\hline
+{\em p\+By\+Ctrl\+Point} & If true, the recomputed normals will be defined by control points instead of by polygon vertex. \\
+\hline
+{\em p\+CW} & True if the normals are calculated clockwise, false otherwise (counter-\/clockwise). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully generated normals data, or if already available and p\+Overwrite is false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a7e8edf6f1cb66039f1a4aad23354a474}\label{class_fbx_mesh_a7e8edf6f1cb66039f1a4aad23354a474}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Generate\+Tangents\+Data@{Generate\+Tangents\+Data}}
+\index{Generate\+Tangents\+Data@{Generate\+Tangents\+Data}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Generate\+Tangents\+Data()}{GenerateTangentsData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Generate\+Tangents\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+U\+V\+Set\+Name = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{bool}]{p\+Overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Generate tangents data for U\+V\+Set with specific name. Note that the UV winding order is stored in the W component of the tangent. W = 1.\+0 (right-\/handed) W = -\/1.\+0 (left-\/handed) In the case of a left-\/handed tangent, this function automatically flips the resulting binormal to correct for mirrored geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Name} & The U\+V\+Set name to generate tangents data with. The U\+V\+Set on the first layer is the the default U\+V\+Set to generate. \\
+\hline
+{\em p\+Overwrite} & If true, re-\/generate tangents data regardless of availability, otherwise left untouched if exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully generated tangents data, or if already available and p\+Overwrite is false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aca440ad11eb2fbeaa36cdeeff37e2551}\label{class_fbx_mesh_aca440ad11eb2fbeaa36cdeeff37e2551}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Generate\+Tangents\+Data@{Generate\+Tangents\+Data}}
+\index{Generate\+Tangents\+Data@{Generate\+Tangents\+Data}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Generate\+Tangents\+Data()}{GenerateTangentsData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Generate\+Tangents\+Data (\begin{DoxyParamCaption}\item[{int}]{p\+U\+V\+Set\+Layer\+Index,  }\item[{bool}]{p\+Overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Generate tangents data for U\+V\+Set in specific layer. Note that the UV winding order is stored in the W component of the tangent. W = 1.\+0 (right-\/handed) W = -\/1.\+0 (left-\/handed) In the case of a left-\/handed tangent, this function automatically flips the resulting binormal to correct for mirrored geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Layer\+Index} & The layer to generate tangents data with. \\
+\hline
+{\em p\+Overwrite} & If true, re-\/generate tangents data regardless of availability, otherwise left untouched if exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully generated tangents data, or if already available and p\+Overwrite is false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a0939d342aa2c0420c755dc1aa2594363}\label{class_fbx_mesh_a0939d342aa2c0420c755dc1aa2594363}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets@{Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets}}
+\index{Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets@{Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets()}{GenerateTangentsDataForAllUVSets()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Generate\+Tangents\+Data\+For\+All\+U\+V\+Sets (\begin{DoxyParamCaption}\item[{bool}]{p\+Overwrite = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Generate tangents data for all U\+V\+Sets in all layers. Note that the UV winding order is stored in the W component of the tangent\+: W = 1.\+0 (right-\/handed) W = -\/1.\+0 (left-\/handed) In the case of a left-\/handed tangent, this function automatically flips the resulting binormal to correct for mirrored geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Overwrite} & If true, re-\/generate tangents data regardless of availability, otherwise left untouched if exist. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully generated tangents data, or if already available and p\+Overwrite is false. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a85b62b9c7da656bec19a362d60160836}\label{class_fbx_mesh_a85b62b9c7da656bec19a362d60160836}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+All\+Channel\+UV@{Get\+All\+Channel\+UV}}
+\index{Get\+All\+Channel\+UV@{Get\+All\+Channel\+UV}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+All\+Channel\+U\+V()}{GetAllChannelUV()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}$>$ Fbx\+Mesh\+::\+Get\+All\+Channel\+UV (\begin{DoxyParamCaption}\item[{int}]{p\+Layer }\end{DoxyParamCaption})}
+
+Fills an array describing, for the given layer, which texture channel have U\+Vs associated to it. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer} & Index of the layer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Array with the channel descriptor. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Only the channels that have U\+Vs associated are reported in the array. For example, let\textquotesingle{}s assume that we have defined U\+Vs for the Diffuse, Ambient and Bump channels on layer 0. The resulting array will have the following three entries\+: \begin{DoxyItemize}
+\item Fbx\+Layer\+Element\+::e\+D\+I\+F\+F\+U\+S\+E\+\_\+\+T\+E\+X\+T\+U\+RE \item Fbx\+Layer\+Element\+::e\+A\+M\+B\+I\+E\+N\+T\+\_\+\+T\+E\+X\+T\+U\+RE \item Fbx\+Layer\+Element\+::e\+B\+U\+M\+P\+\_\+\+T\+E\+X\+T\+U\+RE \end{DoxyItemize}
+
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a5a52e41ccf1382c40d3361ec3cfbb68a}\label{class_fbx_mesh_a5a52e41ccf1382c40d3361ec3cfbb68a}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Mesh\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the type of node attribute. \begin{DoxyReturn}{戻り値}
+Return the type of this node attribute which is {\itshape E\+Type\+::e\+Mesh}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_mesh_ae2148a3e615dac499fbbbe57a714547e}\label{class_fbx_mesh_ae2148a3e615dac499fbbbe57a714547e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Bad\+Poly\+Indices@{Get\+Bad\+Poly\+Indices}}
+\index{Get\+Bad\+Poly\+Indices@{Get\+Bad\+Poly\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Bad\+Poly\+Indices()}{GetBadPolyIndices()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Bad\+Poly\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Array\+Bad\+Poly\+Indices,  }\item[{bool}]{p\+Check\+One }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_a14ac6bb49f273e5a57301a22c0957025}\label{class_fbx_mesh_a14ac6bb49f273e5a57301a22c0957025}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Boundary\+Rule@{Get\+Boundary\+Rule}}
+\index{Get\+Boundary\+Rule@{Get\+Boundary\+Rule}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Boundary\+Rule()}{GetBoundaryRule()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule} Fbx\+Mesh\+::\+Get\+Boundary\+Rule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get Boundary\+Rule from mesh. \begin{DoxyReturn}{戻り値}
+Current value of the internal state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_ad1eee689b760a6147a2ee8090453ea9b}\label{class_fbx_mesh_ad1eee689b760a6147a2ee8090453ea9b}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Display\+Subdivisions@{Get\+Display\+Subdivisions}}
+\index{Get\+Display\+Subdivisions@{Get\+Display\+Subdivisions}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Display\+Subdivisions()}{GetDisplaySubdivisions()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Display\+Subdivisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Query whether to display subdivisions isolines on mesh. \begin{DoxyReturn}{戻り値}
+The current state of the internal flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aef4f5b60a40bb28395bc784be6ec1f63}\label{class_fbx_mesh_aef4f5b60a40bb28395bc784be6ec1f63}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Edge\+Crease\+Info@{Get\+Edge\+Crease\+Info}}
+\index{Get\+Edge\+Crease\+Info@{Get\+Edge\+Crease\+Info}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Edge\+Crease\+Info()}{GetEdgeCreaseInfo()}}
+{\footnotesize\ttfamily double Fbx\+Mesh\+::\+Get\+Edge\+Crease\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index }\end{DoxyParamCaption})}
+
+Get crease weight by edge index. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index} & Edge index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Crease weight value in the range \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a5d234684ab39de2e06af7a79a1f7721d}\label{class_fbx_mesh_a5d234684ab39de2e06af7a79a1f7721d}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Edge\+Crease\+Info\+Array@{Get\+Edge\+Crease\+Info\+Array}}
+\index{Get\+Edge\+Crease\+Info\+Array@{Get\+Edge\+Crease\+Info\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Edge\+Crease\+Info\+Array()}{GetEdgeCreaseInfoArray()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Edge\+Crease\+Info\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ double $>$ $\ast$$\ast$}]{p\+Crease\+Array }\end{DoxyParamCaption})}
+
+Get crease edge array. 
+\begin{DoxyParams}{引数}
+{\em p\+Crease\+Array} & Edge crease data array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the p\+Crease\+Array is filled successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a1929aa2f73049a3c6d07b06b5e8db233}\label{class_fbx_mesh_a1929aa2f73049a3c6d07b06b5e8db233}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Material\+Indices@{Get\+Material\+Indices}}
+\index{Get\+Material\+Indices@{Get\+Material\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Material\+Indices()}{GetMaterialIndices()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Material\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$}]{p\+Lockable\+Array }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_mesh_a74e9f89067b21a959c68d44bea963608}\label{class_fbx_mesh_a74e9f89067b21a959c68d44bea963608}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Edge\+Count@{Get\+Mesh\+Edge\+Count}}
+\index{Get\+Mesh\+Edge\+Count@{Get\+Mesh\+Edge\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Edge\+Count()}{GetMeshEdgeCount()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Mesh\+Edge\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Query the number of edges defined on this mesh \begin{DoxyReturn}{戻り値}
+The number of edges defined for this mesh 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aa13c433e2d1733a37a74de640d22a13f}\label{class_fbx_mesh_aa13c433e2d1733a37a74de640d22a13f}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Edge\+Index@{Get\+Mesh\+Edge\+Index}}
+\index{Get\+Mesh\+Edge\+Index@{Get\+Mesh\+Edge\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Edge\+Index()}{GetMeshEdgeIndex()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Mesh\+Edge\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Start\+Vertex\+Index,  }\item[{int}]{p\+End\+Vertex\+Index,  }\item[{bool \&}]{p\+Reversed,  }\item[{int}]{p\+Existed\+Edge\+Count = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Get the index for the edge between the given vertices. Note that the result of this method is the same if p\+Start\+Vertex\+Index and p\+End\+Vertex\+Index are swapped. 
+\begin{DoxyParams}{引数}
+{\em p\+Start\+Vertex\+Index} & The starting point of the edge. \\
+\hline
+{\em p\+End\+Vertex\+Index} & The ending point of the edge. \\
+\hline
+{\em p\+Reversed} & flag will be set to true if the reverse edge is found, false otherwise. \\
+\hline
+{\em p\+Existed\+Edge\+Count} & legal edge count in m\+Edge\+Array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+-\/1 if no edge exists for the given pair of vertices. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_adefa62c43b2d97d5ce122d58542f9cd3}\label{class_fbx_mesh_adefa62c43b2d97d5ce122d58542f9cd3}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Edge\+Index\+For\+Polygon@{Get\+Mesh\+Edge\+Index\+For\+Polygon}}
+\index{Get\+Mesh\+Edge\+Index\+For\+Polygon@{Get\+Mesh\+Edge\+Index\+For\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Edge\+Index\+For\+Polygon()}{GetMeshEdgeIndexForPolygon()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Mesh\+Edge\+Index\+For\+Polygon (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon,  }\item[{int}]{p\+Position\+In\+Polygon }\end{DoxyParamCaption})}
+
+Get the index for the specific edge of p\+Polygon. 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon} & The polygon of interest. \\
+\hline
+{\em p\+Position\+In\+Polygon} & The specific edge number in the polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+-\/1 if the specific edge does not exist. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To optimize access time when making several calls to this method, enclose these calls between the \hyperlink{class_fbx_mesh_a68a92dfeaad020596eb730c4bba6df26}{Begin\+Get\+Mesh\+Edge\+Index\+For\+Polygon()} and \hyperlink{class_fbx_mesh_accc59f6a71fd42bdf4d547c14f98bd90}{End\+Get\+Mesh\+Edge\+Index\+For\+Polygon()} calls. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a326d8c17181238499d628ea719531fa3}\label{class_fbx_mesh_a326d8c17181238499d628ea719531fa3}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Edge\+Vertices@{Get\+Mesh\+Edge\+Vertices}}
+\index{Get\+Mesh\+Edge\+Vertices@{Get\+Mesh\+Edge\+Vertices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Edge\+Vertices()}{GetMeshEdgeVertices()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Get\+Mesh\+Edge\+Vertices (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index,  }\item[{int \&}]{p\+Start\+Vertex\+Index,  }\item[{int \&}]{p\+End\+Vertex\+Index }\end{DoxyParamCaption}) const}
+
+Get the vertices for the given edge. Note that the values returned are indices into the control point array. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index} & The edge to query. \\
+\hline
+{\em p\+Start\+Vertex\+Index} & The edge\textquotesingle{}s starting point will be stored here. \\
+\hline
+{\em p\+End\+Vertex\+Index} & The edge\textquotesingle{}s starting point will be stored here. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_a59da6ff39a8d5247e1b6d996aecf8dab}\label{class_fbx_mesh_a59da6ff39a8d5247e1b6d996aecf8dab}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Preview\+Division\+Levels@{Get\+Mesh\+Preview\+Division\+Levels}}
+\index{Get\+Mesh\+Preview\+Division\+Levels@{Get\+Mesh\+Preview\+Division\+Levels}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Preview\+Division\+Levels()}{GetMeshPreviewDivisionLevels()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Mesh\+Preview\+Division\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get preview subdivision levels from mesh. \begin{DoxyReturn}{戻り値}
+Mesh preview subdivision levels. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_adbcf24d50b58f317654fc771f11fe35c}\label{class_fbx_mesh_adbcf24d50b58f317654fc771f11fe35c}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Render\+Division\+Levels@{Get\+Mesh\+Render\+Division\+Levels}}
+\index{Get\+Mesh\+Render\+Division\+Levels@{Get\+Mesh\+Render\+Division\+Levels}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Render\+Division\+Levels()}{GetMeshRenderDivisionLevels()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Mesh\+Render\+Division\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get render subdivision levels from mesh. \begin{DoxyReturn}{戻り値}
+Mesh render subdivision levels 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Sometimes, render division level can be the same as preview level. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a6833d3eb2e1fe34a5073149a2eb5544a}\label{class_fbx_mesh_a6833d3eb2e1fe34a5073149a2eb5544a}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Mesh\+Smoothness@{Get\+Mesh\+Smoothness}}
+\index{Get\+Mesh\+Smoothness@{Get\+Mesh\+Smoothness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Mesh\+Smoothness()}{GetMeshSmoothness()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{Fbx\+Mesh\+::\+E\+Smoothness} Fbx\+Mesh\+::\+Get\+Mesh\+Smoothness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get display smoothness from mesh. \begin{DoxyReturn}{戻り値}
+Mesh smoothness. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+It represents smooth mesh preview mode. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a0f443f6d64284e6b60bdd52fb1f53ea7}\label{class_fbx_mesh_a0f443f6d64284e6b60bdd52fb1f53ea7}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Count@{Get\+Polygon\+Count}}
+\index{Get\+Polygon\+Count@{Get\+Polygon\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Count()}{GetPolygonCount()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Polygon\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the polygon count of this mesh. \begin{DoxyReturn}{戻り値}
+Return the number of polygons in the mesh. 
+\end{DoxyReturn}
+
+
+ fbxmesh.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_aca17b9c024aa056115bdb173daf25e8c}\label{class_fbx_mesh_aca17b9c024aa056115bdb173daf25e8c}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Group@{Get\+Polygon\+Group}}
+\index{Get\+Polygon\+Group@{Get\+Polygon\+Group}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Group()}{GetPolygonGroup()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Polygon\+Group (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index }\end{DoxyParamCaption}) const}
+
+Get the current group ID of the specified polygon. A polygon group can be useful to identify a number of polygons that share the same properties. The F\+BX S\+DK does not use this information internally but guarantee its persistence in the F\+BX files and in memory. 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of the polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Group index assigned to the polygon. If the polygon index is out of bounds, return -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a775d0e10dc67bbcb9f7368d828588e55}\label{class_fbx_mesh_a775d0e10dc67bbcb9f7368d828588e55}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Size@{Get\+Polygon\+Size}}
+\index{Get\+Polygon\+Size@{Get\+Polygon\+Size}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Size()}{GetPolygonSize()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Polygon\+Size (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the number of polygon vertices in a polygon. 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of the polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The number of polygon vertices in the indexed polygon. If the polygon index is out of bounds, return -\/1. 
+\end{DoxyReturn}
+
+
+ fbxmesh.\+h の 78 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_ad1875b3c43e44bf960e371cd668734b3}\label{class_fbx_mesh_ad1875b3c43e44bf960e371cd668734b3}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex@{Get\+Polygon\+Vertex}}
+\index{Get\+Polygon\+Vertex@{Get\+Polygon\+Vertex}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex()}{GetPolygonVertex()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Polygon\+Vertex (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Position\+In\+Polygon }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a polygon vertex (i.\+e\+: an index to a control point). 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of queried polygon. The valid range for this parameter is 0 to {\ttfamily \hyperlink{class_fbx_mesh_a0f443f6d64284e6b60bdd52fb1f53ea7}{Fbx\+Mesh\+::\+Get\+Polygon\+Count()}}. \\
+\hline
+{\em p\+Position\+In\+Polygon} & Position of polygon vertex in indexed polygon. The valid range for this parameter is 0 to {\ttfamily Fbx\+Mesh\+::\+Get\+Polygon\+Size(p\+Polygon\+Index)}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return the polygon vertex indexed or -\/1 if the requested vertex does not exists or the indices arguments have an invalid range. 
+\end{DoxyReturn}
+
+
+ fbxmesh.\+h の 104 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a46cdb95dfe5052564aeeba288474076e}\label{class_fbx_mesh_a46cdb95dfe5052564aeeba288474076e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+Count@{Get\+Polygon\+Vertex\+Count}}
+\index{Get\+Polygon\+Vertex\+Count@{Get\+Polygon\+Vertex\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+Count()}{GetPolygonVertexCount()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the number of polygon vertices in the mesh. \begin{DoxyReturn}{戻り値}
+The overall size of the array of polygon vertices in the mesh. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This value can be smaller than the value returned by \hyperlink{class_fbx_geometry_base_aa9f42ae6a958036722670143fabf3b17}{Get\+Control\+Points\+Count()} (meaning that not all of the control points stored in the object are used to define the mesh). However, typically it will be much bigger since any given control point can be used to define a vertex on multiple polygons. 
+\end{DoxyRemark}
+
+
+ fbxmesh.\+h の 159 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a942e182a7c27fa11464b9adb0c9cdc3b}\label{class_fbx_mesh_a942e182a7c27fa11464b9adb0c9cdc3b}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+Index@{Get\+Polygon\+Vertex\+Index}}
+\index{Get\+Polygon\+Vertex\+Index@{Get\+Polygon\+Vertex\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+Index()}{GetPolygonVertexIndex()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index }\end{DoxyParamCaption}) const}
+
+Gets the start index into the array returned by \hyperlink{class_fbx_mesh_a0c29a17dfc1db3644772acb5c32a63b0}{Get\+Polygon\+Vertices()} for the given polygon. This method can be used for a faster access to the polygon vertices indices. If, for example, we want to access the indices for polygon 3, the following code would do the trick 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} lStartIndex = mesh.\hyperlink{class_fbx_mesh_a942e182a7c27fa11464b9adb0c9cdc3b}{GetPolygonVertexIndex}(3);
+\textcolor{keywordflow}{if}( lStartIndex == -1 ) \textcolor{keywordflow}{return};
+\textcolor{keywordtype}{int}* lVertices = mesh.\hyperlink{class_fbx_mesh_a0c29a17dfc1db3644772acb5c32a63b0}{GetPolygonVertices}()[lStartIndex];
+\textcolor{keywordtype}{int} lCount = mesh.\hyperlink{class_fbx_mesh_a775d0e10dc67bbcb9f7368d828588e55}{GetPolygonSize}(3);
+\textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < lCount; ++i )
+\{
+    \textcolor{keywordtype}{int} vertexID = lVertices[i];
+    ...
+\}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & The polygon of interest. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index into the \hyperlink{class_fbx_mesh_a0c29a17dfc1db3644772acb5c32a63b0}{Get\+Polygon\+Vertices()} array. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the polygon index is out of bounds, return -\/1. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a68a6816acf0eaacc995144b14a28c856}\label{class_fbx_mesh_a68a6816acf0eaacc995144b14a28c856}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+Layer\+Element\+Index@{Get\+Polygon\+Vertex\+Layer\+Element\+Index}}
+\index{Get\+Polygon\+Vertex\+Layer\+Element\+Index@{Get\+Polygon\+Vertex\+Layer\+Element\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+Layer\+Element\+Index()}{GetPolygonVertexLayerElementIndex()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+Layer\+Element\+Index (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ T $>$ $\ast$}]{p\+Layer\+Element,  }\item[{int}]{p\+Poly\+Index,  }\item[{int}]{p\+Vertex\+Index,  }\item[{int \&}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_aaa40241afa27d42fbacb6d78f00a947b}\label{class_fbx_mesh_aaa40241afa27d42fbacb6d78f00a947b}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+Layer\+Element\+Value@{Get\+Polygon\+Vertex\+Layer\+Element\+Value}}
+\index{Get\+Polygon\+Vertex\+Layer\+Element\+Value@{Get\+Polygon\+Vertex\+Layer\+Element\+Value}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+Layer\+Element\+Value()}{GetPolygonVertexLayerElementValue()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+Layer\+Element\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_layer_element_template}{Fbx\+Layer\+Element\+Template}$<$ T $>$ $\ast$}]{p\+Layer\+Element,  }\item[{int}]{p\+Poly\+Index,  }\item[{int}]{p\+Vertex\+Index,  }\item[{T \&}]{p\+Value,  }\item[{bool}]{p\+Allow\+Unmapped }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_a0a761b70353b1ac6ed016fba192ee667}\label{class_fbx_mesh_a0a761b70353b1ac6ed016fba192ee667}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+Normal@{Get\+Polygon\+Vertex\+Normal}}
+\index{Get\+Polygon\+Vertex\+Normal@{Get\+Polygon\+Vertex\+Normal}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+Normal()}{GetPolygonVertexNormal()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+Normal (\begin{DoxyParamCaption}\item[{int}]{p\+Poly\+Index,  }\item[{int}]{p\+Vertex\+Index,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Normal }\end{DoxyParamCaption}) const}
+
+Get the normal associated with the specified polygon vertex. 
+\begin{DoxyParams}{引数}
+{\em p\+Poly\+Index} & Index of the polygon. \\
+\hline
+{\em p\+Vertex\+Index} & Index of the vertex in the polygon. \\
+\hline
+{\em p\+Normal} & The returned normal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} on failure. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+{\ttfamily p\+Normal} remain unchanged if the requested vertex does not exists. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a84574b6ee629f27da2ca2be6c6f42e80}\label{class_fbx_mesh_a84574b6ee629f27da2ca2be6c6f42e80}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+Normals@{Get\+Polygon\+Vertex\+Normals}}
+\index{Get\+Polygon\+Vertex\+Normals@{Get\+Polygon\+Vertex\+Normals}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+Normals()}{GetPolygonVertexNormals()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+Normals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $>$ \&}]{p\+Normals }\end{DoxyParamCaption}) const}
+
+Get the normals associated with the mesh for every polygon vertex. 
+\begin{DoxyParams}{引数}
+{\em p\+Normals} & The returned normals. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_ab620226c1d138f01121c7bdc16945d92}\label{class_fbx_mesh_ab620226c1d138f01121c7bdc16945d92}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+UV@{Get\+Polygon\+Vertex\+UV}}
+\index{Get\+Polygon\+Vertex\+UV@{Get\+Polygon\+Vertex\+UV}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+U\+V()}{GetPolygonVertexUV()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+UV (\begin{DoxyParamCaption}\item[{int}]{p\+Poly\+Index,  }\item[{int}]{p\+Vertex\+Index,  }\item[{const char $\ast$}]{p\+U\+V\+Set\+Name,  }\item[{\hyperlink{class_fbx_vector2}{Fbx\+Vector2} \&}]{p\+UV,  }\item[{bool \&}]{p\+Unmapped }\end{DoxyParamCaption}) const}
+
+Get the UV associated with the specified polygon vertex. 
+\begin{DoxyParams}{引数}
+{\em p\+Poly\+Index} & Index of the polygon. \\
+\hline
+{\em p\+Vertex\+Index} & Index of the vertex in the polygon. \\
+\hline
+{\em p\+U\+V\+Set\+Name} & The name of the UV set that contains the UV. \\
+\hline
+{\em p\+UV} & The returned UV. \\
+\hline
+{\em p\+Unmapped} & State flag that indicates if the polygon vertex does not have an associated UV. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} on failure. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+{\ttfamily p\+UV} remain unchanged if the requested vertex does not exists. 
+
+This function return {\ttfamily true} if the specified polygon vertex does not have an associated UV. In this case, p\+Unampped is set to {\ttfamily true} and the content of {\ttfamily p\+UV} is undefined. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_afb155cdf892fb81276718913eae02e85}\label{class_fbx_mesh_afb155cdf892fb81276718913eae02e85}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertex\+U\+Vs@{Get\+Polygon\+Vertex\+U\+Vs}}
+\index{Get\+Polygon\+Vertex\+U\+Vs@{Get\+Polygon\+Vertex\+U\+Vs}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertex\+U\+Vs()}{GetPolygonVertexUVs()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Polygon\+Vertex\+U\+Vs (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+U\+V\+Set\+Name,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_vector2}{Fbx\+Vector2} $>$ \&}]{p\+U\+Vs,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ $\ast$}]{p\+Unmapped\+U\+V\+Id = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const}
+
+Get the U\+Vs associated with the mesh for every polygon vertex. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+V\+Set\+Name} & The name of the UV set that contains the U\+Vs. \\
+\hline
+{\em p\+U\+Vs} & The returned U\+Vs. \\
+\hline
+{\em p\+Unmapped\+U\+V\+Id} & If specified, this array will be filled with the indices of the U\+Vs that are not associated to a polygon vertex and thus, have an undefined value. If the array as a size of 0, then all the polygon vertices have an associated UV coordinate and the {\ttfamily p\+U\+Vs} array can be used as is. Otherwise, the calling application may be required to process the invalid UV coordinates to avoid inconsistent results. It is strongly suggested to use the \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV}\textquotesingle{}s Direct and Indexed arrays directly (specially if the calling application supports indirection of the U\+Vs). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+unmapped UV coordinates are set to (0,0) 
+\end{DoxyRemark}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} on success, {\ttfamily false} on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a0c29a17dfc1db3644772acb5c32a63b0}\label{class_fbx_mesh_a0c29a17dfc1db3644772acb5c32a63b0}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Polygon\+Vertices@{Get\+Polygon\+Vertices}}
+\index{Get\+Polygon\+Vertices@{Get\+Polygon\+Vertices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Vertices()}{GetPolygonVertices()}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Mesh\+::\+Get\+Polygon\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the array of polygon vertices (i.\+e\+: indices to the control points). This array is a concatenation of the list of polygon vertices of all the polygons. Example\+: a mesh made of 2 triangles with vertices \mbox{[}1,2,3\mbox{]} and vertices \mbox{[}2,3,4\mbox{]} results in \mbox{[}1,2,3,2,3,4\mbox{]}. The first polygon starts at position 0 and the second at position 3. \begin{DoxyReturn}{戻り値}
+The array of polygon vertices. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aefe03c32a3743332101cdcbac963d64b}\label{class_fbx_mesh_aefe03c32a3743332101cdcbac963d64b}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Poly\+Hole\+Info@{Get\+Poly\+Hole\+Info}}
+\index{Get\+Poly\+Hole\+Info@{Get\+Poly\+Hole\+Info}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Poly\+Hole\+Info()}{GetPolyHoleInfo()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Poly\+Hole\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Face\+Index }\end{DoxyParamCaption})}
+
+Get hole flag by face index (an index to a polygon). 
+\begin{DoxyParams}{引数}
+{\em p\+Face\+Index} & Index of the queried polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The hole flag for the given face. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a8b512771bbaf8243e24e649d253003a3}\label{class_fbx_mesh_a8b512771bbaf8243e24e649d253003a3}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Poly\+Hole\+Info\+Array@{Get\+Poly\+Hole\+Info\+Array}}
+\index{Get\+Poly\+Hole\+Info\+Array@{Get\+Poly\+Hole\+Info\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Poly\+Hole\+Info\+Array()}{GetPolyHoleInfoArray()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Poly\+Hole\+Info\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ bool $>$ $\ast$$\ast$}]{p\+Hole\+Array }\end{DoxyParamCaption})}
+
+Get hole flags Array. 
+\begin{DoxyParams}{引数}
+{\em p\+Hole\+Array} & Hole flags array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the p\+Hole\+Array is filled successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aa2ee9371868bd2cf625f96e31ef44577}\label{class_fbx_mesh_aa2ee9371868bd2cf625f96e31ef44577}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Preserve\+Borders@{Get\+Preserve\+Borders}}
+\index{Get\+Preserve\+Borders@{Get\+Preserve\+Borders}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Preserve\+Borders()}{GetPreserveBorders()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Preserve\+Borders (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Query whether to preserve borders when preview smooth mesh is enabled. \begin{DoxyReturn}{戻り値}
+The current state of the flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a93c3cec3811368e69f968b9e84a96a31}\label{class_fbx_mesh_a93c3cec3811368e69f968b9e84a96a31}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Preserve\+Hard\+Edges@{Get\+Preserve\+Hard\+Edges}}
+\index{Get\+Preserve\+Hard\+Edges@{Get\+Preserve\+Hard\+Edges}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Preserve\+Hard\+Edges()}{GetPreserveHardEdges()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Preserve\+Hard\+Edges (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Query whether to preserve hard edges when preview smooth mesh. \begin{DoxyReturn}{戻り値}
+The current state of the flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a146004786d53607346507bef4bd12101}\label{class_fbx_mesh_a146004786d53607346507bef4bd12101}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Propagate\+Edge\+Hardness@{Get\+Propagate\+Edge\+Hardness}}
+\index{Get\+Propagate\+Edge\+Hardness@{Get\+Propagate\+Edge\+Hardness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Propagate\+Edge\+Hardness()}{GetPropagateEdgeHardness()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Propagate\+Edge\+Hardness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Query whether to Propagate\+Edge\+Hardness when preview smooth mesh. \begin{DoxyReturn}{戻り値}
+The current state of the flag. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a33c7d29e88d7bb03e0343daca267d770}\label{class_fbx_mesh_a33c7d29e88d7bb03e0343daca267d770}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Texture\+Indices@{Get\+Texture\+Indices}}
+\index{Get\+Texture\+Indices@{Get\+Texture\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Texture\+Indices()}{GetTextureIndices()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Texture\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ int $>$ $\ast$$\ast$}]{p\+Lockable\+Array,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Texture\+Type }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_mesh_acb576494ab0812b3a81207d4b3423a5c}\label{class_fbx_mesh_acb576494ab0812b3a81207d4b3423a5c}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Texture\+UV@{Get\+Texture\+UV}}
+\index{Get\+Texture\+UV@{Get\+Texture\+UV}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Texture\+U\+V()}{GetTextureUV()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Texture\+UV (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ \hyperlink{class_fbx_vector2}{Fbx\+Vector2} $>$ $\ast$$\ast$}]{p\+Lockable\+Array,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_mesh_a8a32eaf0ce16becd8e7de6c2783e61b9}\label{class_fbx_mesh_a8a32eaf0ce16becd8e7de6c2783e61b9}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Texture\+U\+V\+Count@{Get\+Texture\+U\+V\+Count}}
+\index{Get\+Texture\+U\+V\+Count@{Get\+Texture\+U\+V\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Texture\+U\+V\+Count()}{GetTextureUVCount()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Texture\+U\+V\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Get the number of texture UV coordinates. 
+\begin{DoxyParams}{引数}
+{\em p\+Type\+Identifier} & The texture channel the UV refers to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_aa62de6d7883e85e0efda70d37329d98a}\label{class_fbx_mesh_aa62de6d7883e85e0efda70d37329d98a}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Texture\+U\+V\+Index@{Get\+Texture\+U\+V\+Index}}
+\index{Get\+Texture\+U\+V\+Index@{Get\+Texture\+U\+V\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Texture\+U\+V\+Index()}{GetTextureUVIndex()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+Texture\+U\+V\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Position\+In\+Polygon,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Get a texture UV index associated with a polygon vertex (i.\+e\+: an index to a control point). 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of polygon. The valid range for this parameter is 0 to \hyperlink{class_fbx_mesh_a0f443f6d64284e6b60bdd52fb1f53ea7}{Fbx\+Mesh\+::\+Get\+Polygon\+Count()}. \\
+\hline
+{\em p\+Position\+In\+Polygon} & Position of polygon vertex in indexed polygon. The valid range for this parameter is 0 to Fbx\+Mesh\+::\+Get\+Polygon\+Size(p\+Polygon\+Index). \\
+\hline
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Index refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return a texture UV index. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function only works if the texture UV mapping mode is set to {\itshape e\+By\+Polygon\+Vertex}, otherwise it returns -\/1. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a1600702ceabd1ab9c36c91019318c6da}\label{class_fbx_mesh_a1600702ceabd1ab9c36c91019318c6da}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+U\+V\+Layer\+Count@{Get\+U\+V\+Layer\+Count}}
+\index{Get\+U\+V\+Layer\+Count@{Get\+U\+V\+Layer\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+U\+V\+Layer\+Count()}{GetUVLayerCount()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Get\+U\+V\+Layer\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of layer containing at least one channel U\+V\+Map. return {\itshape 0} if no UV maps have been defined. \mbox{\Hypertarget{class_fbx_mesh_a9c74158d50e75f30e82715fde2eca434}\label{class_fbx_mesh_a9c74158d50e75f30e82715fde2eca434}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Vertex\+Crease\+Info@{Get\+Vertex\+Crease\+Info}}
+\index{Get\+Vertex\+Crease\+Info@{Get\+Vertex\+Crease\+Info}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Vertex\+Crease\+Info()}{GetVertexCreaseInfo()}}
+{\footnotesize\ttfamily double Fbx\+Mesh\+::\+Get\+Vertex\+Crease\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Vertex\+Index }\end{DoxyParamCaption})}
+
+Get crease weight by vertex index. 
+\begin{DoxyParams}{引数}
+{\em p\+Vertex\+Index} & Vertex index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Crease weight value in the range \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a4c62415bddc677a16c9794189b23eeba}\label{class_fbx_mesh_a4c62415bddc677a16c9794189b23eeba}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Get\+Vertex\+Crease\+Info\+Array@{Get\+Vertex\+Crease\+Info\+Array}}
+\index{Get\+Vertex\+Crease\+Info\+Array@{Get\+Vertex\+Crease\+Info\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Get\+Vertex\+Crease\+Info\+Array()}{GetVertexCreaseInfoArray()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Get\+Vertex\+Crease\+Info\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}$<$ double $>$ $\ast$$\ast$}]{p\+Crease\+Array }\end{DoxyParamCaption})}
+
+Get vertex crease array. 
+\begin{DoxyParams}{引数}
+{\em p\+Crease\+Array} & Edge vertex data array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the p\+Crease\+Array is filled successfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_afb22daa8a980e8946abed7cbf39ce4f0}\label{class_fbx_mesh_afb22daa8a980e8946abed7cbf39ce4f0}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Init\+Material\+Indices@{Init\+Material\+Indices}}
+\index{Init\+Material\+Indices@{Init\+Material\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Init\+Material\+Indices()}{InitMaterialIndices()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Init\+Material\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}]{p\+Mapping\+Mode }\end{DoxyParamCaption})}
+
+Initialize material indices. 
+\begin{DoxyParams}{引数}
+{\em p\+Mapping\+Mode} & The mapping mode. This method must be called after \hyperlink{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}{Fbx\+Geometry\+Base\+::\+Init\+Control\+Points()}. The material indices refer to the position of a material in the \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material}\textquotesingle{}s direct array. See \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material} for more details. Supported mapping types are {\itshape e\+By\+Control\+Point}, {\itshape e\+By\+Polygon} and {\itshape e\+A\+L\+L\+\_\+\+S\+A\+ME}.
+\begin{DoxyItemize}
+\item If mapping mode is {\itshape e\+By\+Control\+Point}, there will be as many indices in the material index array as there are control points.
+\item If mapping mode is {\itshape e\+By\+Polygon}, there will be as many indices in the material index array as there are polygons in the mesh.
+\item If mapping mode is {\itshape e\+A\+L\+L\+\_\+\+S\+A\+ME}, there will be only one index in the material index array. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function will set the Reference mode of the \hyperlink{class_fbx_layer_element_material}{Fbx\+Layer\+Element\+Material} on layer 0 to {\itshape e\+Index\+To\+Direct}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a7400d37014c8a84a5c356f1deef1761d}\label{class_fbx_mesh_a7400d37014c8a84a5c356f1deef1761d}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Init\+Texture\+Indices@{Init\+Texture\+Indices}}
+\index{Init\+Texture\+Indices@{Init\+Texture\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Init\+Texture\+Indices()}{InitTextureIndices()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Init\+Texture\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}]{p\+Mapping\+Mode,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Texture\+Type }\end{DoxyParamCaption})}
+
+Initialize texture indices. 
+\begin{DoxyParams}{引数}
+{\em p\+Mapping\+Mode} & The mapping mode. The texture indices refer to the texture connection to the material. In older versions of the F\+BX S\+DK, the indices were referring to the entries in the direct array of the \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture}. See \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture} for more details. Supported mapping modes are {\itshape e\+By\+Polygon} and {\itshape e\+A\+L\+L\+\_\+\+S\+A\+ME}.
+\begin{DoxyItemize}
+\item If mapping mode is {\itshape e\+By\+Polygon}, there will be as many indices in the texture index array as there are polygons in the mesh.
+\item If mapping mode is {\itshape e\+A\+L\+L\+\_\+\+S\+A\+ME}, there will be only one index in the texture index array. 
+\end{DoxyItemize}\\
+\hline
+{\em p\+Texture\+Type} & The texture channel identifier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function will set the Reference mode of the \hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture} on layer 0 to {\itshape e\+Index\+To\+Direct}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a79732f5b5d10581887b78877cd67b003}\label{class_fbx_mesh_a79732f5b5d10581887b78877cd67b003}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Init\+Texture\+Indices@{Init\+Texture\+Indices}}
+\index{Init\+Texture\+Indices@{Init\+Texture\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Init\+Texture\+Indices()}{InitTextureIndices()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Init\+Texture\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture} $\ast$}]{p\+Layer\+Element\+Texture,  }\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}]{p\+Mapping\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_a40d57aa570c080f2f692728118b5bc04}\label{class_fbx_mesh_a40d57aa570c080f2f692728118b5bc04}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Init\+Texture\+UV@{Init\+Texture\+UV}}
+\index{Init\+Texture\+UV@{Init\+Texture\+UV}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Init\+Texture\+U\+V()}{InitTextureUV()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Init\+Texture\+UV (\begin{DoxyParamCaption}\item[{int}]{p\+Count,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Init texture UV coordinates. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & Number of texture UV elements. \\
+\hline
+{\em p\+Type\+Identifier} & Specifies which texture channel this UV refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+{\ttfamily p\+Count} must equal the number of control points of the Mesh if the UV mapping mode is {\itshape \hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26ad64b7f5885f295d3eacb5fed40bb0cad}{Fbx\+Layer\+Element\+::e\+By\+Control\+Point}}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a1b6a5d5371f59f8cda80f8cbcfefadf7}\label{class_fbx_mesh_a1b6a5d5371f59f8cda80f8cbcfefadf7}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Init\+Texture\+U\+V\+Indices@{Init\+Texture\+U\+V\+Indices}}
+\index{Init\+Texture\+U\+V\+Indices@{Init\+Texture\+U\+V\+Indices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Init\+Texture\+U\+V\+Indices()}{InitTextureUVIndices()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Init\+Texture\+U\+V\+Indices (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26}{Fbx\+Layer\+Element\+::\+E\+Mapping\+Mode}}]{p\+Mapping\+Mode,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Initialize texture UV indices. 
+\begin{DoxyParams}{引数}
+{\em p\+Mapping\+Mode} & The mapping mode. The texture UV indices refer to the index of an element in the \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV}\textquotesingle{}s direct array. See \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} for more details. Supported mapping types are {\itshape e\+By\+Control\+Point} , {\itshape e\+By\+Polygon\+Vertex} and {\itshape e\+A\+L\+L\+\_\+\+S\+A\+ME}.
+\begin{DoxyItemize}
+\item If mapping mode is {\itshape e\+By\+Control\+Point}, there will be as many indices in the UV index array as there are control points. This will also set the Reference mode of the \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} on layer 0 to {\itshape e\+Direct}.
+\item If mapping mode is {\itshape e\+By\+Polygon\+Vertex}, there will be an index in the UV index array for each vertex, for each polygon it is part of. This will also set the Reference mode of the \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} on layer 0 to {\itshape e\+Index\+To\+Direct}.
+\item If mapping mode is {\itshape e\+A\+L\+L\+\_\+\+S\+A\+ME}, there will be no index in the UV index array. This will also set the Reference mode of the \hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} on layer 0 to {\itshape e\+Direct}. 
+\end{DoxyItemize}\\
+\hline
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Indices refers to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_ac361286e901ffa6a3e651bf8ba71be26}\label{class_fbx_mesh_ac361286e901ffa6a3e651bf8ba71be26}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Is\+Triangle\+Mesh@{Is\+Triangle\+Mesh}}
+\index{Is\+Triangle\+Mesh@{Is\+Triangle\+Mesh}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Is\+Triangle\+Mesh()}{IsTriangleMesh()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Is\+Triangle\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Determines if the mesh is composed entirely of triangles. \begin{DoxyReturn}{戻り値}
+true if all polygons are triangles, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a77960edb068c0323698bae275281f920}\label{class_fbx_mesh_a77960edb068c0323698bae275281f920}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Merge\+Points\+For\+Polygon\+Verte\+Normals@{Merge\+Points\+For\+Polygon\+Verte\+Normals}}
+\index{Merge\+Points\+For\+Polygon\+Verte\+Normals@{Merge\+Points\+For\+Polygon\+Verte\+Normals}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Merge\+Points\+For\+Polygon\+Verte\+Normals()}{MergePointsForPolygonVerteNormals()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Merge\+Points\+For\+Polygon\+Verte\+Normals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Merge\+List }\end{DoxyParamCaption})}
+
+Merge the points specified in the list. 
+\begin{DoxyParams}{引数}
+{\em p\+Merge\+List} & List containing the information on the points that will be merged. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_acbc149091e1be99e9555abbd81f03981}\label{class_fbx_mesh_acbc149091e1be99e9555abbd81f03981}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Polygon\+Index\+Compare@{Polygon\+Index\+Compare}}
+\index{Polygon\+Index\+Compare@{Polygon\+Index\+Compare}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Polygon\+Index\+Compare()}{PolygonIndexCompare()}}
+{\footnotesize\ttfamily static int Fbx\+Mesh\+::\+Polygon\+Index\+Compare (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p1,  }\item[{const void $\ast$}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_a9a333d725455805aa0fa2dae26a85929}\label{class_fbx_mesh_a9a333d725455805aa0fa2dae26a85929}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Poly\+Set\+Texture@{Poly\+Set\+Texture}}
+\index{Poly\+Set\+Texture@{Poly\+Set\+Texture}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Poly\+Set\+Texture()}{PolySetTexture()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Poly\+Set\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer}{Fbx\+Layer} $\ast$}]{p\+Layer,  }\item[{int}]{p\+Texture\+Index,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Texture\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_a90bd43a9b7cc882a78af1e3ed0cf9171}\label{class_fbx_mesh_a90bd43a9b7cc882a78af1e3ed0cf9171}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Remove\+Bad\+Polygons@{Remove\+Bad\+Polygons}}
+\index{Remove\+Bad\+Polygons@{Remove\+Bad\+Polygons}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Remove\+Bad\+Polygons()}{RemoveBadPolygons()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Remove\+Bad\+Polygons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove bad polygons from a mesh. Degenerate polygons use a vertex more than once. Remove them from the mesh and from the layer element indices as needed. \begin{DoxyReturn}{戻り値}
+Number of polygons removed from the mesh, -\/1 if an error occurred. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a5e7104d87f03542c0fc040ae1f7f593d}\label{class_fbx_mesh_a5e7104d87f03542c0fc040ae1f7f593d}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Remove\+Duplicated\+Edges@{Remove\+Duplicated\+Edges}}
+\index{Remove\+Duplicated\+Edges@{Remove\+Duplicated\+Edges}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Remove\+Duplicated\+Edges()}{RemoveDuplicatedEdges()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Remove\+Duplicated\+Edges (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Edge\+Index\+List }\end{DoxyParamCaption})}
+
+Remove the duplicated edges from the mesh. This method will remove duplicated edges. It will not change any vertex and not change the mesh topology. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index\+List} & Index list of edges. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+the count of removed edges. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+the edge index list must be ordered. The last one is the max. If the edge index is out of bounds, return -\/1. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_aad5e2768669d5c94e8d96d7d65fcab68}\label{class_fbx_mesh_aad5e2768669d5c94e8d96d7d65fcab68}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Remove\+Polygon@{Remove\+Polygon}}
+\index{Remove\+Polygon@{Remove\+Polygon}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Remove\+Polygon()}{RemovePolygon()}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Remove\+Polygon (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index }\end{DoxyParamCaption})}
+
+Remove the specified polygon from the mesh. This method will automatically update the layers accordingly. 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of the polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Polygon index. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the polygon index is out of bounds, return -\/1. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a7ae53a8f960212268fbfa5d5a63333ee}\label{class_fbx_mesh_a7ae53a8f960212268fbfa5d5a63333ee}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Remove\+Texture\+Index@{Remove\+Texture\+Index}}
+\index{Remove\+Texture\+Index@{Remove\+Texture\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Remove\+Texture\+Index()}{RemoveTextureIndex()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Remove\+Texture\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_texture}{Fbx\+Layer\+Element\+Texture} $\ast$}]{p\+Layer\+Element\+Textures,  }\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_addc0a339c2d452b4a1d8d6a465aa9c62}\label{class_fbx_mesh_addc0a339c2d452b4a1d8d6a465aa9c62}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Remove\+U\+V\+Index@{Remove\+U\+V\+Index}}
+\index{Remove\+U\+V\+Index@{Remove\+U\+V\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Remove\+U\+V\+Index()}{RemoveUVIndex()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Remove\+U\+V\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_u_v}{Fbx\+Layer\+Element\+UV} $\ast$}]{p\+Layer\+Element\+UV,  }\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_ab7d47000aac6c7de0a6fe0ccaff248cd}\label{class_fbx_mesh_ab7d47000aac6c7de0a6fe0ccaff248cd}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Reserve\+Polygon\+Count@{Reserve\+Polygon\+Count}}
+\index{Reserve\+Polygon\+Count@{Reserve\+Polygon\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Reserve\+Polygon\+Count()}{ReservePolygonCount()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Reserve\+Polygon\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reserve memory in the polygon array to hold the specified number of polygons 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of polygons this mesh will hold \\
+\hline
+\end{DoxyParams}
+
+
+ fbxmesh.\+h の 501 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a6cb8ace34a7b945a249a73f5293075e4}\label{class_fbx_mesh_a6cb8ace34a7b945a249a73f5293075e4}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Reserve\+Polygon\+Vertex\+Count@{Reserve\+Polygon\+Vertex\+Count}}
+\index{Reserve\+Polygon\+Vertex\+Count@{Reserve\+Polygon\+Vertex\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Reserve\+Polygon\+Vertex\+Count()}{ReservePolygonVertexCount()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Reserve\+Polygon\+Vertex\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reserve memory in the polygon vertex array to hold the specified number of polygon vertices. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of polygon vertices \\
+\hline
+\end{DoxyParams}
+
+
+ fbxmesh.\+h の 505 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_addb08ad4590a4fcdaf575dbf16c490fd}\label{class_fbx_mesh_addb08ad4590a4fcdaf575dbf16c490fd}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset the mesh to default values. Frees and set to {\ttfamily N\+U\+LL} all layers and clear the polygon and the control point array. \mbox{\Hypertarget{class_fbx_mesh_a36ab48a31065c607af8ad8a554fab6c6}\label{class_fbx_mesh_a36ab48a31065c607af8ad8a554fab6c6}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Boundary\+Rule@{Set\+Boundary\+Rule}}
+\index{Set\+Boundary\+Rule@{Set\+Boundary\+Rule}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Boundary\+Rule()}{SetBoundaryRule()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Boundary\+Rule (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule}}]{p\+Boundary\+Rule }\end{DoxyParamCaption})}
+
+Set Boundary\+Rule for this mesh. 
+\begin{DoxyParams}{引数}
+{\em p\+Boundary\+Rule} & New value for the internal state of this mesh. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Boundary\+Rule will affect the corners of smooth mesh. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_ae9cf093a067ebc761231f1f186695d67}\label{class_fbx_mesh_ae9cf093a067ebc761231f1f186695d67}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Display\+Subdivisions@{Set\+Display\+Subdivisions}}
+\index{Set\+Display\+Subdivisions@{Set\+Display\+Subdivisions}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Display\+Subdivisions()}{SetDisplaySubdivisions()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Display\+Subdivisions (\begin{DoxyParamCaption}\item[{bool}]{p\+Disply\+Subdivisions }\end{DoxyParamCaption})}
+
+Set the Disply\+Subdivisions state. 
+\begin{DoxyParams}{引数}
+{\em p\+Disply\+Subdivisions} & New value for this flag. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_a78f36e935449e10bf16da30f0657d5d5}\label{class_fbx_mesh_a78f36e935449e10bf16da30f0657d5d5}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Edge\+Crease\+Info@{Set\+Edge\+Crease\+Info}}
+\index{Set\+Edge\+Crease\+Info@{Set\+Edge\+Crease\+Info}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Edge\+Crease\+Info()}{SetEdgeCreaseInfo()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Edge\+Crease\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index,  }\item[{double}]{p\+Weight }\end{DoxyParamCaption})}
+
+Set crease weight by edge index. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index} & Edge index. \\
+\hline
+{\em p\+Weight} & Crease weight value in the range \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully set the crease weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a7b6ac7bf75d56cfce591c516c2635936}\label{class_fbx_mesh_a7b6ac7bf75d56cfce591c516c2635936}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Edge\+Crease\+Info\+Array@{Set\+Edge\+Crease\+Info\+Array}}
+\index{Set\+Edge\+Crease\+Info\+Array@{Set\+Edge\+Crease\+Info\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Edge\+Crease\+Info\+Array()}{SetEdgeCreaseInfoArray()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Edge\+Crease\+Info\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ double $>$ $\ast$}]{p\+Weight\+Array }\end{DoxyParamCaption})}
+
+Set crease weight data array. 
+\begin{DoxyParams}{引数}
+{\em p\+Weight\+Array} & Edge crease data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully set the crease weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a0a1288c874a40992ae4db6c0905ca2c0}\label{class_fbx_mesh_a0a1288c874a40992ae4db6c0905ca2c0}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Edge@{Set\+Mesh\+Edge}}
+\index{Set\+Mesh\+Edge@{Set\+Mesh\+Edge}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Edge()}{SetMeshEdge()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Mesh\+Edge (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index,  }\item[{int}]{p\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets element in edge array to specific value. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index} & The edge index \\
+\hline
+{\em p\+Value} & The edge data \\
+\hline
+\end{DoxyParams}
+
+
+ fbxmesh.\+h の 446 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a8a0ca6b1202ad971d3f504e801bf53ac}\label{class_fbx_mesh_a8a0ca6b1202ad971d3f504e801bf53ac}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Edge\+Count@{Set\+Mesh\+Edge\+Count}}
+\index{Set\+Mesh\+Edge\+Count@{Set\+Mesh\+Edge\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Edge\+Count()}{SetMeshEdgeCount()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Mesh\+Edge\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Count }\end{DoxyParamCaption})}
+
+Presets the number edge data elements. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Count} & The number of edges to allocate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_aa5b7cc2518716a2718aa4dc74c028bfa}\label{class_fbx_mesh_aa5b7cc2518716a2718aa4dc74c028bfa}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Edge\+Index@{Set\+Mesh\+Edge\+Index}}
+\index{Set\+Mesh\+Edge\+Index@{Set\+Mesh\+Edge\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Edge\+Index()}{SetMeshEdgeIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::\+Set\+Mesh\+Edge\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index,  }\item[{int}]{p\+Start\+Vertex\+Index,  }\item[{int}]{p\+End\+Vertex\+Index,  }\item[{bool}]{p\+Check\+For\+Duplicates,  }\item[{int}]{p\+Existed\+Edge\+Count = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+Set the index for the edge with the given start/end points. Note that the edge may start at the given end point, and end at the given start point. 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index} & The edge index of the edge. \\
+\hline
+{\em p\+Start\+Vertex\+Index} & The starting point of the edge. \\
+\hline
+{\em p\+End\+Vertex\+Index} & The ending point of the edge. \\
+\hline
+{\em p\+Check\+For\+Duplicates} & Set to true to check if the mesh already contains an edge with these two points. Can be set to false to speed up this method, when the incoming edges are known to be consistent. \\
+\hline
+{\em p\+Existed\+Edge\+Count} & the valid edge count that we have created in edge array. This parameter only works when p\+Check\+For\+Duplicates is true. The default value is -\/1 which meaning current edge array has been fully filled with valid edges, i.\+e., we will search the full edge array for the duplicated edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Edge index of the edge, or -\/1 on failure (no face using these 2 points consecutively ), or -\/2 if edge/reverse edge already exists 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aac8b592569f7454ea4a4881e3ce40fed}\label{class_fbx_mesh_aac8b592569f7454ea4a4881e3ce40fed}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Edge\+Index@{Set\+Mesh\+Edge\+Index}}
+\index{Set\+Mesh\+Edge\+Index@{Set\+Mesh\+Edge\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Edge\+Index()}{SetMeshEdgeIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Mesh\+Edge\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Edge\+Index,  }\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Position\+In\+Polygon }\end{DoxyParamCaption})}
+
+Sets the specified edge to the specified polygon\textquotesingle{}s edge. Note that the position in the polygon ranges from 0 to Get\+Polygon\+Size(p\+Polygonindex) -\/ 1 and represents the edge from Get\+Polygon\+Vertex(p\+Polygon\+Index, p\+Position\+In\+Polygon) to Get\+Polygon\+Vertex( p\+Polygon\+Index, p\+Position\+In\+Polygon + 1 ) or from p\+Position\+In\+Polygon to 0 if p\+Position\+In\+Polygon == Get\+Polygon\+Size(p\+Polygonindex) -\/ 1 
+\begin{DoxyParams}{引数}
+{\em p\+Edge\+Index} & The edge. \\
+\hline
+{\em p\+Polygon\+Index} & The polygon. \\
+\hline
+{\em p\+Position\+In\+Polygon} & The specific edge number in the polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, false on failure. ( edge for the poly and position already exists ) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_ab995458b16288d77cd44487a9f63369a}\label{class_fbx_mesh_ab995458b16288d77cd44487a9f63369a}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Preview\+Division\+Levels@{Set\+Mesh\+Preview\+Division\+Levels}}
+\index{Set\+Mesh\+Preview\+Division\+Levels@{Set\+Mesh\+Preview\+Division\+Levels}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Preview\+Division\+Levels()}{SetMeshPreviewDivisionLevels()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Mesh\+Preview\+Division\+Levels (\begin{DoxyParamCaption}\item[{int}]{p\+Preview\+Division\+Levels }\end{DoxyParamCaption})}
+
+Set mesh preview subdivision levels. 
+\begin{DoxyParams}{引数}
+{\em p\+Preview\+Division\+Levels} & Number of subdivisions levels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_a3926ddbfb4988f931ffdceef555243a6}\label{class_fbx_mesh_a3926ddbfb4988f931ffdceef555243a6}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Render\+Division\+Levels@{Set\+Mesh\+Render\+Division\+Levels}}
+\index{Set\+Mesh\+Render\+Division\+Levels@{Set\+Mesh\+Render\+Division\+Levels}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Render\+Division\+Levels()}{SetMeshRenderDivisionLevels()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Mesh\+Render\+Division\+Levels (\begin{DoxyParamCaption}\item[{int}]{p\+Render\+Division\+Levels }\end{DoxyParamCaption})}
+
+Set mesh render subdivision levels. 
+\begin{DoxyParams}{引数}
+{\em p\+Render\+Division\+Levels} & Number of subdivision levels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_mesh_ab07446f1c0dd0bae4597bb20a9d27265}\label{class_fbx_mesh_ab07446f1c0dd0bae4597bb20a9d27265}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Mesh\+Smoothness@{Set\+Mesh\+Smoothness}}
+\index{Set\+Mesh\+Smoothness@{Set\+Mesh\+Smoothness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Mesh\+Smoothness()}{SetMeshSmoothness()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Mesh\+Smoothness (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{Fbx\+Mesh\+::\+E\+Smoothness}}]{p\+Smoothness }\end{DoxyParamCaption})}
+
+Set the mesh display smoothness mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Smoothness} & New smoothness factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+It represents smooth mesh preview mode. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_ab7c7d2325c2afa2c7bd0099b9a0f24dc}\label{class_fbx_mesh_ab7c7d2325c2afa2c7bd0099b9a0f24dc}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Polygon\+Group@{Set\+Polygon\+Group}}
+\index{Set\+Polygon\+Group@{Set\+Polygon\+Group}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Polygon\+Group()}{SetPolygonGroup()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Polygon\+Group (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Group }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assign the specified polygon a group ID. A polygon can only be assigned to one group at the time. 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of the polygon. \\
+\hline
+{\em p\+Group} & Group index assigned to the polygon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Group index assigned to the polygon. If the polygon index is out of bounds, do nothing. 
+\end{DoxyReturn}
+
+
+ fbxmesh.\+h の 95 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_af13ce6ba20ce1920120a8b7b6d6854ed}\label{class_fbx_mesh_af13ce6ba20ce1920120a8b7b6d6854ed}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Poly\+Hole\+Info@{Set\+Poly\+Hole\+Info}}
+\index{Set\+Poly\+Hole\+Info@{Set\+Poly\+Hole\+Info}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Poly\+Hole\+Info()}{SetPolyHoleInfo()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Poly\+Hole\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Face\+Index,  }\item[{bool}]{p\+Is\+Hole }\end{DoxyParamCaption})}
+
+Sets the flag indicating whether the face represents a hole or not. 
+\begin{DoxyParams}{引数}
+{\em p\+Face\+Index} & Index of the processed polygon. \\
+\hline
+{\em p\+Is\+Hole} & If {\ttfamily true}, this face represent a hole. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully set the hole info. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_ae1392c998ffe508d66284c5615b17f15}\label{class_fbx_mesh_ae1392c998ffe508d66284c5615b17f15}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Poly\+Hole\+Info\+Array@{Set\+Poly\+Hole\+Info\+Array}}
+\index{Set\+Poly\+Hole\+Info\+Array@{Set\+Poly\+Hole\+Info\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Poly\+Hole\+Info\+Array()}{SetPolyHoleInfoArray()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Poly\+Hole\+Info\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ bool $>$ $\ast$}]{p\+Hole\+Array }\end{DoxyParamCaption})}
+
+Set hole flags array. 
+\begin{DoxyParams}{引数}
+{\em p\+Hole\+Array} & Hole flag array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully set the hole flags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a462b090d01499b85ed9b19f42cdcef76}\label{class_fbx_mesh_a462b090d01499b85ed9b19f42cdcef76}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Preserve\+Borders@{Set\+Preserve\+Borders}}
+\index{Set\+Preserve\+Borders@{Set\+Preserve\+Borders}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Preserve\+Borders()}{SetPreserveBorders()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Preserve\+Borders (\begin{DoxyParamCaption}\item[{bool}]{p\+Preserve\+Borders }\end{DoxyParamCaption})}
+
+Set the state of the Preserve\+Borders flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Preserve\+Borders} & New value for this flag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This flag value will affect smooth mesh preview results. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_adfaa804cd76983fc6a2603aef0c25acd}\label{class_fbx_mesh_adfaa804cd76983fc6a2603aef0c25acd}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Preserve\+Hard\+Edges@{Set\+Preserve\+Hard\+Edges}}
+\index{Set\+Preserve\+Hard\+Edges@{Set\+Preserve\+Hard\+Edges}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Preserve\+Hard\+Edges()}{SetPreserveHardEdges()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Preserve\+Hard\+Edges (\begin{DoxyParamCaption}\item[{bool}]{p\+Preserve\+Hard\+Edges }\end{DoxyParamCaption})}
+
+Set the state of the Preserve\+Hard\+Edges flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Preserve\+Hard\+Edges} & New value for this flag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This flag value will affect smooth mesh preview results. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a1908668e29bfe832de7eec520d0d5cba}\label{class_fbx_mesh_a1908668e29bfe832de7eec520d0d5cba}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Propagate\+Edge\+Hardness@{Set\+Propagate\+Edge\+Hardness}}
+\index{Set\+Propagate\+Edge\+Hardness@{Set\+Propagate\+Edge\+Hardness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Propagate\+Edge\+Hardness()}{SetPropagateEdgeHardness()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Propagate\+Edge\+Hardness (\begin{DoxyParamCaption}\item[{bool}]{p\+Propagate\+Edge\+Hardness }\end{DoxyParamCaption})}
+
+Set state of the Propagate\+Edge\+Hardness flag. 
+\begin{DoxyParams}{引数}
+{\em p\+Propagate\+Edge\+Hardness} & New value for this flag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This flag will affect smooth mesh preview results. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_a1e74780d575f601d6e28c52ff36b555d}\label{class_fbx_mesh_a1e74780d575f601d6e28c52ff36b555d}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Texture\+U\+V\+Index@{Set\+Texture\+U\+V\+Index}}
+\index{Set\+Texture\+U\+V\+Index@{Set\+Texture\+U\+V\+Index}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Texture\+U\+V\+Index()}{SetTextureUVIndex()}}
+{\footnotesize\ttfamily void Fbx\+Mesh\+::\+Set\+Texture\+U\+V\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Polygon\+Index,  }\item[{int}]{p\+Position\+In\+Polygon,  }\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier }\end{DoxyParamCaption})}
+
+Set a texture UV index associated with a polygon vertex (i.\+e\+: an index to a control point). 
+\begin{DoxyParams}{引数}
+{\em p\+Polygon\+Index} & Index of polygon. The valid range for this parameter is 0 to \hyperlink{class_fbx_mesh_a0f443f6d64284e6b60bdd52fb1f53ea7}{Fbx\+Mesh\+::\+Get\+Polygon\+Count()}. \\
+\hline
+{\em p\+Position\+In\+Polygon} & Position of polygon vertex in indexed polygon. The valid range for this parameter is 0 to Fbx\+Mesh\+::\+Get\+Polygon\+Size(p\+Polygon\+Index). \\
+\hline
+{\em p\+Index} & The index of the texture UV we want to assign to the polygon vertex. \\
+\hline
+{\em p\+Type\+Identifier} & The texture channel the U\+V\+Index refers to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This function only works if the texture UV mapping type is set to {\itshape e\+By\+Polygon\+Vertex}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_mesh_aa715baf272e681060762171c9647c543}\label{class_fbx_mesh_aa715baf272e681060762171c9647c543}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Vertex\+Crease\+Info@{Set\+Vertex\+Crease\+Info}}
+\index{Set\+Vertex\+Crease\+Info@{Set\+Vertex\+Crease\+Info}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Vertex\+Crease\+Info()}{SetVertexCreaseInfo()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Vertex\+Crease\+Info (\begin{DoxyParamCaption}\item[{int}]{p\+Vertex\+Index,  }\item[{double}]{p\+Weight }\end{DoxyParamCaption})}
+
+Set crease weight by vertex index. 
+\begin{DoxyParams}{引数}
+{\em p\+Vertex\+Index} & Vertex index. \\
+\hline
+{\em p\+Weight} & Crease weight value in the range \mbox{[}0.\+0 -\/ 1.\+0\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully set the crease weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_aef55378b9360b005b736c5e67d19041e}\label{class_fbx_mesh_aef55378b9360b005b736c5e67d19041e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Set\+Vertex\+Crease\+Info\+Array@{Set\+Vertex\+Crease\+Info\+Array}}
+\index{Set\+Vertex\+Crease\+Info\+Array@{Set\+Vertex\+Crease\+Info\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Set\+Vertex\+Crease\+Info\+Array()}{SetVertexCreaseInfoArray()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Set\+Vertex\+Crease\+Info\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ double $>$ $\ast$}]{p\+Weight\+Array }\end{DoxyParamCaption})}
+
+Set crease weight data array. 
+\begin{DoxyParams}{引数}
+{\em p\+Weight\+Array} & Vertex crease data. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successfully set the crease weight. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_mesh_a3b2104f5d0942fd1e74bc62ec1bc4d52}\label{class_fbx_mesh_a3b2104f5d0942fd1e74bc62ec1bc4d52}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Split\+Points@{Split\+Points}}
+\index{Split\+Points@{Split\+Points}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Split\+Points()}{SplitPoints()}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::\+Split\+Points (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type\+Identifier = {\ttfamily \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42ca09829e6ecf512e7ae04d9ad8de1342fa}{Fbx\+Layer\+Element\+::e\+Texture\+Diffuse}} }\end{DoxyParamCaption})}
+
+Split points. 
+\begin{DoxyParams}{引数}
+{\em p\+Type\+Identifier} & Specify which U\+Vs are processed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if a split occurred, false otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method replaces the Build\+Split\+List and Split\+Points\+For\+Hard\+Edge. 
+\end{DoxyRemark}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_mesh_a2c65afd59c2bab21d92824fbe4422545}\label{class_fbx_mesh_a2c65afd59c2bab21d92824fbe4422545}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Converter}{FbxGeometryConverter}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_geometry_converter}{Fbx\+Geometry\+Converter}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxmesh.\+h の 816 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_mesh_a18ab74b81af5df2f4e1b4a02c84f56b8}\label{class_fbx_mesh_a18ab74b81af5df2f4e1b4a02c84f56b8}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Boundary\+Rule@{m\+Boundary\+Rule}}
+\index{m\+Boundary\+Rule@{m\+Boundary\+Rule}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Boundary\+Rule}{mBoundaryRule}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh_ab9e7d41ffcd49467a374c72e0d6f3561}{E\+Boundary\+Rule} Fbx\+Mesh\+::m\+Boundary\+Rule\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 787 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_ae9005285762c3272f560c2f63a398cd4}\label{class_fbx_mesh_ae9005285762c3272f560c2f63a398cd4}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Display\+Subdivisions@{m\+Display\+Subdivisions}}
+\index{m\+Display\+Subdivisions@{m\+Display\+Subdivisions}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Display\+Subdivisions}{mDisplaySubdivisions}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::m\+Display\+Subdivisions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 786 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a33ccd3fb9c9b146f0bdc2e91fbbb6426}\label{class_fbx_mesh_a33ccd3fb9c9b146f0bdc2e91fbbb6426}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Edge\+Array@{m\+Edge\+Array}}
+\index{m\+Edge\+Array@{m\+Edge\+Array}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Edge\+Array}{mEdgeArray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$ Fbx\+Mesh\+::m\+Edge\+Array}
+
+
+
+ fbxmesh.\+h の 723 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a2d8025b8f248af85fa7ae99638fb41c4}\label{class_fbx_mesh_a2d8025b8f248af85fa7ae99638fb41c4}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Original\+Control\+Points\+Count@{m\+Original\+Control\+Points\+Count}}
+\index{m\+Original\+Control\+Points\+Count@{m\+Original\+Control\+Points\+Count}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Original\+Control\+Points\+Count}{mOriginalControlPointsCount}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::m\+Original\+Control\+Points\+Count}
+
+
+
+ fbxmesh.\+h の 728 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a700722838ae66d0331d6ea718fe27640}\label{class_fbx_mesh_a700722838ae66d0331d6ea718fe27640}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Original\+Polygons@{m\+Original\+Polygons}}
+\index{m\+Original\+Polygons@{m\+Original\+Polygons}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Original\+Polygons}{mOriginalPolygons}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{struct_fbx_mesh_1_1_polygon_def}{Polygon\+Def}$>$$\ast$ Fbx\+Mesh\+::m\+Original\+Polygons}
+
+
+
+ fbxmesh.\+h の 726 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_aeb42ac5dd106b366aa0f65c98e7d13d2}\label{class_fbx_mesh_aeb42ac5dd106b366aa0f65c98e7d13d2}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Original\+Polygon\+Vertices@{m\+Original\+Polygon\+Vertices}}
+\index{m\+Original\+Polygon\+Vertices@{m\+Original\+Polygon\+Vertices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Original\+Polygon\+Vertices}{mOriginalPolygonVertices}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$$\ast$ Fbx\+Mesh\+::m\+Original\+Polygon\+Vertices}
+
+
+
+ fbxmesh.\+h の 727 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a61a2707539a87a8637353b6dccbb9782}\label{class_fbx_mesh_a61a2707539a87a8637353b6dccbb9782}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Polygons@{m\+Polygons}}
+\index{m\+Polygons@{m\+Polygons}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Polygons}{mPolygons}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{struct_fbx_mesh_1_1_polygon_def}{Polygon\+Def}$>$ Fbx\+Mesh\+::m\+Polygons}
+
+
+
+ fbxmesh.\+h の 721 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a61068fac65d5a770ebf815fd24772a99}\label{class_fbx_mesh_a61068fac65d5a770ebf815fd24772a99}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Polygon\+Vertices@{m\+Polygon\+Vertices}}
+\index{m\+Polygon\+Vertices@{m\+Polygon\+Vertices}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Polygon\+Vertices}{mPolygonVertices}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$ Fbx\+Mesh\+::m\+Polygon\+Vertices}
+
+
+
+ fbxmesh.\+h の 722 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a05de09199525ca131c28f4f8eed8260e}\label{class_fbx_mesh_a05de09199525ca131c28f4f8eed8260e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Preserve\+Borders@{m\+Preserve\+Borders}}
+\index{m\+Preserve\+Borders@{m\+Preserve\+Borders}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Preserve\+Borders}{mPreserveBorders}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::m\+Preserve\+Borders\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 788 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_ad87b5da0ae447da265cef23b479f3a79}\label{class_fbx_mesh_ad87b5da0ae447da265cef23b479f3a79}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Preserve\+Hard\+Edges@{m\+Preserve\+Hard\+Edges}}
+\index{m\+Preserve\+Hard\+Edges@{m\+Preserve\+Hard\+Edges}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Preserve\+Hard\+Edges}{mPreserveHardEdges}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::m\+Preserve\+Hard\+Edges\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 789 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_abf407e3dc0f8e13664528fcadd5035ee}\label{class_fbx_mesh_abf407e3dc0f8e13664528fcadd5035ee}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Preview\+Division\+Levels@{m\+Preview\+Division\+Levels}}
+\index{m\+Preview\+Division\+Levels@{m\+Preview\+Division\+Levels}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Preview\+Division\+Levels}{mPreviewDivisionLevels}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::m\+Preview\+Division\+Levels\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 783 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_a1ff440a236f927098cfbb41c46fb2b59}\label{class_fbx_mesh_a1ff440a236f927098cfbb41c46fb2b59}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Propagate\+Edge\+Hardness@{m\+Propagate\+Edge\+Hardness}}
+\index{m\+Propagate\+Edge\+Hardness@{m\+Propagate\+Edge\+Hardness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Propagate\+Edge\+Hardness}{mPropagateEdgeHardness}}
+{\footnotesize\ttfamily bool Fbx\+Mesh\+::m\+Propagate\+Edge\+Hardness\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 790 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_af8a2af0c1c6432f6ca488a8eaeda722e}\label{class_fbx_mesh_af8a2af0c1c6432f6ca488a8eaeda722e}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+P\+V\+End\+Flags@{m\+P\+V\+End\+Flags}}
+\index{m\+P\+V\+End\+Flags@{m\+P\+V\+End\+Flags}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+P\+V\+End\+Flags}{mPVEndFlags}}
+{\footnotesize\ttfamily struct \hyperlink{struct_fbx_mesh_1_1_edge_lookup_def}{Fbx\+Mesh\+::\+Edge\+Lookup\+Def}  Fbx\+Mesh\+::m\+P\+V\+End\+Flags\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_mesh_a1c5f079f731567bbbc1b5af7527e6aa6}\label{class_fbx_mesh_a1c5f079f731567bbbc1b5af7527e6aa6}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Render\+Division\+Levels@{m\+Render\+Division\+Levels}}
+\index{m\+Render\+Division\+Levels@{m\+Render\+Division\+Levels}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Render\+Division\+Levels}{mRenderDivisionLevels}}
+{\footnotesize\ttfamily int Fbx\+Mesh\+::m\+Render\+Division\+Levels\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 784 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_ac4b9e270e53db167213a43bfa49e2d2b}\label{class_fbx_mesh_ac4b9e270e53db167213a43bfa49e2d2b}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+Smoothness@{m\+Smoothness}}
+\index{m\+Smoothness@{m\+Smoothness}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+Smoothness}{mSmoothness}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh_a7ac812140810290f718863c170279cf3}{E\+Smoothness} Fbx\+Mesh\+::m\+Smoothness\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxmesh.\+h の 782 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_mesh_ad0d46d5f839a3b62fe97684629bfa639}\label{class_fbx_mesh_ad0d46d5f839a3b62fe97684629bfa639}} 
+\index{Fbx\+Mesh@{Fbx\+Mesh}!m\+V2\+P\+V\+Map@{m\+V2\+P\+V\+Map}}
+\index{m\+V2\+P\+V\+Map@{m\+V2\+P\+V\+Map}!Fbx\+Mesh@{Fbx\+Mesh}}
+\subsubsection{\texorpdfstring{m\+V2\+P\+V\+Map}{mV2PVMap}}
+{\footnotesize\ttfamily struct \hyperlink{struct_fbx_mesh_1_1_v2_p_v_map}{Fbx\+Mesh\+::\+V2\+P\+V\+Map}  Fbx\+Mesh\+::m\+V2\+P\+V\+Map\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxmesh_8h}{fbxmesh.\+h}\end{DoxyCompactItemize}

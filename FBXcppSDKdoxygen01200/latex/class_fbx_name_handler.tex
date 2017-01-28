@@ -1,0 +1,216 @@
+\hypertarget{class_fbx_name_handler}{}\section{Fbx\+Name\+Handler クラス}
+\label{class_fbx_name_handler}\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+
+
+{\ttfamily \#include $<$fbxnamehandler.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_name_handler_a02a3f41e3f5c9ec99c9ae5217ee3eb8b}{Fbx\+Name\+Handler} (const char $\ast$p\+Initial\+Name=\char`\"{}\char`\"{})
+\item 
+\hyperlink{class_fbx_name_handler_a267ec29b9e64596ebb3b3453720b8f36}{Fbx\+Name\+Handler} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} const \&p\+Name)
+\item 
+\hyperlink{class_fbx_name_handler_a800bceb8c02a76bf726881f995591bb3}{$\sim$\+Fbx\+Name\+Handler} ()
+\item 
+void \hyperlink{class_fbx_name_handler_a6504ca871810d1a93f38fa60b9841a3f}{Set\+Initial\+Name} (const char $\ast$p\+Initial\+Name)
+\item 
+const char $\ast$ \hyperlink{class_fbx_name_handler_a266f9693873fa9042673fac6b1ae630d}{Get\+Initial\+Name} () const
+\item 
+void \hyperlink{class_fbx_name_handler_afea94fddf5deb3141f8371d8b858336c}{Set\+Current\+Name} (const char $\ast$p\+New\+Name)
+\item 
+const char $\ast$ \hyperlink{class_fbx_name_handler_a1be12daa1efe1f289972f7cb81bc64fb}{Get\+Current\+Name} () const
+\item 
+void \hyperlink{class_fbx_name_handler_ac70bc1016ef7888fc736ab42e50857a7}{Set\+Name\+Space} (const char $\ast$p\+Name\+Space)
+\item 
+const char $\ast$ \hyperlink{class_fbx_name_handler_a7767797106861dea5bef81b8ab592dfd}{Get\+Name\+Space} () const
+\item 
+bool \hyperlink{class_fbx_name_handler_a9b68199866bcb0fb01709d02d3d064c2}{Is\+Renamed} () const
+\item 
+\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} \& \hyperlink{class_fbx_name_handler_addc63ffad614f6008022b6eb06a57b6d}{operator=} (\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} const \&p\+Name)
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $\ast$ $>$ \hyperlink{class_fbx_name_handler_a4dc170decc57489aad84077e7e3eb0dc}{Get\+Name\+Space\+Array} (char identifier)
+\end{DoxyCompactItemize}
+\subsection*{Private use for the renaming strategies classes.}
+\label{_amgrp8fe6d105820914a0c89a4b0c422a569e}%
+Some renaming strategies classes need to store the parent name to successfully apply the renaming algorithms. The methods in this section allow them to do so. \begin{DoxyRemark}{注釈}
+Because of the very specific use of the m\+Parent\+Name string, callers of the \hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} class should never assume that m\+Parent\+Name is correctly initialized nor contains a meaningful value outside the scope of the renaming strategy class that used it. 
+\end{DoxyRemark}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_name_handler_a647b1b11442049cebf1e958fcc523608}{Set\+Parent\+Name} (const char $\ast$p\+Parent\+Name)
+\item 
+const char $\ast$ \hyperlink{class_fbx_name_handler_a81b581d71cce2bc20c51ae16a95a8545}{Get\+Parent\+Name} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A name is a case-\/sensitive string ID of a property, a node, a node attribute, a texture, etc. The characters constituting a name has no specific limitation. An initial name is the original name (from importing a file, for example), which is saved up for reversible renaming. A current name is the name used in F\+BX. A namespace is a simple grouping of objects under a given name. Namespaces are primarily used to resolve name-\/clash issues in F\+BX, where a new object has the same name as an existing object.
+
+For example, Maya only accepts names with letters, digits, or underscores. And when a user import F\+BX into Maya, a node whose name contains whitespace will be renamed. But the connections and references to this node in F\+BX scene graph still use the original name, so users have to use the initial name to retrieve related information. 
+
+ fbxnamehandler.\+h の 34 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_name_handler_a02a3f41e3f5c9ec99c9ae5217ee3eb8b}\label{class_fbx_name_handler_a02a3f41e3f5c9ec99c9ae5217ee3eb8b}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Fbx\+Name\+Handler()}{FbxNameHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Name\+Handler\+::\+Fbx\+Name\+Handler (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Initial\+Name = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Initial\+Name} & Name string used to initialize both members (initial\+Name and current\+Name) of this class. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_name_handler_a267ec29b9e64596ebb3b3453720b8f36}\label{class_fbx_name_handler_a267ec29b9e64596ebb3b3453720b8f36}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Fbx\+Name\+Handler()}{FbxNameHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Name\+Handler\+::\+Fbx\+Name\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} const \&}]{p\+Name }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & A \hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_name_handler_a800bceb8c02a76bf726881f995591bb3}\label{class_fbx_name_handler_a800bceb8c02a76bf726881f995591bb3}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!````~Fbx\+Name\+Handler@{$\sim$\+Fbx\+Name\+Handler}}
+\index{````~Fbx\+Name\+Handler@{$\sim$\+Fbx\+Name\+Handler}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Name\+Handler()}{~FbxNameHandler()}}
+{\footnotesize\ttfamily Fbx\+Name\+Handler\+::$\sim$\+Fbx\+Name\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_name_handler_a1be12daa1efe1f289972f7cb81bc64fb}\label{class_fbx_name_handler_a1be12daa1efe1f289972f7cb81bc64fb}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Get\+Current\+Name@{Get\+Current\+Name}}
+\index{Get\+Current\+Name@{Get\+Current\+Name}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Current\+Name()}{GetCurrentName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Name\+Handler\+::\+Get\+Current\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the current name. \begin{DoxyReturn}{戻り値}
+Pointer to the Current\+Name string buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_name_handler_a266f9693873fa9042673fac6b1ae630d}\label{class_fbx_name_handler_a266f9693873fa9042673fac6b1ae630d}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Get\+Initial\+Name@{Get\+Initial\+Name}}
+\index{Get\+Initial\+Name@{Get\+Initial\+Name}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Initial\+Name()}{GetInitialName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Name\+Handler\+::\+Get\+Initial\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the initial name. \begin{DoxyReturn}{戻り値}
+Pointer to the Initial\+Name string buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_name_handler_a7767797106861dea5bef81b8ab592dfd}\label{class_fbx_name_handler_a7767797106861dea5bef81b8ab592dfd}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Get\+Name\+Space@{Get\+Name\+Space}}
+\index{Get\+Name\+Space@{Get\+Name\+Space}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Name\+Space()}{GetNameSpace()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Name\+Handler\+::\+Get\+Name\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the namespace. \begin{DoxyReturn}{戻り値}
+Pointer to the namespace string buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_name_handler_a4dc170decc57489aad84077e7e3eb0dc}\label{class_fbx_name_handler_a4dc170decc57489aad84077e7e3eb0dc}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Get\+Name\+Space\+Array@{Get\+Name\+Space\+Array}}
+\index{Get\+Name\+Space\+Array@{Get\+Name\+Space\+Array}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Name\+Space\+Array()}{GetNameSpaceArray()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_string}{Fbx\+String}$\ast$$>$ Fbx\+Name\+Handler\+::\+Get\+Name\+Space\+Array (\begin{DoxyParamCaption}\item[{char}]{identifier }\end{DoxyParamCaption})}
+
+Get the namespaces in a string pointer array format. \begin{DoxyReturn}{戻り値}
+Fbx\+Array$<$\+Fbx\+String$\ast$$>$ . 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The array is filled in reverse order. For example, with a namespace string defined as\+: a\+:b\+:c\+:d, the filled array is\+: array\mbox{[}0\mbox{]}=d, array\mbox{[}1\mbox{]}=c, array\mbox{[}2\mbox{]}=b and array\mbox{[}3\mbox{]}=a 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_name_handler_a81b581d71cce2bc20c51ae16a95a8545}\label{class_fbx_name_handler_a81b581d71cce2bc20c51ae16a95a8545}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Get\+Parent\+Name@{Get\+Parent\+Name}}
+\index{Get\+Parent\+Name@{Get\+Parent\+Name}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Parent\+Name()}{GetParentName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Name\+Handler\+::\+Get\+Parent\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the parent name. \begin{DoxyReturn}{戻り値}
+Pointer to the Parent\+Name string buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_name_handler_a9b68199866bcb0fb01709d02d3d064c2}\label{class_fbx_name_handler_a9b68199866bcb0fb01709d02d3d064c2}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Is\+Renamed@{Is\+Renamed}}
+\index{Is\+Renamed@{Is\+Renamed}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Is\+Renamed()}{IsRenamed()}}
+{\footnotesize\ttfamily bool Fbx\+Name\+Handler\+::\+Is\+Renamed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if the current name and initial name match. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the current name isn\textquotesingle{}t identical to the initial name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_name_handler_addc63ffad614f6008022b6eb06a57b6d}\label{class_fbx_name_handler_addc63ffad614f6008022b6eb06a57b6d}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler}\& Fbx\+Name\+Handler\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} const \&}]{p\+Name }\end{DoxyParamCaption})}
+
+Assignment operator 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & \hyperlink{class_fbx_name_handler}{Fbx\+Name\+Handler} assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_name_handler_afea94fddf5deb3141f8371d8b858336c}\label{class_fbx_name_handler_afea94fddf5deb3141f8371d8b858336c}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Set\+Current\+Name@{Set\+Current\+Name}}
+\index{Set\+Current\+Name@{Set\+Current\+Name}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Current\+Name()}{SetCurrentName()}}
+{\footnotesize\ttfamily void Fbx\+Name\+Handler\+::\+Set\+Current\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+New\+Name }\end{DoxyParamCaption})}
+
+Set the current name. 
+\begin{DoxyParams}{引数}
+{\em p\+New\+Name} & New string for the current name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The initial name is not affected. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_name_handler_a6504ca871810d1a93f38fa60b9841a3f}\label{class_fbx_name_handler_a6504ca871810d1a93f38fa60b9841a3f}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Set\+Initial\+Name@{Set\+Initial\+Name}}
+\index{Set\+Initial\+Name@{Set\+Initial\+Name}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Initial\+Name()}{SetInitialName()}}
+{\footnotesize\ttfamily void Fbx\+Name\+Handler\+::\+Set\+Initial\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Initial\+Name }\end{DoxyParamCaption})}
+
+Set the initial name. 
+\begin{DoxyParams}{引数}
+{\em p\+Initial\+Name} & New string for the initial name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The current name will also be changed to this value. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_name_handler_ac70bc1016ef7888fc736ab42e50857a7}\label{class_fbx_name_handler_ac70bc1016ef7888fc736ab42e50857a7}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Set\+Name\+Space@{Set\+Name\+Space}}
+\index{Set\+Name\+Space@{Set\+Name\+Space}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Name\+Space()}{SetNameSpace()}}
+{\footnotesize\ttfamily void Fbx\+Name\+Handler\+::\+Set\+Name\+Space (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name\+Space }\end{DoxyParamCaption})}
+
+Set the namespace. 
+\begin{DoxyParams}{引数}
+{\em p\+Name\+Space} & New string for the namespace. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The initial name is not affected. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_name_handler_a647b1b11442049cebf1e958fcc523608}\label{class_fbx_name_handler_a647b1b11442049cebf1e958fcc523608}} 
+\index{Fbx\+Name\+Handler@{Fbx\+Name\+Handler}!Set\+Parent\+Name@{Set\+Parent\+Name}}
+\index{Set\+Parent\+Name@{Set\+Parent\+Name}!Fbx\+Name\+Handler@{Fbx\+Name\+Handler}}
+\subsubsection{\texorpdfstring{Set\+Parent\+Name()}{SetParentName()}}
+{\footnotesize\ttfamily void Fbx\+Name\+Handler\+::\+Set\+Parent\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Parent\+Name }\end{DoxyParamCaption})}
+
+Set the parent name. 
+\begin{DoxyParams}{引数}
+{\em p\+Parent\+Name} & New string for the parent name. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The parent name here could combine several hierarchy name. The full name should be \char`\"{}\+Parent\+Name + Current\+Name\char`\"{}. A $\vert$\+\_\+B $\vert$\+\_\+C For the above hierarchy, the parent name of C is \char`\"{}\+A\+B\char`\"{}. The full name of C is \char`\"{}\+A\+B\+C\char`\"{}. 
+\end{DoxyRemark}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxnamehandler_8h}{fbxnamehandler.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,321 @@
+\hypertarget{class_fbx_node_attribute}{}\section{Fbx\+Node\+Attribute クラス}
+\label{class_fbx_node_attribute}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+
+
+This class is the base class to all types of node attributes.
+
+A node attribute is the content of a node. A {\ttfamily N\+U\+LL} node attribute is set by calling function \hyperlink{class_fbx_node_adb194a043dd1ccf3bc1e3bda520dc97a}{Fbx\+Node\+::\+Set\+Node\+Attribute()} with a {\ttfamily N\+U\+LL} pointer.  
+
+
+
+
+{\ttfamily \#include $<$fbxnodeattribute.\+h$>$}
+
+Fbx\+Node\+Attribute の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_fbx_node_attribute}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{E\+Type} \{ \newline
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa253cd41494ed2a5f06183e4d886a84b8}{e\+Unknown}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa0d833bf35e77f67c8721f95d0e3b6d2c}{e\+Null}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aad68503585e03417166e5e670e25e787a}{e\+Marker}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa96d656ce797a857ae3f5e16ceb7bc43a}{e\+Skeleton}, 
+\newline
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa1f3752eb765c9e29065decc930b75fb8}{e\+Mesh}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa34e416198478e89143c5d2eaf909cecc}{e\+Nurbs}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa22755745b03034d2d98691279f4b2adf}{e\+Patch}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aafefee60b016211f4780c0e0904cd119a}{e\+Camera}, 
+\newline
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa908ea0ccdc449dc6f3957728bd982ad4}{e\+Camera\+Stereo}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa6fb598a32379261ed00d4695863a58fc}{e\+Camera\+Switcher}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa969e52bbe2f815a45c32ea850bf94fe7}{e\+Light}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaea5505f9acf191c9b8d1d9d35daedc3b}{e\+Optical\+Reference}, 
+\newline
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa8f596d997c0dcbe3c93a4e56316d5a2d}{e\+Optical\+Marker}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aae7a889cc6d7682817fc718d13048187f}{e\+Nurbs\+Curve}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aae2ea2fbaa7dc68c851ba5cd32cada6e7}{e\+Trim\+Nurbs\+Surface}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaeb57196752c14c4d1162b0c012348bb0}{e\+Boundary}, 
+\newline
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa68f3a29a257dd9a8c734ae5118cbbec3}{e\+Nurbs\+Surface}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa40e38ff9d983a5b59f62097a1da0eab7}{e\+Shape}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa3e30752a06914b9a56f10b9fbb1cfeb0}{e\+L\+O\+D\+Group}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aabf6eece53604664abed75e7fb2720832}{e\+Sub\+Div}, 
+\newline
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa00298236282d63c3c1b6a93a854973d4}{e\+Cached\+Effect}, 
+\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaa0d151ae35b73ebdaecb489b8c1cb575}{e\+Line}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_node_attribute_a1c2116756906127145a2b8721fc26752}{Get\+Attribute\+Type} () const
+\item 
+int \hyperlink{class_fbx_node_attribute_a72f38adeb0963e61bf5d156e76052370}{Get\+Node\+Count} () const
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_node_attribute_ac42128906415c993c6cb68588f9be149}{Get\+Node} (int p\+Index=0) const
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_node_attribute_a31f3a2361406eb670fa6ee3b5dffc864}{Color}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_node_attribute_a0155b227cd9d72c796155bdda2c4c9e5}{s\+Color}
+\begin{DoxyCompactList}\small\item\em Property Names \end{DoxyCompactList}\item 
+static const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_node_attribute_a06cca505ad9c2964060cbcb3bbf6795b}{s\+Default\+Color}
+\begin{DoxyCompactList}\small\item\em Property Default Values \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class is the base class to all types of node attributes.
+
+A node attribute is the content of a node. A {\ttfamily N\+U\+LL} node attribute is set by calling function \hyperlink{class_fbx_node_adb194a043dd1ccf3bc1e3bda520dc97a}{Fbx\+Node\+::\+Set\+Node\+Attribute()} with a {\ttfamily N\+U\+LL} pointer. 
+
+ fbxnodeattribute.\+h の 29 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type}}
+
+Node attribute types.
+\begin{DoxyItemize}
+\item {\itshape e\+Unknown} 
+\item {\itshape e\+Null} 
+\item {\itshape e\+Marker} 
+\item {\itshape e\+Skeleton} 
+\item {\itshape e\+Mesh} 
+\item {\itshape e\+Nurbs} 
+\item {\itshape e\+Patch} 
+\item {\itshape e\+Camera} 
+\item {\itshape e\+Camera\+Stereo},
+\item {\itshape e\+Camera\+Switcher} 
+\item {\itshape e\+Light} 
+\item {\itshape e\+Optical\+Reference} 
+\item {\itshape e\+Optical\+Marker} 
+\item {\itshape e\+Nurbs\+Curve} 
+\item {\itshape e\+Trim\+Nurbs\+Surface} 
+\item {\itshape e\+Boundary} 
+\item {\itshape e\+Nurbs\+Surface} 
+\item {\itshape e\+Shape} 
+\item {\itshape e\+L\+O\+D\+Group} 
+\item {\itshape e\+Sub\+Div} 
+\item {\itshape e\+Cached\+Effect} 
+\item {\itshape e\+Line} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Unknown@{e\+Unknown}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Unknown@{e\+Unknown}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa253cd41494ed2a5f06183e4d886a84b8}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa253cd41494ed2a5f06183e4d886a84b8}} 
+e\+Unknown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Null@{e\+Null}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Null@{e\+Null}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa0d833bf35e77f67c8721f95d0e3b6d2c}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa0d833bf35e77f67c8721f95d0e3b6d2c}} 
+e\+Null&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Marker@{e\+Marker}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Marker@{e\+Marker}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aad68503585e03417166e5e670e25e787a}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aad68503585e03417166e5e670e25e787a}} 
+e\+Marker&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Skeleton@{e\+Skeleton}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Skeleton@{e\+Skeleton}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa96d656ce797a857ae3f5e16ceb7bc43a}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa96d656ce797a857ae3f5e16ceb7bc43a}} 
+e\+Skeleton&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Mesh@{e\+Mesh}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Mesh@{e\+Mesh}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa1f3752eb765c9e29065decc930b75fb8}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa1f3752eb765c9e29065decc930b75fb8}} 
+e\+Mesh&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Nurbs@{e\+Nurbs}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Nurbs@{e\+Nurbs}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa34e416198478e89143c5d2eaf909cecc}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa34e416198478e89143c5d2eaf909cecc}} 
+e\+Nurbs&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Patch@{e\+Patch}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Patch@{e\+Patch}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa22755745b03034d2d98691279f4b2adf}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa22755745b03034d2d98691279f4b2adf}} 
+e\+Patch&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Camera@{e\+Camera}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Camera@{e\+Camera}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aafefee60b016211f4780c0e0904cd119a}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aafefee60b016211f4780c0e0904cd119a}} 
+e\+Camera&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Camera\+Stereo@{e\+Camera\+Stereo}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Camera\+Stereo@{e\+Camera\+Stereo}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa908ea0ccdc449dc6f3957728bd982ad4}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa908ea0ccdc449dc6f3957728bd982ad4}} 
+e\+Camera\+Stereo&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Camera\+Switcher@{e\+Camera\+Switcher}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Camera\+Switcher@{e\+Camera\+Switcher}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa6fb598a32379261ed00d4695863a58fc}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa6fb598a32379261ed00d4695863a58fc}} 
+e\+Camera\+Switcher&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Light@{e\+Light}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Light@{e\+Light}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa969e52bbe2f815a45c32ea850bf94fe7}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa969e52bbe2f815a45c32ea850bf94fe7}} 
+e\+Light&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Optical\+Reference@{e\+Optical\+Reference}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Optical\+Reference@{e\+Optical\+Reference}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaea5505f9acf191c9b8d1d9d35daedc3b}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaea5505f9acf191c9b8d1d9d35daedc3b}} 
+e\+Optical\+Reference&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Optical\+Marker@{e\+Optical\+Marker}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Optical\+Marker@{e\+Optical\+Marker}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa8f596d997c0dcbe3c93a4e56316d5a2d}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa8f596d997c0dcbe3c93a4e56316d5a2d}} 
+e\+Optical\+Marker&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Nurbs\+Curve@{e\+Nurbs\+Curve}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Nurbs\+Curve@{e\+Nurbs\+Curve}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aae7a889cc6d7682817fc718d13048187f}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aae7a889cc6d7682817fc718d13048187f}} 
+e\+Nurbs\+Curve&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Trim\+Nurbs\+Surface@{e\+Trim\+Nurbs\+Surface}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Trim\+Nurbs\+Surface@{e\+Trim\+Nurbs\+Surface}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aae2ea2fbaa7dc68c851ba5cd32cada6e7}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aae2ea2fbaa7dc68c851ba5cd32cada6e7}} 
+e\+Trim\+Nurbs\+Surface&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Boundary@{e\+Boundary}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Boundary@{e\+Boundary}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaeb57196752c14c4d1162b0c012348bb0}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaeb57196752c14c4d1162b0c012348bb0}} 
+e\+Boundary&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Nurbs\+Surface@{e\+Nurbs\+Surface}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Nurbs\+Surface@{e\+Nurbs\+Surface}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa68f3a29a257dd9a8c734ae5118cbbec3}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa68f3a29a257dd9a8c734ae5118cbbec3}} 
+e\+Nurbs\+Surface&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Shape@{e\+Shape}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Shape@{e\+Shape}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa40e38ff9d983a5b59f62097a1da0eab7}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa40e38ff9d983a5b59f62097a1da0eab7}} 
+e\+Shape&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+L\+O\+D\+Group@{e\+L\+O\+D\+Group}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+L\+O\+D\+Group@{e\+L\+O\+D\+Group}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa3e30752a06914b9a56f10b9fbb1cfeb0}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa3e30752a06914b9a56f10b9fbb1cfeb0}} 
+e\+L\+O\+D\+Group&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Sub\+Div@{e\+Sub\+Div}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Sub\+Div@{e\+Sub\+Div}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aabf6eece53604664abed75e7fb2720832}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aabf6eece53604664abed75e7fb2720832}} 
+e\+Sub\+Div&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Cached\+Effect@{e\+Cached\+Effect}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Cached\+Effect@{e\+Cached\+Effect}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa00298236282d63c3c1b6a93a854973d4}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aa00298236282d63c3c1b6a93a854973d4}} 
+e\+Cached\+Effect&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Line@{e\+Line}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!e\+Line@{e\+Line}}}\mbox{\Hypertarget{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaa0d151ae35b73ebdaecb489b8c1cb575}\label{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6aaa0d151ae35b73ebdaecb489b8c1cb575}} 
+e\+Line&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxnodeattribute.\+h の 70 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}\label{class_fbx_node_attribute_a042eb9949a9b9634dcc5f126e82fd04a}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Node\+Attribute\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+
+
+\hyperlink{class_fbx_camera_a11334e5358efacbd87e4a7d78036155d}{Fbx\+Camera}, \hyperlink{class_fbx_geometry_base_a94ee142ac1d40be3aebb4d9441431921}{Fbx\+Geometry\+Base}, \hyperlink{class_fbx_marker_a02a9ec30c7dc256cce288e2f9961b507}{Fbx\+Marker}, \hyperlink{class_fbx_light_aaa406a871272d3f36c6300ab81f312c5}{Fbx\+Light}, \hyperlink{class_fbx_camera_stereo_a83a9b1ee59d0014b30411fe4877b5dec}{Fbx\+Camera\+Stereo}, \hyperlink{class_fbx_skeleton_aa1e8d4dbe577415b4e00914ae75d46a0}{Fbx\+Skeleton}, \hyperlink{class_fbx_line_a48df4b6cd889814d3fe7ca5bb09bcc78}{Fbx\+Line}, \hyperlink{class_fbx_null_a5074b9c24389b6b0017e156566469421}{Fbx\+Null}, \hyperlink{class_fbx_boundary_acb50e021b1e9920026c975613a949537}{Fbx\+Boundary}, \hyperlink{class_fbx_camera_switcher_a38011053f3a61df4e93989d7c970fa16}{Fbx\+Camera\+Switcher}, \hyperlink{class_fbx_cached_effect_a0a33b753735747046809b241eadb19d2}{Fbx\+Cached\+Effect}, \hyperlink{class_my_k_fbx_mesh_a9fc01e7c17e2e1456cf7859f05d253e8}{My\+K\+Fbx\+Mesh}で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_node_attribute_a1c2116756906127145a2b8721fc26752}\label{class_fbx_node_attribute_a1c2116756906127145a2b8721fc26752}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Node\+Attribute\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the type of node attribute. This class is pure virtual. 
+
+\hyperlink{class_fbx_light_a0a0ef9dd3eacb2cadb30416d13ea8e7d}{Fbx\+Light}, \hyperlink{class_fbx_trim_nurbs_surface_a2d60f9613978db561ac32e2efff35104}{Fbx\+Trim\+Nurbs\+Surface}, \hyperlink{class_fbx_shape_a976141cda408244bd89c44c7a6b22d4b}{Fbx\+Shape}, \hyperlink{class_fbx_boundary_a093be9c6c0c0f13a337e9b6815aed9d0}{Fbx\+Boundary}, \hyperlink{class_fbx_sub_div_ac109cef6a177563eab80e28d414289a3}{Fbx\+Sub\+Div}, \hyperlink{class_fbx_nurbs_curve_aa6ec087af306c42ac814d43ea80c60b3}{Fbx\+Nurbs\+Curve}, \hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Fbx\+Geometry}, \hyperlink{class_fbx_camera_switcher_ad42aacc90ece1f0295e51db102ae48ad}{Fbx\+Camera\+Switcher}, \hyperlink{class_fbx_line_a3307097464d924b2c95c6687e41d69c9}{Fbx\+Line}, \hyperlink{class_fbx_camera_a1149e4b05fd079637fe8d2a66a5a7a17}{Fbx\+Camera}, \hyperlink{class_fbx_skeleton_a3ff6cd0cae408860585d954b7249a4d9}{Fbx\+Skeleton}, \hyperlink{class_fbx_mesh_a5a52e41ccf1382c40d3361ec3cfbb68a}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs_surface_a7c075984ec95a01b9cb6031e19cbd0cf}{Fbx\+Nurbs\+Surface}, \hyperlink{class_fbx_nurbs_a6c810e3a50538b346cbbf61338dca907}{Fbx\+Nurbs}, \hyperlink{class_fbx_camera_stereo_a19160f0fdeaf5407d2bc9c1608f6af53}{Fbx\+Camera\+Stereo}, \hyperlink{class_fbx_layer_container_a578a24bfcd49464813a4b5b08a12ec59}{Fbx\+Layer\+Container}, \hyperlink{class_fbx_cached_effect_a4c904f4208d8e9f3ddbb49240475b6cc}{Fbx\+Cached\+Effect}, \hyperlink{class_fbx_marker_a46b62e421142c41e188a62ab3963493c}{Fbx\+Marker}, \hyperlink{class_fbx_optical_reference_ac2c1840cbfffb236bd3b9fe49d797e12}{Fbx\+Optical\+Reference}, \hyperlink{class_fbx_patch_a4eb7de708949e012e0dcae2cb87a2ef4}{Fbx\+Patch}, \hyperlink{class_fbx_null_a16b32e758ed2fe821e2c895526b71925}{Fbx\+Null} (計21項目)で再実装されています。
+
+\mbox{\Hypertarget{class_fbx_node_attribute_ac42128906415c993c6cb68588f9be149}\label{class_fbx_node_attribute_ac42128906415c993c6cb68588f9be149}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!Get\+Node@{Get\+Node}}
+\index{Get\+Node@{Get\+Node}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{Get\+Node()}{GetNode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Node\+Attribute\+::\+Get\+Node (\begin{DoxyParamCaption}\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Return the node this attribute is set to. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the node to retrieve \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the node, or {\ttfamily N\+U\+LL} if the current attribute is not set to a node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_node_attribute_a72f38adeb0963e61bf5d156e76052370}\label{class_fbx_node_attribute_a72f38adeb0963e61bf5d156e76052370}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!Get\+Node\+Count@{Get\+Node\+Count}}
+\index{Get\+Node\+Count@{Get\+Node\+Count}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{Get\+Node\+Count()}{GetNodeCount()}}
+{\footnotesize\ttfamily int Fbx\+Node\+Attribute\+::\+Get\+Node\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return the node count using this attribute. \begin{DoxyReturn}{戻り値}
+The count of nodes with this attribute set. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_node_attribute_a31f3a2361406eb670fa6ee3b5dffc864}\label{class_fbx_node_attribute_a31f3a2361406eb670fa6ee3b5dffc864}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!Color@{Color}}
+\index{Color@{Color}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{Color}{Color}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Node\+Attribute\+::\+Color}
+
+This property handles the color.
+
+Default value is (0.\+8, 0.\+8, 0.\+8) 
+
+ fbxnodeattribute.\+h の 44 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_node_attribute_a0155b227cd9d72c796155bdda2c4c9e5}\label{class_fbx_node_attribute_a0155b227cd9d72c796155bdda2c4c9e5}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!s\+Color@{s\+Color}}
+\index{s\+Color@{s\+Color}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{s\+Color}{sColor}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Node\+Attribute\+::s\+Color\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Property Names 
+
+
+
+ fbxnodeattribute.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_node_attribute_a06cca505ad9c2964060cbcb3bbf6795b}\label{class_fbx_node_attribute_a06cca505ad9c2964060cbcb3bbf6795b}} 
+\index{Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}!s\+Default\+Color@{s\+Default\+Color}}
+\index{s\+Default\+Color@{s\+Default\+Color}!Fbx\+Node\+Attribute@{Fbx\+Node\+Attribute}}
+\subsubsection{\texorpdfstring{s\+Default\+Color}{sDefaultColor}}
+{\footnotesize\ttfamily const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Node\+Attribute\+::s\+Default\+Color\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Property Default Values 
+
+
+
+ fbxnodeattribute.\+h の 38 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxnodeattribute_8h}{fbxnodeattribute.\+h}\end{DoxyCompactItemize}

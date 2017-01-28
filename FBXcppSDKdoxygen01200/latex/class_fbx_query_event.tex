@@ -1,0 +1,92 @@
+\hypertarget{class_fbx_query_event}{}\section{Fbx\+Query\+Event$<$ QueryT $>$ クラステンプレート}
+\label{class_fbx_query_event}\index{Fbx\+Query\+Event$<$ Query\+T $>$@{Fbx\+Query\+Event$<$ Query\+T $>$}}
+
+
+{\ttfamily \#include $<$fbxqueryevent.\+h$>$}
+
+Fbx\+Query\+Event$<$ QueryT $>$ の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fbx_query_event}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{Indent}\textbf{ Public interface}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_query_event_ac0f4e691d9190901d1b55cea64653055}{Fbx\+Query\+Event} (QueryT $\ast$p\+Data)
+\item 
+QueryT \& \hyperlink{class_fbx_query_event_aff8c93540fbd84ec48c8fed06593e4b4}{Get\+Data} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_query_event_ade3703dd283c116fbf29343f18ed9daa}{Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$typename QueryT$>$\newline
+class Fbx\+Query\+Event$<$ Query\+T $>$}
+
+A query event is something that is emitted by an entity, with the goal of being filled by someone that listen to it. You can see that like a form that you send to some people. If those people know how to fill the form, they fill it and return it to you with the right information in it. A query event is emitted, and plug-\/in who are listening to that type of query, fill the data that can be accessed by the query emitter. 
+
+ fbxqueryevent.\+h の 27 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_query_event_ac0f4e691d9190901d1b55cea64653055}\label{class_fbx_query_event_ac0f4e691d9190901d1b55cea64653055}} 
+\index{Fbx\+Query\+Event@{Fbx\+Query\+Event}!Fbx\+Query\+Event@{Fbx\+Query\+Event}}
+\index{Fbx\+Query\+Event@{Fbx\+Query\+Event}!Fbx\+Query\+Event@{Fbx\+Query\+Event}}
+\subsubsection{\texorpdfstring{Fbx\+Query\+Event()}{FbxQueryEvent()}}
+{\footnotesize\ttfamily template$<$typename QueryT $>$ \\
+\hyperlink{class_fbx_query_event}{Fbx\+Query\+Event}$<$ QueryT $>$\+::\hyperlink{class_fbx_query_event}{Fbx\+Query\+Event} (\begin{DoxyParamCaption}\item[{QueryT $\ast$}]{p\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & The requested data. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxqueryevent.\+h の 37 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_query_event_aff8c93540fbd84ec48c8fed06593e4b4}\label{class_fbx_query_event_aff8c93540fbd84ec48c8fed06593e4b4}} 
+\index{Fbx\+Query\+Event@{Fbx\+Query\+Event}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!Fbx\+Query\+Event@{Fbx\+Query\+Event}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}}
+{\footnotesize\ttfamily template$<$typename QueryT $>$ \\
+QueryT\& \hyperlink{class_fbx_query_event}{Fbx\+Query\+Event}$<$ QueryT $>$\+::Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Accessor to a mutable reference to the data. Event are usually const and can\textquotesingle{}t be modified by listener. This special type of event can have is content modified via this accessor. \begin{DoxyReturn}{戻り値}
+A mutable reference the requested data. 
+\end{DoxyReturn}
+
+
+ fbxqueryevent.\+h の 43 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_query_event_ade3703dd283c116fbf29343f18ed9daa}\label{class_fbx_query_event_ade3703dd283c116fbf29343f18ed9daa}} 
+\index{Fbx\+Query\+Event@{Fbx\+Query\+Event}!Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$@{Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$}}
+\index{Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$@{Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$}!Fbx\+Query\+Event@{Fbx\+Query\+Event}}
+\subsubsection{\texorpdfstring{Fbx\+Event$<$ Fbx\+Query\+Event$<$ Query\+T $>$ $>$}{FbxEvent< FbxQueryEvent< QueryT > >}}
+{\footnotesize\ttfamily template$<$typename QueryT $>$ \\
+friend class \hyperlink{class_fbx_event}{Fbx\+Event}$<$ \hyperlink{class_fbx_query_event}{Fbx\+Query\+Event}$<$ QueryT $>$ $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxqueryevent.\+h の 52 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxqueryevent_8h}{fbxqueryevent.\+h}\end{DoxyCompactItemize}

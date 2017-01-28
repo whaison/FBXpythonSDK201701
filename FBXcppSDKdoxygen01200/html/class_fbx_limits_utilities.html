@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: FbxLimitsUtilities クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="class_fbx_limits_utilities-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxLimitsUtilities クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This class represent a utility of limits for transforms.  
+ <a href="class_fbx_limits_utilities.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:aa55167751039b3d64b56cb7e58f2e62c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> { <a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62cad5f4a235b05c5125317da39da0a500a4">eTranslation</a>, 
+<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62caec36a0e6c35ad607d141dce69825b880">eRotation</a>, 
+<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62ca1167d6156a651d47a02a5cd53fe175a8">eScaling</a>
+ }</td></tr>
+<tr class="separator:aa55167751039b3d64b56cb7e58f2e62c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c1ec432e195d91eae2548fbc98c8770"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770">ERotationType</a> { <a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770a23e246527e2e7002e7761b80a782d3ff">eQuaternion</a>, 
+<a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770a9d5b4fecb8bd1f6a68746799d8c7c8d7">eEuler</a>
+ }</td></tr>
+<tr class="separator:a8c1ec432e195d91eae2548fbc98c8770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6724e1b0b6ba776ecb0c66e7b0ed075d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a6724e1b0b6ba776ecb0c66e7b0ed075d">ERotationClampType</a> { <a class="el" href="class_fbx_limits_utilities.html#a6724e1b0b6ba776ecb0c66e7b0ed075da0bca9b07722c907bfa4de6bd618f1a23">eRectangular</a>, 
+<a class="el" href="class_fbx_limits_utilities.html#a6724e1b0b6ba776ecb0c66e7b0ed075da03110a5bd9a356f666df030ed80d9e42">eEllipsoid</a>
+ }</td></tr>
+<tr class="separator:a6724e1b0b6ba776ecb0c66e7b0ed075d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a375046bf32ce52b180249e3524ca5731"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a375046bf32ce52b180249e3524ca5731">FbxLimitsUtilities</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode)</td></tr>
+<tr class="separator:a375046bf32ce52b180249e3524ca5731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:aa0edad5da0f8d55bf0ada0b8268d7b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#aa0edad5da0f8d55bf0ada0b8268d7b17">mNode</a></td></tr>
+<tr class="separator:aa0edad5da0f8d55bf0ada0b8268d7b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb006b0fb0202573d3401021d860a66f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#adb006b0fb0202573d3401021d860a66f">mAxisLength</a></td></tr>
+<tr class="separator:adb006b0fb0202573d3401021d860a66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Getter/Setter functions</h2></td></tr>
+<tr class="memitem:a290ae79085beea63b37f3a9953e03709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a290ae79085beea63b37f3a9953e03709">SetAuto</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType, bool pAuto)</td></tr>
+<tr class="separator:a290ae79085beea63b37f3a9953e03709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a299f897153503e07a28b512fb05ed408"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a299f897153503e07a28b512fb05ed408">GetAuto</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType) const</td></tr>
+<tr class="separator:a299f897153503e07a28b512fb05ed408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304ea11e6242e4212c625843a4ef23f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a304ea11e6242e4212c625843a4ef23f8">SetEnable</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType, bool pEnable)</td></tr>
+<tr class="separator:a304ea11e6242e4212c625843a4ef23f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3224344ce5636d18f22d8ec8a327bba6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a3224344ce5636d18f22d8ec8a327bba6">GetEnable</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType) const</td></tr>
+<tr class="separator:a3224344ce5636d18f22d8ec8a327bba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89d6cb2e0dcdc0fc12f520a9b1ea9326"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a89d6cb2e0dcdc0fc12f520a9b1ea9326">SetDefault</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> pDefault)</td></tr>
+<tr class="separator:a89d6cb2e0dcdc0fc12f520a9b1ea9326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe24c72b27fe512b2e1ea982b804d423"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#abe24c72b27fe512b2e1ea982b804d423">GetDefault</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType) const</td></tr>
+<tr class="separator:abe24c72b27fe512b2e1ea982b804d423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27850a4e588581e0130a2634c518665a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a27850a4e588581e0130a2634c518665a">SetMin</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> pMin)</td></tr>
+<tr class="separator:a27850a4e588581e0130a2634c518665a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c96a6c202377bf7bea876d9c8a630b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a17c96a6c202377bf7bea876d9c8a630b">GetMin</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType) const</td></tr>
+<tr class="separator:a17c96a6c202377bf7bea876d9c8a630b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace31ad7ad7492a26aa4a0d9bc64c369b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#ace31ad7ad7492a26aa4a0d9bc64c369b">SetMax</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> pMax)</td></tr>
+<tr class="separator:ace31ad7ad7492a26aa4a0d9bc64c369b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa99f9ea9f9b1174d3971b63bc6a6e016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#aa99f9ea9f9b1174d3971b63bc6a6e016">GetMax</a> (<a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a> pType) const</td></tr>
+<tr class="separator:aa99f9ea9f9b1174d3971b63bc6a6e016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab756ed1a7da36f3fe871c866a5727265"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#ab756ed1a7da36f3fe871c866a5727265">SetRotationType</a> (<a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770">ERotationType</a> pType)</td></tr>
+<tr class="separator:ab756ed1a7da36f3fe871c866a5727265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e3e2905e30827006ce2f0d205649479"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770">ERotationType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a8e3e2905e30827006ce2f0d205649479">GetRotationType</a> () const</td></tr>
+<tr class="separator:a8e3e2905e30827006ce2f0d205649479"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665cefafe64f564fc4f5841f84bac8f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_limits_utilities.html#a6724e1b0b6ba776ecb0c66e7b0ed075d">ERotationClampType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a665cefafe64f564fc4f5841f84bac8f4">GetRotationClampType</a> () const</td></tr>
+<tr class="separator:a665cefafe64f564fc4f5841f84bac8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851515616b12ed28516c40767dcc96cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a851515616b12ed28516c40767dcc96cb">SetRotationAxis</a> (<a class="el" href="class_fbx_vector4.html">FbxVector4</a> pRotationAxis)</td></tr>
+<tr class="separator:a851515616b12ed28516c40767dcc96cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbb4c66f1e0769ce4893814d4415372"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#accbb4c66f1e0769ce4893814d4415372">GetRotationAxis</a> () const</td></tr>
+<tr class="separator:accbb4c66f1e0769ce4893814d4415372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0823e9206b2adba552e54811dfe11378"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a0823e9206b2adba552e54811dfe11378">SetAxisLength</a> (double pLength)</td></tr>
+<tr class="separator:a0823e9206b2adba552e54811dfe11378"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa51661729568ef9c39b84c79b6b6ef0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#afa51661729568ef9c39b84c79b6b6ef0">GetAxisLength</a> () const</td></tr>
+<tr class="separator:afa51661729568ef9c39b84c79b6b6ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f562d759a98f601f8bbb23727506c39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a7f562d759a98f601f8bbb23727506c39">UpdateAutomatic</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode)</td></tr>
+<tr class="separator:a7f562d759a98f601f8bbb23727506c39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89a48af2f22f1996c447460bbe7e80fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a89a48af2f22f1996c447460bbe7e80fa">GetEndPointTranslation</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode) const</td></tr>
+<tr class="separator:a89a48af2f22f1996c447460bbe7e80fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ec23f52b10360f82fd1670f984697dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_limits_utilities.html#a0ec23f52b10360f82fd1670f984697dd">GetEndSite</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode) const</td></tr>
+<tr class="separator:a0ec23f52b10360f82fd1670f984697dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>This class represent a utility of limits for transforms. </p>
+
+<p class="definition"> <a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a> の <a class="el" href="fbxlimitsutilities_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a6724e1b0b6ba776ecb0c66e7b0ed075d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6724e1b0b6ba776ecb0c66e7b0ed075d">&#9670;&nbsp;</a></span>ERotationClampType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_limits_utilities.html#a6724e1b0b6ba776ecb0c66e7b0ed075d">FbxLimitsUtilities::ERotationClampType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotation clamp type.</p><ul>
+<li><em>eRectangular</em> Rectangular clamp type</li>
+<li><em>eEllipsoid</em> Ellipsoid clamp type </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a6724e1b0b6ba776ecb0c66e7b0ed075da0bca9b07722c907bfa4de6bd618f1a23"></a>eRectangular&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6724e1b0b6ba776ecb0c66e7b0ed075da03110a5bd9a356f666df030ed80d9e42"></a>eEllipsoid&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a> の <a class="el" href="fbxlimitsutilities_8h_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8c1ec432e195d91eae2548fbc98c8770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1ec432e195d91eae2548fbc98c8770">&#9670;&nbsp;</a></span>ERotationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770">FbxLimitsUtilities::ERotationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Rotation type.</p><ul>
+<li><em>eQuaternion</em> Quaternion rotation type</li>
+<li><em>eEuler</em> Euler rotation type </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a8c1ec432e195d91eae2548fbc98c8770a23e246527e2e7002e7761b80a782d3ff"></a>eQuaternion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a8c1ec432e195d91eae2548fbc98c8770a9d5b4fecb8bd1f6a68746799d8c7c8d7"></a>eEuler&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a> の <a class="el" href="fbxlimitsutilities_8h_source.html#l00046">46</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa55167751039b3d64b56cb7e58f2e62c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55167751039b3d64b56cb7e58f2e62c">&#9670;&nbsp;</a></span>EType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">FbxLimitsUtilities::EType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Limit Type.</p><ul>
+<li><em>eTranslation</em> Translation type</li>
+<li><em>eRotation</em> Rotation type</li>
+<li><em>eScaling</em> Scale type </li>
+</ul>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aa55167751039b3d64b56cb7e58f2e62cad5f4a235b05c5125317da39da0a500a4"></a>eTranslation&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa55167751039b3d64b56cb7e58f2e62caec36a0e6c35ad607d141dce69825b880"></a>eRotation&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa55167751039b3d64b56cb7e58f2e62ca1167d6156a651d47a02a5cd53fe175a8"></a>eScaling&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a> の <a class="el" href="fbxlimitsutilities_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a375046bf32ce52b180249e3524ca5731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375046bf32ce52b180249e3524ca5731">&#9670;&nbsp;</a></span>FbxLimitsUtilities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxLimitsUtilities::FbxLimitsUtilities </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a299f897153503e07a28b512fb05ed408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299f897153503e07a28b512fb05ed408">&#9670;&nbsp;</a></span>GetAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxLimitsUtilities::GetAuto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa51661729568ef9c39b84c79b6b6ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa51661729568ef9c39b84c79b6b6ef0">&#9670;&nbsp;</a></span>GetAxisLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FbxLimitsUtilities::GetAxisLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe24c72b27fe512b2e1ea982b804d423"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe24c72b27fe512b2e1ea982b804d423">&#9670;&nbsp;</a></span>GetDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_vector4.html">FbxVector4</a> FbxLimitsUtilities::GetDefault </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3224344ce5636d18f22d8ec8a327bba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3224344ce5636d18f22d8ec8a327bba6">&#9670;&nbsp;</a></span>GetEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxLimitsUtilities::GetEnable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89a48af2f22f1996c447460bbe7e80fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89a48af2f22f1996c447460bbe7e80fa">&#9670;&nbsp;</a></span>GetEndPointTranslation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_vector4.html">FbxVector4</a> FbxLimitsUtilities::GetEndPointTranslation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ec23f52b10360f82fd1670f984697dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ec23f52b10360f82fd1670f984697dd">&#9670;&nbsp;</a></span>GetEndSite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_vector4.html">FbxVector4</a> FbxLimitsUtilities::GetEndSite </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa99f9ea9f9b1174d3971b63bc6a6e016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99f9ea9f9b1174d3971b63bc6a6e016">&#9670;&nbsp;</a></span>GetMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_vector4.html">FbxVector4</a> FbxLimitsUtilities::GetMax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17c96a6c202377bf7bea876d9c8a630b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17c96a6c202377bf7bea876d9c8a630b">&#9670;&nbsp;</a></span>GetMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_vector4.html">FbxVector4</a> FbxLimitsUtilities::GetMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accbb4c66f1e0769ce4893814d4415372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accbb4c66f1e0769ce4893814d4415372">&#9670;&nbsp;</a></span>GetRotationAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_vector4.html">FbxVector4</a> FbxLimitsUtilities::GetRotationAxis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a665cefafe64f564fc4f5841f84bac8f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665cefafe64f564fc4f5841f84bac8f4">&#9670;&nbsp;</a></span>GetRotationClampType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_limits_utilities.html#a6724e1b0b6ba776ecb0c66e7b0ed075d">ERotationClampType</a> FbxLimitsUtilities::GetRotationClampType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e3e2905e30827006ce2f0d205649479"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e3e2905e30827006ce2f0d205649479">&#9670;&nbsp;</a></span>GetRotationType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770">ERotationType</a> FbxLimitsUtilities::GetRotationType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a290ae79085beea63b37f3a9953e03709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290ae79085beea63b37f3a9953e03709">&#9670;&nbsp;</a></span>SetAuto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetAuto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pAuto</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0823e9206b2adba552e54811dfe11378"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0823e9206b2adba552e54811dfe11378">&#9670;&nbsp;</a></span>SetAxisLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetAxisLength </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pLength</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89d6cb2e0dcdc0fc12f520a9b1ea9326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d6cb2e0dcdc0fc12f520a9b1ea9326">&#9670;&nbsp;</a></span>SetDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetDefault </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>pDefault</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a304ea11e6242e4212c625843a4ef23f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a304ea11e6242e4212c625843a4ef23f8">&#9670;&nbsp;</a></span>SetEnable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetEnable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pEnable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace31ad7ad7492a26aa4a0d9bc64c369b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace31ad7ad7492a26aa4a0d9bc64c369b">&#9670;&nbsp;</a></span>SetMax()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetMax </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>pMax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a27850a4e588581e0130a2634c518665a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27850a4e588581e0130a2634c518665a">&#9670;&nbsp;</a></span>SetMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#aa55167751039b3d64b56cb7e58f2e62c">EType</a>&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>pMin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a851515616b12ed28516c40767dcc96cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a851515616b12ed28516c40767dcc96cb">&#9670;&nbsp;</a></span>SetRotationAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetRotationAxis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>pRotationAxis</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab756ed1a7da36f3fe871c866a5727265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab756ed1a7da36f3fe871c866a5727265">&#9670;&nbsp;</a></span>SetRotationType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::SetRotationType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_limits_utilities.html#a8c1ec432e195d91eae2548fbc98c8770">ERotationType</a>&#160;</td>
+          <td class="paramname"><em>pType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f562d759a98f601f8bbb23727506c39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f562d759a98f601f8bbb23727506c39">&#9670;&nbsp;</a></span>UpdateAutomatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxLimitsUtilities::UpdateAutomatic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="adb006b0fb0202573d3401021d860a66f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb006b0fb0202573d3401021d860a66f">&#9670;&nbsp;</a></span>mAxisLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double FbxLimitsUtilities::mAxisLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a> の <a class="el" href="fbxlimitsutilities_8h_source.html#l00101">101</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa0edad5da0f8d55bf0ada0b8268d7b17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0edad5da0f8d55bf0ada0b8268d7b17">&#9670;&nbsp;</a></span>mNode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_node.html">FbxNode</a>* FbxLimitsUtilities::mNode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a> の <a class="el" href="fbxlimitsutilities_8h_source.html#l00100">100</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/scene/geometry/<a class="el" href="fbxlimitsutilities_8h_source.html">fbxlimitsutilities.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,460 @@
+\hypertarget{class_fbx_x_ref_manager}{}\section{Fbx\+X\+Ref\+Manager クラス}
+\label{class_fbx_x_ref_manager}\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+
+
+{\ttfamily \#include $<$fbxxref.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_x_ref_manager_a2dda0d87e53185abe5d62b305902027b}{Fbx\+X\+Ref\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_x_ref_manager_ad15e856756afd34a1b85bf924e389aea}{$\sim$\+Fbx\+X\+Ref\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_x_ref_manager_a6b1ea164fac8604da02b6016165d56fe}{Get\+First\+Matching\+Url} (const char $\ast$p\+Prefix, const char $\ast$p\+Opt\+Ext, const \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Doc, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Resolved\+Path) const
+\end{DoxyCompactItemize}
+\subsection*{Predefined Project Types}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_x_ref_manager_ac1e95d1bc9cb30f5e9c75f08791e286f}{s\+Temporary\+File\+Project}
+\begin{DoxyCompactList}\small\item\em This project represents an U\+RL for storing temporary files. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_x_ref_manager_a2b587f862e487323d69830ecb3c148a3}{s\+Configuration\+Project}
+\begin{DoxyCompactList}\small\item\em This project represents an U\+RL for configuration files. \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_x_ref_manager_ac37aa54c7d0914ed376e7f4dd6f51229}{s\+Localization\+Project}
+\begin{DoxyCompactList}\small\item\em This project represents an U\+RL for storing localization files (that is not part of the asset library). \end{DoxyCompactList}\item 
+static const char $\ast$ \hyperlink{class_fbx_x_ref_manager_a9d815646f6d592942ce288a4de5eb39d}{s\+Embedded\+File\+Project}
+\end{DoxyCompactItemize}
+\subsection*{X\+Ref U\+RL properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_ae4653dc13a58d58f84e4b4760568e756}{Get\+Resolved\+Url} (\hyperlink{class_fbx_property}{Fbx\+Property} const \&p\+Property, int p\+Index, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Resolved\+Path) const
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_aaa0d59a531dffa6c36266328b60ca012}{Get\+Resolved\+Url} (const char $\ast$p\+Url, \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Doc, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Resolved\+Path) const
+\item 
+static int \hyperlink{class_fbx_x_ref_manager_a9ea29928247d5542e8eaafbea0647201}{Get\+Url\+Count} (\hyperlink{class_fbx_property}{Fbx\+Property} const \&p\+Property)
+\item 
+static int \hyperlink{class_fbx_x_ref_manager_a619fbdf87fe5db100ad4eada1373b9d0}{Get\+Url\+Count} (\hyperlink{class_fbx_string}{Fbx\+String} const \&p\+Url)
+\item 
+static bool \hyperlink{class_fbx_x_ref_manager_a27481156423d70e759c131954e3ea9a0}{Is\+Relative\+Url} (\hyperlink{class_fbx_property}{Fbx\+Property} const \&p\+Property, int p\+Index)
+\item 
+static \hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_x_ref_manager_af8e33d25b078d1852ef2b252175732d1}{Get\+Url} (\hyperlink{class_fbx_property}{Fbx\+Property} const \&p\+Property, int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{X\+Ref Resolve U\+RL and Projects}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_ad87a4b521f02567cc10d71ae9a4a83dc}{Add\+X\+Ref\+Project} (const char $\ast$p\+Name, const char $\ast$p\+Url)
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_a34a0774a5a3e18c024339bb2ceca7488}{Add\+X\+Ref\+Project} (const char $\ast$p\+Name, const char $\ast$p\+Extension, const char $\ast$p\+Url)
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_a55202f529ee4745e4841478d22bed719}{Add\+X\+Ref\+Project} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Doc)
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_a910538a083181d0552e00f6a852ac8e4}{Remove\+X\+Ref\+Project} (const char $\ast$p\+Name)
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_ae590ccb6ae282bed68c60bf697cd2645}{Remove\+All\+X\+Ref\+Projects} ()
+\item 
+int \hyperlink{class_fbx_x_ref_manager_a3d2b5a3a323b7312b7c4344879791976}{Get\+X\+Ref\+Project\+Count} () const
+\item 
+const char $\ast$ \hyperlink{class_fbx_x_ref_manager_afdff8c02aaecef12bed630152ba4e2c4}{Get\+X\+Ref\+Project\+Name} (int p\+Index) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_x_ref_manager_a43c9f593d33d7c8a4275b597d32ecfb7}{Get\+X\+Ref\+Project\+Url} (const char $\ast$p\+Name)
+\item 
+const char $\ast$ \hyperlink{class_fbx_x_ref_manager_a77d5c777e93f8b03938c07c7ea115dc2}{Get\+X\+Ref\+Project\+Url} (const char $\ast$p\+Name) const
+\item 
+const char $\ast$ \hyperlink{class_fbx_x_ref_manager_ab8f651bb9163d1c7ba56586c0c879c07}{Get\+X\+Ref\+Project\+Url} (int p\+Index) const
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_afa24aa1ef0d54bf0288947f9e005ec7c}{Has\+X\+Ref\+Project} (const char $\ast$p\+Name)
+\item 
+bool \hyperlink{class_fbx_x_ref_manager_a718b1c8f5f9d1e023e8c28811ac84498}{Get\+Resolved\+Url} (const char $\ast$p\+Url, \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Resolve\+Path) const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class manages external references to files. 
+
+ fbxxref.\+h の 30 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a2dda0d87e53185abe5d62b305902027b}\label{class_fbx_x_ref_manager_a2dda0d87e53185abe5d62b305902027b}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Fbx\+X\+Ref\+Manager()}{FbxXRefManager()}}
+{\footnotesize\ttfamily Fbx\+X\+Ref\+Manager\+::\+Fbx\+X\+Ref\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ad15e856756afd34a1b85bf924e389aea}\label{class_fbx_x_ref_manager_ad15e856756afd34a1b85bf924e389aea}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!````~Fbx\+X\+Ref\+Manager@{$\sim$\+Fbx\+X\+Ref\+Manager}}
+\index{````~Fbx\+X\+Ref\+Manager@{$\sim$\+Fbx\+X\+Ref\+Manager}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+X\+Ref\+Manager()}{~FbxXRefManager()}}
+{\footnotesize\ttfamily virtual Fbx\+X\+Ref\+Manager\+::$\sim$\+Fbx\+X\+Ref\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ad87a4b521f02567cc10d71ae9a4a83dc}\label{class_fbx_x_ref_manager_ad87a4b521f02567cc10d71ae9a4a83dc}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Add\+X\+Ref\+Project@{Add\+X\+Ref\+Project}}
+\index{Add\+X\+Ref\+Project@{Add\+X\+Ref\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Add\+X\+Ref\+Project()}{AddXRefProject()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Add\+X\+Ref\+Project (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Url }\end{DoxyParamCaption})}
+
+Adds an X\+Ref Project. Note\+:Only one U\+RL is associated with a project. Calling this on an existing project replaces the project\textquotesingle{}s existing U\+RL. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the project \\
+\hline
+{\em p\+Url} & The U\+RL to be associated with the project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the project is added successfully, {\ttfamily false} if no project is added. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a34a0774a5a3e18c024339bb2ceca7488}\label{class_fbx_x_ref_manager_a34a0774a5a3e18c024339bb2ceca7488}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Add\+X\+Ref\+Project@{Add\+X\+Ref\+Project}}
+\index{Add\+X\+Ref\+Project@{Add\+X\+Ref\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Add\+X\+Ref\+Project()}{AddXRefProject()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Add\+X\+Ref\+Project (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name,  }\item[{const char $\ast$}]{p\+Extension,  }\item[{const char $\ast$}]{p\+Url }\end{DoxyParamCaption})}
+
+Adds an X\+Ref Project. Note\+:Only one U\+RL is associated with a project. Calling this on an existing project replaces the project\textquotesingle{}s existing U\+RL. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the project \\
+\hline
+{\em p\+Extension} & The extension of the project. \\
+\hline
+{\em p\+Url} & The U\+RL to be associated with the project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the project is added successfully, returns {\ttfamily false} if no project is added. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a55202f529ee4745e4841478d22bed719}\label{class_fbx_x_ref_manager_a55202f529ee4745e4841478d22bed719}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Add\+X\+Ref\+Project@{Add\+X\+Ref\+Project}}
+\index{Add\+X\+Ref\+Project@{Add\+X\+Ref\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Add\+X\+Ref\+Project()}{AddXRefProject()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Add\+X\+Ref\+Project (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Doc }\end{DoxyParamCaption})}
+
+Adds an X\+Ref project based on the document\textquotesingle{}s Embedded\+Url property if set, if Embedded\+Url is not set, based on its current U\+RL property. 
+\begin{DoxyParams}{引数}
+{\em p\+Doc} & The document used to name the project and to specify the U\+RL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the project is added successfully, returns {\ttfamily false} if no project is added. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The project name is set as the document name and the U\+RL is set as Embedded\+Url or U\+RL of the document. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a6b1ea164fac8604da02b6016165d56fe}\label{class_fbx_x_ref_manager_a6b1ea164fac8604da02b6016165d56fe}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+First\+Matching\+Url@{Get\+First\+Matching\+Url}}
+\index{Get\+First\+Matching\+Url@{Get\+First\+Matching\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+First\+Matching\+Url()}{GetFirstMatchingUrl()}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Get\+First\+Matching\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Prefix,  }\item[{const char $\ast$}]{p\+Opt\+Ext,  }\item[{const \hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Doc,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Resolved\+Path }\end{DoxyParamCaption}) const}
+
+Looks for the first file that matches a specified \char`\"{}pattern\char`\"{}, which is built as\+:
+
+if p\+Opt\+Ext is given\+: prefix$\ast$.ext If p\+Opt\+Ext is N\+U\+LL\+: prefix$\ast$ if p\+Opt\+Ext is \char`\"{}\char`\"{} or \char`\"{}.\char`\"{}\+: prefix$\ast$.
+
+Returns the U\+RL of the first matching files. This function cannot be used to resolve folders, only files.
+
+If a document is given, we start by looking at the document\textquotesingle{}s \char`\"{}.\+fbm\char`\"{} folder. 
+\begin{DoxyParams}{引数}
+{\em p\+Prefix} & The prefix of the pattern. \\
+\hline
+{\em p\+Opt\+Ext} & The extension of the pattern. \\
+\hline
+{\em p\+Doc} & The given document. \\
+\hline
+{\em p\+Resolved\+Path} & Filled with the first matching U\+RL. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if one matching file is found, returns {\ttfamily false} if no matching file is found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ae4653dc13a58d58f84e4b4760568e756}\label{class_fbx_x_ref_manager_ae4653dc13a58d58f84e4b4760568e756}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+Resolved\+Url@{Get\+Resolved\+Url}}
+\index{Get\+Resolved\+Url@{Get\+Resolved\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Resolved\+Url()}{GetResolvedUrl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Get\+Resolved\+Url (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} const \&}]{p\+Property,  }\item[{int}]{p\+Index,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Resolved\+Path }\end{DoxyParamCaption}) const}
+
+Tries to resolve the U\+RL stored in the property at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property. \\
+\hline
+{\em p\+Index} & The U\+RL index. \\
+\hline
+{\em p\+Resolved\+Path} & Filled with the resolved path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the U\+RL is resolved, return {\ttfamily false} if the U\+RL is not resolved. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_aaa0d59a531dffa6c36266328b60ca012}\label{class_fbx_x_ref_manager_aaa0d59a531dffa6c36266328b60ca012}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+Resolved\+Url@{Get\+Resolved\+Url}}
+\index{Get\+Resolved\+Url@{Get\+Resolved\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Resolved\+Url()}{GetResolvedUrl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Get\+Resolved\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Url,  }\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Doc,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Resolved\+Path }\end{DoxyParamCaption}) const}
+
+Tries to resolve the specified U\+RL. 
+\begin{DoxyParams}{引数}
+{\em p\+Url} & The specified U\+RL. \\
+\hline
+{\em p\+Doc} & The document whose \char`\"{}.\+fbm\char`\"{} folder is used to resolve the U\+RL. \\
+\hline
+{\em p\+Resolved\+Path} & Filled with the resolved path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the U\+RL is resolved, return {\ttfamily false} if the U\+RL is not resolved. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a718b1c8f5f9d1e023e8c28811ac84498}\label{class_fbx_x_ref_manager_a718b1c8f5f9d1e023e8c28811ac84498}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+Resolved\+Url@{Get\+Resolved\+Url}}
+\index{Get\+Resolved\+Url@{Get\+Resolved\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Resolved\+Url()}{GetResolvedUrl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Get\+Resolved\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Url,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Resolve\+Path }\end{DoxyParamCaption}) const}
+
+Tries to resolve an relative U\+RL 
+\begin{DoxyParams}{引数}
+{\em p\+Url} & The relative U\+RL to be resolved. \\
+\hline
+{\em p\+Resolve\+Path} & Filled with the resolved path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the U\+RL is resolved, returns {\ttfamily false} if the U\+RL is not resolved. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_af8e33d25b078d1852ef2b252175732d1}\label{class_fbx_x_ref_manager_af8e33d25b078d1852ef2b252175732d1}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+Url@{Get\+Url}}
+\index{Get\+Url@{Get\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Url()}{GetUrl()}}
+{\footnotesize\ttfamily static \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+X\+Ref\+Manager\+::\+Get\+Url (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} const \&}]{p\+Property,  }\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the U\+RL stored in the property at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property. \\
+\hline
+{\em p\+Index} & The U\+RL index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The U\+RL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a9ea29928247d5542e8eaafbea0647201}\label{class_fbx_x_ref_manager_a9ea29928247d5542e8eaafbea0647201}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+Url\+Count@{Get\+Url\+Count}}
+\index{Get\+Url\+Count@{Get\+Url\+Count}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Url\+Count()}{GetUrlCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static int Fbx\+X\+Ref\+Manager\+::\+Get\+Url\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} const \&}]{p\+Property }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the number of U\+R\+Ls that are stored in a property. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The U\+RL count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a619fbdf87fe5db100ad4eada1373b9d0}\label{class_fbx_x_ref_manager_a619fbdf87fe5db100ad4eada1373b9d0}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+Url\+Count@{Get\+Url\+Count}}
+\index{Get\+Url\+Count@{Get\+Url\+Count}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Url\+Count()}{GetUrlCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static int Fbx\+X\+Ref\+Manager\+::\+Get\+Url\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} const \&}]{p\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the number of U\+R\+Ls that are stored in a string. 
+\begin{DoxyParams}{引数}
+{\em p\+Url} & The string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The U\+RL count. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a3d2b5a3a323b7312b7c4344879791976}\label{class_fbx_x_ref_manager_a3d2b5a3a323b7312b7c4344879791976}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+X\+Ref\+Project\+Count@{Get\+X\+Ref\+Project\+Count}}
+\index{Get\+X\+Ref\+Project\+Count@{Get\+X\+Ref\+Project\+Count}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+X\+Ref\+Project\+Count()}{GetXRefProjectCount()}}
+{\footnotesize\ttfamily int Fbx\+X\+Ref\+Manager\+::\+Get\+X\+Ref\+Project\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of X\+Ref Projects. \begin{DoxyReturn}{戻り値}
+The number of X\+Ref Projects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_afdff8c02aaecef12bed630152ba4e2c4}\label{class_fbx_x_ref_manager_afdff8c02aaecef12bed630152ba4e2c4}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+X\+Ref\+Project\+Name@{Get\+X\+Ref\+Project\+Name}}
+\index{Get\+X\+Ref\+Project\+Name@{Get\+X\+Ref\+Project\+Name}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+X\+Ref\+Project\+Name()}{GetXRefProjectName()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::\+Get\+X\+Ref\+Project\+Name (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the name of the X\+Ref project at the specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The X\+Ref project index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The X\+Ref project name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a43c9f593d33d7c8a4275b597d32ecfb7}\label{class_fbx_x_ref_manager_a43c9f593d33d7c8a4275b597d32ecfb7}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+X\+Ref\+Project\+Url@{Get\+X\+Ref\+Project\+Url}}
+\index{Get\+X\+Ref\+Project\+Url@{Get\+X\+Ref\+Project\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+X\+Ref\+Project\+Url()}{GetXRefProjectUrl()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::\+Get\+X\+Ref\+Project\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Returns the base U\+RL for the given project. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the given project \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The base U\+RL of the project or returns N\+U\+LL if the project with the name is not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a77d5c777e93f8b03938c07c7ea115dc2}\label{class_fbx_x_ref_manager_a77d5c777e93f8b03938c07c7ea115dc2}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+X\+Ref\+Project\+Url@{Get\+X\+Ref\+Project\+Url}}
+\index{Get\+X\+Ref\+Project\+Url@{Get\+X\+Ref\+Project\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+X\+Ref\+Project\+Url()}{GetXRefProjectUrl()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::\+Get\+X\+Ref\+Project\+Url (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption}) const}
+
+Returns the base U\+RL for the given project. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the given project \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The base U\+RL of the project or returns N\+U\+LL if the project with the name is not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ab8f651bb9163d1c7ba56586c0c879c07}\label{class_fbx_x_ref_manager_ab8f651bb9163d1c7ba56586c0c879c07}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Get\+X\+Ref\+Project\+Url@{Get\+X\+Ref\+Project\+Url}}
+\index{Get\+X\+Ref\+Project\+Url@{Get\+X\+Ref\+Project\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Get\+X\+Ref\+Project\+Url()}{GetXRefProjectUrl()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::\+Get\+X\+Ref\+Project\+Url (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Returns the base U\+RL for the given project. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The base U\+RL of the project or N\+U\+LL if the index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_afa24aa1ef0d54bf0288947f9e005ec7c}\label{class_fbx_x_ref_manager_afa24aa1ef0d54bf0288947f9e005ec7c}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Has\+X\+Ref\+Project@{Has\+X\+Ref\+Project}}
+\index{Has\+X\+Ref\+Project@{Has\+X\+Ref\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Has\+X\+Ref\+Project()}{HasXRefProject()}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Has\+X\+Ref\+Project (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks if a project with the given name is defined in this manager. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the project. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the project is defined in this manager, returns {\ttfamily false} if it isn\textquotesingle{}t defined in this manager. 
+\end{DoxyReturn}
+
+
+ fbxxref.\+h の 209 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a27481156423d70e759c131954e3ea9a0}\label{class_fbx_x_ref_manager_a27481156423d70e759c131954e3ea9a0}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Is\+Relative\+Url@{Is\+Relative\+Url}}
+\index{Is\+Relative\+Url@{Is\+Relative\+Url}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Is\+Relative\+Url()}{IsRelativeUrl()}}
+{\footnotesize\ttfamily static bool Fbx\+X\+Ref\+Manager\+::\+Is\+Relative\+Url (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_property}{Fbx\+Property} const \&}]{p\+Property,  }\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks whether the U\+RL at the given index stored in the property is relative or not. 
+\begin{DoxyParams}{引数}
+{\em p\+Property} & The property. \\
+\hline
+{\em p\+Index} & The U\+RL index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the U\+RL is relative, {\ttfamily false} if the U\+RL is not relative. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ae590ccb6ae282bed68c60bf697cd2645}\label{class_fbx_x_ref_manager_ae590ccb6ae282bed68c60bf697cd2645}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Remove\+All\+X\+Ref\+Projects@{Remove\+All\+X\+Ref\+Projects}}
+\index{Remove\+All\+X\+Ref\+Projects@{Remove\+All\+X\+Ref\+Projects}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+All\+X\+Ref\+Projects()}{RemoveAllXRefProjects()}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Remove\+All\+X\+Ref\+Projects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all X\+Ref Projects. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} always. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a910538a083181d0552e00f6a852ac8e4}\label{class_fbx_x_ref_manager_a910538a083181d0552e00f6a852ac8e4}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!Remove\+X\+Ref\+Project@{Remove\+X\+Ref\+Project}}
+\index{Remove\+X\+Ref\+Project@{Remove\+X\+Ref\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{Remove\+X\+Ref\+Project()}{RemoveXRefProject()}}
+{\footnotesize\ttfamily bool Fbx\+X\+Ref\+Manager\+::\+Remove\+X\+Ref\+Project (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Removes an X\+Ref Projects. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & The name of the project to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the project is removed successfully, returns {\ttfamily false} if the project with the name does not exist. 
+\end{DoxyReturn}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a2b587f862e487323d69830ecb3c148a3}\label{class_fbx_x_ref_manager_a2b587f862e487323d69830ecb3c148a3}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!s\+Configuration\+Project@{s\+Configuration\+Project}}
+\index{s\+Configuration\+Project@{s\+Configuration\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{s\+Configuration\+Project}{sConfigurationProject}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::s\+Configuration\+Project\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This project represents an U\+RL for configuration files. 
+
+
+
+ fbxxref.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_x_ref_manager_a9d815646f6d592942ce288a4de5eb39d}\label{class_fbx_x_ref_manager_a9d815646f6d592942ce288a4de5eb39d}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!s\+Embedded\+File\+Project@{s\+Embedded\+File\+Project}}
+\index{s\+Embedded\+File\+Project@{s\+Embedded\+File\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{s\+Embedded\+File\+Project}{sEmbeddedFileProject}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::s\+Embedded\+File\+Project\hspace{0.3cm}{\ttfamily [static]}}
+
+This project is used for creating the \char`\"{}.\+fbm\char`\"{} folders that are used for storing embedded resources in F\+BX files.
+
+When not set, or if the folder is not writable, the \char`\"{}.\+fbm\char`\"{} folder is created alongside the F\+BX file.
+
+If we cannot write in that folder, we look at the s\+Temporary\+File\+Project location. If no folder is set in the s\+Temporary\+File\+Project location, or it is not writable, the operating system\textquotesingle{}s Temp folder becomes the location. 
+
+ fbxxref.\+h の 63 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ac37aa54c7d0914ed376e7f4dd6f51229}\label{class_fbx_x_ref_manager_ac37aa54c7d0914ed376e7f4dd6f51229}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!s\+Localization\+Project@{s\+Localization\+Project}}
+\index{s\+Localization\+Project@{s\+Localization\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{s\+Localization\+Project}{sLocalizationProject}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::s\+Localization\+Project\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This project represents an U\+RL for storing localization files (that is not part of the asset library). 
+
+
+
+ fbxxref.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_x_ref_manager_ac1e95d1bc9cb30f5e9c75f08791e286f}\label{class_fbx_x_ref_manager_ac1e95d1bc9cb30f5e9c75f08791e286f}} 
+\index{Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}!s\+Temporary\+File\+Project@{s\+Temporary\+File\+Project}}
+\index{s\+Temporary\+File\+Project@{s\+Temporary\+File\+Project}!Fbx\+X\+Ref\+Manager@{Fbx\+X\+Ref\+Manager}}
+\subsubsection{\texorpdfstring{s\+Temporary\+File\+Project}{sTemporaryFileProject}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+X\+Ref\+Manager\+::s\+Temporary\+File\+Project\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+This project represents an U\+RL for storing temporary files. 
+
+
+
+ fbxxref.\+h の 45 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxxref_8h}{fbxxref.\+h}\end{DoxyCompactItemize}

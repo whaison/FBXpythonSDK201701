@@ -1,0 +1,271 @@
+\hypertarget{class_fbx_binding_table_entry}{}\section{Fbx\+Binding\+Table\+Entry クラス}
+\label{class_fbx_binding_table_entry}\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+
+
+{\ttfamily \#include $<$fbxbindingtableentry.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} \& \hyperlink{class_fbx_binding_table_entry_ae1019a3507f988ab66e09adb93326ae4}{operator=} (const \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} \&p\+Entry)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_binding_table_entry_a9fe2b8742a77e290a15287b4dbc1df74}{m\+Source}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_binding_table_entry_adf7efee81ae6e2f07a52e112f8345df9}{m\+Destination}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_binding_table_entry_ad2f8a7934ffbeb6eb7bc83fa5f5e8d06}{m\+Source\+Type}
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_binding_table_entry_a569eeb447b060f779b4dced59c962af8}{m\+Destination\+Type}
+\item 
+void $\ast$ \hyperlink{class_fbx_binding_table_entry_a2fd0df2140365960261ac038b797f0f3}{m\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_binding_table_entry_adb98df78de880e1573a752f39b757106}{Fbx\+Binding\+Table\+Entry} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_binding_table_entry_a8abd468d6785e4d7111e4497daedf341}{Fbx\+Binding\+Table\+Entry} (const \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} \&p\+Entry)
+\item 
+\hyperlink{class_fbx_binding_table_entry_aefa8ba4b1276024d35fa49521e471d81}{$\sim$\+Fbx\+Binding\+Table\+Entry} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Access}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_binding_table_entry_abd6159bc2bfa28f28a5b5bd0a5e63c97}{Set\+Source} (const char $\ast$p\+Source)
+\item 
+const char $\ast$ \hyperlink{class_fbx_binding_table_entry_a0c5a62a50a5fbc5408ab3ec1af16518f}{Get\+Source} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the source. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_binding_table_entry_aaa49a62bd197febfb6052f3efa50eaf3}{Set\+Destination} (const char $\ast$p\+Destination)
+\item 
+const char $\ast$ \hyperlink{class_fbx_binding_table_entry_acee5bfe3f994725cca8670d2974b654a}{Get\+Destination} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the destination. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_binding_table_entry_a9e54bf1bb2bd0bcca05b7b6a057b0b8a}{Set\+Entry\+Type} (const char $\ast$p\+Type, bool p\+As\+Source)
+\item 
+const char $\ast$ \hyperlink{class_fbx_binding_table_entry_a9c116ecffcff4117ff1d3c69cf414b70}{Get\+Entry\+Type} (bool p\+As\+Source) const
+\item 
+void $\ast$ \hyperlink{class_fbx_binding_table_entry_a108bed4ff64375a63667fb20eb24ec8d}{Get\+User\+Data\+Ptr} ()
+\item 
+const void $\ast$ \hyperlink{class_fbx_binding_table_entry_aa9f5f5064caf0f961464d2555e3336ba}{Get\+User\+Data\+Ptr} () const
+\item 
+void \hyperlink{class_fbx_binding_table_entry_aea364cf8ef84414bf9524636e8407498}{Set\+User\+Data\+Ptr} (void $\ast$p\+Data)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+A binding table entry stores a binding between a source and a destination. Users should not instantiate this class directly, but always call \hyperlink{class_fbx_binding_table_base_a2ebf180e80538abf0e6512a8ca30ee10}{Fbx\+Binding\+Table\+Base\+::\+Add\+New\+Entry()} to create a new entry in the binding table. 
+
+ fbxbindingtableentry.\+h の 28 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_adb98df78de880e1573a752f39b757106}\label{class_fbx_binding_table_entry_adb98df78de880e1573a752f39b757106}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Fbx\+Binding\+Table\+Entry()}{FbxBindingTableEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Binding\+Table\+Entry\+::\+Fbx\+Binding\+Table\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a8abd468d6785e4d7111e4497daedf341}\label{class_fbx_binding_table_entry_a8abd468d6785e4d7111e4497daedf341}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Fbx\+Binding\+Table\+Entry()}{FbxBindingTableEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Binding\+Table\+Entry\+::\+Fbx\+Binding\+Table\+Entry (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} \&}]{p\+Entry }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry} & \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} to be copied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+the User\+Data\+Ptr is a shared pointer. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_aefa8ba4b1276024d35fa49521e471d81}\label{class_fbx_binding_table_entry_aefa8ba4b1276024d35fa49521e471d81}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!````~Fbx\+Binding\+Table\+Entry@{$\sim$\+Fbx\+Binding\+Table\+Entry}}
+\index{````~Fbx\+Binding\+Table\+Entry@{$\sim$\+Fbx\+Binding\+Table\+Entry}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Binding\+Table\+Entry()}{~FbxBindingTableEntry()}}
+{\footnotesize\ttfamily Fbx\+Binding\+Table\+Entry\+::$\sim$\+Fbx\+Binding\+Table\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_acee5bfe3f994725cca8670d2974b654a}\label{class_fbx_binding_table_entry_acee5bfe3f994725cca8670d2974b654a}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Get\+Destination@{Get\+Destination}}
+\index{Get\+Destination@{Get\+Destination}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Destination()}{GetDestination()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Table\+Entry\+::\+Get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve the destination. 
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a9c116ecffcff4117ff1d3c69cf414b70}\label{class_fbx_binding_table_entry_a9c116ecffcff4117ff1d3c69cf414b70}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Get\+Entry\+Type@{Get\+Entry\+Type}}
+\index{Get\+Entry\+Type@{Get\+Entry\+Type}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Entry\+Type()}{GetEntryType()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Table\+Entry\+::\+Get\+Entry\+Type (\begin{DoxyParamCaption}\item[{bool}]{p\+As\+Source }\end{DoxyParamCaption}) const}
+
+Get the source type or destination type. 
+\begin{DoxyParams}{引数}
+{\em p\+As\+Source} & Flag indicates source type or destination type to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Source type or destination type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a0c5a62a50a5fbc5408ab3ec1af16518f}\label{class_fbx_binding_table_entry_a0c5a62a50a5fbc5408ab3ec1af16518f}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Get\+Source@{Get\+Source}}
+\index{Get\+Source@{Get\+Source}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Source()}{GetSource()}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Binding\+Table\+Entry\+::\+Get\+Source (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve the source. 
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a108bed4ff64375a63667fb20eb24ec8d}\label{class_fbx_binding_table_entry_a108bed4ff64375a63667fb20eb24ec8d}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Get\+User\+Data\+Ptr@{Get\+User\+Data\+Ptr}}
+\index{Get\+User\+Data\+Ptr@{Get\+User\+Data\+Ptr}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Get\+User\+Data\+Ptr()}{GetUserDataPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Binding\+Table\+Entry\+::\+Get\+User\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve user data pointer. \begin{DoxyReturn}{戻り値}
+User data pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_aa9f5f5064caf0f961464d2555e3336ba}\label{class_fbx_binding_table_entry_aa9f5f5064caf0f961464d2555e3336ba}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Get\+User\+Data\+Ptr@{Get\+User\+Data\+Ptr}}
+\index{Get\+User\+Data\+Ptr@{Get\+User\+Data\+Ptr}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Get\+User\+Data\+Ptr()}{GetUserDataPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const void$\ast$ Fbx\+Binding\+Table\+Entry\+::\+Get\+User\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve user data pointer. \begin{DoxyReturn}{戻り値}
+User data pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_ae1019a3507f988ab66e09adb93326ae4}\label{class_fbx_binding_table_entry_ae1019a3507f988ab66e09adb93326ae4}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry}\& Fbx\+Binding\+Table\+Entry\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} \&}]{p\+Entry }\end{DoxyParamCaption})}
+
+Assignment operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry} & \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} assigned to this one. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+the User\+Data\+Ptr is a shared pointer. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_aaa49a62bd197febfb6052f3efa50eaf3}\label{class_fbx_binding_table_entry_aaa49a62bd197febfb6052f3efa50eaf3}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Set\+Destination@{Set\+Destination}}
+\index{Set\+Destination@{Set\+Destination}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Set\+Destination()}{SetDestination()}}
+{\footnotesize\ttfamily void Fbx\+Binding\+Table\+Entry\+::\+Set\+Destination (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Destination }\end{DoxyParamCaption})}
+
+Set the destination. 
+\begin{DoxyParams}{引数}
+{\em p\+Destination} & The destination to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a9e54bf1bb2bd0bcca05b7b6a057b0b8a}\label{class_fbx_binding_table_entry_a9e54bf1bb2bd0bcca05b7b6a057b0b8a}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Set\+Entry\+Type@{Set\+Entry\+Type}}
+\index{Set\+Entry\+Type@{Set\+Entry\+Type}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Set\+Entry\+Type()}{SetEntryType()}}
+{\footnotesize\ttfamily void Fbx\+Binding\+Table\+Entry\+::\+Set\+Entry\+Type (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Type,  }\item[{bool}]{p\+As\+Source }\end{DoxyParamCaption})}
+
+Set the source type or destination type. 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The source type or destination type to set. \\
+\hline
+{\em p\+As\+Source} & Flag indicates source type or destination type to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_abd6159bc2bfa28f28a5b5bd0a5e63c97}\label{class_fbx_binding_table_entry_abd6159bc2bfa28f28a5b5bd0a5e63c97}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Set\+Source@{Set\+Source}}
+\index{Set\+Source@{Set\+Source}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Set\+Source()}{SetSource()}}
+{\footnotesize\ttfamily void Fbx\+Binding\+Table\+Entry\+::\+Set\+Source (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Source }\end{DoxyParamCaption})}
+
+Set the source. 
+\begin{DoxyParams}{引数}
+{\em p\+Source} & The source to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_aea364cf8ef84414bf9524636e8407498}\label{class_fbx_binding_table_entry_aea364cf8ef84414bf9524636e8407498}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!Set\+User\+Data\+Ptr@{Set\+User\+Data\+Ptr}}
+\index{Set\+User\+Data\+Ptr@{Set\+User\+Data\+Ptr}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{Set\+User\+Data\+Ptr()}{SetUserDataPtr()}}
+{\footnotesize\ttfamily void Fbx\+Binding\+Table\+Entry\+::\+Set\+User\+Data\+Ptr (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Data }\end{DoxyParamCaption})}
+
+Set user data pointer. 
+\begin{DoxyParams}{引数}
+{\em p\+Data} & user data pointer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a2fd0df2140365960261ac038b797f0f3}\label{class_fbx_binding_table_entry_a2fd0df2140365960261ac038b797f0f3}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!m\+Data@{m\+Data}}
+\index{m\+Data@{m\+Data}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{m\+Data}{mData}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Binding\+Table\+Entry\+::m\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxbindingtableentry.\+h の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_adf7efee81ae6e2f07a52e112f8345df9}\label{class_fbx_binding_table_entry_adf7efee81ae6e2f07a52e112f8345df9}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!m\+Destination@{m\+Destination}}
+\index{m\+Destination@{m\+Destination}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{m\+Destination}{mDestination}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Binding\+Table\+Entry\+::m\+Destination\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxbindingtableentry.\+h の 108 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a569eeb447b060f779b4dced59c962af8}\label{class_fbx_binding_table_entry_a569eeb447b060f779b4dced59c962af8}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!m\+Destination\+Type@{m\+Destination\+Type}}
+\index{m\+Destination\+Type@{m\+Destination\+Type}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{m\+Destination\+Type}{mDestinationType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Binding\+Table\+Entry\+::m\+Destination\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxbindingtableentry.\+h の 110 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_a9fe2b8742a77e290a15287b4dbc1df74}\label{class_fbx_binding_table_entry_a9fe2b8742a77e290a15287b4dbc1df74}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!m\+Source@{m\+Source}}
+\index{m\+Source@{m\+Source}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{m\+Source}{mSource}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Binding\+Table\+Entry\+::m\+Source\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxbindingtableentry.\+h の 107 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_binding_table_entry_ad2f8a7934ffbeb6eb7bc83fa5f5e8d06}\label{class_fbx_binding_table_entry_ad2f8a7934ffbeb6eb7bc83fa5f5e8d06}} 
+\index{Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}!m\+Source\+Type@{m\+Source\+Type}}
+\index{m\+Source\+Type@{m\+Source\+Type}!Fbx\+Binding\+Table\+Entry@{Fbx\+Binding\+Table\+Entry}}
+\subsubsection{\texorpdfstring{m\+Source\+Type}{mSourceType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Binding\+Table\+Entry\+::m\+Source\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxbindingtableentry.\+h の 109 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxbindingtableentry_8h}{fbxbindingtableentry.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,119 @@
+\hypertarget{class_fbx_base_allocator}{}\section{Fbx\+Base\+Allocator クラス}
+\label{class_fbx_base_allocator}\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+
+
+{\ttfamily \#include $<$fbxcontainerallocators.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_base_allocator_a9597eb137f26dc696170b9eddf0298a5}{Fbx\+Base\+Allocator} (const size\+\_\+t p\+Record\+Size)
+\item 
+void \hyperlink{class_fbx_base_allocator_ad84870f23a2b067b3bade2604dab2621}{Reserve} (const size\+\_\+t)
+\item 
+void $\ast$ \hyperlink{class_fbx_base_allocator_a3701773862fa1a808aaff72a3b541d8f}{Allocate\+Records} (const size\+\_\+t p\+Record\+Count=1)
+\item 
+void \hyperlink{class_fbx_base_allocator_a345b6d46e57e8313966a5f3654d1195c}{Free\+Memory} (void $\ast$p\+Record)
+\item 
+size\+\_\+t \hyperlink{class_fbx_base_allocator_ab7aa3164aa6fc973baca1515b494198f}{Get\+Record\+Size} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+An allocator class for use as a template parameter to one of the container class (\hyperlink{class_fbx_map}{Fbx\+Map}, \hyperlink{class_fbx_set}{Fbx\+Set}, \hyperlink{class_fbx_dynamic_array}{Fbx\+Dynamic\+Array}...) must implement these. 
+
+ fbxcontainerallocators.\+h の 23 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_base_allocator_a9597eb137f26dc696170b9eddf0298a5}\label{class_fbx_base_allocator_a9597eb137f26dc696170b9eddf0298a5}} 
+\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}!Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}!Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+\subsubsection{\texorpdfstring{Fbx\+Base\+Allocator()}{FbxBaseAllocator()}}
+{\footnotesize\ttfamily Fbx\+Base\+Allocator\+::\+Fbx\+Base\+Allocator (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Record\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+The class constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Record\+Size} & the size of one record held by the container. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The parameter p\+Record\+Size is not necessarily the same size as of the value type, since the container may wrap the value into a private class. 
+\end{DoxyRemark}
+
+
+ fbxcontainerallocators.\+h の 32 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_base_allocator_a3701773862fa1a808aaff72a3b541d8f}\label{class_fbx_base_allocator_a3701773862fa1a808aaff72a3b541d8f}} 
+\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}!Allocate\+Records@{Allocate\+Records}}
+\index{Allocate\+Records@{Allocate\+Records}!Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+\subsubsection{\texorpdfstring{Allocate\+Records()}{AllocateRecords()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Base\+Allocator\+::\+Allocate\+Records (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{p\+Record\+Count = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to a uninitialized continuous block of memory able to hold p\+Record\+Count $\ast$ p\+Record\+Size bytes. 
+\begin{DoxyParams}{引数}
+{\em p\+Record\+Count} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+p\+Record\+Size was defined in the Constructor description, above. 
+\end{DoxyRemark}
+
+
+ fbxcontainerallocators.\+h の 54 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_base_allocator_a345b6d46e57e8313966a5f3654d1195c}\label{class_fbx_base_allocator_a345b6d46e57e8313966a5f3654d1195c}} 
+\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}!Free\+Memory@{Free\+Memory}}
+\index{Free\+Memory@{Free\+Memory}!Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+\subsubsection{\texorpdfstring{Free\+Memory()}{FreeMemory()}}
+{\footnotesize\ttfamily void Fbx\+Base\+Allocator\+::\+Free\+Memory (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Frees a block of memory returned by Allocate\+Records. 
+\begin{DoxyParams}{引数}
+{\em p\+Record} & \\
+\hline
+\end{DoxyParams}
+
+
+ fbxcontainerallocators.\+h の 62 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_base_allocator_ab7aa3164aa6fc973baca1515b494198f}\label{class_fbx_base_allocator_ab7aa3164aa6fc973baca1515b494198f}} 
+\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}!Get\+Record\+Size@{Get\+Record\+Size}}
+\index{Get\+Record\+Size@{Get\+Record\+Size}!Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+\subsubsection{\texorpdfstring{Get\+Record\+Size()}{GetRecordSize()}}
+{\footnotesize\ttfamily size\+\_\+t Fbx\+Base\+Allocator\+::\+Get\+Record\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{戻り値}
+the size of each record allocated. 
+\end{DoxyReturn}
+
+
+ fbxcontainerallocators.\+h の 69 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_base_allocator_ad84870f23a2b067b3bade2604dab2621}\label{class_fbx_base_allocator_ad84870f23a2b067b3bade2604dab2621}} 
+\index{Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}!Reserve@{Reserve}}
+\index{Reserve@{Reserve}!Fbx\+Base\+Allocator@{Fbx\+Base\+Allocator}}
+\subsubsection{\texorpdfstring{Reserve()}{Reserve()}}
+{\footnotesize\ttfamily void Fbx\+Base\+Allocator\+::\+Reserve (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+This tells the allocator that we are about to call Allocate\+Records one or many times to allocate p\+Record\+Count records. 
+\begin{DoxyParams}{引数}
+{\em p\+Record\+Count} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+This gives the allocator a chance to do whatever it deems necessary to optimize subsequent allocations, for example, by preallocating a sufficiently large pool of memory. 
+\end{DoxyRemark}
+
+
+ fbxcontainerallocators.\+h の 44 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxcontainerallocators_8h}{fbxcontainerallocators.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{fbxclock_8h}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/include/fbxsdk/core/sync/fbxclock.h ファイル}
+\label{fbxclock_8h}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/sync/fbxclock.\+h@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/sync/fbxclock.\+h}}
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+def.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsbegin.\+h$>$}\newline
+{\ttfamily \#include $<$fbxsdk/fbxsdk\+\_\+nsend.\+h$>$}\newline
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void \hyperlink{fbxclock_8h_a693e90bbe70844052b885c7df0fe332b}{Fbx\+Sleep} (int p\+Milliseconds)
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxclock_8h_a48e1e00e3af91ee198b963bd8d275613}{Fbx\+Get\+High\+Res\+Counter} ()
+\item 
+\hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} \hyperlink{fbxclock_8h_ac79f90f3d50506f5bce740aa5ff6e993}{Fbx\+Get\+High\+Res\+Frequency} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{fbxclock_8h_a48e1e00e3af91ee198b963bd8d275613}\label{fbxclock_8h_a48e1e00e3af91ee198b963bd8d275613}} 
+\index{fbxclock.\+h@{fbxclock.\+h}!Fbx\+Get\+High\+Res\+Counter@{Fbx\+Get\+High\+Res\+Counter}}
+\index{Fbx\+Get\+High\+Res\+Counter@{Fbx\+Get\+High\+Res\+Counter}!fbxclock.\+h@{fbxclock.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Get\+High\+Res\+Counter()}{FbxGetHighResCounter()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+Get\+High\+Res\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the current value of the high-\/resolution performance counter. \begin{DoxyReturn}{戻り値}
+The current value of the high-\/resolution performance counter, in \char`\"{}counts\char`\"{}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To convert \char`\"{}counts\char`\"{} into time, divide it by the frequency available from \hyperlink{fbxclock_8h_ac79f90f3d50506f5bce740aa5ff6e993}{Fbx\+Get\+High\+Res\+Frequency()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{fbxclock_8h_ac79f90f3d50506f5bce740aa5ff6e993}\label{fbxclock_8h_ac79f90f3d50506f5bce740aa5ff6e993}} 
+\index{fbxclock.\+h@{fbxclock.\+h}!Fbx\+Get\+High\+Res\+Frequency@{Fbx\+Get\+High\+Res\+Frequency}}
+\index{Fbx\+Get\+High\+Res\+Frequency@{Fbx\+Get\+High\+Res\+Frequency}!fbxclock.\+h@{fbxclock.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Get\+High\+Res\+Frequency()}{FbxGetHighResFrequency()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} \hyperlink{fbxtypes_8h_ac34da60c22b0a7e1156e5480da7d71f1}{Fbx\+Long\+Long} Fbx\+Get\+High\+Res\+Frequency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieves the frequency of the high-\/resolution performance counter. \begin{DoxyReturn}{戻り値}
+The frequency of the high-\/resolution performance counter value, in \char`\"{}counts\char`\"{} per second. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The first time this function is called, the frequency is queried from the system and then cached so that further requests are fast. This means it is guaranteed to not change during run-\/time. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{fbxclock_8h_a693e90bbe70844052b885c7df0fe332b}\label{fbxclock_8h_a693e90bbe70844052b885c7df0fe332b}} 
+\index{fbxclock.\+h@{fbxclock.\+h}!Fbx\+Sleep@{Fbx\+Sleep}}
+\index{Fbx\+Sleep@{Fbx\+Sleep}!fbxclock.\+h@{fbxclock.\+h}}
+\subsubsection{\texorpdfstring{Fbx\+Sleep()}{FbxSleep()}}
+{\footnotesize\ttfamily \hyperlink{fbxarch_8h_a25d1298b33c31da5dbed969e0d4b4bc1}{F\+B\+X\+S\+D\+K\+\_\+\+D\+LL} void Fbx\+Sleep (\begin{DoxyParamCaption}\item[{int}]{p\+Milliseconds }\end{DoxyParamCaption})}
+
+Put the current thread to sleep. 
+\begin{DoxyParams}{引数}
+{\em p\+Milliseconds} & The duration of the sleep in milli-\/seconds. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/core/base/fbxmultimap.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_1ce401db224ad750f31980d76a4b573f.html">include</a></li><li class="navelem"><a class="el" href="dir_035686f885016bbe7a8de4bfce896a3f.html">fbxsdk</a></li><li class="navelem"><a class="el" href="dir_d0e04206037511caa7947a04e3bd094b.html">core</a></li><li class="navelem"><a class="el" href="dir_a298ec56c0e5eabb962d5fd8f855a7c7.html">base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fbxmultimap.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fbxmultimap_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************************************</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">   Copyright (C) 2015 Autodesk, Inc.</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">   All rights reserved.</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">   Use of this software is subject to the terms of the Autodesk license agreement</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">   provided at the time of installation or download, or which otherwise accompanies</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">   this software in either electronic or hard copy form.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> </span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">****************************************************************************************/</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef _FBXSDK_CORE_BASE_MULTIMAP_H_</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define _FBXSDK_CORE_BASE_MULTIMAP_H_</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__def_8h.html">fbxsdk/fbxsdk_def.h</a>&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsbegin_8h.html">fbxsdk/fbxsdk_nsbegin.h</a>&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_fbx_multi_map.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a> <a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="struct_fbx_multi_map_1_1_pair.html">   25</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_fbx_multi_map_1_1_pair.html">Pair</a></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="struct_fbx_multi_map_1_1_pair.html#a1f27833009f19a3416efb50bc74c9e3e">   27</a></span>&#160;        FbxHandle <a class="code" href="struct_fbx_multi_map_1_1_pair.html#a1f27833009f19a3416efb50bc74c9e3e">mKey</a>;</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="struct_fbx_multi_map_1_1_pair.html#a7754a75906a6dbf593cfe25f235e28b4">   28</a></span>&#160;        FbxHandle <a class="code" href="struct_fbx_multi_map_1_1_pair.html#a7754a75906a6dbf593cfe25f235e28b4">mItem</a>;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    };</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> Add(FbxHandle pKey, FbxHandle pItem);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">bool</span> Remove(FbxHandle pKey);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> RemoveItem(FbxHandle pItem);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">bool</span> SetItem(FbxHandle pKey, FbxHandle pItem);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    FbxHandle Get(FbxHandle pKey, <span class="keywordtype">int</span>* pIndex=<a class="code" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> Clear();</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    FbxHandle GetFromIndex(<span class="keywordtype">int</span> pIndex, FbxHandle* pKey=<a class="code" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">bool</span> RemoveFromIndex(<span class="keywordtype">int</span> pIndex);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="class_fbx_multi_map.html#a5e496eeb0e6154087fd2259539c16782">   84</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_fbx_multi_map.html#a5e496eeb0e6154087fd2259539c16782">GetCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mSetCount; }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> Swap();</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> Sort();</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">/*****************************************************************************************************************************</span></div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">** WARNING! Anything beyond these lines is for internal use, may not be documented and is subject to change without notice! **</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">*****************************************************************************************************************************/</span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#ifndef DOXYGEN_SHOULD_SKIP_THIS</span></div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a>(<span class="keywordtype">int</span> pItemPerBlock=20);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a>(<span class="keyword">const</span> <a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a>&amp; pOther);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ~<a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a>();</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a>&amp; operator=(<span class="keyword">const</span> <a class="code" href="class_fbx_multi_map.html">FbxMultiMap</a>&amp;);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="struct_fbx_multi_map_1_1_pair.html">Pair</a>*   FindEqual(FbxHandle pKey) <span class="keyword">const</span>;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="struct_fbx_multi_map_1_1_pair.html">Pair</a>*   mSetArray;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">int</span>     mSetCount;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">int</span>     mBlockCount;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span>     mItemPerBlock;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">bool</span>    mIsChanged;</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !DOXYGEN_SHOULD_SKIP_THIS *****************************************************************************************/</span><span class="preprocessor"></span></div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="fbxsdk__nsend_8h.html">fbxsdk/fbxsdk_nsend.h</a>&gt;</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _FBXSDK_CORE_BASE_MULTIMAP_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="fbxsdk__def_8h_html"><div class="ttname"><a href="fbxsdk__def_8h.html">fbxsdk_def.h</a></div></div>
+<div class="ttc" id="struct_fbx_multi_map_1_1_pair_html_a1f27833009f19a3416efb50bc74c9e3e"><div class="ttname"><a href="struct_fbx_multi_map_1_1_pair.html#a1f27833009f19a3416efb50bc74c9e3e">FbxMultiMap::Pair::mKey</a></div><div class="ttdeci">FbxHandle mKey</div><div class="ttdef"><b>Definition:</b> <a href="fbxmultimap_8h_source.html#l00027">fbxmultimap.h:27</a></div></div>
+<div class="ttc" id="fbxarch_8h_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="fbxarch_8h_source.html#l00210">fbxarch.h:210</a></div></div>
+<div class="ttc" id="fbxsdk__nsbegin_8h_html"><div class="ttname"><a href="fbxsdk__nsbegin_8h.html">fbxsdk_nsbegin.h</a></div></div>
+<div class="ttc" id="struct_fbx_multi_map_1_1_pair_html_a7754a75906a6dbf593cfe25f235e28b4"><div class="ttname"><a href="struct_fbx_multi_map_1_1_pair.html#a7754a75906a6dbf593cfe25f235e28b4">FbxMultiMap::Pair::mItem</a></div><div class="ttdeci">FbxHandle mItem</div><div class="ttdef"><b>Definition:</b> <a href="fbxmultimap_8h_source.html#l00028">fbxmultimap.h:28</a></div></div>
+<div class="ttc" id="fbxsdk__nsend_8h_html"><div class="ttname"><a href="fbxsdk__nsend_8h.html">fbxsdk_nsend.h</a></div></div>
+<div class="ttc" id="class_fbx_multi_map_html_a5e496eeb0e6154087fd2259539c16782"><div class="ttname"><a href="class_fbx_multi_map.html#a5e496eeb0e6154087fd2259539c16782">FbxMultiMap::GetCount</a></div><div class="ttdeci">int GetCount() const</div><div class="ttdef"><b>Definition:</b> <a href="fbxmultimap_8h_source.html#l00084">fbxmultimap.h:84</a></div></div>
+<div class="ttc" id="struct_fbx_multi_map_1_1_pair_html"><div class="ttname"><a href="struct_fbx_multi_map_1_1_pair.html">FbxMultiMap::Pair</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxmultimap_8h_source.html#l00025">fbxmultimap.h:25</a></div></div>
+<div class="ttc" id="fbxarch_8h_html_a25d1298b33c31da5dbed969e0d4b4bc1"><div class="ttname"><a href="fbxarch_8h.html#a25d1298b33c31da5dbed969e0d4b4bc1">FBXSDK_DLL</a></div><div class="ttdeci">#define FBXSDK_DLL</div><div class="ttdef"><b>Definition:</b> <a href="fbxarch_8h_source.html#l00173">fbxarch.h:173</a></div></div>
+<div class="ttc" id="class_fbx_multi_map_html"><div class="ttname"><a href="class_fbx_multi_map.html">FbxMultiMap</a></div><div class="ttdef"><b>Definition:</b> <a href="fbxmultimap_8h_source.html#l00022">fbxmultimap.h:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

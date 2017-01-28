@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/samples/ProceduralTexture/main.cxx ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_71525f077f4c780a76a234e0971e4aab.html">samples</a></li><li class="navelem"><a class="el" href="dir_fefc80b02180e605c8667b97c5a56f74.html">ProceduralTexture</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">main.cxx ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="fbxsdk_8h_source.html">fbxsdk.h</a>&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="_common_8h_source.html">../Common/Common.h</a>&quot;</code><br />
+</div>
+<p><a href="_procedural_texture_2main_8cxx_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aa45ff7031d295cc7efe36fbc2de84821"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#aa45ff7031d295cc7efe36fbc2de84821">SAMPLE_FILENAME</a>&#160;&#160;&#160;&quot;ProceduralTexture.fbx&quot;</td></tr>
+<tr class="separator:aa45ff7031d295cc7efe36fbc2de84821"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fcb0ffd314f21299d5f0f3afc214f68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a0fcb0ffd314f21299d5f0f3afc214f68">TEXTURE_FILENAME</a>&#160;&#160;&#160;&quot;a_texture.jpg&quot;</td></tr>
+<tr class="separator:a0fcb0ffd314f21299d5f0f3afc214f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae3c4c47993a03a3164d819a32931f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#aeae3c4c47993a03a3164d819a32931f5">FILENAME_PROP</a>&#160;&#160;&#160;&quot;Filename&quot;</td></tr>
+<tr class="separator:aeae3c4c47993a03a3164d819a32931f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a8dd868d8455e860ac788f8405e00cf59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a8dd868d8455e860ac788f8405e00cf59">CreateSceneAndSaveFile</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a8dd868d8455e860ac788f8405e00cf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad833cc9782f9abf07d720e890f414c07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#ad833cc9782f9abf07d720e890f414c07">ReadFileAndDumpProceduralTextureBlobOnDisk</a> (int argc, char **argv)</td></tr>
+<tr class="separator:ad833cc9782f9abf07d720e890f414c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2db51da11b84048851ecb8a36dc932"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#adf2db51da11b84048851ecb8a36dc932">DumpProceduralTextureBlobOnDisk</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene)</td></tr>
+<tr class="separator:adf2db51da11b84048851ecb8a36dc932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08e6979c3b1a6b42b5e86d4824b4c764"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a08e6979c3b1a6b42b5e86d4824b4c764">CreateScene</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene)</td></tr>
+<tr class="separator:a08e6979c3b1a6b42b5e86d4824b4c764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfc4a6c5f60ed932696406857bb79b71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#acfc4a6c5f60ed932696406857bb79b71">CreatePlane</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:acfc4a6c5f60ed932696406857bb79b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1150cae05eecfa3b2272c62b52bdf6a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_surface_phong.html">FbxSurfacePhong</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a1150cae05eecfa3b2272c62b52bdf6a4">CreatePhongMaterial</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:a1150cae05eecfa3b2272c62b52bdf6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ebba02cf468b71fb99635ea5089fe93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_procedural_texture.html">FbxProceduralTexture</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a1ebba02cf468b71fb99635ea5089fe93">CreateProceduralTexture</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, const char *pName)</td></tr>
+<tr class="separator:a1ebba02cf468b71fb99635ea5089fe93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba0608d496cd5b3d9dd04f6c345f690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a1ba0608d496cd5b3d9dd04f6c345f690">MapPhong</a> (<a class="el" href="class_fbx_surface_phong.html">FbxSurfacePhong</a> *pPhong, <a class="el" href="class_fbx_node.html">FbxNode</a> *pNode)</td></tr>
+<tr class="separator:a1ba0608d496cd5b3d9dd04f6c345f690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa01ad2d83de9cb058346ec24ee56b871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#aa01ad2d83de9cb058346ec24ee56b871">MapProceduralTexure</a> (<a class="el" href="class_fbx_procedural_texture.html">FbxProceduralTexture</a> *pProcTex, <a class="el" href="class_fbx_node.html">FbxNode</a> *pNode)</td></tr>
+<tr class="separator:aa01ad2d83de9cb058346ec24ee56b871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_procedural_texture_2main_8cxx.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="aeae3c4c47993a03a3164d819a32931f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeae3c4c47993a03a3164d819a32931f5">&#9670;&nbsp;</a></span>FILENAME_PROP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FILENAME_PROP&#160;&#160;&#160;&quot;Filename&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa45ff7031d295cc7efe36fbc2de84821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa45ff7031d295cc7efe36fbc2de84821">&#9670;&nbsp;</a></span>SAMPLE_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SAMPLE_FILENAME&#160;&#160;&#160;&quot;ProceduralTexture.fbx&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00027">27</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a0fcb0ffd314f21299d5f0f3afc214f68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fcb0ffd314f21299d5f0f3afc214f68">&#9670;&nbsp;</a></span>TEXTURE_FILENAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEXTURE_FILENAME&#160;&#160;&#160;&quot;a_texture.jpg&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00028">28</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a1150cae05eecfa3b2272c62b52bdf6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1150cae05eecfa3b2272c62b52bdf6a4">&#9670;&nbsp;</a></span>CreatePhongMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_surface_phong.html">FbxSurfacePhong</a> * CreatePhongMaterial </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00349">349</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acfc4a6c5f60ed932696406857bb79b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfc4a6c5f60ed932696406857bb79b71">&#9670;&nbsp;</a></span>CreatePlane()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_node.html">FbxNode</a> * CreatePlane </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00224">224</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1ebba02cf468b71fb99635ea5089fe93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ebba02cf468b71fb99635ea5089fe93">&#9670;&nbsp;</a></span>CreateProceduralTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_procedural_texture.html">FbxProceduralTexture</a> * CreateProceduralTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00298">298</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a08e6979c3b1a6b42b5e86d4824b4c764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08e6979c3b1a6b42b5e86d4824b4c764">&#9670;&nbsp;</a></span>CreateScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateScene </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00206">206</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8dd868d8455e860ac788f8405e00cf59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd868d8455e860ac788f8405e00cf59">&#9670;&nbsp;</a></span>CreateSceneAndSaveFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CreateSceneAndSaveFile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adf2db51da11b84048851ecb8a36dc932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2db51da11b84048851ecb8a36dc932">&#9670;&nbsp;</a></span>DumpProceduralTextureBlobOnDisk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DumpProceduralTextureBlobOnDisk </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00150">150</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1ba0608d496cd5b3d9dd04f6c345f690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba0608d496cd5b3d9dd04f6c345f690">&#9670;&nbsp;</a></span>MapPhong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapPhong </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_surface_phong.html">FbxSurfacePhong</a> *&#160;</td>
+          <td class="paramname"><em>pPhong</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00372">372</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa01ad2d83de9cb058346ec24ee56b871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01ad2d83de9cb058346ec24ee56b871">&#9670;&nbsp;</a></span>MapProceduralTexure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MapProceduralTexure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_procedural_texture.html">FbxProceduralTexture</a> *&#160;</td>
+          <td class="paramname"><em>pProcTex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00357">357</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad833cc9782f9abf07d720e890f414c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad833cc9782f9abf07d720e890f414c07">&#9670;&nbsp;</a></span>ReadFileAndDumpProceduralTextureBlobOnDisk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ReadFileAndDumpProceduralTextureBlobOnDisk </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_procedural_texture_2main_8cxx_source.html">main.cxx</a> の <a class="el" href="_procedural_texture_2main_8cxx_source.html#l00107">107</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

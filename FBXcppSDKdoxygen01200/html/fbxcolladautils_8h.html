@@ -1,0 +1,2940 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/fileio/collada/fbxcolladautils.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_1ce401db224ad750f31980d76a4b573f.html">include</a></li><li class="navelem"><a class="el" href="dir_035686f885016bbe7a8de4bfce896a3f.html">fbxsdk</a></li><li class="navelem"><a class="el" href="dir_0a04d0ae7d8dc790ba07041c5ccbb736.html">fileio</a></li><li class="navelem"><a class="el" href="dir_b5412dbb73776d1ca596a22610dce062.html">collada</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">fbxcolladautils.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="fbxsdk_8h_source.html">fbxsdk.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="fbxcolladatokens_8h_source.html">fbxsdk/fileio/collada/fbxcolladatokens.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="fbxcolladaiostream_8h_source.html">fbxsdk/fileio/collada/fbxcolladaiostream.h</a>&gt;</code><br />
+<code>#include &lt;components/libxml2-2.7.8/include/libxml/globals.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="fbxsdk__nsbegin_8h_source.html">fbxsdk/fbxsdk_nsbegin.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="fbxsdk__nsend_8h_source.html">fbxsdk/fbxsdk_nsend.h</a>&gt;</code><br />
+</div>
+<p><a href="fbxcolladautils_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xml_node_deletion_policy.html">XmlNodeDeletionPolicy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_collada_layer_traits.html">ColladaLayerTraits</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a9ec306f36d50c7375e74f0d1c55a3a67"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a9ec306f36d50c7375e74f0d1c55a3a67">INT_MAX</a>&#160;&#160;&#160;0x7FFFFFFF</td></tr>
+<tr class="separator:a9ec306f36d50c7375e74f0d1c55a3a67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ed4f0456a44db1ac2eb6869bfa05b40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a4ed4f0456a44db1ac2eb6869bfa05b40">CENTIMETERS_TO_INCHES</a>&#160;&#160;&#160;2.54f</td></tr>
+<tr class="separator:a4ed4f0456a44db1ac2eb6869bfa05b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b541253554905891d06cf62dbec1a41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a5b541253554905891d06cf62dbec1a41">RADIANS_TO_DEGREES</a>&#160;&#160;&#160;57.295799f</td></tr>
+<tr class="separator:a5b541253554905891d06cf62dbec1a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4f3662e371510e23cf90821d35f3cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#aea4f3662e371510e23cf90821d35f3cd">COLLADA_ID_PROPERTY_NAME</a>&#160;&#160;&#160;&quot;COLLADA_ID&quot;</td></tr>
+<tr class="separator:aea4f3662e371510e23cf90821d35f3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:aa3da04a9df039b94266647bf3be1ef4e"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_fbx_auto_ptr.html">FbxAutoPtr</a>&lt; xmlNode, <a class="el" href="class_xml_node_deletion_policy.html">XmlNodeDeletionPolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#aa3da04a9df039b94266647bf3be1ef4e">XmlNodePtr</a></td></tr>
+<tr class="separator:aa3da04a9df039b94266647bf3be1ef4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43e0f8079e4c5df7b8b0496de1f120c3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_fbx_map.html">FbxMap</a>&lt; <a class="el" href="class_fbx_string.html">FbxString</a>, xmlNode *&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a43e0f8079e4c5df7b8b0496de1f120c3">SourceElementMapType</a></td></tr>
+<tr class="separator:a43e0f8079e4c5df7b8b0496de1f120c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a326fd3e57617d1a7fea1b93a791e9fa9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_fbx_map.html">FbxMap</a>&lt; <a class="el" href="class_fbx_string.html">FbxString</a>, xmlNode *&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a326fd3e57617d1a7fea1b93a791e9fa9">SkinMapType</a></td></tr>
+<tr class="separator:a326fd3e57617d1a7fea1b93a791e9fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b8b95b72d4aa9e22c27dbd5e729a62"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; xmlNode * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ac0b8b95b72d4aa9e22c27dbd5e729a62">CNodeList</a></td></tr>
+<tr class="separator:ac0b8b95b72d4aa9e22c27dbd5e729a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a827109d350bbc346ed747395ad742954"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> { <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954a31b1540d32158c4bebf2ab7df31017c3">kCOLLADAFlowIn</a>, 
+<a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954acd9b4a53e2dd37aa147649dbeefd8066">kCOLLADAFlowOut</a>, 
+<a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954aebed33072c831746aca53adab8eb0225">kCOLLADAFlowInOut</a>
+ }</td></tr>
+<tr class="separator:a827109d350bbc346ed747395ad742954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9d6769de96a79448db342865e5997a06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a9d6769de96a79448db342865e5997a06">DAE_AddNotificationError</a> (const <a class="el" href="class_fbx_manager.html">FbxManager</a> *pSdkManger, const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pErrorMessage)</td></tr>
+<tr class="separator:a9d6769de96a79448db342865e5997a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba34b77b00a61f944d6732db57690ed7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#aba34b77b00a61f944d6732db57690ed7">DAE_AddNotificationWarning</a> (const <a class="el" href="class_fbx_manager.html">FbxManager</a> *pSdkManger, const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pWarningMessage)</td></tr>
+<tr class="separator:aba34b77b00a61f944d6732db57690ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf675c242a0dc6fdaf4d3edf2c67598c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#abf675c242a0dc6fdaf4d3edf2c67598c">DAE_ExportArray</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:abf675c242a0dc6fdaf4d3edf2c67598c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0cd39da3d65a79f62d7150d648c72c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ad0cd39da3d65a79f62d7150d648c72c1">DAE_ExportArray</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector2.html">FbxVector2</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:ad0cd39da3d65a79f62d7150d648c72c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7869436a9d9f1609ce9ff850f6c1eb80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a7869436a9d9f1609ce9ff850f6c1eb80">DAE_ExportArray</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:a7869436a9d9f1609ce9ff850f6c1eb80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f10a7ba6ba75ca7dceb04b35e77f2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a25f10a7ba6ba75ca7dceb04b35e77f2b">DAE_ExportArray</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; double &gt; &amp;arr)</td></tr>
+<tr class="separator:a25f10a7ba6ba75ca7dceb04b35e77f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3df96c3af20c989741c452d58b3fa1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ae3df96c3af20c989741c452d58b3fa1e">DAE_ExportArray</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_string_list.html">FbxStringList</a> &amp;arr)</td></tr>
+<tr class="separator:ae3df96c3af20c989741c452d58b3fa1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a54892e2a5b39f0ec5d8ef79d146c21"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a8a54892e2a5b39f0ec5d8ef79d146c21">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_string_list.html">FbxStringList</a> &amp;accessorParams, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; double &gt; &amp;arr, bool isCommonProfile=true)</td></tr>
+<tr class="separator:a8a54892e2a5b39f0ec5d8ef79d146c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dae40a82edcda7650792960dcda9754"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a9dae40a82edcda7650792960dcda9754">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:a9dae40a82edcda7650792960dcda9754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a246d971a23b5dfa3f8a20596da69b586"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a246d971a23b5dfa3f8a20596da69b586">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector2.html">FbxVector2</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:a246d971a23b5dfa3f8a20596da69b586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4cec675cf3d91649f43b3568663929"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a1f4cec675cf3d91649f43b3568663929">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:a1f4cec675cf3d91649f43b3568663929"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace29f87215150a68107b8d3b0ec36b44"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ace29f87215150a68107b8d3b0ec36b44">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:ace29f87215150a68107b8d3b0ec36b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d82d5eb439a27604545ec6bdf05ffae"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a5d82d5eb439a27604545ec6bdf05ffae">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_matrix.html">FbxMatrix</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:a5d82d5eb439a27604545ec6bdf05ffae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a149dd6ea8ee1a9befa42c4d3dd97406f"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a149dd6ea8ee1a9befa42c4d3dd97406f">DAE_ExportSource14</a> (xmlNode *parentXmlNode, const char *id, <a class="el" href="class_fbx_string_list.html">FbxStringList</a> &amp;arr, const char *type, bool isCommonProfile=true)</td></tr>
+<tr class="separator:a149dd6ea8ee1a9befa42c4d3dd97406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a233e04ceda3f31b89b20ecc986c43543"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a233e04ceda3f31b89b20ecc986c43543">DAE_ExportSourceArray</a> (xmlNode *sourceNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:a233e04ceda3f31b89b20ecc986c43543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab57d845aa42e86a41188ce0f3720a438"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ab57d845aa42e86a41188ce0f3720a438">DAE_ExportSourceArray14</a> (xmlNode *sourceNode, const char *id, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;arr)</td></tr>
+<tr class="separator:ab57d845aa42e86a41188ce0f3720a438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79d95745506231173f472ddd98a8d989"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a79d95745506231173f472ddd98a8d989">DAE_ExportAccessor</a> (xmlNode *parentXmlNode, const char *id, const char *arrayRef, int count, int stride, const char *name, const char *type)</td></tr>
+<tr class="separator:a79d95745506231173f472ddd98a8d989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf4235b318314473ffe9011890ea37a0"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#adf4235b318314473ffe9011890ea37a0">DAE_ExportAccessor14</a> (xmlNode *parentXmlNode, const char *id, const char *arrayRef, int count, int stride, const char *name, const char *type)</td></tr>
+<tr class="separator:adf4235b318314473ffe9011890ea37a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2180b302e8d72900293f220a259792c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a2180b302e8d72900293f220a259792c5">DAE_AddXYZAccessor</a> (xmlNode *parentXmlNode, const char *profile, const char *arrayName, const char *arrayRef, int count)</td></tr>
+<tr class="separator:a2180b302e8d72900293f220a259792c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6c73f05217c20fd7b507dd37221b21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ace6c73f05217c20fd7b507dd37221b21">DAE_AddSTAccessor</a> (xmlNode *parentXmlNode, const char *profile, const char *arrayName, const char *arrayRef, int count)</td></tr>
+<tr class="separator:ace6c73f05217c20fd7b507dd37221b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f366ee352dcad5dd1c49e93620d9e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ab6f366ee352dcad5dd1c49e93620d9e8">DAE_AddFlow</a> (xmlNode *node, <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> flow)</td></tr>
+<tr class="separator:ab6f366ee352dcad5dd1c49e93620d9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb20286c631c4639e609bf58b24e9f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a7eb20286c631c4639e609bf58b24e9f2">DAE_AddXYZAccessor14</a> (xmlNode *parentXmlNode, const char *profile, const char *arrayName, const char *arrayRef, int count)</td></tr>
+<tr class="separator:a7eb20286c631c4639e609bf58b24e9f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a810be7de47cba637902466085cf49181"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a810be7de47cba637902466085cf49181">DAE_AddSTAccessor14</a> (xmlNode *parentXmlNode, const char *profile, const char *arrayName, const char *arrayRef, int count)</td></tr>
+<tr class="separator:a810be7de47cba637902466085cf49181"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bbaf8f803089dffc8fa5dc59b921f6"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a80bbaf8f803089dffc8fa5dc59b921f6">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const <a class="el" href="class_fbx_color.html">FbxColor</a> &amp;color, <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> flow)</td></tr>
+<tr class="separator:a80bbaf8f803089dffc8fa5dc59b921f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e58bd4fd7bc24b0a9b191fa4fde1e1"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a28e58bd4fd7bc24b0a9b191fa4fde1e1">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;vector, <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> flow)</td></tr>
+<tr class="separator:a28e58bd4fd7bc24b0a9b191fa4fde1e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7035e5bb43d22318fa7f58727783f2b1"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a7035e5bb43d22318fa7f58727783f2b1">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, double value, <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> flow)</td></tr>
+<tr class="separator:a7035e5bb43d22318fa7f58727783f2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdadf530f8c0f13d178a604fb9eb07e7"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#afdadf530f8c0f13d178a604fb9eb07e7">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, bool value, <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> flow)</td></tr>
+<tr class="separator:afdadf530f8c0f13d178a604fb9eb07e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a370183926336bc0d6e7181ad1567f1"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a4a370183926336bc0d6e7181ad1567f1">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const char *type, const char *value, <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a> flow)</td></tr>
+<tr class="separator:a4a370183926336bc0d6e7181ad1567f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf08c762e46649d346bb2cbee27731d"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a4bf08c762e46649d346bb2cbee27731d">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const <a class="el" href="fbxtypes_8h.html#ae0a96f14cde566774c7553aa7523b7a7">FbxDouble3</a> &amp;color)</td></tr>
+<tr class="separator:a4bf08c762e46649d346bb2cbee27731d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb81420b95eb2e866f3658947d7935bd"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#acb81420b95eb2e866f3658947d7935bd">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const <a class="el" href="class_fbx_color.html">FbxColor</a> &amp;color)</td></tr>
+<tr class="separator:acb81420b95eb2e866f3658947d7935bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc29d6bc0ccdec97aa7d3c660ff8519"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#addc29d6bc0ccdec97aa7d3c660ff8519">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;vector)</td></tr>
+<tr class="separator:addc29d6bc0ccdec97aa7d3c660ff8519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e83bcd17e9392ff4ccbd5eb324e3c8f"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a4e83bcd17e9392ff4ccbd5eb324e3c8f">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, double value)</td></tr>
+<tr class="separator:a4e83bcd17e9392ff4ccbd5eb324e3c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9e58adf4217af2f7c6e357cee129982"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ab9e58adf4217af2f7c6e357cee129982">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, bool value)</td></tr>
+<tr class="separator:ab9e58adf4217af2f7c6e357cee129982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd3c854c804372c25b8c1a2d4439417b"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#abd3c854c804372c25b8c1a2d4439417b">DAE_AddParameter</a> (xmlNode *parentXmlNode, const char *name, const char *type, const char *value)</td></tr>
+<tr class="separator:abd3c854c804372c25b8c1a2d4439417b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa857223f1c1d5f8286eee0e0145aa421"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#aa857223f1c1d5f8286eee0e0145aa421">DAE_AddTechnique</a> (xmlNode *parentXmlNode, const char *technique)</td></tr>
+<tr class="separator:aa857223f1c1d5f8286eee0e0145aa421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3c63b70752de28e67bd294ea675c32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a8b3c63b70752de28e67bd294ea675c32">DAE_AddInput</a> (xmlNode *parentXmlNode, const char *semantic, const char *source, int idx=-1)</td></tr>
+<tr class="separator:a8b3c63b70752de28e67bd294ea675c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea12d447ad1b5d2776e8a0d01c26b9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a2ea12d447ad1b5d2776e8a0d01c26b9b">DAE_AddInput14</a> (xmlNode *parentXmlNode, const char *semantic, const char *source, int offset=-1, int set=-1)</td></tr>
+<tr class="separator:a2ea12d447ad1b5d2776e8a0d01c26b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace301e5e02ca96e62ab7a442b91a0b59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_string.html">FbxString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ace301e5e02ca96e62ab7a442b91a0b59">matrixToString</a> (const <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;mx)</td></tr>
+<tr class="separator:ace301e5e02ca96e62ab7a442b91a0b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f717df95d4eacd55f710ddb7d9942a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a58f717df95d4eacd55f710ddb7d9942a">findChildrenByType</a> (xmlNode *pParentElement, const <a class="el" href="class_fbx_set.html">FbxSet</a>&lt; <a class="el" href="class_fbx_string.html">FbxString</a> &gt; &amp;pTypes, <a class="el" href="fbxcolladautils_8h.html#ac0b8b95b72d4aa9e22c27dbd5e729a62">CNodeList</a> &amp;pChildrenElements)</td></tr>
+<tr class="separator:a58f717df95d4eacd55f710ddb7d9942a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a165451626c0309e0da977ba75a384574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a165451626c0309e0da977ba75a384574">findChildrenByType</a> (xmlNode *pParentElement, const char *pType, <a class="el" href="fbxcolladautils_8h.html#ac0b8b95b72d4aa9e22c27dbd5e729a62">CNodeList</a> &amp;pChildrenElements)</td></tr>
+<tr class="separator:a165451626c0309e0da977ba75a384574"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24900725cc396d99a3985f6988d7112a"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a24900725cc396d99a3985f6988d7112a">getSourceAccessor</a> (xmlNode *sourceNode)</td></tr>
+<tr class="separator:a24900725cc396d99a3985f6988d7112a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a440db455e05d23c01974305b0d8dc8c6"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a440db455e05d23c01974305b0d8dc8c6">getTechniqueNode</a> (xmlNode *parent, const char *profile)</td></tr>
+<tr class="separator:a440db455e05d23c01974305b0d8dc8c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3ef43937880c171062b861ef6439763"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ab3ef43937880c171062b861ef6439763">inchesToCentimeters</a> (double val)</td></tr>
+<tr class="separator:ab3ef43937880c171062b861ef6439763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b3b043689cadbf1dfd2381848b8f9e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ae7b3b043689cadbf1dfd2381848b8f9e">centimetersToInches</a> (double val)</td></tr>
+<tr class="separator:ae7b3b043689cadbf1dfd2381848b8f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae21c26b3531d7faed72acdccf83744ec"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ae21c26b3531d7faed72acdccf83744ec">degreesToRadians</a> (double val)</td></tr>
+<tr class="separator:ae21c26b3531d7faed72acdccf83744ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86df93411b8fee393d4e101943a74e7f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a86df93411b8fee393d4e101943a74e7f">radiansToDegrees</a> (double val)</td></tr>
+<tr class="separator:a86df93411b8fee393d4e101943a74e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84e4f2cbc4fb891da89d175217ca80a"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#af84e4f2cbc4fb891da89d175217ca80a">DAE_FindChildElementByAttribute</a> (xmlNode *pParentElement, const char *pAttributeName, const char *pAttributeValue, const char *pDefaultAttributeValue=&quot;&quot;)</td></tr>
+<tr class="separator:af84e4f2cbc4fb891da89d175217ca80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5e7f86be2a5a6d051f6c7ee6c9eedad"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ad5e7f86be2a5a6d051f6c7ee6c9eedad">DAE_FindChildElementByTag</a> (xmlNode *pParentElement, const char *pTag, xmlNode *pFindFrom=<a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
+<tr class="separator:ad5e7f86be2a5a6d051f6c7ee6c9eedad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad56792aad4343fc12428f8235f7d38"><td class="memTemplParams" colspan="2">template&lt;typename TYPE &gt; </td></tr>
+<tr class="memitem:a8ad56792aad4343fc12428f8235f7d38"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a8ad56792aad4343fc12428f8235f7d38">DAE_GetElementContent</a> (xmlNode *pElement, TYPE &amp;pData)</td></tr>
+<tr class="separator:a8ad56792aad4343fc12428f8235f7d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1208dad3ee25bec7b87087897e18891a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a1208dad3ee25bec7b87087897e18891a">DAE_CheckCompatibility</a> (xmlNode *pNodeElement)</td></tr>
+<tr class="separator:a1208dad3ee25bec7b87087897e18891a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6274be764ec506f0082ba8f6e51e6d0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a6274be764ec506f0082ba8f6e51e6d0a">DAE_GetElementTag</a> (xmlNode *pElement, <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pTag)</td></tr>
+<tr class="separator:a6274be764ec506f0082ba8f6e51e6d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3205c1636dc88c39dfc8bbd59fc81d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fbx_string.html">FbxString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a0e3205c1636dc88c39dfc8bbd59fc81d">DAE_GetElementAttributeValue</a> (xmlNode *pElement, const char *pAttributeName)</td></tr>
+<tr class="separator:a0e3205c1636dc88c39dfc8bbd59fc81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e8874df13e15c866984f7b19a6d634"><td class="memTemplParams" colspan="2">template&lt;typename TYPE &gt; </td></tr>
+<tr class="memitem:a52e8874df13e15c866984f7b19a6d634"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a52e8874df13e15c866984f7b19a6d634">DAE_GetElementAttributeValue</a> (xmlNode *pElement, const char *pAttributeName, TYPE &amp;pData)</td></tr>
+<tr class="separator:a52e8874df13e15c866984f7b19a6d634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ecabb79a6d8b0d8c9abca135ef157b"><td class="memTemplParams" colspan="2">template&lt;&gt; </td></tr>
+<tr class="memitem:a05ecabb79a6d8b0d8c9abca135ef157b"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a05ecabb79a6d8b0d8c9abca135ef157b">DAE_GetElementAttributeValue</a> (xmlNode *pElement, const char *pAttributeName, <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pData)</td></tr>
+<tr class="separator:a05ecabb79a6d8b0d8c9abca135ef157b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c04a67830c3f6283b914a5c046eb25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ad3c04a67830c3f6283b914a5c046eb25">DAE_CompareAttributeValue</a> (xmlNode *pElement, const char *pAttributeName, const char *pValue)</td></tr>
+<tr class="separator:ad3c04a67830c3f6283b914a5c046eb25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf697e98c775eb55a5a239afe31dbb86"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fbx_string.html">FbxString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#aaf697e98c775eb55a5a239afe31dbb86">DAE_GetIDFromUrlAttribute</a> (xmlNode *pElement)</td></tr>
+<tr class="separator:aaf697e98c775eb55a5a239afe31dbb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec6c4cf8ec207b59e40a8caccc3f5b4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fbx_string.html">FbxString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a7ec6c4cf8ec207b59e40a8caccc3f5b4">DAE_GetIDFromSourceAttribute</a> (xmlNode *pElement)</td></tr>
+<tr class="separator:a7ec6c4cf8ec207b59e40a8caccc3f5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8be8a842f6e0c186a68db3195cd848d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fbx_string.html">FbxString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#af8be8a842f6e0c186a68db3195cd848d">DAE_GetIDFromTargetAttribute</a> (xmlNode *pElement)</td></tr>
+<tr class="separator:af8be8a842f6e0c186a68db3195cd848d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac84072ce5185ddeac9317de415615294"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ac84072ce5185ddeac9317de415615294">DAE_SetName</a> (<a class="el" href="class_fbx_object.html">FbxObject</a> *pObject, const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pName, const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pID)</td></tr>
+<tr class="separator:ac84072ce5185ddeac9317de415615294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1959e7441379bd822d60d2b71985b87"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ab1959e7441379bd822d60d2b71985b87">DAE_GetSourceWithSemantic</a> (xmlNode *pConsumerElement, const char *pSemantic, const <a class="el" href="fbxcolladautils_8h.html#a43e0f8079e4c5df7b8b0496de1f120c3">SourceElementMapType</a> &amp;pSourceElements)</td></tr>
+<tr class="separator:ab1959e7441379bd822d60d2b71985b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4f0793c49a24e2820ba0ef44ff4109"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afe4f0793c49a24e2820ba0ef44ff4109"><td class="memTemplItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#afe4f0793c49a24e2820ba0ef44ff4109">DAE_AddChildElement</a> (xmlNode *pParentElement, const char *pTag, const T &amp;pContent)</td></tr>
+<tr class="separator:afe4f0793c49a24e2820ba0ef44ff4109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b29f44c7acba598604fba3de1bcea86"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a4b29f44c7acba598604fba3de1bcea86">DAE_AddChildElement</a> (xmlNode *pParentElement, const char *pTag)</td></tr>
+<tr class="separator:a4b29f44c7acba598604fba3de1bcea86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7a283742fd0d46df5c68a5ecf58db9b"><td class="memItemLeft" align="right" valign="top">xmlNode *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#aa7a283742fd0d46df5c68a5ecf58db9b">DAE_NewElement</a> (const char *pTag)</td></tr>
+<tr class="separator:aa7a283742fd0d46df5c68a5ecf58db9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e052670df0cec44388b1ec658e6025"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a44e052670df0cec44388b1ec658e6025"><td class="memTemplItemLeft" align="right" valign="top">xmlAttr *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a44e052670df0cec44388b1ec658e6025">DAE_AddAttribute</a> (xmlNode *pElement, const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pAttributeName, const T &amp;pAttributeValue)</td></tr>
+<tr class="separator:a44e052670df0cec44388b1ec658e6025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd972719879976b871915665316af0e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_fbx_system_unit.html">FbxSystemUnit</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a8cd972719879976b871915665316af0e">DAE_ImportUnit</a> (xmlNode *pUnitElement)</td></tr>
+<tr class="separator:a8cd972719879976b871915665316af0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e5d454ded1f039b5cb232bcb85eaf9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a1e5d454ded1f039b5cb232bcb85eaf9b">IncreaseLclTranslationAnimation</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode, <a class="el" href="fbxtypes_8h.html#ae0a96f14cde566774c7553aa7523b7a7">FbxDouble3</a> &amp;pOffset)</td></tr>
+<tr class="separator:a1e5d454ded1f039b5cb232bcb85eaf9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60b13253f749461c644f8461fb27c60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#ad60b13253f749461c644f8461fb27c60">RecursiveSearchElement</a> (xmlNode *pBaseElement, const char *pTag, <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; xmlNode *&gt; &amp;pResult)</td></tr>
+<tr class="separator:ad60b13253f749461c644f8461fb27c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a5c0ec177c8505759098839a81946bbac"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a5c0ec177c8505759098839a81946bbac">MATRIX_STRIDE</a> = 16</td></tr>
+<tr class="separator:a5c0ec177c8505759098839a81946bbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e03108dc10bdb7b097a52104db0edc"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fbxcolladautils_8h.html#a56e03108dc10bdb7b097a52104db0edc">VECTOR_STRIDE</a> = 3</td></tr>
+<tr class="separator:a56e03108dc10bdb7b097a52104db0edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a4ed4f0456a44db1ac2eb6869bfa05b40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed4f0456a44db1ac2eb6869bfa05b40">&#9670;&nbsp;</a></span>CENTIMETERS_TO_INCHES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CENTIMETERS_TO_INCHES&#160;&#160;&#160;2.54f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aea4f3662e371510e23cf90821d35f3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4f3662e371510e23cf90821d35f3cd">&#9670;&nbsp;</a></span>COLLADA_ID_PROPERTY_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COLLADA_ID_PROPERTY_NAME&#160;&#160;&#160;&quot;COLLADA_ID&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9ec306f36d50c7375e74f0d1c55a3a67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec306f36d50c7375e74f0d1c55a3a67">&#9670;&nbsp;</a></span>INT_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INT_MAX&#160;&#160;&#160;0x7FFFFFFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a5b541253554905891d06cf62dbec1a41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b541253554905891d06cf62dbec1a41">&#9670;&nbsp;</a></span>RADIANS_TO_DEGREES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RADIANS_TO_DEGREES&#160;&#160;&#160;57.295799f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ac0b8b95b72d4aa9e22c27dbd5e729a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b8b95b72d4aa9e22c27dbd5e729a62">&#9670;&nbsp;</a></span>CNodeList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_fbx_array.html">FbxArray</a>&lt;xmlNode*&gt; <a class="el" href="fbxcolladautils_8h.html#ac0b8b95b72d4aa9e22c27dbd5e729a62">CNodeList</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00142">142</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a326fd3e57617d1a7fea1b93a791e9fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a326fd3e57617d1a7fea1b93a791e9fa9">&#9670;&nbsp;</a></span>SkinMapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_fbx_map.html">FbxMap</a>&lt; <a class="el" href="class_fbx_string.html">FbxString</a>, xmlNode* &gt; <a class="el" href="fbxcolladautils_8h.html#a326fd3e57617d1a7fea1b93a791e9fa9">SkinMapType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00059">59</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a43e0f8079e4c5df7b8b0496de1f120c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43e0f8079e4c5df7b8b0496de1f120c3">&#9670;&nbsp;</a></span>SourceElementMapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_fbx_map.html">FbxMap</a>&lt; <a class="el" href="class_fbx_string.html">FbxString</a>, xmlNode* &gt; <a class="el" href="fbxcolladautils_8h.html#a43e0f8079e4c5df7b8b0496de1f120c3">SourceElementMapType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00058">58</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa3da04a9df039b94266647bf3be1ef4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3da04a9df039b94266647bf3be1ef4e">&#9670;&nbsp;</a></span>XmlNodePtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_fbx_auto_ptr.html">FbxAutoPtr</a>&lt;xmlNode, <a class="el" href="class_xml_node_deletion_policy.html">XmlNodeDeletionPolicy</a>&gt; <a class="el" href="fbxcolladautils_8h.html#aa3da04a9df039b94266647bf3be1ef4e">XmlNodePtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a827109d350bbc346ed747395ad742954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827109d350bbc346ed747395ad742954">&#9670;&nbsp;</a></span>DAE_Flow</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a827109d350bbc346ed747395ad742954a31b1540d32158c4bebf2ab7df31017c3"></a>kCOLLADAFlowIn&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a827109d350bbc346ed747395ad742954acd9b4a53e2dd37aa147649dbeefd8066"></a>kCOLLADAFlowOut&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a827109d350bbc346ed747395ad742954aebed33072c831746aca53adab8eb0225"></a>kCOLLADAFlowInOut&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00037">37</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ae7b3b043689cadbf1dfd2381848b8f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b3b043689cadbf1dfd2381848b8f9e">&#9670;&nbsp;</a></span>centimetersToInches()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double centimetersToInches </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00163">163</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a44e052670df0cec44388b1ec658e6025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44e052670df0cec44388b1ec658e6025">&#9670;&nbsp;</a></span>DAE_AddAttribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlAttr* DAE_AddAttribute </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pAttributeName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>pAttributeValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an attribute for a element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The element where the attribute is added. </td></tr>
+    <tr><td class="paramname">pAttributeName</td><td>The name of the attribute. </td></tr>
+    <tr><td class="paramname">pAttributeValue</td><td>The value of the attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The created attribute. </dd></dl>
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00341">341</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afe4f0793c49a24e2820ba0ef44ff4109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4f0793c49a24e2820ba0ef44ff4109">&#9670;&nbsp;</a></span>DAE_AddChildElement() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddChildElement </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pParentElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pTag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>pContent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a child element with specific content. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParentElement</td><td>The parent element. </td></tr>
+    <tr><td class="paramname">pTag</td><td>The tag string of the new child element. </td></tr>
+    <tr><td class="paramname">pContent</td><td>The content of the child element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The created child element. </dd></dl>
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00314">314</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4b29f44c7acba598604fba3de1bcea86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b29f44c7acba598604fba3de1bcea86">&#9670;&nbsp;</a></span>DAE_AddChildElement() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddChildElement </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pParentElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pTag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00323">323</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab6f366ee352dcad5dd1c49e93620d9e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f366ee352dcad5dd1c49e93620d9e8">&#9670;&nbsp;</a></span>DAE_AddFlow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddFlow </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>node</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b3c63b70752de28e67bd294ea675c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3c63b70752de28e67bd294ea675c32">&#9670;&nbsp;</a></span>DAE_AddInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddInput </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>semantic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ea12d447ad1b5d2776e8a0d01c26b9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea12d447ad1b5d2776e8a0d01c26b9b">&#9670;&nbsp;</a></span>DAE_AddInput14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddInput14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>semantic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>-1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>set</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d6769de96a79448db342865e5997a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d6769de96a79448db342865e5997a06">&#9670;&nbsp;</a></span>DAE_AddNotificationError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddNotificationError </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_fbx_manager.html">FbxManager</a> *&#160;</td>
+          <td class="paramname"><em>pSdkManger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pErrorMessage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Emit error message. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSdkManger</td><td>The SDK manager used to access user notification object. </td></tr>
+    <tr><td class="paramname">pErrorMessage</td><td>The message to be presented. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aba34b77b00a61f944d6732db57690ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba34b77b00a61f944d6732db57690ed7">&#9670;&nbsp;</a></span>DAE_AddNotificationWarning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddNotificationWarning </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_fbx_manager.html">FbxManager</a> *&#160;</td>
+          <td class="paramname"><em>pSdkManger</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pWarningMessage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Emit warning message. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pSdkManger</td><td>The SDK manager used to access user notification object. </td></tr>
+    <tr><td class="paramname">pWarningMessage</td><td>The message to be presented. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a80bbaf8f803089dffc8fa5dc59b921f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bbaf8f803089dffc8fa5dc59b921f6">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[1/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_color.html">FbxColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28e58bd4fd7bc24b0a9b191fa4fde1e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e58bd4fd7bc24b0a9b191fa4fde1e1">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[2/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7035e5bb43d22318fa7f58727783f2b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7035e5bb43d22318fa7f58727783f2b1">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[3/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afdadf530f8c0f13d178a604fb9eb07e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdadf530f8c0f13d178a604fb9eb07e7">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[4/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a370183926336bc0d6e7181ad1567f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a370183926336bc0d6e7181ad1567f1">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[5/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#a827109d350bbc346ed747395ad742954">DAE_Flow</a>&#160;</td>
+          <td class="paramname"><em>flow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bf08c762e46649d346bb2cbee27731d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf08c762e46649d346bb2cbee27731d">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[6/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="fbxtypes_8h.html#ae0a96f14cde566774c7553aa7523b7a7">FbxDouble3</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb81420b95eb2e866f3658947d7935bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb81420b95eb2e866f3658947d7935bd">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[7/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_color.html">FbxColor</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="addc29d6bc0ccdec97aa7d3c660ff8519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc29d6bc0ccdec97aa7d3c660ff8519">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[8/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &amp;&#160;</td>
+          <td class="paramname"><em>vector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e83bcd17e9392ff4ccbd5eb324e3c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e83bcd17e9392ff4ccbd5eb324e3c8f">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[9/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9e58adf4217af2f7c6e357cee129982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9e58adf4217af2f7c6e357cee129982">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[10/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd3c854c804372c25b8c1a2d4439417b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd3c854c804372c25b8c1a2d4439417b">&#9670;&nbsp;</a></span>DAE_AddParameter() <span class="overload">[11/11]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddParameter </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace6c73f05217c20fd7b507dd37221b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6c73f05217c20fd7b507dd37221b21">&#9670;&nbsp;</a></span>DAE_AddSTAccessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddSTAccessor </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>profile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a810be7de47cba637902466085cf49181"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a810be7de47cba637902466085cf49181">&#9670;&nbsp;</a></span>DAE_AddSTAccessor14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddSTAccessor14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>profile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa857223f1c1d5f8286eee0e0145aa421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa857223f1c1d5f8286eee0e0145aa421">&#9670;&nbsp;</a></span>DAE_AddTechnique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_AddTechnique </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>technique</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2180b302e8d72900293f220a259792c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2180b302e8d72900293f220a259792c5">&#9670;&nbsp;</a></span>DAE_AddXYZAccessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddXYZAccessor </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>profile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7eb20286c631c4639e609bf58b24e9f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eb20286c631c4639e609bf58b24e9f2">&#9670;&nbsp;</a></span>DAE_AddXYZAccessor14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_AddXYZAccessor14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>profile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1208dad3ee25bec7b87087897e18891a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1208dad3ee25bec7b87087897e18891a">&#9670;&nbsp;</a></span>DAE_CheckCompatibility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DAE_CheckCompatibility </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pNodeElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check whether this node is compatible to FBX transform structure. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pNodeElement</td><td>The specific node element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return true if it is compatible. </dd></dl>
+
+</div>
+</div>
+<a id="ad3c04a67830c3f6283b914a5c046eb25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c04a67830c3f6283b914a5c046eb25">&#9670;&nbsp;</a></span>DAE_CompareAttributeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DAE_CompareAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pAttributeName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Compare the value of specific attribute of specific element with given value. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific element. </td></tr>
+    <tr><td class="paramname">pAttributeName</td><td>The name of the specific attribute. </td></tr>
+    <tr><td class="paramname">pValue</td><td>The value to compare with. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return true if values equal. </dd></dl>
+
+</div>
+</div>
+<a id="a79d95745506231173f472ddd98a8d989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d95745506231173f472ddd98a8d989">&#9670;&nbsp;</a></span>DAE_ExportAccessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportAccessor </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf4235b318314473ffe9011890ea37a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4235b318314473ffe9011890ea37a0">&#9670;&nbsp;</a></span>DAE_ExportAccessor14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportAccessor14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>arrayRef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf675c242a0dc6fdaf4d3edf2c67598c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf675c242a0dc6fdaf4d3edf2c67598c">&#9670;&nbsp;</a></span>DAE_ExportArray() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportArray </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0cd39da3d65a79f62d7150d648c72c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0cd39da3d65a79f62d7150d648c72c1">&#9670;&nbsp;</a></span>DAE_ExportArray() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportArray </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector2.html">FbxVector2</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7869436a9d9f1609ce9ff850f6c1eb80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7869436a9d9f1609ce9ff850f6c1eb80">&#9670;&nbsp;</a></span>DAE_ExportArray() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportArray </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a25f10a7ba6ba75ca7dceb04b35e77f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f10a7ba6ba75ca7dceb04b35e77f2b">&#9670;&nbsp;</a></span>DAE_ExportArray() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportArray </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3df96c3af20c989741c452d58b3fa1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3df96c3af20c989741c452d58b3fa1e">&#9670;&nbsp;</a></span>DAE_ExportArray() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportArray </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string_list.html">FbxStringList</a> &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a54892e2a5b39f0ec5d8ef79d146c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a54892e2a5b39f0ec5d8ef79d146c21">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string_list.html">FbxStringList</a> &amp;&#160;</td>
+          <td class="paramname"><em>accessorParams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isCommonProfile</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dae40a82edcda7650792960dcda9754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dae40a82edcda7650792960dcda9754">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector4.html">FbxVector4</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a246d971a23b5dfa3f8a20596da69b586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a246d971a23b5dfa3f8a20596da69b586">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_vector2.html">FbxVector2</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f4cec675cf3d91649f43b3568663929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f4cec675cf3d91649f43b3568663929">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[4/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace29f87215150a68107b8d3b0ec36b44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace29f87215150a68107b8d3b0ec36b44">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d82d5eb439a27604545ec6bdf05ffae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d82d5eb439a27604545ec6bdf05ffae">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_matrix.html">FbxMatrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a149dd6ea8ee1a9befa42c4d3dd97406f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a149dd6ea8ee1a9befa42c4d3dd97406f">&#9670;&nbsp;</a></span>DAE_ExportSource14() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_ExportSource14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parentXmlNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string_list.html">FbxStringList</a> &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>isCommonProfile</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a233e04ceda3f31b89b20ecc986c43543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a233e04ceda3f31b89b20ecc986c43543">&#9670;&nbsp;</a></span>DAE_ExportSourceArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportSourceArray </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>sourceNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab57d845aa42e86a41188ce0f3720a438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab57d845aa42e86a41188ce0f3720a438">&#9670;&nbsp;</a></span>DAE_ExportSourceArray14()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_ExportSourceArray14 </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>sourceNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_color.html">FbxColor</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>arr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af84e4f2cbc4fb891da89d175217ca80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84e4f2cbc4fb891da89d175217ca80a">&#9670;&nbsp;</a></span>DAE_FindChildElementByAttribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_FindChildElementByAttribute </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pParentElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pAttributeName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pAttributeValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pDefaultAttributeValue</em> = <code>&quot;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find a child element with a given attribute value. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParentElement</td><td>The parent element. </td></tr>
+    <tr><td class="paramname">pAttributeName</td><td>The name of the attribute. </td></tr>
+    <tr><td class="paramname">pAttributeValue</td><td>The value of the attribute. </td></tr>
+    <tr><td class="paramname">pDefaultAttributeValue</td><td>The default value of the attribute used when the attribute is not found explicitly. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return NULL if no child element has the given attribute value. </dd></dl>
+
+</div>
+</div>
+<a id="ad5e7f86be2a5a6d051f6c7ee6c9eedad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5e7f86be2a5a6d051f6c7ee6c9eedad">&#9670;&nbsp;</a></span>DAE_FindChildElementByTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_FindChildElementByTag </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pParentElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pTag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pFindFrom</em> = <code><a class="el" href="fbxarch_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find a child element with a given tag. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParentElement</td><td>The parent element. </td></tr>
+    <tr><td class="paramname">pTag</td><td>The value of the tag. </td></tr>
+    <tr><td class="paramname">pFindFrom</td><td>Find from the next child after pFindFrom if pFindFrom is not NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return NULL if no child element has the given tag. </dd></dl>
+
+</div>
+</div>
+<a id="a0e3205c1636dc88c39dfc8bbd59fc81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3205c1636dc88c39dfc8bbd59fc81d">&#9670;&nbsp;</a></span>DAE_GetElementAttributeValue() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_fbx_string.html">FbxString</a> DAE_GetElementAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pAttributeName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the value of an attribute of an element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific XML element. </td></tr>
+    <tr><td class="paramname">pAttributeName</td><td>The name of the specific attribute. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The value of the attribute in the form of a string. If the attribute is not available, an empty string is returned. </dd></dl>
+
+</div>
+</div>
+<a id="a52e8874df13e15c866984f7b19a6d634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e8874df13e15c866984f7b19a6d634">&#9670;&nbsp;</a></span>DAE_GetElementAttributeValue() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DAE_GetElementAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pAttributeName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TYPE &amp;&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the value of an attribute of an element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific XML element. </td></tr>
+    <tr><td class="paramname">pAttributeName</td><td>The name of the specific attribute. </td></tr>
+    <tr><td class="paramname">pData</td><td>The returned data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return <code>true</code> on success and <code>false</code> if no attribute has the given name. </dd></dl>
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00226">226</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a05ecabb79a6d8b0d8c9abca135ef157b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ecabb79a6d8b0d8c9abca135ef157b">&#9670;&nbsp;</a></span>DAE_GetElementAttributeValue() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DAE_GetElementAttributeValue </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pAttributeName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00243">243</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8ad56792aad4343fc12428f8235f7d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ad56792aad4343fc12428f8235f7d38">&#9670;&nbsp;</a></span>DAE_GetElementContent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TYPE &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_GetElementContent </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TYPE &amp;&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the content of a XML element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The element whose content is returned. </td></tr>
+    <tr><td class="paramname">pData</td><td>The returned data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00191">191</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6274be764ec506f0082ba8f6e51e6d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6274be764ec506f0082ba8f6e51e6d0a">&#9670;&nbsp;</a></span>DAE_GetElementTag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_GetElementTag </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pTag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the tag of the specific element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific element. </td></tr>
+    <tr><td class="paramname">pTag</td><td>Return the tag of the element. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ec6c4cf8ec207b59e40a8caccc3f5b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec6c4cf8ec207b59e40a8caccc3f5b4">&#9670;&nbsp;</a></span>DAE_GetIDFromSourceAttribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_fbx_string.html">FbxString</a> DAE_GetIDFromSourceAttribute </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the ID of another element from the source attribute of the given element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific XML element in which the ID is looked for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The ID of another element if success, or an empty string if no source attributes are found. </dd></dl>
+
+</div>
+</div>
+<a id="af8be8a842f6e0c186a68db3195cd848d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8be8a842f6e0c186a68db3195cd848d">&#9670;&nbsp;</a></span>DAE_GetIDFromTargetAttribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_fbx_string.html">FbxString</a> DAE_GetIDFromTargetAttribute </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the ID of another element from the target attribute of the given element. Note that in target attribute, the URI identifier may or may not preceded with the pound sign. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific XML element in which the ID is looked for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The ID of another element if success, or an empty string if no target attributes are found. </dd></dl>
+
+</div>
+</div>
+<a id="aaf697e98c775eb55a5a239afe31dbb86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf697e98c775eb55a5a239afe31dbb86">&#9670;&nbsp;</a></span>DAE_GetIDFromUrlAttribute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_fbx_string.html">FbxString</a> DAE_GetIDFromUrlAttribute </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the ID of another element from the url attribute of the given element. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pElement</td><td>The specific XML element in which the ID is looked for. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The ID of another element if success, or an empty string if no url attributes are found. </dd></dl>
+
+</div>
+</div>
+<a id="ab1959e7441379bd822d60d2b71985b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1959e7441379bd822d60d2b71985b87">&#9670;&nbsp;</a></span>DAE_GetSourceWithSemantic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_GetSourceWithSemantic </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pConsumerElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pSemantic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="fbxcolladautils_8h.html#a43e0f8079e4c5df7b8b0496de1f120c3">SourceElementMapType</a> &amp;&#160;</td>
+          <td class="paramname"><em>pSourceElements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the COLLADA source element with a semantic meaning and a consumer element; The COLLADA input element declares the input connections to a data source that a consumer requires. A data source is a container of raw data that lacks semantic meaning so that the data can be reused within the document. To use the data, a consumer declares a connection to it with the desired semantic information. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pConsumerElement</td><td>A consumer element, like sampler element in animation system or joints element in controller system. </td></tr>
+    <tr><td class="paramname">pSemantic</td><td>A semantic meaning, like "INPUT", "OUTPUT" or "INTERPOLATION" in animation system. </td></tr>
+    <tr><td class="paramname">pSourceElements</td><td>The container of raw data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>Return <code>NULL</code> is failed. </dd></dl>
+
+</div>
+</div>
+<a id="a8cd972719879976b871915665316af0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd972719879976b871915665316af0e">&#9670;&nbsp;</a></span>DAE_ImportUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_fbx_system_unit.html">FbxSystemUnit</a> DAE_ImportUnit </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pUnitElement</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Import a COLLADA unit element into a FBX system unit. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pUnitElement</td><td>The COLLADA unit element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>The created FBX system unit. </dd></dl>
+
+</div>
+</div>
+<a id="aa7a283742fd0d46df5c68a5ecf58db9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7a283742fd0d46df5c68a5ecf58db9b">&#9670;&nbsp;</a></span>DAE_NewElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* DAE_NewElement </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pTag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00329">329</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac84072ce5185ddeac9317de415615294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac84072ce5185ddeac9317de415615294">&#9670;&nbsp;</a></span>DAE_SetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DAE_SetName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_object.html">FbxObject</a> *&#160;</td>
+          <td class="paramname"><em>pObject</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the name of the object with a given name. If the name is empty, use the ID. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pObject</td><td>The object whose name is to be set. </td></tr>
+    <tr><td class="paramname">pName</td><td>The name string. </td></tr>
+    <tr><td class="paramname">pID</td><td>The ID string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae21c26b3531d7faed72acdccf83744ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21c26b3531d7faed72acdccf83744ec">&#9670;&nbsp;</a></span>degreesToRadians()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double degreesToRadians </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00165">165</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a58f717df95d4eacd55f710ddb7d9942a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58f717df95d4eacd55f710ddb7d9942a">&#9670;&nbsp;</a></span>findChildrenByType() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void findChildrenByType </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pParentElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_set.html">FbxSet</a>&lt; <a class="el" href="class_fbx_string.html">FbxString</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>pTypes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#ac0b8b95b72d4aa9e22c27dbd5e729a62">CNodeList</a> &amp;&#160;</td>
+          <td class="paramname"><em>pChildrenElements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find children elements whose type is included in a list of type. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParentElement</td><td>The parent element. </td></tr>
+    <tr><td class="paramname">pTypes</td><td>The list of types. </td></tr>
+    <tr><td class="paramname">pChildrenElements</td><td>The found children elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a165451626c0309e0da977ba75a384574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165451626c0309e0da977ba75a384574">&#9670;&nbsp;</a></span>findChildrenByType() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void findChildrenByType </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pParentElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxcolladautils_8h.html#ac0b8b95b72d4aa9e22c27dbd5e729a62">CNodeList</a> &amp;&#160;</td>
+          <td class="paramname"><em>pChildrenElements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Find children elements of a specific type. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParentElement</td><td>The parent element. </td></tr>
+    <tr><td class="paramname">pType</td><td>The type. </td></tr>
+    <tr><td class="paramname">pChildrenElements</td><td>The found children elements. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a24900725cc396d99a3985f6988d7112a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24900725cc396d99a3985f6988d7112a">&#9670;&nbsp;</a></span>getSourceAccessor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* getSourceAccessor </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>sourceNode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a440db455e05d23c01974305b0d8dc8c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a440db455e05d23c01974305b0d8dc8c6">&#9670;&nbsp;</a></span>getTechniqueNode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">xmlNode* getTechniqueNode </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>profile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3ef43937880c171062b861ef6439763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ef43937880c171062b861ef6439763">&#9670;&nbsp;</a></span>inchesToCentimeters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double inchesToCentimeters </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00162">162</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1e5d454ded1f039b5cb232bcb85eaf9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e5d454ded1f039b5cb232bcb85eaf9b">&#9670;&nbsp;</a></span>IncreaseLclTranslationAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IncreaseLclTranslationAnimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="fbxtypes_8h.html#ae0a96f14cde566774c7553aa7523b7a7">FbxDouble3</a> &amp;&#160;</td>
+          <td class="paramname"><em>pOffset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>If the specific node has animation on its local translation, increase every key by the offset. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pNode</td><td>The specific node. </td></tr>
+    <tr><td class="paramname">pOffset</td><td>The specific offset value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ace301e5e02ca96e62ab7a442b91a0b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace301e5e02ca96e62ab7a442b91a0b59">&#9670;&nbsp;</a></span>matrixToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_string.html">FbxString</a> matrixToString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_fbx_a_matrix.html">FbxAMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>mx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86df93411b8fee393d4e101943a74e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86df93411b8fee393d4e101943a74e7f">&#9670;&nbsp;</a></span>radiansToDegrees()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double radiansToDegrees </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00166">166</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad60b13253f749461c644f8461fb27c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60b13253f749461c644f8461fb27c60">&#9670;&nbsp;</a></span>RecursiveSearchElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RecursiveSearchElement </td>
+          <td>(</td>
+          <td class="paramtype">xmlNode *&#160;</td>
+          <td class="paramname"><em>pBaseElement</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pTag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_array.html">FbxArray</a>&lt; xmlNode *&gt; &amp;&#160;</td>
+          <td class="paramname"><em>pResult</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Search the elements with given tag, push the found results to the end of the given array. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pBaseElement</td><td>Search from this element. </td></tr>
+    <tr><td class="paramname">pTag</td><td>The given tag. </td></tr>
+    <tr><td class="paramname">pResult</td><td>The array to return the found results. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a5c0ec177c8505759098839a81946bbac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c0ec177c8505759098839a81946bbac">&#9670;&nbsp;</a></span>MATRIX_STRIDE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MATRIX_STRIDE = 16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00039">39</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a56e03108dc10bdb7b097a52104db0edc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e03108dc10bdb7b097a52104db0edc">&#9670;&nbsp;</a></span>VECTOR_STRIDE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VECTOR_STRIDE = 3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxcolladautils_8h_source.html">fbxcolladautils.h</a> の <a class="el" href="fbxcolladautils_8h_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

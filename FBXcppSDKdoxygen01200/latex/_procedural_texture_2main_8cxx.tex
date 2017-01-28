@@ -1,0 +1,173 @@
+\hypertarget{_procedural_texture_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Procedural\+Texture/main.cxx ファイル}
+\label{_procedural_texture_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Procedural\+Texture/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Procedural\+Texture/main.\+cxx}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Common.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_procedural_texture_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}Procedural\+Texture.\+fbx\char`\"{}
+\item 
+\#define \hyperlink{_procedural_texture_2main_8cxx_a0fcb0ffd314f21299d5f0f3afc214f68}{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}a\+\_\+texture.\+jpg\char`\"{}
+\item 
+\#define \hyperlink{_procedural_texture_2main_8cxx_aeae3c4c47993a03a3164d819a32931f5}{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP}~\char`\"{}Filename\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_procedural_texture_2main_8cxx_a8dd868d8455e860ac788f8405e00cf59}{Create\+Scene\+And\+Save\+File} (int argc, char $\ast$$\ast$argv)
+\item 
+bool \hyperlink{_procedural_texture_2main_8cxx_ad833cc9782f9abf07d720e890f414c07}{Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk} (int argc, char $\ast$$\ast$argv)
+\item 
+bool \hyperlink{_procedural_texture_2main_8cxx_adf2db51da11b84048851ecb8a36dc932}{Dump\+Procedural\+Texture\+Blob\+On\+Disk} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+bool \hyperlink{_procedural_texture_2main_8cxx_a08e6979c3b1a6b42b5e86d4824b4c764}{Create\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_procedural_texture_2main_8cxx_acfc4a6c5f60ed932696406857bb79b71}{Create\+Plane} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_procedural_texture_2main_8cxx_a1150cae05eecfa3b2272c62b52bdf6a4}{Create\+Phong\+Material} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_procedural_texture}{Fbx\+Procedural\+Texture} $\ast$ \hyperlink{_procedural_texture_2main_8cxx_a1ebba02cf468b71fb99635ea5089fe93}{Create\+Procedural\+Texture} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+void \hyperlink{_procedural_texture_2main_8cxx_a1ba0608d496cd5b3d9dd04f6c345f690}{Map\+Phong} (\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$p\+Phong, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{_procedural_texture_2main_8cxx_aa01ad2d83de9cb058346ec24ee56b871}{Map\+Procedural\+Texure} (\hyperlink{class_fbx_procedural_texture}{Fbx\+Procedural\+Texture} $\ast$p\+Proc\+Tex, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+int \hyperlink{_procedural_texture_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_aeae3c4c47993a03a3164d819a32931f5}\label{_procedural_texture_2main_8cxx_aeae3c4c47993a03a3164d819a32931f5}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP@{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP}}
+\index{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP@{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP}{FILENAME\_PROP}}
+{\footnotesize\ttfamily \#define F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+P\+R\+OP~\char`\"{}Filename\char`\"{}}
+
+
+
+ main.\+cxx の 29 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_procedural_texture_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}Procedural\+Texture.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 27 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a0fcb0ffd314f21299d5f0f3afc214f68}\label{_procedural_texture_2main_8cxx_a0fcb0ffd314f21299d5f0f3afc214f68}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{TEXTURE\_FILENAME}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}a\+\_\+texture.\+jpg\char`\"{}}
+
+
+
+ main.\+cxx の 28 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a1150cae05eecfa3b2272c62b52bdf6a4}\label{_procedural_texture_2main_8cxx_a1150cae05eecfa3b2272c62b52bdf6a4}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Create\+Phong\+Material@{Create\+Phong\+Material}}
+\index{Create\+Phong\+Material@{Create\+Phong\+Material}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Phong\+Material()}{CreatePhongMaterial()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ Create\+Phong\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 349 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_acfc4a6c5f60ed932696406857bb79b71}\label{_procedural_texture_2main_8cxx_acfc4a6c5f60ed932696406857bb79b71}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Create\+Plane@{Create\+Plane}}
+\index{Create\+Plane@{Create\+Plane}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Plane()}{CreatePlane()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Plane (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 224 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a1ebba02cf468b71fb99635ea5089fe93}\label{_procedural_texture_2main_8cxx_a1ebba02cf468b71fb99635ea5089fe93}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Create\+Procedural\+Texture@{Create\+Procedural\+Texture}}
+\index{Create\+Procedural\+Texture@{Create\+Procedural\+Texture}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Procedural\+Texture()}{CreateProceduralTexture()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_procedural_texture}{Fbx\+Procedural\+Texture} $\ast$ Create\+Procedural\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 298 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a08e6979c3b1a6b42b5e86d4824b4c764}\label{_procedural_texture_2main_8cxx_a08e6979c3b1a6b42b5e86d4824b4c764}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Create\+Scene@{Create\+Scene}}
+\index{Create\+Scene@{Create\+Scene}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Scene()}{CreateScene()}}
+{\footnotesize\ttfamily bool Create\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 206 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a8dd868d8455e860ac788f8405e00cf59}\label{_procedural_texture_2main_8cxx_a8dd868d8455e860ac788f8405e00cf59}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Create\+Scene\+And\+Save\+File@{Create\+Scene\+And\+Save\+File}}
+\index{Create\+Scene\+And\+Save\+File@{Create\+Scene\+And\+Save\+File}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Scene\+And\+Save\+File()}{CreateSceneAndSaveFile()}}
+{\footnotesize\ttfamily bool Create\+Scene\+And\+Save\+File (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 61 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_adf2db51da11b84048851ecb8a36dc932}\label{_procedural_texture_2main_8cxx_adf2db51da11b84048851ecb8a36dc932}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Dump\+Procedural\+Texture\+Blob\+On\+Disk@{Dump\+Procedural\+Texture\+Blob\+On\+Disk}}
+\index{Dump\+Procedural\+Texture\+Blob\+On\+Disk@{Dump\+Procedural\+Texture\+Blob\+On\+Disk}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Dump\+Procedural\+Texture\+Blob\+On\+Disk()}{DumpProceduralTextureBlobOnDisk()}}
+{\footnotesize\ttfamily bool Dump\+Procedural\+Texture\+Blob\+On\+Disk (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 150 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_procedural_texture_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!main@{main}}
+\index{main@{main}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 42 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_a1ba0608d496cd5b3d9dd04f6c345f690}\label{_procedural_texture_2main_8cxx_a1ba0608d496cd5b3d9dd04f6c345f690}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Map\+Phong@{Map\+Phong}}
+\index{Map\+Phong@{Map\+Phong}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Phong()}{MapPhong()}}
+{\footnotesize\ttfamily void Map\+Phong (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$}]{p\+Phong,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 372 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_aa01ad2d83de9cb058346ec24ee56b871}\label{_procedural_texture_2main_8cxx_aa01ad2d83de9cb058346ec24ee56b871}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Map\+Procedural\+Texure@{Map\+Procedural\+Texure}}
+\index{Map\+Procedural\+Texure@{Map\+Procedural\+Texure}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Map\+Procedural\+Texure()}{MapProceduralTexure()}}
+{\footnotesize\ttfamily void Map\+Procedural\+Texure (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_procedural_texture}{Fbx\+Procedural\+Texture} $\ast$}]{p\+Proc\+Tex,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 357 行目に定義があります。
+
+\mbox{\Hypertarget{_procedural_texture_2main_8cxx_ad833cc9782f9abf07d720e890f414c07}\label{_procedural_texture_2main_8cxx_ad833cc9782f9abf07d720e890f414c07}} 
+\index{Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}!Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk@{Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk}}
+\index{Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk@{Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk}!Procedural\+Texture/main.\+cxx@{Procedural\+Texture/main.\+cxx}}
+\subsubsection{\texorpdfstring{Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk()}{ReadFileAndDumpProceduralTextureBlobOnDisk()}}
+{\footnotesize\ttfamily bool Read\+File\+And\+Dump\+Procedural\+Texture\+Blob\+On\+Disk (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 107 行目に定義があります。
+

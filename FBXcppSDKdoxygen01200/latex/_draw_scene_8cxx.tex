@@ -1,0 +1,227 @@
+\hypertarget{_draw_scene_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+View\+Scene/\+Draw\+Scene.cxx ファイル}
+\label{_draw_scene_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/\+Draw\+Scene.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/\+Draw\+Scene.\+cxx}}
+{\ttfamily \#include \char`\"{}Draw\+Scene.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Scene\+Cache.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Get\+Position.\+h\char`\"{}}\newline
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_draw_scene_8cxx_aa0b65010955bb8c22103efc34d9eed30}{Draw\+Node} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_time}{Fbx\+Time} \&l\+Time, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Parent\+Global\+Position, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose, \hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode} p\+Shading\+Mode)
+\item 
+void \hyperlink{_draw_scene_8cxx_add935dcacd18b1d03e9c1fb06f3753e5}{Draw\+Marker} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position)
+\item 
+void \hyperlink{_draw_scene_8cxx_a7e316c75d5c98c074a9bc398623256f6}{Draw\+Skeleton} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Parent\+Global\+Position, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position)
+\item 
+void \hyperlink{_draw_scene_8cxx_abe9ac0fa26da39bac65f64bdb83bbfaa}{Draw\+Mesh} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose, \hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode} p\+Shading\+Mode)
+\item 
+void \hyperlink{_draw_scene_8cxx_ac996cf3a4311f5cbd0019fc0bda01a14}{Compute\+Shape\+Deformation} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$p\+Vertex\+Array)
+\item 
+void \hyperlink{_draw_scene_8cxx_a4494cc210ee429ee3c3fbd287e21ea85}{Compute\+Cluster\+Deformation} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position, \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, \hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$p\+Cluster, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Vertex\+Transform\+Matrix, \hyperlink{class_fbx_time}{Fbx\+Time} p\+Time, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+void \hyperlink{_draw_scene_8cxx_afd7d95c8e2f9c5a06835fb70ea701f28}{Compute\+Linear\+Deformation} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position, \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$p\+Vertex\+Array, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+void \hyperlink{_draw_scene_8cxx_ad3a25940c30001d5425f50301aa78c66}{Compute\+Dual\+Quaternion\+Deformation} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position, \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$p\+Vertex\+Array, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+void \hyperlink{_draw_scene_8cxx_a4e52161918de7afd7c8db0a256f8ddd8}{Compute\+Skin\+Deformation} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position, \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$p\+Vertex\+Array, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+void \hyperlink{_draw_scene_8cxx_a2d11a049d48245bdef35c5c15d9cc865}{Read\+Vertex\+Cache\+Data} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$p\+Vertex\+Array)
+\item 
+void \hyperlink{_draw_scene_8cxx_aacb8bc9132a2da4990618778e43f4c7a}{Draw\+Camera} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position)
+\item 
+void \hyperlink{_draw_scene_8cxx_ad0e2d3041d8e86de86f953af40945b8d}{Draw\+Light} (const \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position)
+\item 
+void \hyperlink{_draw_scene_8cxx_a20dda1585cf089f6d337829b81063bfb}{Draw\+Null} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Global\+Position)
+\item 
+void \hyperlink{_draw_scene_8cxx_a5ef411039dc845f7e880287841f78790}{Matrix\+Scale} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Matrix, double p\+Value)
+\item 
+void \hyperlink{_draw_scene_8cxx_a7b52344214c71eab06a2b89280f3de0d}{Matrix\+Add\+To\+Diagonal} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Matrix, double p\+Value)
+\item 
+void \hyperlink{_draw_scene_8cxx_a1ed6632b95b62c4b6614ae5df7a91c31}{Matrix\+Add} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Dst\+Matrix, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Src\+Matrix)
+\item 
+void \hyperlink{_draw_scene_8cxx_ac32b471e4864f3b82a5681f17c9e96df}{Initialize\+Lights} (const \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+void \hyperlink{_draw_scene_8cxx_a6b70189befca46ab29158e8bff91fca7}{Draw\+Node\+Recursive} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+Parent\+Global\+Position, \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose, \hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode} p\+Shading\+Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_draw_scene_8cxx_a4494cc210ee429ee3c3fbd287e21ea85}\label{_draw_scene_8cxx_a4494cc210ee429ee3c3fbd287e21ea85}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Compute\+Cluster\+Deformation@{Compute\+Cluster\+Deformation}}
+\index{Compute\+Cluster\+Deformation@{Compute\+Cluster\+Deformation}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Compute\+Cluster\+Deformation()}{ComputeClusterDeformation()}}
+{\footnotesize\ttfamily void Compute\+Cluster\+Deformation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position,  }\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$}]{p\+Cluster,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Vertex\+Transform\+Matrix,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time}}]{p\+Time,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 431 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_ad3a25940c30001d5425f50301aa78c66}\label{_draw_scene_8cxx_ad3a25940c30001d5425f50301aa78c66}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Compute\+Dual\+Quaternion\+Deformation@{Compute\+Dual\+Quaternion\+Deformation}}
+\index{Compute\+Dual\+Quaternion\+Deformation@{Compute\+Dual\+Quaternion\+Deformation}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Compute\+Dual\+Quaternion\+Deformation()}{ComputeDualQuaternionDeformation()}}
+{\footnotesize\ttfamily void Compute\+Dual\+Quaternion\+Deformation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position,  }\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$}]{p\+Vertex\+Array,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 617 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_afd7d95c8e2f9c5a06835fb70ea701f28}\label{_draw_scene_8cxx_afd7d95c8e2f9c5a06835fb70ea701f28}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Compute\+Linear\+Deformation@{Compute\+Linear\+Deformation}}
+\index{Compute\+Linear\+Deformation@{Compute\+Linear\+Deformation}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Compute\+Linear\+Deformation()}{ComputeLinearDeformation()}}
+{\footnotesize\ttfamily void Compute\+Linear\+Deformation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position,  }\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$}]{p\+Vertex\+Array,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 504 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_ac996cf3a4311f5cbd0019fc0bda01a14}\label{_draw_scene_8cxx_ac996cf3a4311f5cbd0019fc0bda01a14}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Compute\+Shape\+Deformation@{Compute\+Shape\+Deformation}}
+\index{Compute\+Shape\+Deformation@{Compute\+Shape\+Deformation}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Compute\+Shape\+Deformation()}{ComputeShapeDeformation()}}
+{\footnotesize\ttfamily void Compute\+Shape\+Deformation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$}]{p\+Vertex\+Array }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 302 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a4e52161918de7afd7c8db0a256f8ddd8}\label{_draw_scene_8cxx_a4e52161918de7afd7c8db0a256f8ddd8}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Compute\+Skin\+Deformation@{Compute\+Skin\+Deformation}}
+\index{Compute\+Skin\+Deformation@{Compute\+Skin\+Deformation}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Compute\+Skin\+Deformation()}{ComputeSkinDeformation()}}
+{\footnotesize\ttfamily void Compute\+Skin\+Deformation (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position,  }\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$}]{p\+Vertex\+Array,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 739 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_aacb8bc9132a2da4990618778e43f4c7a}\label{_draw_scene_8cxx_aacb8bc9132a2da4990618778e43f4c7a}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Camera@{Draw\+Camera}}
+\index{Draw\+Camera@{Draw\+Camera}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Camera()}{DrawCamera()}}
+{\footnotesize\ttfamily void Draw\+Camera (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 824 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_ad0e2d3041d8e86de86f953af40945b8d}\label{_draw_scene_8cxx_ad0e2d3041d8e86de86f953af40945b8d}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Light@{Draw\+Light}}
+\index{Draw\+Light@{Draw\+Light}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Light()}{DrawLight()}}
+{\footnotesize\ttfamily void Draw\+Light (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{const \hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 872 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_add935dcacd18b1d03e9c1fb06f3753e5}\label{_draw_scene_8cxx_add935dcacd18b1d03e9c1fb06f3753e5}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Marker@{Draw\+Marker}}
+\index{Draw\+Marker@{Draw\+Marker}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Marker()}{DrawMarker()}}
+{\footnotesize\ttfamily void Draw\+Marker (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 162 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_abe9ac0fa26da39bac65f64bdb83bbfaa}\label{_draw_scene_8cxx_abe9ac0fa26da39bac65f64bdb83bbfaa}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Mesh@{Draw\+Mesh}}
+\index{Draw\+Mesh@{Draw\+Mesh}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Mesh()}{DrawMesh()}}
+{\footnotesize\ttfamily void Draw\+Mesh (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose,  }\item[{\hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode}}]{p\+Shading\+Mode }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 186 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_aa0b65010955bb8c22103efc34d9eed30}\label{_draw_scene_8cxx_aa0b65010955bb8c22103efc34d9eed30}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Node@{Draw\+Node}}
+\index{Draw\+Node@{Draw\+Node}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Node()}{DrawNode()}}
+{\footnotesize\ttfamily void Draw\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{l\+Time,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Parent\+Global\+Position,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose,  }\item[{\hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode}}]{p\+Shading\+Mode }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 119 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a6b70189befca46ab29158e8bff91fca7}\label{_draw_scene_8cxx_a6b70189befca46ab29158e8bff91fca7}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Node\+Recursive@{Draw\+Node\+Recursive}}
+\index{Draw\+Node\+Recursive@{Draw\+Node\+Recursive}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Node\+Recursive()}{DrawNodeRecursive()}}
+{\footnotesize\ttfamily void Draw\+Node\+Recursive (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Parent\+Global\+Position,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose,  }\item[{\hyperlink{_gl_functions_8h_a474716bb9224d44d614704a0bd331d99}{Shading\+Mode}}]{p\+Shading\+Mode }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 95 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a20dda1585cf089f6d337829b81063bfb}\label{_draw_scene_8cxx_a20dda1585cf089f6d337829b81063bfb}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Null@{Draw\+Null}}
+\index{Draw\+Null@{Draw\+Null}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Null()}{DrawNull()}}
+{\footnotesize\ttfamily void Draw\+Null (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 899 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a7e316c75d5c98c074a9bc398623256f6}\label{_draw_scene_8cxx_a7e316c75d5c98c074a9bc398623256f6}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Draw\+Skeleton@{Draw\+Skeleton}}
+\index{Draw\+Skeleton@{Draw\+Skeleton}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Draw\+Skeleton()}{DrawSkeleton()}}
+{\footnotesize\ttfamily void Draw\+Skeleton (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Parent\+Global\+Position,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Global\+Position }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 169 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_ac32b471e4864f3b82a5681f17c9e96df}\label{_draw_scene_8cxx_ac32b471e4864f3b82a5681f17c9e96df}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Initialize\+Lights@{Initialize\+Lights}}
+\index{Initialize\+Lights@{Initialize\+Lights}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Initialize\+Lights()}{InitializeLights()}}
+{\footnotesize\ttfamily void Initialize\+Lights (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 67 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a1ed6632b95b62c4b6614ae5df7a91c31}\label{_draw_scene_8cxx_a1ed6632b95b62c4b6614ae5df7a91c31}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Matrix\+Add@{Matrix\+Add}}
+\index{Matrix\+Add@{Matrix\+Add}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Matrix\+Add()}{MatrixAdd()}}
+{\footnotesize\ttfamily void Matrix\+Add (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Dst\+Matrix,  }\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Src\+Matrix }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 931 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a7b52344214c71eab06a2b89280f3de0d}\label{_draw_scene_8cxx_a7b52344214c71eab06a2b89280f3de0d}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Matrix\+Add\+To\+Diagonal@{Matrix\+Add\+To\+Diagonal}}
+\index{Matrix\+Add\+To\+Diagonal@{Matrix\+Add\+To\+Diagonal}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Matrix\+Add\+To\+Diagonal()}{MatrixAddToDiagonal()}}
+{\footnotesize\ttfamily void Matrix\+Add\+To\+Diagonal (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Matrix,  }\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 921 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a5ef411039dc845f7e880287841f78790}\label{_draw_scene_8cxx_a5ef411039dc845f7e880287841f78790}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Matrix\+Scale@{Matrix\+Scale}}
+\index{Matrix\+Scale@{Matrix\+Scale}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Matrix\+Scale()}{MatrixScale()}}
+{\footnotesize\ttfamily void Matrix\+Scale (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+Matrix,  }\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 906 行目に定義があります。
+
+\mbox{\Hypertarget{_draw_scene_8cxx_a2d11a049d48245bdef35c5c15d9cc865}\label{_draw_scene_8cxx_a2d11a049d48245bdef35c5c15d9cc865}} 
+\index{Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}!Read\+Vertex\+Cache\+Data@{Read\+Vertex\+Cache\+Data}}
+\index{Read\+Vertex\+Cache\+Data@{Read\+Vertex\+Cache\+Data}!Draw\+Scene.\+cxx@{Draw\+Scene.\+cxx}}
+\subsubsection{\texorpdfstring{Read\+Vertex\+Cache\+Data()}{ReadVertexCacheData()}}
+{\footnotesize\ttfamily void Read\+Vertex\+Cache\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{\hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} $\ast$}]{p\+Vertex\+Array }\end{DoxyParamCaption})}
+
+
+
+ Draw\+Scene.\+cxx の 783 行目に定義があります。
+

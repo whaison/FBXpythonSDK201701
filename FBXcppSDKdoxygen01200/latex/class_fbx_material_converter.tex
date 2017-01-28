@@ -1,0 +1,101 @@
+\hypertarget{class_fbx_material_converter}{}\section{Fbx\+Material\+Converter クラス}
+\label{class_fbx_material_converter}\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+
+
+This class provides functions to restructure the material and textures applied to geometries from F\+BX v5 material system to v6-\/and-\/up or the other way around.  
+
+
+
+
+{\ttfamily \#include $<$fbxmaterialconverter.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_material_converter_a3ad6376fa570214f45f836e4152d088a}{Fbx\+Material\+Converter} (\hyperlink{class_fbx_manager}{Fbx\+Manager} \&m\+Manager, \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$p\+Default\+Material=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\hyperlink{class_fbx_material_converter_a3941bfb660ca110cbef7d104e223e7a4}{$\sim$\+Fbx\+Material\+Converter} ()
+\item 
+bool \hyperlink{class_fbx_material_converter_a46530019d28101c557c8861ed22f2930}{Connect\+Textures\+To\+Materials} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\item 
+bool \hyperlink{class_fbx_material_converter_a7b1b6da882b2dd935a3e008b2a85b132}{Connect\+Textures\+To\+Materials} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+bool \hyperlink{class_fbx_material_converter_aa25fab49c96d5383012f959ef609c1d5}{Assign\+Textures\+To\+Layer\+Elements} (\hyperlink{class_fbx_scene}{Fbx\+Scene} \&p\+Scene)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class provides functions to restructure the material and textures applied to geometries from F\+BX v5 material system to v6-\/and-\/up or the other way around. 
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}, \hyperlink{class_fbx_texture}{Fbx\+Texture} 
+\end{DoxySeeAlso}
+
+
+ fbxmaterialconverter.\+h の 31 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_material_converter_a3ad6376fa570214f45f836e4152d088a}\label{class_fbx_material_converter_a3ad6376fa570214f45f836e4152d088a}} 
+\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}!Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}!Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+\subsubsection{\texorpdfstring{Fbx\+Material\+Converter()}{FbxMaterialConverter()}}
+{\footnotesize\ttfamily Fbx\+Material\+Converter\+::\+Fbx\+Material\+Converter (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} \&}]{m\+Manager,  }\item[{\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$}]{p\+Default\+Material = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_material_converter_a3941bfb660ca110cbef7d104e223e7a4}\label{class_fbx_material_converter_a3941bfb660ca110cbef7d104e223e7a4}} 
+\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}!````~Fbx\+Material\+Converter@{$\sim$\+Fbx\+Material\+Converter}}
+\index{````~Fbx\+Material\+Converter@{$\sim$\+Fbx\+Material\+Converter}!Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Material\+Converter()}{~FbxMaterialConverter()}}
+{\footnotesize\ttfamily Fbx\+Material\+Converter\+::$\sim$\+Fbx\+Material\+Converter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_material_converter_aa25fab49c96d5383012f959ef609c1d5}\label{class_fbx_material_converter_aa25fab49c96d5383012f959ef609c1d5}} 
+\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}!Assign\+Textures\+To\+Layer\+Elements@{Assign\+Textures\+To\+Layer\+Elements}}
+\index{Assign\+Textures\+To\+Layer\+Elements@{Assign\+Textures\+To\+Layer\+Elements}!Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+\subsubsection{\texorpdfstring{Assign\+Textures\+To\+Layer\+Elements()}{AssignTexturesToLayerElements()}}
+{\footnotesize\ttfamily bool Fbx\+Material\+Converter\+::\+Assign\+Textures\+To\+Layer\+Elements (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})}
+
+This is the reverse operation of \hyperlink{class_fbx_material_converter_a46530019d28101c557c8861ed22f2930}{Connect\+Textures\+To\+Materials()} Textures connected to Materials\textquotesingle{} color properties are stored in layer elements, and their connections to the color properties are broken.(Convert scene from F\+BX v6-\/and-\/up material system to v5) 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene whose geometries should be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true if all geometries were converted, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_material_converter_a46530019d28101c557c8861ed22f2930}\label{class_fbx_material_converter_a46530019d28101c557c8861ed22f2930}} 
+\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}!Connect\+Textures\+To\+Materials@{Connect\+Textures\+To\+Materials}}
+\index{Connect\+Textures\+To\+Materials@{Connect\+Textures\+To\+Materials}!Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+\subsubsection{\texorpdfstring{Connect\+Textures\+To\+Materials()}{ConnectTexturesToMaterials()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Material\+Converter\+::\+Connect\+Textures\+To\+Materials (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} \&}]{p\+Scene }\end{DoxyParamCaption})}
+
+Moves textures in texture layer elements to connections on the corresponding material\textquotesingle{}s color properties, for all geometries in the scene.(Convert scene from F\+BX v5 material system to v6-\/and-\/up) 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene whose geometries should be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_material_converter_a7b1b6da882b2dd935a3e008b2a85b132}\label{class_fbx_material_converter_a7b1b6da882b2dd935a3e008b2a85b132}} 
+\index{Fbx\+Material\+Converter@{Fbx\+Material\+Converter}!Connect\+Textures\+To\+Materials@{Connect\+Textures\+To\+Materials}}
+\index{Connect\+Textures\+To\+Materials@{Connect\+Textures\+To\+Materials}!Fbx\+Material\+Converter@{Fbx\+Material\+Converter}}
+\subsubsection{\texorpdfstring{Connect\+Textures\+To\+Materials()}{ConnectTexturesToMaterials()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Material\+Converter\+::\+Connect\+Textures\+To\+Materials (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Moves textures in texture layer elements to connections on the corresponding material\textquotesingle{}s color properties, for the given geometry in the scene.(Convert scene from F\+BX v5 material system to v6-\/and-\/up) 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & The geometry node to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on success, false otherwise 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxmaterialconverter_8h}{fbxmaterialconverter.\+h}\end{DoxyCompactItemize}

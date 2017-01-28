@@ -1,0 +1,167 @@
+\hypertarget{class_fbx_layer_entry_view}{}\section{Fbx\+Layer\+Entry\+View クラス}
+\label{class_fbx_layer_entry_view}\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+
+
+{\ttfamily \#include $<$fbxlayerentryview.\+h$>$}
+
+Fbx\+Layer\+Entry\+View の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_layer_entry_view}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_entry_view_a7c5fc0472d0b3d60d0207acc80751daf}{Fbx\+Layer\+Entry\+View} (\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$p\+Entry, bool p\+As\+Source, bool p\+Create=false)
+\item 
+virtual \hyperlink{class_fbx_layer_entry_view_abe013d4f54533ea6e71ab784ca73056b}{$\sim$\+Fbx\+Layer\+Entry\+View} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_layer_entry_view_ae3eaf64e7fdcb66e750ec72627589fdf}{Set\+Layer\+Element} (int p\+Layer\+Index, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} p\+Type, bool p\+U\+V\+Set)
+\item 
+void \hyperlink{class_fbx_layer_entry_view_a7301db4c7de8b6ac87ba458f9f216a79}{Get\+Layer\+Element} (int \&p\+Layer\+Index, \hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} \&p\+Type, bool \&p\+U\+V\+Set) const
+\item 
+\hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element} $\ast$ \hyperlink{class_fbx_layer_entry_view_a6350eba678ba5911cd536f0ed9d740a6}{Get\+Layer\+Element} (\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$p\+Container) const
+\item 
+virtual const char $\ast$ \hyperlink{class_fbx_layer_entry_view_a283d8f57e186dd36c88589dc3f37a35e}{Entry\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_layer_entry_view_aa8222d7ad3155f8e83652e030ab22e91}{s\+Entry\+Type}
+\end{DoxyCompactItemize}
+\subsection*{静的限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_fbx_layer_entry_view_a2143b40ee433ec7138342298b0cf76f3}{s\+Delimiter}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_layer_entry_view}{Fbx\+Layer\+Entry\+View} encodes a layer element representation (the index of the layer, the type of the layer element and whether the layer element is a U\+V\+Set layer element) to a string stored in \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} and decodes the string back to a layer element representation. This class is used in combination with \hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} to represent a source or a destination \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element}. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} and \hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table}. 
+\end{DoxySeeAlso}
+
+
+ fbxlayerentryview.\+h の 33 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_layer_entry_view_a7c5fc0472d0b3d60d0207acc80751daf}\label{class_fbx_layer_entry_view_a7c5fc0472d0b3d60d0207acc80751daf}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Entry\+View()}{FbxLayerEntryView()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Entry\+View\+::\+Fbx\+Layer\+Entry\+View (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_binding_table_entry}{Fbx\+Binding\+Table\+Entry} $\ast$}]{p\+Entry,  }\item[{bool}]{p\+As\+Source,  }\item[{bool}]{p\+Create = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Entry} & The binding table entry to create the entry view for. \\
+\hline
+{\em p\+As\+Source} & {\ttfamily true} to create the entry view as source, {\ttfamily false} as destination. \\
+\hline
+{\em p\+Create} & {\ttfamily true} to create the entry view, {\ttfamily false} otherwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_entry_view_abe013d4f54533ea6e71ab784ca73056b}\label{class_fbx_layer_entry_view_abe013d4f54533ea6e71ab784ca73056b}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!````~Fbx\+Layer\+Entry\+View@{$\sim$\+Fbx\+Layer\+Entry\+View}}
+\index{````~Fbx\+Layer\+Entry\+View@{$\sim$\+Fbx\+Layer\+Entry\+View}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Layer\+Entry\+View()}{~FbxLayerEntryView()}}
+{\footnotesize\ttfamily virtual Fbx\+Layer\+Entry\+View\+::$\sim$\+Fbx\+Layer\+Entry\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_layer_entry_view_a283d8f57e186dd36c88589dc3f37a35e}\label{class_fbx_layer_entry_view_a283d8f57e186dd36c88589dc3f37a35e}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!Entry\+Type@{Entry\+Type}}
+\index{Entry\+Type@{Entry\+Type}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{Entry\+Type()}{EntryType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Fbx\+Layer\+Entry\+View\+::\+Entry\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the entry type. \begin{DoxyReturn}{戻り値}
+Entry type as string \char`\"{}\+Fbx\+Layer\+Entry\char`\"{}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Always use \hyperlink{class_fbx_layer_entry_view_a283d8f57e186dd36c88589dc3f37a35e}{Entry\+Type()} to get the right entry type. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_entry_view_a83ee50482b441ba8b0e6d7c2dba5432f}{Fbx\+Entry\+View}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_layer_entry_view_a7301db4c7de8b6ac87ba458f9f216a79}\label{class_fbx_layer_entry_view_a7301db4c7de8b6ac87ba458f9f216a79}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!Get\+Layer\+Element@{Get\+Layer\+Element}}
+\index{Get\+Layer\+Element@{Get\+Layer\+Element}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{Get\+Layer\+Element()}{GetLayerElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Entry\+View\+::\+Get\+Layer\+Element (\begin{DoxyParamCaption}\item[{int \&}]{p\+Layer\+Index,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type} \&}]{p\+Type,  }\item[{bool \&}]{p\+U\+V\+Set }\end{DoxyParamCaption}) const}
+
+Get the layer element for binding entry. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Index} & Layer\+Element index. \\
+\hline
+{\em p\+Type} & Layer\+Element type. \\
+\hline
+{\em p\+U\+V\+Set} & Whether this is a U\+V\+Set Layer\+Element. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_entry_view_a6350eba678ba5911cd536f0ed9d740a6}\label{class_fbx_layer_entry_view_a6350eba678ba5911cd536f0ed9d740a6}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!Get\+Layer\+Element@{Get\+Layer\+Element}}
+\index{Get\+Layer\+Element@{Get\+Layer\+Element}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{Get\+Layer\+Element()}{GetLayerElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element}$\ast$ Fbx\+Layer\+Entry\+View\+::\+Get\+Layer\+Element (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} $\ast$}]{p\+Container }\end{DoxyParamCaption}) const}
+
+Get the layer element for binding entry. 
+\begin{DoxyParams}{引数}
+{\em p\+Container} & \hyperlink{class_fbx_layer_container}{Fbx\+Layer\+Container} to get the layer element from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The layer element for binding entry. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_entry_view_ae3eaf64e7fdcb66e750ec72627589fdf}\label{class_fbx_layer_entry_view_ae3eaf64e7fdcb66e750ec72627589fdf}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!Set\+Layer\+Element@{Set\+Layer\+Element}}
+\index{Set\+Layer\+Element@{Set\+Layer\+Element}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{Set\+Layer\+Element()}{SetLayerElement()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Entry\+View\+::\+Set\+Layer\+Element (\begin{DoxyParamCaption}\item[{int}]{p\+Layer\+Index,  }\item[{\hyperlink{class_fbx_layer_element_a8c95c5cd880b56c776acd379bd86f42c}{Fbx\+Layer\+Element\+::\+E\+Type}}]{p\+Type,  }\item[{bool}]{p\+U\+V\+Set }\end{DoxyParamCaption})}
+
+Set the layer element for the binding entry. 
+\begin{DoxyParams}{引数}
+{\em p\+Layer\+Index} & Layer\+Element index. \\
+\hline
+{\em p\+Type} & Layer\+Element type. \\
+\hline
+{\em p\+U\+V\+Set} & Whether this is a U\+V\+Set Layer\+Element. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_entry_view_a2143b40ee433ec7138342298b0cf76f3}\label{class_fbx_layer_entry_view_a2143b40ee433ec7138342298b0cf76f3}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!s\+Delimiter@{s\+Delimiter}}
+\index{s\+Delimiter@{s\+Delimiter}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{s\+Delimiter}{sDelimiter}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Layer\+Entry\+View\+::s\+Delimiter\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+ fbxlayerentryview.\+h の 83 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_entry_view_aa8222d7ad3155f8e83652e030ab22e91}\label{class_fbx_layer_entry_view_aa8222d7ad3155f8e83652e030ab22e91}} 
+\index{Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}!s\+Entry\+Type@{s\+Entry\+Type}}
+\index{s\+Entry\+Type@{s\+Entry\+Type}!Fbx\+Layer\+Entry\+View@{Fbx\+Layer\+Entry\+View}}
+\subsubsection{\texorpdfstring{s\+Entry\+Type}{sEntryType}}
+{\footnotesize\ttfamily const char$\ast$ Fbx\+Layer\+Entry\+View\+::s\+Entry\+Type\hspace{0.3cm}{\ttfamily [static]}}
+
+Name of the entry type used in the binding entry. It should be \char`\"{}\+Fbx\+Layer\+Entry\char`\"{} in this case. 
+
+ fbxlayerentryview.\+h の 40 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/shading/\hyperlink{fbxlayerentryview_8h}{fbxlayerentryview.\+h}\end{DoxyCompactItemize}

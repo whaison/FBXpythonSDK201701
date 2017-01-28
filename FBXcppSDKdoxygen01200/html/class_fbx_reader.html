@@ -1,0 +1,1489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: FbxReader クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pro-methods">限定公開メンバ関数</a> &#124;
+<a href="#pro-attribs">限定公開変数類</a> &#124;
+<a href="#friends">フレンド</a> &#124;
+<a href="class_fbx_reader-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxReader クラス<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fbxreader_8h_source.html">fbxreader.h</a>&gt;</code></p>
+<div class="dynheader">
+FbxReader の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_fbx_reader.png" usemap="#FbxReader_map" alt=""/>
+  <map id="FbxReader_map" name="FbxReader_map">
+<area href="class_fbx_reader_collada.html" alt="FbxReaderCollada" shape="rect" coords="0,56,117,80"/>
+<area href="class_fbx_reader_fbx5.html" alt="FbxReaderFbx5" shape="rect" coords="127,56,244,80"/>
+<area href="class_fbx_reader_fbx6.html" title="This class is the FBX v6 reader. The reader provide you the ability to read the global settings..." alt="FbxReaderFbx6" shape="rect" coords="254,56,371,80"/>
+<area href="class_fbx_reader_fbx7.html" title="This class is the FBX v7 reader. The reader provide you the ability to read the global settings..." alt="FbxReaderFbx7" shape="rect" coords="381,56,498,80"/>
+<area href="class_my_own_reader.html" alt="MyOwnReader" shape="rect" coords="508,56,625,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a33badbb2641958ab0772ec2c06a71e11"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11">EInfoRequest</a> { <a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11a03189cefb5f6d784e3af3760f4c89ebd">eInfoExtension</a>, 
+<a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11a6bc70d273a72ac7b0ac1ff679da40192">eInfoDescriptions</a>, 
+<a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11a347956bc041cb7614b8a9be1b388e4c2">eReserved1</a> = 0xFBFB
+ }</td></tr>
+<tr class="separator:a33badbb2641958ab0772ec2c06a71e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a14bd907bcda7dd48ba9b0a6236b7b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a1a14bd907bcda7dd48ba9b0a6236b7b8">EFileOpenSpecialFlags</a> { <a class="el" href="class_fbx_reader.html#a1a14bd907bcda7dd48ba9b0a6236b7b8a916239cfabb05bb13e64fab696226011">eParseForGlobalSettings</a> = 1, 
+<a class="el" href="class_fbx_reader.html#a1a14bd907bcda7dd48ba9b0a6236b7b8a31ba0d93719d2c2670ef2323447a8041">eParseForStatistics</a> = 2
+ }</td></tr>
+<tr class="separator:a1a14bd907bcda7dd48ba9b0a6236b7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83acaa910ced3876e5e232ff17f62c45"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_fbx_reader.html">FbxReader</a> *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a83acaa910ced3876e5e232ff17f62c45">CreateFuncType</a>) (<a class="el" href="class_fbx_manager.html">FbxManager</a> &amp;pManager, <a class="el" href="class_fbx_importer.html">FbxImporter</a> &amp;pImporter, int pSubID, int pPluginID)</td></tr>
+<tr class="separator:a83acaa910ced3876e5e232ff17f62c45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d17b6ac89ea7229a3a1510fbccec73"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#aa8d17b6ac89ea7229a3a1510fbccec73">IOSettingsFillerFuncType</a>) (<a class="el" href="class_fbx_i_o_settings.html">FbxIOSettings</a> &amp;pIOS)</td></tr>
+<tr class="separator:aa8d17b6ac89ea7229a3a1510fbccec73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86477804a6ed54e7f99a1887aa50f256"><td class="memItemLeft" align="right" valign="top">typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a86477804a6ed54e7f99a1887aa50f256">GetInfoFuncType</a>) (<a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11">EInfoRequest</a> pRequest, int pReaderTypeId)</td></tr>
+<tr class="separator:a86477804a6ed54e7f99a1887aa50f256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a00f91923ea112d953f3317dbe80eb816"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a00f91923ea112d953f3317dbe80eb816">FbxReader</a> (<a class="el" href="class_fbx_manager.html">FbxManager</a> &amp;pManager, int pID, <a class="el" href="class_fbx_status.html">FbxStatus</a> &amp;pStatus)</td></tr>
+<tr class="separator:a00f91923ea112d953f3317dbe80eb816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d63581951ac31fa4130badd8df96f1a"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a2d63581951ac31fa4130badd8df96f1a">~FbxReader</a> ()</td></tr>
+<tr class="separator:a2d63581951ac31fa4130badd8df96f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa16aacbaa1c1e16fc208624b55dd6767"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#aa16aacbaa1c1e16fc208624b55dd6767">GetVersion</a> (int &amp;pMajor, int &amp;pMinor, int &amp;pRevision)</td></tr>
+<tr class="separator:aa16aacbaa1c1e16fc208624b55dd6767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6105bd37ae86c03f35aee6f62901856d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a6105bd37ae86c03f35aee6f62901856d">FileOpen</a> (char *pFileName)=0</td></tr>
+<tr class="separator:a6105bd37ae86c03f35aee6f62901856d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819487a39b5e25f69a8dccf187ab4ab9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a819487a39b5e25f69a8dccf187ab4ab9">FileOpen</a> (<a class="el" href="class_fbx_stream.html">FbxStream</a> *pStream, void *pStreamData)</td></tr>
+<tr class="separator:a819487a39b5e25f69a8dccf187ab4ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a327df94e5c24315fc5cbcedf0e7bb615"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a327df94e5c24315fc5cbcedf0e7bb615">FileClose</a> ()=0</td></tr>
+<tr class="separator:a327df94e5c24315fc5cbcedf0e7bb615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af86b437702ffc840cfab52185cbc7232"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#af86b437702ffc840cfab52185cbc7232">IsFileOpen</a> ()=0</td></tr>
+<tr class="separator:af86b437702ffc840cfab52185cbc7232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea3c118db490378c9aed17512396932"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#acea3c118db490378c9aed17512396932">GetReadOptions</a> (bool pParseFileAsNeeded=true)=0</td></tr>
+<tr class="separator:acea3c118db490378c9aed17512396932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29941746acc73d7ffd2411a9be9d2525"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a29941746acc73d7ffd2411a9be9d2525">Read</a> (<a class="el" href="class_fbx_document.html">FbxDocument</a> *pDocument)=0</td></tr>
+<tr class="separator:a29941746acc73d7ffd2411a9be9d2525"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa026634b699bea0df1b43850c08bb63a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#aa026634b699bea0df1b43850c08bb63a">PluginReadParameters</a> (<a class="el" href="class_fbx_object.html">FbxObject</a> &amp;pParams)</td></tr>
+<tr class="separator:aa026634b699bea0df1b43850c08bb63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345b292805ea8799a9d962714e1ad9a5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a345b292805ea8799a9d962714e1ad9a5">FileOpen</a> (char *pFileName, <a class="el" href="class_fbx_reader.html#a1a14bd907bcda7dd48ba9b0a6236b7b8">EFileOpenSpecialFlags</a>)</td></tr>
+<tr class="separator:a345b292805ea8799a9d962714e1ad9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e58c3f7734250f0f8ffaef96b2df3f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a73e58c3f7734250f0f8ffaef96b2df3f">GetAxisInfo</a> (<a class="el" href="class_fbx_axis_system.html">FbxAxisSystem</a> *, <a class="el" href="class_fbx_system_unit.html">FbxSystemUnit</a> *)</td></tr>
+<tr class="separator:a73e58c3f7734250f0f8ffaef96b2df3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14762357b4a8ecce10a266b06cc3117"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#ae14762357b4a8ecce10a266b06cc3117">GetStatistics</a> (<a class="el" href="class_fbx_statistics.html">FbxStatistics</a> *)</td></tr>
+<tr class="separator:ae14762357b4a8ecce10a266b06cc3117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b218671126e70a29f644407a7f307e9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a3b218671126e70a29f644407a7f307e9">GetFrameRate</a> (<a class="el" href="class_fbx_time.html#acc529b00a0e8d4c3da3702449ca93031">FbxTime::EMode</a> &amp;pTimeMode)</td></tr>
+<tr class="separator:a3b218671126e70a29f644407a7f307e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb928634641ad5f99d709478c7a234be"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_fbx_document_info.html">FbxDocumentInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#acb928634641ad5f99d709478c7a234be">GetSceneInfo</a> ()</td></tr>
+<tr class="separator:acb928634641ad5f99d709478c7a234be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d7b40684bb3181219945eb0c73fb9d1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_take_info.html">FbxTakeInfo</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a9d7b40684bb3181219945eb0c73fb9d1">GetTakeInfo</a> ()</td></tr>
+<tr class="separator:a9d7b40684bb3181219945eb0c73fb9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fb0fb0e0c311cb58e15092c82637ee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#ab3fb0fb0e0c311cb58e15092c82637ee">GetDefaultRenderResolution</a> (<a class="el" href="class_fbx_string.html">FbxString</a> &amp;pCamName, <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pResolutionMode, double &amp;pW, double &amp;pH)</td></tr>
+<tr class="separator:ab3fb0fb0e0c311cb58e15092c82637ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c9dad350ae8255c7346b279b5cf14bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a7c9dad350ae8255c7346b279b5cf14bf">IsGenuine</a> ()</td></tr>
+<tr class="separator:a7c9dad350ae8255c7346b279b5cf14bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27bef92675a5f95f18dfe105a0c06d8b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_fbx_i_o_settings.html">FbxIOSettings</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a27bef92675a5f95f18dfe105a0c06d8b">GetIOSettings</a> ()</td></tr>
+<tr class="separator:a27bef92675a5f95f18dfe105a0c06d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39e468081c3ebe63565409ef36f833a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#af39e468081c3ebe63565409ef36f833a">SetIOSettings</a> (<a class="el" href="class_fbx_i_o_settings.html">FbxIOSettings</a> *pIOSettings)</td></tr>
+<tr class="separator:af39e468081c3ebe63565409ef36f833a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba190e276718b1abfa6c26a83d2c363"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#aeba190e276718b1abfa6c26a83d2c363">SetProgressHandler</a> (<a class="el" href="class_fbx_progress.html">FbxProgress</a> *)</td></tr>
+<tr class="separator:aeba190e276718b1abfa6c26a83d2c363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640eef510ddb298b2eaad0545b79de66"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a640eef510ddb298b2eaad0545b79de66">SetEmbeddingExtractionFolder</a> (const char *)</td></tr>
+<tr class="separator:a640eef510ddb298b2eaad0545b79de66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab08a9e71a059ef6052e7fe2d8ba6c35d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#ab08a9e71a059ef6052e7fe2d8ba6c35d">SupportsStreams</a> () const</td></tr>
+<tr class="separator:ab08a9e71a059ef6052e7fe2d8ba6c35d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e334ad0c2abd069c35a016413a8adcd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a9e334ad0c2abd069c35a016413a8adcd">FileOpen</a> (<a class="el" href="class_fbx_file.html">FbxFile</a> *pFile)</td></tr>
+<tr class="separator:a9e334ad0c2abd069c35a016413a8adcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7462b93f063eac16b6dd2516c4c3d2f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_status.html">FbxStatus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a7462b93f063eac16b6dd2516c4c3d2f1">GetStatus</a> ()</td></tr>
+<tr class="separator:a7462b93f063eac16b6dd2516c4c3d2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a57209dd75b739a6234bd21212f447215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a57209dd75b739a6234bd21212f447215">SetDefaultRenderResolution</a> (const char *pCamName, const char *pResolutionMode, double pW, double pH)</td></tr>
+<tr class="separator:a57209dd75b739a6234bd21212f447215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e4e6db14fdee2454bb590551310b03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a55e4e6db14fdee2454bb590551310b03">PluginsReadBegin</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> &amp;pScene)</td></tr>
+<tr class="separator:a55e4e6db14fdee2454bb590551310b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e6537a9823550e485243aa67a48bbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a72e6537a9823550e485243aa67a48bbd">PluginsRead</a> (const char *pName, const char *pVersion)</td></tr>
+<tr class="separator:a72e6537a9823550e485243aa67a48bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0213250ebf3b09c6f31ee1d2a610a07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#ab0213250ebf3b09c6f31ee1d2a610a07">PluginsReadEnd</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> &amp;pScene)</td></tr>
+<tr class="separator:ab0213250ebf3b09c6f31ee1d2a610a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a00e2bf3c80f5167a89149b96df57c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_reader.html">FbxReader</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#ab5a00e2bf3c80f5167a89149b96df57c">operator=</a> (<a class="el" href="class_fbx_reader.html">FbxReader</a> const &amp;)</td></tr>
+<tr class="separator:ab5a00e2bf3c80f5167a89149b96df57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9093c41782a1b48331f1ab54ee4617d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#ac9093c41782a1b48331f1ab54ee4617d">CheckDuplicateNodeNames</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pRootNode, <a class="el" href="class_fbx_string.html">FbxString</a> &amp;pDuplicateNodeNameList)</td></tr>
+<tr class="separator:ac9093c41782a1b48331f1ab54ee4617d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a8a9bd15f63e9b7ab1ad155608d4db1e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_status.html">FbxStatus</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a8a9bd15f63e9b7ab1ad155608d4db1e0">mStatus</a></td></tr>
+<tr class="separator:a8a9bd15f63e9b7ab1ad155608d4db1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572c9e4dc988f01da8ffb6e16ef4cca2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_manager.html">FbxManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a572c9e4dc988f01da8ffb6e16ef4cca2">mManager</a></td></tr>
+<tr class="separator:a572c9e4dc988f01da8ffb6e16ef4cca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf13af19c89bdeffde6fdf2e2ebdf7ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_i_o_default_render_resolution.html">FbxIODefaultRenderResolution</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#adf13af19c89bdeffde6fdf2e2ebdf7ac">mData</a></td></tr>
+<tr class="separator:adf13af19c89bdeffde6fdf2e2ebdf7ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a825b5c450dc04c4042a16fa36d3641c3"><td class="memItemLeft" align="right" valign="top">struct&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_reader.html#a825b5c450dc04c4042a16fa36d3641c3">FbxReaderFbx7_Impl</a></td></tr>
+<tr class="separator:a825b5c450dc04c4042a16fa36d3641c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Base class of other readers used internally. This class provides the interfaces for reading files.</p>
+<p>The role of the reader is to effectively "read" specific file data vs the role of the importer is to select a specific reader and launch the reading of a file through that reader. </p><dl class="section see"><dt>参照</dt><dd><a class="el" href="class_fbx_importer.html">FbxImporter</a></dd></dl>
+<p>ex:</p><ul>
+<li><a class="el" href="class_fbx_reader_fbx5.html">FbxReaderFbx5</a> can read FBX 5 format files</li>
+<li><a class="el" href="class_fbx_reader_fbx6.html" title="This class is the FBX v6 reader. The reader provide you the ability to read the global settings...">FbxReaderFbx6</a> can read FBX 6 format files</li>
+<li><a class="el" href="class_fbx_reader_fbx7.html" title="This class is the FBX v7 reader. The reader provide you the ability to read the global settings...">FbxReaderFbx7</a> can read FBX 7 format files</li>
+<li><a class="el" href="class_fbx_reader_collada.html">FbxReaderCollada</a> can read Collada files</li>
+<li>FbxReaderDxf can read Dxf files</li>
+<li>... etc.</li>
+</ul>
+<p>A SDK user should - normally - not use this class, except if a custom reader must be created for plug-in extension, then <a class="el" href="class_fbx_reader.html">FbxReader</a> must be the base class for the new custom reader in that particular situation. </p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00064">64</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">型定義メンバ詳解</h2>
+<a id="a83acaa910ced3876e5e232ff17f62c45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83acaa910ced3876e5e232ff17f62c45">&#9670;&nbsp;</a></span>CreateFuncType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="class_fbx_reader.html">FbxReader</a>*(* FbxReader::CreateFuncType) (<a class="el" href="class_fbx_manager.html">FbxManager</a> &amp;pManager, <a class="el" href="class_fbx_importer.html">FbxImporter</a> &amp;pImporter, int pSubID, int pPluginID)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00098">98</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a86477804a6ed54e7f99a1887aa50f256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86477804a6ed54e7f99a1887aa50f256">&#9670;&nbsp;</a></span>GetInfoFuncType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void*(* FbxReader::GetInfoFuncType) (<a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11">EInfoRequest</a> pRequest, int pReaderTypeId)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00104">104</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa8d17b6ac89ea7229a3a1510fbccec73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8d17b6ac89ea7229a3a1510fbccec73">&#9670;&nbsp;</a></span>IOSettingsFillerFuncType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* FbxReader::IOSettingsFillerFuncType) (<a class="el" href="class_fbx_i_o_settings.html">FbxIOSettings</a> &amp;pIOS)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00101">101</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a1a14bd907bcda7dd48ba9b0a6236b7b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a14bd907bcda7dd48ba9b0a6236b7b8">&#9670;&nbsp;</a></span>EFileOpenSpecialFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_reader.html#a1a14bd907bcda7dd48ba9b0a6236b7b8">FbxReader::EFileOpenSpecialFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Flags for reading parts of file. </p><dl class="section remark"><dt>注釈</dt><dd>Used internally when an importer is initialized to get some information very fast. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a1a14bd907bcda7dd48ba9b0a6236b7b8a916239cfabb05bb13e64fab696226011"></a>eParseForGlobalSettings&#160;</td><td class="fielddoc"><p>Used for reading the Global settings section when an importer is initialized. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1a14bd907bcda7dd48ba9b0a6236b7b8a31ba0d93719d2c2670ef2323447a8041"></a>eParseForStatistics&#160;</td><td class="fielddoc"><p>Used for reading a group of statistics when an importer is initialized. </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a33badbb2641958ab0772ec2c06a71e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33badbb2641958ab0772ec2c06a71e11">&#9670;&nbsp;</a></span>EInfoRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_reader.html#a33badbb2641958ab0772ec2c06a71e11">FbxReader::EInfoRequest</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Information type to request. </p><dl class="section remark"><dt>注釈</dt><dd>Used internally to get reader file information. </dd></dl>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a33badbb2641958ab0772ec2c06a71e11a03189cefb5f6d784e3af3760f4c89ebd"></a>eInfoExtension&#160;</td><td class="fielddoc"><p>To get the file ext for a reader ex: "FBX". </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a33badbb2641958ab0772ec2c06a71e11a6bc70d273a72ac7b0ac1ff679da40192"></a>eInfoDescriptions&#160;</td><td class="fielddoc"><p>To get the file description for a reader ex: "Autodesk FBX (*.fbx)". </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a33badbb2641958ab0772ec2c06a71e11a347956bc041cb7614b8a9be1b388e4c2"></a>eReserved1&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00081">81</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a00f91923ea112d953f3317dbe80eb816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f91923ea112d953f3317dbe80eb816">&#9670;&nbsp;</a></span>FbxReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FbxReader::FbxReader </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_manager.html">FbxManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>pManager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_status.html">FbxStatus</a> &amp;&#160;</td>
+          <td class="paramname"><em>pStatus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pManager</td><td>The <a class="el" href="class_fbx_manager.html">FbxManager</a> Object. </td></tr>
+    <tr><td class="paramname">pID</td><td>Id for current reader. </td></tr>
+    <tr><td class="paramname">pStatus</td><td>The <a class="el" href="class_fbx_status.html">FbxStatus</a> object to hold error codes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2d63581951ac31fa4130badd8df96f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d63581951ac31fa4130badd8df96f1a">&#9670;&nbsp;</a></span>~FbxReader()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual FbxReader::~FbxReader </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac9093c41782a1b48331f1ab54ee4617d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9093c41782a1b48331f1ab54ee4617d">&#9670;&nbsp;</a></span>CheckDuplicateNodeNames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::CheckDuplicateNodeNames </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pRootNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pDuplicateNodeNameList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a327df94e5c24315fc5cbcedf0e7bb615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a327df94e5c24315fc5cbcedf0e7bb615">&#9670;&nbsp;</a></span>FileClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::FileClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Closes the file stream </p><dl class="section return"><dt>戻り値</dt><dd><code>false</code> </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a05230d40a8c8c2f62afee63f70a8d3be">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_collada.html#a5668036ed12534fd339f3106c0d09864">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx7.html#a06f5323e8d483a1103d54fc53cceadc9">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#a315730ff4083066964d32c6d3b3a717d">FbxReaderFbx5</a>, <a class="el" href="class_my_own_reader.html#abc7f3b49b51e2e59e502e774c78443d8">MyOwnReader</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a6105bd37ae86c03f35aee6f62901856d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6105bd37ae86c03f35aee6f62901856d">&#9670;&nbsp;</a></span>FileOpen() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::FileOpen </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pFileName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Opens the file with default flag </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFileName</td><td>Name of the File to open </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>If the file opens successfully return <code>true</code>, otherwise return <code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#aae8a88d85353be67413ce60a27873422">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_collada.html#aec7a5267f85187eeb26dd55ec250119e">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx7.html#a06899ecd549ba92789673586d05825cb">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#a1aef8cc95eae3b44812beef48d6edb5d">FbxReaderFbx5</a>, <a class="el" href="class_my_own_reader.html#a77f7f753ea30442895994a0f6c0479d8">MyOwnReader</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a819487a39b5e25f69a8dccf187ab4ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819487a39b5e25f69a8dccf187ab4ab9">&#9670;&nbsp;</a></span>FileOpen() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::FileOpen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_stream.html">FbxStream</a> *&#160;</td>
+          <td class="paramname"><em>pStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>pStreamData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Opens the stream with default flag </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pStream</td><td>stream to open </td></tr>
+    <tr><td class="paramname">pStreamData</td><td>user-defined stream data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>If the stream opens successfully return <code>true</code>, otherwise return <code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a841f736cd6203c124aba426b66559968">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a3ae495d359793c9389f02a1ed1e435ff">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#a1ac1c0598fea61e91ac2c98de15a0d24">FbxReaderFbx5</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a345b292805ea8799a9d962714e1ad9a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345b292805ea8799a9d962714e1ad9a5">&#9670;&nbsp;</a></span>FileOpen() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::FileOpen </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_reader.html#a1a14bd907bcda7dd48ba9b0a6236b7b8">EFileOpenSpecialFlags</a>&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Opens the file with specific EFileOpenSpecialFlags </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pFileName</td><td>Name of the File to open. </td></tr>
+    <tr><td class="paramname">pFlags</td><td>The EFileOpenSpecialFlags to open with </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>If the file opens successfully return true, otherwise return false. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a9a28e37abe39c65e899a9c6f0b705756">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a003c93fdf81dc99380d0276e7643ac26">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#aa197089a894684834388a2caf43145e3">FbxReaderFbx5</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00165">165</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9e334ad0c2abd069c35a016413a8adcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e334ad0c2abd069c35a016413a8adcd">&#9670;&nbsp;</a></span>FileOpen() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::FileOpen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_file.html">FbxFile</a> *&#160;</td>
+          <td class="paramname"><em>pFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a9f3d0e6b7722581f2028be9b94f1b933">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a6f6a6de8ff027f552341f0909bdf54b4">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#ad48fa87e086b236db57f57eed5f50ddb">FbxReaderFbx5</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a73e58c3f7734250f0f8ffaef96b2df3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e58c3f7734250f0f8ffaef96b2df3f">&#9670;&nbsp;</a></span>GetAxisInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::GetAxisInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_axis_system.html">FbxAxisSystem</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_system_unit.html">FbxSystemUnit</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the system axis information and file system units from the file </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pAxisSystem</td><td>Axis system in file </td></tr>
+    <tr><td class="paramname">pSystemUnits</td><td>System unit in file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#ab8e2b6c8c2b0b081b615cd4969af32cb">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_collada.html#aed6cb43bb8262e63260088ad8abcf2e6">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx7.html#aa57c715aa82bd42dbe1df860296ad8be">FbxReaderFbx7</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00172">172</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab3fb0fb0e0c311cb58e15092c82637ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fb0fb0e0c311cb58e15092c82637ee">&#9670;&nbsp;</a></span>GetDefaultRenderResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::GetDefaultRenderResolution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pCamName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_string.html">FbxString</a> &amp;&#160;</td>
+          <td class="paramname"><em>pResolutionMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>pW</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;&#160;</td>
+          <td class="paramname"><em>pH</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>If default camera resolution is OK, returns information about the resolution of the render. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pCamName</td><td>Default camera name. </td></tr>
+    <tr><td class="paramname">pResolutionMode</td><td>Default resolution mode. </td></tr>
+    <tr><td class="paramname">pW</td><td>Default resolution width. </td></tr>
+    <tr><td class="paramname">pH</td><td>Default resolution height. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> If default camera resolution is OK, <code>false</code> Otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="a3b218671126e70a29f644407a7f307e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b218671126e70a29f644407a7f307e9">&#9670;&nbsp;</a></span>GetFrameRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::GetFrameRate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_time.html#acc529b00a0e8d4c3da3702449ca93031">FbxTime::EMode</a> &amp;&#160;</td>
+          <td class="paramname"><em>pTimeMode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get FBX file time mode read from GlobalSettings in FBX 6.n and FBX 7.n </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pTimeMode</td><td>ref to a <a class="el" href="class_fbx_time.html#acc529b00a0e8d4c3da3702449ca93031">FbxTime::EMode</a> enum </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>true</code> on success, <code>false</code> otherwise. </dd></dl>
+<dl class="section remark"><dt>注釈</dt><dd>This function must be called after <a class="el" href="class_fbx_importer.html#a70528a9ca1ff737bda9696a2073acd13">FbxImporter::Initialize()</a>. Can be used for statistics (via GlobalSettings) before loading the whole scene from the file. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#ad4ae4c4949d316491f937a0ff75c6ed7">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a4aac7f6892348dd1f8fe5129cbfc2cc1">FbxReaderFbx7</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00186">186</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a27bef92675a5f95f18dfe105a0c06d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27bef92675a5f95f18dfe105a0c06d8b">&#9670;&nbsp;</a></span>GetIOSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_fbx_i_o_settings.html">FbxIOSettings</a>* FbxReader::GetIOSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Access to a IOSettings object. </p><dl class="section return"><dt>戻り値</dt><dd>A pointer to IOSettings used for this reader or NULL if the object has not been allocated. </dd></dl>
+
+</div>
+</div>
+<a id="acea3c118db490378c9aed17512396932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea3c118db490378c9aed17512396932">&#9670;&nbsp;</a></span>GetReadOptions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::GetReadOptions </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pParseFileAsNeeded</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns file stream options </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParseFileAsNeeded</td><td>Sets whether to parse file as read options </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>true on success, otherwise return false. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#afe24d36b1c38806c9ace6a6d1a782b88">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#ac8d749c6a5f5c47573f27c26383401de">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_collada.html#a23cea871d527b8695ebdeade47b1938e">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx5.html#a30c6a2a6f02fddffecec9cabf9f51ed7">FbxReaderFbx5</a>, <a class="el" href="class_my_own_reader.html#a0ce8b8bc4f216b5e87574796aa973219">MyOwnReader</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="acb928634641ad5f99d709478c7a234be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb928634641ad5f99d709478c7a234be">&#9670;&nbsp;</a></span>GetSceneInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_fbx_document_info.html">FbxDocumentInfo</a>* FbxReader::GetSceneInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the scene info from the file. </p><dl class="section return"><dt>戻り値</dt><dd>NULL. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a62e8d566653eccca7e4b7c914f7a9a5e">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a9079add7d3edeb7af9378ae3a19fec35">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#af685112183765e2a278bbbc898374074">FbxReaderFbx5</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00192">192</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae14762357b4a8ecce10a266b06cc3117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14762357b4a8ecce10a266b06cc3117">&#9670;&nbsp;</a></span>GetStatistics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::GetStatistics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_statistics.html">FbxStatistics</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns statistics from the file </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pStats</td><td>Statistics in the file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a72865fb347314f30b81b56767fe91a5b">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a674cd0632a4d854d8a7dceb51179e8c9">FbxReaderFbx7</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00178">178</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7462b93f063eac16b6dd2516c4c3d2f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7462b93f063eac16b6dd2516c4c3d2f1">&#9670;&nbsp;</a></span>GetStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_status.html">FbxStatus</a>&amp; FbxReader::GetStatus </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00241">241</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9d7b40684bb3181219945eb0c73fb9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d7b40684bb3181219945eb0c73fb9d1">&#9670;&nbsp;</a></span>GetTakeInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="class_fbx_array.html">FbxArray</a>&lt;<a class="el" href="class_fbx_take_info.html">FbxTakeInfo</a>*&gt;* FbxReader::GetTakeInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the list of take infos from the file. </p><dl class="section return"><dt>戻り値</dt><dd>NULL </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a6f90870b7572e7fcbc9832679a89d5f4">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a220f07e0cb0c171279e1f98e0433bbee">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_collada.html#af772ad8fc79672d06aa9ea6910b81ab0">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx5.html#a4680a5c4695d3692582d3ca8db71cd01">FbxReaderFbx5</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00197">197</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa16aacbaa1c1e16fc208624b55dd6767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa16aacbaa1c1e16fc208624b55dd6767">&#9670;&nbsp;</a></span>GetVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxReader::GetVersion </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>pMajor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>pMinor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>pRevision</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the file version. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pMajor</td><td>Major version. </td></tr>
+    <tr><td class="paramname">pMinor</td><td>Minor version. </td></tr>
+    <tr><td class="paramname">pRevision</td><td>Revision version. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#aad4206439b88a858608710d745bfd8e8">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a73f54d9a13bac3952f78983ec07b6d5c">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#a297ed289a6d5e55f33540d8efb4bfd0b">FbxReaderFbx5</a>, <a class="el" href="class_my_own_reader.html#aa57a92ed234912fb6d570a03fe265124">MyOwnReader</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00111">111</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af86b437702ffc840cfab52185cbc7232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af86b437702ffc840cfab52185cbc7232">&#9670;&nbsp;</a></span>IsFileOpen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::IsFileOpen </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the file stream is open. </p><dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a430304edb9e06837faacd6f25a0ed714">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_collada.html#a6732d6488100827a26065750e80f3a27">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx7.html#a0b476396dddc5ed76720e28770535a10">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#ae610563380260e4445a8c90646898a87">FbxReaderFbx5</a>, <a class="el" href="class_my_own_reader.html#a31426db70bc2b4e7382563713952111a">MyOwnReader</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a7c9dad350ae8255c7346b279b5cf14bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9dad350ae8255c7346b279b5cf14bf">&#9670;&nbsp;</a></span>IsGenuine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FbxReader::IsGenuine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Judges if the format of the file is was created by an Autodesk plug-in. An internal (genuine) plug-in is one created by the Autodesk FBX product team. </p><dl class="section return"><dt>戻り値</dt><dd><code>true</code> If the file format is internal plug-in , <code>false</code> Otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ab5a00e2bf3c80f5167a89149b96df57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a00e2bf3c80f5167a89149b96df57c">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_reader.html">FbxReader</a>&amp; FbxReader::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_reader.html">FbxReader</a> const &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00250">250</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa026634b699bea0df1b43850c08bb63a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa026634b699bea0df1b43850c08bb63a">&#9670;&nbsp;</a></span>PluginReadParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxReader::PluginReadParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_object.html">FbxObject</a> &amp;&#160;</td>
+          <td class="paramname"><em>pParams</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads extension plug-ins name, version and parameters, so that we can remember if a plug-in was used during export. This is especially useful for extension plug-ins that modify the scene and also to warn users during import if an extension plug-in was used that could be missing. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pParams</td><td>The parameters of the extension plug-in. The properties of the objects are used as the parameters of the extension plug-in. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section remark"><dt>注釈</dt><dd>This function has no implementation in this class. Only sub-class should implement it as needed. For example, FBX 6 and FBX 7 does implement it. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a1a3544b766bd03dc4b1141ba4f93b03f">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a60ceb6537da84cfd6540adde212b7b8f">FbxReaderFbx7</a>で再実装されています。</p>
+
+</div>
+</div>
+<a id="a72e6537a9823550e485243aa67a48bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e6537a9823550e485243aa67a48bbd">&#9670;&nbsp;</a></span>PluginsRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxReader::PluginsRead </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pVersion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a55e4e6db14fdee2454bb590551310b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e4e6db14fdee2454bb590551310b03">&#9670;&nbsp;</a></span>PluginsReadBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxReader::PluginsReadBegin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> &amp;&#160;</td>
+          <td class="paramname"><em>pScene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0213250ebf3b09c6f31ee1d2a610a07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0213250ebf3b09c6f31ee1d2a610a07">&#9670;&nbsp;</a></span>PluginsReadEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxReader::PluginsReadEnd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> &amp;&#160;</td>
+          <td class="paramname"><em>pScene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29941746acc73d7ffd2411a9be9d2525"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29941746acc73d7ffd2411a9be9d2525">&#9670;&nbsp;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::Read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_document.html">FbxDocument</a> *&#160;</td>
+          <td class="paramname"><em>pDocument</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Reads file with stream options </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pDocument</td><td><a class="el" href="class_fbx_document.html">FbxDocument</a> to store the file data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd><code>false</code>. </dd></dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#ab16aeaede33ca635a0493069aac4fbea">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a037c53dbae903fd4aafbb942a563f759">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_collada.html#afbffa96769d22d8e5df25c83d15bd8cb">FbxReaderCollada</a>, <a class="el" href="class_fbx_reader_fbx5.html#aac75f44d42d473ac88a54c81ec5b1af6">FbxReaderFbx5</a>, <a class="el" href="class_my_own_reader.html#a0b742b5ba8aa552aa4968349a0068673">MyOwnReader</a>で実装されています。</p>
+
+</div>
+</div>
+<a id="a57209dd75b739a6234bd21212f447215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57209dd75b739a6234bd21212f447215">&#9670;&nbsp;</a></span>SetDefaultRenderResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FbxReader::SetDefaultRenderResolution </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pCamName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pResolutionMode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pW</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pH</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a640eef510ddb298b2eaad0545b79de66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a640eef510ddb298b2eaad0545b79de66">&#9670;&nbsp;</a></span>SetEmbeddingExtractionFolder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxReader::SetEmbeddingExtractionFolder </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a574e93fb5fc9fd89050b11c383316ab2">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a411118263811ffa136e233abfb5a0d02">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#ab910914828f297f51c28d88f466d6928">FbxReaderFbx5</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00230">230</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af39e468081c3ebe63565409ef36f833a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39e468081c3ebe63565409ef36f833a">&#9670;&nbsp;</a></span>SetIOSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxReader::SetIOSettings </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_i_o_settings.html">FbxIOSettings</a> *&#160;</td>
+          <td class="paramname"><em>pIOSettings</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the IOSettings pointer to be used for this reader instance. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pIOSettings</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeba190e276718b1abfa6c26a83d2c363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba190e276718b1abfa6c26a83d2c363">&#9670;&nbsp;</a></span>SetProgressHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void FbxReader::SetProgressHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_progress.html">FbxProgress</a> *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Pass a progress handler to the reader. </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pProgress</td><td><a class="el" href="class_fbx_progress.html">FbxProgress</a> to store the progress information. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#a85827a96cd550f6260854858766e4d96">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#a513e9084df22767dfaf95252d815abbf">FbxReaderFbx7</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00228">228</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab08a9e71a059ef6052e7fe2d8ba6c35d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab08a9e71a059ef6052e7fe2d8ba6c35d">&#9670;&nbsp;</a></span>SupportsStreams()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool FbxReader::SupportsStreams </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns true if this reader supports <a class="el" href="class_fbx_stream.html">FbxStream</a> I/O. Default value is false. </p>
+
+<p><a class="el" href="class_fbx_reader_fbx6.html#ad38deb810e2c73562b9748486f4476bb">FbxReaderFbx6</a>, <a class="el" href="class_fbx_reader_fbx7.html#ab6283b540d9ea9141c9338400e1b8455">FbxReaderFbx7</a>, <a class="el" href="class_fbx_reader_fbx5.html#ae6f619a41303077d9d4ed2935f3d2108">FbxReaderFbx5</a>で再実装されています。</p>
+
+</div>
+</div>
+<h2 class="groupheader">フレンドと関連関数の詳解</h2>
+<a id="a825b5c450dc04c4042a16fa36d3641c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a825b5c450dc04c4042a16fa36d3641c3">&#9670;&nbsp;</a></span>FbxReaderFbx7_Impl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend struct FbxReaderFbx7_Impl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00261">261</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="adf13af19c89bdeffde6fdf2e2ebdf7ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf13af19c89bdeffde6fdf2e2ebdf7ac">&#9670;&nbsp;</a></span>mData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_i_o_default_render_resolution.html">FbxIODefaultRenderResolution</a>* FbxReader::mData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00255">255</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a572c9e4dc988f01da8ffb6e16ef4cca2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572c9e4dc988f01da8ffb6e16ef4cca2">&#9670;&nbsp;</a></span>mManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_manager.html">FbxManager</a>&amp; FbxReader::mManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00254">254</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8a9bd15f63e9b7ab1ad155608d4db1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a9bd15f63e9b7ab1ad155608d4db1e0">&#9670;&nbsp;</a></span>mStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_status.html">FbxStatus</a>&amp; FbxReader::mStatus</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxreader_8h_source.html">fbxreader.h</a> の <a class="el" href="fbxreader_8h_source.html#l00253">253</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/fileio/<a class="el" href="fbxreader_8h_source.html">fbxreader.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

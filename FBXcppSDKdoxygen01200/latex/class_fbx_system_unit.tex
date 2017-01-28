@@ -1,0 +1,434 @@
+\hypertarget{class_fbx_system_unit}{}\section{Fbx\+System\+Unit クラス}
+\label{class_fbx_system_unit}\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+
+
+This class describes the units of measurement used within a particular scene.  
+
+
+
+
+{\ttfamily \#include $<$fbxsystemunit.\+h$>$}
+
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_system_unit_aec08a323b4e20c8c13fed7771370cace}{Fbx\+System\+Unit} ()
+\item 
+\hyperlink{class_fbx_system_unit_a6b265b9eccd00fbc09bb8064c9f3f7c4}{Fbx\+System\+Unit} (double p\+Scale\+Factor, double p\+Multiplier=1.\+0)
+\item 
+\hyperlink{class_fbx_system_unit_a151549b75cf9aadef6c943adb814122f}{$\sim$\+Fbx\+System\+Unit} ()
+\item 
+void \hyperlink{class_fbx_system_unit_ad31fce9160b21a9ba8069efd1878b2a1}{Convert\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \&p\+Options=\hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}) const
+\item 
+void \hyperlink{class_fbx_system_unit_af40efc8ae0ce1fb6911e1d30baa96758}{Convert\+Children} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Root, const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&p\+Src\+Unit, const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \&p\+Options=\hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}) const
+\item 
+void \hyperlink{class_fbx_system_unit_a29b302d74518106bdc5e2d21ee687e09}{Convert\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Fbx\+Root, const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \&p\+Options=\hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}) const
+\item 
+double \hyperlink{class_fbx_system_unit_a9421294bb5936de827e0a9b8472f6095}{Get\+Scale\+Factor} () const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_system_unit_a8c8481b9936bc2fa9320b29c7a1a4ff5}{Get\+Scale\+Factor\+As\+String} (bool p\+Abbreviated=true) const
+\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_system_unit_aa9a883aeffb6e9814b3ecc6157606954}{Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial} () const
+\item 
+double \hyperlink{class_fbx_system_unit_ab9b59b5de500d63e0ef832818948a024}{Get\+Multiplier} () const
+\item 
+bool \hyperlink{class_fbx_system_unit_a28f701aa2d2df44e7b89d10e66a1d892}{operator==} (const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&p\+Other) const
+\item 
+bool \hyperlink{class_fbx_system_unit_a4a338e68ec0e74358850cca54ea5a5f6}{operator!=} (const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \& \hyperlink{class_fbx_system_unit_a91610b2403fd3fdbd0988123cd21eb50}{operator=} (const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&p\+System\+Unit)
+\item 
+double \hyperlink{class_fbx_system_unit_a40c999b638d3cb538da24d76ccd70abd}{Get\+Conversion\+Factor\+To} (const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&p\+Target) const
+\item 
+double \hyperlink{class_fbx_system_unit_a7fa4b5f722c1c4c3b3113c4b0a24e4ff}{Get\+Conversion\+Factor\+From} (const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&p\+Source) const
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_aac172547aa34bdc8d71d6c5668262c25}{mm}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for millimeters. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_a8448652c675044fb54506a4044f72814}{dm}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for decimeters. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_a2938b6feaf5711daea463071e89d073e}{cm}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for centimeters. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_ad769a9a9b50605abe42d500ac7c99d28}{m}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for meters. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_abc5367c578e2fe6975baae0ffbff2d63}{km}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for kilometers. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_a88862a2baeb2e510e1f39ef9d09aa0c4}{Inch}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for inches. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_a94d3bfe1b4fd69a021bbaff3a61a90d5}{Foot}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for feet. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_ae66f3c2d1e92b50cd4ba8bca95a7cb40}{Mile}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for miles. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \hyperlink{class_fbx_system_unit_a4c9612d5387f7ac06a313efd63452cd4}{Yard}
+\begin{DoxyCompactList}\small\item\em Predefined system unit for yards. \end{DoxyCompactList}\item 
+static const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} $\ast$ \hyperlink{class_fbx_system_unit_a5a63e7dec80be27c252a24739a710505}{s\+Predefined\+Units}
+\begin{DoxyCompactList}\small\item\em Points to a \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} array to store the predefined system units. The array size is F\+B\+X\+S\+D\+K\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+U\+N\+I\+T\+\_\+\+P\+R\+E\+D\+E\+F\+\_\+\+C\+O\+U\+NT. \end{DoxyCompactList}\item 
+static const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}
+\begin{DoxyCompactList}\small\item\em Stores the default conversion options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_system_unit_ac6f6b3953bf13718eb87110d614b3c9a}{Fbx\+Global\+Settings}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class describes the units of measurement used within a particular scene. 
+
+ fbxsystemunit.\+h の 31 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_system_unit_aec08a323b4e20c8c13fed7771370cace}\label{class_fbx_system_unit_aec08a323b4e20c8c13fed7771370cace}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Fbx\+System\+Unit()}{FbxSystemUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+System\+Unit\+::\+Fbx\+System\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_system_unit_a6b265b9eccd00fbc09bb8064c9f3f7c4}\label{class_fbx_system_unit_a6b265b9eccd00fbc09bb8064c9f3f7c4}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Fbx\+System\+Unit()}{FbxSystemUnit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+System\+Unit\+::\+Fbx\+System\+Unit (\begin{DoxyParamCaption}\item[{double}]{p\+Scale\+Factor,  }\item[{double}]{p\+Multiplier = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Scale\+Factor} & The equivalent number of centimeters in the new system unit. For example, an inch unit uses a scale factor of 2.\+54. \\
+\hline
+{\em p\+Multiplier} & A multiplier factor of p\+Scale\+Factor. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_a151549b75cf9aadef6c943adb814122f}\label{class_fbx_system_unit_a151549b75cf9aadef6c943adb814122f}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!````~Fbx\+System\+Unit@{$\sim$\+Fbx\+System\+Unit}}
+\index{````~Fbx\+System\+Unit@{$\sim$\+Fbx\+System\+Unit}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+System\+Unit()}{~FbxSystemUnit()}}
+{\footnotesize\ttfamily Fbx\+System\+Unit\+::$\sim$\+Fbx\+System\+Unit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_system_unit_af40efc8ae0ce1fb6911e1d30baa96758}\label{class_fbx_system_unit_af40efc8ae0ce1fb6911e1d30baa96758}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Convert\+Children@{Convert\+Children}}
+\index{Convert\+Children@{Convert\+Children}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Convert\+Children()}{ConvertChildren()}}
+{\footnotesize\ttfamily void Fbx\+System\+Unit\+::\+Convert\+Children (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Root,  }\item[{const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&}]{p\+Src\+Unit,  }\item[{const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \&}]{p\+Options = {\ttfamily \hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}} }\end{DoxyParamCaption}) const}
+
+Converts the child (or children) of the given node from the system unit to this system unit. Unlike the \hyperlink{class_fbx_system_unit_ad31fce9160b21a9ba8069efd1878b2a1}{Convert\+Scene()} method, this method does not set the axis system of the scene to which the p\+Root node belongs. It also does not adjust \hyperlink{class_fbx_pose}{Fbx\+Pose} as they are not stored under the scene, and not under a particular node. 
+\begin{DoxyParams}{引数}
+{\em p\+Root} & The given node. \\
+\hline
+{\em p\+Src\+Unit} & The source system unit. \\
+\hline
+{\em p\+Options} & Conversion options, see\+:\+Fbx\+System\+Unit\+:\+:\hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_ad31fce9160b21a9ba8069efd1878b2a1}\label{class_fbx_system_unit_ad31fce9160b21a9ba8069efd1878b2a1}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Convert\+Scene@{Convert\+Scene}}
+\index{Convert\+Scene@{Convert\+Scene}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Convert\+Scene()}{ConvertScene()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+System\+Unit\+::\+Convert\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \&}]{p\+Options = {\ttfamily \hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}} }\end{DoxyParamCaption}) const}
+
+Converts a scene from its system units to this system unit. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to convert. \\
+\hline
+{\em p\+Options} & Conversion options, see\+:\+Fbx\+System\+Unit\+:\+:\hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_a29b302d74518106bdc5e2d21ee687e09}\label{class_fbx_system_unit_a29b302d74518106bdc5e2d21ee687e09}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Convert\+Scene@{Convert\+Scene}}
+\index{Convert\+Scene@{Convert\+Scene}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Convert\+Scene()}{ConvertScene()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Fbx\+System\+Unit\+::\+Convert\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Fbx\+Root,  }\item[{const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \&}]{p\+Options = {\ttfamily \hyperlink{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}{Default\+Conversion\+Options}} }\end{DoxyParamCaption}) const}
+
+Converts a scene from its system unit to this system unit, using the specified Fbx\+\_\+\+Root node. This method is provided for backwards compatibility only and instead you should use Convert\+Scene( Fbx\+Scene$\ast$ , const Conversion\+Options\&  ) whenever possible. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to convert. \\
+\hline
+{\em p\+Fbx\+Root} & The Fbx\+\_\+\+Root node to use for conversion. \\
+\hline
+{\em p\+Options} & Conversion options, see\+:\+Fbx\+System\+Unit\+:\+:\hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_a7fa4b5f722c1c4c3b3113c4b0a24e4ff}\label{class_fbx_system_unit_a7fa4b5f722c1c4c3b3113c4b0a24e4ff}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Get\+Conversion\+Factor\+From@{Get\+Conversion\+Factor\+From}}
+\index{Get\+Conversion\+Factor\+From@{Get\+Conversion\+Factor\+From}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Get\+Conversion\+Factor\+From()}{GetConversionFactorFrom()}}
+{\footnotesize\ttfamily double Fbx\+System\+Unit\+::\+Get\+Conversion\+Factor\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&}]{p\+Source }\end{DoxyParamCaption}) const}
+
+Returns the conversion factor from the source system unit to this system unit, excluding the multiplier factor. 
+\begin{DoxyParams}{引数}
+{\em p\+Source} & The source system unit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_a40c999b638d3cb538da24d76ccd70abd}\label{class_fbx_system_unit_a40c999b638d3cb538da24d76ccd70abd}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Get\+Conversion\+Factor\+To@{Get\+Conversion\+Factor\+To}}
+\index{Get\+Conversion\+Factor\+To@{Get\+Conversion\+Factor\+To}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Get\+Conversion\+Factor\+To()}{GetConversionFactorTo()}}
+{\footnotesize\ttfamily double Fbx\+System\+Unit\+::\+Get\+Conversion\+Factor\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&}]{p\+Target }\end{DoxyParamCaption}) const}
+
+Returns the conversion factor from this system unit to the target system unit, excluding the multiplier factor. 
+\begin{DoxyParams}{引数}
+{\em p\+Target} & The target system unit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_ab9b59b5de500d63e0ef832818948a024}\label{class_fbx_system_unit_ab9b59b5de500d63e0ef832818948a024}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Get\+Multiplier@{Get\+Multiplier}}
+\index{Get\+Multiplier@{Get\+Multiplier}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Get\+Multiplier()}{GetMultiplier()}}
+{\footnotesize\ttfamily double Fbx\+System\+Unit\+::\+Get\+Multiplier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the multiplier factor of the system unit. \mbox{\Hypertarget{class_fbx_system_unit_a9421294bb5936de827e0a9b8472f6095}\label{class_fbx_system_unit_a9421294bb5936de827e0a9b8472f6095}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Get\+Scale\+Factor@{Get\+Scale\+Factor}}
+\index{Get\+Scale\+Factor@{Get\+Scale\+Factor}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Get\+Scale\+Factor()}{GetScaleFactor()}}
+{\footnotesize\ttfamily double Fbx\+System\+Unit\+::\+Get\+Scale\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the system unit\textquotesingle{}s scale factor, relative to centimeters. This factor scales system unit values to centimeters. If you want to scale values to centimeters, use this value. Ignore the \char`\"{}multiplier\char`\"{} (returned by \hyperlink{class_fbx_system_unit_ab9b59b5de500d63e0ef832818948a024}{Get\+Multiplier()}) value. \begin{DoxyReturn}{戻り値}
+The the system unit\textquotesingle{}s scale factor, relative to centimeters. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_system_unit_a8c8481b9936bc2fa9320b29c7a1a4ff5}\label{class_fbx_system_unit_a8c8481b9936bc2fa9320b29c7a1a4ff5}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Get\+Scale\+Factor\+As\+String@{Get\+Scale\+Factor\+As\+String}}
+\index{Get\+Scale\+Factor\+As\+String@{Get\+Scale\+Factor\+As\+String}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Get\+Scale\+Factor\+As\+String()}{GetScaleFactorAsString()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+System\+Unit\+::\+Get\+Scale\+Factor\+As\+String (\begin{DoxyParamCaption}\item[{bool}]{p\+Abbreviated = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+Returns a unit label for the current scale factor. 
+\begin{DoxyParams}{引数}
+{\em p\+Abbreviated} & If {\ttfamily true}, returns abbreviated string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The unit label for the current scale factor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_system_unit_aa9a883aeffb6e9814b3ecc6157606954}\label{class_fbx_system_unit_aa9a883aeffb6e9814b3ecc6157606954}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial@{Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial}}
+\index{Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial@{Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial()}{GetScaleFactorAsString\_Plurial()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+System\+Unit\+::\+Get\+Scale\+Factor\+As\+String\+\_\+\+Plurial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns a unit label for the current scale factor. The first letter of the label is in upper case and the label should be pluralized. \begin{DoxyReturn}{戻り値}
+The unit label for the current scale factor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_system_unit_a4a338e68ec0e74358850cca54ea5a5f6}\label{class_fbx_system_unit_a4a338e68ec0e74358850cca54ea5a5f6}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+System\+Unit\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+Non-\/equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Another system unit compared with this system unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if unequal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_system_unit_a91610b2403fd3fdbd0988123cd21eb50}\label{class_fbx_system_unit_a91610b2403fd3fdbd0988123cd21eb50}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit}\& Fbx\+System\+Unit\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&}]{p\+System\+Unit }\end{DoxyParamCaption})}
+
+Assignment operation. 
+\begin{DoxyParams}{引数}
+{\em p\+System\+Unit} & Unit system assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_system_unit_a28f701aa2d2df44e7b89d10e66a1d892}\label{class_fbx_system_unit_a28f701aa2d2df44e7b89d10e66a1d892}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+System\+Unit\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & Another system unit compared with this system unit. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_system_unit_ac6f6b3953bf13718eb87110d614b3c9a}\label{class_fbx_system_unit_ac6f6b3953bf13718eb87110d614b3c9a}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Fbx\+Global\+Settings@{Fbx\+Global\+Settings}}
+\index{Fbx\+Global\+Settings@{Fbx\+Global\+Settings}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Fbx\+Global\+Settings}{FbxGlobalSettings}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxsystemunit.\+h の 213 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_system_unit_a2938b6feaf5711daea463071e89d073e}\label{class_fbx_system_unit_a2938b6feaf5711daea463071e89d073e}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!cm@{cm}}
+\index{cm@{cm}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{cm}{cm}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::cm\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for centimeters. 
+
+
+
+ fbxsystemunit.\+h の 88 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}\label{class_fbx_system_unit_ae76376923416767b2a5f6a7e4e663064}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Default\+Conversion\+Options@{Default\+Conversion\+Options}}
+\index{Default\+Conversion\+Options@{Default\+Conversion\+Options}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Default\+Conversion\+Options}{DefaultConversionOptions}}
+{\footnotesize\ttfamily const \hyperlink{struct_fbx_system_unit_1_1_conversion_options}{Conversion\+Options} Fbx\+System\+Unit\+::\+Default\+Conversion\+Options\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stores the default conversion options. 
+
+
+
+ fbxsystemunit.\+h の 114 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_a8448652c675044fb54506a4044f72814}\label{class_fbx_system_unit_a8448652c675044fb54506a4044f72814}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!dm@{dm}}
+\index{dm@{dm}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{dm}{dm}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::dm\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for decimeters. 
+
+
+
+ fbxsystemunit.\+h の 85 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_a94d3bfe1b4fd69a021bbaff3a61a90d5}\label{class_fbx_system_unit_a94d3bfe1b4fd69a021bbaff3a61a90d5}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Foot@{Foot}}
+\index{Foot@{Foot}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Foot}{Foot}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::\+Foot\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for feet. 
+
+
+
+ fbxsystemunit.\+h の 100 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_a88862a2baeb2e510e1f39ef9d09aa0c4}\label{class_fbx_system_unit_a88862a2baeb2e510e1f39ef9d09aa0c4}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Inch@{Inch}}
+\index{Inch@{Inch}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Inch}{Inch}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::\+Inch\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for inches. 
+
+
+
+ fbxsystemunit.\+h の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_abc5367c578e2fe6975baae0ffbff2d63}\label{class_fbx_system_unit_abc5367c578e2fe6975baae0ffbff2d63}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!km@{km}}
+\index{km@{km}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{km}{km}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::km\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for kilometers. 
+
+
+
+ fbxsystemunit.\+h の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_ad769a9a9b50605abe42d500ac7c99d28}\label{class_fbx_system_unit_ad769a9a9b50605abe42d500ac7c99d28}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!m@{m}}
+\index{m@{m}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::m\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for meters. 
+
+
+
+ fbxsystemunit.\+h の 91 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_ae66f3c2d1e92b50cd4ba8bca95a7cb40}\label{class_fbx_system_unit_ae66f3c2d1e92b50cd4ba8bca95a7cb40}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Mile@{Mile}}
+\index{Mile@{Mile}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Mile}{Mile}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::\+Mile\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for miles. 
+
+
+
+ fbxsystemunit.\+h の 103 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_aac172547aa34bdc8d71d6c5668262c25}\label{class_fbx_system_unit_aac172547aa34bdc8d71d6c5668262c25}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!mm@{mm}}
+\index{mm@{mm}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{mm}{mm}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::mm\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for millimeters. 
+
+
+
+ fbxsystemunit.\+h の 82 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_a5a63e7dec80be27c252a24739a710505}\label{class_fbx_system_unit_a5a63e7dec80be27c252a24739a710505}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!s\+Predefined\+Units@{s\+Predefined\+Units}}
+\index{s\+Predefined\+Units@{s\+Predefined\+Units}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{s\+Predefined\+Units}{sPredefinedUnits}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit}$\ast$ Fbx\+System\+Unit\+::s\+Predefined\+Units\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Points to a \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} array to store the predefined system units. The array size is F\+B\+X\+S\+D\+K\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+U\+N\+I\+T\+\_\+\+P\+R\+E\+D\+E\+F\+\_\+\+C\+O\+U\+NT. 
+
+
+
+ fbxsystemunit.\+h の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_system_unit_a4c9612d5387f7ac06a313efd63452cd4}\label{class_fbx_system_unit_a4c9612d5387f7ac06a313efd63452cd4}} 
+\index{Fbx\+System\+Unit@{Fbx\+System\+Unit}!Yard@{Yard}}
+\index{Yard@{Yard}!Fbx\+System\+Unit@{Fbx\+System\+Unit}}
+\subsubsection{\texorpdfstring{Yard}{Yard}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_system_unit}{Fbx\+System\+Unit} Fbx\+System\+Unit\+::\+Yard\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Predefined system unit for yards. 
+
+
+
+ fbxsystemunit.\+h の 106 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/\hyperlink{fbxsystemunit_8h}{fbxsystemunit.\+h}\end{DoxyCompactItemize}

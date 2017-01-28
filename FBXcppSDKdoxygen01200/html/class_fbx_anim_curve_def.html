@@ -1,0 +1,480 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: FbxAnimCurveDef クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="class_fbx_anim_curve_def-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">FbxAnimCurveDef クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ac810ccc5ca0527704ab5175479964b87"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87">ETangentMode</a> { <br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25">eTangentAuto</a> = 0x00000100, 
+<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87ae9d885e8a384fd9165123ac47a661dd8">eTangentTCB</a> = 0x00000200, 
+<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86">eTangentUser</a> = 0x00000400, 
+<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87a423a9e02047b705ec23561f87d8ff15b">eTangentGenericBreak</a> = 0x00000800, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847">eTangentBreak</a> = eTangentGenericBreak|eTangentUser, 
+<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87afce344e3f0ada1ec522ef67f0a0e92cb">eTangentAutoBreak</a> = eTangentGenericBreak|eTangentAuto, 
+<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87a53bad41061d60bae2373a88e13eeac50">eTangentGenericClamp</a> = 0x00001000, 
+<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87abaaae6df50c5a1a651d0e5678c4a90cd">eTangentGenericTimeIndependent</a> = 0x00002000, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87a87eba898c30497b7e94da22822500757">eTangentGenericClampProgressive</a> = 0x00004000|eTangentGenericTimeIndependent
+<br />
+ }<tr class="memdesc:ac810ccc5ca0527704ab5175479964b87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key tangent mode for cubic interpolation.  <a href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ac810ccc5ca0527704ab5175479964b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2ab7d10d856ab0868cc9b143d59ea5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#add2ab7d10d856ab0868cc9b143d59ea5">EInterpolationType</a> { <a class="el" href="class_fbx_anim_curve_def.html#add2ab7d10d856ab0868cc9b143d59ea5acb7611d721a1ae1e6df7a2f072dc7c9f">eInterpolationConstant</a> = 0x00000002, 
+<a class="el" href="class_fbx_anim_curve_def.html#add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20">eInterpolationLinear</a> = 0x00000004, 
+<a class="el" href="class_fbx_anim_curve_def.html#add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae">eInterpolationCubic</a> = 0x00000008
+ }<tr class="memdesc:add2ab7d10d856ab0868cc9b143d59ea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key interpolation type.  <a href="class_fbx_anim_curve_def.html#add2ab7d10d856ab0868cc9b143d59ea5">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:add2ab7d10d856ab0868cc9b143d59ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee6e9cc12501e10dbd3e5caaf66990e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990e">EWeightedMode</a> { <a class="el" href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3">eWeightedNone</a> = 0x00000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990ea869960737022db21fc64480daa22725a">eWeightedRight</a> = 0x01000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990eae28d75f955feebe5756d77ad0765d000">eWeightedNextLeft</a> = 0x02000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990ea4337e6853fab642c2a432ab1bb303922">eWeightedAll</a> = eWeightedRight|eWeightedNextLeft
+ }<tr class="memdesc:aeee6e9cc12501e10dbd3e5caaf66990e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Weighted mode.  <a href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990e">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aeee6e9cc12501e10dbd3e5caaf66990e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52885abd392ac8ac3da94bafc5fddd64"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#a52885abd392ac8ac3da94bafc5fddd64">EConstantMode</a> { <a class="el" href="class_fbx_anim_curve_def.html#a52885abd392ac8ac3da94bafc5fddd64afa9ab4c869fe6eb4589e1298375ac66f">eConstantStandard</a> = 0x00000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a52885abd392ac8ac3da94bafc5fddd64acd33e33b487685436e39688ca986f2d6">eConstantNext</a> = 0x00000100
+ }<tr class="memdesc:a52885abd392ac8ac3da94bafc5fddd64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Key constant mode.  <a href="class_fbx_anim_curve_def.html#a52885abd392ac8ac3da94bafc5fddd64">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a52885abd392ac8ac3da94bafc5fddd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747576beffa78ab236d2e140da395fff"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fff">EVelocityMode</a> { <a class="el" href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fffa7919a5bf6ff7855e3b60673ade08afbc">eVelocityNone</a> = 0x00000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fffa1265ff9732df8deb70ee9822af11b995">eVelocityRight</a> = 0x10000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fffac10e4a2ea06592874b83d4389dcaf560">eVelocityNextLeft</a> = 0x20000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fffab8603ba4ecc238f5dee7489b6a0123ee">eVelocityAll</a> = eVelocityRight|eVelocityNextLeft
+ }<tr class="memdesc:a747576beffa78ab236d2e140da395fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Velocity mode. Velocity settings speed up or slow down animation on either side of a key without changing the trajectory of the animation. Unlike Auto and Weight settings, Velocity changes the animation in time, but not in space.  <a href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fff">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a747576beffa78ab236d2e140da395fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70c49072776ac6b3426c57dd80e16e3b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3b">ETangentVisibility</a> { <a class="el" href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3ba88013fc4cb5832cd963bd7b5a640ee1c">eTangentShowNone</a> = 0x00000000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3bafc33bb613976689a8f49fe80eca8de02">eTangentShowLeft</a> = 0x00100000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3ba7392f6d6b65c19bce64032708c6a81ff">eTangentShowRight</a> = 0x00200000, 
+<a class="el" href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3ba9288cf3a65d5ee1c1bf50d1be8cb9ecc">eTangentShowBoth</a> = eTangentShowLeft|eTangentShowRight
+ }<tr class="memdesc:a70c49072776ac6b3426c57dd80e16e3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tangent visibility.  <a href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3b">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a70c49072776ac6b3426c57dd80e16e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be261d961f8226235529b148cf80300"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300">EDataIndex</a> { <br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a97c20bbd5b06a532773ffd8c88624ec2">eRightSlope</a> = 0, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a3107e2f5903a757095499010eb74d475">eNextLeftSlope</a> = 1, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a08699f6d2da38b05a490f90841afe5e0">eWeights</a> = 2, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a83afb43c5a3867c140ede62339f6ccc3">eRightWeight</a> = 2, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a1fd893ddfdb66ac8a9c6961752362c07">eNextLeftWeight</a> = 3, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a8732f3303563dd6d7e92373e6e930648">eVelocity</a> = 4, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a4009b9f2bd63546ecd6ce63e5a60701f">eRightVelocity</a> = 4, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300af617635230401e91d520361c9b02db41">eNextLeftVelocity</a> = 5, 
+<br />
+&#160;&#160;<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a38129a423990a42f94187b77ab041caa">eTCBTension</a> = 0, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a5544ce65720f37d5a2620dc32556b2ba">eTCBContinuity</a> = 1, 
+<a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300a4ed5dbb6b725478205a3c750c20790d3">eTCBBias</a> = 2
+<br />
+ }<tr class="memdesc:a3be261d961f8226235529b148cf80300"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_fbx_anim_curve_key.html">FbxAnimCurveKey</a> data indices for cubic interpolation tangent information.  <a href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300">[詳解]</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a3be261d961f8226235529b148cf80300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a6fd6b3907962eba0b1e71f28b55fad9d"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#a6fd6b3907962eba0b1e71f28b55fad9d">sDEFAULT_WEIGHT</a></td></tr>
+<tr class="separator:a6fd6b3907962eba0b1e71f28b55fad9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a469319cefa59b62fd38985b837e49d07"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#a469319cefa59b62fd38985b837e49d07">sMIN_WEIGHT</a></td></tr>
+<tr class="separator:a469319cefa59b62fd38985b837e49d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e9ffa9198f867a8eec3b78d7363438"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#ad0e9ffa9198f867a8eec3b78d7363438">sMAX_WEIGHT</a></td></tr>
+<tr class="separator:ad0e9ffa9198f867a8eec3b78d7363438"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abebd0a6078f18802836059fdefb36862"><td class="memItemLeft" align="right" valign="top">static const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_fbx_anim_curve_def.html#abebd0a6078f18802836059fdefb36862">sDEFAULT_VELOCITY</a></td></tr>
+<tr class="separator:abebd0a6078f18802836059fdefb36862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Definitions used for the FBX animation curves and keys. </p>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00026">26</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a52885abd392ac8ac3da94bafc5fddd64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52885abd392ac8ac3da94bafc5fddd64">&#9670;&nbsp;</a></span>EConstantMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#a52885abd392ac8ac3da94bafc5fddd64">FbxAnimCurveDef::EConstantMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Key constant mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a52885abd392ac8ac3da94bafc5fddd64afa9ab4c869fe6eb4589e1298375ac66f"></a>eConstantStandard&#160;</td><td class="fielddoc"><p>Curve value is constant between this key and the next </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a52885abd392ac8ac3da94bafc5fddd64acd33e33b487685436e39688ca986f2d6"></a>eConstantNext&#160;</td><td class="fielddoc"><p>Curve value is constant, with next key's value </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00066">66</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3be261d961f8226235529b148cf80300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be261d961f8226235529b148cf80300">&#9670;&nbsp;</a></span>EDataIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#a3be261d961f8226235529b148cf80300">FbxAnimCurveDef::EDataIndex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_fbx_anim_curve_key.html">FbxAnimCurveKey</a> data indices for cubic interpolation tangent information. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a97c20bbd5b06a532773ffd8c88624ec2"></a>eRightSlope&#160;</td><td class="fielddoc"><p>Index of the right derivative, User and Break tangent mode (data are float). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a3107e2f5903a757095499010eb74d475"></a>eNextLeftSlope&#160;</td><td class="fielddoc"><p>Index of the left derivative for the next key, User and Break tangent mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a08699f6d2da38b05a490f90841afe5e0"></a>eWeights&#160;</td><td class="fielddoc"><p>Start index of weight values, User and Break tangent break mode (data are FbxInt16 tokens from weight and converted to float). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a83afb43c5a3867c140ede62339f6ccc3"></a>eRightWeight&#160;</td><td class="fielddoc"><p>Index of weight on right tangent, User and Break tangent break mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a1fd893ddfdb66ac8a9c6961752362c07"></a>eNextLeftWeight&#160;</td><td class="fielddoc"><p>Index of weight on next key's left tangent, User and Break tangent break mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a8732f3303563dd6d7e92373e6e930648"></a>eVelocity&#160;</td><td class="fielddoc"><p>Start index of velocity values, Velocity mode </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a4009b9f2bd63546ecd6ce63e5a60701f"></a>eRightVelocity&#160;</td><td class="fielddoc"><p>Index of velocity on right tangent, Velocity mode </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300af617635230401e91d520361c9b02db41"></a>eNextLeftVelocity&#160;</td><td class="fielddoc"><p>Index of velocity on next key's left tangent, Velocity mode </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a38129a423990a42f94187b77ab041caa"></a>eTCBTension&#160;</td><td class="fielddoc"><p>Index of Tension, TCB tangent mode (data are floats). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a5544ce65720f37d5a2620dc32556b2ba"></a>eTCBContinuity&#160;</td><td class="fielddoc"><p>Index of Continuity, TCB tangent mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3be261d961f8226235529b148cf80300a4ed5dbb6b725478205a3c750c20790d3"></a>eTCBBias&#160;</td><td class="fielddoc"><p>Index of Bias, TCB tangent mode. </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00091">91</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="add2ab7d10d856ab0868cc9b143d59ea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2ab7d10d856ab0868cc9b143d59ea5">&#9670;&nbsp;</a></span>EInterpolationType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#add2ab7d10d856ab0868cc9b143d59ea5">FbxAnimCurveDef::EInterpolationType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Key interpolation type. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="add2ab7d10d856ab0868cc9b143d59ea5acb7611d721a1ae1e6df7a2f072dc7c9f"></a>eInterpolationConstant&#160;</td><td class="fielddoc"><p>Constant value until next key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add2ab7d10d856ab0868cc9b143d59ea5ab60e201b78e2105be1134c3c15519d20"></a>eInterpolationLinear&#160;</td><td class="fielddoc"><p>Linear progression to next key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="add2ab7d10d856ab0868cc9b143d59ea5a16ef50fcdbb8ae99246f06e12f9d3dae"></a>eInterpolationCubic&#160;</td><td class="fielddoc"><p>Cubic progression to next key. </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00049">49</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac810ccc5ca0527704ab5175479964b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac810ccc5ca0527704ab5175479964b87">&#9670;&nbsp;</a></span>ETangentMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#ac810ccc5ca0527704ab5175479964b87">FbxAnimCurveDef::ETangentMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Key tangent mode for cubic interpolation. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87a56e3bad364851277281e94e81327dd25"></a>eTangentAuto&#160;</td><td class="fielddoc"><p>Auto key (spline cardinal). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87ae9d885e8a384fd9165123ac47a661dd8"></a>eTangentTCB&#160;</td><td class="fielddoc"><p>Spline TCB (Tension, Continuity, Bias) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87a199cb16b2c861b12c334093ce796cb86"></a>eTangentUser&#160;</td><td class="fielddoc"><p>Next slope at the left equal to slope at the right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87a423a9e02047b705ec23561f87d8ff15b"></a>eTangentGenericBreak&#160;</td><td class="fielddoc"><p>Independent left and right slopes. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87ab4d85a1a0474226be85b885518f6c847"></a>eTangentBreak&#160;</td><td class="fielddoc"><p>Independent left and right slopes, with next slope at the left equal to slope at the right. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87afce344e3f0ada1ec522ef67f0a0e92cb"></a>eTangentAutoBreak&#160;</td><td class="fielddoc"><p>Independent left and right slopes, with auto key. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87a53bad41061d60bae2373a88e13eeac50"></a>eTangentGenericClamp&#160;</td><td class="fielddoc"><p>Clamp: key should be flat if next or previous key has the same value (overrides tangent mode). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87abaaae6df50c5a1a651d0e5678c4a90cd"></a>eTangentGenericTimeIndependent&#160;</td><td class="fielddoc"><p>Time independent tangent (overrides tangent mode). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac810ccc5ca0527704ab5175479964b87a87eba898c30497b7e94da22822500757"></a>eTangentGenericClampProgressive&#160;</td><td class="fielddoc"><p>Clamp progressive: key should be flat if tangent control point is outside [next-previous key] range (overrides tangent mode). </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00035">35</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a70c49072776ac6b3426c57dd80e16e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c49072776ac6b3426c57dd80e16e3b">&#9670;&nbsp;</a></span>ETangentVisibility</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#a70c49072776ac6b3426c57dd80e16e3b">FbxAnimCurveDef::ETangentVisibility</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tangent visibility. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a70c49072776ac6b3426c57dd80e16e3ba88013fc4cb5832cd963bd7b5a640ee1c"></a>eTangentShowNone&#160;</td><td class="fielddoc"><p>No tangent is visible. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a70c49072776ac6b3426c57dd80e16e3bafc33bb613976689a8f49fe80eca8de02"></a>eTangentShowLeft&#160;</td><td class="fielddoc"><p>Left tangent is visible. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a70c49072776ac6b3426c57dd80e16e3ba7392f6d6b65c19bce64032708c6a81ff"></a>eTangentShowRight&#160;</td><td class="fielddoc"><p>Right tangent is visible. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a70c49072776ac6b3426c57dd80e16e3ba9288cf3a65d5ee1c1bf50d1be8cb9ecc"></a>eTangentShowBoth&#160;</td><td class="fielddoc"><p>Both left and right tangents are visible. </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00082">82</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a747576beffa78ab236d2e140da395fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a747576beffa78ab236d2e140da395fff">&#9670;&nbsp;</a></span>EVelocityMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#a747576beffa78ab236d2e140da395fff">FbxAnimCurveDef::EVelocityMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Velocity mode. Velocity settings speed up or slow down animation on either side of a key without changing the trajectory of the animation. Unlike Auto and Weight settings, Velocity changes the animation in time, but not in space. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a747576beffa78ab236d2e140da395fffa7919a5bf6ff7855e3b60673ade08afbc"></a>eVelocityNone&#160;</td><td class="fielddoc"><p>No velocity (default). </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a747576beffa78ab236d2e140da395fffa1265ff9732df8deb70ee9822af11b995"></a>eVelocityRight&#160;</td><td class="fielddoc"><p>Right tangent has velocity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a747576beffa78ab236d2e140da395fffac10e4a2ea06592874b83d4389dcaf560"></a>eVelocityNextLeft&#160;</td><td class="fielddoc"><p>Left tangent has velocity. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a747576beffa78ab236d2e140da395fffab8603ba4ecc238f5dee7489b6a0123ee"></a>eVelocityAll&#160;</td><td class="fielddoc"><p>Both left and right tangents have velocity. </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00073">73</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aeee6e9cc12501e10dbd3e5caaf66990e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee6e9cc12501e10dbd3e5caaf66990e">&#9670;&nbsp;</a></span>EWeightedMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_fbx_anim_curve_def.html#aeee6e9cc12501e10dbd3e5caaf66990e">FbxAnimCurveDef::EWeightedMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Weighted mode. </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aeee6e9cc12501e10dbd3e5caaf66990ea2ae55a3ceae7773d899ebfae26dcbef3"></a>eWeightedNone&#160;</td><td class="fielddoc"><p>Tangent has default weights of 0.333; we define this state as not weighted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee6e9cc12501e10dbd3e5caaf66990ea869960737022db21fc64480daa22725a"></a>eWeightedRight&#160;</td><td class="fielddoc"><p>Right tangent is weighted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee6e9cc12501e10dbd3e5caaf66990eae28d75f955feebe5756d77ad0765d000"></a>eWeightedNextLeft&#160;</td><td class="fielddoc"><p>Left tangent is weighted. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aeee6e9cc12501e10dbd3e5caaf66990ea4337e6853fab642c2a432ab1bb303922"></a>eWeightedAll&#160;</td><td class="fielddoc"><p>Both left and right tangents are weighted. </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00057">57</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="abebd0a6078f18802836059fdefb36862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abebd0a6078f18802836059fdefb36862">&#9670;&nbsp;</a></span>sDEFAULT_VELOCITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FbxAnimCurveDef::sDEFAULT_VELOCITY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00032">32</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6fd6b3907962eba0b1e71f28b55fad9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fd6b3907962eba0b1e71f28b55fad9d">&#9670;&nbsp;</a></span>sDEFAULT_WEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FbxAnimCurveDef::sDEFAULT_WEIGHT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad0e9ffa9198f867a8eec3b78d7363438"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e9ffa9198f867a8eec3b78d7363438">&#9670;&nbsp;</a></span>sMAX_WEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FbxAnimCurveDef::sMAX_WEIGHT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00031">31</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a469319cefa59b62fd38985b837e49d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a469319cefa59b62fd38985b837e49d07">&#9670;&nbsp;</a></span>sMIN_WEIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float FbxAnimCurveDef::sMIN_WEIGHT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a> の <a class="el" href="fbxanimcurve_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>C:/Maya/scripts/FBX_SDK/2017.1/include/fbxsdk/scene/animation/<a class="el" href="fbxanimcurve_8h_source.html">fbxanimcurve.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

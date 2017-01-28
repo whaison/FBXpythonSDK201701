@@ -1,0 +1,748 @@
+\hypertarget{class_fbx_quaternion}{}\section{Fbx\+Quaternion クラス}
+\label{class_fbx_quaternion}\index{Fbx\+Quaternion@{Fbx\+Quaternion}}
+
+
+{\ttfamily \#include $<$fbxquaternion.\+h$>$}
+
+Fbx\+Quaternion の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_fbx_quaternion}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_quaternion_ae81b85793e46d5a69d2aaed1be7e403e}{Get\+Quaternion\+From\+Position\+To\+Position} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+P0, const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+P1)
+\end{DoxyCompactItemize}
+\subsection*{Constructors and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_quaternion_acfb222e84428e32ecc6258f1d18fc92b}{Fbx\+Quaternion} ()
+\item 
+\hyperlink{class_fbx_quaternion_ab7bef8e0e53bb3b70cf9f290ce315f50}{Fbx\+Quaternion} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&pV)
+\item 
+\hyperlink{class_fbx_quaternion_ab5e4be6b3c78205ac8d0da97b6c53998}{Fbx\+Quaternion} (double pX, double pY, double pZ, double pW=1.\+0)
+\item 
+\hyperlink{class_fbx_quaternion_a96686af15a5328f30dd098168480ada2}{Fbx\+Quaternion} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Axis, double p\+Degree)
+\item 
+\hyperlink{class_fbx_quaternion_a87fbbab5cf65d9721289aec5a11444f3}{$\sim$\+Fbx\+Quaternion} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Access}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_add741768361b3ffe33c012e6585bc666}{operator=} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Quaternion)
+\item 
+double \& \hyperlink{class_fbx_quaternion_ad80dbb6071eb5bf4cfb3b76c14316460}{operator\mbox{[}$\,$\mbox{]}} (int p\+Index)
+\item 
+const double \& \hyperlink{class_fbx_quaternion_a5d485a6d21257f1a92eca379e3d2e69f}{operator\mbox{[}$\,$\mbox{]}} (int p\+Index) const
+\item 
+double \hyperlink{class_fbx_quaternion_aa7fe9d4df71f455b8595254aece53842}{Get\+At} (int p\+Index) const
+\item 
+void \hyperlink{class_fbx_quaternion_aa3695db7955b4c2fcde0385972e160f7}{Set\+At} (int p\+Index, double p\+Value)
+\item 
+void \hyperlink{class_fbx_quaternion_aa0d19c354c4514760468d9956b140a41}{Set} (double pX, double pY, double pZ, double pW=1.\+0)
+\end{DoxyCompactItemize}
+\subsection*{Scalar Operations}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_a61aa713f7fce6b7eb20e8b809904cf30}{operator+} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_a1a9ef15dc33423fb804ea30420297328}{operator-\/} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_ac9874636f9cb288b942dde12308622d5}{operator$\ast$} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_abd6988e25ac58f06cefc5d4045099cbe}{operator/} (double p\+Value) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a445a2cf1c72fe2015d1d4b9bbf0cd4a9}{operator+=} (double p\+Value)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a1982e4d640a3cf4b9bc4987e7a683a58}{operator-\/=} (double p\+Value)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a39a982f059feefbf7ba164af4712cf01}{operator$\ast$=} (double p\+Value)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a01b691edc7aeac6565987ff372d105c9}{operator/=} (double p\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Vector Operations}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_ab6c1bcdc81e7f898a10efbe01fc469d9}{operator-\/} () const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_ae4b5759bbd1b61bc49a4aeb2a1f92fae}{operator+} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Quaternion) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_abd969b5c185fc64c2784ed938436294f}{operator-\/} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Quaternion) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_a7a8b347ccf0048f71a5e882705c00d04}{operator$\ast$} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_aeb9ff1e0023e789f0e2cb872116401f6}{operator/} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Other) const
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a1bf1954c2f12e9dd4f4403b117263bd6}{operator+=} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Quaternion)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a2166c06ff00f0a768b3be0c64ebc919a}{operator-\/=} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Quaternion)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a8d6842472f5712ab72fcdbe3ec4fe093}{operator$\ast$=} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Other)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \& \hyperlink{class_fbx_quaternion_a34cc4ef2a5eddb5546a223d7d85a9d6c}{operator/=} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Other)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_a4b915abc82fa0199c15f07fa3814a3ec}{Product} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Other) const
+\item 
+double \hyperlink{class_fbx_quaternion_ad3340e0a9950b818f251ab8ae63e0f9e}{Dot\+Product} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Quaternion) const
+\item 
+void \hyperlink{class_fbx_quaternion_a8f7c3917fe374a2b836d58dbc23098f7}{Normalize} ()
+\item 
+void \hyperlink{class_fbx_quaternion_ab829d078c4d1f24449411f686e64e6f7}{Conjugate} ()
+\item 
+double \hyperlink{class_fbx_quaternion_a90afe720e7f779480d6cf0af97367a8d}{Length} ()
+\item 
+void \hyperlink{class_fbx_quaternion_ad7656dae6b9ee5bc42f48a9217dafcbd}{Inverse} ()
+\item 
+void \hyperlink{class_fbx_quaternion_ad926d8c6abbed994f0474a4144e4f4ea}{Set\+Axis\+Angle} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Axis, double p\+Degree)
+\item 
+\hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \hyperlink{class_fbx_quaternion_a617ad81c400bdd90745d22ee0b0b42bc}{Slerp} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Other, double p\+Weight) const
+\item 
+void \hyperlink{class_fbx_quaternion_a226f76a65db79665179df625f8c57c2d}{Compose\+Spherical\+X\+YZ} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} p\+Euler)
+\item 
+\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \hyperlink{class_fbx_quaternion_a0b58da2306338f4cf167ecfdd745bbb0}{Decompose\+Spherical\+X\+YZ} () const
+\end{DoxyCompactItemize}
+\subsection*{Boolean Operations}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_quaternion_a0ae29db12bfc76efa61aaedd39e943fd}{operator==} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&pV) const
+\item 
+bool \hyperlink{class_fbx_quaternion_a88b6d82c19d53301e7f344271eebb3ac}{operator!=} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&pV) const
+\end{DoxyCompactItemize}
+\subsection*{Casting}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_quaternion_a6cef0915096bd157458f8fd02aa3e904}{operator double $\ast$} ()
+\begin{DoxyCompactList}\small\item\em Cast the vector in a double pointer. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_quaternion_a0ff9bd06a5800ce91388eb185cdd8dc8}{operator const double $\ast$} () const
+\begin{DoxyCompactList}\small\item\em Cast the vector in a const double pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Comparison methods}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_quaternion_a6e2200de81315f788b0bf80d553f1f65}{Compare} (const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&p\+Q2, const double p\+Threshold=\hyperlink{fbxtypes_8h_acf3cd6f208edb42ad9c9abbc1f7feea0}{F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}) const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+F\+BX S\+DK quaternion class.
+
+Quaternions form a four-\/dimensional normed division algebra over the real numbers. It is for calculations involving three-\/dimensional rotations. 
+
+ fbxquaternion.\+h の 27 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_quaternion_acfb222e84428e32ecc6258f1d18fc92b}\label{class_fbx_quaternion_acfb222e84428e32ecc6258f1d18fc92b}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Quaternion()}{FbxQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::\+Fbx\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor. Initialize to the multiplicative identity. \mbox{\Hypertarget{class_fbx_quaternion_ab7bef8e0e53bb3b70cf9f290ce315f50}\label{class_fbx_quaternion_ab7bef8e0e53bb3b70cf9f290ce315f50}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Quaternion()}{FbxQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::\+Fbx\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{pV }\end{DoxyParamCaption})}
+
+Copy constructor. 
+\begin{DoxyParams}{引数}
+{\em pV} & \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} object copied to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_ab5e4be6b3c78205ac8d0da97b6c53998}\label{class_fbx_quaternion_ab5e4be6b3c78205ac8d0da97b6c53998}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Quaternion()}{FbxQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::\+Fbx\+Quaternion (\begin{DoxyParamCaption}\item[{double}]{pX,  }\item[{double}]{pY,  }\item[{double}]{pZ,  }\item[{double}]{pW = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em pX} & The X component. \\
+\hline
+{\em pY} & The Y component. \\
+\hline
+{\em pZ} & The Z component. \\
+\hline
+{\em pW} & The W component. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_a96686af15a5328f30dd098168480ada2}\label{class_fbx_quaternion_a96686af15a5328f30dd098168480ada2}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Fbx\+Quaternion()}{FbxQuaternion()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::\+Fbx\+Quaternion (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Axis,  }\item[{double}]{p\+Degree }\end{DoxyParamCaption})}
+
+From axis degree constructor 
+\begin{DoxyParams}{引数}
+{\em p\+Axis} & The axis to rotate around. \\
+\hline
+{\em p\+Degree} & The amount of degree to rotate around the axis. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_a87fbbab5cf65d9721289aec5a11444f3}\label{class_fbx_quaternion_a87fbbab5cf65d9721289aec5a11444f3}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!````~Fbx\+Quaternion@{$\sim$\+Fbx\+Quaternion}}
+\index{````~Fbx\+Quaternion@{$\sim$\+Fbx\+Quaternion}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Quaternion()}{~FbxQuaternion()}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::$\sim$\+Fbx\+Quaternion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_quaternion_a6e2200de81315f788b0bf80d553f1f65}\label{class_fbx_quaternion_a6e2200de81315f788b0bf80d553f1f65}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Compare@{Compare}}
+\index{Compare@{Compare}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Compare()}{Compare()}}
+{\footnotesize\ttfamily int Fbx\+Quaternion\+::\+Compare (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Q2,  }\item[{const double}]{p\+Threshold = {\ttfamily \hyperlink{fbxtypes_8h_acf3cd6f208edb42ad9c9abbc1f7feea0}{F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE}} }\end{DoxyParamCaption}) const}
+
+Comparison method. 
+\begin{DoxyParams}{引数}
+{\em p\+Q2} & Quaternion to compare with this \\
+\hline
+{\em p\+Threshold} & Epsilon for small number comparison \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+0 if quaternions are equal, non-\/zero value otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_a226f76a65db79665179df625f8c57c2d}\label{class_fbx_quaternion_a226f76a65db79665179df625f8c57c2d}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Compose\+Spherical\+X\+YZ@{Compose\+Spherical\+X\+YZ}}
+\index{Compose\+Spherical\+X\+YZ@{Compose\+Spherical\+X\+YZ}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Compose\+Spherical\+X\+Y\+Z()}{ComposeSphericalXYZ()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Compose\+Spherical\+X\+YZ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4}}]{p\+Euler }\end{DoxyParamCaption})}
+
+Create a Quaternion equivalent to the supplied Euler X\+YZ in spherical coordinate. 
+\begin{DoxyParams}{引数}
+{\em p\+Euler} & The Euler X\+YZ angle (in degrees). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_ab829d078c4d1f24449411f686e64e6f7}\label{class_fbx_quaternion_ab829d078c4d1f24449411f686e64e6f7}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Conjugate@{Conjugate}}
+\index{Conjugate@{Conjugate}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Conjugate()}{Conjugate()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Conjugate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculate the quaternion conjugate. \begin{DoxyReturn}{戻り値}
+The conjugate of this quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_a0b58da2306338f4cf167ecfdd745bbb0}\label{class_fbx_quaternion_a0b58da2306338f4cf167ecfdd745bbb0}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Decompose\+Spherical\+X\+YZ@{Decompose\+Spherical\+X\+YZ}}
+\index{Decompose\+Spherical\+X\+YZ@{Decompose\+Spherical\+X\+YZ}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Decompose\+Spherical\+X\+Y\+Z()}{DecomposeSphericalXYZ()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_vector4}{Fbx\+Vector4} Fbx\+Quaternion\+::\+Decompose\+Spherical\+X\+YZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Create an Euler X\+YZ equivalent to the current quaternion. \begin{DoxyReturn}{戻り値}
+The Euler X\+YZ angle (in degrees) equivalent to the current quaternion in spherical coordinate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_ad3340e0a9950b818f251ab8ae63e0f9e}\label{class_fbx_quaternion_ad3340e0a9950b818f251ab8ae63e0f9e}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Dot\+Product@{Dot\+Product}}
+\index{Dot\+Product@{Dot\+Product}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Dot\+Product()}{DotProduct()}}
+{\footnotesize\ttfamily double Fbx\+Quaternion\+::\+Dot\+Product (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Quaternion }\end{DoxyParamCaption}) const}
+
+Return quaternion dot product. 
+\begin{DoxyParams}{引数}
+{\em p\+Quaternion} & Dot product quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The dot product of this quaternion and p\+Quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_aa7fe9d4df71f455b8595254aece53842}\label{class_fbx_quaternion_aa7fe9d4df71f455b8595254aece53842}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Get\+At@{Get\+At}}
+\index{Get\+At@{Get\+At}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+At()}{GetAt()}}
+{\footnotesize\ttfamily double Fbx\+Quaternion\+::\+Get\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Get a vector element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the component to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The value of the indexed component. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index parameter is not checked for values out of bounds. The valid range is \mbox{[}0,3\mbox{]}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_ae81b85793e46d5a69d2aaed1be7e403e}\label{class_fbx_quaternion_ae81b85793e46d5a69d2aaed1be7e403e}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Get\+Quaternion\+From\+Position\+To\+Position@{Get\+Quaternion\+From\+Position\+To\+Position}}
+\index{Get\+Quaternion\+From\+Position\+To\+Position@{Get\+Quaternion\+From\+Position\+To\+Position}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Get\+Quaternion\+From\+Position\+To\+Position()}{GetQuaternionFromPositionToPosition()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Get\+Quaternion\+From\+Position\+To\+Position (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+P0,  }\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+P1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_quaternion_ad7656dae6b9ee5bc42f48a9217dafcbd}\label{class_fbx_quaternion_ad7656dae6b9ee5bc42f48a9217dafcbd}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Inverse@{Inverse}}
+\index{Inverse@{Inverse}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Inverse()}{Inverse()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Inverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculate the inverse of the quaternion. \begin{DoxyReturn}{戻り値}
+The inverse of this quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If this quaternion has a zero length, retain the original value. 
+
+If the quaternion is normalized, then its inverse is equal to its conjugate. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a90afe720e7f779480d6cf0af97367a8d}\label{class_fbx_quaternion_a90afe720e7f779480d6cf0af97367a8d}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Length@{Length}}
+\index{Length@{Length}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Length()}{Length()}}
+{\footnotesize\ttfamily double Fbx\+Quaternion\+::\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculate the length (norm) of the quaternion. \begin{DoxyReturn}{戻り値}
+The length of the quaternion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_a8f7c3917fe374a2b836d58dbc23098f7}\label{class_fbx_quaternion_a8f7c3917fe374a2b836d58dbc23098f7}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Normalize the quaternion, length set to 1. \mbox{\Hypertarget{class_fbx_quaternion_a0ff9bd06a5800ce91388eb185cdd8dc8}\label{class_fbx_quaternion_a0ff9bd06a5800ce91388eb185cdd8dc8}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator const double $\ast$@{operator const double $\ast$}}
+\index{operator const double $\ast$@{operator const double $\ast$}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator const double $\ast$()}{operator const double *()}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::operator const double $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Cast the vector in a const double pointer. 
+
+\mbox{\Hypertarget{class_fbx_quaternion_a6cef0915096bd157458f8fd02aa3e904}\label{class_fbx_quaternion_a6cef0915096bd157458f8fd02aa3e904}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator double $\ast$@{operator double $\ast$}}
+\index{operator double $\ast$@{operator double $\ast$}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator double $\ast$()}{operator double *()}}
+{\footnotesize\ttfamily Fbx\+Quaternion\+::operator double $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cast the vector in a double pointer. 
+
+\mbox{\Hypertarget{class_fbx_quaternion_a88b6d82c19d53301e7f344271eebb3ac}\label{class_fbx_quaternion_a88b6d82c19d53301e7f344271eebb3ac}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Fbx\+Quaternion\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{pV }\end{DoxyParamCaption}) const}
+
+Non equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pV} & The quaternion to be compared to {\itshape this}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily false} if the two quaternions are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily true} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_ac9874636f9cb288b942dde12308622d5}\label{class_fbx_quaternion_ac9874636f9cb288b942dde12308622d5}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Multiply all vector components by a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value multiplying each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+New vector. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a7a8b347ccf0048f71a5e882705c00d04}\label{class_fbx_quaternion_a7a8b347ccf0048f71a5e882705c00d04}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+The quaternion multiplication operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The quaternion to be multiplied with this quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The product of two quaternions. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+In general, quaternion multiplication does not commute. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a39a982f059feefbf7ba164af4712cf01}\label{class_fbx_quaternion_a39a982f059feefbf7ba164af4712cf01}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Multiply a value to all vector elements. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value multiplying each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of multiplying each component of the vector by p\+Value, replacing this quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a8d6842472f5712ab72fcdbe3ec4fe093}\label{class_fbx_quaternion_a8d6842472f5712ab72fcdbe3ec4fe093}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Other }\end{DoxyParamCaption})}
+
+The in place quaternion multiplication operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The quaternion to be multiplied with this quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The product of two quaternions. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+In general, quaternion multiplication does not commute. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a61aa713f7fce6b7eb20e8b809904cf30}\label{class_fbx_quaternion_a61aa713f7fce6b7eb20e8b809904cf30}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+The addition operator between the scalar part of this quaternion and a scalar value, no influence on the vector part of the quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The scalar value to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The sum of addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_ae4b5759bbd1b61bc49a4aeb2a1f92fae}\label{class_fbx_quaternion_ae4b5759bbd1b61bc49a4aeb2a1f92fae}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator+@{operator+}}
+\index{operator+@{operator+}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Quaternion }\end{DoxyParamCaption}) const}
+
+Add two vectors together. 
+\begin{DoxyParams}{引数}
+{\em p\+Quaternion} & Quaternion to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The quaternion v\textquotesingle{} = this + p\+Quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a445a2cf1c72fe2015d1d4b9bbf0cd4a9}\label{class_fbx_quaternion_a445a2cf1c72fe2015d1d4b9bbf0cd4a9}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+The in place addition operator between the real part of this quaternion and a scalar value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The sum of addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_a1bf1954c2f12e9dd4f4403b117263bd6}\label{class_fbx_quaternion_a1bf1954c2f12e9dd4f4403b117263bd6}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Quaternion }\end{DoxyParamCaption})}
+
+Add two quaternions together. 
+\begin{DoxyParams}{引数}
+{\em p\+Quaternion} & Quaternion to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The quaternion v\textquotesingle{} = this + p\+Quaternion, replacing this quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a1a9ef15dc33423fb804ea30420297328}\label{class_fbx_quaternion_a1a9ef15dc33423fb804ea30420297328}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+The subtraction operator between the scalar part of this quaternion and a scalar value, no influence on the vector part of the quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The scalar subtrahend. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The difference of subtraction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_ab6c1bcdc81e7f898a10efbe01fc469d9}\label{class_fbx_quaternion_ab6c1bcdc81e7f898a10efbe01fc469d9}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Unary minus operator. \begin{DoxyReturn}{戻り値}
+A quaternion where each component is multiplied by -\/1. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_abd969b5c185fc64c2784ed938436294f}\label{class_fbx_quaternion_abd969b5c185fc64c2784ed938436294f}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Quaternion }\end{DoxyParamCaption}) const}
+
+Subtract a quaternion from another quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Quaternion} & Quaternion to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The quaternion v\textquotesingle{} = this -\/ p\+Quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a1982e4d640a3cf4b9bc4987e7a683a58}\label{class_fbx_quaternion_a1982e4d640a3cf4b9bc4987e7a683a58}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+The subtraction operator between the real part of this quaternion and a scalar value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The scalar subtrahend. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The difference of subtraction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_a2166c06ff00f0a768b3be0c64ebc919a}\label{class_fbx_quaternion_a2166c06ff00f0a768b3be0c64ebc919a}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Quaternion }\end{DoxyParamCaption})}
+
+Subtract a quaternion from another vector. 
+\begin{DoxyParams}{引数}
+{\em p\+Quaternion} & Quaternion to subtract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The quaternion v\textquotesingle{} = this -\/ p\+Quaternion, replacing this quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The values in p\+Quaternion are not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_abd6988e25ac58f06cefc5d4045099cbe}\label{class_fbx_quaternion_abd6988e25ac58f06cefc5d4045099cbe}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption}) const}
+
+Divide all vector components by a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value dividing each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+New vector. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_aeb9ff1e0023e789f0e2cb872116401f6}\label{class_fbx_quaternion_aeb9ff1e0023e789f0e2cb872116401f6}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator/@{operator/}}
+\index{operator/@{operator/}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+The quaternion division operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The divisor quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The quotient quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the divisor has a zero length, return zero quaternion. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a01b691edc7aeac6565987ff372d105c9}\label{class_fbx_quaternion_a01b691edc7aeac6565987ff372d105c9}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Divide all vector elements by a value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The value dividing each component of the vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The result of dividing each component of the vector by p\+Value, replacing this quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The passed value is not checked. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a34cc4ef2a5eddb5546a223d7d85a9d6c}\label{class_fbx_quaternion_a34cc4ef2a5eddb5546a223d7d85a9d6c}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator/= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Other }\end{DoxyParamCaption})}
+
+The in place quaternion division operator. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The divisor quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The quotient quaternion. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the divisor has a zero length, return zero quaternion. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_add741768361b3ffe33c012e6585bc666}\label{class_fbx_quaternion_add741768361b3ffe33c012e6585bc666}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion}\& Fbx\+Quaternion\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Quaternion }\end{DoxyParamCaption})}
+
+Assignment operation. 
+\begin{DoxyParams}{引数}
+{\em p\+Quaternion} & \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} object assigned to this one. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_a0ae29db12bfc76efa61aaedd39e943fd}\label{class_fbx_quaternion_a0ae29db12bfc76efa61aaedd39e943fd}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator==@{operator==}}
+\index{operator==@{operator==}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Fbx\+Quaternion\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{pV }\end{DoxyParamCaption}) const}
+
+Equivalence operator. 
+\begin{DoxyParams}{引数}
+{\em pV} & The quaternion to be compared to this quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if the two quaternions are equal (each element is within a F\+B\+X\+S\+D\+K\+\_\+\+T\+O\+L\+E\+R\+A\+N\+CE tolerance), {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_ad80dbb6071eb5bf4cfb3b76c14316460}\label{class_fbx_quaternion_ad80dbb6071eb5bf4cfb3b76c14316460}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double\& Fbx\+Quaternion\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Accessor. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the component to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The reference to the indexed component. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index parameter is not checked for values out of bounds. The valid range is \mbox{[}0,3\mbox{]}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a5d485a6d21257f1a92eca379e3d2e69f}\label{class_fbx_quaternion_a5d485a6d21257f1a92eca379e3d2e69f}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const double\& Fbx\+Quaternion\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Accessor. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the component to access. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The const reference to the indexed component. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index parameter is not checked for values out of bounds. The valid range is \mbox{[}0,3\mbox{]}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_a4b915abc82fa0199c15f07fa3814a3ec}\label{class_fbx_quaternion_a4b915abc82fa0199c15f07fa3814a3ec}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Product@{Product}}
+\index{Product@{Product}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Product()}{Product()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::\+Product (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Other }\end{DoxyParamCaption}) const}
+
+Return quaternion product. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The quaternion to be multiplied with this quaternion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The product of two quaternions. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_quaternion_aa0d19c354c4514760468d9956b140a41}\label{class_fbx_quaternion_aa0d19c354c4514760468d9956b140a41}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Set@{Set}}
+\index{Set@{Set}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Set (\begin{DoxyParamCaption}\item[{double}]{pX,  }\item[{double}]{pY,  }\item[{double}]{pZ,  }\item[{double}]{pW = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+Set vector. 
+\begin{DoxyParams}{引数}
+{\em pX} & The X component value. \\
+\hline
+{\em pY} & The Y component value. \\
+\hline
+{\em pZ} & The Z component value. \\
+\hline
+{\em pW} & The W component value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_aa3695db7955b4c2fcde0385972e160f7}\label{class_fbx_quaternion_aa3695db7955b4c2fcde0385972e160f7}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Set\+At@{Set\+At}}
+\index{Set\+At@{Set\+At}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Set\+At()}{SetAt()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Set\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{double}]{p\+Value }\end{DoxyParamCaption})}
+
+Set a vector element. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the component to set. \\
+\hline
+{\em p\+Value} & The new value to set the component. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The index parameter is not checked for values out of bounds. The valid range is \mbox{[}0,3\mbox{]}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_quaternion_ad926d8c6abbed994f0474a4144e4f4ea}\label{class_fbx_quaternion_ad926d8c6abbed994f0474a4144e4f4ea}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Set\+Axis\+Angle@{Set\+Axis\+Angle}}
+\index{Set\+Axis\+Angle@{Set\+Axis\+Angle}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Set\+Axis\+Angle()}{SetAxisAngle()}}
+{\footnotesize\ttfamily void Fbx\+Quaternion\+::\+Set\+Axis\+Angle (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Axis,  }\item[{double}]{p\+Degree }\end{DoxyParamCaption})}
+
+Set the quaternion rotation from an axis degree angle. 
+\begin{DoxyParams}{引数}
+{\em p\+Axis} & The axis to rotate around. \\
+\hline
+{\em p\+Degree} & The amount of degree to rotate around the axis. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_quaternion_a617ad81c400bdd90745d22ee0b0b42bc}\label{class_fbx_quaternion_a617ad81c400bdd90745d22ee0b0b42bc}} 
+\index{Fbx\+Quaternion@{Fbx\+Quaternion}!Slerp@{Slerp}}
+\index{Slerp@{Slerp}!Fbx\+Quaternion@{Fbx\+Quaternion}}
+\subsubsection{\texorpdfstring{Slerp()}{Slerp()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} Fbx\+Quaternion\+::\+Slerp (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_quaternion}{Fbx\+Quaternion} \&}]{p\+Other,  }\item[{double}]{p\+Weight }\end{DoxyParamCaption}) const}
+
+Calculate a spherical linear interpolation quaternion. 
+\begin{DoxyParams}{引数}
+{\em p\+Other} & The other quaternion to interpolate with. \\
+\hline
+{\em p\+Weight} & A value between 0.\+0 and 1.\+0 to specify the interpolation amount. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/math/\hyperlink{fbxquaternion_8h}{fbxquaternion.\+h}\end{DoxyCompactItemize}

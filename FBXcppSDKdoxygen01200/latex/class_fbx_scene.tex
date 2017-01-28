@@ -1,0 +1,1220 @@
+\hypertarget{class_fbx_scene}{}\section{Fbx\+Scene クラス}
+\label{class_fbx_scene}\index{Fbx\+Scene@{Fbx\+Scene}}
+
+
+{\ttfamily \#include $<$fbxscene.\+h$>$}
+
+Fbx\+Scene の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{class_fbx_scene}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_scene_a78c7b7beb811f9c91d98e2dec5eccedc}{Fill\+Pose\+Array} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$$>$ \&p\+Pose\+Array)
+\item 
+void \hyperlink{class_fbx_scene_abf1c255ce53d570ce7038154c6194f1a}{Convert\+Nurbs\+Surface\+To\+Nurbs} ()
+\item 
+void \hyperlink{class_fbx_scene_a945048409176af7ce52ecb017cfb69ec}{Convert\+Mesh\+Normals} ()
+\item 
+void \hyperlink{class_fbx_scene_a9d1fed2b6c643ff2a091928ff8b8b634}{Convert\+Nurbs\+Curves\+To\+Nulls} ()
+\item 
+void \hyperlink{class_fbx_scene_aeb20ccb008b9d646c00b78780b4b6c16}{Connect\+Textures} ()
+\item 
+void \hyperlink{class_fbx_scene_a27a6d24089178bc992f59787aef9d319}{Build\+Texture\+Layers\+Direct\+Array} ()
+\item 
+void \hyperlink{class_fbx_scene_acf98b8d5cee48e3e2301d25814378945}{Fix\+Inherit\+Type} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{class_fbx_scene_a68b89374967020ed469645de47eb4507}{Update\+Scale\+Compensate} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node, \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&p\+I\+OS)
+\item 
+\hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} \hyperlink{class_fbx_scene_aca61130d681d641f172117b8ae3e89a0}{Convert\+Attribute\+Type\+To\+Class\+ID} (\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} p\+Attribute\+Type)
+\item 
+\hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings} \& \hyperlink{class_fbx_scene_a0583b181b70f56655f06dbe79b43fcd6}{Global\+Light\+Settings} ()
+\item 
+\hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings} \& \hyperlink{class_fbx_scene_a029b34d23edd7d05cb0e687b494064ad}{Global\+Camera\+Settings} ()
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_scene_acee728f921bf4e25f6f8accf3446b079}{Clone} (\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} p\+Clone\+Type=\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, void $\ast$p\+Set=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_scene_ab78703621f17898a3caf23b589821609}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+void \hyperlink{class_fbx_scene_a6565e7a4147518591dee9f70dbf0909b}{Connect\+Materials} ()
+\item 
+void \hyperlink{class_fbx_scene_af0294acb0289fddc113209d70aca2721}{Build\+Material\+Layers\+Direct\+Array} ()
+\item 
+void \hyperlink{class_fbx_scene_ab36c6e602ec8eb39c9b0934f24a71886}{Reindex\+Material\+Connections} ()
+\item 
+\hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map} $\ast$ \hyperlink{class_fbx_scene_aef596fedc76d369a7912ef107ee24113}{Add\+Take\+Time\+Warp\+Set} (char $\ast$p\+Take\+Name)
+\item 
+\hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map} $\ast$ \hyperlink{class_fbx_scene_a36e7860a68461f8fa9bf2a78285a36b6}{Get\+Take\+Time\+Warp\+Set} (char $\ast$p\+Take\+Name)
+\item 
+void \hyperlink{class_fbx_scene_a12132b6491e03c381339492a36990b01}{Force\+Kill} ()
+\end{DoxyCompactItemize}
+\subsection*{Scene Management}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_scene_ab578ff733eb8f6af89ff1645852966cd}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear the scene content by deleting the node tree below the root node and restoring default settings. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_scene_ab27324d92595e85d18ec6749be79da09}{Get\+Root\+Node} () const
+\end{DoxyCompactItemize}
+\subsection*{Texture Material and Video Access}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_scene_aa1c0e661ae74b086bbdc546e1fdcff66}{Fill\+Texture\+Array} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$$>$ \&p\+Texture\+Array)
+\item 
+void \hyperlink{class_fbx_scene_aa70ce6e170685f3e4eec9a86ed9ead3d}{Fill\+Material\+Array} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$$>$ \&p\+Material\+Array)
+\end{DoxyCompactItemize}
+\subsection*{Generic Node Access}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_affc3c8713672b7d0c3bf857a62cb400b}{Get\+Generic\+Node\+Count} () const
+\item 
+\hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node} $\ast$ \hyperlink{class_fbx_scene_abb58edd9139efcf577a2c910202fd842}{Get\+Generic\+Node} (int p\+Index)
+\item 
+\hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node} $\ast$ \hyperlink{class_fbx_scene_ad5a5ab95c93631d8c39acc39da689313}{Get\+Generic\+Node} (char $\ast$p\+Name)
+\item 
+bool \hyperlink{class_fbx_scene_aedfcc888eda10e083a10646875390d6d}{Add\+Generic\+Node} (\hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node} $\ast$p\+Generic\+Node)
+\item 
+bool \hyperlink{class_fbx_scene_ada01a14ed31636b615d6e95c1f33e2ca}{Remove\+Generic\+Node} (\hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node} $\ast$p\+Generic\+Node)
+\end{DoxyCompactItemize}
+\subsection*{Character Management}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_ab425b0d2df9318234ed67e7276ff823c}{Get\+Character\+Count} () const
+\item 
+\hyperlink{class_fbx_character}{Fbx\+Character} $\ast$ \hyperlink{class_fbx_scene_a1ac7e6cc72f3d3e89dcece88cb9e1fd3}{Get\+Character} (int p\+Index)
+\item 
+int \hyperlink{class_fbx_scene_a5095a3dbd1407bda6c12e5aa29f63049}{Create\+Character} (const char $\ast$p\+Name)
+\item 
+void \hyperlink{class_fbx_scene_ade61cc3b6e1e0fc8fbfb7d664b1d59b1}{Destroy\+Character} (int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Control\+Set\+Plug Management}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a03a1a3f0153d9aa882eaa9c550fd9127}{Get\+Control\+Set\+Plug\+Count} () const
+\item 
+\hyperlink{class_fbx_control_set_plug}{Fbx\+Control\+Set\+Plug} $\ast$ \hyperlink{class_fbx_scene_aaa152051d6af46baf4e56fc517d7fe19}{Get\+Control\+Set\+Plug} (int p\+Index)
+\item 
+int \hyperlink{class_fbx_scene_a1496eb0d5cdc26a33f1da631fbc1f047}{Create\+Control\+Set\+Plug} (char $\ast$p\+Name)
+\item 
+void \hyperlink{class_fbx_scene_a7175cf4e931920126c9c051abbb5a884}{Destroy\+Control\+Set\+Plug} (int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Character Pose Management}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a172e1ef47648e5271fc5f7c19e66692f}{Get\+Character\+Pose\+Count} () const
+\item 
+\hyperlink{class_fbx_character_pose}{Fbx\+Character\+Pose} $\ast$ \hyperlink{class_fbx_scene_a5e8a233241054d2bbe551fec35f7afb6}{Get\+Character\+Pose} (int p\+Index)
+\item 
+int \hyperlink{class_fbx_scene_aec8727602ce4d2a91448cc42c083e5a3}{Create\+Character\+Pose} (char $\ast$p\+Name)
+\item 
+void \hyperlink{class_fbx_scene_ac7c105c120c3df3e757354e843c027f1}{Destroy\+Character\+Pose} (int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Pose Management}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a0bfae5c6b969cfc49a7b0e3c9e190240}{Get\+Pose\+Count} () const
+\item 
+\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$ \hyperlink{class_fbx_scene_a9148979d7728e7256be7ce52cb100558}{Get\+Pose} (int p\+Index)
+\item 
+bool \hyperlink{class_fbx_scene_a41080e786745c1ebdc1c86a80a8e7961}{Add\+Pose} (\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+bool \hyperlink{class_fbx_scene_ad698fe1d231041b3a8ecf5ae3d1e2e86}{Remove\+Pose} (\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$p\+Pose)
+\item 
+bool \hyperlink{class_fbx_scene_a480cd0951e983a20ae2014a981054db6}{Remove\+Pose} (int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Scene information}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_document_info}{Fbx\+Document\+Info} $\ast$ \hyperlink{class_fbx_scene_a5af52a77f2053fae74477261f857a0d8}{Get\+Scene\+Info} ()
+\item 
+void \hyperlink{class_fbx_scene_a486c147dc25d9bec4938852d2550cb81}{Set\+Scene\+Info} (\hyperlink{class_fbx_document_info}{Fbx\+Document\+Info} $\ast$p\+Scene\+Info)
+\end{DoxyCompactItemize}
+\subsection*{Global Settings}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings} \& \hyperlink{class_fbx_scene_a0cb767181a743532c9e9be17f0348570}{Get\+Global\+Settings} ()
+\item 
+const \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings} \& \hyperlink{class_fbx_scene_a223ba0266f854f8243f9f6b2350a9404}{Get\+Global\+Settings} () const
+\end{DoxyCompactItemize}
+\subsection*{Scene Animation Evaluation}
+\label{_amgrp75977921e44cb3c6a8bcac7b5f40eafc}%
+ The scene\textquotesingle{}s animation evaluator is used to compute animation values for animated scenes. A typical usage would be to compute the global transform matrix of a node {\ttfamily l\+Node} at a given time {\ttfamily l\+Time}. 
+\begin{DoxyCode}
+\hyperlink{class_fbx_a_matrix}{FbxAMatrix}& lGlobalMatrix = lNode->GetScene()->GetAnimationEvaluator()->GetNodeGlobalTransform(
+      lNode, lTime);
+
+or the exact equivalent:
+
+\hyperlink{class_fbx_a_matrix}{FbxAMatrix}& lGlobalMatrix = lNode->EvaluateGlobalTransform(lTime);
+\end{DoxyCode}
+
+
+The user can create one or more evaluators in the scene. The default evaluator is set using Set\+Evaluator. When Get\+Evaluator is called, if the scene has no evaluator, an evaluator is created with default values. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_scene_a19f5408a6460667dec584cd5363e3abe}{Set\+Current\+Animation\+Stack} (\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$p\+Anim\+Stack)
+\item 
+\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$ \hyperlink{class_fbx_scene_af8fde6643714a5e654e1e28d6f5470f9}{Get\+Current\+Animation\+Stack} ()
+\item 
+void \hyperlink{class_fbx_scene_a7fd2f5602c943f1050488e379fc18755}{Set\+Animation\+Evaluator} (\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator} $\ast$p\+Evaluator)
+\item 
+\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator} $\ast$ \hyperlink{class_fbx_scene_a6938500794b26f33a0a56a1ea4ce4a61}{Get\+Animation\+Evaluator} ()
+\end{DoxyCompactItemize}
+\subsection*{Material Access}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a098bcfeab04d64d1b7f900a09c09f381}{Get\+Material\+Count} () const
+\item 
+\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ \hyperlink{class_fbx_scene_aec766862a775be507f785d75ddc55cf5}{Get\+Material} (int p\+Index)
+\item 
+\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ \hyperlink{class_fbx_scene_ad99587afc86a025c65fd150dcdbf885b}{Get\+Material} (char $\ast$p\+Name)
+\item 
+bool \hyperlink{class_fbx_scene_a65586b64256e236b0e0f2d885ca985e2}{Add\+Material} (\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$p\+Material)
+\item 
+bool \hyperlink{class_fbx_scene_a901ad0c4394b3ee5bf675ee91e54adc0}{Remove\+Material} (\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$p\+Material)
+\end{DoxyCompactItemize}
+\subsection*{Texture Access}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a63041ec5c2a3f563c999ee1c20c71071}{Get\+Texture\+Count} () const
+\item 
+\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$ \hyperlink{class_fbx_scene_a0636380a7984fd690eb37720b5cc4f9a}{Get\+Texture} (int p\+Index)
+\item 
+\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$ \hyperlink{class_fbx_scene_ab7f5f7902a4a43b5c8688a590448e70c}{Get\+Texture} (char $\ast$p\+Name)
+\item 
+bool \hyperlink{class_fbx_scene_a19321c754cefd2a1576477d8e8353472}{Add\+Texture} (\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$p\+Texture)
+\item 
+bool \hyperlink{class_fbx_scene_af802f5395ba0fcb72f13f2734ad17332}{Remove\+Texture} (\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$p\+Texture)
+\end{DoxyCompactItemize}
+\subsection*{Node Access}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a0cb1a1464b0fa1b8291c41900879515e}{Get\+Node\+Count} () const
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_scene_a1ba0a3d043284ae7c488467feaf1a9f9}{Get\+Node} (int p\+Index)
+\item 
+bool \hyperlink{class_fbx_scene_a4da84de06d868fd3542f4688834dff6d}{Add\+Node} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+bool \hyperlink{class_fbx_scene_a2e66ac740f8ff46ef58d0fb3dbbe5c65}{Remove\+Node} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+int \hyperlink{class_fbx_scene_a7dd5c89cc0d60a42ce504b2593f781cb}{Get\+Curve\+On\+Surface\+Count} ()
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_scene_ad0efe7531b777c959c690f57a3052706}{Find\+Node\+By\+Name} (const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Geometry Access}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_aab367e33255510f9a6db9b8b56efc873}{Get\+Geometry\+Count} () const
+\item 
+\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$ \hyperlink{class_fbx_scene_a66fc27092b1511bc91bb8c73352b066c}{Get\+Geometry} (int p\+Index)
+\item 
+bool \hyperlink{class_fbx_scene_a43871135355dec7e9eb2070b93e61423}{Add\+Geometry} (\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Geometry)
+\item 
+bool \hyperlink{class_fbx_scene_a9bbff92d4739c1a39489c8b9178e51b4}{Remove\+Geometry} (\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Geometry)
+\end{DoxyCompactItemize}
+\subsection*{Video Access}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_scene_a203455f2e5a9b3891cae6eb516e71b15}{Get\+Video\+Count} () const
+\item 
+\hyperlink{class_fbx_video}{Fbx\+Video} $\ast$ \hyperlink{class_fbx_scene_ae5365932948e9fe88b2323669a92d114}{Get\+Video} (int p\+Index)
+\item 
+bool \hyperlink{class_fbx_scene_ae71fcbb60eadb1ba418e210d8104cc54}{Add\+Video} (\hyperlink{class_fbx_video}{Fbx\+Video} $\ast$p\+Video)
+\item 
+bool \hyperlink{class_fbx_scene_aac60d3534072390ae951879dd92339ff}{Remove\+Video} (\hyperlink{class_fbx_video}{Fbx\+Video} $\ast$p\+Video)
+\end{DoxyCompactItemize}
+\subsection*{Utilities}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_scene_a940444136913f6e50f687ff0807c93e5}{Sync\+Show\+Property\+For\+Instance} ()
+\item 
+bool \hyperlink{class_fbx_scene_aa7b8cd4fcbb1836fa40f68b55a29cc35}{Compute\+Bounding\+Box\+Min\+Max\+Center} (\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+B\+Box\+Min, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+B\+Box\+Max, \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+B\+Box\+Center, bool p\+Selected=false, const \hyperlink{class_fbx_time}{Fbx\+Time} \&p\+Time=\hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE})
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This class contains the description of a 3D scene. It contains the nodes (including the root node) (\hyperlink{class_fbx_node}{Fbx\+Node}), materials, textures, videos, gobos, poses, characters, character poses, control set plugs, generic nodes, scene information, global settings, and a global evaluator. The nodes are structured in a tree under the scene\textquotesingle{}s root node.
+
+When an object is created using the F\+BX S\+DK, a scene is usually passed as argument to the object creation function to specify that the object belongs to this scene. At this point, a connection is made with the object as source and the scene as destination.
+
+All objects in the scene can be queried by connection index. In addition, generic nodes, materials, and textures can also be queried by name. In this latter case, the first object with the queried name will be returned.
+
+The global evaluator (\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator}) is used to compute animation values for animated scenes. 
+
+ fbxscene.\+h の 61 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_scene_aedfcc888eda10e083a10646875390d6d}\label{class_fbx_scene_aedfcc888eda10e083a10646875390d6d}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Generic\+Node@{Add\+Generic\+Node}}
+\index{Add\+Generic\+Node@{Add\+Generic\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Generic\+Node()}{AddGenericNode()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Generic\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node} $\ast$}]{p\+Generic\+Node }\end{DoxyParamCaption})}
+
+Add a generic node to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Generic\+Node} & Pointer to the generic node to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the passed parameter is {\ttfamily N\+U\+LL}, this method will return {\ttfamily false}, otherwise {\ttfamily true}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a43871135355dec7e9eb2070b93e61423}\label{class_fbx_scene_a43871135355dec7e9eb2070b93e61423}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Geometry@{Add\+Geometry}}
+\index{Add\+Geometry@{Add\+Geometry}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Geometry()}{AddGeometry()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Geometry (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Geometry }\end{DoxyParamCaption})}
+
+Add the geometry to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Geometry} & Pointer to the geometry to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a65586b64256e236b0e0f2d885ca985e2}\label{class_fbx_scene_a65586b64256e236b0e0f2d885ca985e2}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Material@{Add\+Material}}
+\index{Add\+Material@{Add\+Material}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Material()}{AddMaterial()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$}]{p\+Material }\end{DoxyParamCaption})}
+
+Add the material to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Material} & Pointer to the material to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a4da84de06d868fd3542f4688834dff6d}\label{class_fbx_scene_a4da84de06d868fd3542f4688834dff6d}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Node@{Add\+Node}}
+\index{Add\+Node@{Add\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Node()}{AddNode()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Add the node to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Pointer to the node to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a41080e786745c1ebdc1c86a80a8e7961}\label{class_fbx_scene_a41080e786745c1ebdc1c86a80a8e7961}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Pose@{Add\+Pose}}
+\index{Add\+Pose@{Add\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Pose()}{AddPose()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Pose (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+Add a pose to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Pose} & The pose (for example\+: bind pose, rest pose) to be added to the scene. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the pose is correctly added to the scene, return {\ttfamily true}. Otherwise, if the pose is already in the scene, return {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_aef596fedc76d369a7912ef107ee24113}\label{class_fbx_scene_aef596fedc76d369a7912ef107ee24113}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Take\+Time\+Warp\+Set@{Add\+Take\+Time\+Warp\+Set}}
+\index{Add\+Take\+Time\+Warp\+Set@{Add\+Take\+Time\+Warp\+Set}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Take\+Time\+Warp\+Set()}{AddTakeTimeWarpSet()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map}$\ast$ Fbx\+Scene\+::\+Add\+Take\+Time\+Warp\+Set (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Take\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a19321c754cefd2a1576477d8e8353472}\label{class_fbx_scene_a19321c754cefd2a1576477d8e8353472}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Texture@{Add\+Texture}}
+\index{Add\+Texture@{Add\+Texture}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Texture()}{AddTexture()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$}]{p\+Texture }\end{DoxyParamCaption})}
+
+Add the texture to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Texture} & Pointer to the texture to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on successful addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_ae71fcbb60eadb1ba418e210d8104cc54}\label{class_fbx_scene_ae71fcbb60eadb1ba418e210d8104cc54}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Add\+Video@{Add\+Video}}
+\index{Add\+Video@{Add\+Video}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Add\+Video()}{AddVideo()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Add\+Video (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_video}{Fbx\+Video} $\ast$}]{p\+Video }\end{DoxyParamCaption})}
+
+Add the video to this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Video} & Pointer to the video to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful addition. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_af0294acb0289fddc113209d70aca2721}\label{class_fbx_scene_af0294acb0289fddc113209d70aca2721}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Build\+Material\+Layers\+Direct\+Array@{Build\+Material\+Layers\+Direct\+Array}}
+\index{Build\+Material\+Layers\+Direct\+Array@{Build\+Material\+Layers\+Direct\+Array}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Build\+Material\+Layers\+Direct\+Array()}{BuildMaterialLayersDirectArray()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Build\+Material\+Layers\+Direct\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a27a6d24089178bc992f59787aef9d319}\label{class_fbx_scene_a27a6d24089178bc992f59787aef9d319}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Build\+Texture\+Layers\+Direct\+Array@{Build\+Texture\+Layers\+Direct\+Array}}
+\index{Build\+Texture\+Layers\+Direct\+Array@{Build\+Texture\+Layers\+Direct\+Array}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Build\+Texture\+Layers\+Direct\+Array()}{BuildTextureLayersDirectArray()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Build\+Texture\+Layers\+Direct\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_ab578ff733eb8f6af89ff1645852966cd}\label{class_fbx_scene_ab578ff733eb8f6af89ff1645852966cd}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clear the scene content by deleting the node tree below the root node and restoring default settings. 
+
+
+
+\hyperlink{class_fbx_document_ac8fa73e98a73c4f6637466e58d069bbe}{Fbx\+Document}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_scene_acee728f921bf4e25f6f8accf3446b079}\label{class_fbx_scene_acee728f921bf4e25f6f8accf3446b079}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Clone@{Clone}}
+\index{Clone@{Clone}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Scene\+::\+Clone (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type}}]{p\+Clone\+Type = {\ttfamily \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}},  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{void $\ast$}]{p\+Set = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a clone of this object. By default, the connections are N\+OT cloned. If the desired effect is to clone the connections as well, you must clone using the \hyperlink{class_fbx_clone_manager}{Fbx\+Clone\+Manager} (refer to this class documentation for further details).
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Clone\+Type} & The type of clone to be created. By default, the clone type is e\+Deep\+Clone. \\
+\hline
+{\em p\+Container} & An optional parameter to specify which object will \char`\"{}contain\char`\"{} the new object. By contain, we mean the new object will become a source to the container, connection-\/wise. \\
+\hline
+{\em p\+Set} & See remark section. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new clone, or N\+U\+LL (if the specified clone type is not supported). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When doing either a \char`\"{}deep\char`\"{} or \char`\"{}reference\char`\"{} clone type, the clone will always get its properties values set from the source object properties values. 
+
+Since this is a virtual function, some classes might do additional tasks. 
+
+The {\itshape p\+Set} argument is not used in the default implementation of this method. Specialized implementations should cast this pointer to \hyperlink{class_fbx_clone_manager_aeb8a9c04c9c36eb7e551186a0b18f10d}{Fbx\+Clone\+Manager\+::\+Clone\+Set} to have access to the cloned objects so far. Typically, this pointer is set by the clone manager. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad553a4262b09cb57c3171a93edadbab8}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_scene_aa7b8cd4fcbb1836fa40f68b55a29cc35}\label{class_fbx_scene_aa7b8cd4fcbb1836fa40f68b55a29cc35}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Compute\+Bounding\+Box\+Min\+Max\+Center@{Compute\+Bounding\+Box\+Min\+Max\+Center}}
+\index{Compute\+Bounding\+Box\+Min\+Max\+Center@{Compute\+Bounding\+Box\+Min\+Max\+Center}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Compute\+Bounding\+Box\+Min\+Max\+Center()}{ComputeBoundingBoxMinMaxCenter()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Compute\+Bounding\+Box\+Min\+Max\+Center (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+B\+Box\+Min,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+B\+Box\+Max,  }\item[{\hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+B\+Box\+Center,  }\item[{bool}]{p\+Selected = {\ttfamily false},  }\item[{const \hyperlink{class_fbx_time}{Fbx\+Time} \&}]{p\+Time = {\ttfamily \hyperlink{fbxtime_8h_a1e6db3fe0f84f0b7daa775739f93526f}{F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}} }\end{DoxyParamCaption})}
+
+Compute the bounding box and its center for all (or selected) nodes. 
+\begin{DoxyParams}{引数}
+{\em p\+B\+Box\+Min} & The minimum value of the bounding box upon successful return. \\
+\hline
+{\em p\+B\+Box\+Max} & The maximum value of the bounding box upon successful return. \\
+\hline
+{\em p\+B\+Box\+Center} & The center value of the bounding box upon successful return. \\
+\hline
+{\em p\+Selected} & If {\ttfamily true}, only take into account selected geometry, otherwise take all geometry into account. \\
+\hline
+{\em p\+Time} & If different from F\+B\+X\+S\+D\+K\+\_\+\+T\+I\+M\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE, time used to compute the bounding box for deformed geometry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if successful, otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If geometry have been unloaded from memory, their bounding box cannot be calculated and will use any value set previously. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_a6565e7a4147518591dee9f70dbf0909b}\label{class_fbx_scene_a6565e7a4147518591dee9f70dbf0909b}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Connect\+Materials@{Connect\+Materials}}
+\index{Connect\+Materials@{Connect\+Materials}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Connect\+Materials()}{ConnectMaterials()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Connect\+Materials (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_aeb20ccb008b9d646c00b78780b4b6c16}\label{class_fbx_scene_aeb20ccb008b9d646c00b78780b4b6c16}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Connect\+Textures@{Connect\+Textures}}
+\index{Connect\+Textures@{Connect\+Textures}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Connect\+Textures()}{ConnectTextures()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Connect\+Textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_aca61130d681d641f172117b8ae3e89a0}\label{class_fbx_scene_aca61130d681d641f172117b8ae3e89a0}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Convert\+Attribute\+Type\+To\+Class\+ID@{Convert\+Attribute\+Type\+To\+Class\+ID}}
+\index{Convert\+Attribute\+Type\+To\+Class\+ID@{Convert\+Attribute\+Type\+To\+Class\+ID}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Convert\+Attribute\+Type\+To\+Class\+I\+D()}{ConvertAttributeTypeToClassID()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_class_id}{Fbx\+Class\+Id} Fbx\+Scene\+::\+Convert\+Attribute\+Type\+To\+Class\+ID (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type}}]{p\+Attribute\+Type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a945048409176af7ce52ecb017cfb69ec}\label{class_fbx_scene_a945048409176af7ce52ecb017cfb69ec}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Convert\+Mesh\+Normals@{Convert\+Mesh\+Normals}}
+\index{Convert\+Mesh\+Normals@{Convert\+Mesh\+Normals}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Convert\+Mesh\+Normals()}{ConvertMeshNormals()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Convert\+Mesh\+Normals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a9d1fed2b6c643ff2a091928ff8b8b634}\label{class_fbx_scene_a9d1fed2b6c643ff2a091928ff8b8b634}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Convert\+Nurbs\+Curves\+To\+Nulls@{Convert\+Nurbs\+Curves\+To\+Nulls}}
+\index{Convert\+Nurbs\+Curves\+To\+Nulls@{Convert\+Nurbs\+Curves\+To\+Nulls}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Convert\+Nurbs\+Curves\+To\+Nulls()}{ConvertNurbsCurvesToNulls()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Convert\+Nurbs\+Curves\+To\+Nulls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_abf1c255ce53d570ce7038154c6194f1a}\label{class_fbx_scene_abf1c255ce53d570ce7038154c6194f1a}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Convert\+Nurbs\+Surface\+To\+Nurbs@{Convert\+Nurbs\+Surface\+To\+Nurbs}}
+\index{Convert\+Nurbs\+Surface\+To\+Nurbs@{Convert\+Nurbs\+Surface\+To\+Nurbs}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Convert\+Nurbs\+Surface\+To\+Nurbs()}{ConvertNurbsSurfaceToNurbs()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Convert\+Nurbs\+Surface\+To\+Nurbs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_ab78703621f17898a3caf23b589821609}\label{class_fbx_scene_ab78703621f17898a3caf23b589821609}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Scene\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_document_a6a345cc64e4ee39a6fd719b56d50dfac}{Fbx\+Document}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_scene_a5095a3dbd1407bda6c12e5aa29f63049}\label{class_fbx_scene_a5095a3dbd1407bda6c12e5aa29f63049}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Create\+Character@{Create\+Character}}
+\index{Create\+Character@{Create\+Character}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Create\+Character()}{CreateCharacter()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Create\+Character (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Create a new character. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name given to character. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of the created character. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_aec8727602ce4d2a91448cc42c083e5a3}\label{class_fbx_scene_aec8727602ce4d2a91448cc42c083e5a3}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Create\+Character\+Pose@{Create\+Character\+Pose}}
+\index{Create\+Character\+Pose@{Create\+Character\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Create\+Character\+Pose()}{CreateCharacterPose()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Create\+Character\+Pose (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Create a new character pose. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name given to character pose. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of created character pose. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a1496eb0d5cdc26a33f1da631fbc1f047}\label{class_fbx_scene_a1496eb0d5cdc26a33f1da631fbc1f047}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Create\+Control\+Set\+Plug@{Create\+Control\+Set\+Plug}}
+\index{Create\+Control\+Set\+Plug@{Create\+Control\+Set\+Plug}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Create\+Control\+Set\+Plug()}{CreateControlSetPlug()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Create\+Control\+Set\+Plug (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Create a new Control\+Set\+Plug. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name given to Control\+Set\+Plug. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Index of created Control\+Set\+Plug. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_ade61cc3b6e1e0fc8fbfb7d664b1d59b1}\label{class_fbx_scene_ade61cc3b6e1e0fc8fbfb7d664b1d59b1}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Destroy\+Character@{Destroy\+Character}}
+\index{Destroy\+Character@{Destroy\+Character}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Destroy\+Character()}{DestroyCharacter()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Destroy\+Character (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Destroy character. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Specify which character to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_ac7c105c120c3df3e757354e843c027f1}\label{class_fbx_scene_ac7c105c120c3df3e757354e843c027f1}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Destroy\+Character\+Pose@{Destroy\+Character\+Pose}}
+\index{Destroy\+Character\+Pose@{Destroy\+Character\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Destroy\+Character\+Pose()}{DestroyCharacterPose()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Destroy\+Character\+Pose (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Destroy character pose. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Specify which character pose to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_a7175cf4e931920126c9c051abbb5a884}\label{class_fbx_scene_a7175cf4e931920126c9c051abbb5a884}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Destroy\+Control\+Set\+Plug@{Destroy\+Control\+Set\+Plug}}
+\index{Destroy\+Control\+Set\+Plug@{Destroy\+Control\+Set\+Plug}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Destroy\+Control\+Set\+Plug()}{DestroyControlSetPlug()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Destroy\+Control\+Set\+Plug (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Destroy Control\+Set\+Plug. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Specify which Control\+Set\+Plug to destroy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_aa70ce6e170685f3e4eec9a86ed9ead3d}\label{class_fbx_scene_aa70ce6e170685f3e4eec9a86ed9ead3d}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Fill\+Material\+Array@{Fill\+Material\+Array}}
+\index{Fill\+Material\+Array@{Fill\+Material\+Array}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Fill\+Material\+Array()}{FillMaterialArray()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Fill\+Material\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$$>$ \&}]{p\+Material\+Array }\end{DoxyParamCaption})}
+
+Clear, then fill, a material array with all existing materials included in the scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Material\+Array} & An array of material pointers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_a78c7b7beb811f9c91d98e2dec5eccedc}\label{class_fbx_scene_a78c7b7beb811f9c91d98e2dec5eccedc}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Fill\+Pose\+Array@{Fill\+Pose\+Array}}
+\index{Fill\+Pose\+Array@{Fill\+Pose\+Array}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Fill\+Pose\+Array()}{FillPoseArray()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Fill\+Pose\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$$>$ \&}]{p\+Pose\+Array }\end{DoxyParamCaption})}
+
+Clear then fill a pose array with all existing pose included in the scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Pose\+Array} & An array of pose pointers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_aa1c0e661ae74b086bbdc546e1fdcff66}\label{class_fbx_scene_aa1c0e661ae74b086bbdc546e1fdcff66}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Fill\+Texture\+Array@{Fill\+Texture\+Array}}
+\index{Fill\+Texture\+Array@{Fill\+Texture\+Array}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Fill\+Texture\+Array()}{FillTextureArray()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Fill\+Texture\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$$>$ \&}]{p\+Texture\+Array }\end{DoxyParamCaption})}
+
+Clear, then fill, a texture array with all existing textures included in the scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Texture\+Array} & An array of texture pointers. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_ad0efe7531b777c959c690f57a3052706}\label{class_fbx_scene_ad0efe7531b777c959c690f57a3052706}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Find\+Node\+By\+Name@{Find\+Node\+By\+Name}}
+\index{Find\+Node\+By\+Name@{Find\+Node\+By\+Name}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Find\+Node\+By\+Name()}{FindNodeByName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Scene\+::\+Find\+Node\+By\+Name (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name }\end{DoxyParamCaption})}
+
+Get the first node with this name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name of the node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the node, or {\ttfamily N\+U\+LL} if node is not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_acf98b8d5cee48e3e2301d25814378945}\label{class_fbx_scene_acf98b8d5cee48e3e2301d25814378945}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Fix\+Inherit\+Type@{Fix\+Inherit\+Type}}
+\index{Fix\+Inherit\+Type@{Fix\+Inherit\+Type}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Fix\+Inherit\+Type()}{FixInheritType()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Fix\+Inherit\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a12132b6491e03c381339492a36990b01}\label{class_fbx_scene_a12132b6491e03c381339492a36990b01}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Force\+Kill@{Force\+Kill}}
+\index{Force\+Kill@{Force\+Kill}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Force\+Kill()}{ForceKill()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Force\+Kill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a6938500794b26f33a0a56a1ea4ce4a61}\label{class_fbx_scene_a6938500794b26f33a0a56a1ea4ce4a61}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Animation\+Evaluator@{Get\+Animation\+Evaluator}}
+\index{Get\+Animation\+Evaluator@{Get\+Animation\+Evaluator}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Animation\+Evaluator()}{GetAnimationEvaluator()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator}$\ast$ Fbx\+Scene\+::\+Get\+Animation\+Evaluator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the global evaluator used by this scene evaluation engine. If no evaluator were previously set, this function will return either the first evaluator found attached to this scene, or a new default evaluator. \begin{DoxyReturn}{戻り値}
+The evaluator to be used for evaluation processing of this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a1ac7e6cc72f3d3e89dcece88cb9e1fd3}\label{class_fbx_scene_a1ac7e6cc72f3d3e89dcece88cb9e1fd3}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Character@{Get\+Character}}
+\index{Get\+Character@{Get\+Character}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Character()}{GetCharacter()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_character}{Fbx\+Character}$\ast$ Fbx\+Scene\+::\+Get\+Character (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get character at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of the characters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the character or {\ttfamily N\+U\+LL} if index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_ab425b0d2df9318234ed67e7276ff823c}\label{class_fbx_scene_ab425b0d2df9318234ed67e7276ff823c}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Character\+Count@{Get\+Character\+Count}}
+\index{Get\+Character\+Count@{Get\+Character\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Character\+Count()}{GetCharacterCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Character\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of characters. \begin{DoxyReturn}{戻り値}
+Number of characters in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a5e8a233241054d2bbe551fec35f7afb6}\label{class_fbx_scene_a5e8a233241054d2bbe551fec35f7afb6}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Character\+Pose@{Get\+Character\+Pose}}
+\index{Get\+Character\+Pose@{Get\+Character\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Character\+Pose()}{GetCharacterPose()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_character_pose}{Fbx\+Character\+Pose}$\ast$ Fbx\+Scene\+::\+Get\+Character\+Pose (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get character pose at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of character poses. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the character pose or {\ttfamily N\+U\+LL} if index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a172e1ef47648e5271fc5f7c19e66692f}\label{class_fbx_scene_a172e1ef47648e5271fc5f7c19e66692f}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Character\+Pose\+Count@{Get\+Character\+Pose\+Count}}
+\index{Get\+Character\+Pose\+Count@{Get\+Character\+Pose\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Character\+Pose\+Count()}{GetCharacterPoseCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Character\+Pose\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of character poses. \begin{DoxyReturn}{戻り値}
+Number of character poses in this scene. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Character Poses and Poses are two distinct entities having their own lists. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_aaa152051d6af46baf4e56fc517d7fe19}\label{class_fbx_scene_aaa152051d6af46baf4e56fc517d7fe19}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Control\+Set\+Plug@{Get\+Control\+Set\+Plug}}
+\index{Get\+Control\+Set\+Plug@{Get\+Control\+Set\+Plug}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Control\+Set\+Plug()}{GetControlSetPlug()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_control_set_plug}{Fbx\+Control\+Set\+Plug}$\ast$ Fbx\+Scene\+::\+Get\+Control\+Set\+Plug (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get Control\+Set\+Plug at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of the Control\+Set\+Plug \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to Control\+Set\+Plug or {\ttfamily N\+U\+LL} if index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a03a1a3f0153d9aa882eaa9c550fd9127}\label{class_fbx_scene_a03a1a3f0153d9aa882eaa9c550fd9127}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Control\+Set\+Plug\+Count@{Get\+Control\+Set\+Plug\+Count}}
+\index{Get\+Control\+Set\+Plug\+Count@{Get\+Control\+Set\+Plug\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Control\+Set\+Plug\+Count()}{GetControlSetPlugCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Control\+Set\+Plug\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of Control\+Set\+Plugs. \begin{DoxyReturn}{戻り値}
+Number of Control\+Set plugs in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_af8fde6643714a5e654e1e28d6f5470f9}\label{class_fbx_scene_af8fde6643714a5e654e1e28d6f5470f9}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Current\+Animation\+Stack@{Get\+Current\+Animation\+Stack}}
+\index{Get\+Current\+Animation\+Stack@{Get\+Current\+Animation\+Stack}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Current\+Animation\+Stack()}{GetCurrentAnimationStack()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack}$\ast$ Fbx\+Scene\+::\+Get\+Current\+Animation\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retrieve the current animation stack. \begin{DoxyReturn}{戻り値}
+the current animation stack. If none were set previously, the default one will be returned if it exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a7dd5c89cc0d60a42ce504b2593f781cb}\label{class_fbx_scene_a7dd5c89cc0d60a42ce504b2593f781cb}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Curve\+On\+Surface\+Count@{Get\+Curve\+On\+Surface\+Count}}
+\index{Get\+Curve\+On\+Surface\+Count@{Get\+Curve\+On\+Surface\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Curve\+On\+Surface\+Count()}{GetCurveOnSurfaceCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Curve\+On\+Surface\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Helper method for determining the number of nodes that have curves on surface attributes in the scene. Since the curve-\/on-\/surface nodes are connected to nurbs geometry and not any \hyperlink{class_fbx_node}{Fbx\+Node} in the scene, they won\textquotesingle{}t normally be picked up in a graph traversal. \begin{DoxyReturn}{戻り値}
+The number of curve-\/on-\/surface nodes in the scene 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_abb58edd9139efcf577a2c910202fd842}\label{class_fbx_scene_abb58edd9139efcf577a2c910202fd842}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Generic\+Node@{Get\+Generic\+Node}}
+\index{Get\+Generic\+Node@{Get\+Generic\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Generic\+Node()}{GetGenericNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node}$\ast$ Fbx\+Scene\+::\+Get\+Generic\+Node (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get generic node at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of the generic nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the generic node or {\ttfamily N\+U\+LL} if the index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_ad5a5ab95c93631d8c39acc39da689313}\label{class_fbx_scene_ad5a5ab95c93631d8c39acc39da689313}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Generic\+Node@{Get\+Generic\+Node}}
+\index{Get\+Generic\+Node@{Get\+Generic\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Generic\+Node()}{GetGenericNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node}$\ast$ Fbx\+Scene\+::\+Get\+Generic\+Node (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Access a generic node from its name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name of the generic node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+found generic node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_affc3c8713672b7d0c3bf857a62cb400b}\label{class_fbx_scene_affc3c8713672b7d0c3bf857a62cb400b}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Generic\+Node\+Count@{Get\+Generic\+Node\+Count}}
+\index{Get\+Generic\+Node\+Count@{Get\+Generic\+Node\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Generic\+Node\+Count()}{GetGenericNodeCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Generic\+Node\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of generic nodes in the scene. \begin{DoxyReturn}{戻り値}
+Number of Generic Nodes in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a66fc27092b1511bc91bb8c73352b066c}\label{class_fbx_scene_a66fc27092b1511bc91bb8c73352b066c}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Geometry@{Get\+Geometry}}
+\index{Get\+Geometry@{Get\+Geometry}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Geometry()}{GetGeometry()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry}{Fbx\+Geometry}$\ast$ Fbx\+Scene\+::\+Get\+Geometry (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the geometry at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of geometries. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the geometry or {\ttfamily N\+U\+LL} if the index is out of bounds. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+Index must be between 0 and \hyperlink{class_fbx_scene_aab367e33255510f9a6db9b8b56efc873}{Get\+Geometry\+Count()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_aab367e33255510f9a6db9b8b56efc873}\label{class_fbx_scene_aab367e33255510f9a6db9b8b56efc873}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Geometry\+Count@{Get\+Geometry\+Count}}
+\index{Get\+Geometry\+Count@{Get\+Geometry\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Geometry\+Count()}{GetGeometryCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Geometry\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of geometries. \begin{DoxyReturn}{戻り値}
+Number of geometries in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a0cb767181a743532c9e9be17f0348570}\label{class_fbx_scene_a0cb767181a743532c9e9be17f0348570}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Global\+Settings@{Get\+Global\+Settings}}
+\index{Get\+Global\+Settings@{Get\+Global\+Settings}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Global\+Settings()}{GetGlobalSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings}\& Fbx\+Scene\+::\+Get\+Global\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Access global settings. \begin{DoxyReturn}{戻り値}
+Reference to the Global Settings. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a223ba0266f854f8243f9f6b2350a9404}\label{class_fbx_scene_a223ba0266f854f8243f9f6b2350a9404}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Global\+Settings@{Get\+Global\+Settings}}
+\index{Get\+Global\+Settings@{Get\+Global\+Settings}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Global\+Settings()}{GetGlobalSettings()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_global_settings}{Fbx\+Global\+Settings}\& Fbx\+Scene\+::\+Get\+Global\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Const access to global settings. \begin{DoxyReturn}{戻り値}
+Const reference to the Global Settings. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_aec766862a775be507f785d75ddc55cf5}\label{class_fbx_scene_aec766862a775be507f785d75ddc55cf5}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Material@{Get\+Material}}
+\index{Get\+Material@{Get\+Material}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Material()}{GetMaterial()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}$\ast$ Fbx\+Scene\+::\+Get\+Material (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the material at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of materials. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the material or {\ttfamily N\+U\+LL} if the index is out of bounds. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+Index must be between 0 and \hyperlink{class_fbx_scene_a098bcfeab04d64d1b7f900a09c09f381}{Get\+Material\+Count()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_ad99587afc86a025c65fd150dcdbf885b}\label{class_fbx_scene_ad99587afc86a025c65fd150dcdbf885b}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Material@{Get\+Material}}
+\index{Get\+Material@{Get\+Material}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Material()}{GetMaterial()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material}$\ast$ Fbx\+Scene\+::\+Get\+Material (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Get the material by its name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name of the material. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the material or {\ttfamily N\+U\+LL} if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a098bcfeab04d64d1b7f900a09c09f381}\label{class_fbx_scene_a098bcfeab04d64d1b7f900a09c09f381}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Material\+Count@{Get\+Material\+Count}}
+\index{Get\+Material\+Count@{Get\+Material\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Material\+Count()}{GetMaterialCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Material\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of materials. \begin{DoxyReturn}{戻り値}
+Number of materials in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a1ba0a3d043284ae7c488467feaf1a9f9}\label{class_fbx_scene_a1ba0a3d043284ae7c488467feaf1a9f9}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Node@{Get\+Node}}
+\index{Get\+Node@{Get\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Node()}{GetNode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Scene\+::\+Get\+Node (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the node at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the node or {\ttfamily N\+U\+LL} if the index is out of bounds. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+Index must be between 0 and \hyperlink{class_fbx_scene_a0cb1a1464b0fa1b8291c41900879515e}{Get\+Node\+Count()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_a0cb1a1464b0fa1b8291c41900879515e}\label{class_fbx_scene_a0cb1a1464b0fa1b8291c41900879515e}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Node\+Count@{Get\+Node\+Count}}
+\index{Get\+Node\+Count@{Get\+Node\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Node\+Count()}{GetNodeCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Node\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of nodes. \begin{DoxyReturn}{戻り値}
+Number of nodes in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a9148979d7728e7256be7ce52cb100558}\label{class_fbx_scene_a9148979d7728e7256be7ce52cb100558}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Pose@{Get\+Pose}}
+\index{Get\+Pose@{Get\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Pose()}{GetPose()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_pose}{Fbx\+Pose}$\ast$ Fbx\+Scene\+::\+Get\+Pose (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get pose at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of poses. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the pose or {\ttfamily N\+U\+LL} if index is out of bounds. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a0bfae5c6b969cfc49a7b0e3c9e190240}\label{class_fbx_scene_a0bfae5c6b969cfc49a7b0e3c9e190240}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Pose\+Count@{Get\+Pose\+Count}}
+\index{Get\+Pose\+Count@{Get\+Pose\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Pose\+Count()}{GetPoseCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Pose\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of poses. \begin{DoxyReturn}{戻り値}
+Number of poses in the scene. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Poses and Character Poses are two distinct entities having their own lists. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_ab27324d92595e85d18ec6749be79da09}\label{class_fbx_scene_ab27324d92595e85d18ec6749be79da09}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Root\+Node@{Get\+Root\+Node}}
+\index{Get\+Root\+Node@{Get\+Root\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Root\+Node()}{GetRootNode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Scene\+::\+Get\+Root\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the root node of the scene. \begin{DoxyReturn}{戻り値}
+Pointer to the root node. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This node is not saved. Do not use it to apply a global transformation to the node hierarchy. If a global transformation must be applied, insert a new node below this one. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_a5af52a77f2053fae74477261f857a0d8}\label{class_fbx_scene_a5af52a77f2053fae74477261f857a0d8}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Scene\+Info@{Get\+Scene\+Info}}
+\index{Get\+Scene\+Info@{Get\+Scene\+Info}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Scene\+Info()}{GetSceneInfo()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_document_info}{Fbx\+Document\+Info}$\ast$ Fbx\+Scene\+::\+Get\+Scene\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the scene information. \begin{DoxyReturn}{戻り値}
+Pointer to the scene information object. 
+\end{DoxyReturn}
+
+
+ fbxscene.\+h の 215 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_scene_a36e7860a68461f8fa9bf2a78285a36b6}\label{class_fbx_scene_a36e7860a68461f8fa9bf2a78285a36b6}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Take\+Time\+Warp\+Set@{Get\+Take\+Time\+Warp\+Set}}
+\index{Get\+Take\+Time\+Warp\+Set@{Get\+Take\+Time\+Warp\+Set}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Take\+Time\+Warp\+Set()}{GetTakeTimeWarpSet()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_multi_map}{Fbx\+Multi\+Map}$\ast$ Fbx\+Scene\+::\+Get\+Take\+Time\+Warp\+Set (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Take\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_a0636380a7984fd690eb37720b5cc4f9a}\label{class_fbx_scene_a0636380a7984fd690eb37720b5cc4f9a}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Texture@{Get\+Texture}}
+\index{Get\+Texture@{Get\+Texture}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Texture()}{GetTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_texture}{Fbx\+Texture}$\ast$ Fbx\+Scene\+::\+Get\+Texture (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the texture at the given index. p\+Index must be between 0 and \hyperlink{class_fbx_scene_a63041ec5c2a3f563c999ee1c20c71071}{Get\+Texture\+Count()}. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of textures. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the texture or {\ttfamily N\+U\+LL} if the index is out of bounds. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To get the texture of a specific texture type, use \hyperlink{class_fbx_object_a655ed30675d9bf1686ec075f5e7c7a84}{Get\+Src\+Object()}. For example\+: 
+\begin{DoxyCode}
+\hyperlink{class_fbx_file_texture}{FbxFileTexture}* lFileTexture = lScene->\hyperlink{class_fbx_object_a655ed30675d9bf1686ec075f5e7c7a84}{GetSrcObject}<
+      \hyperlink{class_fbx_file_texture}{FbxFileTexture}>(i);
+\hyperlink{class_fbx_layered_texture}{FbxLayeredTexture}* lLayeredTexture = lScene->\hyperlink{class_fbx_object_a655ed30675d9bf1686ec075f5e7c7a84}{GetSrcObject}<
+      \hyperlink{class_fbx_layered_texture}{FbxLayeredTexture}>(i);
+\hyperlink{class_fbx_procedural_texture}{FbxProceduralTexture}* lProceduralTexture = lScene->
+      \hyperlink{class_fbx_object_a655ed30675d9bf1686ec075f5e7c7a84}{GetSrcObject}<\hyperlink{class_fbx_procedural_texture}{FbxProceduralTexture}>(i);
+\end{DoxyCode}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_ab7f5f7902a4a43b5c8688a590448e70c}\label{class_fbx_scene_ab7f5f7902a4a43b5c8688a590448e70c}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Texture@{Get\+Texture}}
+\index{Get\+Texture@{Get\+Texture}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Texture()}{GetTexture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_texture}{Fbx\+Texture}$\ast$ Fbx\+Scene\+::\+Get\+Texture (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+Get the texture by its name. 
+\begin{DoxyParams}{引数}
+{\em p\+Name} & Name of the texture. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the texture or {\ttfamily N\+U\+LL} if not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a63041ec5c2a3f563c999ee1c20c71071}\label{class_fbx_scene_a63041ec5c2a3f563c999ee1c20c71071}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Texture\+Count@{Get\+Texture\+Count}}
+\index{Get\+Texture\+Count@{Get\+Texture\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Texture\+Count()}{GetTextureCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Texture\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of textures (type \hyperlink{class_fbx_texture}{Fbx\+Texture}). \begin{DoxyReturn}{戻り値}
+Number of textures in this scene. Includes types \hyperlink{class_fbx_file_texture}{Fbx\+File\+Texture}, \hyperlink{class_fbx_layered_texture}{Fbx\+Layered\+Texture} and \hyperlink{class_fbx_procedural_texture}{Fbx\+Procedural\+Texture}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To get the number of textures of a specific type, use Get\+Src\+Count(). For example\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} lNbFileTextures = lScene->\hyperlink{class_fbx_object_a5fce56e85d5e0568243a5df99dabb42f}{GetSrcObjectCount}<\hyperlink{class_fbx_file_texture}{FbxFileTexture}>();
+\textcolor{keywordtype}{int} lNbLayeredTextures = lScene->\hyperlink{class_fbx_object_a5fce56e85d5e0568243a5df99dabb42f}{GetSrcObjectCount}<
+      \hyperlink{class_fbx_layered_texture}{FbxLayeredTexture}>();
+\textcolor{keywordtype}{int} lNbProceduralTextures = lScene->\hyperlink{class_fbx_object_a5fce56e85d5e0568243a5df99dabb42f}{GetSrcObjectCount}<
+      \hyperlink{class_fbx_procedural_texture}{FbxProceduralTexture}>();
+\end{DoxyCode}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_ae5365932948e9fe88b2323669a92d114}\label{class_fbx_scene_ae5365932948e9fe88b2323669a92d114}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Video@{Get\+Video}}
+\index{Get\+Video@{Get\+Video}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Video()}{GetVideo()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_video}{Fbx\+Video}$\ast$ Fbx\+Scene\+::\+Get\+Video (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get the video at the given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Position in the list of videos. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the video or {\ttfamily N\+U\+LL} if the index is out of bounds. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+p\+Index must be between 0 and \hyperlink{class_fbx_scene_a203455f2e5a9b3891cae6eb516e71b15}{Get\+Video\+Count()}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_a203455f2e5a9b3891cae6eb516e71b15}\label{class_fbx_scene_a203455f2e5a9b3891cae6eb516e71b15}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Get\+Video\+Count@{Get\+Video\+Count}}
+\index{Get\+Video\+Count@{Get\+Video\+Count}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Get\+Video\+Count()}{GetVideoCount()}}
+{\footnotesize\ttfamily int Fbx\+Scene\+::\+Get\+Video\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get number of videos. \begin{DoxyReturn}{戻り値}
+Number of videos in this scene. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a029b34d23edd7d05cb0e687b494064ad}\label{class_fbx_scene_a029b34d23edd7d05cb0e687b494064ad}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Global\+Camera\+Settings@{Global\+Camera\+Settings}}
+\index{Global\+Camera\+Settings@{Global\+Camera\+Settings}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Global\+Camera\+Settings()}{GlobalCameraSettings()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_global_camera_settings}{Fbx\+Global\+Camera\+Settings}\& Fbx\+Scene\+::\+Global\+Camera\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxscene.\+h の 454 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_scene_a0583b181b70f56655f06dbe79b43fcd6}\label{class_fbx_scene_a0583b181b70f56655f06dbe79b43fcd6}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Global\+Light\+Settings@{Global\+Light\+Settings}}
+\index{Global\+Light\+Settings@{Global\+Light\+Settings}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Global\+Light\+Settings()}{GlobalLightSettings()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_global_light_settings}{Fbx\+Global\+Light\+Settings}\& Fbx\+Scene\+::\+Global\+Light\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ fbxscene.\+h の 453 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_scene_ab36c6e602ec8eb39c9b0934f24a71886}\label{class_fbx_scene_ab36c6e602ec8eb39c9b0934f24a71886}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Reindex\+Material\+Connections@{Reindex\+Material\+Connections}}
+\index{Reindex\+Material\+Connections@{Reindex\+Material\+Connections}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Reindex\+Material\+Connections()}{ReindexMaterialConnections()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Reindex\+Material\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_scene_ada01a14ed31636b615d6e95c1f33e2ca}\label{class_fbx_scene_ada01a14ed31636b615d6e95c1f33e2ca}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Generic\+Node@{Remove\+Generic\+Node}}
+\index{Remove\+Generic\+Node@{Remove\+Generic\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Generic\+Node()}{RemoveGenericNode()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Generic\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_generic_node}{Fbx\+Generic\+Node} $\ast$}]{p\+Generic\+Node }\end{DoxyParamCaption})}
+
+Remove the generic node from this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Generic\+Node} & Pointer to the generic node to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the passed parameter is {\ttfamily N\+U\+LL}, this method will return {\ttfamily false}, otherwise {\ttfamily true}. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The pointed object is not referenced by the scene anymore but is not deleted. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_a9bbff92d4739c1a39489c8b9178e51b4}\label{class_fbx_scene_a9bbff92d4739c1a39489c8b9178e51b4}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Geometry@{Remove\+Geometry}}
+\index{Remove\+Geometry@{Remove\+Geometry}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Geometry()}{RemoveGeometry()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Geometry (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Geometry }\end{DoxyParamCaption})}
+
+Remove the geometry from this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Geometry} & Pointer to the geometry to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful removal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a901ad0c4394b3ee5bf675ee91e54adc0}\label{class_fbx_scene_a901ad0c4394b3ee5bf675ee91e54adc0}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Material@{Remove\+Material}}
+\index{Remove\+Material@{Remove\+Material}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Material()}{RemoveMaterial()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$}]{p\+Material }\end{DoxyParamCaption})}
+
+Remove the material from this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Material} & Pointer to the material to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful removal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a2e66ac740f8ff46ef58d0fb3dbbe5c65}\label{class_fbx_scene_a2e66ac740f8ff46ef58d0fb3dbbe5c65}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Node@{Remove\+Node}}
+\index{Remove\+Node@{Remove\+Node}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Node()}{RemoveNode()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Node (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Remove the node from this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Pointer to the node to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful removal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_ad698fe1d231041b3a8ecf5ae3d1e2e86}\label{class_fbx_scene_ad698fe1d231041b3a8ecf5ae3d1e2e86}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Pose@{Remove\+Pose}}
+\index{Remove\+Pose@{Remove\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Pose()}{RemovePose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Pose (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_pose}{Fbx\+Pose} $\ast$}]{p\+Pose }\end{DoxyParamCaption})}
+
+Remove the specified pose from the scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Pose} & The pose (for example\+: bind pose, rest pose) to be removed from the scene. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the pose was successfully removed from the scene, return {\ttfamily true}. Otherwise, if the pose could not be found return {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a480cd0951e983a20ae2014a981054db6}\label{class_fbx_scene_a480cd0951e983a20ae2014a981054db6}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Pose@{Remove\+Pose}}
+\index{Remove\+Pose@{Remove\+Pose}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Pose()}{RemovePose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Pose (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Remove the pose at the given index from the scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the pose to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+If the pose was successfully removed from the scene, return {\ttfamily true}. Otherwise, if the pose could not be found return {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_af802f5395ba0fcb72f13f2734ad17332}\label{class_fbx_scene_af802f5395ba0fcb72f13f2734ad17332}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Texture@{Remove\+Texture}}
+\index{Remove\+Texture@{Remove\+Texture}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Texture()}{RemoveTexture()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_texture}{Fbx\+Texture} $\ast$}]{p\+Texture }\end{DoxyParamCaption})}
+
+Remove the texture from this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Texture} & Pointer to the texture to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on successful removal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_aac60d3534072390ae951879dd92339ff}\label{class_fbx_scene_aac60d3534072390ae951879dd92339ff}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Remove\+Video@{Remove\+Video}}
+\index{Remove\+Video@{Remove\+Video}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Remove\+Video()}{RemoveVideo()}}
+{\footnotesize\ttfamily bool Fbx\+Scene\+::\+Remove\+Video (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_video}{Fbx\+Video} $\ast$}]{p\+Video }\end{DoxyParamCaption})}
+
+Remove the video from this scene. 
+\begin{DoxyParams}{引数}
+{\em p\+Video} & Pointer to the video to be removed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true on successful removal. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_scene_a7fd2f5602c943f1050488e379fc18755}\label{class_fbx_scene_a7fd2f5602c943f1050488e379fc18755}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Set\+Animation\+Evaluator@{Set\+Animation\+Evaluator}}
+\index{Set\+Animation\+Evaluator@{Set\+Animation\+Evaluator}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Set\+Animation\+Evaluator()}{SetAnimationEvaluator()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Set\+Animation\+Evaluator (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_evaluator}{Fbx\+Anim\+Evaluator} $\ast$}]{p\+Evaluator }\end{DoxyParamCaption})}
+
+Set the global evaluator used by this scene evaluation engine. 
+\begin{DoxyParams}{引数}
+{\em p\+Evaluator} & The evaluator to be used for evaluation processing of this scene. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_scene_a19f5408a6460667dec584cd5363e3abe}\label{class_fbx_scene_a19f5408a6460667dec584cd5363e3abe}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Set\+Current\+Animation\+Stack@{Set\+Current\+Animation\+Stack}}
+\index{Set\+Current\+Animation\+Stack@{Set\+Current\+Animation\+Stack}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Set\+Current\+Animation\+Stack()}{SetCurrentAnimationStack()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Set\+Current\+Animation\+Stack (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_anim_stack}{Fbx\+Anim\+Stack} $\ast$}]{p\+Anim\+Stack }\end{DoxyParamCaption})}
+
+Set the current animation stack context used by the animation evaluator. 
+\begin{DoxyParams}{引数}
+{\em p\+Anim\+Stack} & The animation stack to set as current. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Changing the current animation stack will also cause the animation evaluator to reset its state. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_scene_a486c147dc25d9bec4938852d2550cb81}\label{class_fbx_scene_a486c147dc25d9bec4938852d2550cb81}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Set\+Scene\+Info@{Set\+Scene\+Info}}
+\index{Set\+Scene\+Info@{Set\+Scene\+Info}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Set\+Scene\+Info()}{SetSceneInfo()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Set\+Scene\+Info (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document_info}{Fbx\+Document\+Info} $\ast$}]{p\+Scene\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the scene information. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene\+Info} & Pointer to the scene information object. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxscene.\+h の 219 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_scene_a940444136913f6e50f687ff0807c93e5}\label{class_fbx_scene_a940444136913f6e50f687ff0807c93e5}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Sync\+Show\+Property\+For\+Instance@{Sync\+Show\+Property\+For\+Instance}}
+\index{Sync\+Show\+Property\+For\+Instance@{Sync\+Show\+Property\+For\+Instance}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Sync\+Show\+Property\+For\+Instance()}{SyncShowPropertyForInstance()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Sync\+Show\+Property\+For\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Synchronize all the Show properties of node instances. Walks all the node attributes defined in the scene and synchronize the Show property of all the nodes that reference the node attribute so that they all contain the same value. This method should be called after the F\+BX scene is completely created, typically right after the calls to the \hyperlink{class_fbx_importer_a1c5a7f9ee8a6952c1e039065cfa09659}{Fbx\+Importer\+::\+Import()} or just before the calls to the \hyperlink{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}{Fbx\+Exporter\+::\+Export()}. \begin{DoxyRemark}{注釈}
+Applications only need to call this method if their interpretation of the Show property implies that setting the Show state on one instance affect all of them. 
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_node_a9f02f0a70b81c1a656137def3e34edb7}{Fbx\+Node\+::\+Visibility} property, \hyperlink{class_fbx_node_a685ccf0b6e1bc5070c28d9e7a8823c74}{Fbx\+Node\+::\+Show} property 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_fbx_scene_a68b89374967020ed469645de47eb4507}\label{class_fbx_scene_a68b89374967020ed469645de47eb4507}} 
+\index{Fbx\+Scene@{Fbx\+Scene}!Update\+Scale\+Compensate@{Update\+Scale\+Compensate}}
+\index{Update\+Scale\+Compensate@{Update\+Scale\+Compensate}!Fbx\+Scene@{Fbx\+Scene}}
+\subsubsection{\texorpdfstring{Update\+Scale\+Compensate()}{UpdateScaleCompensate()}}
+{\footnotesize\ttfamily void Fbx\+Scene\+::\+Update\+Scale\+Compensate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node,  }\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} \&}]{p\+I\+OS }\end{DoxyParamCaption})}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxscene_8h}{fbxscene.\+h}\end{DoxyCompactItemize}

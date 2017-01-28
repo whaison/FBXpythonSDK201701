@@ -1,0 +1,149 @@
+\hypertarget{class_fbx_selection_set}{}\section{Fbx\+Selection\+Set クラス}
+\label{class_fbx_selection_set}\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+
+
+{\ttfamily \#include $<$fbxselectionset.\+h$>$}
+
+Fbx\+Selection\+Set の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_selection_set}
+\end{center}
+\end{figure}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{class_fbx_string}{Fbx\+String} $>$ \hyperlink{class_fbx_selection_set_abe27bd368bd6e3df129e808900a72f19}{Selection\+Set\+Annotation}
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_selection_set_adcb0af5e3ecfd0957fbf0fe6958d8d6b}{Construct\+Properties} (bool p\+Force\+Set)
+\end{DoxyCompactItemize}
+\subsection*{Utility functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_selection_set_ae304339bd66b4edca36c3f74517cb762}{Get\+Face\+Selection} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Obj, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Polygon\+Index\+Array) const
+\item 
+void \hyperlink{class_fbx_selection_set_a1c3c07b58ae08bf77ce044be79dff6c4}{Get\+Edge\+Selection} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Obj, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Edge\+Index\+Array) const
+\item 
+void \hyperlink{class_fbx_selection_set_a4ec4d2f7e801768d621430636e849101}{Get\+Vertex\+Selection} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Obj, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&p\+Vertex\+Index\+Array) const
+\item 
+void \hyperlink{class_fbx_selection_set_af0b2e85e61badfce8f700df48a8c0e50}{Get\+Selection\+Nodes\+And\+Direct\+Objects} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_selection_node}{Fbx\+Selection\+Node} $\ast$$>$ \&p\+Selection\+Node\+List, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&p\+Direct\+Object\+List) const
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+F\+BX S\+DK selection set class.
+
+Represents a set of selected objects (\hyperlink{class_fbx_object}{Fbx\+Object}) and components. This is a non-\/exclusive (multiple membership) collection. Objects (\hyperlink{class_fbx_object}{Fbx\+Object}) can be added to a \hyperlink{class_fbx_selection_set}{Fbx\+Selection\+Set} directly, but to add components (vertexes, edges, or faces) you create a selection node (\hyperlink{class_fbx_selection_node}{Fbx\+Selection\+Node}) to group the object and its components together as a single item to be added. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_selection_node}{Fbx\+Selection\+Node} 
+\end{DoxySeeAlso}
+
+
+ fbxselectionset.\+h の 30 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_selection_set_adcb0af5e3ecfd0957fbf0fe6958d8d6b}\label{class_fbx_selection_set_adcb0af5e3ecfd0957fbf0fe6958d8d6b}} 
+\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Selection\+Set\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad44f814323dc1b5e78bff1bfc608b4bb}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_selection_set_a1c3c07b58ae08bf77ce044be79dff6c4}\label{class_fbx_selection_set_a1c3c07b58ae08bf77ce044be79dff6c4}} 
+\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}!Get\+Edge\+Selection@{Get\+Edge\+Selection}}
+\index{Get\+Edge\+Selection@{Get\+Edge\+Selection}!Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+\subsubsection{\texorpdfstring{Get\+Edge\+Selection()}{GetEdgeSelection()}}
+{\footnotesize\ttfamily void Fbx\+Selection\+Set\+::\+Get\+Edge\+Selection (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Obj,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Edge\+Index\+Array }\end{DoxyParamCaption}) const}
+
+Get the selected edges of a specified object. 
+\begin{DoxyParams}{引数}
+{\em p\+Obj} & The specified object. \\
+\hline
+{\em p\+Edge\+Index\+Array} & The array to take the indices of the selected edges. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The indices of selected face will be put in p\+Edge\+Index\+Array. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_selection_set_ae304339bd66b4edca36c3f74517cb762}\label{class_fbx_selection_set_ae304339bd66b4edca36c3f74517cb762}} 
+\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}!Get\+Face\+Selection@{Get\+Face\+Selection}}
+\index{Get\+Face\+Selection@{Get\+Face\+Selection}!Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+\subsubsection{\texorpdfstring{Get\+Face\+Selection()}{GetFaceSelection()}}
+{\footnotesize\ttfamily void Fbx\+Selection\+Set\+::\+Get\+Face\+Selection (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Obj,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Polygon\+Index\+Array }\end{DoxyParamCaption}) const}
+
+Get the selected faces of a specified object. 
+\begin{DoxyParams}{引数}
+{\em p\+Obj} & The specified object. \\
+\hline
+{\em p\+Polygon\+Index\+Array} & The array to take the indices of the selected faces. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The indices of selected faces will be put in p\+Polygon\+Index\+Array. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_selection_set_af0b2e85e61badfce8f700df48a8c0e50}\label{class_fbx_selection_set_af0b2e85e61badfce8f700df48a8c0e50}} 
+\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}!Get\+Selection\+Nodes\+And\+Direct\+Objects@{Get\+Selection\+Nodes\+And\+Direct\+Objects}}
+\index{Get\+Selection\+Nodes\+And\+Direct\+Objects@{Get\+Selection\+Nodes\+And\+Direct\+Objects}!Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+\subsubsection{\texorpdfstring{Get\+Selection\+Nodes\+And\+Direct\+Objects()}{GetSelectionNodesAndDirectObjects()}}
+{\footnotesize\ttfamily void Fbx\+Selection\+Set\+::\+Get\+Selection\+Nodes\+And\+Direct\+Objects (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_selection_node}{Fbx\+Selection\+Node} $\ast$$>$ \&}]{p\+Selection\+Node\+List,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$$>$ \&}]{p\+Direct\+Object\+List }\end{DoxyParamCaption}) const}
+
+Get list of two types of member in the selection set\+: Selection\+Nodes and Directly contained objects. 
+\begin{DoxyParams}{引数}
+{\em p\+Selection\+Node\+List} & The array to take selection nodes of the selection set. \\
+\hline
+{\em p\+Direct\+Object\+List} & The array to take directly contained objects of the selection set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+There might be two types members for a selection set\+: selection node and directly contained object. They will be listed in p\+Selection\+Node\+List and p\+Direct\+Object\+List separately. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_selection_set_a4ec4d2f7e801768d621430636e849101}\label{class_fbx_selection_set_a4ec4d2f7e801768d621430636e849101}} 
+\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}!Get\+Vertex\+Selection@{Get\+Vertex\+Selection}}
+\index{Get\+Vertex\+Selection@{Get\+Vertex\+Selection}!Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+\subsubsection{\texorpdfstring{Get\+Vertex\+Selection()}{GetVertexSelection()}}
+{\footnotesize\ttfamily void Fbx\+Selection\+Set\+::\+Get\+Vertex\+Selection (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Obj,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \&}]{p\+Vertex\+Index\+Array }\end{DoxyParamCaption}) const}
+
+Get the selected vertices of a specified object. 
+\begin{DoxyParams}{引数}
+{\em p\+Obj} & The specified object. \\
+\hline
+{\em p\+Vertex\+Index\+Array} & The array to take the indices of the selected vertices. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The indices of selected face will be put in p\+Vertex\+Index\+Array. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_selection_set_abe27bd368bd6e3df129e808900a72f19}\label{class_fbx_selection_set_abe27bd368bd6e3df129e808900a72f19}} 
+\index{Fbx\+Selection\+Set@{Fbx\+Selection\+Set}!Selection\+Set\+Annotation@{Selection\+Set\+Annotation}}
+\index{Selection\+Set\+Annotation@{Selection\+Set\+Annotation}!Fbx\+Selection\+Set@{Fbx\+Selection\+Set}}
+\subsubsection{\texorpdfstring{Selection\+Set\+Annotation}{SelectionSetAnnotation}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{class_fbx_string}{Fbx\+String}$>$ Fbx\+Selection\+Set\+::\+Selection\+Set\+Annotation}
+
+This property stores annotation of the selection set. Default value is \char`\"{}\char`\"{}. 
+
+ fbxselectionset.\+h の 38 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/\hyperlink{fbxselectionset_8h}{fbxselectionset.\+h}\end{DoxyCompactItemize}

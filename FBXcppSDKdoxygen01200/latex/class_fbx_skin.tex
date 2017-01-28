@@ -1,0 +1,478 @@
+\hypertarget{class_fbx_skin}{}\section{Fbx\+Skin クラス}
+\label{class_fbx_skin}\index{Fbx\+Skin@{Fbx\+Skin}}
+
+
+{\ttfamily \#include $<$fbxskin.\+h$>$}
+
+Fbx\+Skin の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_skin}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type} \{ \hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16a3113dda18b8784e09d60e0af60ac8f75}{e\+Rigid}, 
+\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16add6c7b8a46adf0432f3c0e21986d5be8}{e\+Linear}, 
+\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16a992d04fe41c48910271abdf4cde8c7d8}{e\+Dual\+Quaternion}, 
+\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16af0f4a498471de5701994ed898252b864}{e\+Blend}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_skin_a3b74e10c3fb5a8d3a20feab6555fecdf}{Set\+Deform\+Accuracy} (double p\+Deform\+Accuracy)
+\item 
+double \hyperlink{class_fbx_skin_a1ac9a16df81616b1bee678cd3507e941}{Get\+Deform\+Accuracy} () const
+\item 
+bool \hyperlink{class_fbx_skin_a975c3ebb7a979bd28c7d9c9c236c09ee}{Set\+Geometry} (\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Geometry)
+\item 
+\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$ \hyperlink{class_fbx_skin_a982b88b989530a1ccb3cca6543c59f9c}{Get\+Geometry} ()
+\item 
+bool \hyperlink{class_fbx_skin_a6eb5b55faf155b9c63f33c1ebf418508}{Add\+Cluster} (\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$p\+Cluster)
+\item 
+\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$ \hyperlink{class_fbx_skin_a443fa63f322e84c08714eef77107f921}{Remove\+Cluster} (\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$p\+Cluster)
+\item 
+int \hyperlink{class_fbx_skin_aa2f08718935873004ecfa0f7018830fb}{Get\+Cluster\+Count} () const
+\item 
+\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$ \hyperlink{class_fbx_skin_a68f838f08f0760db6bcf8a64e478d2cf}{Get\+Cluster} (int p\+Index)
+\item 
+const \hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$ \hyperlink{class_fbx_skin_a12932e59ce0cf323f2a54d050aaa299e}{Get\+Cluster} (int p\+Index) const
+\item 
+\hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{E\+Deformer\+Type} \hyperlink{class_fbx_skin_abaf5fca14c0e8339ea692560fbd494d8}{Get\+Deformer\+Type} () const
+\item 
+void \hyperlink{class_fbx_skin_afb0eae9feba38a19266fd0d20f84fd40}{Set\+Skinning\+Type} (\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type} p\+Type)
+\item 
+\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type} \hyperlink{class_fbx_skin_acd5153c9c43d4a4a659121c4142576ba}{Get\+Skinning\+Type} () const
+\item 
+virtual void \hyperlink{class_fbx_skin_a3c794b4a2f5e83725ea2f3b2b7b2d45c}{Compact} ()
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_skin_a858806922c36d1dc2910181a70a67d88}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_skin_ad6699903d1b3ef2ea14769a6e75caeed}{Clone} (\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type} p\+Clone\+Type=\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}, \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Container=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, void $\ast$p\+Set=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}) const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_skin_aeebbc037507285cdb2e066f420970208}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} \hyperlink{class_fbx_skin_a736228a80b5d0db0075527767286be2d}{Get\+Type\+Flags} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_fbx_skin_acd44c94fca6a292ece5ab324a823a17f}{m\+Deform\+Accuracy}
+\item 
+\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type} \hyperlink{class_fbx_skin_a2a965fe095919b4e2c9a36ee6ca1fecd}{m\+Skinning\+Type}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ int $>$ \hyperlink{class_fbx_skin_aadd471bac4ed7f8d5ea11f9971470b61}{m\+Control\+Point\+Indices}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ double $>$ \hyperlink{class_fbx_skin_a60d9415846de9b274db217746a4aacb2}{m\+Control\+Point\+Blend\+Weights}
+\end{DoxyCompactItemize}
+\subsection*{Control Points}
+\label{_amgrpdec32a6075e91e27f43e6aeeb36c8944}%
+A skin has an array of indices to control points and associated blend weights. The indices refer to the control points in the instance of class \hyperlink{class_fbx_geometry}{Fbx\+Geometry}. The blend weights are the influence of the different skinning type over the deformation effect of the indexed control points. \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_skin_a23b0bc74cd2a08e2387d8619f59bb4f3}{Add\+Control\+Point\+Index} (int p\+Index, double p\+Blend\+Weight=0)
+\item 
+int \hyperlink{class_fbx_skin_ae1a338502f7f4d466d83712eb7750ac8}{Get\+Control\+Point\+Indices\+Count} () const
+\item 
+int $\ast$ \hyperlink{class_fbx_skin_afbf0703d26ae058ca5757b6051df29a0}{Get\+Control\+Point\+Indices} () const
+\item 
+double $\ast$ \hyperlink{class_fbx_skin_a08bdcf744096f73b47a1f463ab1a5522}{Get\+Control\+Point\+Blend\+Weights} () const
+\item 
+void \hyperlink{class_fbx_skin_a7748f1c118ec62548777324a505f6d5d}{Set\+Control\+Point\+I\+W\+Count} (int p\+Count)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Skin deformer class.
+
+A skin deformer contains clusters (\hyperlink{class_fbx_cluster}{Fbx\+Cluster}). Each cluster acts on a subset of the geometry\textquotesingle{}s control points, with different weights. For example, a mesh of humanoid shape can have a skin attached, that describes the way the humanoid mesh is deformed by bones. When the bones are animated, the clusters act on the geometry to animate it too.
+
+The corresponding deformer types are \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6ae219b2649e29244fe4d80e649241c90e}{Fbx\+Deformer\+::e\+Skin}. 
+
+ fbxskin.\+h の 37 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}\label{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{Fbx\+Skin\+::\+E\+Type}}
+
+Skinning type. The skinning type decides which method will be used to do the skinning.
+\begin{DoxyItemize}
+\item {\itshape e\+Rigid} Type e\+Rigid means rigid skinning, which means only one joint can influence each control point.
+\item {\itshape e\+Linear} Type e\+Linear means the classic linear smooth skinning.
+\item {\itshape e\+Dual\+Quaternion} Type e\+Dual\+Quaternion means the dual quaternion smooth skinning.
+\item {\itshape e\+Blend} Type e\+Blend means to blend classic linear and dual quaternion smooth skinning according to blend weights. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rigid@{e\+Rigid}!Fbx\+Skin@{Fbx\+Skin}}\index{Fbx\+Skin@{Fbx\+Skin}!e\+Rigid@{e\+Rigid}}}\mbox{\Hypertarget{class_fbx_skin_aee398789ebed22fa97269a26c6049a16a3113dda18b8784e09d60e0af60ac8f75}\label{class_fbx_skin_aee398789ebed22fa97269a26c6049a16a3113dda18b8784e09d60e0af60ac8f75}} 
+e\+Rigid&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear@{e\+Linear}!Fbx\+Skin@{Fbx\+Skin}}\index{Fbx\+Skin@{Fbx\+Skin}!e\+Linear@{e\+Linear}}}\mbox{\Hypertarget{class_fbx_skin_aee398789ebed22fa97269a26c6049a16add6c7b8a46adf0432f3c0e21986d5be8}\label{class_fbx_skin_aee398789ebed22fa97269a26c6049a16add6c7b8a46adf0432f3c0e21986d5be8}} 
+e\+Linear&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Dual\+Quaternion@{e\+Dual\+Quaternion}!Fbx\+Skin@{Fbx\+Skin}}\index{Fbx\+Skin@{Fbx\+Skin}!e\+Dual\+Quaternion@{e\+Dual\+Quaternion}}}\mbox{\Hypertarget{class_fbx_skin_aee398789ebed22fa97269a26c6049a16a992d04fe41c48910271abdf4cde8c7d8}\label{class_fbx_skin_aee398789ebed22fa97269a26c6049a16a992d04fe41c48910271abdf4cde8c7d8}} 
+e\+Dual\+Quaternion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Blend@{e\+Blend}!Fbx\+Skin@{Fbx\+Skin}}\index{Fbx\+Skin@{Fbx\+Skin}!e\+Blend@{e\+Blend}}}\mbox{\Hypertarget{class_fbx_skin_aee398789ebed22fa97269a26c6049a16af0f4a498471de5701994ed898252b864}\label{class_fbx_skin_aee398789ebed22fa97269a26c6049a16af0f4a498471de5701994ed898252b864}} 
+e\+Blend&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxskin.\+h の 106 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_skin_a6eb5b55faf155b9c63f33c1ebf418508}\label{class_fbx_skin_a6eb5b55faf155b9c63f33c1ebf418508}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Add\+Cluster@{Add\+Cluster}}
+\index{Add\+Cluster@{Add\+Cluster}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Add\+Cluster()}{AddCluster()}}
+{\footnotesize\ttfamily bool Fbx\+Skin\+::\+Add\+Cluster (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$}]{p\+Cluster }\end{DoxyParamCaption})}
+
+Add a cluster. 
+\begin{DoxyParams}{引数}
+{\em p\+Cluster} & Pointer to the cluster object to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_a23b0bc74cd2a08e2387d8619f59bb4f3}\label{class_fbx_skin_a23b0bc74cd2a08e2387d8619f59bb4f3}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Add\+Control\+Point\+Index@{Add\+Control\+Point\+Index}}
+\index{Add\+Control\+Point\+Index@{Add\+Control\+Point\+Index}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Add\+Control\+Point\+Index()}{AddControlPointIndex()}}
+{\footnotesize\ttfamily void Fbx\+Skin\+::\+Add\+Control\+Point\+Index (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{double}]{p\+Blend\+Weight = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Add an element in both arrays of control point indices and blend\+Weights. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the control point. \\
+\hline
+{\em p\+Blend\+Weight} & The blend weight for this control point. The value should between 0 and 1. Any value that is less than 0 will be set to 0, any value that is greater than 1 will be set to 1. 0 means completely linear skinning, 1 means completely dual quaternion skinning, a value between 0 and 1 means the weighted blending of the above two skinning methods. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_skin_ad6699903d1b3ef2ea14769a6e75caeed}\label{class_fbx_skin_ad6699903d1b3ef2ea14769a6e75caeed}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Clone@{Clone}}
+\index{Clone@{Clone}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Skin\+::\+Clone (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbb}{Fbx\+Object\+::\+E\+Clone\+Type}}]{p\+Clone\+Type = {\ttfamily \hyperlink{class_fbx_object_a9f5626b2d2135684d6ea1e6e4ad2acbbaacdf137ca059c572798287e98c4236d0}{e\+Deep\+Clone}},  }\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Container = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{void $\ast$}]{p\+Set = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Creates a clone of this object. By default, the connections are N\+OT cloned. If the desired effect is to clone the connections as well, you must clone using the \hyperlink{class_fbx_clone_manager}{Fbx\+Clone\+Manager} (refer to this class documentation for further details).
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Clone\+Type} & The type of clone to be created. By default, the clone type is e\+Deep\+Clone. \\
+\hline
+{\em p\+Container} & An optional parameter to specify which object will \char`\"{}contain\char`\"{} the new object. By contain, we mean the new object will become a source to the container, connection-\/wise. \\
+\hline
+{\em p\+Set} & See remark section. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new clone, or N\+U\+LL (if the specified clone type is not supported). 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+When doing either a \char`\"{}deep\char`\"{} or \char`\"{}reference\char`\"{} clone type, the clone will always get its properties values set from the source object properties values. 
+
+Since this is a virtual function, some classes might do additional tasks. 
+
+The {\itshape p\+Set} argument is not used in the default implementation of this method. Specialized implementations should cast this pointer to \hyperlink{class_fbx_clone_manager_aeb8a9c04c9c36eb7e551186a0b18f10d}{Fbx\+Clone\+Manager\+::\+Clone\+Set} to have access to the cloned objects so far. Typically, this pointer is set by the clone manager. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_ad553a4262b09cb57c3171a93edadbab8}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skin_a3c794b4a2f5e83725ea2f3b2b7b2d45c}\label{class_fbx_skin_a3c794b4a2f5e83725ea2f3b2b7b2d45c}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Compact@{Compact}}
+\index{Compact@{Compact}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Compact()}{Compact()}}
+{\footnotesize\ttfamily virtual void Fbx\+Skin\+::\+Compact (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Compact the memory used by this object. \begin{DoxyRemark}{注釈}
+Note that this function might not result in saved memory because it depends if the sub-\/class implements it, or if any memory can actually be saved. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a2720f16a08150d162242b0c59f58c3dc}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skin_aeebbc037507285cdb2e066f420970208}\label{class_fbx_skin_aeebbc037507285cdb2e066f420970208}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Skin\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_deformer_ac50e8e0e8cfd2934f8f8cca2d69a6f58}{Fbx\+Deformer}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skin_a858806922c36d1dc2910181a70a67d88}\label{class_fbx_skin_a858806922c36d1dc2910181a70a67d88}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Skin\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a0c0c5adb38284d14bb82c04d54504a3e}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skin_a68f838f08f0760db6bcf8a64e478d2cf}\label{class_fbx_skin_a68f838f08f0760db6bcf8a64e478d2cf}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Cluster@{Get\+Cluster}}
+\index{Get\+Cluster@{Get\+Cluster}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Cluster()}{GetCluster()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_cluster}{Fbx\+Cluster}$\ast$ Fbx\+Skin\+::\+Get\+Cluster (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption})}
+
+Get cluster at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of cluster. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to cluster or {\ttfamily N\+U\+LL} if index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_a12932e59ce0cf323f2a54d050aaa299e}\label{class_fbx_skin_a12932e59ce0cf323f2a54d050aaa299e}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Cluster@{Get\+Cluster}}
+\index{Get\+Cluster@{Get\+Cluster}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Cluster()}{GetCluster()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_cluster}{Fbx\+Cluster}$\ast$ Fbx\+Skin\+::\+Get\+Cluster (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const}
+
+Get cluster at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of cluster. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to cluster or {\ttfamily N\+U\+LL} if index is out of range. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_aa2f08718935873004ecfa0f7018830fb}\label{class_fbx_skin_aa2f08718935873004ecfa0f7018830fb}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Cluster\+Count@{Get\+Cluster\+Count}}
+\index{Get\+Cluster\+Count@{Get\+Cluster\+Count}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Cluster\+Count()}{GetClusterCount()}}
+{\footnotesize\ttfamily int Fbx\+Skin\+::\+Get\+Cluster\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the number of clusters. \begin{DoxyReturn}{戻り値}
+Number of clusters that have been added to this object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_a08bdcf744096f73b47a1f463ab1a5522}\label{class_fbx_skin_a08bdcf744096f73b47a1f463ab1a5522}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Control\+Point\+Blend\+Weights@{Get\+Control\+Point\+Blend\+Weights}}
+\index{Get\+Control\+Point\+Blend\+Weights@{Get\+Control\+Point\+Blend\+Weights}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Control\+Point\+Blend\+Weights()}{GetControlPointBlendWeights()}}
+{\footnotesize\ttfamily double$\ast$ Fbx\+Skin\+::\+Get\+Control\+Point\+Blend\+Weights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the array of control point blend weights. \begin{DoxyReturn}{戻り値}
+Pointer to the array of control point blend weights. {\ttfamily N\+U\+LL} if no control point indices have been added or the array has been reset. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_afbf0703d26ae058ca5757b6051df29a0}\label{class_fbx_skin_afbf0703d26ae058ca5757b6051df29a0}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Control\+Point\+Indices@{Get\+Control\+Point\+Indices}}
+\index{Get\+Control\+Point\+Indices@{Get\+Control\+Point\+Indices}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Control\+Point\+Indices()}{GetControlPointIndices()}}
+{\footnotesize\ttfamily int$\ast$ Fbx\+Skin\+::\+Get\+Control\+Point\+Indices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the array of control point indices. \begin{DoxyReturn}{戻り値}
+Pointer to the array of control point indices. {\ttfamily N\+U\+LL} if no control point indices have been added or the array has been reset. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_ae1a338502f7f4d466d83712eb7750ac8}\label{class_fbx_skin_ae1a338502f7f4d466d83712eb7750ac8}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Control\+Point\+Indices\+Count@{Get\+Control\+Point\+Indices\+Count}}
+\index{Get\+Control\+Point\+Indices\+Count@{Get\+Control\+Point\+Indices\+Count}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Control\+Point\+Indices\+Count()}{GetControlPointIndicesCount()}}
+{\footnotesize\ttfamily int Fbx\+Skin\+::\+Get\+Control\+Point\+Indices\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the length of the arrays of control point indices and blend weights. \begin{DoxyReturn}{戻り値}
+Length of the arrays of control point indices and blend weights. Returns 0 if no control point indices have been added or the arrays have been reset. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_a1ac9a16df81616b1bee678cd3507e941}\label{class_fbx_skin_a1ac9a16df81616b1bee678cd3507e941}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Deform\+Accuracy@{Get\+Deform\+Accuracy}}
+\index{Get\+Deform\+Accuracy@{Get\+Deform\+Accuracy}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Deform\+Accuracy()}{GetDeformAccuracy()}}
+{\footnotesize\ttfamily double Fbx\+Skin\+::\+Get\+Deform\+Accuracy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get deformation accuracy. \begin{DoxyReturn}{戻り値}
+deformation accuracy value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_abaf5fca14c0e8339ea692560fbd494d8}\label{class_fbx_skin_abaf5fca14c0e8339ea692560fbd494d8}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Deformer\+Type@{Get\+Deformer\+Type}}
+\index{Get\+Deformer\+Type@{Get\+Deformer\+Type}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Deformer\+Type()}{GetDeformerType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_deformer_a07e2cfb767191ba5c8799fdfbfe3eaf6}{E\+Deformer\+Type} Fbx\+Skin\+::\+Get\+Deformer\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Get the type of the deformer. \begin{DoxyReturn}{戻り値}
+Deformer type identifier. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_deformer_adbc586e383f788f24d7fce9ed859d481}{Fbx\+Deformer}を再実装しています。
+
+
+
+ fbxskin.\+h の 97 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skin_a982b88b989530a1ccb3cca6543c59f9c}\label{class_fbx_skin_a982b88b989530a1ccb3cca6543c59f9c}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Geometry@{Get\+Geometry}}
+\index{Get\+Geometry@{Get\+Geometry}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Geometry()}{GetGeometry()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry}{Fbx\+Geometry}$\ast$ Fbx\+Skin\+::\+Get\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the geometry affected by this skin deformer. \begin{DoxyReturn}{戻り値}
+a pointer to the geometry if set or N\+U\+LL. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_acd5153c9c43d4a4a659121c4142576ba}\label{class_fbx_skin_acd5153c9c43d4a4a659121c4142576ba}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Skinning\+Type@{Get\+Skinning\+Type}}
+\index{Get\+Skinning\+Type@{Get\+Skinning\+Type}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Skinning\+Type()}{GetSkinningType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type} Fbx\+Skin\+::\+Get\+Skinning\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the skinning type. \begin{DoxyReturn}{戻り値}
+The skinning type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_a736228a80b5d0db0075527767286be2d}\label{class_fbx_skin_a736228a80b5d0db0075527767286be2d}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Get\+Type\+Flags@{Get\+Type\+Flags}}
+\index{Get\+Type\+Flags@{Get\+Type\+Flags}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Type\+Flags()}{GetTypeFlags()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_string_list}{Fbx\+String\+List} Fbx\+Skin\+::\+Get\+Type\+Flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_fbx_deformer_ac3f5a3eb2dda62397fc667004d798319}{Fbx\+Deformer}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_skin_a443fa63f322e84c08714eef77107f921}\label{class_fbx_skin_a443fa63f322e84c08714eef77107f921}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Remove\+Cluster@{Remove\+Cluster}}
+\index{Remove\+Cluster@{Remove\+Cluster}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Remove\+Cluster()}{RemoveCluster()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_cluster}{Fbx\+Cluster}$\ast$ Fbx\+Skin\+::\+Remove\+Cluster (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_cluster}{Fbx\+Cluster} $\ast$}]{p\+Cluster }\end{DoxyParamCaption})}
+
+Remove cluster at given index. 
+\begin{DoxyParams}{引数}
+{\em p\+Cluster} & Pointer to the cluster to remove from this skin deformer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to cluster or {\ttfamily N\+U\+LL} if p\+Cluster is not owned by this skin deformer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_a7748f1c118ec62548777324a505f6d5d}\label{class_fbx_skin_a7748f1c118ec62548777324a505f6d5d}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Set\+Control\+Point\+I\+W\+Count@{Set\+Control\+Point\+I\+W\+Count}}
+\index{Set\+Control\+Point\+I\+W\+Count@{Set\+Control\+Point\+I\+W\+Count}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+I\+W\+Count()}{SetControlPointIWCount()}}
+{\footnotesize\ttfamily void Fbx\+Skin\+::\+Set\+Control\+Point\+I\+W\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})}
+
+Set the array size for the three arrays\+: the array of control point indices, the array of weights and the array of blend weights. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The new count. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_skin_a3b74e10c3fb5a8d3a20feab6555fecdf}\label{class_fbx_skin_a3b74e10c3fb5a8d3a20feab6555fecdf}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Set\+Deform\+Accuracy@{Set\+Deform\+Accuracy}}
+\index{Set\+Deform\+Accuracy@{Set\+Deform\+Accuracy}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Set\+Deform\+Accuracy()}{SetDeformAccuracy()}}
+{\footnotesize\ttfamily void Fbx\+Skin\+::\+Set\+Deform\+Accuracy (\begin{DoxyParamCaption}\item[{double}]{p\+Deform\+Accuracy }\end{DoxyParamCaption})}
+
+Set deformation accuracy. \begin{DoxyRemark}{注釈}
+Use the Accuracy option to set the accuracy of skin deformations. 100\% is full accuracy and 1\% is a rough estimation of the envelope deformation. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{引数}
+{\em p\+Deform\+Accuracy} & value for deformation accuracy. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_skin_a975c3ebb7a979bd28c7d9c9c236c09ee}\label{class_fbx_skin_a975c3ebb7a979bd28c7d9c9c236c09ee}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Set\+Geometry@{Set\+Geometry}}
+\index{Set\+Geometry@{Set\+Geometry}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Set\+Geometry()}{SetGeometry()}}
+{\footnotesize\ttfamily bool Fbx\+Skin\+::\+Set\+Geometry (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Geometry }\end{DoxyParamCaption})}
+
+Set the geometry affected by this skin deformer. 
+\begin{DoxyParams}{引数}
+{\em p\+Geometry} & Pointer to the geometry object to set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_skin_afb0eae9feba38a19266fd0d20f84fd40}\label{class_fbx_skin_afb0eae9feba38a19266fd0d20f84fd40}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!Set\+Skinning\+Type@{Set\+Skinning\+Type}}
+\index{Set\+Skinning\+Type@{Set\+Skinning\+Type}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{Set\+Skinning\+Type()}{SetSkinningType()}}
+{\footnotesize\ttfamily void Fbx\+Skin\+::\+Set\+Skinning\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type}}]{p\+Type }\end{DoxyParamCaption})}
+
+Set the skinning type. 
+\begin{DoxyParams}{引数}
+{\em p\+Type} & The skinning type. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_skin_a60d9415846de9b274db217746a4aacb2}\label{class_fbx_skin_a60d9415846de9b274db217746a4aacb2}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!m\+Control\+Point\+Blend\+Weights@{m\+Control\+Point\+Blend\+Weights}}
+\index{m\+Control\+Point\+Blend\+Weights@{m\+Control\+Point\+Blend\+Weights}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{m\+Control\+Point\+Blend\+Weights}{mControlPointBlendWeights}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$double$>$ Fbx\+Skin\+::m\+Control\+Point\+Blend\+Weights\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskin.\+h の 186 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skin_aadd471bac4ed7f8d5ea11f9971470b61}\label{class_fbx_skin_aadd471bac4ed7f8d5ea11f9971470b61}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!m\+Control\+Point\+Indices@{m\+Control\+Point\+Indices}}
+\index{m\+Control\+Point\+Indices@{m\+Control\+Point\+Indices}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{m\+Control\+Point\+Indices}{mControlPointIndices}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$int$>$ Fbx\+Skin\+::m\+Control\+Point\+Indices\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskin.\+h の 185 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skin_acd44c94fca6a292ece5ab324a823a17f}\label{class_fbx_skin_acd44c94fca6a292ece5ab324a823a17f}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!m\+Deform\+Accuracy@{m\+Deform\+Accuracy}}
+\index{m\+Deform\+Accuracy@{m\+Deform\+Accuracy}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{m\+Deform\+Accuracy}{mDeformAccuracy}}
+{\footnotesize\ttfamily double Fbx\+Skin\+::m\+Deform\+Accuracy\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskin.\+h の 181 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_skin_a2a965fe095919b4e2c9a36ee6ca1fecd}\label{class_fbx_skin_a2a965fe095919b4e2c9a36ee6ca1fecd}} 
+\index{Fbx\+Skin@{Fbx\+Skin}!m\+Skinning\+Type@{m\+Skinning\+Type}}
+\index{m\+Skinning\+Type@{m\+Skinning\+Type}!Fbx\+Skin@{Fbx\+Skin}}
+\subsubsection{\texorpdfstring{m\+Skinning\+Type}{mSkinningType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_skin_aee398789ebed22fa97269a26c6049a16}{E\+Type} Fbx\+Skin\+::m\+Skinning\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxskin.\+h の 182 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxskin_8h}{fbxskin.\+h}\end{DoxyCompactItemize}

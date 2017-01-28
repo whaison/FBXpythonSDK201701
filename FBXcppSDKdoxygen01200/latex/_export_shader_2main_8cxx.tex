@@ -1,0 +1,125 @@
+\hypertarget{_export_shader_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Export\+Shader/main.cxx ファイル}
+\label{_export_shader_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Shader/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Shader/main.\+cxx}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Geometry\+Utility.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_export_shader_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}Export\+Shader.\+fbx\char`\"{}
+\item 
+\#define \hyperlink{_export_shader_2main_8cxx_ab6926c1200b9381efdd8ffaca638e42b}{C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}~\char`\"{}xf\+Sky\+Box.\+cgfx\char`\"{}
+\item 
+\#define \hyperlink{_export_shader_2main_8cxx_ad5e583c68deb020529a66f897c3ac3b2}{H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}~\char`\"{}glass.\+fx\char`\"{}
+\item 
+\#define \hyperlink{_export_shader_2main_8cxx_a1dda30df00ec6dabe1c8445430a773d8}{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE}~\char`\"{}Default\+\_\+reflection.\+dds\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_export_shader_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}{Create\+Scene} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Sdk\+Manager, \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ \hyperlink{_export_shader_2main_8cxx_a73515bb6f25acae67391af834360e507}{Create\+Cgfx\+Shader} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+\hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ \hyperlink{_export_shader_2main_8cxx_ad388f63a86fb629ca6c1fd3f60bc6bbb}{Create\+Hlsl\+Shader} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+void \hyperlink{_export_shader_2main_8cxx_a310d5226e7794bdb9b01a6a39a5e898e}{Create\+Table\+Entry} (\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$p\+Table, \hyperlink{class_fbx_property}{Fbx\+Property} \&p\+Prop)
+\item 
+int \hyperlink{_export_shader_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_export_shader_2main_8cxx_ab6926c1200b9381efdd8ffaca638e42b}\label{_export_shader_2main_8cxx_ab6926c1200b9381efdd8ffaca638e42b}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE@{C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}}
+\index{C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE@{C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}{CGFX\_SHADERFILE}}
+{\footnotesize\ttfamily \#define C\+G\+F\+X\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE~\char`\"{}xf\+Sky\+Box.\+cgfx\char`\"{}}
+
+
+
+ main.\+cxx の 29 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_ad5e583c68deb020529a66f897c3ac3b2}\label{_export_shader_2main_8cxx_ad5e583c68deb020529a66f897c3ac3b2}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE@{H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}}
+\index{H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE@{H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE}{HLSL\_SHADERFILE}}
+{\footnotesize\ttfamily \#define H\+L\+S\+L\+\_\+\+S\+H\+A\+D\+E\+R\+F\+I\+LE~\char`\"{}glass.\+fx\char`\"{}}
+
+
+
+ main.\+cxx の 30 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_export_shader_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}Export\+Shader.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 28 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_a1dda30df00ec6dabe1c8445430a773d8}\label{_export_shader_2main_8cxx_a1dda30df00ec6dabe1c8445430a773d8}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE@{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE}}
+\index{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE@{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE}{TEXTURE\_FILE}}
+{\footnotesize\ttfamily \#define T\+E\+X\+T\+U\+R\+E\+\_\+\+F\+I\+LE~\char`\"{}Default\+\_\+reflection.\+dds\char`\"{}}
+
+
+
+ main.\+cxx の 31 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_export_shader_2main_8cxx_a73515bb6f25acae67391af834360e507}\label{_export_shader_2main_8cxx_a73515bb6f25acae67391af834360e507}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!Create\+Cgfx\+Shader@{Create\+Cgfx\+Shader}}
+\index{Create\+Cgfx\+Shader@{Create\+Cgfx\+Shader}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Cgfx\+Shader()}{CreateCgfxShader()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ Create\+Cgfx\+Shader (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 120 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_ad388f63a86fb629ca6c1fd3f60bc6bbb}\label{_export_shader_2main_8cxx_ad388f63a86fb629ca6c1fd3f60bc6bbb}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!Create\+Hlsl\+Shader@{Create\+Hlsl\+Shader}}
+\index{Create\+Hlsl\+Shader@{Create\+Hlsl\+Shader}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Hlsl\+Shader()}{CreateHlslShader()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_material}{Fbx\+Surface\+Material} $\ast$ Create\+Hlsl\+Shader (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 170 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}\label{_export_shader_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!Create\+Scene@{Create\+Scene}}
+\index{Create\+Scene@{Create\+Scene}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Scene()}{CreateScene()}}
+{\footnotesize\ttfamily bool Create\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Sdk\+Manager,  }\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 85 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_a310d5226e7794bdb9b01a6a39a5e898e}\label{_export_shader_2main_8cxx_a310d5226e7794bdb9b01a6a39a5e898e}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!Create\+Table\+Entry@{Create\+Table\+Entry}}
+\index{Create\+Table\+Entry@{Create\+Table\+Entry}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Table\+Entry()}{CreateTableEntry()}}
+{\footnotesize\ttfamily void Create\+Table\+Entry (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_binding_table}{Fbx\+Binding\+Table} $\ast$}]{p\+Table,  }\item[{\hyperlink{class_fbx_property}{Fbx\+Property} \&}]{p\+Prop }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 242 行目に定義があります。
+
+\mbox{\Hypertarget{_export_shader_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_export_shader_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}!main@{main}}
+\index{main@{main}!Export\+Shader/main.\+cxx@{Export\+Shader/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 40 行目に定義があります。
+

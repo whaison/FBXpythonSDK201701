@@ -1,0 +1,727 @@
+\hypertarget{class_fbx_patch}{}\section{Fbx\+Patch クラス}
+\label{class_fbx_patch}\index{Fbx\+Patch@{Fbx\+Patch}}
+
+
+{\ttfamily \#include $<$fbxpatch.\+h$>$}
+
+Fbx\+Patch の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{class_fbx_patch}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_patch_a4eb7de708949e012e0dcae2cb87a2ef4}{Get\+Attribute\+Type} () const
+\begin{DoxyCompactList}\small\item\em Returns the Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Patch node attribute type. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_patch_a8a1fb844916976ff4e0396e140e30bcf}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the patch to its default values. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_fbx_object}{Fbx\+Object} \& \hyperlink{class_fbx_patch_a424542a42ec75d3c5236cc366adecd89}{Copy} (const \hyperlink{class_fbx_object}{Fbx\+Object} \&p\+Object)
+\item 
+virtual void \hyperlink{class_fbx_patch_a0f82daebd6307d417561b1d0a188f95d}{Init\+Control\+Points} (int p\+Count)
+\item 
+virtual void \hyperlink{class_fbx_patch_a43bd49dba561cff8f166b8f7a12816f6}{Set\+Control\+Point\+At} (const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&p\+Ctrl\+Point, int p\+Index)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_patch_a82fbbc0a7ec019bbe69c976ab755b23e}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_patch_a7e094310626891214577dabe4ff145f9}{Destruct} (bool p\+Recursive)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} \hyperlink{class_fbx_patch_acaa83aceb1886696e545465523fd81a6}{m\+U\+Type}
+\item 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} \hyperlink{class_fbx_patch_aa0e38cb994ef8741fbb163ca587cb2d6}{m\+V\+Type}
+\item 
+int \hyperlink{class_fbx_patch_a37cb5757a89fc364a13474dbb5d8055f}{m\+U\+Count}
+\item 
+int \hyperlink{class_fbx_patch_ae3d2c2e74b23f9b3d5eea59534ac1a85}{m\+V\+Count}
+\item 
+int \hyperlink{class_fbx_patch_a62d6ccb3ac152c21190a99ebea2efbf7}{m\+U\+Step}
+\item 
+int \hyperlink{class_fbx_patch_abeba80f7ee47a35509535ecd2edaf826}{m\+V\+Step}
+\item 
+bool \hyperlink{class_fbx_patch_aaae035422a96e362a395630fc69a487a}{m\+U\+Closed}
+\item 
+bool \hyperlink{class_fbx_patch_a4f616b59220bb25f795c288d12e297de}{m\+V\+Closed}
+\item 
+bool \hyperlink{class_fbx_patch_ace54e1a6eabcb3c3f8ca80a577e614bb}{m\+U\+Capped\+Bottom}
+\item 
+bool \hyperlink{class_fbx_patch_ae1ddc8b790090533b61a3d432e776f96}{m\+U\+Capped\+Top}
+\item 
+bool \hyperlink{class_fbx_patch_a5357f15e4e85f9e98c6660fa889a62c4}{m\+V\+Capped\+Bottom}
+\item 
+bool \hyperlink{class_fbx_patch_a8964253a7df60a4d9221f6c0a1ca4152}{m\+V\+Capped\+Top}
+\item 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode} \hyperlink{class_fbx_patch_abad06185040d5492cf5731e9ff80fee6}{m\+Surface\+Mode}
+\end{DoxyCompactItemize}
+\subsection*{Patch Properties}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} \{ \newline
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbba39802d4bc9ffba384319ea9f6fd83120}{e\+Bezier}, 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbad9a258a7f38618194aa9757f45c3de5d}{e\+Bezier\+Quadric}, 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbacd160ac078c87d9a387e2f6f308baef6}{e\+Cardinal}, 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbba16f667e030afd210591ddf3227697e87}{e\+B\+Spline}, 
+\newline
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbaf29ac7b876a0bf9e187e2790195d9339}{e\+Linear}
+ \}
+\item 
+void \hyperlink{class_fbx_patch_abe0a63e804147816c6d6b7733b7de6dd}{Set\+Surface\+Mode} (\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode} p\+Mode)
+\item 
+\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode} \hyperlink{class_fbx_patch_a0621b866f54824bdccdbae5ae2a58e28}{Get\+Surface\+Mode} () const
+\item 
+void \hyperlink{class_fbx_patch_a5dea472db8e81e1f249120a9c2d86277}{Init\+Control\+Points} (int p\+U\+Count, \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} p\+U\+Type, int p\+V\+Count, \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} p\+V\+Type)
+\item 
+int \hyperlink{class_fbx_patch_a4b9ff1fdd6b7ec569f37f4f56a4bb926}{Get\+U\+Count} () const
+\item 
+int \hyperlink{class_fbx_patch_ad2c56fe0035f645367c4184c8c051044}{Get\+V\+Count} () const
+\item 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} \hyperlink{class_fbx_patch_ab67355654d2257bffdd2a686b2da4096}{Get\+Patch\+U\+Type} () const
+\item 
+\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} \hyperlink{class_fbx_patch_ad3648b3dedde60e7b0c9d0691c96de42}{Get\+Patch\+V\+Type} () const
+\item 
+void \hyperlink{class_fbx_patch_a9b1fca6dfff6bf62472528b5a12ea987}{Set\+Step} (int p\+U\+Step, int p\+V\+Step)
+\item 
+int \hyperlink{class_fbx_patch_a875381a084e1b98773fff2bfddcae827}{Get\+U\+Step} () const
+\item 
+int \hyperlink{class_fbx_patch_a71e7d7a25b3cfc9fad3ffd8835b6337e}{Get\+V\+Step} () const
+\item 
+void \hyperlink{class_fbx_patch_af3d5e55f5523f2872b7fbb8082200f9b}{Set\+Closed} (bool pU, bool pV)
+\item 
+bool \hyperlink{class_fbx_patch_aa4f5d7f204475afe6cd5160e7081eeef}{Get\+U\+Closed} () const
+\item 
+bool \hyperlink{class_fbx_patch_aea85ef627c9d56153e85ad0007101f72}{Get\+V\+Closed} () const
+\item 
+void \hyperlink{class_fbx_patch_a9bd77e38cd9e41cf52638272fb240fdf}{Set\+U\+Capped} (bool p\+U\+Bottom, bool p\+U\+Top)
+\item 
+bool \hyperlink{class_fbx_patch_af134ac0b9f507a259fb20426647b49ed}{Get\+U\+Capped\+Bottom} () const
+\item 
+bool \hyperlink{class_fbx_patch_a97f060bdd4c569854101b1a2a0750534}{Get\+U\+Capped\+Top} () const
+\item 
+void \hyperlink{class_fbx_patch_a11fa20b64650ce4312b5238e8fde6cb8}{Set\+V\+Capped} (bool p\+V\+Bottom, bool p\+V\+Top)
+\item 
+bool \hyperlink{class_fbx_patch_a57ded499bc9f25f46dd2b3acd44a23f7}{Get\+V\+Capped\+Bottom} () const
+\item 
+bool \hyperlink{class_fbx_patch_a55ab377367fd1592ef5111a85e0f7a48}{Get\+V\+Capped\+Top} () const
+\end{DoxyCompactItemize}
+\subsection*{Off-\/loading Serialization section}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_patch_a2ecc16ad355ca521c921ec3731719585}{Content\+Write\+To} (\hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream) const
+\item 
+virtual bool \hyperlink{class_fbx_patch_ad1aac4a2e0e820f27ff9a0123ba5756e}{Content\+Read\+From} (const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&p\+Stream)
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+A patch is a type of node attribute with parametric surface. A patch object is useful for creating gently curved surfaces, and provides very detailed control for manipulating complex geometry. 
+
+ fbxpatch.\+h の 26 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}\label{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!E\+Type@{E\+Type}}
+\index{E\+Type@{E\+Type}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{E\+Type}{EType}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{Fbx\+Patch\+::\+E\+Type}}
+
+Patch types.
+\begin{DoxyItemize}
+\item {\itshape e\+Bezier} 
+\item {\itshape e\+Bezier\+Quadric} 
+\item {\itshape e\+Cardinal} 
+\item {\itshape e\+B\+Spline} 
+\item {\itshape e\+Linear} 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bezier@{e\+Bezier}!Fbx\+Patch@{Fbx\+Patch}}\index{Fbx\+Patch@{Fbx\+Patch}!e\+Bezier@{e\+Bezier}}}\mbox{\Hypertarget{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbba39802d4bc9ffba384319ea9f6fd83120}\label{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbba39802d4bc9ffba384319ea9f6fd83120}} 
+e\+Bezier&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Bezier\+Quadric@{e\+Bezier\+Quadric}!Fbx\+Patch@{Fbx\+Patch}}\index{Fbx\+Patch@{Fbx\+Patch}!e\+Bezier\+Quadric@{e\+Bezier\+Quadric}}}\mbox{\Hypertarget{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbad9a258a7f38618194aa9757f45c3de5d}\label{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbad9a258a7f38618194aa9757f45c3de5d}} 
+e\+Bezier\+Quadric&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Cardinal@{e\+Cardinal}!Fbx\+Patch@{Fbx\+Patch}}\index{Fbx\+Patch@{Fbx\+Patch}!e\+Cardinal@{e\+Cardinal}}}\mbox{\Hypertarget{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbacd160ac078c87d9a387e2f6f308baef6}\label{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbacd160ac078c87d9a387e2f6f308baef6}} 
+e\+Cardinal&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+B\+Spline@{e\+B\+Spline}!Fbx\+Patch@{Fbx\+Patch}}\index{Fbx\+Patch@{Fbx\+Patch}!e\+B\+Spline@{e\+B\+Spline}}}\mbox{\Hypertarget{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbba16f667e030afd210591ddf3227697e87}\label{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbba16f667e030afd210591ddf3227697e87}} 
+e\+B\+Spline&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear@{e\+Linear}!Fbx\+Patch@{Fbx\+Patch}}\index{Fbx\+Patch@{Fbx\+Patch}!e\+Linear@{e\+Linear}}}\mbox{\Hypertarget{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbaf29ac7b876a0bf9e187e2790195d9339}\label{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbbaf29ac7b876a0bf9e187e2790195d9339}} 
+e\+Linear&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxpatch.\+h の 59 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_patch_a82fbbc0a7ec019bbe69c976ab755b23e}\label{class_fbx_patch_a82fbbc0a7ec019bbe69c976ab755b23e}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Patch\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_a26ca96a86f17783c45ff83b33d2b5324}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_patch_ad1aac4a2e0e820f27ff9a0123ba5756e}\label{class_fbx_patch_ad1aac4a2e0e820f27ff9a0123ba5756e}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Content\+Read\+From@{Content\+Read\+From}}
+\index{Content\+Read\+From@{Content\+Read\+From}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Content\+Read\+From()}{ContentReadFrom()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Patch\+::\+Content\+Read\+From (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reads the content of the patch from the given stream. 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & The source stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch completes with the data received from the stream successfully. If it is not successful, returns {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_geometry_base_a6d34ab23d253b07cac24267177096c1a}{Fbx\+Geometry\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_patch_a2ecc16ad355ca521c921ec3731719585}\label{class_fbx_patch_a2ecc16ad355ca521c921ec3731719585}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Content\+Write\+To@{Content\+Write\+To}}
+\index{Content\+Write\+To@{Content\+Write\+To}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Content\+Write\+To()}{ContentWriteTo()}}
+{\footnotesize\ttfamily virtual bool Fbx\+Patch\+::\+Content\+Write\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} \&}]{p\+Stream }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes the content of the patch to the given stream. 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & The destination stream. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the content is successfully processed by the receiving stream. If it is not successful, returns {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_geometry_base_a7b80ccbcd2b15bbedbe7dd7e0739a3b3}{Fbx\+Geometry\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_patch_a424542a42ec75d3c5236cc366adecd89}\label{class_fbx_patch_a424542a42ec75d3c5236cc366adecd89}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Copy@{Copy}}
+\index{Copy@{Copy}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_object}{Fbx\+Object}\& Fbx\+Patch\+::\+Copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} \&}]{p\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Copy an object content into this object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The source object to copy data from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Returns the destination object being modified by the source. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function replace the assignment operator (operator=). It will copy all property values and the name. Connections are N\+OT copied. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_aac1cee4251e3d5fbd27f1181c58b83b3}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_patch_a7e094310626891214577dabe4ff145f9}\label{class_fbx_patch_a7e094310626891214577dabe4ff145f9}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Patch\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_a07e94f7801067d66429afbf1799795cd}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_patch_a4eb7de708949e012e0dcae2cb87a2ef4}\label{class_fbx_patch_a4eb7de708949e012e0dcae2cb87a2ef4}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Patch\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the Fbx\+Node\+Attribute\+::\+E\+Type\+::e\+Patch node attribute type. 
+
+
+
+\hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_patch_ab67355654d2257bffdd2a686b2da4096}\label{class_fbx_patch_ab67355654d2257bffdd2a686b2da4096}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+Patch\+U\+Type@{Get\+Patch\+U\+Type}}
+\index{Get\+Patch\+U\+Type@{Get\+Patch\+U\+Type}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+Patch\+U\+Type()}{GetPatchUType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} Fbx\+Patch\+::\+Get\+Patch\+U\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the U-\/dimension patch type. \begin{DoxyReturn}{戻り値}
+Patch type identifier in the U-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 89 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_ad3648b3dedde60e7b0c9d0691c96de42}\label{class_fbx_patch_ad3648b3dedde60e7b0c9d0691c96de42}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+Patch\+V\+Type@{Get\+Patch\+V\+Type}}
+\index{Get\+Patch\+V\+Type@{Get\+Patch\+V\+Type}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+Patch\+V\+Type()}{GetPatchVType()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} Fbx\+Patch\+::\+Get\+Patch\+V\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the V-\/dimension patch type. \begin{DoxyReturn}{戻り値}
+Patch type identifier in the V-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 94 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a0621b866f54824bdccdbae5ae2a58e28}\label{class_fbx_patch_a0621b866f54824bdccdbae5ae2a58e28}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+Surface\+Mode@{Get\+Surface\+Mode}}
+\index{Get\+Surface\+Mode@{Get\+Surface\+Mode}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+Surface\+Mode()}{GetSurfaceMode()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode} Fbx\+Patch\+::\+Get\+Surface\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the surface mode. \begin{DoxyReturn}{戻り値}
+The current surface mode identifier. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 50 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_af134ac0b9f507a259fb20426647b49ed}\label{class_fbx_patch_af134ac0b9f507a259fb20426647b49ed}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+U\+Capped\+Bottom@{Get\+U\+Capped\+Bottom}}
+\index{Get\+U\+Capped\+Bottom@{Get\+U\+Capped\+Bottom}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+U\+Capped\+Bottom()}{GetUCappedBottom()}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::\+Get\+U\+Capped\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns state of the bottom U-\/capped flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch is capped at the bottom in the U-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 140 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a97f060bdd4c569854101b1a2a0750534}\label{class_fbx_patch_a97f060bdd4c569854101b1a2a0750534}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+U\+Capped\+Top@{Get\+U\+Capped\+Top}}
+\index{Get\+U\+Capped\+Top@{Get\+U\+Capped\+Top}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+U\+Capped\+Top()}{GetUCappedTop()}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::\+Get\+U\+Capped\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns state of the top U-\/capped flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch is capped on the top in the U-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 145 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_aa4f5d7f204475afe6cd5160e7081eeef}\label{class_fbx_patch_aa4f5d7f204475afe6cd5160e7081eeef}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+U\+Closed@{Get\+U\+Closed}}
+\index{Get\+U\+Closed@{Get\+U\+Closed}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+U\+Closed()}{GetUClosed()}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::\+Get\+U\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns state of the U closed flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch is closed in U dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 122 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a4b9ff1fdd6b7ec569f37f4f56a4bb926}\label{class_fbx_patch_a4b9ff1fdd6b7ec569f37f4f56a4bb926}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+U\+Count@{Get\+U\+Count}}
+\index{Get\+U\+Count@{Get\+U\+Count}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+U\+Count()}{GetUCount()}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::\+Get\+U\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of control points in the U-\/dimension. \begin{DoxyReturn}{戻り値}
+The number of control points in the U-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 79 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a875381a084e1b98773fff2bfddcae827}\label{class_fbx_patch_a875381a084e1b98773fff2bfddcae827}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+U\+Step@{Get\+U\+Step}}
+\index{Get\+U\+Step@{Get\+U\+Step}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+U\+Step()}{GetUStep()}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::\+Get\+U\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of divisions between adjacent control points in the U-\/dimension. \begin{DoxyReturn}{戻り値}
+Step value in the U-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 106 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a57ded499bc9f25f46dd2b3acd44a23f7}\label{class_fbx_patch_a57ded499bc9f25f46dd2b3acd44a23f7}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+V\+Capped\+Bottom@{Get\+V\+Capped\+Bottom}}
+\index{Get\+V\+Capped\+Bottom@{Get\+V\+Capped\+Bottom}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+V\+Capped\+Bottom()}{GetVCappedBottom()}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::\+Get\+V\+Capped\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns state of the bottom V-\/capped flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch is capped at the bottom. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 158 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a55ab377367fd1592ef5111a85e0f7a48}\label{class_fbx_patch_a55ab377367fd1592ef5111a85e0f7a48}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+V\+Capped\+Top@{Get\+V\+Capped\+Top}}
+\index{Get\+V\+Capped\+Top@{Get\+V\+Capped\+Top}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+V\+Capped\+Top()}{GetVCappedTop()}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::\+Get\+V\+Capped\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns state of the top V-\/capped flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch is capped on the top. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 163 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_aea85ef627c9d56153e85ad0007101f72}\label{class_fbx_patch_aea85ef627c9d56153e85ad0007101f72}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+V\+Closed@{Get\+V\+Closed}}
+\index{Get\+V\+Closed@{Get\+V\+Closed}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+V\+Closed()}{GetVClosed()}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::\+Get\+V\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns state of the V closed flag. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the patch is closed in V dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 127 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_ad2c56fe0035f645367c4184c8c051044}\label{class_fbx_patch_ad2c56fe0035f645367c4184c8c051044}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+V\+Count@{Get\+V\+Count}}
+\index{Get\+V\+Count@{Get\+V\+Count}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+V\+Count()}{GetVCount()}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::\+Get\+V\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of control points in the V-\/dimension. \begin{DoxyReturn}{戻り値}
+The number of control points in the V-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 84 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a71e7d7a25b3cfc9fad3ffd8835b6337e}\label{class_fbx_patch_a71e7d7a25b3cfc9fad3ffd8835b6337e}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Get\+V\+Step@{Get\+V\+Step}}
+\index{Get\+V\+Step@{Get\+V\+Step}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Get\+V\+Step()}{GetVStep()}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::\+Get\+V\+Step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of divisions between adjacent control points in the V-\/dimension. \begin{DoxyReturn}{戻り値}
+Step value in the V-\/dimension. 
+\end{DoxyReturn}
+
+
+ fbxpatch.\+h の 111 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a5dea472db8e81e1f249120a9c2d86277}\label{class_fbx_patch_a5dea472db8e81e1f249120a9c2d86277}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Init\+Control\+Points@{Init\+Control\+Points}}
+\index{Init\+Control\+Points@{Init\+Control\+Points}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Init\+Control\+Points()}{InitControlPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Init\+Control\+Points (\begin{DoxyParamCaption}\item[{int}]{p\+U\+Count,  }\item[{\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type}}]{p\+U\+Type,  }\item[{int}]{p\+V\+Count,  }\item[{\hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type}}]{p\+V\+Type }\end{DoxyParamCaption})}
+
+Allocates memory space for the control points array. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+Count} & Number of U-\/dimension control points. \\
+\hline
+{\em p\+U\+Type} & U-\/dimension patch type. \\
+\hline
+{\em p\+V\+Count} & Number of V-\/dimension control points. \\
+\hline
+{\em p\+V\+Type} & V-\/dimension patch type. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_patch_a0f82daebd6307d417561b1d0a188f95d}\label{class_fbx_patch_a0f82daebd6307d417561b1d0a188f95d}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Init\+Control\+Points@{Init\+Control\+Points}}
+\index{Init\+Control\+Points@{Init\+Control\+Points}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Init\+Control\+Points()}{InitControlPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Fbx\+Patch\+::\+Init\+Control\+Points (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Allocates memory space for the array of control points. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The number of control points. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Any previously allocated array of control points will be cleared. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_a471b736f2595c006a338c07a61907127}{Fbx\+Geometry\+Base}を再実装しています。
+
+
+
+ fbxpatch.\+h の 191 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a8a1fb844916976ff4e0396e140e30bcf}\label{class_fbx_patch_a8a1fb844916976ff4e0396e140e30bcf}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the patch to its default values. 
+
+\mbox{\Hypertarget{class_fbx_patch_af3d5e55f5523f2872b7fbb8082200f9b}\label{class_fbx_patch_af3d5e55f5523f2872b7fbb8082200f9b}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Set\+Closed@{Set\+Closed}}
+\index{Set\+Closed@{Set\+Closed}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Set\+Closed()}{SetClosed()}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Set\+Closed (\begin{DoxyParamCaption}\item[{bool}]{pU,  }\item[{bool}]{pV }\end{DoxyParamCaption})}
+
+Sets closed flags. 
+\begin{DoxyParams}{引数}
+{\em pU} & Set to {\ttfamily true} if the patch is closed in U dimension. \\
+\hline
+{\em pV} & Set to {\ttfamily true} if the patch is closed in V dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_patch_a43bd49dba561cff8f166b8f7a12816f6}\label{class_fbx_patch_a43bd49dba561cff8f166b8f7a12816f6}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Set\+Control\+Point\+At@{Set\+Control\+Point\+At}}
+\index{Set\+Control\+Point\+At@{Set\+Control\+Point\+At}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Set\+Control\+Point\+At()}{SetControlPointAt()}}
+{\footnotesize\ttfamily virtual void Fbx\+Patch\+::\+Set\+Control\+Point\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_vector4}{Fbx\+Vector4} \&}]{p\+Ctrl\+Point,  }\item[{int}]{p\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Sets the control point at a specified index. 
+\begin{DoxyParams}{引数}
+{\em p\+Ctrl\+Point} & The value of the control point. \\
+\hline
+{\em p\+Index} & The specified index of the control point.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the array is not big enough to store the value at the specified index, it will be automatically resized to accommodate the new entry. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_geometry_base_ab2d5567b073e6b9f4feb5bb428fa99e4}{Fbx\+Geometry\+Base}を再実装しています。
+
+
+
+ fbxpatch.\+h の 192 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a9b1fca6dfff6bf62472528b5a12ea987}\label{class_fbx_patch_a9b1fca6dfff6bf62472528b5a12ea987}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Set\+Step@{Set\+Step}}
+\index{Set\+Step@{Set\+Step}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Set\+Step()}{SetStep()}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Set\+Step (\begin{DoxyParamCaption}\item[{int}]{p\+U\+Step,  }\item[{int}]{p\+V\+Step }\end{DoxyParamCaption})}
+
+Sets the patch step. The step is the number of divisions between adjacent control points. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+Step} & Steps in U-\/dimension. \\
+\hline
+{\em p\+V\+Step} & Steps in V-\/dimension. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_patch_abe0a63e804147816c6d6b7733b7de6dd}\label{class_fbx_patch_abe0a63e804147816c6d6b7733b7de6dd}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Set\+Surface\+Mode@{Set\+Surface\+Mode}}
+\index{Set\+Surface\+Mode@{Set\+Surface\+Mode}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Set\+Surface\+Mode()}{SetSurfaceMode()}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Set\+Surface\+Mode (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode}}]{p\+Mode }\end{DoxyParamCaption})}
+
+Sets the surface mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Mode} & Surface mode identifier (see Class \hyperlink{class_fbx_geometry}{Fbx\+Geometry}). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_patch_a9bd77e38cd9e41cf52638272fb240fdf}\label{class_fbx_patch_a9bd77e38cd9e41cf52638272fb240fdf}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Set\+U\+Capped@{Set\+U\+Capped}}
+\index{Set\+U\+Capped@{Set\+U\+Capped}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Set\+U\+Capped()}{SetUCapped()}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Set\+U\+Capped (\begin{DoxyParamCaption}\item[{bool}]{p\+U\+Bottom,  }\item[{bool}]{p\+U\+Top }\end{DoxyParamCaption})}
+
+Sets U-\/capped flags. 
+\begin{DoxyParams}{引数}
+{\em p\+U\+Bottom} & Set to {\ttfamily true} if the patch is capped at the bottom in the U-\/dimension. \\
+\hline
+{\em p\+U\+Top} & {\ttfamily Set} to {\ttfamily true} if the patch is capped on the top in the U-\/dimension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Capping options are saved but not loaded by Motionbuilder because they are computed from the patch topography. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_patch_a11fa20b64650ce4312b5238e8fde6cb8}\label{class_fbx_patch_a11fa20b64650ce4312b5238e8fde6cb8}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!Set\+V\+Capped@{Set\+V\+Capped}}
+\index{Set\+V\+Capped@{Set\+V\+Capped}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{Set\+V\+Capped()}{SetVCapped()}}
+{\footnotesize\ttfamily void Fbx\+Patch\+::\+Set\+V\+Capped (\begin{DoxyParamCaption}\item[{bool}]{p\+V\+Bottom,  }\item[{bool}]{p\+V\+Top }\end{DoxyParamCaption})}
+
+Sets V-\/capped flags. 
+\begin{DoxyParams}{引数}
+{\em p\+V\+Bottom} & Sets to {\ttfamily true} if the patch is capped at the bottom in the V-\/dimension. \\
+\hline
+{\em p\+V\+Top} & Sets to {\ttfamily true} if the patch is capped on the top in the V-\/dimension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+Capping options are saved but not loaded by Motionbuilder because they are computed from the patch topography. 
+\end{DoxyRemark}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_patch_abad06185040d5492cf5731e9ff80fee6}\label{class_fbx_patch_abad06185040d5492cf5731e9ff80fee6}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+Surface\+Mode@{m\+Surface\+Mode}}
+\index{m\+Surface\+Mode@{m\+Surface\+Mode}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+Surface\+Mode}{mSurfaceMode}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_geometry_adb9d2e34481a2cb40f1d783c665794db}{Fbx\+Geometry\+::\+E\+Surface\+Mode} Fbx\+Patch\+::m\+Surface\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 205 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_ace54e1a6eabcb3c3f8ca80a577e614bb}\label{class_fbx_patch_ace54e1a6eabcb3c3f8ca80a577e614bb}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+U\+Capped\+Bottom@{m\+U\+Capped\+Bottom}}
+\index{m\+U\+Capped\+Bottom@{m\+U\+Capped\+Bottom}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+U\+Capped\+Bottom}{mUCappedBottom}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::m\+U\+Capped\+Bottom\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 202 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_ae1ddc8b790090533b61a3d432e776f96}\label{class_fbx_patch_ae1ddc8b790090533b61a3d432e776f96}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+U\+Capped\+Top@{m\+U\+Capped\+Top}}
+\index{m\+U\+Capped\+Top@{m\+U\+Capped\+Top}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+U\+Capped\+Top}{mUCappedTop}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::m\+U\+Capped\+Top\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 202 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_aaae035422a96e362a395630fc69a487a}\label{class_fbx_patch_aaae035422a96e362a395630fc69a487a}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+U\+Closed@{m\+U\+Closed}}
+\index{m\+U\+Closed@{m\+U\+Closed}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+U\+Closed}{mUClosed}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::m\+U\+Closed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 201 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a37cb5757a89fc364a13474dbb5d8055f}\label{class_fbx_patch_a37cb5757a89fc364a13474dbb5d8055f}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+U\+Count@{m\+U\+Count}}
+\index{m\+U\+Count@{m\+U\+Count}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+U\+Count}{mUCount}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::m\+U\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 199 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a62d6ccb3ac152c21190a99ebea2efbf7}\label{class_fbx_patch_a62d6ccb3ac152c21190a99ebea2efbf7}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+U\+Step@{m\+U\+Step}}
+\index{m\+U\+Step@{m\+U\+Step}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+U\+Step}{mUStep}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::m\+U\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 200 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_acaa83aceb1886696e545465523fd81a6}\label{class_fbx_patch_acaa83aceb1886696e545465523fd81a6}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+U\+Type@{m\+U\+Type}}
+\index{m\+U\+Type@{m\+U\+Type}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+U\+Type}{mUType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} Fbx\+Patch\+::m\+U\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 198 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a5357f15e4e85f9e98c6660fa889a62c4}\label{class_fbx_patch_a5357f15e4e85f9e98c6660fa889a62c4}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+V\+Capped\+Bottom@{m\+V\+Capped\+Bottom}}
+\index{m\+V\+Capped\+Bottom@{m\+V\+Capped\+Bottom}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+V\+Capped\+Bottom}{mVCappedBottom}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::m\+V\+Capped\+Bottom\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 203 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a8964253a7df60a4d9221f6c0a1ca4152}\label{class_fbx_patch_a8964253a7df60a4d9221f6c0a1ca4152}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+V\+Capped\+Top@{m\+V\+Capped\+Top}}
+\index{m\+V\+Capped\+Top@{m\+V\+Capped\+Top}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+V\+Capped\+Top}{mVCappedTop}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::m\+V\+Capped\+Top\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 203 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_a4f616b59220bb25f795c288d12e297de}\label{class_fbx_patch_a4f616b59220bb25f795c288d12e297de}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+V\+Closed@{m\+V\+Closed}}
+\index{m\+V\+Closed@{m\+V\+Closed}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+V\+Closed}{mVClosed}}
+{\footnotesize\ttfamily bool Fbx\+Patch\+::m\+V\+Closed\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 201 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_ae3d2c2e74b23f9b3d5eea59534ac1a85}\label{class_fbx_patch_ae3d2c2e74b23f9b3d5eea59534ac1a85}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+V\+Count@{m\+V\+Count}}
+\index{m\+V\+Count@{m\+V\+Count}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+V\+Count}{mVCount}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::m\+V\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 199 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_abeba80f7ee47a35509535ecd2edaf826}\label{class_fbx_patch_abeba80f7ee47a35509535ecd2edaf826}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+V\+Step@{m\+V\+Step}}
+\index{m\+V\+Step@{m\+V\+Step}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+V\+Step}{mVStep}}
+{\footnotesize\ttfamily int Fbx\+Patch\+::m\+V\+Step\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 200 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_patch_aa0e38cb994ef8741fbb163ca587cb2d6}\label{class_fbx_patch_aa0e38cb994ef8741fbb163ca587cb2d6}} 
+\index{Fbx\+Patch@{Fbx\+Patch}!m\+V\+Type@{m\+V\+Type}}
+\index{m\+V\+Type@{m\+V\+Type}!Fbx\+Patch@{Fbx\+Patch}}
+\subsubsection{\texorpdfstring{m\+V\+Type}{mVType}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_patch_ad669936e6b844a7a15fa30ec7c183fbb}{E\+Type} Fbx\+Patch\+::m\+V\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxpatch.\+h の 198 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxpatch_8h}{fbxpatch.\+h}\end{DoxyCompactItemize}

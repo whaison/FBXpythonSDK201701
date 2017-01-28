@@ -1,0 +1,242 @@
+\hypertarget{_instances_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Instances/main.cxx ファイル}
+\label{_instances_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Instances/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Instances/main.\+cxx}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Common.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_instances_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}Instances.\+fbx\char`\"{}
+\item 
+\#define \hyperlink{_instances_2main_8cxx_a8721954ef039ea34bf0e306710d0b240}{S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT}~10
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_instances_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}{Create\+Scene} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Sdk\+Manager, \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_instances_2main_8cxx_ae2fcceb7271900551477172571fd2bdf}{Create\+Cube} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_instances_2main_8cxx_a7bced67406541ba3ea917a3e6da0b457}{Create\+Cube\+Instance} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name, \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+First\+Cube)
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_instances_2main_8cxx_ad646d4a3d08fc39ab90d9ba1dd266b07}{Create\+Material} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} p\+Color)
+\item 
+\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ \hyperlink{_instances_2main_8cxx_a9df7a43ec3dcd898df9d4ef3eccb04a8}{Create\+Anim\+Curve} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+void \hyperlink{_instances_2main_8cxx_a078ad0678d4f337d6ff5d9153fee597b}{Animate\+Cube} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Cube, \hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$p\+Anim\+Layer, \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$p\+Anim\+Curve, int p\+Rot\+Axis)
+\item 
+int \hyperlink{_instances_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_instances_2main_8cxx_aade28ad051b5343192faf7335299b955}{g\+Nb\+Cubes} = -\/1
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{_instances_2main_8cxx_ae04215cfd84aec8da82e587e5ce06835}{g\+Red} (1.\+0, 0.\+0, 0.\+0)
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{_instances_2main_8cxx_ae32857c9711b5296a95a984b00cf56f5}{g\+Green} (0.\+0, 1.\+0, 0.\+0)
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{_instances_2main_8cxx_ab360f3b1f550106e87424271eb26f449}{g\+Blue} (0.\+0, 0.\+0, 1.\+0)
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{_instances_2main_8cxx_a661bde98d91998b54b10ee124ad5053e}{g\+Gray} (0.\+5, 0.\+5, 0.\+5)
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{_instances_2main_8cxx_a52d36c0f73bbb8aaa00ec70aaa058fd0}{g\+White} (1.\+0, 1.\+0, 1.\+0)
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_instances_2main_8cxx_abd834c0ff9baa5c226e1a29d8cb17e6f}{g\+Mat\+White}
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_instances_2main_8cxx_abedc5a931c708b25e0be39d9aa04c614}{g\+Mat\+Gray}
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_instances_2main_8cxx_a51f84a52e0de51ade54781c7686bcbc2}{g\+Mat\+Red}
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_instances_2main_8cxx_ab38642cb8e4bb3cdcc31e64258fefbf4}{g\+Mat\+Green}
+\item 
+\hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ \hyperlink{_instances_2main_8cxx_a57f7663f4e8c8c037ad8a4a7e823ec28}{g\+Mat\+Blue}
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_instances_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_instances_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}Instances.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 25 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a8721954ef039ea34bf0e306710d0b240}\label{_instances_2main_8cxx_a8721954ef039ea34bf0e306710d0b240}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT@{S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT@{S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT}{SAMPLE\_INSTANCE\_COUNT}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+\_\+\+C\+O\+U\+NT~10}
+
+
+
+ main.\+cxx の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_instances_2main_8cxx_a078ad0678d4f337d6ff5d9153fee597b}\label{_instances_2main_8cxx_a078ad0678d4f337d6ff5d9153fee597b}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!Animate\+Cube@{Animate\+Cube}}
+\index{Animate\+Cube@{Animate\+Cube}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+Cube()}{AnimateCube()}}
+{\footnotesize\ttfamily void Animate\+Cube (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Cube,  }\item[{\hyperlink{class_fbx_anim_layer}{Fbx\+Anim\+Layer} $\ast$}]{p\+Anim\+Layer,  }\item[{\hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$}]{p\+Anim\+Curve,  }\item[{int}]{p\+Rot\+Axis }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 162 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a9df7a43ec3dcd898df9d4ef3eccb04a8}\label{_instances_2main_8cxx_a9df7a43ec3dcd898df9d4ef3eccb04a8}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!Create\+Anim\+Curve@{Create\+Anim\+Curve}}
+\index{Create\+Anim\+Curve@{Create\+Anim\+Curve}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Anim\+Curve()}{CreateAnimCurve()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_anim_curve}{Fbx\+Anim\+Curve} $\ast$ Create\+Anim\+Curve (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 413 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_ae2fcceb7271900551477172571fd2bdf}\label{_instances_2main_8cxx_ae2fcceb7271900551477172571fd2bdf}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!Create\+Cube@{Create\+Cube}}
+\index{Create\+Cube@{Create\+Cube}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Cube()}{CreateCube()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Cube (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 182 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a7bced67406541ba3ea917a3e6da0b457}\label{_instances_2main_8cxx_a7bced67406541ba3ea917a3e6da0b457}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!Create\+Cube\+Instance@{Create\+Cube\+Instance}}
+\index{Create\+Cube\+Instance@{Create\+Cube\+Instance}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Cube\+Instance()}{CreateCubeInstance()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Cube\+Instance (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name,  }\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+First\+Cube }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 359 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_ad646d4a3d08fc39ab90d9ba1dd266b07}\label{_instances_2main_8cxx_ad646d4a3d08fc39ab90d9ba1dd266b07}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!Create\+Material@{Create\+Material}}
+\index{Create\+Material@{Create\+Material}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Material()}{CreateMaterial()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong} $\ast$ Create\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}}]{p\+Color }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 401 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}\label{_instances_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!Create\+Scene@{Create\+Scene}}
+\index{Create\+Scene@{Create\+Scene}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Scene()}{CreateScene()}}
+{\footnotesize\ttfamily bool Create\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Sdk\+Manager,  }\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 99 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_instances_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!main@{main}}
+\index{main@{main}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 51 行目に定義があります。
+
+
+
+\subsection{変数詳解}
+\mbox{\Hypertarget{_instances_2main_8cxx_ab360f3b1f550106e87424271eb26f449}\label{_instances_2main_8cxx_ab360f3b1f550106e87424271eb26f449}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Blue@{g\+Blue}}
+\index{g\+Blue@{g\+Blue}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Blue}{gBlue}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} g\+Blue(0.\+0, 0.\+0, 1.\+0)}
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a661bde98d91998b54b10ee124ad5053e}\label{_instances_2main_8cxx_a661bde98d91998b54b10ee124ad5053e}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Gray@{g\+Gray}}
+\index{g\+Gray@{g\+Gray}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Gray}{gGray}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} g\+Gray(0.\+5, 0.\+5, 0.\+5)}
+
+\mbox{\Hypertarget{_instances_2main_8cxx_ae32857c9711b5296a95a984b00cf56f5}\label{_instances_2main_8cxx_ae32857c9711b5296a95a984b00cf56f5}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Green@{g\+Green}}
+\index{g\+Green@{g\+Green}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Green}{gGreen}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} g\+Green(0.\+0, 1.\+0, 0.\+0)}
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a57f7663f4e8c8c037ad8a4a7e823ec28}\label{_instances_2main_8cxx_a57f7663f4e8c8c037ad8a4a7e823ec28}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Mat\+Blue@{g\+Mat\+Blue}}
+\index{g\+Mat\+Blue@{g\+Mat\+Blue}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Mat\+Blue}{gMatBlue}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong}$\ast$ g\+Mat\+Blue}
+
+
+
+ main.\+cxx の 40 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_abedc5a931c708b25e0be39d9aa04c614}\label{_instances_2main_8cxx_abedc5a931c708b25e0be39d9aa04c614}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Mat\+Gray@{g\+Mat\+Gray}}
+\index{g\+Mat\+Gray@{g\+Mat\+Gray}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Mat\+Gray}{gMatGray}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong}$\ast$ g\+Mat\+Gray}
+
+
+
+ main.\+cxx の 37 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_ab38642cb8e4bb3cdcc31e64258fefbf4}\label{_instances_2main_8cxx_ab38642cb8e4bb3cdcc31e64258fefbf4}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Mat\+Green@{g\+Mat\+Green}}
+\index{g\+Mat\+Green@{g\+Mat\+Green}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Mat\+Green}{gMatGreen}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong}$\ast$ g\+Mat\+Green}
+
+
+
+ main.\+cxx の 39 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a51f84a52e0de51ade54781c7686bcbc2}\label{_instances_2main_8cxx_a51f84a52e0de51ade54781c7686bcbc2}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Mat\+Red@{g\+Mat\+Red}}
+\index{g\+Mat\+Red@{g\+Mat\+Red}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Mat\+Red}{gMatRed}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong}$\ast$ g\+Mat\+Red}
+
+
+
+ main.\+cxx の 38 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_abd834c0ff9baa5c226e1a29d8cb17e6f}\label{_instances_2main_8cxx_abd834c0ff9baa5c226e1a29d8cb17e6f}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Mat\+White@{g\+Mat\+White}}
+\index{g\+Mat\+White@{g\+Mat\+White}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Mat\+White}{gMatWhite}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_surface_phong}{Fbx\+Surface\+Phong}$\ast$ g\+Mat\+White}
+
+
+
+ main.\+cxx の 36 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_aade28ad051b5343192faf7335299b955}\label{_instances_2main_8cxx_aade28ad051b5343192faf7335299b955}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Nb\+Cubes@{g\+Nb\+Cubes}}
+\index{g\+Nb\+Cubes@{g\+Nb\+Cubes}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Nb\+Cubes}{gNbCubes}}
+{\footnotesize\ttfamily int g\+Nb\+Cubes = -\/1}
+
+
+
+ main.\+cxx の 29 行目に定義があります。
+
+\mbox{\Hypertarget{_instances_2main_8cxx_ae04215cfd84aec8da82e587e5ce06835}\label{_instances_2main_8cxx_ae04215cfd84aec8da82e587e5ce06835}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+Red@{g\+Red}}
+\index{g\+Red@{g\+Red}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+Red}{gRed}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} g\+Red(1.\+0, 0.\+0, 0.\+0)}
+
+\mbox{\Hypertarget{_instances_2main_8cxx_a52d36c0f73bbb8aaa00ec70aaa058fd0}\label{_instances_2main_8cxx_a52d36c0f73bbb8aaa00ec70aaa058fd0}} 
+\index{Instances/main.\+cxx@{Instances/main.\+cxx}!g\+White@{g\+White}}
+\index{g\+White@{g\+White}!Instances/main.\+cxx@{Instances/main.\+cxx}}
+\subsubsection{\texorpdfstring{g\+White}{gWhite}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} g\+White(1.\+0, 1.\+0, 1.\+0)}
+

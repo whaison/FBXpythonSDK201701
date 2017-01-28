@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>FBXcppSDKdoxygen01200: C:/Maya/scripts/FBX_SDK/2017.1/samples/ViewScene/SetCamera.cxx ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Fbx_launch.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">FBXcppSDKdoxygen01200
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_510fbc9eeb202359793748e68e42cc42.html">Maya</a></li><li class="navelem"><a class="el" href="dir_ca7e55a1c1e2113937c498d51bfdd52c.html">scripts</a></li><li class="navelem"><a class="el" href="dir_606530477e8edbd53f87f881a1040200.html">FBX_SDK</a></li><li class="navelem"><a class="el" href="dir_c99d21dc9df863e7564095c8f5d25960.html">2017.1</a></li><li class="navelem"><a class="el" href="dir_71525f077f4c780a76a234e0971e4aab.html">samples</a></li><li class="navelem"><a class="el" href="dir_96870261ef9e26232af4823120bcd28f.html">ViewScene</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">SetCamera.cxx ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="fbxsdk_8h_source.html">fbxsdk.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="_get_position_8h_source.html">GetPosition.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_gl_functions_8h_source.html">GlFunctions.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_set_camera_8h_source.html">SetCamera.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_scene_context_8h_source.html">SceneContext.h</a>&quot;</code><br />
+</div>
+<p><a href="_set_camera_8cxx_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:af9c0e67ee5cfe427e8c7e62601433e74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#af9c0e67ee5cfe427e8c7e62601433e74">HFOV2VFOV</a>(h,  ar)&#160;&#160;&#160;(2.0 * atan((ar) * tan( (h * <a class="el" href="fbxmath_8h.html#adce4c270d8f28a023ed1778b83c385e9">FBXSDK_PI_DIV_180</a>) * 0.5)) * <a class="el" href="fbxmath_8h.html#acc8670337937abf164e3e650b573f615">FBXSDK_180_DIV_PI</a>)</td></tr>
+<tr class="separator:af9c0e67ee5cfe427e8c7e62601433e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9877191457f16147fbd63fc0f2bdac19"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#a9877191457f16147fbd63fc0f2bdac19">VFOV2HFOV</a>(v,  ar)&#160;&#160;&#160;(2.0 * atan((ar) * tan( (v * <a class="el" href="fbxmath_8h.html#adce4c270d8f28a023ed1778b83c385e9">FBXSDK_PI_DIV_180</a>) * 0.5)) * <a class="el" href="fbxmath_8h.html#acc8670337937abf164e3e650b573f615">FBXSDK_180_DIV_PI</a>)</td></tr>
+<tr class="separator:a9877191457f16147fbd63fc0f2bdac19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a80bf68ad5860deac31950545f8a26327"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_camera.html">FbxCamera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#a80bf68ad5860deac31950545f8a26327">GetCurrentCamera</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_time.html">FbxTime</a> &amp;pTime, <a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *pAnimLayer, const <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_node.html">FbxNode</a> *&gt; &amp;pCameraArray)</td></tr>
+<tr class="separator:a80bf68ad5860deac31950545f8a26327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d3664861e2c788ba281f182fbbfd8f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#a7d3664861e2c788ba281f182fbbfd8f6">GetCameraAnimatedParameters</a> (<a class="el" href="class_fbx_node.html">FbxNode</a> *pNode, <a class="el" href="class_fbx_time.html">FbxTime</a> &amp;pTime, <a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *pAnimLayer)</td></tr>
+<tr class="separator:a7d3664861e2c788ba281f182fbbfd8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68e94c629b05321e94591e972d2feeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#af68e94c629b05321e94591e972d2feeb">IsProducerCamera</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_camera.html">FbxCamera</a> *pCamera)</td></tr>
+<tr class="separator:af68e94c629b05321e94591e972d2feeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef430e78372e67c86bc594b124d1ccaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#aef430e78372e67c86bc594b124d1ccaa">SetCamera</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_time.html">FbxTime</a> &amp;pTime, <a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *pAnimLayer, const <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_node.html">FbxNode</a> *&gt; &amp;pCameraArray, int pWindowWidth, int pWindowHeight)</td></tr>
+<tr class="separator:aef430e78372e67c86bc594b124d1ccaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70d04f5ac83821b56acf75e10cd159d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_fbx_camera.html">FbxCamera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#ac70d04f5ac83821b56acf75e10cd159d">GetCurrentCamera</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene)</td></tr>
+<tr class="separator:ac70d04f5ac83821b56acf75e10cd159d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28f66cab60549b5d6d73cb9f2fa96d1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#ab28f66cab60549b5d6d73cb9f2fa96d1">TransformAperture</a> (double pAperture, double pTransform)</td></tr>
+<tr class="separator:ab28f66cab60549b5d6d73cb9f2fa96d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c4c1998efb26af62ff5ecb97cdf4d6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#a1c4c1998efb26af62ff5ecb97cdf4d6f">UpdatePerspCameraAttributes</a> (<a class="el" href="class_fbx_camera.html">FbxCamera</a> *pCamera, double pNewApertureW, double pNewApertureH)</td></tr>
+<tr class="separator:a1c4c1998efb26af62ff5ecb97cdf4d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31fe4dbf91e0a12238403f7047053bd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#a31fe4dbf91e0a12238403f7047053bd7">CameraZoom</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, int pZoomDepth, int pZoomMode)</td></tr>
+<tr class="separator:a31fe4dbf91e0a12238403f7047053bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0441d7a366001e8f0d6175e6cc76a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#acb0441d7a366001e8f0d6175e6cc76a9">CameraOrbit</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> lOrigCamPos, double OrigRoll, int dX, int dY)</td></tr>
+<tr class="separator:acb0441d7a366001e8f0d6175e6cc76a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad58f6fa8f0b70d18870e7448f791d40f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_set_camera_8cxx.html#ad58f6fa8f0b70d18870e7448f791d40f">CameraPan</a> (<a class="el" href="class_fbx_scene.html">FbxScene</a> *pScene, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> lOrigCamPos, <a class="el" href="class_fbx_vector4.html">FbxVector4</a> lOrigCamCenter, double OrigRoll, int dX, int dY)</td></tr>
+<tr class="separator:ad58f6fa8f0b70d18870e7448f791d40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="af9c0e67ee5cfe427e8c7e62601433e74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c0e67ee5cfe427e8c7e62601433e74">&#9670;&nbsp;</a></span>HFOV2VFOV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HFOV2VFOV</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">h, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ar&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(2.0 * atan((ar) * tan( (h * <a class="el" href="fbxmath_8h.html#adce4c270d8f28a023ed1778b83c385e9">FBXSDK_PI_DIV_180</a>) * 0.5)) * <a class="el" href="fbxmath_8h.html#acc8670337937abf164e3e650b573f615">FBXSDK_180_DIV_PI</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00029">29</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9877191457f16147fbd63fc0f2bdac19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9877191457f16147fbd63fc0f2bdac19">&#9670;&nbsp;</a></span>VFOV2HFOV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VFOV2HFOV</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ar&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(2.0 * atan((ar) * tan( (v * <a class="el" href="fbxmath_8h.html#adce4c270d8f28a023ed1778b83c385e9">FBXSDK_PI_DIV_180</a>) * 0.5)) * <a class="el" href="fbxmath_8h.html#acc8670337937abf164e3e650b573f615">FBXSDK_180_DIV_PI</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00030">30</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="acb0441d7a366001e8f0d6175e6cc76a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0441d7a366001e8f0d6175e6cc76a9">&#9670;&nbsp;</a></span>CameraOrbit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraOrbit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>lOrigCamPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>OrigRoll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00724">724</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad58f6fa8f0b70d18870e7448f791d40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad58f6fa8f0b70d18870e7448f791d40f">&#9670;&nbsp;</a></span>CameraPan()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraPan </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>lOrigCamPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_vector4.html">FbxVector4</a>&#160;</td>
+          <td class="paramname"><em>lOrigCamCenter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>OrigRoll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Vector of distance between camera and center (lookat) </p>
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00793">793</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a31fe4dbf91e0a12238403f7047053bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31fe4dbf91e0a12238403f7047053bd7">&#9670;&nbsp;</a></span>CameraZoom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CameraZoom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pZoomDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pZoomMode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00643">643</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a7d3664861e2c788ba281f182fbbfd8f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3664861e2c788ba281f182fbbfd8f6">&#9670;&nbsp;</a></span>GetCameraAnimatedParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GetCameraAnimatedParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_node.html">FbxNode</a> *&#160;</td>
+          <td class="paramname"><em>pNode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_time.html">FbxTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>pTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *&#160;</td>
+          <td class="paramname"><em>pAnimLayer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00440">440</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a80bf68ad5860deac31950545f8a26327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bf68ad5860deac31950545f8a26327">&#9670;&nbsp;</a></span>GetCurrentCamera() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_camera.html">FbxCamera</a> * GetCurrentCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_time.html">FbxTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>pTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *&#160;</td>
+          <td class="paramname"><em>pAnimLayer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_node.html">FbxNode</a> *&gt; &amp;&#160;</td>
+          <td class="paramname"><em>pCameraArray</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00342">342</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac70d04f5ac83821b56acf75e10cd159d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac70d04f5ac83821b56acf75e10cd159d">&#9670;&nbsp;</a></span>GetCurrentCamera() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_fbx_camera.html">FbxCamera</a>* GetCurrentCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00529">529</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af68e94c629b05321e94591e972d2feeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68e94c629b05321e94591e972d2feeb">&#9670;&nbsp;</a></span>IsProducerCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsProducerCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_camera.html">FbxCamera</a> *&#160;</td>
+          <td class="paramname"><em>pCamera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00508">508</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aef430e78372e67c86bc594b124d1ccaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef430e78372e67c86bc594b124d1ccaa">&#9670;&nbsp;</a></span>SetCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetCamera </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_scene.html">FbxScene</a> *&#160;</td>
+          <td class="paramname"><em>pScene</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_time.html">FbxTime</a> &amp;&#160;</td>
+          <td class="paramname"><em>pTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_fbx_anim_layer.html">FbxAnimLayer</a> *&#160;</td>
+          <td class="paramname"><em>pAnimLayer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_fbx_array.html">FbxArray</a>&lt; <a class="el" href="class_fbx_node.html">FbxNode</a> *&gt; &amp;&#160;</td>
+          <td class="paramname"><em>pCameraArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pWindowWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pWindowHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab28f66cab60549b5d6d73cb9f2fa96d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28f66cab60549b5d6d73cb9f2fa96d1">&#9670;&nbsp;</a></span>TransformAperture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double TransformAperture </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pAperture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pTransform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00579">579</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1c4c1998efb26af62ff5ecb97cdf4d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c4c1998efb26af62ff5ecb97cdf4d6f">&#9670;&nbsp;</a></span>UpdatePerspCameraAttributes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UpdatePerspCameraAttributes </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_fbx_camera.html">FbxCamera</a> *&#160;</td>
+          <td class="paramname"><em>pCamera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pNewApertureW</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>pNewApertureH</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_set_camera_8cxx_source.html">SetCamera.cxx</a> の <a class="el" href="_set_camera_8cxx_source.html#l00593">593</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

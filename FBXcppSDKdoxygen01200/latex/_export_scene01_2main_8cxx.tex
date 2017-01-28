@@ -1,0 +1,161 @@
+\hypertarget{_export_scene01_2main_8cxx}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+Export\+Scene01/main.cxx ファイル}
+\label{_export_scene01_2main_8cxx}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Scene01/main.\+cxx@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+Export\+Scene01/main.\+cxx}}
+{\ttfamily \#include $<$fbxsdk.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Common/\+Common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Thumbnail.\+h\char`\"{}}\newline
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_export_scene01_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}~\char`\"{}Export\+Scene01.\+fbx\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_export_scene01_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}{Create\+Scene} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Sdk\+Manager, \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_export_scene01_2main_8cxx_ae08c91aacdf18e2f4cdf1d558ee7a31e}{Create\+Patch} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{_export_scene01_2main_8cxx_a1f181bdc612f69ef1804e2d1c4e27c21}{Create\+Skeleton} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, const char $\ast$p\+Name)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_aadcfcbd278127a0adf0ef9b83d99aa2e}{Link\+Patch\+To\+Skeleton} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Patch, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Skeleton\+Root)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_acb88f150877f6c60c234de5d42e09d6c}{Store\+Bind\+Pose} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Patch)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_ae2e1392bfbdf6f4f8e5801bc4e63a167}{Store\+Rest\+Pose} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Skeleton\+Root)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_a595b8aa8fbc7d2658c7fd33a52899c04}{Animate\+Skeleton} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Skeleton\+Root)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_a1712c1165e44982a69dc183971f4bbf9}{Add\+Thumbnail\+To\+Scene} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_a7258de6ccd38d308b5e2c70d6dddeefd}{Add\+Node\+Recursively} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ \&p\+Node\+Array, \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+void \hyperlink{_export_scene01_2main_8cxx_aee6833d54a5d970cef242de449c60df4}{Set\+X\+Matrix} (\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&p\+X\+Matrix, const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&p\+Matrix)
+\item 
+int \hyperlink{_export_scene01_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}\label{_export_scene01_2main_8cxx_aa45ff7031d295cc7efe36fbc2de84821}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}}
+\index{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME@{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME}{SAMPLE\_FILENAME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+E\+\_\+\+F\+I\+L\+E\+N\+A\+ME~\char`\"{}Export\+Scene01.\+fbx\char`\"{}}
+
+
+
+ main.\+cxx の 35 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_a7258de6ccd38d308b5e2c70d6dddeefd}\label{_export_scene01_2main_8cxx_a7258de6ccd38d308b5e2c70d6dddeefd}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Add\+Node\+Recursively@{Add\+Node\+Recursively}}
+\index{Add\+Node\+Recursively@{Add\+Node\+Recursively}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Add\+Node\+Recursively()}{AddNodeRecursively()}}
+{\footnotesize\ttfamily void Add\+Node\+Recursively (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ \&}]{p\+Node\+Array,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 556 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_a1712c1165e44982a69dc183971f4bbf9}\label{_export_scene01_2main_8cxx_a1712c1165e44982a69dc183971f4bbf9}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Add\+Thumbnail\+To\+Scene@{Add\+Thumbnail\+To\+Scene}}
+\index{Add\+Thumbnail\+To\+Scene@{Add\+Thumbnail\+To\+Scene}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Add\+Thumbnail\+To\+Scene()}{AddThumbnailToScene()}}
+{\footnotesize\ttfamily void Add\+Thumbnail\+To\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 406 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_a595b8aa8fbc7d2658c7fd33a52899c04}\label{_export_scene01_2main_8cxx_a595b8aa8fbc7d2658c7fd33a52899c04}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Animate\+Skeleton@{Animate\+Skeleton}}
+\index{Animate\+Skeleton@{Animate\+Skeleton}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Animate\+Skeleton()}{AnimateSkeleton()}}
+{\footnotesize\ttfamily void Animate\+Skeleton (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Skeleton\+Root }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 283 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_ae08c91aacdf18e2f4cdf1d558ee7a31e}\label{_export_scene01_2main_8cxx_ae08c91aacdf18e2f4cdf1d558ee7a31e}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Create\+Patch@{Create\+Patch}}
+\index{Create\+Patch@{Create\+Patch}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Patch()}{CreatePatch()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Patch (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 135 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}\label{_export_scene01_2main_8cxx_acd3988a29edd1204994b4be504c8fb51}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Create\+Scene@{Create\+Scene}}
+\index{Create\+Scene@{Create\+Scene}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Scene()}{CreateScene()}}
+{\footnotesize\ttfamily bool Create\+Scene (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Sdk\+Manager,  }\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 97 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_a1f181bdc612f69ef1804e2d1c4e27c21}\label{_export_scene01_2main_8cxx_a1f181bdc612f69ef1804e2d1c4e27c21}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Create\+Skeleton@{Create\+Skeleton}}
+\index{Create\+Skeleton@{Create\+Skeleton}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Create\+Skeleton()}{CreateSkeleton()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ Create\+Skeleton (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{const char $\ast$}]{p\+Name }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 169 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_aadcfcbd278127a0adf0ef9b83d99aa2e}\label{_export_scene01_2main_8cxx_aadcfcbd278127a0adf0ef9b83d99aa2e}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Link\+Patch\+To\+Skeleton@{Link\+Patch\+To\+Skeleton}}
+\index{Link\+Patch\+To\+Skeleton@{Link\+Patch\+To\+Skeleton}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Link\+Patch\+To\+Skeleton()}{LinkPatchToSkeleton()}}
+{\footnotesize\ttfamily void Link\+Patch\+To\+Skeleton (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Patch,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Skeleton\+Root }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 210 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}\label{_export_scene01_2main_8cxx_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!main@{main}}
+\index{main@{main}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 53 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_aee6833d54a5d970cef242de449c60df4}\label{_export_scene01_2main_8cxx_aee6833d54a5d970cef242de449c60df4}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Set\+X\+Matrix@{Set\+X\+Matrix}}
+\index{Set\+X\+Matrix@{Set\+X\+Matrix}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Set\+X\+Matrix()}{SetXMatrix()}}
+{\footnotesize\ttfamily void Set\+X\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_a_matrix}{Fbx\+A\+Matrix} \&}]{p\+X\+Matrix,  }\item[{const \hyperlink{class_fbx_matrix}{Fbx\+Matrix} \&}]{p\+Matrix }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 570 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_acb88f150877f6c60c234de5d42e09d6c}\label{_export_scene01_2main_8cxx_acb88f150877f6c60c234de5d42e09d6c}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Store\+Bind\+Pose@{Store\+Bind\+Pose}}
+\index{Store\+Bind\+Pose@{Store\+Bind\+Pose}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Store\+Bind\+Pose()}{StoreBindPose()}}
+{\footnotesize\ttfamily void Store\+Bind\+Pose (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Patch }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 421 行目に定義があります。
+
+\mbox{\Hypertarget{_export_scene01_2main_8cxx_ae2e1392bfbdf6f4f8e5801bc4e63a167}\label{_export_scene01_2main_8cxx_ae2e1392bfbdf6f4f8e5801bc4e63a167}} 
+\index{Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}!Store\+Rest\+Pose@{Store\+Rest\+Pose}}
+\index{Store\+Rest\+Pose@{Store\+Rest\+Pose}!Export\+Scene01/main.\+cxx@{Export\+Scene01/main.\+cxx}}
+\subsubsection{\texorpdfstring{Store\+Rest\+Pose()}{StoreRestPose()}}
+{\footnotesize\ttfamily void Store\+Rest\+Pose (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Skeleton\+Root }\end{DoxyParamCaption})}
+
+
+
+ main.\+cxx の 501 行目に定義があります。
+

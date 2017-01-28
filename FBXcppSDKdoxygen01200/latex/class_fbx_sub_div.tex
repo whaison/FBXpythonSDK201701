@@ -1,0 +1,349 @@
+\hypertarget{class_fbx_sub_div}{}\section{Fbx\+Sub\+Div クラス}
+\label{class_fbx_sub_div}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+
+
+{\ttfamily \#include $<$fbxsubdiv.\+h$>$}
+
+Fbx\+Sub\+Div の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=7.000000cm]{class_fbx_sub_div}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{E\+Scheme} \{ \hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a704e0c326608197ed346cae170291408}{e\+Catmull\+Clark}, 
+\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5ae0cd97d1b6d46dd85afd41b94390e6f5}{e\+Doo\+C\+Sabin}, 
+\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a443dd57dbee4fe52d99159b9c2f7e75e}{e\+Loop}, 
+\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a8e4c8b011a7f345938db4632efa7982d}{e\+Linear}
+ \}
+\item 
+enum \hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{E\+Tesselation\+Pattern} \{ \hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a5792590f1ca7fe621e053483e37f867a}{e\+Odd\+Fractional}, 
+\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a79214038fb9a4f90ee767e71d1e5c2e6}{e\+Even\+Fractional}, 
+\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684ac00baef4ff2ba07f9d0c3cd85ab279ea}{e\+Integer}, 
+\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a9f9be689f1d831d329f4ea19d672ac63}{e\+Power2}
+ \}
+\item 
+enum \hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}{E\+Display\+Smoothness} \{ \hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da418bd962df378a8f4f6bb374c511e0fd}{e\+Hull}, 
+\hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da39e8da77178a3448663bccbccbc023ee}{e\+Rough}, 
+\hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da74f694846f926ab58e8c4fe723d59fb9}{e\+Medium}, 
+\hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da35961a7ce1bc203cbea01010b5b38625}{e\+Fine}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_sub_div_aef825ae0a9a2c6973f0cc632f8f1fe43}{Init\+Subdiv\+Level} (int p\+Level\+Count, \hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{E\+Scheme} p\+Scheme=\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a704e0c326608197ed346cae170291408}{e\+Catmull\+Clark}, \hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{E\+Tesselation\+Pattern} p\+Pattern=\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a9f9be689f1d831d329f4ea19d672ac63}{e\+Power2})
+\item 
+virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} \hyperlink{class_fbx_sub_div_ac109cef6a177563eab80e28d414289a3}{Get\+Attribute\+Type} () const
+\item 
+\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$ \hyperlink{class_fbx_sub_div_a8b14dd17531d8e7e970a0f27061c992c}{Get\+Base\+Mesh} () const
+\item 
+\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$ \hyperlink{class_fbx_sub_div_aa3a7a320d1a1800ae4d59bd372a4beb0}{Get\+Finest\+Mesh} () const
+\item 
+bool \hyperlink{class_fbx_sub_div_a2205b6c841b523ff9bf80cc473a7aa4e}{Set\+Finest\+Mesh} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+bool \hyperlink{class_fbx_sub_div_aedeac30c9b067676bfbeb7ba95015ad6}{Set\+Base\+Mesh} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$ \hyperlink{class_fbx_sub_div_a705af0c50cdd202b19bdce9c36d90f01}{Get\+Mesh} (int p\+Level) const
+\item 
+void \hyperlink{class_fbx_sub_div_a6185a554b2c8f5718631a62a8f6656b8}{Set\+Subdiv\+Level\+Mesh} (int p\+Level, \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+int \hyperlink{class_fbx_sub_div_a645409b53d249062c2a22c224d27287a}{Get\+Level\+Count} () const
+\item 
+void \hyperlink{class_fbx_sub_div_a6ddec560144de0e8cc18ebf4c56ede8a}{Set\+Level\+Count} (int p\+Level\+Count)
+\item 
+int \hyperlink{class_fbx_sub_div_a76ae5f09e9af063bfdfa8bbbcdcf5b33}{Get\+Current\+Level} () const
+\item 
+void \hyperlink{class_fbx_sub_div_a448c996531d5c466ac1b8690fab652a2}{Set\+Current\+Level} (int p\+Current\+Level)
+\item 
+\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$ \hyperlink{class_fbx_sub_div_a29e607504655d8d85f6354982ff58038}{Get\+Current\+Mesh} () const
+\item 
+\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{Fbx\+Sub\+Div\+::\+E\+Scheme} \hyperlink{class_fbx_sub_div_a9a0ebbb75fa4597b04a09058a4e5db0b}{Get\+Subdiv\+Scheme} () const
+\item 
+\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{Fbx\+Sub\+Div\+::\+E\+Tesselation\+Pattern} \hyperlink{class_fbx_sub_div_aef8fee5ac4e87bdc77606b70b61a279f}{Get\+Tess\+Pattern} () const
+\item 
+void \hyperlink{class_fbx_sub_div_aca6fac923a222a2f0b2841e0138559c0}{Set\+Subdiv\+Scheme} (\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{Fbx\+Sub\+Div\+::\+E\+Scheme} p\+Scheme)
+\item 
+void \hyperlink{class_fbx_sub_div_ab9489633777763369cc14a617d567488}{Set\+Tess\+Pattern} (\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{Fbx\+Sub\+Div\+::\+E\+Tesselation\+Pattern} p\+Pattern)
+\item 
+\hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}{Fbx\+Sub\+Div\+::\+E\+Display\+Smoothness} \hyperlink{class_fbx_sub_div_ab61e0d75fa69cb90a7ef81f4f2ea917a}{Get\+Display\+Smoothness} () const
+\item 
+void \hyperlink{class_fbx_sub_div_acee4b6e7c777fd8f61778582e176ed1c}{Set\+Display\+Smoothness} (\hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}{Fbx\+Sub\+Div\+::\+E\+Display\+Smoothness} p\+Smoothness)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$ $>$ \hyperlink{class_fbx_sub_div_a4f4f0ffea9a17d4dc31ad9dcac3e89eb}{m\+Sub\+Div\+Level}
+\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_fbx_sub_div_aa98ca1fbe21bbb387a56fe893d902a1e}{M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL} = 16
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+
+
+ fbxsubdiv.\+h の 30 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}\label{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!E\+Display\+Smoothness@{E\+Display\+Smoothness}}
+\index{E\+Display\+Smoothness@{E\+Display\+Smoothness}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{E\+Display\+Smoothness}{EDisplaySmoothness}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}{Fbx\+Sub\+Div\+::\+E\+Display\+Smoothness}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Hull@{e\+Hull}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Hull@{e\+Hull}}}\mbox{\Hypertarget{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da418bd962df378a8f4f6bb374c511e0fd}\label{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da418bd962df378a8f4f6bb374c511e0fd}} 
+e\+Hull&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Rough@{e\+Rough}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Rough@{e\+Rough}}}\mbox{\Hypertarget{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da39e8da77178a3448663bccbccbc023ee}\label{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da39e8da77178a3448663bccbccbc023ee}} 
+e\+Rough&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Medium@{e\+Medium}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Medium@{e\+Medium}}}\mbox{\Hypertarget{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da74f694846f926ab58e8c4fe723d59fb9}\label{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da74f694846f926ab58e8c4fe723d59fb9}} 
+e\+Medium&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Fine@{e\+Fine}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Fine@{e\+Fine}}}\mbox{\Hypertarget{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da35961a7ce1bc203cbea01010b5b38625}\label{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4da35961a7ce1bc203cbea01010b5b38625}} 
+e\+Fine&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxsubdiv.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}\label{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!E\+Scheme@{E\+Scheme}}
+\index{E\+Scheme@{E\+Scheme}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{E\+Scheme}{EScheme}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{Fbx\+Sub\+Div\+::\+E\+Scheme}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Catmull\+Clark@{e\+Catmull\+Clark}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Catmull\+Clark@{e\+Catmull\+Clark}}}\mbox{\Hypertarget{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a704e0c326608197ed346cae170291408}\label{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a704e0c326608197ed346cae170291408}} 
+e\+Catmull\+Clark&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Doo\+C\+Sabin@{e\+Doo\+C\+Sabin}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Doo\+C\+Sabin@{e\+Doo\+C\+Sabin}}}\mbox{\Hypertarget{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5ae0cd97d1b6d46dd85afd41b94390e6f5}\label{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5ae0cd97d1b6d46dd85afd41b94390e6f5}} 
+e\+Doo\+C\+Sabin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Loop@{e\+Loop}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Loop@{e\+Loop}}}\mbox{\Hypertarget{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a443dd57dbee4fe52d99159b9c2f7e75e}\label{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a443dd57dbee4fe52d99159b9c2f7e75e}} 
+e\+Loop&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Linear@{e\+Linear}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Linear@{e\+Linear}}}\mbox{\Hypertarget{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a8e4c8b011a7f345938db4632efa7982d}\label{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a8e4c8b011a7f345938db4632efa7982d}} 
+e\+Linear&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxsubdiv.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}\label{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!E\+Tesselation\+Pattern@{E\+Tesselation\+Pattern}}
+\index{E\+Tesselation\+Pattern@{E\+Tesselation\+Pattern}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{E\+Tesselation\+Pattern}{ETesselationPattern}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{Fbx\+Sub\+Div\+::\+E\+Tesselation\+Pattern}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Odd\+Fractional@{e\+Odd\+Fractional}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Odd\+Fractional@{e\+Odd\+Fractional}}}\mbox{\Hypertarget{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a5792590f1ca7fe621e053483e37f867a}\label{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a5792590f1ca7fe621e053483e37f867a}} 
+e\+Odd\+Fractional&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Even\+Fractional@{e\+Even\+Fractional}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Even\+Fractional@{e\+Even\+Fractional}}}\mbox{\Hypertarget{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a79214038fb9a4f90ee767e71d1e5c2e6}\label{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a79214038fb9a4f90ee767e71d1e5c2e6}} 
+e\+Even\+Fractional&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Integer@{e\+Integer}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Integer@{e\+Integer}}}\mbox{\Hypertarget{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684ac00baef4ff2ba07f9d0c3cd85ab279ea}\label{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684ac00baef4ff2ba07f9d0c3cd85ab279ea}} 
+e\+Integer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Power2@{e\+Power2}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!e\+Power2@{e\+Power2}}}\mbox{\Hypertarget{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a9f9be689f1d831d329f4ea19d672ac63}\label{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a9f9be689f1d831d329f4ea19d672ac63}} 
+e\+Power2&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxsubdiv.\+h の 43 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_sub_div_ac109cef6a177563eab80e28d414289a3}\label{class_fbx_sub_div_ac109cef6a177563eab80e28d414289a3}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Attribute\+Type@{Get\+Attribute\+Type}}
+\index{Get\+Attribute\+Type@{Get\+Attribute\+Type}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Attribute\+Type()}{GetAttributeType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_node_attribute_a08e1669d3d1a696910756ab17de56d6a}{Fbx\+Node\+Attribute\+::\+E\+Type} Fbx\+Sub\+Div\+::\+Get\+Attribute\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the node attribute type. This method is derived in the more high level classes (\hyperlink{class_fbx_mesh}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}, etc...) and returns the actual type of the geometry object.
+
+\begin{DoxyReturn}{戻り値}
+{\itshape e\+Unknown} 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_geometry_a41ae23e5d0cf08693bca49737f333de9}{Fbx\+Geometry}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_sub_div_a8b14dd17531d8e7e970a0f27061c992c}\label{class_fbx_sub_div_a8b14dd17531d8e7e970a0f27061c992c}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Base\+Mesh@{Get\+Base\+Mesh}}
+\index{Get\+Base\+Mesh@{Get\+Base\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Base\+Mesh()}{GetBaseMesh()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh}{Fbx\+Mesh}$\ast$ Fbx\+Sub\+Div\+::\+Get\+Base\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a76ae5f09e9af063bfdfa8bbbcdcf5b33}\label{class_fbx_sub_div_a76ae5f09e9af063bfdfa8bbbcdcf5b33}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Current\+Level@{Get\+Current\+Level}}
+\index{Get\+Current\+Level@{Get\+Current\+Level}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Current\+Level()}{GetCurrentLevel()}}
+{\footnotesize\ttfamily int Fbx\+Sub\+Div\+::\+Get\+Current\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a29e607504655d8d85f6354982ff58038}\label{class_fbx_sub_div_a29e607504655d8d85f6354982ff58038}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Current\+Mesh@{Get\+Current\+Mesh}}
+\index{Get\+Current\+Mesh@{Get\+Current\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Current\+Mesh()}{GetCurrentMesh()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh}{Fbx\+Mesh}$\ast$ Fbx\+Sub\+Div\+::\+Get\+Current\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_ab61e0d75fa69cb90a7ef81f4f2ea917a}\label{class_fbx_sub_div_ab61e0d75fa69cb90a7ef81f4f2ea917a}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Display\+Smoothness@{Get\+Display\+Smoothness}}
+\index{Get\+Display\+Smoothness@{Get\+Display\+Smoothness}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Display\+Smoothness()}{GetDisplaySmoothness()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}{Fbx\+Sub\+Div\+::\+E\+Display\+Smoothness} Fbx\+Sub\+Div\+::\+Get\+Display\+Smoothness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_aa3a7a320d1a1800ae4d59bd372a4beb0}\label{class_fbx_sub_div_aa3a7a320d1a1800ae4d59bd372a4beb0}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Finest\+Mesh@{Get\+Finest\+Mesh}}
+\index{Get\+Finest\+Mesh@{Get\+Finest\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Finest\+Mesh()}{GetFinestMesh()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh}{Fbx\+Mesh}$\ast$ Fbx\+Sub\+Div\+::\+Get\+Finest\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a645409b53d249062c2a22c224d27287a}\label{class_fbx_sub_div_a645409b53d249062c2a22c224d27287a}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Level\+Count@{Get\+Level\+Count}}
+\index{Get\+Level\+Count@{Get\+Level\+Count}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Level\+Count()}{GetLevelCount()}}
+{\footnotesize\ttfamily int Fbx\+Sub\+Div\+::\+Get\+Level\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a705af0c50cdd202b19bdce9c36d90f01}\label{class_fbx_sub_div_a705af0c50cdd202b19bdce9c36d90f01}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Mesh@{Get\+Mesh}}
+\index{Get\+Mesh@{Get\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Mesh()}{GetMesh()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_mesh}{Fbx\+Mesh}$\ast$ Fbx\+Sub\+Div\+::\+Get\+Mesh (\begin{DoxyParamCaption}\item[{int}]{p\+Level }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a9a0ebbb75fa4597b04a09058a4e5db0b}\label{class_fbx_sub_div_a9a0ebbb75fa4597b04a09058a4e5db0b}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Subdiv\+Scheme@{Get\+Subdiv\+Scheme}}
+\index{Get\+Subdiv\+Scheme@{Get\+Subdiv\+Scheme}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Subdiv\+Scheme()}{GetSubdivScheme()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{Fbx\+Sub\+Div\+::\+E\+Scheme} Fbx\+Sub\+Div\+::\+Get\+Subdiv\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_aef8fee5ac4e87bdc77606b70b61a279f}\label{class_fbx_sub_div_aef8fee5ac4e87bdc77606b70b61a279f}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Get\+Tess\+Pattern@{Get\+Tess\+Pattern}}
+\index{Get\+Tess\+Pattern@{Get\+Tess\+Pattern}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Get\+Tess\+Pattern()}{GetTessPattern()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{Fbx\+Sub\+Div\+::\+E\+Tesselation\+Pattern} Fbx\+Sub\+Div\+::\+Get\+Tess\+Pattern (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fbx_sub_div_aef825ae0a9a2c6973f0cc632f8f1fe43}\label{class_fbx_sub_div_aef825ae0a9a2c6973f0cc632f8f1fe43}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Init\+Subdiv\+Level@{Init\+Subdiv\+Level}}
+\index{Init\+Subdiv\+Level@{Init\+Subdiv\+Level}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Init\+Subdiv\+Level()}{InitSubdivLevel()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Init\+Subdiv\+Level (\begin{DoxyParamCaption}\item[{int}]{p\+Level\+Count,  }\item[{\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{E\+Scheme}}]{p\+Scheme = {\ttfamily \hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5a704e0c326608197ed346cae170291408}{e\+Catmull\+Clark}},  }\item[{\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{E\+Tesselation\+Pattern}}]{p\+Pattern = {\ttfamily \hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684a9f9be689f1d831d329f4ea19d672ac63}{e\+Power2}} }\end{DoxyParamCaption})}
+
+Init\+Subdiv\+Level Initialize the subdiv 
+\begin{DoxyParams}{引数}
+{\em p\+Level\+Count} & number of levels \\
+\hline
+{\em p\+Scheme} & subdivision scheme \\
+\hline
+{\em p\+Pattern} & Tessellation pattern \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_sub_div_aedeac30c9b067676bfbeb7ba95015ad6}\label{class_fbx_sub_div_aedeac30c9b067676bfbeb7ba95015ad6}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Base\+Mesh@{Set\+Base\+Mesh}}
+\index{Set\+Base\+Mesh@{Set\+Base\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Base\+Mesh()}{SetBaseMesh()}}
+{\footnotesize\ttfamily bool Fbx\+Sub\+Div\+::\+Set\+Base\+Mesh (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a448c996531d5c466ac1b8690fab652a2}\label{class_fbx_sub_div_a448c996531d5c466ac1b8690fab652a2}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Current\+Level@{Set\+Current\+Level}}
+\index{Set\+Current\+Level@{Set\+Current\+Level}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Current\+Level()}{SetCurrentLevel()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Set\+Current\+Level (\begin{DoxyParamCaption}\item[{int}]{p\+Current\+Level }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_sub_div_acee4b6e7c777fd8f61778582e176ed1c}\label{class_fbx_sub_div_acee4b6e7c777fd8f61778582e176ed1c}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Display\+Smoothness@{Set\+Display\+Smoothness}}
+\index{Set\+Display\+Smoothness@{Set\+Display\+Smoothness}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Display\+Smoothness()}{SetDisplaySmoothness()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Set\+Display\+Smoothness (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_sub_div_a7583b5d09f0eef70bad4563dffbb7e4d}{Fbx\+Sub\+Div\+::\+E\+Display\+Smoothness}}]{p\+Smoothness }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a2205b6c841b523ff9bf80cc473a7aa4e}\label{class_fbx_sub_div_a2205b6c841b523ff9bf80cc473a7aa4e}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Finest\+Mesh@{Set\+Finest\+Mesh}}
+\index{Set\+Finest\+Mesh@{Set\+Finest\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Finest\+Mesh()}{SetFinestMesh()}}
+{\footnotesize\ttfamily bool Fbx\+Sub\+Div\+::\+Set\+Finest\+Mesh (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a6ddec560144de0e8cc18ebf4c56ede8a}\label{class_fbx_sub_div_a6ddec560144de0e8cc18ebf4c56ede8a}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Level\+Count@{Set\+Level\+Count}}
+\index{Set\+Level\+Count@{Set\+Level\+Count}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Level\+Count()}{SetLevelCount()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Set\+Level\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Level\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_sub_div_a6185a554b2c8f5718631a62a8f6656b8}\label{class_fbx_sub_div_a6185a554b2c8f5718631a62a8f6656b8}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Subdiv\+Level\+Mesh@{Set\+Subdiv\+Level\+Mesh}}
+\index{Set\+Subdiv\+Level\+Mesh@{Set\+Subdiv\+Level\+Mesh}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Subdiv\+Level\+Mesh()}{SetSubdivLevelMesh()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Set\+Subdiv\+Level\+Mesh (\begin{DoxyParamCaption}\item[{int}]{p\+Level,  }\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+Set\+Subdiv\+Level\+Mesh Set certain subdivision mesh 
+\begin{DoxyParams}{引数}
+{\em p\+Level} & working level \\
+\hline
+{\em p\+Mesh} & new level mesh. p\+Level = 0 means base mesh, p\+Level = Max\+Level -\/1 means finest mesh \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_sub_div_aca6fac923a222a2f0b2841e0138559c0}\label{class_fbx_sub_div_aca6fac923a222a2f0b2841e0138559c0}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Subdiv\+Scheme@{Set\+Subdiv\+Scheme}}
+\index{Set\+Subdiv\+Scheme@{Set\+Subdiv\+Scheme}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Subdiv\+Scheme()}{SetSubdivScheme()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Set\+Subdiv\+Scheme (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_sub_div_aecdd4fdebb20f2796363989eba8ee9f5}{Fbx\+Sub\+Div\+::\+E\+Scheme}}]{p\+Scheme }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_sub_div_ab9489633777763369cc14a617d567488}\label{class_fbx_sub_div_ab9489633777763369cc14a617d567488}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!Set\+Tess\+Pattern@{Set\+Tess\+Pattern}}
+\index{Set\+Tess\+Pattern@{Set\+Tess\+Pattern}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{Set\+Tess\+Pattern()}{SetTessPattern()}}
+{\footnotesize\ttfamily void Fbx\+Sub\+Div\+::\+Set\+Tess\+Pattern (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_sub_div_a06cb3da0d9b384dc83585caa49f46684}{Fbx\+Sub\+Div\+::\+E\+Tesselation\+Pattern}}]{p\+Pattern }\end{DoxyParamCaption})}
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_sub_div_aa98ca1fbe21bbb387a56fe893d902a1e}\label{class_fbx_sub_div_aa98ca1fbe21bbb387a56fe893d902a1e}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL@{M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL}}
+\index{M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL@{M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL}{MAX\_SUBDIV\_LEVEL}}
+{\footnotesize\ttfamily const int Fbx\+Sub\+Div\+::\+M\+A\+X\+\_\+\+S\+U\+B\+D\+I\+V\+\_\+\+L\+E\+V\+EL = 16\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ fbxsubdiv.\+h の 72 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_sub_div_a4f4f0ffea9a17d4dc31ad9dcac3e89eb}\label{class_fbx_sub_div_a4f4f0ffea9a17d4dc31ad9dcac3e89eb}} 
+\index{Fbx\+Sub\+Div@{Fbx\+Sub\+Div}!m\+Sub\+Div\+Level@{m\+Sub\+Div\+Level}}
+\index{m\+Sub\+Div\+Level@{m\+Sub\+Div\+Level}!Fbx\+Sub\+Div@{Fbx\+Sub\+Div}}
+\subsubsection{\texorpdfstring{m\+Sub\+Div\+Level}{mSubDivLevel}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_array}{Fbx\+Array}$<$\hyperlink{class_fbx_mesh}{Fbx\+Mesh}$\ast$$>$ Fbx\+Sub\+Div\+::m\+Sub\+Div\+Level}
+
+
+
+ fbxsubdiv.\+h の 75 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxsubdiv_8h}{fbxsubdiv.\+h}\end{DoxyCompactItemize}

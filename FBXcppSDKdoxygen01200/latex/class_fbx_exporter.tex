@@ -1,0 +1,466 @@
+\hypertarget{class_fbx_exporter}{}\section{Fbx\+Exporter クラス}
+\label{class_fbx_exporter}\index{Fbx\+Exporter@{Fbx\+Exporter}}
+
+
+{\ttfamily \#include $<$fbxexporter.\+h$>$}
+
+Fbx\+Exporter の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_exporter}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_exporter_a0e26854a47b1fdbc100332b131552b7e}{Get\+Export\+Options} (\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+Fbx\+Object)
+\item 
+bool \hyperlink{class_fbx_exporter_ae14616d7e29cd9ae52cd6bbccd6d6988}{Export} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document, \hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$p\+Fbx\+Object)
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_exporter_aa308b9a9901e8c98d0b54f0bd20daad2}{Construct} (const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+From)
+\item 
+virtual void \hyperlink{class_fbx_exporter_a0a2569f6ed2ffaa165d9bdb1959f0599}{Destruct} (bool p\+Recursive)
+\item 
+virtual void \hyperlink{class_fbx_exporter_a1684b8488befbd05433963007bbaf3ad}{Set\+Or\+Create\+I\+O\+Settings} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$p\+I\+O\+Settings, bool p\+Allow\+N\+U\+LL)
+\item 
+void \hyperlink{class_fbx_exporter_a2ee7ea29532a88c85f811eff793a5961}{Reset} ()
+\item 
+bool \hyperlink{class_fbx_exporter_a212dd139e703f6531bb6cf0ba1bc88d9}{File\+Create} ()
+\item 
+void \hyperlink{class_fbx_exporter_a7802b8f3aaf4598bb8e799d0f2c829be}{File\+Close} ()
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_exporter_af010f0ee37fe98ae37cd7cbe976e7a74}{Export\+Thread} (void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Export Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_fbx_exporter_acab60199145f0c86b80fac8ed7e1b239}{Initialize} (const char $\ast$p\+File\+Name, int p\+File\+Format=-\/1, \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$p\+I\+O\+Settings=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+virtual bool \hyperlink{class_fbx_exporter_ae87b3014d3aa797617c530361296daa5}{Initialize} (\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$p\+Stream, void $\ast$p\+Stream\+Data=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}, int p\+File\+Format=-\/1, \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$p\+I\+O\+Settings=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+bool \hyperlink{class_fbx_exporter_a1d698ddca2a7720a3c05b00afea5b413}{Get\+Export\+Options} ()
+\item 
+\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$ \hyperlink{class_fbx_exporter_a80853ac3257f1cfb95478f969bdc002a}{Get\+I\+O\+Settings} ()
+\item 
+void \hyperlink{class_fbx_exporter_a072f9f312b878c796463bf9f9a2e43e0}{Set\+I\+O\+Settings} (\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$p\+I\+O\+Settings)
+\item 
+bool \hyperlink{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}{Export} (\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$p\+Document, bool p\+Non\+Blocking=false)
+\item 
+bool \hyperlink{class_fbx_exporter_a244daae57da4509caa361160f0ae3e23}{Is\+Exporting} (bool \&p\+Export\+Result)
+\item 
+float \hyperlink{class_fbx_exporter_a9063d4a8ee7c7dbe1c5deaeef6bfbd2d}{Get\+Progress} (\hyperlink{class_fbx_string}{Fbx\+String} $\ast$p\+Status=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+void \hyperlink{class_fbx_exporter_a37b5449c65be8b77eae754fb52da3c1c}{Set\+Progress\+Callback} (\hyperlink{fbxprogress_8h_a3765040904b462fb1f2673caba3488db}{Fbx\+Progress\+Callback} p\+Callback, void $\ast$p\+Args=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{File Format}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_exporter_abd4308d309fb09113ebe6d7828691505}{Get\+File\+Format} ()
+\item 
+bool \hyperlink{class_fbx_exporter_a1a304c76e28c89212d8eee1b6f791c38}{Is\+F\+BX} ()
+\item 
+char const  $\ast$const  $\ast$ \hyperlink{class_fbx_exporter_a06229d56de47b83aec05e7c150f66264}{Get\+Current\+Writable\+Versions} ()
+\item 
+bool \hyperlink{class_fbx_exporter_a165c1e0111a8770be2bea86043db5a46}{Set\+File\+Export\+Version} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Version, \hyperlink{class_fbx_scene_renamer_a9279ee1a645d6499b934adbc376f8678}{Fbx\+Scene\+Renamer\+::\+E\+Renaming\+Mode} p\+Renaming\+Mode=\hyperlink{class_fbx_scene_renamer_a9279ee1a645d6499b934adbc376f8678a6530ea605d82bb5be39517b65b47048e}{Fbx\+Scene\+Renamer\+::e\+None})
+\item 
+void \hyperlink{class_fbx_exporter_aeea95b702891fa350a03ab3e9aa949e1}{Set\+Resampling\+Rate} (double p\+Resampling\+Rate)
+\item 
+void \hyperlink{class_fbx_exporter_a4099cedc5a69045761b6fb6acd561bbf}{Set\+Default\+Render\+Resolution} (\hyperlink{class_fbx_string}{Fbx\+String} p\+Cam\+Name, \hyperlink{class_fbx_string}{Fbx\+String} p\+Resolution\+Mode, double pW, double pH)
+\item 
+\hyperlink{class_fbx_i_o_file_header_info}{Fbx\+I\+O\+File\+Header\+Info} $\ast$ \hyperlink{class_fbx_exporter_a9b219b2318ec3e5949a03b47e939251a}{Get\+File\+Header\+Info} ()
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+Class to export S\+DK objects into an F\+BX file. Normally this class is used as is. But for very special needs a user can override \hyperlink{class_fbx_exporter_acab60199145f0c86b80fac8ed7e1b239}{Initialize()} for special purpose.
+
+An exporter will select the appropriate writer to a particular file. Ex\+: When an exporter must export an F\+BX 7 file, the exporter will ask for all registered writers if an F\+BX 7 file writer is available, then if a writer is found, the exporter will create the specialized F\+BX 7 writer and write the file. This way, an exporter can \char`\"{}write\char`\"{} many different type of files like F\+BX 5/6/7, 3\+DS, Obj, Dxf, Collada, etc. \begin{DoxySeeAlso}{参照}
+\hyperlink{class_fbx_writer}{Fbx\+Writer}
+\end{DoxySeeAlso}
+Typical workflow for using the \hyperlink{class_fbx_exporter}{Fbx\+Exporter} class\+:
+\begin{DoxyEnumerate}
+\item create a S\+D\+K\+Manager
+\item create an I\+O\+Settings object
+\item create an empty scene
+\item create an exporter
+\item initialize it with a file name
+\item set numerous options to control how the exporter will behave.~\newline
+ ex\+: set I\+O\+Settings values to export Materials or Textures.
+\item call \hyperlink{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}{Fbx\+Exporter\+::\+Export()} with the entity to export.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+\textcolor{comment}{// ex:}
+\textcolor{comment}{// create a SdkManager}
+\hyperlink{class_fbx_manager}{FbxManager}* lSdkManager = \hyperlink{class_fbx_manager_af51cafc0f34f17d497f7921d847a4dd4}{FbxManager::Create}();
+
+\textcolor{comment}{// create an IOSettings object}
+\hyperlink{class_fbx_i_o_settings}{FbxIOSettings}* ios = FbxIOSettings::Create(lSdkManager, \hyperlink{fbxiosettingspath_8h_a57a5e54b72d0f2936d5ee84d8f510a0a}{IOSROOT});
+
+\textcolor{comment}{// set some IOSettings options }
+ios->\hyperlink{class_fbx_i_o_settings_ad2c660ef846b66dcf569079299391745}{SetBoolProp}(\hyperlink{fbxiosettingspath_8h_a204bbd602ba341a20acf870eef02027f}{EXP\_FBX\_MATERIAL}, \textcolor{keyword}{true});
+ios->\hyperlink{class_fbx_i_o_settings_ad2c660ef846b66dcf569079299391745}{SetBoolProp}(\hyperlink{fbxiosettingspath_8h_a157289a61920fd4b968bf370077222b2}{EXP\_FBX\_TEXTURE},  \textcolor{keyword}{true});
+
+\textcolor{comment}{// create an empty scene}
+\hyperlink{class_fbx_scene}{FbxScene}* lScene = FbxScene::Create(lSdkManager, \textcolor{stringliteral}{""});
+
+\textcolor{comment}{// create an exporter.}
+\hyperlink{class_fbx_exporter}{FbxExporter}* lExporter = FbxExporter::Create(lSdkManager, \textcolor{stringliteral}{""});
+
+\textcolor{comment}{// initialize the exporter by providing a filename and the IOSettings to use}
+lExporter->\hyperlink{class_fbx_exporter_acab60199145f0c86b80fac8ed7e1b239}{Initialize}(\textcolor{stringliteral}{"C:\(\backslash\)\(\backslash\)myfile.fbx"}, -1, ios);
+
+\textcolor{comment}{// export the scene.}
+lExporter->\hyperlink{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}{Export}(lScene); 
+ 
+\textcolor{comment}{// destroy the exporter}
+lExporter->\hyperlink{class_fbx_object_a7b49e6a0c17132cd7e2e7e8485a08915}{Destroy}();
+\end{DoxyCode}
+
+
+\begin{DoxyRemark}{注釈}
+According to the file suffix, a specialized writer will be created internally.~\newline
+ Ex\+: for .fbx files a F\+BX Writer, for .3ds files, a 3ds writer, etc.~\newline
+ Supported files formats\+: F\+BX 5/6/7 Binary \& A\+S\+C\+II, Collada, D\+XF, O\+BJ, 3\+DS 
+\end{DoxyRemark}
+
+
+ fbxexporter.\+h の 89 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_exporter_aa308b9a9901e8c98d0b54f0bd20daad2}\label{class_fbx_exporter_aa308b9a9901e8c98d0b54f0bd20daad2}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Construct@{Construct}}
+\index{Construct@{Construct}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Exporter\+::\+Construct (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+From }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+From} & If not null, the function must take it into account like a copy constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Construct(p\+From) at the beginning. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_i_o_base_aed70ed1326f8fb1cc96e2086c73722f8}{Fbx\+I\+O\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_exporter_a0a2569f6ed2ffaa165d9bdb1959f0599}\label{class_fbx_exporter_a0a2569f6ed2ffaa165d9bdb1959f0599}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Destruct@{Destruct}}
+\index{Destruct@{Destruct}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Destruct()}{Destruct()}}
+{\footnotesize\ttfamily virtual void Fbx\+Exporter\+::\+Destruct (\begin{DoxyParamCaption}\item[{bool}]{p\+Recursive }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional destructor override, automatically called by default destructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Recursive} & If true, children objects should be destroyed as well. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+In case it is decided to override this function, do not forget to call Parent\+Class\+::\+Destruct(p\+Resursive) at the end. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_object_a123e084d9b32b29c28af6384b7c3c608}{Fbx\+Object}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}\label{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Export@{Export}}
+\index{Export@{Export}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Export (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document,  }\item[{bool}]{p\+Non\+Blocking = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Export the document to the currently created file. 
+\begin{DoxyParams}{引数}
+{\em p\+Document} & Document to export. \\
+\hline
+{\em p\+Non\+Blocking} & If true, the export process will be executed in a new thread, allowing it to be non-\/blocking. To determine if the export finished, refer to the function \hyperlink{class_fbx_exporter_a244daae57da4509caa361160f0ae3e23}{Is\+Exporting()}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To identify the error that occurred, inspect the status object accessed using the \hyperlink{class_fbx_i_o_base_a078e47a99b119278ca3ee639e2da5b6d}{Get\+Status()} function. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_exporter_ae14616d7e29cd9ae52cd6bbccd6d6988}\label{class_fbx_exporter_ae14616d7e29cd9ae52cd6bbccd6d6988}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Export@{Export}}
+\index{Export@{Export}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Export()}{Export()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Export (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_document}{Fbx\+Document} $\ast$}]{p\+Document,  }\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+Fbx\+Object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_exporter_a7802b8f3aaf4598bb8e799d0f2c829be}\label{class_fbx_exporter_a7802b8f3aaf4598bb8e799d0f2c829be}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!File\+Close@{File\+Close}}
+\index{File\+Close@{File\+Close}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{File\+Close()}{FileClose()}}
+{\footnotesize\ttfamily void Fbx\+Exporter\+::\+File\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_exporter_a212dd139e703f6531bb6cf0ba1bc88d9}\label{class_fbx_exporter_a212dd139e703f6531bb6cf0ba1bc88d9}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!File\+Create@{File\+Create}}
+\index{File\+Create@{File\+Create}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{File\+Create()}{FileCreate()}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+File\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_exporter_a06229d56de47b83aec05e7c150f66264}\label{class_fbx_exporter_a06229d56de47b83aec05e7c150f66264}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+Current\+Writable\+Versions@{Get\+Current\+Writable\+Versions}}
+\index{Get\+Current\+Writable\+Versions@{Get\+Current\+Writable\+Versions}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+Current\+Writable\+Versions()}{GetCurrentWritableVersions()}}
+{\footnotesize\ttfamily char const$\ast$ const$\ast$ Fbx\+Exporter\+::\+Get\+Current\+Writable\+Versions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the list of writable versions for the current file format. \begin{DoxyReturn}{戻り値}
+{\ttfamily N\+U\+LL} or a null terminated array of strings. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+the strings returned match the writers registered for the current format. The array items can be retrieved with the following code\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} \textcolor{keyword}{const}* \textcolor{keyword}{const}* lWV = lExporter->\hyperlink{class_fbx_exporter_a06229d56de47b83aec05e7c150f66264}{GetCurrentWritableVersions}();
+\textcolor{keywordflow}{if} (lWV)
+\{
+    \textcolor{keywordtype}{int} i = 0;
+    \textcolor{keywordflow}{while} (lWV[i] != \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL})
+    \{
+        printf(\textcolor{stringliteral}{"fmt = %s\(\backslash\)n"}, lWV[i]);
+        i++;
+    \}
+\}
+\end{DoxyCode}
+ 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_exporter_a1d698ddca2a7720a3c05b00afea5b413}\label{class_fbx_exporter_a1d698ddca2a7720a3c05b00afea5b413}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+Export\+Options@{Get\+Export\+Options}}
+\index{Get\+Export\+Options@{Get\+Export\+Options}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+Export\+Options()}{GetExportOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Get\+Export\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Setup file export options settings. \begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_exporter_a0e26854a47b1fdbc100332b131552b7e}\label{class_fbx_exporter_a0e26854a47b1fdbc100332b131552b7e}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+Export\+Options@{Get\+Export\+Options}}
+\index{Get\+Export\+Options@{Get\+Export\+Options}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+Export\+Options()}{GetExportOptions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Get\+Export\+Options (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o}{Fbx\+IO} $\ast$}]{p\+Fbx\+Object }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_exporter_abd4308d309fb09113ebe6d7828691505}\label{class_fbx_exporter_abd4308d309fb09113ebe6d7828691505}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+File\+Format@{Get\+File\+Format}}
+\index{Get\+File\+Format@{Get\+File\+Format}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+File\+Format()}{GetFileFormat()}}
+{\footnotesize\ttfamily int Fbx\+Exporter\+::\+Get\+File\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the format of the exported file. \begin{DoxyReturn}{戻り値}
+File format identifier. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_exporter_a9b219b2318ec3e5949a03b47e939251a}\label{class_fbx_exporter_a9b219b2318ec3e5949a03b47e939251a}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+File\+Header\+Info@{Get\+File\+Header\+Info}}
+\index{Get\+File\+Header\+Info@{Get\+File\+Header\+Info}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+File\+Header\+Info()}{GetFileHeaderInfo()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_file_header_info}{Fbx\+I\+O\+File\+Header\+Info}$\ast$ Fbx\+Exporter\+::\+Get\+File\+Header\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the complete file header information. \begin{DoxyReturn}{戻り値}
+valid pointer to the complete header information 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_exporter_a80853ac3257f1cfb95478f969bdc002a}\label{class_fbx_exporter_a80853ac3257f1cfb95478f969bdc002a}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+I\+O\+Settings@{Get\+I\+O\+Settings}}
+\index{Get\+I\+O\+Settings@{Get\+I\+O\+Settings}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+I\+O\+Settings()}{GetIOSettings()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings}$\ast$ Fbx\+Exporter\+::\+Get\+I\+O\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Access to a I\+O\+Settings object. \begin{DoxyReturn}{戻り値}
+The pointer to I\+O\+Settings or {\ttfamily N\+U\+LL} {\ttfamily if} the object has not been allocated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_exporter_a9063d4a8ee7c7dbe1c5deaeef6bfbd2d}\label{class_fbx_exporter_a9063d4a8ee7c7dbe1c5deaeef6bfbd2d}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Get\+Progress@{Get\+Progress}}
+\index{Get\+Progress@{Get\+Progress}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Get\+Progress()}{GetProgress()}}
+{\footnotesize\ttfamily float Fbx\+Exporter\+::\+Get\+Progress (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String} $\ast$}]{p\+Status = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Get the progress status in non-\/blocking mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Status} & Optional current status string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Percentage of the finished workload. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_exporter_acab60199145f0c86b80fac8ed7e1b239}\label{class_fbx_exporter_acab60199145f0c86b80fac8ed7e1b239}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Exporter\+::\+Initialize (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+File\+Name,  }\item[{int}]{p\+File\+Format = {\ttfamily -\/1},  }\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$}]{p\+I\+O\+Settings = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize object. 
+\begin{DoxyParams}{引数}
+{\em p\+File\+Name} & Name of file to access. \\
+\hline
+{\em p\+File\+Format} & file format identifier User does not need to specify it by default. if not specified, plugin will detect the file format according to file suffix automatically. \\
+\hline
+{\em p\+I\+O\+Settings} & client I\+O\+Settings, if not specified, a default I\+O\+Settings will be created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To identify the error that occurred, inspect the status object accessed using the \hyperlink{class_fbx_i_o_base_a078e47a99b119278ca3ee639e2da5b6d}{Get\+Status()} function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_i_o_base_a01d70175d09a1e791e2ce38a9ae3c265}{Fbx\+I\+O\+Base}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_exporter_ae87b3014d3aa797617c530361296daa5}\label{class_fbx_exporter_ae87b3014d3aa797617c530361296daa5}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Fbx\+Exporter\+::\+Initialize (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_stream}{Fbx\+Stream} $\ast$}]{p\+Stream,  }\item[{void $\ast$}]{p\+Stream\+Data = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}},  }\item[{int}]{p\+File\+Format = {\ttfamily -\/1},  }\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$}]{p\+I\+O\+Settings = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initialize object. 
+\begin{DoxyParams}{引数}
+{\em p\+Stream} & stream to access. \\
+\hline
+{\em p\+Stream\+Data} & user-\/defined stream data. \\
+\hline
+{\em p\+File\+Format} & file format identifier User does not need to specify it by default. if not specified, plugin will request the file format from the stream. \\
+\hline
+{\em p\+I\+O\+Settings} & client I\+O\+Settings, if not specified, a default I\+O\+Settings will be created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+To identify the error that occurred, inspect the status object accessed using the \hyperlink{class_fbx_i_o_base_a078e47a99b119278ca3ee639e2da5b6d}{Get\+Status()} function. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_exporter_a244daae57da4509caa361160f0ae3e23}\label{class_fbx_exporter_a244daae57da4509caa361160f0ae3e23}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Is\+Exporting@{Is\+Exporting}}
+\index{Is\+Exporting@{Is\+Exporting}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Is\+Exporting()}{IsExporting()}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Is\+Exporting (\begin{DoxyParamCaption}\item[{bool \&}]{p\+Export\+Result }\end{DoxyParamCaption})}
+
+Check if the exporter is currently exporting. 
+\begin{DoxyParams}{引数}
+{\em p\+Export\+Result} & This parameter, after the export finished, will contain the result of the export success or failure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Return true if the exporter is currently exporting. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function will always return false if \hyperlink{class_fbx_exporter_a8a92372cf76fe3486a798c87973cc791}{Export()} was called with p\+Non\+Blocking set to false. This function should be used only in the context of p\+Non\+Blocking set to true. It is very important to periodically check if the export finished using this function, since it will also free up the thread\textquotesingle{}s allocations when its done. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_exporter_a1a304c76e28c89212d8eee1b6f791c38}\label{class_fbx_exporter_a1a304c76e28c89212d8eee1b6f791c38}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Is\+F\+BX@{Is\+F\+BX}}
+\index{Is\+F\+BX@{Is\+F\+BX}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Is\+F\+B\+X()}{IsFBX()}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Is\+F\+BX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return {\ttfamily true} if the file format is a recognized F\+BX format. \mbox{\Hypertarget{class_fbx_exporter_a2ee7ea29532a88c85f811eff793a5961}\label{class_fbx_exporter_a2ee7ea29532a88c85f811eff793a5961}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void Fbx\+Exporter\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_exporter_a4099cedc5a69045761b6fb6acd561bbf}\label{class_fbx_exporter_a4099cedc5a69045761b6fb6acd561bbf}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Set\+Default\+Render\+Resolution@{Set\+Default\+Render\+Resolution}}
+\index{Set\+Default\+Render\+Resolution@{Set\+Default\+Render\+Resolution}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Set\+Default\+Render\+Resolution()}{SetDefaultRenderResolution()}}
+{\footnotesize\ttfamily void Fbx\+Exporter\+::\+Set\+Default\+Render\+Resolution (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Cam\+Name,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Resolution\+Mode,  }\item[{double}]{pW,  }\item[{double}]{pH }\end{DoxyParamCaption})}
+
+Set the default rendering resolution. 
+\begin{DoxyParams}{引数}
+{\em p\+Cam\+Name} & name of the camera. \\
+\hline
+{\em p\+Resolution\+Mode} & resolution mode. \\
+\hline
+{\em pW} & width. \\
+\hline
+{\em pH} & height. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+These values are ignored when exporting to F\+BX 7.\+x and higher. With F\+BX version 6.\+x and lower, the Header\+Info is still accessible for legacy reasons and any other custom writers. For F\+BX filles, these values are used by the F\+BX Quick\+Time plug-\/in (obsolete now) to help it get the window size without loading the whole file. The information contained in the \hyperlink{class_fbx_i_o_file_header_info}{Fbx\+I\+O\+File\+Header\+Info} is a duplicate of Aspect\+Ratio\+Mode, Aspect\+Width and Aspect\+Height properties defined in the \hyperlink{class_fbx_camera}{Fbx\+Camera} class. Retrieveing the File\+Header\+Info starting from F\+BX 7.\+x will always return the uninitialized structure. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_exporter_a165c1e0111a8770be2bea86043db5a46}\label{class_fbx_exporter_a165c1e0111a8770be2bea86043db5a46}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Set\+File\+Export\+Version@{Set\+File\+Export\+Version}}
+\index{Set\+File\+Export\+Version@{Set\+File\+Export\+Version}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Set\+File\+Export\+Version()}{SetFileExportVersion()}}
+{\footnotesize\ttfamily bool Fbx\+Exporter\+::\+Set\+File\+Export\+Version (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Version,  }\item[{\hyperlink{class_fbx_scene_renamer_a9279ee1a645d6499b934adbc376f8678}{Fbx\+Scene\+Renamer\+::\+E\+Renaming\+Mode}}]{p\+Renaming\+Mode = {\ttfamily \hyperlink{class_fbx_scene_renamer_a9279ee1a645d6499b934adbc376f8678a6530ea605d82bb5be39517b65b47048e}{Fbx\+Scene\+Renamer\+::e\+None}} }\end{DoxyParamCaption})}
+
+Set file version for a given file format. 
+\begin{DoxyParams}{引数}
+{\em p\+Version} & String description of the file format. \\
+\hline
+{\em p\+Renaming\+Mode} & Renaming mode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if mode is set correctly 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_exporter_a072f9f312b878c796463bf9f9a2e43e0}\label{class_fbx_exporter_a072f9f312b878c796463bf9f9a2e43e0}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Set\+I\+O\+Settings@{Set\+I\+O\+Settings}}
+\index{Set\+I\+O\+Settings@{Set\+I\+O\+Settings}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Set\+I\+O\+Settings()}{SetIOSettings()}}
+{\footnotesize\ttfamily void Fbx\+Exporter\+::\+Set\+I\+O\+Settings (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$}]{p\+I\+O\+Settings }\end{DoxyParamCaption})}
+
+Set the I\+O\+Settings pointer 
+\begin{DoxyParams}{引数}
+{\em p\+I\+O\+Settings} & Pointer on a \hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_exporter_a1684b8488befbd05433963007bbaf3ad}\label{class_fbx_exporter_a1684b8488befbd05433963007bbaf3ad}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Set\+Or\+Create\+I\+O\+Settings@{Set\+Or\+Create\+I\+O\+Settings}}
+\index{Set\+Or\+Create\+I\+O\+Settings@{Set\+Or\+Create\+I\+O\+Settings}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Set\+Or\+Create\+I\+O\+Settings()}{SetOrCreateIOSettings()}}
+{\footnotesize\ttfamily virtual void Fbx\+Exporter\+::\+Set\+Or\+Create\+I\+O\+Settings (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_i_o_settings}{Fbx\+I\+O\+Settings} $\ast$}]{p\+I\+O\+Settings,  }\item[{bool}]{p\+Allow\+N\+U\+LL }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_exporter_a37b5449c65be8b77eae754fb52da3c1c}\label{class_fbx_exporter_a37b5449c65be8b77eae754fb52da3c1c}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Set\+Progress\+Callback@{Set\+Progress\+Callback}}
+\index{Set\+Progress\+Callback@{Set\+Progress\+Callback}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Set\+Progress\+Callback()}{SetProgressCallback()}}
+{\footnotesize\ttfamily void Fbx\+Exporter\+::\+Set\+Progress\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{fbxprogress_8h_a3765040904b462fb1f2673caba3488db}{Fbx\+Progress\+Callback}}]{p\+Callback,  }\item[{void $\ast$}]{p\+Args = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Register a callback function for progress reporting in single thread mode. 
+\begin{DoxyParams}{引数}
+{\em p\+Callback} & Pointer of the callback function. \\
+\hline
+{\em p\+Args} & Pointer to the arguments passed to the callback function. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_exporter_aeea95b702891fa350a03ab3e9aa949e1}\label{class_fbx_exporter_aeea95b702891fa350a03ab3e9aa949e1}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Set\+Resampling\+Rate@{Set\+Resampling\+Rate}}
+\index{Set\+Resampling\+Rate@{Set\+Resampling\+Rate}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Set\+Resampling\+Rate()}{SetResamplingRate()}}
+{\footnotesize\ttfamily void Fbx\+Exporter\+::\+Set\+Resampling\+Rate (\begin{DoxyParamCaption}\item[{double}]{p\+Resampling\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the resampling rate (only used when exporting to F\+BX 5.\+3 and lower) 
+\begin{DoxyParams}{引数}
+{\em p\+Resampling\+Rate} & resampling rate \\
+\hline
+\end{DoxyParams}
+
+
+ fbxexporter.\+h の 215 行目に定義があります。
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_exporter_af010f0ee37fe98ae37cd7cbe976e7a74}\label{class_fbx_exporter_af010f0ee37fe98ae37cd7cbe976e7a74}} 
+\index{Fbx\+Exporter@{Fbx\+Exporter}!Export\+Thread@{Export\+Thread}}
+\index{Export\+Thread@{Export\+Thread}!Fbx\+Exporter@{Fbx\+Exporter}}
+\subsubsection{\texorpdfstring{Export\+Thread}{ExportThread}}
+{\footnotesize\ttfamily void Export\+Thread (\begin{DoxyParamCaption}\item[{void $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/fileio/\hyperlink{fbxexporter_8h}{fbxexporter.\+h}\end{DoxyCompactItemize}

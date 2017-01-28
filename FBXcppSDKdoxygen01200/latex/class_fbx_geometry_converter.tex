@@ -1,0 +1,515 @@
+\hypertarget{class_fbx_geometry_converter}{}\section{Fbx\+Geometry\+Converter クラス}
+\label{class_fbx_geometry_converter}\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+
+
+{\ttfamily \#include $<$fbxgeometryconverter.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a26aa6da6240c0293e449958f8a58a779}{Recenter\+Scene\+To\+World\+Center} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double} p\+Threshold)
+\item 
+\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$ \hyperlink{class_fbx_geometry_converter_a0870c4520e42e88aaed5c5a8cca0c7ec}{Merge\+Meshes} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ \&p\+Mesh\+Nodes, const char $\ast$p\+Node\+Name, \hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene)
+\item 
+void \hyperlink{class_fbx_geometry_converter_ae9f8c321399875d9d5df3ae49ebf428d}{Remove\+Bad\+Polygons\+From\+Meshes} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, \hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ $\ast$p\+Affected\+Nodes=\hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL})
+\item 
+\hyperlink{class_fbx_geometry_converter_a6eada73a1b581c807d55b44941d3d7be}{Fbx\+Geometry\+Converter} (\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$p\+Manager)
+\item 
+\hyperlink{class_fbx_geometry_converter_ab3950419ba338daaa002afc4e73d70fa}{$\sim$\+Fbx\+Geometry\+Converter} ()
+\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_geometry_converter_af608b805e0fdfadf8f73af0f1e948bf5}{Fbx\+Writer3ds}
+\end{DoxyCompactItemize}
+\subsection*{Triangulation Utilities}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a472eeb2876199b239ce84807a5b4812b}{Triangulate} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, bool p\+Replace, bool p\+Legacy=false)
+\item 
+\hyperlink{class_fbx_node_attribute}{Fbx\+Node\+Attribute} $\ast$ \hyperlink{class_fbx_geometry_converter_aeef7518f4f50b7afc7e7f429eef8aa8d}{Triangulate} (\hyperlink{class_fbx_node_attribute}{Fbx\+Node\+Attribute} $\ast$p\+Node\+Attribute, bool p\+Replace, bool p\+Legacy=false)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a3ee0a5af2ed44232dfda82fecd00a875}{Compute\+Geometry\+Control\+Points\+Weighted\+Mapping} (\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Src\+Geom, \hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$p\+Dst\+Geom, \hyperlink{class_fbx_weighted_mapping}{Fbx\+Weighted\+Mapping} $\ast$p\+Src\+To\+Dst\+Weighted\+Mapping, bool p\+Swap\+UV=false)
+\end{DoxyCompactItemize}
+\subsection*{Geometry Conversion}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$ \hyperlink{class_fbx_geometry_converter_a3164d027c0c9251642f8e48f6a59f662}{Convert\+Patch\+To\+Nurbs} (\hyperlink{class_fbx_patch}{Fbx\+Patch} $\ast$p\+Patch)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_acc457be0a21f7566ff8bdd0d9a704b46}{Convert\+Patch\+To\+Nurbs\+In\+Place} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$ \hyperlink{class_fbx_geometry_converter_a8c29f94bf91e84d6ee4e665ed9632e09}{Convert\+Patch\+To\+Nurbs\+Surface} (\hyperlink{class_fbx_patch}{Fbx\+Patch} $\ast$p\+Patch)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_afd5bc619771c69c680b2da7ae4d0c2e4}{Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$ \hyperlink{class_fbx_geometry_converter_a33fe5cce26020e2687dcd1b1e05109a4}{Convert\+Nurbs\+To\+Nurbs\+Surface} (\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$p\+Nurbs)
+\item 
+\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$ \hyperlink{class_fbx_geometry_converter_aeccff6de5e2abd1f8625147b5e061b8b}{Convert\+Nurbs\+Surface\+To\+Nurbs} (\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$p\+Nurbs)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_ae8662fd4c468b6e18b276f3ef353fe2f}{Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a82c9ea1ab75c8eefd555b4c538f3bbb7}{Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place} (\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$p\+Node)
+\end{DoxyCompactItemize}
+\subsection*{Nurb UV and Links Swapping}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$ \hyperlink{class_fbx_geometry_converter_a5b6352d91ef28ac20c8b759496064fa3}{Flip\+Nurbs} (\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$p\+Nurbs, bool p\+Swap\+UV, bool p\+Swap\+Clusters)
+\item 
+\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$ \hyperlink{class_fbx_geometry_converter_a1fcc73c0f44390bf3ac13f8a796e34de}{Flip\+Nurbs\+Surface} (\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$p\+Nurbs, bool p\+Swap\+UV, bool p\+Swap\+Clusters)
+\end{DoxyCompactItemize}
+\subsection*{Normals By Polygon Vertex Emulation}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a3c79ca6723b51b564842b9563f67102f}{Emulate\+Normals\+By\+Polygon\+Vertex} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_acf3f1e784136f58c62d8516777825bf7}{Compute\+Edge\+Smoothing\+From\+Normals} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh) const
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a82e299d731d7e52443f7f0c7aaa61ce4}{Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, int p\+Index=0) const
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a65bb00283eddbd2e2c34b723e134d147}{Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, int p\+Index=0) const
+\end{DoxyCompactItemize}
+\subsection*{Split Mesh Per Materials}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_geometry_converter_aed7a7dd03d949e08e008262fd5b57421}{Split\+Meshes\+Per\+Material} (\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$p\+Scene, bool p\+Replace)
+\item 
+bool \hyperlink{class_fbx_geometry_converter_a3b48927a9d9394344598d1e9e80499bf}{Split\+Mesh\+Per\+Material} (\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$p\+Mesh, bool p\+Replace)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class provides the functionality to convert geometry nodes attributes (\hyperlink{class_fbx_mesh}{Fbx\+Mesh}, \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} and \hyperlink{class_fbx_patch}{Fbx\+Patch}) and mainly focuses on the two major categories\+: Triangulation and conversion between N\+U\+R\+BS and Patches surfaces. 
+
+ fbxgeometryconverter.\+h の 41 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a6eada73a1b581c807d55b44941d3d7be}\label{class_fbx_geometry_converter_a6eada73a1b581c807d55b44941d3d7be}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Fbx\+Geometry\+Converter()}{FbxGeometryConverter()}}
+{\footnotesize\ttfamily Fbx\+Geometry\+Converter\+::\+Fbx\+Geometry\+Converter (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_manager}{Fbx\+Manager} $\ast$}]{p\+Manager }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fbx_geometry_converter_ab3950419ba338daaa002afc4e73d70fa}\label{class_fbx_geometry_converter_ab3950419ba338daaa002afc4e73d70fa}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!````~Fbx\+Geometry\+Converter@{$\sim$\+Fbx\+Geometry\+Converter}}
+\index{````~Fbx\+Geometry\+Converter@{$\sim$\+Fbx\+Geometry\+Converter}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Geometry\+Converter()}{~FbxGeometryConverter()}}
+{\footnotesize\ttfamily Fbx\+Geometry\+Converter\+::$\sim$\+Fbx\+Geometry\+Converter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_geometry_converter_acf3f1e784136f58c62d8516777825bf7}\label{class_fbx_geometry_converter_acf3f1e784136f58c62d8516777825bf7}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Compute\+Edge\+Smoothing\+From\+Normals@{Compute\+Edge\+Smoothing\+From\+Normals}}
+\index{Compute\+Edge\+Smoothing\+From\+Normals@{Compute\+Edge\+Smoothing\+From\+Normals}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Compute\+Edge\+Smoothing\+From\+Normals()}{ComputeEdgeSmoothingFromNormals()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Compute\+Edge\+Smoothing\+From\+Normals (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption}) const}
+
+Create edge smoothing information from polygon-\/vertex mapped normals. Existing smoothing information is removed and edge data is created if none exists on the mesh. 
+\begin{DoxyParams}{引数}
+{\em p\+Mesh} & The mesh used to generate edge smoothing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The edge smoothing data is placed on Layer 0 of the mesh. Normals do not need to be on Layer 0, since the first layer with per polygon vertex normals is used. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a65bb00283eddbd2e2c34b723e134d147}\label{class_fbx_geometry_converter_a65bb00283eddbd2e2c34b723e134d147}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing@{Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing}}
+\index{Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing@{Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing()}{ComputeEdgeSmoothingFromPolygonSmoothing()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Compute\+Edge\+Smoothing\+From\+Polygon\+Smoothing (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Convert polygon smoothing group to edge smoothing. Existing smoothing information is replaced.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Mesh} & The mesh that contains the smoothing to be converted. \\
+\hline
+{\em p\+Index} & The index of the layer smoothing to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a3ee0a5af2ed44232dfda82fecd00a875}\label{class_fbx_geometry_converter_a3ee0a5af2ed44232dfda82fecd00a875}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Compute\+Geometry\+Control\+Points\+Weighted\+Mapping@{Compute\+Geometry\+Control\+Points\+Weighted\+Mapping}}
+\index{Compute\+Geometry\+Control\+Points\+Weighted\+Mapping@{Compute\+Geometry\+Control\+Points\+Weighted\+Mapping}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Compute\+Geometry\+Control\+Points\+Weighted\+Mapping()}{ComputeGeometryControlPointsWeightedMapping()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Compute\+Geometry\+Control\+Points\+Weighted\+Mapping (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Src\+Geom,  }\item[{\hyperlink{class_fbx_geometry}{Fbx\+Geometry} $\ast$}]{p\+Dst\+Geom,  }\item[{\hyperlink{class_fbx_weighted_mapping}{Fbx\+Weighted\+Mapping} $\ast$}]{p\+Src\+To\+Dst\+Weighted\+Mapping,  }\item[{bool}]{p\+Swap\+UV = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Compute a \char`\"{}vertex-\/correspondence\char`\"{} table that helps passing from source to destination geometry. 
+\begin{DoxyParams}{引数}
+{\em p\+Src\+Geom} & Pointer to the source geometry. \\
+\hline
+{\em p\+Dst\+Geom} & Pointer to the destination geometry. \\
+\hline
+{\em p\+Src\+To\+Dst\+Weighted\+Mapping} & Pointer to the weighted mapping table. \\
+\hline
+{\em p\+Swap\+UV} & Set to {\ttfamily true} to swap U\+Vs. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} if the function fails to compute the correspondence. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+Skins and shapes are also converted to fit the alternate geometry. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a82e299d731d7e52443f7f0c7aaa61ce4}\label{class_fbx_geometry_converter_a82e299d731d7e52443f7f0c7aaa61ce4}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing@{Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing}}
+\index{Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing@{Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing()}{ComputePolygonSmoothingFromEdgeSmoothing()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Compute\+Polygon\+Smoothing\+From\+Edge\+Smoothing (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{int}]{p\+Index = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Convert edge smoothing to polygon smoothing group. Existing smoothing information is replaced.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Mesh} & The mesh that contains the smoothing to be converted. \\
+\hline
+{\em p\+Index} & The index of the layer smoothing to be converted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The smoothing group is bitwise. Each bit of the integer represents one smoothing group. Therefore, there is a maximum of 32 smoothing groups. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_aeccff6de5e2abd1f8625147b5e061b8b}\label{class_fbx_geometry_converter_aeccff6de5e2abd1f8625147b5e061b8b}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Nurbs\+Surface\+To\+Nurbs@{Convert\+Nurbs\+Surface\+To\+Nurbs}}
+\index{Convert\+Nurbs\+Surface\+To\+Nurbs@{Convert\+Nurbs\+Surface\+To\+Nurbs}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Nurbs\+Surface\+To\+Nurbs()}{ConvertNurbsSurfaceToNurbs()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}$\ast$ Fbx\+Geometry\+Converter\+::\+Convert\+Nurbs\+Surface\+To\+Nurbs (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+Convert a \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} to a \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} 
+\begin{DoxyParams}{引数}
+{\em p\+Nurbs} & Pointer to the original nurbs surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} that is equivalent to the original nurbs surface. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a82c9ea1ab75c8eefd555b4c538f3bbb7}\label{class_fbx_geometry_converter_a82c9ea1ab75c8eefd555b4c538f3bbb7}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place@{Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place}}
+\index{Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place@{Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place()}{ConvertNurbsSurfaceToNurbsInPlace()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Convert\+Nurbs\+Surface\+To\+Nurbs\+In\+Place (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Convert a nurb contained in a node to a nurbs surface. Use this function to preserve the nurb\textquotesingle{}s skins and shapes animation channels. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Pointer to the node containing the nurbs surface. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a33fe5cce26020e2687dcd1b1e05109a4}\label{class_fbx_geometry_converter_a33fe5cce26020e2687dcd1b1e05109a4}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Nurbs\+To\+Nurbs\+Surface@{Convert\+Nurbs\+To\+Nurbs\+Surface}}
+\index{Convert\+Nurbs\+To\+Nurbs\+Surface@{Convert\+Nurbs\+To\+Nurbs\+Surface}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Nurbs\+To\+Nurbs\+Surface()}{ConvertNurbsToNurbsSurface()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface}$\ast$ Fbx\+Geometry\+Converter\+::\+Convert\+Nurbs\+To\+Nurbs\+Surface (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$}]{p\+Nurbs }\end{DoxyParamCaption})}
+
+Convert a \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} to a \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} 
+\begin{DoxyParams}{引数}
+{\em p\+Nurbs} & Pointer to the original nurb \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} that is equivalent to the original nurb. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_ae8662fd4c468b6e18b276f3ef353fe2f}\label{class_fbx_geometry_converter_ae8662fd4c468b6e18b276f3ef353fe2f}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place@{Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place}}
+\index{Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place@{Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place()}{ConvertNurbsToNurbsSurfaceInPlace()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Convert\+Nurbs\+To\+Nurbs\+Surface\+In\+Place (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Convert a nurb, contained in a node, to a nurbs surface. Use this function to preserve the nurb\textquotesingle{}s skins and shapes animation channels. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Pointer to the node containing the nurb. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a3164d027c0c9251642f8e48f6a59f662}\label{class_fbx_geometry_converter_a3164d027c0c9251642f8e48f6a59f662}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Patch\+To\+Nurbs@{Convert\+Patch\+To\+Nurbs}}
+\index{Convert\+Patch\+To\+Nurbs@{Convert\+Patch\+To\+Nurbs}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Patch\+To\+Nurbs()}{ConvertPatchToNurbs()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}$\ast$ Fbx\+Geometry\+Converter\+::\+Convert\+Patch\+To\+Nurbs (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_patch}{Fbx\+Patch} $\ast$}]{p\+Patch }\end{DoxyParamCaption})}
+
+Convert from patch to nurb. 
+\begin{DoxyParams}{引数}
+{\em p\+Patch} & Pointer to the patch to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Created nurb or {\ttfamily N\+U\+LL} if the conversion fails. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The patch must be of type e\+B\+Spline, e\+Bezier or e\+Linear. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_acc457be0a21f7566ff8bdd0d9a704b46}\label{class_fbx_geometry_converter_acc457be0a21f7566ff8bdd0d9a704b46}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Patch\+To\+Nurbs\+In\+Place@{Convert\+Patch\+To\+Nurbs\+In\+Place}}
+\index{Convert\+Patch\+To\+Nurbs\+In\+Place@{Convert\+Patch\+To\+Nurbs\+In\+Place}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Patch\+To\+Nurbs\+In\+Place()}{ConvertPatchToNurbsInPlace()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Convert\+Patch\+To\+Nurbs\+In\+Place (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Convert a patch contained in a node to a nurb. Use this function to preserve the patch\textquotesingle{}s skins and shapes animation channels. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Pointer to the node containing the patch. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} if the node attribute is not a patch. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The patch must be of type e\+B\+Spline, e\+Bezier or e\+Linear. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a8c29f94bf91e84d6ee4e665ed9632e09}\label{class_fbx_geometry_converter_a8c29f94bf91e84d6ee4e665ed9632e09}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Patch\+To\+Nurbs\+Surface@{Convert\+Patch\+To\+Nurbs\+Surface}}
+\index{Convert\+Patch\+To\+Nurbs\+Surface@{Convert\+Patch\+To\+Nurbs\+Surface}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Patch\+To\+Nurbs\+Surface()}{ConvertPatchToNurbsSurface()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface}$\ast$ Fbx\+Geometry\+Converter\+::\+Convert\+Patch\+To\+Nurbs\+Surface (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_patch}{Fbx\+Patch} $\ast$}]{p\+Patch }\end{DoxyParamCaption})}
+
+Convert a patch to nurb surface. 
+\begin{DoxyParams}{引数}
+{\em p\+Patch} & Pointer to the patch to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Created nurb surface or {\ttfamily N\+U\+LL} if conversion fails. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The patch must be of type e\+B\+Spline, e\+Bezier or e\+Linear. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_afd5bc619771c69c680b2da7ae4d0c2e4}\label{class_fbx_geometry_converter_afd5bc619771c69c680b2da7ae4d0c2e4}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place@{Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place}}
+\index{Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place@{Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place()}{ConvertPatchToNurbsSurfaceInPlace()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Convert\+Patch\+To\+Nurbs\+Surface\+In\+Place (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node}{Fbx\+Node} $\ast$}]{p\+Node }\end{DoxyParamCaption})}
+
+Convert a patch contained in a node to a nurb surface. Use this function to preserve the patch\textquotesingle{}s skins and shapes animation channels. 
+\begin{DoxyParams}{引数}
+{\em p\+Node} & Pointer to the node containing the patch. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} if the node attribute is not a patch. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The patch must be of type e\+B\+Spline, e\+Bezier or e\+Linear. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a3c79ca6723b51b564842b9563f67102f}\label{class_fbx_geometry_converter_a3c79ca6723b51b564842b9563f67102f}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Emulate\+Normals\+By\+Polygon\+Vertex@{Emulate\+Normals\+By\+Polygon\+Vertex}}
+\index{Emulate\+Normals\+By\+Polygon\+Vertex@{Emulate\+Normals\+By\+Polygon\+Vertex}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Emulate\+Normals\+By\+Polygon\+Vertex()}{EmulateNormalsByPolygonVertex()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Emulate\+Normals\+By\+Polygon\+Vertex (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh }\end{DoxyParamCaption})}
+
+Emulate normals by polygon vertex mode for a mesh. 
+\begin{DoxyParams}{引数}
+{\em p\+Mesh} & Pointer to the mesh object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} if the number of normals in the mesh and in its associated shapes don\textquotesingle{}t match the number of polygon vertices. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+For applications that only supports normals by control points, this function duplicates control points to equal the number of polygon vertices. skins and shapes are also converted. As preconditions\+:
+\begin{DoxyEnumerate}
+\item polygons must have been created
+\item the number of normals in the mesh and in its associated shapes must match the number of polygon vertices. 
+\end{DoxyEnumerate}
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a5b6352d91ef28ac20c8b759496064fa3}\label{class_fbx_geometry_converter_a5b6352d91ef28ac20c8b759496064fa3}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Flip\+Nurbs@{Flip\+Nurbs}}
+\index{Flip\+Nurbs@{Flip\+Nurbs}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Flip\+Nurbs()}{FlipNurbs()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}$\ast$ Fbx\+Geometry\+Converter\+::\+Flip\+Nurbs (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_nurbs}{Fbx\+Nurbs} $\ast$}]{p\+Nurbs,  }\item[{bool}]{p\+Swap\+UV,  }\item[{bool}]{p\+Swap\+Clusters }\end{DoxyParamCaption})}
+
+Flip UV and/or skin clusters of a nurb. 
+\begin{DoxyParams}{引数}
+{\em p\+Nurbs} & Pointer to the Source nurb. \\
+\hline
+{\em p\+Swap\+UV} & Set to {\ttfamily true} to swap the U\+Vs. \\
+\hline
+{\em p\+Swap\+Clusters} & Set to {\ttfamily true} to swap the control point indices of clusters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A flipped \hyperlink{class_fbx_nurbs}{Fbx\+Nurbs}, or {\ttfamily N\+U\+LL} if the function fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a1fcc73c0f44390bf3ac13f8a796e34de}\label{class_fbx_geometry_converter_a1fcc73c0f44390bf3ac13f8a796e34de}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Flip\+Nurbs\+Surface@{Flip\+Nurbs\+Surface}}
+\index{Flip\+Nurbs\+Surface@{Flip\+Nurbs\+Surface}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Flip\+Nurbs\+Surface()}{FlipNurbsSurface()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface}$\ast$ Fbx\+Geometry\+Converter\+::\+Flip\+Nurbs\+Surface (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface} $\ast$}]{p\+Nurbs,  }\item[{bool}]{p\+Swap\+UV,  }\item[{bool}]{p\+Swap\+Clusters }\end{DoxyParamCaption})}
+
+Flip UV and/or skin clusters of a nurb surface. 
+\begin{DoxyParams}{引数}
+{\em p\+Nurbs} & Pointer to the Source nurb surface. \\
+\hline
+{\em p\+Swap\+UV} & Set to {\ttfamily true} to swap the U\+Vs. \\
+\hline
+{\em p\+Swap\+Clusters} & Set to {\ttfamily true} to swap the control point indices of clusters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A flipped \hyperlink{class_fbx_nurbs_surface}{Fbx\+Nurbs\+Surface}, or {\ttfamily N\+U\+LL} if the function fails. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a0870c4520e42e88aaed5c5a8cca0c7ec}\label{class_fbx_geometry_converter_a0870c4520e42e88aaed5c5a8cca0c7ec}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Merge\+Meshes@{Merge\+Meshes}}
+\index{Merge\+Meshes@{Merge\+Meshes}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Merge\+Meshes()}{MergeMeshes()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node}{Fbx\+Node}$\ast$ Fbx\+Geometry\+Converter\+::\+Merge\+Meshes (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ \&}]{p\+Mesh\+Nodes,  }\item[{const char $\ast$}]{p\+Node\+Name,  }\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene }\end{DoxyParamCaption})}
+
+Merge multiple meshes to one mesh. The method will merge\+: a) mesh vertex; b) mesh polygon; c) mesh edge; d) all mesh elements; only the layer 0 elements is merged. e) if there are skins for old mesh, merge these skins. The new skin clusters link to old skeletons.
+
+
+\begin{DoxyParams}{引数}
+{\em p\+Mesh\+Nodes} & F\+BX nodes that hold multiple meshes. These meshes will be merged. \\
+\hline
+{\em p\+Node\+Name} & Name of new mesh node. \\
+\hline
+{\em p\+Scene} & The scene that will contain the new mesh node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The new mesh node if merge successfully, otherwise N\+U\+LL is returned. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This method creates a new mesh, leaving the source mesh unchanged. The transform of new mesh node is\+: translate (0, 0, 0), rotation (0, 0, 0), scale (1, 1, 1). For layer element material, normal, smoothing, UV set, vertex color, binormal, tangent and polygon group, if any mesh misses these element, the merge for this kind of element is skipped. For layer element crease, hole, visibility and user data, if any mesh has such element, the kind of element will be merged. The missing element will be filled with default values. For meshes with skin binding, if the pose of frame 0 is different with bind pose, the new mesh will be distorted. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a26aa6da6240c0293e449958f8a58a779}\label{class_fbx_geometry_converter_a26aa6da6240c0293e449958f8a58a779}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Recenter\+Scene\+To\+World\+Center@{Recenter\+Scene\+To\+World\+Center}}
+\index{Recenter\+Scene\+To\+World\+Center@{Recenter\+Scene\+To\+World\+Center}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Recenter\+Scene\+To\+World\+Center()}{RecenterSceneToWorldCenter()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Recenter\+Scene\+To\+World\+Center (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{fbxtypes_8h_a171e72a1c46fc15c1a6c9c31948c1c5b}{Fbx\+Double}}]{p\+Threshold }\end{DoxyParamCaption})}
+
+Re-\/parent nodes at root node level under a new node to re-\/center them at world center. Basically, this function calculates the scene bounding box in world coordinates, and test if the center of that bounding box distance from the world center is larger or equal than the threshold. If true, a new node with the proper negative offset position will become the new parent of all nodes at root node level. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to process. \\
+\hline
+{\em p\+Threshold} & Threshold at which all nodes will be re-\/centered. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if any nodes were re-\/centered, otherwise {\ttfamily false}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_geometry_converter_ae9f8c321399875d9d5df3ae49ebf428d}\label{class_fbx_geometry_converter_ae9f8c321399875d9d5df3ae49ebf428d}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Remove\+Bad\+Polygons\+From\+Meshes@{Remove\+Bad\+Polygons\+From\+Meshes}}
+\index{Remove\+Bad\+Polygons\+From\+Meshes@{Remove\+Bad\+Polygons\+From\+Meshes}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Remove\+Bad\+Polygons\+From\+Meshes()}{RemoveBadPolygonsFromMeshes()}}
+{\footnotesize\ttfamily void Fbx\+Geometry\+Converter\+::\+Remove\+Bad\+Polygons\+From\+Meshes (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ \hyperlink{class_fbx_node}{Fbx\+Node} $\ast$$>$ $\ast$}]{p\+Affected\+Nodes = {\ttfamily \hyperlink{fbxarch_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}} }\end{DoxyParamCaption})}
+
+Cleanup or remove degenerated meshes. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to process. \\
+\hline
+{\em p\+Affected\+Nodes} & The list of nodes that have been affected by this operation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If the cleaned-\/up mesh becomes invalid, it is removed entirely. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_aed7a7dd03d949e08e008262fd5b57421}\label{class_fbx_geometry_converter_aed7a7dd03d949e08e008262fd5b57421}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Split\+Meshes\+Per\+Material@{Split\+Meshes\+Per\+Material}}
+\index{Split\+Meshes\+Per\+Material@{Split\+Meshes\+Per\+Material}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Split\+Meshes\+Per\+Material()}{SplitMeshesPerMaterial()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Split\+Meshes\+Per\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{bool}]{p\+Replace }\end{DoxyParamCaption})}
+
+Split all the mesh in the scene per material. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to iterate through to split meshes. \\
+\hline
+{\em p\+Replace} & If {\ttfamily true}, replace the original mesh with new ones and delete the original meshes, but {\itshape only} if they got split into multiple meshes, otherwise they are left untouched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if all splitable mesh were successfully split, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The function will still iterate through all meshes regardless if one fails to split, but will return false in that case. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a3b48927a9d9394344598d1e9e80499bf}\label{class_fbx_geometry_converter_a3b48927a9d9394344598d1e9e80499bf}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Split\+Mesh\+Per\+Material@{Split\+Mesh\+Per\+Material}}
+\index{Split\+Mesh\+Per\+Material@{Split\+Mesh\+Per\+Material}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Split\+Mesh\+Per\+Material()}{SplitMeshPerMaterial()}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Split\+Mesh\+Per\+Material (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_mesh}{Fbx\+Mesh} $\ast$}]{p\+Mesh,  }\item[{bool}]{p\+Replace }\end{DoxyParamCaption})}
+
+Split mesh per material. 
+\begin{DoxyParams}{引数}
+{\em p\+Mesh} & The mesh that will be split if it has multiple materials assigned. \\
+\hline
+{\em p\+Replace} & If {\ttfamily true}, replace the original mesh with new one and delete the original mesh, but {\itshape only} if they got split into multiple meshes, otherwise left untouched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} on success, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The function will fail if the mapped material is not per face (\hyperlink{class_fbx_layer_element_a5a40e95db30ae9f94611dc3f1568af26a228dc5a768f2137313858ce986cba4cf}{Fbx\+Layer\+Element\+::e\+By\+Polygon}) or if a material is multi-\/layered. It will create as many meshes as there are materials applied to it. If one mesh have some polygons with material A, some polygons with material B, and some polygons with NO material, 3 meshes distinct will be created. The newly created meshes will be automatically attached to the same \hyperlink{class_fbx_node}{Fbx\+Node} that holds the original \hyperlink{class_fbx_mesh}{Fbx\+Mesh}. If the original mesh have tangents, they will be regenerated on the new meshes. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_a472eeb2876199b239ce84807a5b4812b}\label{class_fbx_geometry_converter_a472eeb2876199b239ce84807a5b4812b}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Triangulate@{Triangulate}}
+\index{Triangulate@{Triangulate}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Triangulate()}{Triangulate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Geometry\+Converter\+::\+Triangulate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_scene}{Fbx\+Scene} $\ast$}]{p\+Scene,  }\item[{bool}]{p\+Replace,  }\item[{bool}]{p\+Legacy = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Triangulate all node attributes in the scene that can be triangulated. 
+\begin{DoxyParams}{引数}
+{\em p\+Scene} & The scene to iterate through to triangulate meshes. \\
+\hline
+{\em p\+Replace} & If {\ttfamily true}, replace the original meshes with the new triangulated meshes on all the nodes, and delete the original meshes. Otherwise, original meshes are left untouched. \\
+\hline
+{\em p\+Legacy} & If {\ttfamily true}, use legacy triangulation method that does not support holes in geometry. Provided for backward compatibility. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily true} if all node attributes that can be triangulated were triangulated successfully. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The function will still iterate through all meshes regardless if one fails to triangulate, but will return false in that case. This function currently only supports node attribute of type e\+Mesh, e\+Patch, e\+Nurbs or e\+Nurbs\+Surface. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_geometry_converter_aeef7518f4f50b7afc7e7f429eef8aa8d}\label{class_fbx_geometry_converter_aeef7518f4f50b7afc7e7f429eef8aa8d}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Triangulate@{Triangulate}}
+\index{Triangulate@{Triangulate}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Triangulate()}{Triangulate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_node_attribute}{Fbx\+Node\+Attribute}$\ast$ Fbx\+Geometry\+Converter\+::\+Triangulate (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_node_attribute}{Fbx\+Node\+Attribute} $\ast$}]{p\+Node\+Attribute,  }\item[{bool}]{p\+Replace,  }\item[{bool}]{p\+Legacy = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Triangulate a node attribute, if supported, and preserve the skins and shapes animation channels. 
+\begin{DoxyParams}{引数}
+{\em p\+Node\+Attribute} & Pointer to the node containing the geometry to triangulate. \\
+\hline
+{\em p\+Replace} & If {\ttfamily true}, replace the original geometry with the new triangulated geometry on the nodes, and delete the original geometry. Otherwise, the original geometry is left untouched, the new one is added to the nodes, and becomes the default one. \\
+\hline
+{\em p\+Legacy} & If {\ttfamily true}, use legacy triangulation method that does not support holes in geometry. Provided for backward compatibility. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The newly created node attribute if successful, otherwise N\+U\+LL. If node attribute type is not supported by triangulation, it returns the original node attribute. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+This function currently only supports node attribute of type e\+Mesh, e\+Patch, e\+Nurbs or e\+Nurbs\+Surface. If the node attribute does not support triangulation, or if it is already triangulated, this function will return p\+Node\+Attribute. 
+\end{DoxyRemark}
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_geometry_converter_af608b805e0fdfadf8f73af0f1e948bf5}\label{class_fbx_geometry_converter_af608b805e0fdfadf8f73af0f1e948bf5}} 
+\index{Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}!Fbx\+Writer3ds@{Fbx\+Writer3ds}}
+\index{Fbx\+Writer3ds@{Fbx\+Writer3ds}!Fbx\+Geometry\+Converter@{Fbx\+Geometry\+Converter}}
+\subsubsection{\texorpdfstring{Fbx\+Writer3ds}{FbxWriter3ds}}
+{\footnotesize\ttfamily friend class Fbx\+Writer3ds\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxgeometryconverter.\+h の 339 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxgeometryconverter_8h}{fbxgeometryconverter.\+h}\end{DoxyCompactItemize}

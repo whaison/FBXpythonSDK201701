@@ -1,0 +1,163 @@
+\hypertarget{class_fbx_bit_set}{}\section{Fbx\+Bit\+Set クラス}
+\label{class_fbx_bit_set}\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+
+
+{\ttfamily \#include $<$fbxbitset.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_bit_set_ad2f5e43f377d1382c847befddb386710}{Fbx\+Bit\+Set} (const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+Initial\+Size=0)
+\item 
+virtual \hyperlink{class_fbx_bit_set_af1b946280a865ffe296f72d0a7648c18}{$\sim$\+Fbx\+Bit\+Set} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_bit_set_a1aa861ea6719807763a3faf01d9a8fd5}{Set\+Bit} (const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+Bit\+Index)
+\item 
+void \hyperlink{class_fbx_bit_set_a1386fb2e41b67394008e63e445dc079e}{Set\+All\+Bits} (const bool p\+Value)
+\item 
+void \hyperlink{class_fbx_bit_set_ade99ba2a4fc49743b4d2e2037a5d4e28}{Unset\+Bit} (const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+Bit\+Index)
+\item 
+bool \hyperlink{class_fbx_bit_set_a79b538f2c893476457eac2b11d1d7e28}{Get\+Bit} (const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+Bit\+Index) const
+\item 
+\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} \hyperlink{class_fbx_bit_set_ac7747c0ffab8b6d63d931e52548a0f2a}{Get\+First\+Set\+Bit\+Index} () const
+\item 
+\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} \hyperlink{class_fbx_bit_set_af7459511dca956e445c733e1b1b43ef9}{Get\+Last\+Set\+Bit\+Index} () const
+\item 
+\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} \hyperlink{class_fbx_bit_set_a95f7f4e88d181f4ce61cc24bef217cc4}{Get\+Next\+Set\+Bit\+Index} (const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+Bit\+Index) const
+\item 
+\hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} \hyperlink{class_fbx_bit_set_a4a254f2f2906494c4c23452f03a1c399}{Get\+Previous\+Set\+Bit\+Index} (const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} p\+Bit\+Index) const
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+An automatic growing array of bit.
+
+The bit array will automatically grow when specifying bit indexes that are greater than the array size when calling Set\+Bit or Unset\+Bit. Indexes can vary from 0 to F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+A\+X-\/1. When an invalid index is returned from any functions, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+AX is returned. The bit array is not thread safe. 
+
+ fbxbitset.\+h の 27 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_bit_set_ad2f5e43f377d1382c847befddb386710}\label{class_fbx_bit_set_ad2f5e43f377d1382c847befddb386710}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Fbx\+Bit\+Set()}{FbxBitSet()}}
+{\footnotesize\ttfamily Fbx\+Bit\+Set\+::\+Fbx\+Bit\+Set (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+Initial\+Size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Initial\+Size} & Initial bit array size in bit count (not in byte count!). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_bit_set_af1b946280a865ffe296f72d0a7648c18}\label{class_fbx_bit_set_af1b946280a865ffe296f72d0a7648c18}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!````~Fbx\+Bit\+Set@{$\sim$\+Fbx\+Bit\+Set}}
+\index{````~Fbx\+Bit\+Set@{$\sim$\+Fbx\+Bit\+Set}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Bit\+Set()}{~FbxBitSet()}}
+{\footnotesize\ttfamily virtual Fbx\+Bit\+Set\+::$\sim$\+Fbx\+Bit\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_bit_set_a79b538f2c893476457eac2b11d1d7e28}\label{class_fbx_bit_set_a79b538f2c893476457eac2b11d1d7e28}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Get\+Bit@{Get\+Bit}}
+\index{Get\+Bit@{Get\+Bit}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Get\+Bit()}{GetBit()}}
+{\footnotesize\ttfamily bool Fbx\+Bit\+Set\+::\+Get\+Bit (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+Bit\+Index }\end{DoxyParamCaption}) const}
+
+Get the bit boolean value at the specified bit index. 
+\begin{DoxyParams}{引数}
+{\em p\+Bit\+Index} & The bit index in the array in the range of \mbox{[}0, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+A\+X-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+True if the bit is set, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_bit_set_ac7747c0ffab8b6d63d931e52548a0f2a}\label{class_fbx_bit_set_ac7747c0ffab8b6d63d931e52548a0f2a}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Get\+First\+Set\+Bit\+Index@{Get\+First\+Set\+Bit\+Index}}
+\index{Get\+First\+Set\+Bit\+Index@{Get\+First\+Set\+Bit\+Index}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Get\+First\+Set\+Bit\+Index()}{GetFirstSetBitIndex()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} Fbx\+Bit\+Set\+::\+Get\+First\+Set\+Bit\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the bit index of the first bit that is currently set. \begin{DoxyReturn}{戻り値}
+The bit index of the first set bit, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+AX if none found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_bit_set_af7459511dca956e445c733e1b1b43ef9}\label{class_fbx_bit_set_af7459511dca956e445c733e1b1b43ef9}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Get\+Last\+Set\+Bit\+Index@{Get\+Last\+Set\+Bit\+Index}}
+\index{Get\+Last\+Set\+Bit\+Index@{Get\+Last\+Set\+Bit\+Index}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Get\+Last\+Set\+Bit\+Index()}{GetLastSetBitIndex()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} Fbx\+Bit\+Set\+::\+Get\+Last\+Set\+Bit\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the bit index of the last bit that is currently set. \begin{DoxyReturn}{戻り値}
+The bit index of the last set bit, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+AX if none found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_bit_set_a95f7f4e88d181f4ce61cc24bef217cc4}\label{class_fbx_bit_set_a95f7f4e88d181f4ce61cc24bef217cc4}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Get\+Next\+Set\+Bit\+Index@{Get\+Next\+Set\+Bit\+Index}}
+\index{Get\+Next\+Set\+Bit\+Index@{Get\+Next\+Set\+Bit\+Index}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Get\+Next\+Set\+Bit\+Index()}{GetNextSetBitIndex()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} Fbx\+Bit\+Set\+::\+Get\+Next\+Set\+Bit\+Index (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+Bit\+Index }\end{DoxyParamCaption}) const}
+
+Get the bit index of the next set bit after the specified bit index. 
+\begin{DoxyParams}{引数}
+{\em p\+Bit\+Index} & The start bit index in the array in the range of \mbox{[}0, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+A\+X-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The bit index of the next set bit, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+AX if none found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_bit_set_a4a254f2f2906494c4c23452f03a1c399}\label{class_fbx_bit_set_a4a254f2f2906494c4c23452f03a1c399}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Get\+Previous\+Set\+Bit\+Index@{Get\+Previous\+Set\+Bit\+Index}}
+\index{Get\+Previous\+Set\+Bit\+Index@{Get\+Previous\+Set\+Bit\+Index}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Get\+Previous\+Set\+Bit\+Index()}{GetPreviousSetBitIndex()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int} Fbx\+Bit\+Set\+::\+Get\+Previous\+Set\+Bit\+Index (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+Bit\+Index }\end{DoxyParamCaption}) const}
+
+Get the bit index of the previous set bit before the specified bit index. 
+\begin{DoxyParams}{引数}
+{\em p\+Bit\+Index} & The start bit index in the array in the range of \mbox{[}0, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+A\+X-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The bit index of the previous set bit, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+AX if none found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_bit_set_a1386fb2e41b67394008e63e445dc079e}\label{class_fbx_bit_set_a1386fb2e41b67394008e63e445dc079e}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Set\+All\+Bits@{Set\+All\+Bits}}
+\index{Set\+All\+Bits@{Set\+All\+Bits}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Set\+All\+Bits()}{SetAllBits()}}
+{\footnotesize\ttfamily void Fbx\+Bit\+Set\+::\+Set\+All\+Bits (\begin{DoxyParamCaption}\item[{const bool}]{p\+Value }\end{DoxyParamCaption})}
+
+Set all the bits to the specified value regardless of their current value. 
+\begin{DoxyParams}{引数}
+{\em p\+Value} & The boolean value to set to all bits. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_bit_set_a1aa861ea6719807763a3faf01d9a8fd5}\label{class_fbx_bit_set_a1aa861ea6719807763a3faf01d9a8fd5}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Set\+Bit@{Set\+Bit}}
+\index{Set\+Bit@{Set\+Bit}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Set\+Bit()}{SetBit()}}
+{\footnotesize\ttfamily void Fbx\+Bit\+Set\+::\+Set\+Bit (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+Bit\+Index }\end{DoxyParamCaption})}
+
+Set the bit at the specified bit index to true regardless of its current value. 
+\begin{DoxyParams}{引数}
+{\em p\+Bit\+Index} & The bit index in the array in the range of \mbox{[}0, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+A\+X-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_bit_set_ade99ba2a4fc49743b4d2e2037a5d4e28}\label{class_fbx_bit_set_ade99ba2a4fc49743b4d2e2037a5d4e28}} 
+\index{Fbx\+Bit\+Set@{Fbx\+Bit\+Set}!Unset\+Bit@{Unset\+Bit}}
+\index{Unset\+Bit@{Unset\+Bit}!Fbx\+Bit\+Set@{Fbx\+Bit\+Set}}
+\subsubsection{\texorpdfstring{Unset\+Bit()}{UnsetBit()}}
+{\footnotesize\ttfamily void Fbx\+Bit\+Set\+::\+Unset\+Bit (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae9fb141d8158a730aa85ec5ff2ea3f6b}{Fbx\+U\+Int}}]{p\+Bit\+Index }\end{DoxyParamCaption})}
+
+Set the bit at the specified bit index to false regardless of its current value. 
+\begin{DoxyParams}{引数}
+{\em p\+Bit\+Index} & The bit index in the array in the range of \mbox{[}0, F\+B\+X\+S\+D\+K\+\_\+\+U\+I\+N\+T\+\_\+\+M\+A\+X-\/1\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/base/\hyperlink{fbxbitset_8h}{fbxbitset.\+h}\end{DoxyCompactItemize}

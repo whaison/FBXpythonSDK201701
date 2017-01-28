@@ -1,0 +1,230 @@
+\hypertarget{class_fbx_constraint_scale}{}\section{Fbx\+Constraint\+Scale クラス}
+\label{class_fbx_constraint_scale}\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+
+
+This constraint class contains methods for accessing the properties of a scale constraint. A scale constraint lets you constrain the scale of an object based on the scale of one or more sources.  
+
+
+
+
+{\ttfamily \#include $<$fbxconstraintscale.\+h$>$}
+
+Fbx\+Constraint\+Scale の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_fbx_constraint_scale}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_constraint_scale_a876e788ab98cf2fe1042ae3c687b3689}{Add\+Constraint\+Source} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object, double p\+Weight=100)
+\item 
+int \hyperlink{class_fbx_constraint_scale_a5c4500706618751078dddca3652ce936}{Get\+Constraint\+Source\+Count} () const
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_scale_ac957fc33cab352ef355602fb4325c5b7}{Get\+Constraint\+Source} (int p\+Index) const
+\item 
+void \hyperlink{class_fbx_constraint_scale_adf626a9273449dd4c74cf24f2a7bf5af}{Set\+Constrained\+Object} (\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$p\+Object)
+\item 
+\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$ \hyperlink{class_fbx_constraint_scale_a1dcbdc6b41d04d6a75ca47f024e05dc9}{Get\+Constrained\+Object} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_fbx_constraint_scale_af34ea4ce8516d69aefbcb9e83060b2c1}{Construct\+Properties} (bool p\+Force\+Set)
+\item 
+virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} \hyperlink{class_fbx_constraint_scale_a7eb92c352d4a4bd3c0754dd4e53fa6e4}{Get\+Constraint\+Type} () const
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_scale_a41d95ab4643d154a400efa926062ffac}{AffectX}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_scale_a2249bbb0bd5ba9507fa82e1b66c0b2a2}{AffectY}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool} $>$ \hyperlink{class_fbx_constraint_scale_af8cc6e516ff4b87331fc12f20af6f235}{AffectZ}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} $>$ \hyperlink{class_fbx_constraint_scale_a0c8bd160ee16da64bf998a612bb11a5b}{Scaling}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_scale_a434954eedd1e80d6935881b37e9da11f}{Constraint\+Sources}
+\item 
+\hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$ \hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference} $>$ \hyperlink{class_fbx_constraint_scale_ae5eb43970ba98186d43fdb51498b21c5}{Constrained\+Object}
+\end{DoxyCompactItemize}
+\subsection*{その他の継承メンバ}
+
+
+\subsection{詳解}
+This constraint class contains methods for accessing the properties of a scale constraint. A scale constraint lets you constrain the scale of an object based on the scale of one or more sources. 
+
+ fbxconstraintscale.\+h の 26 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_constraint_scale_a876e788ab98cf2fe1042ae3c687b3689}\label{class_fbx_constraint_scale_a876e788ab98cf2fe1042ae3c687b3689}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Add\+Constraint\+Source@{Add\+Constraint\+Source}}
+\index{Add\+Constraint\+Source@{Add\+Constraint\+Source}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Add\+Constraint\+Source()}{AddConstraintSource()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Scale\+::\+Add\+Constraint\+Source (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object,  }\item[{double}]{p\+Weight = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+Add a source to the constraint. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & New source object. \\
+\hline
+{\em p\+Weight} & Weight of the source object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_constraint_scale_af34ea4ce8516d69aefbcb9e83060b2c1}\label{class_fbx_constraint_scale_af34ea4ce8516d69aefbcb9e83060b2c1}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Construct\+Properties@{Construct\+Properties}}
+\index{Construct\+Properties@{Construct\+Properties}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Construct\+Properties()}{ConstructProperties()}}
+{\footnotesize\ttfamily virtual void Fbx\+Constraint\+Scale\+::\+Construct\+Properties (\begin{DoxyParamCaption}\item[{bool}]{p\+Force\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Optional property constructor override, automatically called by default constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Force\+Set} & If the property value must be set regardless of default value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+If your object have properties, they must be initialized in this function. 
+\end{DoxyRemark}
+
+
+\hyperlink{class_fbx_constraint_a0470a25b813b337d07a03ce4b97b44f8}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_a1dcbdc6b41d04d6a75ca47f024e05dc9}\label{class_fbx_constraint_scale_a1dcbdc6b41d04d6a75ca47f024e05dc9}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Get\+Constrained\+Object@{Get\+Constrained\+Object}}
+\index{Get\+Constrained\+Object@{Get\+Constrained\+Object}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Get\+Constrained\+Object()}{GetConstrainedObject()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Scale\+::\+Get\+Constrained\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constrained object. \begin{DoxyReturn}{戻り値}
+Current constrained object. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_a7f587d5db9685b5ee925a85354263edc}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_ac957fc33cab352ef355602fb4325c5b7}\label{class_fbx_constraint_scale_ac957fc33cab352ef355602fb4325c5b7}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Get\+Constraint\+Source@{Get\+Constraint\+Source}}
+\index{Get\+Constraint\+Source@{Get\+Constraint\+Source}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source()}{GetConstraintSource()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_object}{Fbx\+Object}$\ast$ Fbx\+Constraint\+Scale\+::\+Get\+Constraint\+Source (\begin{DoxyParamCaption}\item[{int}]{p\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve a constraint source object. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the source \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Current source at the specified index. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_a5ff6fe6fc98af1e33e8b297bc1cea007}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_a5c4500706618751078dddca3652ce936}\label{class_fbx_constraint_scale_a5c4500706618751078dddca3652ce936}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}}
+\index{Get\+Constraint\+Source\+Count@{Get\+Constraint\+Source\+Count}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Source\+Count()}{GetConstraintSourceCount()}}
+{\footnotesize\ttfamily int Fbx\+Constraint\+Scale\+::\+Get\+Constraint\+Source\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve the constraint source count. \begin{DoxyReturn}{戻り値}
+Current constraint source count. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_aa702f86c6a1832ce3b4905911e66c58f}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_a7eb92c352d4a4bd3c0754dd4e53fa6e4}\label{class_fbx_constraint_scale_a7eb92c352d4a4bd3c0754dd4e53fa6e4}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Get\+Constraint\+Type@{Get\+Constraint\+Type}}
+\index{Get\+Constraint\+Type@{Get\+Constraint\+Type}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Get\+Constraint\+Type()}{GetConstraintType()}}
+{\footnotesize\ttfamily virtual \hyperlink{class_fbx_constraint_a49c1634663395eab7c28856df233ec66}{E\+Type} Fbx\+Constraint\+Scale\+::\+Get\+Constraint\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Access the type of the constraint. \begin{DoxyReturn}{戻り値}
+This type of the constraint. 
+\end{DoxyReturn}
+
+
+\hyperlink{class_fbx_constraint_adbeea66a1a605531a019aa6df90dc45b}{Fbx\+Constraint}を再実装しています。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_adf626a9273449dd4c74cf24f2a7bf5af}\label{class_fbx_constraint_scale_adf626a9273449dd4c74cf24f2a7bf5af}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Set\+Constrained\+Object@{Set\+Constrained\+Object}}
+\index{Set\+Constrained\+Object@{Set\+Constrained\+Object}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Set\+Constrained\+Object()}{SetConstrainedObject()}}
+{\footnotesize\ttfamily void Fbx\+Constraint\+Scale\+::\+Set\+Constrained\+Object (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_object}{Fbx\+Object} $\ast$}]{p\+Object }\end{DoxyParamCaption})}
+
+Set the constrained object. 
+\begin{DoxyParams}{引数}
+{\em p\+Object} & The constrained object. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_constraint_scale_a41d95ab4643d154a400efa926062ffac}\label{class_fbx_constraint_scale_a41d95ab4643d154a400efa926062ffac}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!AffectX@{AffectX}}
+\index{AffectX@{AffectX}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{AffectX}{AffectX}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Scale\+::\+AffectX}
+
+This property handles whether to affect x axis. Default value is true. 
+
+ fbxconstraintscale.\+h の 38 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_a2249bbb0bd5ba9507fa82e1b66c0b2a2}\label{class_fbx_constraint_scale_a2249bbb0bd5ba9507fa82e1b66c0b2a2}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!AffectY@{AffectY}}
+\index{AffectY@{AffectY}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{AffectY}{AffectY}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Scale\+::\+AffectY}
+
+This property handles whether to affect y axis. Default value is true. 
+
+ fbxconstraintscale.\+h の 43 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_af8cc6e516ff4b87331fc12f20af6f235}\label{class_fbx_constraint_scale_af8cc6e516ff4b87331fc12f20af6f235}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!AffectZ@{AffectZ}}
+\index{AffectZ@{AffectZ}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{AffectZ}{AffectZ}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a92e0562b2fe33e76a242f498b362262e}{Fbx\+Bool}$>$ Fbx\+Constraint\+Scale\+::\+AffectZ}
+
+This property handles whether to affect z axis. Default value is true. 
+
+ fbxconstraintscale.\+h の 48 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_ae5eb43970ba98186d43fdb51498b21c5}\label{class_fbx_constraint_scale_ae5eb43970ba98186d43fdb51498b21c5}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Constrained\+Object@{Constrained\+Object}}
+\index{Constrained\+Object@{Constrained\+Object}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Constrained\+Object}{ConstrainedObject}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Scale\+::\+Constrained\+Object}
+
+This property handles constraint target objects. 
+
+ fbxconstraintscale.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_a434954eedd1e80d6935881b37e9da11f}\label{class_fbx_constraint_scale_a434954eedd1e80d6935881b37e9da11f}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Constraint\+Sources@{Constraint\+Sources}}
+\index{Constraint\+Sources@{Constraint\+Sources}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Constraint\+Sources}{ConstraintSources}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_a44df6a2eec915cf27cd481e5c5e48a24}{Fbx\+Reference}$>$ Fbx\+Constraint\+Scale\+::\+Constraint\+Sources}
+
+This property handles constraint source objects. 
+
+ fbxconstraintscale.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_constraint_scale_a0c8bd160ee16da64bf998a612bb11a5b}\label{class_fbx_constraint_scale_a0c8bd160ee16da64bf998a612bb11a5b}} 
+\index{Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}!Scaling@{Scaling}}
+\index{Scaling@{Scaling}!Fbx\+Constraint\+Scale@{Fbx\+Constraint\+Scale}}
+\subsubsection{\texorpdfstring{Scaling}{Scaling}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_property_t}{Fbx\+PropertyT}$<$\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3}$>$ Fbx\+Constraint\+Scale\+::\+Scaling}
+
+This property handles scaling offset. Default value is (0, 0, 0). 
+
+ fbxconstraintscale.\+h の 53 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/constraint/\hyperlink{fbxconstraintscale_8h}{fbxconstraintscale.\+h}\end{DoxyCompactItemize}

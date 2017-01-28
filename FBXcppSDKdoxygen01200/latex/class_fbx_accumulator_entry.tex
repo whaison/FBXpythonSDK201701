@@ -1,0 +1,214 @@
+\hypertarget{class_fbx_accumulator_entry}{}\section{Fbx\+Accumulator\+Entry クラス}
+\label{class_fbx_accumulator_entry}\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+
+
+{\ttfamily \#include $<$fbxusernotification.\+h$>$}
+
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{E\+Class} \{ \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a9e327e2f495f49a576e16f4050231aff}{e\+Error} =1, 
+\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a02238ae4f2cce7a190dad59cfb3e9c19}{e\+Warning} =2, 
+\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2ace66165782fe6efde70c8d93361c8ded}{e\+Information} =4, 
+\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a2970874fc582ec77e50a82bb850d983b}{e\+Any} =7
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_accumulator_entry_a08089894e3d5aed12dfc556553e022c4}{Fbx\+Accumulator\+Entry} (\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{E\+Class} p\+A\+E\+Class, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Name, const \hyperlink{class_fbx_string}{Fbx\+String} \&p\+Descr, \hyperlink{class_fbx_string}{Fbx\+String} p\+Detail=\char`\"{}\char`\"{}, bool p\+Mute\+State=true)
+\item 
+\hyperlink{class_fbx_accumulator_entry_a536f3ab8a13cb7037e6f2a39278eb8ca}{Fbx\+Accumulator\+Entry} (const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} \&p\+AE, bool p\+Skip\+Details)
+\item 
+\hyperlink{class_fbx_accumulator_entry_a76e1a283bd8e13c1591b83ed85cb5a10}{$\sim$\+Fbx\+Accumulator\+Entry} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{E\+Class} \hyperlink{class_fbx_accumulator_entry_a2c6baa9720f96ecf7a9cc69f89b5c430}{Get\+Class} () const
+\begin{DoxyCompactList}\small\item\em Returns the category class of this entry. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_accumulator_entry_a0dbcb9bc95c823b84a8679f781d35317}{Get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Returns the name of this entry. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_string}{Fbx\+String} \hyperlink{class_fbx_accumulator_entry_a37cfbde3b74cda66945b948b4d6acd7c}{Get\+Description} () const
+\begin{DoxyCompactList}\small\item\em Returns the description of this entry. \end{DoxyCompactList}\item 
+int \hyperlink{class_fbx_accumulator_entry_adc709cecc41aa46b5874877c49f99b19}{Get\+Details\+Count} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of details stored. \end{DoxyCompactList}\item 
+const \hyperlink{class_fbx_string}{Fbx\+String} $\ast$ \hyperlink{class_fbx_accumulator_entry_a1698d2ce0b959f30b912716a893cf274}{Get\+Detail} (int id) const
+\item 
+bool \hyperlink{class_fbx_accumulator_entry_ac7c575cce1b36df854f30ed8beb82260}{Is\+Muted} () const
+\begin{DoxyCompactList}\small\item\em Returns True if this entry is muted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fbx_accumulator_entry_a59b31f76d63ab836d795cdd0188a201a}{Fbx\+User\+Notification}
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+This class defines one entry object held by the \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} class.
+
+An entry object is a message to show error, warning or information. Direct manipulation of this object should not be required. At most, access to its members can be granted for querying purposes. 
+
+ fbxusernotification.\+h の 34 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}\label{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!E\+Class@{E\+Class}}
+\index{E\+Class@{E\+Class}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{E\+Class}{EClass}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{Fbx\+Accumulator\+Entry\+::\+E\+Class}}
+
+Category of the accumulator entry. \begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Error@{e\+Error}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!e\+Error@{e\+Error}}}\mbox{\Hypertarget{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a9e327e2f495f49a576e16f4050231aff}\label{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a9e327e2f495f49a576e16f4050231aff}} 
+e\+Error&Error message entry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Warning@{e\+Warning}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!e\+Warning@{e\+Warning}}}\mbox{\Hypertarget{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a02238ae4f2cce7a190dad59cfb3e9c19}\label{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a02238ae4f2cce7a190dad59cfb3e9c19}} 
+e\+Warning&Warning message entry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Information@{e\+Information}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!e\+Information@{e\+Information}}}\mbox{\Hypertarget{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2ace66165782fe6efde70c8d93361c8ded}\label{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2ace66165782fe6efde70c8d93361c8ded}} 
+e\+Information&Information message entry. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Any@{e\+Any}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!e\+Any@{e\+Any}}}\mbox{\Hypertarget{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a2970874fc582ec77e50a82bb850d983b}\label{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2a2970874fc582ec77e50a82bb850d983b}} 
+e\+Any&Entry that does not belong to above class. Cannot be used as a class ID \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxusernotification.\+h の 39 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a08089894e3d5aed12dfc556553e022c4}\label{class_fbx_accumulator_entry_a08089894e3d5aed12dfc556553e022c4}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Fbx\+Accumulator\+Entry()}{FbxAccumulatorEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Fbx\+Accumulator\+Entry\+::\+Fbx\+Accumulator\+Entry (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{E\+Class}}]{p\+A\+E\+Class,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Name,  }\item[{const \hyperlink{class_fbx_string}{Fbx\+String} \&}]{p\+Descr,  }\item[{\hyperlink{class_fbx_string}{Fbx\+String}}]{p\+Detail = {\ttfamily \char`\"{}\char`\"{}},  }\item[{bool}]{p\+Mute\+State = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+A\+E\+Class} & Specify the category for this entry. \\
+\hline
+{\em p\+Name} & Identifies this entry (more than one object can have the same name). \\
+\hline
+{\em p\+Descr} & The description of the entry. This is the common message. The details are added separately by the \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification} classes. \\
+\hline
+{\em p\+Detail} & A list of detail string that will be copied into the local array. \\
+\hline
+{\em p\+Mute\+State} & Whether this entry is muted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+By default the object is muted so it does not get processed by the low level output routines of the User\+Notification accumulator. The entry gets activated (unmuted) by the calls to Add\+Detail() in the accumulator. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a536f3ab8a13cb7037e6f2a39278eb8ca}\label{class_fbx_accumulator_entry_a536f3ab8a13cb7037e6f2a39278eb8ca}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Fbx\+Accumulator\+Entry()}{FbxAccumulatorEntry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Fbx\+Accumulator\+Entry\+::\+Fbx\+Accumulator\+Entry (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} \&}]{p\+AE,  }\item[{bool}]{p\+Skip\+Details }\end{DoxyParamCaption})}
+
+Copy Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+AE} & Another \hyperlink{class_fbx_accumulator_entry}{Fbx\+Accumulator\+Entry} object to be copied. \\
+\hline
+{\em p\+Skip\+Details} & Flag to skip details. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a76e1a283bd8e13c1591b83ed85cb5a10}\label{class_fbx_accumulator_entry_a76e1a283bd8e13c1591b83ed85cb5a10}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!````~Fbx\+Accumulator\+Entry@{$\sim$\+Fbx\+Accumulator\+Entry}}
+\index{````~Fbx\+Accumulator\+Entry@{$\sim$\+Fbx\+Accumulator\+Entry}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Accumulator\+Entry()}{~FbxAccumulatorEntry()}}
+{\footnotesize\ttfamily Fbx\+Accumulator\+Entry\+::$\sim$\+Fbx\+Accumulator\+Entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a2c6baa9720f96ecf7a9cc69f89b5c430}\label{class_fbx_accumulator_entry_a2c6baa9720f96ecf7a9cc69f89b5c430}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Get\+Class@{Get\+Class}}
+\index{Get\+Class@{Get\+Class}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Class()}{GetClass()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_accumulator_entry_af08af3ddcbf7e8fe642d7e9ecb4ad0e2}{E\+Class} Fbx\+Accumulator\+Entry\+::\+Get\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the category class of this entry. 
+
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a37cfbde3b74cda66945b948b4d6acd7c}\label{class_fbx_accumulator_entry_a37cfbde3b74cda66945b948b4d6acd7c}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Get\+Description@{Get\+Description}}
+\index{Get\+Description@{Get\+Description}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Description()}{GetDescription()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Accumulator\+Entry\+::\+Get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the description of this entry. 
+
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a1698d2ce0b959f30b912716a893cf274}\label{class_fbx_accumulator_entry_a1698d2ce0b959f30b912716a893cf274}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Get\+Detail@{Get\+Detail}}
+\index{Get\+Detail@{Get\+Detail}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Detail()}{GetDetail()}}
+{\footnotesize\ttfamily const \hyperlink{class_fbx_string}{Fbx\+String}$\ast$ Fbx\+Accumulator\+Entry\+::\+Get\+Detail (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+Returns a pointer to one specific detail string (or N\+U\+LL if the id is invalid). Detail string is dynamic. One entry can have multiple detail strings to hold extra information. For example, if one entry message is related to many F\+BX nodes, user can add these nodes\textquotesingle{} name as details. 
+\begin{DoxyParams}{引数}
+{\em id} & The detail id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Pointer to the specific detail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_adc709cecc41aa46b5874877c49f99b19}\label{class_fbx_accumulator_entry_adc709cecc41aa46b5874877c49f99b19}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Get\+Details\+Count@{Get\+Details\+Count}}
+\index{Get\+Details\+Count@{Get\+Details\+Count}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Details\+Count()}{GetDetailsCount()}}
+{\footnotesize\ttfamily int Fbx\+Accumulator\+Entry\+::\+Get\+Details\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of details stored. 
+
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a0dbcb9bc95c823b84a8679f781d35317}\label{class_fbx_accumulator_entry_a0dbcb9bc95c823b84a8679f781d35317}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Get\+Name@{Get\+Name}}
+\index{Get\+Name@{Get\+Name}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Get\+Name()}{GetName()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_string}{Fbx\+String} Fbx\+Accumulator\+Entry\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the name of this entry. 
+
+\mbox{\Hypertarget{class_fbx_accumulator_entry_ac7c575cce1b36df854f30ed8beb82260}\label{class_fbx_accumulator_entry_ac7c575cce1b36df854f30ed8beb82260}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Is\+Muted@{Is\+Muted}}
+\index{Is\+Muted@{Is\+Muted}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Is\+Muted()}{IsMuted()}}
+{\footnotesize\ttfamily bool Fbx\+Accumulator\+Entry\+::\+Is\+Muted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns True if this entry is muted. 
+
+
+
+\subsection{フレンドと関連関数の詳解}
+\mbox{\Hypertarget{class_fbx_accumulator_entry_a59b31f76d63ab836d795cdd0188a201a}\label{class_fbx_accumulator_entry_a59b31f76d63ab836d795cdd0188a201a}} 
+\index{Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}!Fbx\+User\+Notification@{Fbx\+User\+Notification}}
+\index{Fbx\+User\+Notification@{Fbx\+User\+Notification}!Fbx\+Accumulator\+Entry@{Fbx\+Accumulator\+Entry}}
+\subsubsection{\texorpdfstring{Fbx\+User\+Notification}{FbxUserNotification}}
+{\footnotesize\ttfamily friend class \hyperlink{class_fbx_user_notification}{Fbx\+User\+Notification}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+ fbxusernotification.\+h の 103 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/utils/\hyperlink{fbxusernotification_8h}{fbxusernotification.\+h}\end{DoxyCompactItemize}

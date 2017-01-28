@@ -1,0 +1,1123 @@
+\hypertarget{class_fbx_layer_element_array}{}\section{Fbx\+Layer\+Element\+Array クラス}
+\label{class_fbx_layer_element_array}\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+
+
+{\ttfamily \#include $<$fbxlayer.\+h$>$}
+
+Fbx\+Layer\+Element\+Array の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.767442cm]{class_fbx_layer_element_array}
+\end{center}
+\end{figure}
+\subsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode} \{ \hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70a7b2eb94f6f2596621fb2aa043f271822}{e\+Read\+Lock} = 1, 
+\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70a461b83c6125c9965082658c1f67404e7}{e\+Write\+Lock} = 2, 
+\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}{e\+Read\+Write\+Lock} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a83e174dd9818d314a274bd87f7b9aa38}{Is\+In\+Use} () const
+\item 
+int \hyperlink{class_fbx_layer_element_array_afb3f283bed4e92d60488f582bd58bf80}{Read\+Lock} () const
+\item 
+int \hyperlink{class_fbx_layer_element_array_a75a18c8aecb5dc8c68c05c02bd54d7f4}{Read\+Unlock} () const
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a828b1e27e5025c726bdc15b983522e4e}{Write\+Lock} () const
+\item 
+void \hyperlink{class_fbx_layer_element_array_a519b1b44abd526e00c6ee9e4f3a38e2d}{Write\+Unlock} () const
+\item 
+bool \hyperlink{class_fbx_layer_element_array_ab4293e9a5089b1bccdb2843ee6ff30fb}{Read\+Write\+Lock} () const
+\item 
+void \hyperlink{class_fbx_layer_element_array_a172d8f3872d50f7dfcdfd8f446cdcf3c}{Read\+Write\+Unlock} () const
+\item 
+virtual void $\ast$ \hyperlink{class_fbx_layer_element_array_a34ac50b866b0615109329c114e612b83}{Get\+Locked} (\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode} p\+Lock\+Mode, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Data\+Type)
+\item 
+void $\ast$ \hyperlink{class_fbx_layer_element_array_abd1fe9d5f32d6b07aa451e698a666819}{Get\+Locked} (\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode} p\+Lock\+Mode=\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}{e\+Read\+Write\+Lock})
+\item 
+{\footnotesize template$<$class T $>$ }\\T $\ast$ \hyperlink{class_fbx_layer_element_array_a30fa9915279366bc14c76fd656b42d61}{Get\+Locked} (T $\ast$, \hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode} p\+Lock\+Mode=\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}{e\+Read\+Write\+Lock})
+\item 
+virtual void \hyperlink{class_fbx_layer_element_array_a574fce5860ae84a77c15d18bf3a2cd87}{Release} (void $\ast$$\ast$p\+Data\+Ptr, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Data\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a9706ee3edb65ea08c7b95b5c83224371}{Release} (void $\ast$$\ast$p\+Data\+Ptr)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_layer_element_array_a1d83bb3361cec99c394596a6bee95bb2}{Release} (T $\ast$$\ast$p\+Data\+Ptr, T $\ast$dummy)
+\item 
+virtual size\+\_\+t \hyperlink{class_fbx_layer_element_array_aca7d58691bf2276171658a6dc382a511}{Get\+Stride} () const
+\end{DoxyCompactItemize}
+\subsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{class_fbx_layer_element_array_a5bd7bc19029950341e907616172ceefd}{Get\+Data\+Ptr} ()
+\item 
+void $\ast$ \hyperlink{class_fbx_layer_element_array_a310ca26651e00014d24f9b70d8a0ef00}{Get\+Reference} (int p\+Index, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a395c044fcc5c47c6c48bb799b0a70a60}{Get\+Reference\+To} (int p\+Index, void $\ast$$\ast$p\+Ref, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_ad61caca510c54feb2181fc57b61869d4}{Set\+Status} (\hyperlink{class_lock_access_status_a3314dad01b38dd90f5393e108a07b3c1}{Lock\+Access\+Status\+::\+E\+Lock\+Access\+Status} p\+Val) const
+\item 
+void \hyperlink{class_fbx_layer_element_array_aa031d26b76ef7871ac0d35a8dff6462a}{Set\+Implementation} (void $\ast$p\+Implementation)
+\item 
+void $\ast$ \hyperlink{class_fbx_layer_element_array_a3b8b773d91de7b18941884a208f90470}{Get\+Implementation} ()
+\item 
+virtual void \hyperlink{class_fbx_layer_element_array_a48cc30130ebd4a38d910547d2f7282c0}{Convert\+Data\+Type} (\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Data\+Type, void $\ast$$\ast$p\+Data\+Ptr, size\+\_\+t $\ast$p\+Stride)
+\end{DoxyCompactItemize}
+\subsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} \hyperlink{class_fbx_layer_element_array_a47930d23e0f3e596bee667ffe900268b}{m\+Data\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Constructor and Destructor}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_layer_element_array_a99815649c1cf07a8d1446a0e086e3871}{Fbx\+Layer\+Element\+Array} (\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Data\+Type)
+\item 
+virtual \hyperlink{class_fbx_layer_element_array_abee3841f66f7d668f113c728a93dd26d}{$\sim$\+Fbx\+Layer\+Element\+Array} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Status handling}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_fbx_layer_element_array_a6873dc740572d69cccb83bdbaf7633b6}{Clear\+Status} ()
+\begin{DoxyCompactList}\small\item\em Clears the access state and sets it to e\+Success. \end{DoxyCompactList}\item 
+\hyperlink{class_lock_access_status_a3314dad01b38dd90f5393e108a07b3c1}{Lock\+Access\+Status\+::\+E\+Lock\+Access\+Status} \hyperlink{class_fbx_layer_element_array_a5f23239e1ed76a7eab70b031c514167a}{Get\+Status} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the access state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Locks handling}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a16cf9a248965cbe26d932c3fb6869c85}{Is\+Write\+Locked} () const
+\item 
+int \hyperlink{class_fbx_layer_element_array_a2d832cc56fee7d1c1254e88e689f1eda}{Get\+Read\+Lock\+Count} () const
+\end{DoxyCompactItemize}
+\subsection*{Data array manipulation}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}{Get\+Count} () const
+\begin{DoxyCompactList}\small\item\em Returns the count of items in the data buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_layer_element_array_a3a8d1c285bb30e8d0dfdf71f819fa57b}{Set\+Count} (int p\+Count)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a573662ad442d13623725fef4e19ca207}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the data buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_layer_element_array_a7dff6a6150f4dff69c83070a7c675db6}{Resize} (int p\+Item\+Count)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a53c4b42b43239dc99f82625b1fb65774}{Add\+Multiple} (int p\+Item\+Count)
+\item 
+int \hyperlink{class_fbx_layer_element_array_a828c096f6e750eec65f59a86d0204e12}{Add} (const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+int \hyperlink{class_fbx_layer_element_array_ac781bfbc43232bde51bbf04ab543cd13}{Insert\+At} (int p\+Index, const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a12fea380179191ef325696045a60d6f9}{Set\+At} (int p\+Index, const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a05706c8479fb3d84325a41464d7fa9dd}{Set\+Last} (const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a70d291c84318eea45de6656b37b1c8c5}{Remove\+At} (int p\+Index, void $\ast$$\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+void \hyperlink{class_fbx_layer_element_array_a928f848275334427d958c996e10e2535}{Remove\+Last} (void $\ast$$\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a759b4eac1b85286b6eae39b588eb74ad}{Remove\+It} (void $\ast$$\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type)
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a4645b72542ad4745b54faa4e0e919878}{Get\+At} (int p\+Index, void $\ast$$\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_layer_element_array_ad54e636bdab3dfb407cb0561ae6460e0}{Get\+First} (void $\ast$$\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a67aeb0dde8b3535d83dcf9eab97e78ae}{Get\+Last} (void $\ast$$\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+int \hyperlink{class_fbx_layer_element_array_ad5075288db8274e13b13f14ec8414dec}{Find} (const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+int \hyperlink{class_fbx_layer_element_array_aa4d2a9a111e4bc4d98c84a18efd65cbd}{Find\+After} (int p\+After\+Index, const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+int \hyperlink{class_fbx_layer_element_array_a98daeb1cd39978cda3a4dd83b32e508d}{Find\+Before} (int p\+Before\+Index, const void $\ast$p\+Item, \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} p\+Value\+Type) const
+\item 
+bool \hyperlink{class_fbx_layer_element_array_a3e34cd89f4c2becbf6d114ac08de40ce}{Is\+Equal} (const \hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array} \&p\+Array) const
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_layer_element_array_aa7749da74c326ba0961f0a29a7ef2258}{Add} (T const \&p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_layer_element_array_accb9ce84c47d2a2f1a8c5e9967ef1f23}{Insert\+At} (int p\+Index, T const \&p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_layer_element_array_a9fae68bbccd7e41b8047c62d18fa8cce}{Set\+At} (int p\+Index, T const \&p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_layer_element_array_aebc103a4f95690e6aef3961b6198df3d}{Set\+Last} (T const \&p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_layer_element_array_a52b3592f2af5c98cf5eaa7e78b6a9c9b}{Remove\+At} (int p\+Index, T $\ast$p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \hyperlink{class_fbx_layer_element_array_a33eabc8ad1f5a95f5238a81293728717}{Remove\+Last} (T $\ast$p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_layer_element_array_aca2bacda1beff3b7da61ed290a53cb19}{Remove\+It} (T $\ast$p\+Item)
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_layer_element_array_abd796ea09c20089318a818cb73d2df05}{Get\+At} (int p\+Index, T $\ast$p\+Item) const
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_layer_element_array_ae6f77a98d976ed7afbb8c455f0d26437}{Get\+First} (T $\ast$p\+Item) const
+\item 
+{\footnotesize template$<$class T $>$ }\\bool \hyperlink{class_fbx_layer_element_array_a151426ccb1c4c28550c637716fdb7b64}{Get\+Last} (T $\ast$p\+Item) const
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_layer_element_array_a8dcc42ae3b8a351a1d5204a416fe72de}{Find} (T const \&p\+Item) const
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_layer_element_array_a6f33a669f8e1d538ff753db1b9378dcc}{Find\+After} (int p\+After\+Index, T const \&p\+Item) const
+\item 
+{\footnotesize template$<$class T $>$ }\\int \hyperlink{class_fbx_layer_element_array_a4fa63bc33b1de09a7d1b8be32b84b06c}{Find\+Before} (int p\+Before\+Index, T const \&p\+Item) const
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{class_fbx_layer_element_array_a64ddf869251ef992f995a5bb9c16efcc}{Copy\+To} (\hyperlink{class_fbx_array}{Fbx\+Array}$<$ T $>$ \&p\+Dst)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array} is the base class for \hyperlink{class_fbx_layer_element_array_template}{Fbx\+Layer\+Element\+Array\+Template}, it provides lock handling and data array manipulation of the data buffer for \hyperlink{class_fbx_layer_element}{Fbx\+Layer\+Element}. 
+
+ fbxlayer.\+h の 332 行目に定義があります。
+
+
+
+\subsection{列挙型メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}\label{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!E\+Lock\+Mode@{E\+Lock\+Mode}}
+\index{E\+Lock\+Mode@{E\+Lock\+Mode}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{E\+Lock\+Mode}{ELockMode}}
+{\footnotesize\ttfamily enum \hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{Fbx\+Layer\+Element\+Array\+::\+E\+Lock\+Mode}}
+
+Identifies the access mode to the data buffer.
+\begin{DoxyItemize}
+\item {\itshape e\+Read\+Lock} Read mode.
+\item {\itshape e\+Write\+Lock} Write mode.
+\item {\itshape e\+Read\+Write\+Lock} Read-\/write mode. 
+\end{DoxyItemize}\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Read\+Lock@{e\+Read\+Lock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!e\+Read\+Lock@{e\+Read\+Lock}}}\mbox{\Hypertarget{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70a7b2eb94f6f2596621fb2aa043f271822}\label{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70a7b2eb94f6f2596621fb2aa043f271822}} 
+e\+Read\+Lock&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Write\+Lock@{e\+Write\+Lock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!e\+Write\+Lock@{e\+Write\+Lock}}}\mbox{\Hypertarget{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70a461b83c6125c9965082658c1f67404e7}\label{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70a461b83c6125c9965082658c1f67404e7}} 
+e\+Write\+Lock&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Read\+Write\+Lock@{e\+Read\+Write\+Lock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!e\+Read\+Write\+Lock@{e\+Read\+Write\+Lock}}}\mbox{\Hypertarget{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}\label{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}} 
+e\+Read\+Write\+Lock&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ fbxlayer.\+h の 419 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a99815649c1cf07a8d1446a0e086e3871}\label{class_fbx_layer_element_array_a99815649c1cf07a8d1446a0e086e3871}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Fbx\+Layer\+Element\+Array()}{FbxLayerElementArray()}}
+{\footnotesize\ttfamily Fbx\+Layer\+Element\+Array\+::\+Fbx\+Layer\+Element\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Data\+Type }\end{DoxyParamCaption})}
+
+Constructor. 
+\begin{DoxyParams}{引数}
+{\em p\+Data\+Type} & The data type of the items in the data array. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_element_array_abee3841f66f7d668f113c728a93dd26d}\label{class_fbx_layer_element_array_abee3841f66f7d668f113c728a93dd26d}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!````~Fbx\+Layer\+Element\+Array@{$\sim$\+Fbx\+Layer\+Element\+Array}}
+\index{````~Fbx\+Layer\+Element\+Array@{$\sim$\+Fbx\+Layer\+Element\+Array}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Layer\+Element\+Array()}{~FbxLayerElementArray()}}
+{\footnotesize\ttfamily virtual Fbx\+Layer\+Element\+Array\+::$\sim$\+Fbx\+Layer\+Element\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a828c096f6e750eec65f59a86d0204e12}\label{class_fbx_layer_element_array_a828c096f6e750eec65f59a86d0204e12}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Add@{Add}}
+\index{Add@{Add}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Add (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Appends a new item to the end of the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Pointer of the new item to be added \\
+\hline
+{\em p\+Value\+Type} & Data type of the new item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the new item 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_aa7749da74c326ba0961f0a29a7ef2258}\label{class_fbx_layer_element_array_aa7749da74c326ba0961f0a29a7ef2258}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Add@{Add}}
+\index{Add@{Add}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Layer\+Element\+Array\+::\+Add (\begin{DoxyParamCaption}\item[{T const \&}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Appends a new item to the end of the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The new item to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the new item 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 647 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a53c4b42b43239dc99f82625b1fb65774}\label{class_fbx_layer_element_array_a53c4b42b43239dc99f82625b1fb65774}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Add\+Multiple@{Add\+Multiple}}
+\index{Add\+Multiple@{Add\+Multiple}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Add\+Multiple()}{AddMultiple()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Add\+Multiple (\begin{DoxyParamCaption}\item[{int}]{p\+Item\+Count }\end{DoxyParamCaption})}
+
+Appends space to the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item\+Count} & The appended space size \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a573662ad442d13623725fef4e19ca207}\label{class_fbx_layer_element_array_a573662ad442d13623725fef4e19ca207}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Clear@{Clear}}
+\index{Clear@{Clear}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the data buffer. 
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a6873dc740572d69cccb83bdbaf7633b6}\label{class_fbx_layer_element_array_a6873dc740572d69cccb83bdbaf7633b6}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Clear\+Status@{Clear\+Status}}
+\index{Clear\+Status@{Clear\+Status}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Clear\+Status()}{ClearStatus()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Clear\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears the access state and sets it to e\+Success. 
+
+
+
+ fbxlayer.\+h の 356 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a48cc30130ebd4a38d910547d2f7282c0}\label{class_fbx_layer_element_array_a48cc30130ebd4a38d910547d2f7282c0}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Convert\+Data\+Type@{Convert\+Data\+Type}}
+\index{Convert\+Data\+Type@{Convert\+Data\+Type}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Convert\+Data\+Type()}{ConvertDataType()}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+Array\+::\+Convert\+Data\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Data\+Type,  }\item[{void $\ast$$\ast$}]{p\+Data\+Ptr,  }\item[{size\+\_\+t $\ast$}]{p\+Stride }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a64ddf869251ef992f995a5bb9c16efcc}\label{class_fbx_layer_element_array_a64ddf869251ef992f995a5bb9c16efcc}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Copy\+To@{Copy\+To}}
+\index{Copy\+To@{Copy\+To}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Copy\+To()}{CopyTo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Fbx\+Layer\+Element\+Array\+::\+Copy\+To (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_array}{Fbx\+Array}$<$ T $>$ \&}]{p\+Dst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copies the items in the data buffer to an array. 
+\begin{DoxyParams}{引数}
+{\em p\+Dst} & The destination array where the items are to be copied. \\
+\hline
+\end{DoxyParams}
+
+
+ fbxlayer.\+h の 760 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_ad5075288db8274e13b13f14ec8414dec}\label{class_fbx_layer_element_array_ad5075288db8274e13b13f14ec8414dec}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Find (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Searches for an item in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The value of the item for which to search. \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the item found, -\/1 if not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index of the first item whose value equals p\+Item is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a8dcc42ae3b8a351a1d5204a416fe72de}\label{class_fbx_layer_element_array_a8dcc42ae3b8a351a1d5204a416fe72de}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Find@{Find}}
+\index{Find@{Find}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Find()}{Find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Layer\+Element\+Array\+::\+Find (\begin{DoxyParamCaption}\item[{T const \&}]{p\+Item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Searches for an item in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The value of the item for which to search. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the item found, -\/1 if not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index of the first item whose value equals p\+Item is returned. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 738 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_aa4d2a9a111e4bc4d98c84a18efd65cbd}\label{class_fbx_layer_element_array_aa4d2a9a111e4bc4d98c84a18efd65cbd}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Find\+After@{Find\+After}}
+\index{Find\+After@{Find\+After}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Find\+After()}{FindAfter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Find\+After (\begin{DoxyParamCaption}\item[{int}]{p\+After\+Index,  }\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Searches for an item after the specified index in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+After\+Index} & The specified index after which the searching begins \\
+\hline
+{\em p\+Item} & The value of the item for which to search, the searching begins after p\+After\+Index. \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the item found, -\/1 if not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index of the first item whose value equals p\+Item is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a6f33a669f8e1d538ff753db1b9378dcc}\label{class_fbx_layer_element_array_a6f33a669f8e1d538ff753db1b9378dcc}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Find\+After@{Find\+After}}
+\index{Find\+After@{Find\+After}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Find\+After()}{FindAfter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Layer\+Element\+Array\+::\+Find\+After (\begin{DoxyParamCaption}\item[{int}]{p\+After\+Index,  }\item[{T const \&}]{p\+Item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Searches for an item after the specified index in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+After\+Index} & The specified index after which the searching begins \\
+\hline
+{\em p\+Item} & The value of the item for which to search, the searching begins after p\+After\+Index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the item found, -\/1 if not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index of the first item whose value equals p\+Item is returned. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 746 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a98daeb1cd39978cda3a4dd83b32e508d}\label{class_fbx_layer_element_array_a98daeb1cd39978cda3a4dd83b32e508d}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Find\+Before@{Find\+Before}}
+\index{Find\+Before@{Find\+Before}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Find\+Before()}{FindBefore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Find\+Before (\begin{DoxyParamCaption}\item[{int}]{p\+Before\+Index,  }\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Searches for an item before the specified index in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Before\+Index} & The specified index before which the searching begins \\
+\hline
+{\em p\+Item} & The value of the item for which to search, the searching begins before p\+Before\+Index. \\
+\hline
+{\em p\+Value\+Type} & The item\textquotesingle{}s data type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the item found, -\/1 if not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index of the first item whose value equals p\+Item is returned. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a4fa63bc33b1de09a7d1b8be32b84b06c}\label{class_fbx_layer_element_array_a4fa63bc33b1de09a7d1b8be32b84b06c}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Find\+Before@{Find\+Before}}
+\index{Find\+Before@{Find\+Before}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Find\+Before()}{FindBefore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Layer\+Element\+Array\+::\+Find\+Before (\begin{DoxyParamCaption}\item[{int}]{p\+Before\+Index,  }\item[{T const \&}]{p\+Item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Searches for one item before the specified index in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Before\+Index} & The specified index before which the searching begins \\
+\hline
+{\em p\+Item} & The value of the item for which to search, the searching begins before p\+Before\+Index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the item found, -\/1 if not found. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The index of the first item whose value equals p\+Item is returned. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 754 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a4645b72542ad4745b54faa4e0e919878}\label{class_fbx_layer_element_array_a4645b72542ad4745b54faa4e0e919878}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+At@{Get\+At}}
+\index{Get\+At@{Get\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+At()}{GetAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Get\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{void $\ast$$\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Returns the specified item\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the item \\
+\hline
+{\em p\+Item} & Place to hold the item\textquotesingle{}s value \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item\textquotesingle{}s value is returned successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the index is invalid, p\+Item is set to zero. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_abd796ea09c20089318a818cb73d2df05}\label{class_fbx_layer_element_array_abd796ea09c20089318a818cb73d2df05}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+At@{Get\+At}}
+\index{Get\+At@{Get\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+At()}{GetAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Layer\+Element\+Array\+::\+Get\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{T $\ast$}]{p\+Item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the specified item\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & Index of the item \\
+\hline
+{\em p\+Item} & Place to hold the item\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item\textquotesingle{}s value is returned successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+If the index is invalid, p\+Item is set to zero. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 707 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}\label{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Count@{Get\+Count}}
+\index{Get\+Count@{Get\+Count}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Count()}{GetCount()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the count of items in the data buffer. 
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a5bd7bc19029950341e907616172ceefd}\label{class_fbx_layer_element_array_a5bd7bc19029950341e907616172ceefd}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Data\+Ptr@{Get\+Data\+Ptr}}
+\index{Get\+Data\+Ptr@{Get\+Data\+Ptr}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Data\+Ptr()}{GetDataPtr()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Layer\+Element\+Array\+::\+Get\+Data\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_ad54e636bdab3dfb407cb0561ae6460e0}\label{class_fbx_layer_element_array_ad54e636bdab3dfb407cb0561ae6460e0}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+First@{Get\+First}}
+\index{Get\+First@{Get\+First}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+First()}{GetFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Get\+First (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Returns the first item\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Place to hold the item\textquotesingle{}s value \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item\textquotesingle{}s value is returned successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_ae6f77a98d976ed7afbb8c455f0d26437}\label{class_fbx_layer_element_array_ae6f77a98d976ed7afbb8c455f0d26437}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+First@{Get\+First}}
+\index{Get\+First@{Get\+First}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+First()}{GetFirst()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Layer\+Element\+Array\+::\+Get\+First (\begin{DoxyParamCaption}\item[{T $\ast$}]{p\+Item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the first item\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Place to hold the item\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item\textquotesingle{}s value is returned successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 717 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a3b8b773d91de7b18941884a208f90470}\label{class_fbx_layer_element_array_a3b8b773d91de7b18941884a208f90470}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Implementation@{Get\+Implementation}}
+\index{Get\+Implementation@{Get\+Implementation}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Implementation()}{GetImplementation()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Layer\+Element\+Array\+::\+Get\+Implementation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 795 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a67aeb0dde8b3535d83dcf9eab97e78ae}\label{class_fbx_layer_element_array_a67aeb0dde8b3535d83dcf9eab97e78ae}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Last@{Get\+Last}}
+\index{Get\+Last@{Get\+Last}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Last()}{GetLast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Get\+Last (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption}) const}
+
+Returns the last item\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Place to hold the item\textquotesingle{}s value \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item\textquotesingle{}s value is returned successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a151426ccb1c4c28550c637716fdb7b64}\label{class_fbx_layer_element_array_a151426ccb1c4c28550c637716fdb7b64}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Last@{Get\+Last}}
+\index{Get\+Last@{Get\+Last}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Last()}{GetLast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Layer\+Element\+Array\+::\+Get\+Last (\begin{DoxyParamCaption}\item[{T $\ast$}]{p\+Item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the last item\textquotesingle{}s value. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Place to hold the item\textquotesingle{}s value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item\textquotesingle{}s value is returned successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 727 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a34ac50b866b0615109329c114e612b83}\label{class_fbx_layer_element_array_a34ac50b866b0615109329c114e612b83}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Locked@{Get\+Locked}}
+\index{Get\+Locked@{Get\+Locked}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Locked()}{GetLocked()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void$\ast$ Fbx\+Layer\+Element\+Array\+::\+Get\+Locked (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode}}]{p\+Lock\+Mode,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Grants a locked access to the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Lock\+Mode} & Access mode to the data buffer. \\
+\hline
+{\em p\+Data\+Type} & If defined, tries to return the data as this type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the data buffer or N\+U\+LL if a failure occurs. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+In the case of a failure, the Status is updated with the reason for the failure. Also, when a type conversion occurs, a second buffer of the new type is allocated. In this case, the Lock\+Mode does not apply to the returned buffer since it is a copy but it does apply to the internal data of this object. The returned buffer still remains a property of this object and is deleted when the pointer is released or the object is destroyed. At the moment of release or destruction, the values in this buffer are copied back into this object. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_abd1fe9d5f32d6b07aa451e698a666819}\label{class_fbx_layer_element_array_abd1fe9d5f32d6b07aa451e698a666819}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Locked@{Get\+Locked}}
+\index{Get\+Locked@{Get\+Locked}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Locked()}{GetLocked()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Layer\+Element\+Array\+::\+Get\+Locked (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode}}]{p\+Lock\+Mode = {\ttfamily \hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}{e\+Read\+Write\+Lock}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grants a locked access to the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Lock\+Mode} & Access mode to the data buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the data buffer or N\+U\+LL if a failure occurs. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+In the case of a failure, the Status is updated with the reason for the failure. Also, when a type conversion occurs, a second buffer of the new type is allocated. In this case, the Lock\+Mode does not apply to the returned buffer since it is a copy but it does apply to the internal data of this object. The returned buffer still remains a property of this object and is deleted when the pointer is released or the object is destroyed. At the moment of release or destruction, the values in this buffer are copied back into this object. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 451 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a30fa9915279366bc14c76fd656b42d61}\label{class_fbx_layer_element_array_a30fa9915279366bc14c76fd656b42d61}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Locked@{Get\+Locked}}
+\index{Get\+Locked@{Get\+Locked}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Locked()}{GetLocked()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T$\ast$ Fbx\+Layer\+Element\+Array\+::\+Get\+Locked (\begin{DoxyParamCaption}\item[{T $\ast$}]{,  }\item[{\hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70}{E\+Lock\+Mode}}]{p\+Lock\+Mode = {\ttfamily \hyperlink{class_fbx_layer_element_array_a8968b1fb337f924d0e9ca87302b54d70afb510a1a3f85e5a4294bd956f5f936f9}{e\+Read\+Write\+Lock}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grants a locked access to the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Lock\+Mode} & Access mode to the data buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+A pointer to the data buffer or N\+U\+LL if a failure occurs. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+In the case of a failure, the Status is updated with the reason for the failure. Also, when a type conversion occurs, a second buffer of the new type is allocated. In this case, the Lock\+Mode does not apply to the returned buffer since it is a copy but it does apply to the internal data of this object. The returned buffer still remains a property of this object and is deleted when the pointer is released or the object is destroyed. At the moment of release or destruction, the values in this buffer are copied back into this object. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 464 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a2d832cc56fee7d1c1254e88e689f1eda}\label{class_fbx_layer_element_array_a2d832cc56fee7d1c1254e88e689f1eda}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Read\+Lock\+Count@{Get\+Read\+Lock\+Count}}
+\index{Get\+Read\+Lock\+Count@{Get\+Read\+Lock\+Count}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Read\+Lock\+Count()}{GetReadLockCount()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Get\+Read\+Lock\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Retrieves the read lock count. \begin{DoxyReturn}{戻り値}
+The read lock count. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 375 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a310ca26651e00014d24f9b70d8a0ef00}\label{class_fbx_layer_element_array_a310ca26651e00014d24f9b70d8a0ef00}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Reference@{Get\+Reference}}
+\index{Get\+Reference@{Get\+Reference}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Reference()}{GetReference()}}
+{\footnotesize\ttfamily void$\ast$ Fbx\+Layer\+Element\+Array\+::\+Get\+Reference (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a395c044fcc5c47c6c48bb799b0a70a60}\label{class_fbx_layer_element_array_a395c044fcc5c47c6c48bb799b0a70a60}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Reference\+To@{Get\+Reference\+To}}
+\index{Get\+Reference\+To@{Get\+Reference\+To}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Reference\+To()}{GetReferenceTo()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Get\+Reference\+To (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{void $\ast$$\ast$}]{p\+Ref,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a5f23239e1ed76a7eab70b031c514167a}\label{class_fbx_layer_element_array_a5f23239e1ed76a7eab70b031c514167a}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Status@{Get\+Status}}
+\index{Get\+Status@{Get\+Status}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Status()}{GetStatus()}}
+{\footnotesize\ttfamily \hyperlink{class_lock_access_status_a3314dad01b38dd90f5393e108a07b3c1}{Lock\+Access\+Status\+::\+E\+Lock\+Access\+Status} Fbx\+Layer\+Element\+Array\+::\+Get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves the access state. 
+
+
+
+ fbxlayer.\+h の 359 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_aca7d58691bf2276171658a6dc382a511}\label{class_fbx_layer_element_array_aca7d58691bf2276171658a6dc382a511}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Get\+Stride@{Get\+Stride}}
+\index{Get\+Stride@{Get\+Stride}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Get\+Stride()}{GetStride()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Fbx\+Layer\+Element\+Array\+::\+Get\+Stride (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the Stride size which equals the size of the data type of the data buffer. \mbox{\Hypertarget{class_fbx_layer_element_array_ac781bfbc43232bde51bbf04ab543cd13}\label{class_fbx_layer_element_array_ac781bfbc43232bde51bbf04ab543cd13}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Insert\+At@{Insert\+At}}
+\index{Insert\+At@{Insert\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Insert\+At()}{InsertAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Insert\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Inserts a new item at the specified position of the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified position \\
+\hline
+{\em p\+Item} & Pointer of the new item to be inserted \\
+\hline
+{\em p\+Value\+Type} & Data type of the new item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the inserted item 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The input index must be within valid range and no error will be thrown if it is invalid. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_accb9ce84c47d2a2f1a8c5e9967ef1f23}\label{class_fbx_layer_element_array_accb9ce84c47d2a2f1a8c5e9967ef1f23}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Insert\+At@{Insert\+At}}
+\index{Insert\+At@{Insert\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Insert\+At()}{InsertAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int Fbx\+Layer\+Element\+Array\+::\+Insert\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{T const \&}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inserts a new item at the specified position of the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The specified position \\
+\hline
+{\em p\+Item} & The new item to be inserted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+The index of the inserted item 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The input index must be within valid range and no error will be thrown if it is invalid. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 655 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a3e34cd89f4c2becbf6d114ac08de40ce}\label{class_fbx_layer_element_array_a3e34cd89f4c2becbf6d114ac08de40ce}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Is\+Equal@{Is\+Equal}}
+\index{Is\+Equal@{Is\+Equal}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Is\+Equal()}{IsEqual()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Is\+Equal (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_layer_element_array}{Fbx\+Layer\+Element\+Array} \&}]{p\+Array }\end{DoxyParamCaption}) const}
+
+Equivalence operator 
+\begin{DoxyParams}{引数}
+{\em p\+Array} & Array compared to this one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if equal. {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a83e174dd9818d314a274bd87f7b9aa38}\label{class_fbx_layer_element_array_a83e174dd9818d314a274bd87f7b9aa38}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Is\+In\+Use@{Is\+In\+Use}}
+\index{Is\+In\+Use@{Is\+In\+Use}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Is\+In\+Use()}{IsInUse()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Is\+In\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns whether this Array is accessed in any way. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if it is in use, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a16cf9a248965cbe26d932c3fb6869c85}\label{class_fbx_layer_element_array_a16cf9a248965cbe26d932c3fb6869c85}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Is\+Write\+Locked@{Is\+Write\+Locked}}
+\index{Is\+Write\+Locked@{Is\+Write\+Locked}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Is\+Write\+Locked()}{IsWriteLocked()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Is\+Write\+Locked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns whether write is locked. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if write is locked, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 370 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_afb3f283bed4e92d60488f582bd58bf80}\label{class_fbx_layer_element_array_afb3f283bed4e92d60488f582bd58bf80}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Read\+Lock@{Read\+Lock}}
+\index{Read\+Lock@{Read\+Lock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Read\+Lock()}{ReadLock()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Read\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Increments the number of read locks on this array. \begin{DoxyReturn}{戻り値}
+The current number of read locks (including the one just grabbed) or 0 if a write lock is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a75a18c8aecb5dc8c68c05c02bd54d7f4}\label{class_fbx_layer_element_array_a75a18c8aecb5dc8c68c05c02bd54d7f4}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Read\+Unlock@{Read\+Unlock}}
+\index{Read\+Unlock@{Read\+Unlock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Read\+Unlock()}{ReadUnlock()}}
+{\footnotesize\ttfamily int Fbx\+Layer\+Element\+Array\+::\+Read\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Releases a read lock on this array. \begin{DoxyReturn}{戻り値}
+The remaining read locks or -\/1 if a write lock is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_ab4293e9a5089b1bccdb2843ee6ff30fb}\label{class_fbx_layer_element_array_ab4293e9a5089b1bccdb2843ee6ff30fb}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Read\+Write\+Lock@{Read\+Write\+Lock}}
+\index{Read\+Write\+Lock@{Read\+Write\+Lock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Read\+Write\+Lock()}{ReadWriteLock()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Read\+Write\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Locks this array for writing. The data that already exists in the array is kept and is valid. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if a write lock has been successfully granted, {\ttfamily false} if one or more read locks are active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a172d8f3872d50f7dfcdfd8f446cdcf3c}\label{class_fbx_layer_element_array_a172d8f3872d50f7dfcdfd8f446cdcf3c}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Read\+Write\+Unlock@{Read\+Write\+Unlock}}
+\index{Read\+Write\+Unlock@{Read\+Write\+Unlock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Read\+Write\+Unlock()}{ReadWriteUnlock()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Read\+Write\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Releases the write lock on this array. \mbox{\Hypertarget{class_fbx_layer_element_array_a574fce5860ae84a77c15d18bf3a2cd87}\label{class_fbx_layer_element_array_a574fce5860ae84a77c15d18bf3a2cd87}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void Fbx\+Layer\+Element\+Array\+::\+Release (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Data\+Ptr,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Data\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Unlock the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Data\+Ptr} & The buffer to be released. \\
+\hline
+{\em p\+Data\+Type} & The data type of the data buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The passed pointer must be the one obtained by the call to \hyperlink{class_fbx_layer_element_array_a34ac50b866b0615109329c114e612b83}{Get\+Locked()}. Any other pointer causes this method to fail and the Status is updated with the reason for the failure. If the passed pointer refers a converted data buffer (see comment of Get\+Locked), this method copies the \hyperlink{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}{Get\+Count()} items of the received buffer back into this object. Any other items that may have been added using a realloc call are ignored. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a9706ee3edb65ea08c7b95b5c83224371}\label{class_fbx_layer_element_array_a9706ee3edb65ea08c7b95b5c83224371}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Release (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Data\+Ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unlock the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Data\+Ptr} & The buffer to be released. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The passed pointer must be the one obtained by the call to \hyperlink{class_fbx_layer_element_array_a34ac50b866b0615109329c114e612b83}{Get\+Locked()}. Any other pointer causes this method to fail and the Status is updated with the reason for the failure. If the passed pointer refers a converted data buffer (see comment of Get\+Locked), this method copies the \hyperlink{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}{Get\+Count()} items of the received buffer back into this object. Any other items that may have been added using a realloc call are ignored. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 487 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a1d83bb3361cec99c394596a6bee95bb2}\label{class_fbx_layer_element_array_a1d83bb3361cec99c394596a6bee95bb2}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Release()}{Release()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Layer\+Element\+Array\+::\+Release (\begin{DoxyParamCaption}\item[{T $\ast$$\ast$}]{p\+Data\+Ptr,  }\item[{T $\ast$}]{dummy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unlock the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Data\+Ptr} & The buffer to be released. \\
+\hline
+{\em dummy} & The data type of dummy is used to specialize this function. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The passed pointer must be the one obtained by the call to \hyperlink{class_fbx_layer_element_array_a34ac50b866b0615109329c114e612b83}{Get\+Locked()}. Any other pointer causes this method to fail and the Status is updated with the reason for the failure. If the passed pointer refers a converted data buffer (see comment of Get\+Locked), this method copies the \hyperlink{class_fbx_layer_element_array_acd195095246f6d886d55fd0aa7129b2d}{Get\+Count()} items of the received buffer back into this object. Any other items that may have been added using a realloc call are ignored. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 499 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a70d291c84318eea45de6656b37b1c8c5}\label{class_fbx_layer_element_array_a70d291c84318eea45de6656b37b1c8c5}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Remove\+At@{Remove\+At}}
+\index{Remove\+At@{Remove\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Remove\+At()}{RemoveAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Remove\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{void $\ast$$\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Removes the specified item from the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the item to be removed \\
+\hline
+{\em p\+Item} & Place to hold the value of the removed item. \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The input index must be within valid range and no error will be thrown if it is invalid. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a52b3592f2af5c98cf5eaa7e78b6a9c9b}\label{class_fbx_layer_element_array_a52b3592f2af5c98cf5eaa7e78b6a9c9b}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Remove\+At@{Remove\+At}}
+\index{Remove\+At@{Remove\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Remove\+At()}{RemoveAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Layer\+Element\+Array\+::\+Remove\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{T $\ast$}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the specified item from the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the item to be removed \\
+\hline
+{\em p\+Item} & Place to hold the value of the removed item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The input index must be within valid range and no error will be thrown if it is invalid. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 675 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a759b4eac1b85286b6eae39b588eb74ad}\label{class_fbx_layer_element_array_a759b4eac1b85286b6eae39b588eb74ad}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Remove\+It@{Remove\+It}}
+\index{Remove\+It@{Remove\+It}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Remove\+It()}{RemoveIt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Remove\+It (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Removes one item from the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The first item who equals p\+Item is to be removed \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item is removed successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_aca2bacda1beff3b7da61ed290a53cb19}\label{class_fbx_layer_element_array_aca2bacda1beff3b7da61ed290a53cb19}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Remove\+It@{Remove\+It}}
+\index{Remove\+It@{Remove\+It}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Remove\+It()}{RemoveIt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool Fbx\+Layer\+Element\+Array\+::\+Remove\+It (\begin{DoxyParamCaption}\item[{T $\ast$}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes one item from the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The first item who equals p\+Item is to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+{\ttfamily True} if the item is removed successfully, {\ttfamily false} otherwise 
+\end{DoxyReturn}
+
+
+ fbxlayer.\+h の 695 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a928f848275334427d958c996e10e2535}\label{class_fbx_layer_element_array_a928f848275334427d958c996e10e2535}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Remove\+Last@{Remove\+Last}}
+\index{Remove\+Last@{Remove\+Last}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Remove\+Last()}{RemoveLast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Remove\+Last (\begin{DoxyParamCaption}\item[{void $\ast$$\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Removes the last item from the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Place to hold the value of the removed item. \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The array should contain at least one item and no error will be thrown if it is empty. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a33eabc8ad1f5a95f5238a81293728717}\label{class_fbx_layer_element_array_a33eabc8ad1f5a95f5238a81293728717}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Remove\+Last@{Remove\+Last}}
+\index{Remove\+Last@{Remove\+Last}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Remove\+Last()}{RemoveLast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Layer\+Element\+Array\+::\+Remove\+Last (\begin{DoxyParamCaption}\item[{T $\ast$}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes the last item from the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Place to hold the value of the removed item. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The array should contain at least one item and no error will be thrown if it is empty. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 685 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a7dff6a6150f4dff69c83070a7c675db6}\label{class_fbx_layer_element_array_a7dff6a6150f4dff69c83070a7c675db6}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Resize@{Resize}}
+\index{Resize@{Resize}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Resize (\begin{DoxyParamCaption}\item[{int}]{p\+Item\+Count }\end{DoxyParamCaption})}
+
+Resizes the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Item\+Count} & The new size of the data buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a12fea380179191ef325696045a60d6f9}\label{class_fbx_layer_element_array_a12fea380179191ef325696045a60d6f9}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+At@{Set\+At}}
+\index{Set\+At@{Set\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+At()}{SetAt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Set\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Sets the value for the specified item. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the item to be updated. \\
+\hline
+{\em p\+Item} & Pointer of the item whose value is copied to p\+Index\textquotesingle{}th item \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The input index must be within valid range and no error will be thrown if it is invalid. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a9fae68bbccd7e41b8047c62d18fa8cce}\label{class_fbx_layer_element_array_a9fae68bbccd7e41b8047c62d18fa8cce}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+At@{Set\+At}}
+\index{Set\+At@{Set\+At}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+At()}{SetAt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Layer\+Element\+Array\+::\+Set\+At (\begin{DoxyParamCaption}\item[{int}]{p\+Index,  }\item[{T const \&}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the value of the specified item. 
+\begin{DoxyParams}{引数}
+{\em p\+Index} & The index of the item to be updated. \\
+\hline
+{\em p\+Item} & The item whose value is copied to p\+Index\textquotesingle{}th item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The input index must be within valid range and no error will be thrown if it is invalid. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 662 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a3a8d1c285bb30e8d0dfdf71f819fa57b}\label{class_fbx_layer_element_array_a3a8d1c285bb30e8d0dfdf71f819fa57b}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+Count@{Set\+Count}}
+\index{Set\+Count@{Set\+Count}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+Count()}{SetCount()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Set\+Count (\begin{DoxyParamCaption}\item[{int}]{p\+Count }\end{DoxyParamCaption})}
+
+Sets the count of items in the data buffer. 
+\begin{DoxyParams}{引数}
+{\em p\+Count} & The count of items to be set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_layer_element_array_aa031d26b76ef7871ac0d35a8dff6462a}\label{class_fbx_layer_element_array_aa031d26b76ef7871ac0d35a8dff6462a}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+Implementation@{Set\+Implementation}}
+\index{Set\+Implementation@{Set\+Implementation}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+Implementation()}{SetImplementation()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Set\+Implementation (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Implementation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a05706c8479fb3d84325a41464d7fa9dd}\label{class_fbx_layer_element_array_a05706c8479fb3d84325a41464d7fa9dd}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+Last@{Set\+Last}}
+\index{Set\+Last@{Set\+Last}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+Last()}{SetLast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Set\+Last (\begin{DoxyParamCaption}\item[{const void $\ast$}]{p\+Item,  }\item[{\hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type}}]{p\+Value\+Type }\end{DoxyParamCaption})}
+
+Sets the value of the last item. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & Pointer of the item whose value is copied to the last item \\
+\hline
+{\em p\+Value\+Type} & Data type of the item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The array should contain at least one item and no error will be thrown if it is empty. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_layer_element_array_aebc103a4f95690e6aef3961b6198df3d}\label{class_fbx_layer_element_array_aebc103a4f95690e6aef3961b6198df3d}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+Last@{Set\+Last}}
+\index{Set\+Last@{Set\+Last}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+Last()}{SetLast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Fbx\+Layer\+Element\+Array\+::\+Set\+Last (\begin{DoxyParamCaption}\item[{T const \&}]{p\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the value of the last item. 
+\begin{DoxyParams}{引数}
+{\em p\+Item} & The item whose value is copied to the last item \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{注釈}
+The array should contain at least one item and no error will be thrown if it is empty. 
+\end{DoxyRemark}
+
+
+ fbxlayer.\+h の 668 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_ad61caca510c54feb2181fc57b61869d4}\label{class_fbx_layer_element_array_ad61caca510c54feb2181fc57b61869d4}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Set\+Status@{Set\+Status}}
+\index{Set\+Status@{Set\+Status}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Set\+Status()}{SetStatus()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Set\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{class_lock_access_status_a3314dad01b38dd90f5393e108a07b3c1}{Lock\+Access\+Status\+::\+E\+Lock\+Access\+Status}}]{p\+Val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 789 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_layer_element_array_a828b1e27e5025c726bdc15b983522e4e}\label{class_fbx_layer_element_array_a828b1e27e5025c726bdc15b983522e4e}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Write\+Lock@{Write\+Lock}}
+\index{Write\+Lock@{Write\+Lock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Write\+Lock()}{WriteLock()}}
+{\footnotesize\ttfamily bool Fbx\+Layer\+Element\+Array\+::\+Write\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Locks this array for writing. The data in the array is wiped out. \begin{DoxyReturn}{戻り値}
+{\ttfamily True} if a write lock has been successfully granted, {\ttfamily false} if one or more read locks are active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a519b1b44abd526e00c6ee9e4f3a38e2d}\label{class_fbx_layer_element_array_a519b1b44abd526e00c6ee9e4f3a38e2d}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!Write\+Unlock@{Write\+Unlock}}
+\index{Write\+Unlock@{Write\+Unlock}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{Write\+Unlock()}{WriteUnlock()}}
+{\footnotesize\ttfamily void Fbx\+Layer\+Element\+Array\+::\+Write\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Releases the write lock on this array. 
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{class_fbx_layer_element_array_a47930d23e0f3e596bee667ffe900268b}\label{class_fbx_layer_element_array_a47930d23e0f3e596bee667ffe900268b}} 
+\index{Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}!m\+Data\+Type@{m\+Data\+Type}}
+\index{m\+Data\+Type@{m\+Data\+Type}!Fbx\+Layer\+Element\+Array@{Fbx\+Layer\+Element\+Array}}
+\subsubsection{\texorpdfstring{m\+Data\+Type}{mDataType}}
+{\footnotesize\ttfamily \hyperlink{fbxpropertytypes_8h_a73913a5ddfb20e57c6f25e9e6784bd92}{E\+Fbx\+Type} Fbx\+Layer\+Element\+Array\+::m\+Data\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+ fbxlayer.\+h の 798 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/scene/geometry/\hyperlink{fbxlayer_8h}{fbxlayer.\+h}\end{DoxyCompactItemize}

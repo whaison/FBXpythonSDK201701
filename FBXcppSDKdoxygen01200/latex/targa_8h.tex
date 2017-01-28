@@ -1,0 +1,700 @@
+\hypertarget{targa_8h}{}\section{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.1/samples/\+View\+Scene/targa.h ファイル}
+\label{targa_8h}\index{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/targa.\+h@{C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/samples/\+View\+Scene/targa.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+\subsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structtga__image}{tga\+\_\+image}
+\end{DoxyCompactItemize}
+\subsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(index)~(1 $<$$<$ (index))
+\item 
+\#define \hyperlink{targa_8h_a3ea73a6089f61223b225c46e2ba58a47}{htole16}(x)~(x)
+\item 
+\#define \hyperlink{targa_8h_a496f9041ee9cbf93e2dad85dde440509}{letoh16}(x)~(x)
+\item 
+\#define \hyperlink{targa_8h_acd8d46abdc7bdec017db93d33eaff9e7}{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT}~0
+\item 
+\#define \hyperlink{targa_8h_a4ee3894b7e6d4952230f95c7591f01b5}{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}~1
+\item 
+\#define \hyperlink{targa_8h_aac59d8e958e91b8e3e4c3262b81d5211}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}~0 /$\ast$ no image data $\ast$/
+\item 
+\#define \hyperlink{targa_8h_ac61cf375aff4bb85f310b119ac4d01df}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP}~1 /$\ast$ uncompressed, color-\/mapped $\ast$/
+\item 
+\#define \hyperlink{targa_8h_ae48b476780cf222b5a4868989ab58177}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR}~2 /$\ast$ uncompressed, true-\/color $\ast$/
+\item 
+\#define \hyperlink{targa_8h_a46658e1e73a31f0ce191c76533b74f93}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO}~3 /$\ast$ uncompressed, black and white $\ast$/
+\item 
+\#define \hyperlink{targa_8h_aab29facf7ffd71ef808a7b4c88fe8c73}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE}~9 /$\ast$ run-\/length, color-\/mapped $\ast$/
+\item 
+\#define \hyperlink{targa_8h_ab08136ead695f252f5ee55f158efd803}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE}~10 /$\ast$ run-\/length, true-\/color $\ast$/
+\item 
+\#define \hyperlink{targa_8h_a78cab6d81d720ec05845d774792ee8fb}{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE}~11 /$\ast$ run-\/length, black and white $\ast$/
+\item 
+\#define \hyperlink{targa_8h_a6ebde3edef2741755bc1c8b3d6606d8a}{T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS}~(uint8\+\_\+t)(\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(0)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(1)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(2)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(3))
+\item 
+\#define \hyperlink{targa_8h_ae9eb924fff794258af0fc82915062b16}{T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT}~(uint8\+\_\+t)\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(4)
+\item 
+\#define \hyperlink{targa_8h_a1e1726be98ea1c5f8c6e8469c1c20caa}{T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT}~(uint8\+\_\+t)\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(5)
+\item 
+\#define \hyperlink{targa_8h_a5d881af0e7b0cceed7d0d11f5f6f9ddd}{T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS}~(uint8\+\_\+t)(\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(6)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(7))
+\end{DoxyCompactItemize}
+\subsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \{ \newline
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa7ec303548d5ed75e9150321e96b4e059}{T\+G\+A\+\_\+\+N\+O\+E\+RR}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa03fc227bdbdbf5b09b770e17e3c37904}{T\+G\+A\+E\+R\+R\+\_\+\+F\+O\+P\+EN}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa2fdd95baa282dcf6eb4725b7eac24b45}{T\+G\+A\+E\+R\+R\+\_\+\+E\+OF}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa3e3bc9f0ed8474e4cc73e0acf96c49a6}{T\+G\+A\+E\+R\+R\+\_\+\+W\+R\+I\+TE}, 
+\newline
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa7c68c739532a23ba3c3e109a8b09f744}{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+T\+Y\+PE}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa0d364a5bb1a4b179fe802cde6c262fd3}{T\+G\+A\+E\+R\+R\+\_\+\+I\+M\+G\+\_\+\+T\+Y\+PE}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1b0ca0c3f7132d82f4dbd780ef306527}{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+I\+MG}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfaf2ad71bd447e0cc616e4af81ba56c92c}{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+M\+I\+S\+S\+I\+NG}, 
+\newline
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa477530d515ba5bda9a7abf839ea72e2e}{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa08dbdc5366c619fbb55d33b6d4bcb015}{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+L\+E\+N\+G\+TH}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa9f00162383e5815dce6fb7a113a933c3}{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+D\+E\+P\+TH}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa02e29c3121202eee4e01669ea46c92b7}{T\+G\+A\+E\+R\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+S\+I\+ZE}, 
+\newline
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfaa4ba4f1d6bcd5509039303427ef5fcbf}{T\+G\+A\+E\+R\+R\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+E\+P\+TH}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfac6bdc1ebd9f5827bc1509f65830c261c}{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+M\+EM}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa3e04aa5c26d13d038cdda0093ccf2c90}{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+C\+M\+AP}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa99858147c70df09c29217b71be8e7850}{T\+G\+A\+E\+R\+R\+\_\+\+R\+LE}, 
+\newline
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1635afb41eab270c51fb3fa5f20d8269}{T\+G\+A\+E\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+R\+A\+N\+GE}, 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1837c357e8ee44b09f47962c581c0b1c}{T\+G\+A\+E\+R\+R\+\_\+\+M\+O\+NO}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{targa_8h_a300c59606837b7585851ea8623248635}{tga\+\_\+get\+\_\+attribute\+\_\+bits} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$tga)
+\item 
+int \hyperlink{targa_8h_a60119528288e715035ef3c4676508fb8}{tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$tga)
+\item 
+int \hyperlink{targa_8h_a6443a16b2618f107b4803afba7b49fe4}{tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$tga)
+\item 
+int \hyperlink{targa_8h_ad68984ba0b1fc645618c99eb24bfd3a0}{tga\+\_\+is\+\_\+colormapped} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$tga)
+\item 
+int \hyperlink{targa_8h_aa7c4d52b9957c2ac6fd2c8a8543c435e}{tga\+\_\+is\+\_\+rle} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$tga)
+\item 
+int \hyperlink{targa_8h_a54a80f828795af46585f19273cc04a9a}{tga\+\_\+is\+\_\+mono} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$tga)
+\item 
+const char $\ast$ \hyperlink{targa_8h_aadc9607e0c654158c61506b86b3bdf03}{tga\+\_\+error} (const \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} errcode)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_aec72f50bbfb9449325e305156ca4c830}{tga\+\_\+read} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$dest, const char $\ast$filename)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a6ecc214b67a8312a1f53cfac71b8c9cf}{tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+LE} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$dest, F\+I\+LE $\ast$fp)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_aea4a7230a5d6d60ce3623d31c4866ed2}{tga\+\_\+write} (const char $\ast$filename, const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$src)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a003d7932dac5c59de7672465366ddacd}{tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+LE} (F\+I\+LE $\ast$fp, const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$src)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a3d3b508344ac42fc4655ab034c041951}{tga\+\_\+write\+\_\+mono} (const char $\ast$filename, uint8\+\_\+t $\ast$image, const uint16\+\_\+t width, const uint16\+\_\+t height)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a19da5c4f3846112951b4cca4424e35d8}{tga\+\_\+write\+\_\+mono\+\_\+rle} (const char $\ast$filename, uint8\+\_\+t $\ast$image, const uint16\+\_\+t width, const uint16\+\_\+t height)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a086b1fd6f21bd2745266cc48e3c05d59}{tga\+\_\+write\+\_\+bgr} (const char $\ast$filename, uint8\+\_\+t $\ast$image, const uint16\+\_\+t width, const uint16\+\_\+t height, const uint8\+\_\+t depth)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_adb62dcf02b32bc57a60d0b54fc4ee568}{tga\+\_\+write\+\_\+bgr\+\_\+rle} (const char $\ast$filename, uint8\+\_\+t $\ast$image, const uint16\+\_\+t width, const uint16\+\_\+t height, const uint8\+\_\+t depth)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a86157923b50dd0d05850cf0fd121ac7b}{tga\+\_\+write\+\_\+rgb} (const char $\ast$filename, uint8\+\_\+t $\ast$image, const uint16\+\_\+t width, const uint16\+\_\+t height, const uint8\+\_\+t depth)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_ac7ba1826c0bac340b445b78913ed7dbf}{tga\+\_\+write\+\_\+rgb\+\_\+rle} (const char $\ast$filename, uint8\+\_\+t $\ast$image, const uint16\+\_\+t width, const uint16\+\_\+t height, const uint8\+\_\+t depth)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a4deb7770264ee8d864148e1a6f808c1d}{tga\+\_\+flip\+\_\+horiz} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_ac50cbfbd5f78bae557eeb025c0f7d9ac}{tga\+\_\+flip\+\_\+vert} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a646fb3ba84f92d1e8642203ff4d361a6}{tga\+\_\+color\+\_\+unmap} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+uint8\+\_\+t $\ast$ \hyperlink{targa_8h_a11fcbc11d743a27884d283a816283cc6}{tga\+\_\+find\+\_\+pixel} (const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$img, uint16\+\_\+t x, uint16\+\_\+t y)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_ae7a4bfc3255594f43a3446c9c5a78c2c}{tga\+\_\+unpack\+\_\+pixel} (const uint8\+\_\+t $\ast$src, const uint8\+\_\+t bits, uint8\+\_\+t $\ast$b, uint8\+\_\+t $\ast$g, uint8\+\_\+t $\ast$r, uint8\+\_\+t $\ast$a)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a3ccf1cc1d85eb3d61fef244daf69ebce}{tga\+\_\+pack\+\_\+pixel} (uint8\+\_\+t $\ast$dest, const uint8\+\_\+t bits, const uint8\+\_\+t b, const uint8\+\_\+t g, const uint8\+\_\+t r, const uint8\+\_\+t a)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_acdd03b00388eba9720d1997440f03e05}{tga\+\_\+desaturate} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img, const int cr, const int cg, const int cb, const int dv)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a8e32410895ef250029f9fdfa7d4fd6e8}{tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a6b86eed2ee59c8bc3e87c3ebf90161d2}{tga\+\_\+desaturate\+\_\+rec\+\_\+709} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a92aaa85e64073d7d7a149c7a86c033e2}{tga\+\_\+desaturate\+\_\+itu} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_aeb6eae85594beb85b50cd06de8565deb}{tga\+\_\+desaturate\+\_\+avg} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_aa7ca7c4f9655b257ef80dfcde6138616}{tga\+\_\+convert\+\_\+depth} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img, const uint8\+\_\+t bits)
+\item 
+\hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} \hyperlink{targa_8h_a3d0408a50f692676ecf5e1af176c33b3}{tga\+\_\+swap\+\_\+red\+\_\+blue} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\item 
+void \hyperlink{targa_8h_a54f1bfb332e5b265b52f98e5c85d4aed}{tga\+\_\+free\+\_\+buffers} (\hyperlink{structtga__image}{tga\+\_\+image} $\ast$img)
+\end{DoxyCompactItemize}
+
+
+\subsection{マクロ定義詳解}
+\mbox{\Hypertarget{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}\label{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}} 
+\index{targa.\+h@{targa.\+h}!B\+IT@{B\+IT}}
+\index{B\+IT@{B\+IT}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{B\+IT}{BIT}}
+{\footnotesize\ttfamily \#define B\+IT(\begin{DoxyParamCaption}\item[{}]{index }\end{DoxyParamCaption})~(1 $<$$<$ (index))}
+
+
+
+ targa.\+h の 29 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a3ea73a6089f61223b225c46e2ba58a47}\label{targa_8h_a3ea73a6089f61223b225c46e2ba58a47}} 
+\index{targa.\+h@{targa.\+h}!htole16@{htole16}}
+\index{htole16@{htole16}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{htole16}{htole16}}
+{\footnotesize\ttfamily \#define htole16(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+
+
+
+ targa.\+h の 35 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a496f9041ee9cbf93e2dad85dde440509}\label{targa_8h_a496f9041ee9cbf93e2dad85dde440509}} 
+\index{targa.\+h@{targa.\+h}!letoh16@{letoh16}}
+\index{letoh16@{letoh16}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{letoh16}{letoh16}}
+{\footnotesize\ttfamily \#define letoh16(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(x)}
+
+
+
+ targa.\+h の 36 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a6ebde3edef2741755bc1c8b3d6606d8a}\label{targa_8h_a6ebde3edef2741755bc1c8b3d6606d8a}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS@{T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS}}
+\index{T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS@{T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS}{TGA\_ATTRIB\_BITS}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+A\+T\+T\+R\+I\+B\+\_\+\+B\+I\+TS~(uint8\+\_\+t)(\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(0)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(1)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(2)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(3))}
+
+
+
+ targa.\+h の 81 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_acd8d46abdc7bdec017db93d33eaff9e7}\label{targa_8h_acd8d46abdc7bdec017db93d33eaff9e7}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT@{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT}}
+\index{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT@{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT}{TGA\_COLOR\_MAP\_ABSENT}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+A\+B\+S\+E\+NT~0}
+
+
+
+ targa.\+h の 51 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a4ee3894b7e6d4952230f95c7591f01b5}\label{targa_8h_a4ee3894b7e6d4952230f95c7591f01b5}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT@{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}}
+\index{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT@{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}{TGA\_COLOR\_MAP\_PRESENT}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT~1}
+
+
+
+ targa.\+h の 52 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ae48b476780cf222b5a4868989ab58177}\label{targa_8h_ae48b476780cf222b5a4868989ab58177}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR}{TGA\_IMAGE\_TYPE\_BGR}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+GR~2 /$\ast$ uncompressed, true-\/color $\ast$/}
+
+
+
+ targa.\+h の 57 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ab08136ead695f252f5ee55f158efd803}\label{targa_8h_ab08136ead695f252f5ee55f158efd803}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE}{TGA\_IMAGE\_TYPE\_BGR\_RLE}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+G\+R\+\_\+\+R\+LE~10 /$\ast$ run-\/length, true-\/color $\ast$/}
+
+
+
+ targa.\+h の 60 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ac61cf375aff4bb85f310b119ac4d01df}\label{targa_8h_ac61cf375aff4bb85f310b119ac4d01df}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP}{TGA\_IMAGE\_TYPE\_COLORMAP}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+AP~1 /$\ast$ uncompressed, color-\/mapped $\ast$/}
+
+
+
+ targa.\+h の 56 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aab29facf7ffd71ef808a7b4c88fe8c73}\label{targa_8h_aab29facf7ffd71ef808a7b4c88fe8c73}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE}{TGA\_IMAGE\_TYPE\_COLORMAP\_RLE}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+L\+O\+R\+M\+A\+P\+\_\+\+R\+LE~9 /$\ast$ run-\/length, color-\/mapped $\ast$/}
+
+
+
+ targa.\+h の 59 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a46658e1e73a31f0ce191c76533b74f93}\label{targa_8h_a46658e1e73a31f0ce191c76533b74f93}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO}{TGA\_IMAGE\_TYPE\_MONO}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+NO~3 /$\ast$ uncompressed, black and white $\ast$/}
+
+
+
+ targa.\+h の 58 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a78cab6d81d720ec05845d774792ee8fb}\label{targa_8h_a78cab6d81d720ec05845d774792ee8fb}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE}{TGA\_IMAGE\_TYPE\_MONO\_RLE}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+O\+N\+O\+\_\+\+R\+LE~11 /$\ast$ run-\/length, black and white $\ast$/}
+
+
+
+ targa.\+h の 61 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aac59d8e958e91b8e3e4c3262b81d5211}\label{targa_8h_aac59d8e958e91b8e3e4c3262b81d5211}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}}
+\index{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE@{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE}{TGA\_IMAGE\_TYPE\_NONE}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+I\+M\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE~0 /$\ast$ no image data $\ast$/}
+
+
+
+ targa.\+h の 55 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ae9eb924fff794258af0fc82915062b16}\label{targa_8h_ae9eb924fff794258af0fc82915062b16}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT@{T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT}}
+\index{T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT@{T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT}{TGA\_R\_TO\_L\_BIT}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+R\+\_\+\+T\+O\+\_\+\+L\+\_\+\+B\+IT~(uint8\+\_\+t)\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(4)}
+
+
+
+ targa.\+h の 82 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a1e1726be98ea1c5f8c6e8469c1c20caa}\label{targa_8h_a1e1726be98ea1c5f8c6e8469c1c20caa}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT@{T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT}}
+\index{T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT@{T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT}{TGA\_T\_TO\_B\_BIT}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+T\+\_\+\+T\+O\+\_\+\+B\+\_\+\+B\+IT~(uint8\+\_\+t)\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(5)}
+
+
+
+ targa.\+h の 83 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a5d881af0e7b0cceed7d0d11f5f6f9ddd}\label{targa_8h_a5d881af0e7b0cceed7d0d11f5f6f9ddd}} 
+\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS@{T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS}}
+\index{T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS@{T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS}{TGA\_UNUSED\_BITS}}
+{\footnotesize\ttfamily \#define T\+G\+A\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+B\+I\+TS~(uint8\+\_\+t)(\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(6)$\vert$\hyperlink{targa_8h_a8a61bea0db82d882d1e62de47f36d24f}{B\+IT}(7))}
+
+
+
+ targa.\+h の 84 行目に定義があります。
+
+
+
+\subsection{列挙型詳解}
+\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+result@{tga\+\_\+result}}
+\index{tga\+\_\+result@{tga\+\_\+result}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+result}{tga\_result}}
+{\footnotesize\ttfamily enum \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result}}
+
+\begin{DoxyEnumFields}{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+\_\+\+N\+O\+E\+RR@{T\+G\+A\+\_\+\+N\+O\+E\+RR}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+\_\+\+N\+O\+E\+RR@{T\+G\+A\+\_\+\+N\+O\+E\+RR}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa7ec303548d5ed75e9150321e96b4e059}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa7ec303548d5ed75e9150321e96b4e059}} 
+T\+G\+A\+\_\+\+N\+O\+E\+RR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+F\+O\+P\+EN@{T\+G\+A\+E\+R\+R\+\_\+\+F\+O\+P\+EN}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+F\+O\+P\+EN@{T\+G\+A\+E\+R\+R\+\_\+\+F\+O\+P\+EN}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa03fc227bdbdbf5b09b770e17e3c37904}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa03fc227bdbdbf5b09b770e17e3c37904}} 
+T\+G\+A\+E\+R\+R\+\_\+\+F\+O\+P\+EN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+E\+OF@{T\+G\+A\+E\+R\+R\+\_\+\+E\+OF}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+E\+OF@{T\+G\+A\+E\+R\+R\+\_\+\+E\+OF}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa2fdd95baa282dcf6eb4725b7eac24b45}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa2fdd95baa282dcf6eb4725b7eac24b45}} 
+T\+G\+A\+E\+R\+R\+\_\+\+E\+OF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+W\+R\+I\+TE@{T\+G\+A\+E\+R\+R\+\_\+\+W\+R\+I\+TE}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+W\+R\+I\+TE@{T\+G\+A\+E\+R\+R\+\_\+\+W\+R\+I\+TE}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa3e3bc9f0ed8474e4cc73e0acf96c49a6}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa3e3bc9f0ed8474e4cc73e0acf96c49a6}} 
+T\+G\+A\+E\+R\+R\+\_\+\+W\+R\+I\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+T\+Y\+PE@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+T\+Y\+PE}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+T\+Y\+PE@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa7c68c739532a23ba3c3e109a8b09f744}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa7c68c739532a23ba3c3e109a8b09f744}} 
+T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+T\+Y\+PE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+I\+M\+G\+\_\+\+T\+Y\+PE@{T\+G\+A\+E\+R\+R\+\_\+\+I\+M\+G\+\_\+\+T\+Y\+PE}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+I\+M\+G\+\_\+\+T\+Y\+PE@{T\+G\+A\+E\+R\+R\+\_\+\+I\+M\+G\+\_\+\+T\+Y\+PE}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa0d364a5bb1a4b179fe802cde6c262fd3}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa0d364a5bb1a4b179fe802cde6c262fd3}} 
+T\+G\+A\+E\+R\+R\+\_\+\+I\+M\+G\+\_\+\+T\+Y\+PE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+I\+MG@{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+I\+MG}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+I\+MG@{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+I\+MG}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1b0ca0c3f7132d82f4dbd780ef306527}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1b0ca0c3f7132d82f4dbd780ef306527}} 
+T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+I\+MG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+M\+I\+S\+S\+I\+NG@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+M\+I\+S\+S\+I\+NG}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+M\+I\+S\+S\+I\+NG@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+M\+I\+S\+S\+I\+NG}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfaf2ad71bd447e0cc616e4af81ba56c92c}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfaf2ad71bd447e0cc616e4af81ba56c92c}} 
+T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+M\+I\+S\+S\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa477530d515ba5bda9a7abf839ea72e2e}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa477530d515ba5bda9a7abf839ea72e2e}} 
+T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+P\+R\+E\+S\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+L\+E\+N\+G\+TH@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+L\+E\+N\+G\+TH}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+L\+E\+N\+G\+TH@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+L\+E\+N\+G\+TH}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa08dbdc5366c619fbb55d33b6d4bcb015}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa08dbdc5366c619fbb55d33b6d4bcb015}} 
+T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+L\+E\+N\+G\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+D\+E\+P\+TH@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+D\+E\+P\+TH}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+D\+E\+P\+TH@{T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+D\+E\+P\+TH}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa9f00162383e5815dce6fb7a113a933c3}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa9f00162383e5815dce6fb7a113a933c3}} 
+T\+G\+A\+E\+R\+R\+\_\+\+C\+M\+A\+P\+\_\+\+D\+E\+P\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+S\+I\+ZE@{T\+G\+A\+E\+R\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+S\+I\+ZE}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+S\+I\+ZE@{T\+G\+A\+E\+R\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+S\+I\+ZE}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa02e29c3121202eee4e01669ea46c92b7}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa02e29c3121202eee4e01669ea46c92b7}} 
+T\+G\+A\+E\+R\+R\+\_\+\+Z\+E\+R\+O\+\_\+\+S\+I\+ZE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+E\+P\+TH@{T\+G\+A\+E\+R\+R\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+E\+P\+TH}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+E\+P\+TH@{T\+G\+A\+E\+R\+R\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+E\+P\+TH}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfaa4ba4f1d6bcd5509039303427ef5fcbf}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfaa4ba4f1d6bcd5509039303427ef5fcbf}} 
+T\+G\+A\+E\+R\+R\+\_\+\+P\+I\+X\+E\+L\+\_\+\+D\+E\+P\+TH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+M\+EM@{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+M\+EM}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+M\+EM@{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+M\+EM}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfac6bdc1ebd9f5827bc1509f65830c261c}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfac6bdc1ebd9f5827bc1509f65830c261c}} 
+T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+\_\+\+M\+EM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+C\+M\+AP@{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+C\+M\+AP}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+C\+M\+AP@{T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+C\+M\+AP}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa3e04aa5c26d13d038cdda0093ccf2c90}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa3e04aa5c26d13d038cdda0093ccf2c90}} 
+T\+G\+A\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+C\+M\+AP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+R\+LE@{T\+G\+A\+E\+R\+R\+\_\+\+R\+LE}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+R\+LE@{T\+G\+A\+E\+R\+R\+\_\+\+R\+LE}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa99858147c70df09c29217b71be8e7850}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa99858147c70df09c29217b71be8e7850}} 
+T\+G\+A\+E\+R\+R\+\_\+\+R\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+R\+A\+N\+GE@{T\+G\+A\+E\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+R\+A\+N\+GE}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+R\+A\+N\+GE@{T\+G\+A\+E\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+R\+A\+N\+GE}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1635afb41eab270c51fb3fa5f20d8269}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1635afb41eab270c51fb3fa5f20d8269}} 
+T\+G\+A\+E\+R\+R\+\_\+\+I\+N\+D\+E\+X\+\_\+\+R\+A\+N\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+G\+A\+E\+R\+R\+\_\+\+M\+O\+NO@{T\+G\+A\+E\+R\+R\+\_\+\+M\+O\+NO}!targa.\+h@{targa.\+h}}\index{targa.\+h@{targa.\+h}!T\+G\+A\+E\+R\+R\+\_\+\+M\+O\+NO@{T\+G\+A\+E\+R\+R\+\_\+\+M\+O\+NO}}}\mbox{\Hypertarget{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1837c357e8ee44b09f47962c581c0b1c}\label{targa_8h_ac44de4611d8cee80b9ceac6a695d30bfa1837c357e8ee44b09f47962c581c0b1c}} 
+T\+G\+A\+E\+R\+R\+\_\+\+M\+O\+NO&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+ targa.\+h の 120 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{targa_8h_a646fb3ba84f92d1e8642203ff4d361a6}\label{targa_8h_a646fb3ba84f92d1e8642203ff4d361a6}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+color\+\_\+unmap@{tga\+\_\+color\+\_\+unmap}}
+\index{tga\+\_\+color\+\_\+unmap@{tga\+\_\+color\+\_\+unmap}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+color\+\_\+unmap()}{tga\_color\_unmap()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+color\+\_\+unmap (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 773 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aa7ca7c4f9655b257ef80dfcde6138616}\label{targa_8h_aa7ca7c4f9655b257ef80dfcde6138616}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+convert\+\_\+depth@{tga\+\_\+convert\+\_\+depth}}
+\index{tga\+\_\+convert\+\_\+depth@{tga\+\_\+convert\+\_\+depth}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+convert\+\_\+depth()}{tga\_convert\_depth()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+convert\+\_\+depth (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img,  }\item[{const uint8\+\_\+t}]{bits }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 996 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_acdd03b00388eba9720d1997440f03e05}\label{targa_8h_acdd03b00388eba9720d1997440f03e05}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+desaturate@{tga\+\_\+desaturate}}
+\index{tga\+\_\+desaturate@{tga\+\_\+desaturate}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+desaturate()}{tga\_desaturate()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+desaturate (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img,  }\item[{const int}]{cr,  }\item[{const int}]{cg,  }\item[{const int}]{cb,  }\item[{const int}]{dv }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 932 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aeb6eae85594beb85b50cd06de8565deb}\label{targa_8h_aeb6eae85594beb85b50cd06de8565deb}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+desaturate\+\_\+avg@{tga\+\_\+desaturate\+\_\+avg}}
+\index{tga\+\_\+desaturate\+\_\+avg@{tga\+\_\+desaturate\+\_\+avg}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+desaturate\+\_\+avg()}{tga\_desaturate\_avg()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+desaturate\+\_\+avg (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 985 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a92aaa85e64073d7d7a149c7a86c033e2}\label{targa_8h_a92aaa85e64073d7d7a149c7a86c033e2}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+desaturate\+\_\+itu@{tga\+\_\+desaturate\+\_\+itu}}
+\index{tga\+\_\+desaturate\+\_\+itu@{tga\+\_\+desaturate\+\_\+itu}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+desaturate\+\_\+itu()}{tga\_desaturate\_itu()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+desaturate\+\_\+itu (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 980 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a8e32410895ef250029f9fdfa7d4fd6e8}\label{targa_8h_a8e32410895ef250029f9fdfa7d4fd6e8}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1@{tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1}}
+\index{tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1@{tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1()}{tga\_desaturate\_rec\_601\_1()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+desaturate\+\_\+rec\+\_\+601\+\_\+1 (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 970 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a6b86eed2ee59c8bc3e87c3ebf90161d2}\label{targa_8h_a6b86eed2ee59c8bc3e87c3ebf90161d2}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+desaturate\+\_\+rec\+\_\+709@{tga\+\_\+desaturate\+\_\+rec\+\_\+709}}
+\index{tga\+\_\+desaturate\+\_\+rec\+\_\+709@{tga\+\_\+desaturate\+\_\+rec\+\_\+709}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+desaturate\+\_\+rec\+\_\+709()}{tga\_desaturate\_rec\_709()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+desaturate\+\_\+rec\+\_\+709 (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 975 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aadc9607e0c654158c61506b86b3bdf03}\label{targa_8h_aadc9607e0c654158c61506b86b3bdf03}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+error@{tga\+\_\+error}}
+\index{tga\+\_\+error@{tga\+\_\+error}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+error()}{tga\_error()}}
+{\footnotesize\ttfamily const char$\ast$ tga\+\_\+error (\begin{DoxyParamCaption}\item[{const \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result}}]{errcode }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 105 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a11fcbc11d743a27884d283a816283cc6}\label{targa_8h_a11fcbc11d743a27884d283a816283cc6}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+find\+\_\+pixel@{tga\+\_\+find\+\_\+pixel}}
+\index{tga\+\_\+find\+\_\+pixel@{tga\+\_\+find\+\_\+pixel}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+find\+\_\+pixel()}{tga\_find\_pixel()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ tga\+\_\+find\+\_\+pixel (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 818 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a4deb7770264ee8d864148e1a6f808c1d}\label{targa_8h_a4deb7770264ee8d864148e1a6f808c1d}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+flip\+\_\+horiz@{tga\+\_\+flip\+\_\+horiz}}
+\index{tga\+\_\+flip\+\_\+horiz@{tga\+\_\+flip\+\_\+horiz}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+flip\+\_\+horiz()}{tga\_flip\_horiz()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+flip\+\_\+horiz (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 677 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ac50cbfbd5f78bae557eeb025c0f7d9ac}\label{targa_8h_ac50cbfbd5f78bae557eeb025c0f7d9ac}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+flip\+\_\+vert@{tga\+\_\+flip\+\_\+vert}}
+\index{tga\+\_\+flip\+\_\+vert@{tga\+\_\+flip\+\_\+vert}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+flip\+\_\+vert()}{tga\_flip\_vert()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+flip\+\_\+vert (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 724 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a54f1bfb332e5b265b52f98e5c85d4aed}\label{targa_8h_a54f1bfb332e5b265b52f98e5c85d4aed}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+free\+\_\+buffers@{tga\+\_\+free\+\_\+buffers}}
+\index{tga\+\_\+free\+\_\+buffers@{tga\+\_\+free\+\_\+buffers}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+free\+\_\+buffers()}{tga\_free\_buffers()}}
+{\footnotesize\ttfamily void tga\+\_\+free\+\_\+buffers (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 1095 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a300c59606837b7585851ea8623248635}\label{targa_8h_a300c59606837b7585851ea8623248635}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+get\+\_\+attribute\+\_\+bits@{tga\+\_\+get\+\_\+attribute\+\_\+bits}}
+\index{tga\+\_\+get\+\_\+attribute\+\_\+bits@{tga\+\_\+get\+\_\+attribute\+\_\+bits}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+get\+\_\+attribute\+\_\+bits()}{tga\_get\_attribute\_bits()}}
+{\footnotesize\ttfamily uint8\+\_\+t tga\+\_\+get\+\_\+attribute\+\_\+bits (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{tga }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 58 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ad68984ba0b1fc645618c99eb24bfd3a0}\label{targa_8h_ad68984ba0b1fc645618c99eb24bfd3a0}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+is\+\_\+colormapped@{tga\+\_\+is\+\_\+colormapped}}
+\index{tga\+\_\+is\+\_\+colormapped@{tga\+\_\+is\+\_\+colormapped}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+is\+\_\+colormapped()}{tga\_is\_colormapped()}}
+{\footnotesize\ttfamily int tga\+\_\+is\+\_\+colormapped (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{tga }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 73 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a54a80f828795af46585f19273cc04a9a}\label{targa_8h_a54a80f828795af46585f19273cc04a9a}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+is\+\_\+mono@{tga\+\_\+is\+\_\+mono}}
+\index{tga\+\_\+is\+\_\+mono@{tga\+\_\+is\+\_\+mono}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+is\+\_\+mono()}{tga\_is\_mono()}}
+{\footnotesize\ttfamily int tga\+\_\+is\+\_\+mono (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{tga }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 90 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a60119528288e715035ef3c4676508fb8}\label{targa_8h_a60119528288e715035ef3c4676508fb8}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left@{tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left}}
+\index{tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left@{tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left()}{tga\_is\_right\_to\_left()}}
+{\footnotesize\ttfamily int tga\+\_\+is\+\_\+right\+\_\+to\+\_\+left (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{tga }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 63 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aa7c4d52b9957c2ac6fd2c8a8543c435e}\label{targa_8h_aa7c4d52b9957c2ac6fd2c8a8543c435e}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+is\+\_\+rle@{tga\+\_\+is\+\_\+rle}}
+\index{tga\+\_\+is\+\_\+rle@{tga\+\_\+is\+\_\+rle}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+is\+\_\+rle()}{tga\_is\_rle()}}
+{\footnotesize\ttfamily int tga\+\_\+is\+\_\+rle (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{tga }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 81 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a6443a16b2618f107b4803afba7b49fe4}\label{targa_8h_a6443a16b2618f107b4803afba7b49fe4}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom@{tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom}}
+\index{tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom@{tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom()}{tga\_is\_top\_to\_bottom()}}
+{\footnotesize\ttfamily int tga\+\_\+is\+\_\+top\+\_\+to\+\_\+bottom (\begin{DoxyParamCaption}\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{tga }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 68 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a3ccf1cc1d85eb3d61fef244daf69ebce}\label{targa_8h_a3ccf1cc1d85eb3d61fef244daf69ebce}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+pack\+\_\+pixel@{tga\+\_\+pack\+\_\+pixel}}
+\index{tga\+\_\+pack\+\_\+pixel@{tga\+\_\+pack\+\_\+pixel}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+pack\+\_\+pixel()}{tga\_pack\_pixel()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+pack\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{dest,  }\item[{const uint8\+\_\+t}]{bits,  }\item[{const uint8\+\_\+t}]{b,  }\item[{const uint8\+\_\+t}]{g,  }\item[{const uint8\+\_\+t}]{r,  }\item[{const uint8\+\_\+t}]{a }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 886 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aec72f50bbfb9449325e305156ca4c830}\label{targa_8h_aec72f50bbfb9449325e305156ca4c830}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+read@{tga\+\_\+read}}
+\index{tga\+\_\+read@{tga\+\_\+read}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+read()}{tga\_read()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+read (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{dest,  }\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 158 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a6ecc214b67a8312a1f53cfac71b8c9cf}\label{targa_8h_a6ecc214b67a8312a1f53cfac71b8c9cf}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+LE@{tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+LE}}
+\index{tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+LE@{tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+LE}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+L\+E()}{tga\_read\_from\_FILE()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+read\+\_\+from\+\_\+\+F\+I\+LE (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{dest,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 177 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a3d0408a50f692676ecf5e1af176c33b3}\label{targa_8h_a3d0408a50f692676ecf5e1af176c33b3}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+swap\+\_\+red\+\_\+blue@{tga\+\_\+swap\+\_\+red\+\_\+blue}}
+\index{tga\+\_\+swap\+\_\+red\+\_\+blue@{tga\+\_\+swap\+\_\+red\+\_\+blue}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+swap\+\_\+red\+\_\+blue()}{tga\_swap\_red\_blue()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+swap\+\_\+red\+\_\+blue (\begin{DoxyParamCaption}\item[{\hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 1071 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ae7a4bfc3255594f43a3446c9c5a78c2c}\label{targa_8h_ae7a4bfc3255594f43a3446c9c5a78c2c}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+unpack\+\_\+pixel@{tga\+\_\+unpack\+\_\+pixel}}
+\index{tga\+\_\+unpack\+\_\+pixel@{tga\+\_\+unpack\+\_\+pixel}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+unpack\+\_\+pixel()}{tga\_unpack\_pixel()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+unpack\+\_\+pixel (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{src,  }\item[{const uint8\+\_\+t}]{bits,  }\item[{uint8\+\_\+t $\ast$}]{b,  }\item[{uint8\+\_\+t $\ast$}]{g,  }\item[{uint8\+\_\+t $\ast$}]{r,  }\item[{uint8\+\_\+t $\ast$}]{a }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 835 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_aea4a7230a5d6d60ce3623d31c4866ed2}\label{targa_8h_aea4a7230a5d6d60ce3623d31c4866ed2}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write@{tga\+\_\+write}}
+\index{tga\+\_\+write@{tga\+\_\+write}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write()}{tga\_write()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 352 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a086b1fd6f21bd2745266cc48e3c05d59}\label{targa_8h_a086b1fd6f21bd2745266cc48e3c05d59}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+bgr@{tga\+\_\+write\+\_\+bgr}}
+\index{tga\+\_\+write\+\_\+bgr@{tga\+\_\+write\+\_\+bgr}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+bgr()}{tga\_write\_bgr()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+bgr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{uint8\+\_\+t $\ast$}]{image,  }\item[{const uint16\+\_\+t}]{width,  }\item[{const uint16\+\_\+t}]{height,  }\item[{const uint8\+\_\+t}]{depth }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 623 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_adb62dcf02b32bc57a60d0b54fc4ee568}\label{targa_8h_adb62dcf02b32bc57a60d0b54fc4ee568}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+bgr\+\_\+rle@{tga\+\_\+write\+\_\+bgr\+\_\+rle}}
+\index{tga\+\_\+write\+\_\+bgr\+\_\+rle@{tga\+\_\+write\+\_\+bgr\+\_\+rle}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+bgr\+\_\+rle()}{tga\_write\_bgr\_rle()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+bgr\+\_\+rle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{uint8\+\_\+t $\ast$}]{image,  }\item[{const uint16\+\_\+t}]{width,  }\item[{const uint16\+\_\+t}]{height,  }\item[{const uint8\+\_\+t}]{depth }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 634 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a3d3b508344ac42fc4655ab034c041951}\label{targa_8h_a3d3b508344ac42fc4655ab034c041951}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+mono@{tga\+\_\+write\+\_\+mono}}
+\index{tga\+\_\+write\+\_\+mono@{tga\+\_\+write\+\_\+mono}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+mono()}{tga\_write\_mono()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+mono (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{uint8\+\_\+t $\ast$}]{image,  }\item[{const uint16\+\_\+t}]{width,  }\item[{const uint16\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 601 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a19da5c4f3846112951b4cca4424e35d8}\label{targa_8h_a19da5c4f3846112951b4cca4424e35d8}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+mono\+\_\+rle@{tga\+\_\+write\+\_\+mono\+\_\+rle}}
+\index{tga\+\_\+write\+\_\+mono\+\_\+rle@{tga\+\_\+write\+\_\+mono\+\_\+rle}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+mono\+\_\+rle()}{tga\_write\_mono\_rle()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+mono\+\_\+rle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{uint8\+\_\+t $\ast$}]{image,  }\item[{const uint16\+\_\+t}]{width,  }\item[{const uint16\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 612 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a86157923b50dd0d05850cf0fd121ac7b}\label{targa_8h_a86157923b50dd0d05850cf0fd121ac7b}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+rgb@{tga\+\_\+write\+\_\+rgb}}
+\index{tga\+\_\+write\+\_\+rgb@{tga\+\_\+write\+\_\+rgb}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+rgb()}{tga\_write\_rgb()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+rgb (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{uint8\+\_\+t $\ast$}]{image,  }\item[{const uint16\+\_\+t}]{width,  }\item[{const uint16\+\_\+t}]{height,  }\item[{const uint8\+\_\+t}]{depth }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 646 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_ac7ba1826c0bac340b445b78913ed7dbf}\label{targa_8h_ac7ba1826c0bac340b445b78913ed7dbf}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+rgb\+\_\+rle@{tga\+\_\+write\+\_\+rgb\+\_\+rle}}
+\index{tga\+\_\+write\+\_\+rgb\+\_\+rle@{tga\+\_\+write\+\_\+rgb\+\_\+rle}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+rgb\+\_\+rle()}{tga\_write\_rgb\_rle()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+rgb\+\_\+rle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{uint8\+\_\+t $\ast$}]{image,  }\item[{const uint16\+\_\+t}]{width,  }\item[{const uint16\+\_\+t}]{height,  }\item[{const uint8\+\_\+t}]{depth }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 659 行目に定義があります。
+
+\mbox{\Hypertarget{targa_8h_a003d7932dac5c59de7672465366ddacd}\label{targa_8h_a003d7932dac5c59de7672465366ddacd}} 
+\index{targa.\+h@{targa.\+h}!tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+LE@{tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+LE}}
+\index{tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+LE@{tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+LE}!targa.\+h@{targa.\+h}}
+\subsubsection{\texorpdfstring{tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+L\+E()}{tga\_write\_to\_FILE()}}
+{\footnotesize\ttfamily \hyperlink{targa_8h_ac44de4611d8cee80b9ceac6a695d30bf}{tga\+\_\+result} tga\+\_\+write\+\_\+to\+\_\+\+F\+I\+LE (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const \hyperlink{structtga__image}{tga\+\_\+image} $\ast$}]{src }\end{DoxyParamCaption})}
+
+
+
+ targa.\+cxx の 479 行目に定義があります。
+

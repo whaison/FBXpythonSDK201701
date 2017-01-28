@@ -1,0 +1,362 @@
+\hypertarget{class_fbx_limits}{}\section{Fbx\+Limits クラス}
+\label{class_fbx_limits}\index{Fbx\+Limits@{Fbx\+Limits}}
+
+
+{\ttfamily \#include $<$fbxtransforms.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_limits_a19b22bfab7e355c4d02cea76fa5a0716}{Fbx\+Limits} ()
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_limits}{Fbx\+Limits} \& \hyperlink{class_fbx_limits_ae59422fb31755035d02b272e74b9e518}{operator=} (const \hyperlink{class_fbx_limits}{Fbx\+Limits} \&p\+Limits)
+\begin{DoxyCompactList}\small\item\em Assignment Operator \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_limits_a2225bf4117f0c8c7cd99f74390ad26e3}{Get\+Active} () const
+\item 
+void \hyperlink{class_fbx_limits_a9250fab25f1f8cf5e64651073ad8a327}{Set\+Active} (const bool p\+Active)
+\item 
+bool \hyperlink{class_fbx_limits_a2eb90034a35d752ab84c1fd2ae5ae254}{Get\+Min\+X\+Active} () const
+\item 
+bool \hyperlink{class_fbx_limits_a1dbd5286be843c07799ad0c5c0296345}{Get\+Min\+Y\+Active} () const
+\item 
+bool \hyperlink{class_fbx_limits_afd07bd7e174be42570ce976146bbba48}{Get\+Min\+Z\+Active} () const
+\item 
+void \hyperlink{class_fbx_limits_af9f15f72a7e0be4f1244c14bb1af6e50}{Get\+Min\+Active} (bool \&p\+X\+Active, bool \&p\+Y\+Active, bool \&p\+Z\+Active) const
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_limits_a9c58030943ee716e37374c7ec77c7283}{Get\+Min} () const
+\item 
+void \hyperlink{class_fbx_limits_a1023b7037e317e7f9346e07c70896de8}{Set\+Min\+X\+Active} (bool p\+Active)
+\item 
+void \hyperlink{class_fbx_limits_a0c318feddc17187ef7011f254068db8f}{Set\+Min\+Y\+Active} (bool p\+Active)
+\item 
+void \hyperlink{class_fbx_limits_a4d082ec302ffcac6d5a83a5c01ec9817}{Set\+Min\+Z\+Active} (bool p\+Active)
+\item 
+void \hyperlink{class_fbx_limits_a51a68932b8f0c1a97244088d4840e8ea}{Set\+Min\+Active} (bool p\+X\+Active, bool p\+Y\+Active, bool p\+Z\+Active)
+\item 
+void \hyperlink{class_fbx_limits_ad380f8aaba424943aa46a1f8d642e0a2}{Set\+Min} (const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \&p\+Min)
+\item 
+bool \hyperlink{class_fbx_limits_a1c06d0786e11e5bded1464359b32ef86}{Get\+Max\+X\+Active} () const
+\item 
+bool \hyperlink{class_fbx_limits_a9c35de6b7cf9fbc6eb72b6cc37211cd7}{Get\+Max\+Y\+Active} () const
+\item 
+bool \hyperlink{class_fbx_limits_a80245178e61a5c9145685ea619731b3c}{Get\+Max\+Z\+Active} () const
+\item 
+void \hyperlink{class_fbx_limits_abf8ef22b8369f55d59c5066f7a1e64a4}{Get\+Max\+Active} (bool \&p\+X\+Active, bool \&p\+Y\+Active, bool \&p\+Z\+Active) const
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_limits_a398d831c3b798b29ccf33e29a72d6962}{Get\+Max} () const
+\item 
+void \hyperlink{class_fbx_limits_a3cd2e8d3fb746b1872a2a94c382ab410}{Set\+Max\+X\+Active} (bool p\+Active)
+\item 
+void \hyperlink{class_fbx_limits_a6b8a5aa910a87cc805a00a70c0df2439}{Set\+Max\+Y\+Active} (bool p\+Active)
+\item 
+void \hyperlink{class_fbx_limits_a83dfa28859c1e26985e2ec963fe32a28}{Set\+Max\+Z\+Active} (bool p\+Active)
+\item 
+void \hyperlink{class_fbx_limits_adb51ef228a31741ab0ad20a5a83d4ab6}{Set\+Max\+Active} (bool p\+X\+Active, bool p\+Y\+Active, bool p\+Z\+Active)
+\item 
+void \hyperlink{class_fbx_limits_ab3af1af72a0c006c836a9684cc66af27}{Set\+Max} (const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \&p\+Max)
+\item 
+bool \hyperlink{class_fbx_limits_a8212a912af1692135239e402a38cd47c}{Get\+Any\+Min\+Max\+Active} () const
+\item 
+\hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \hyperlink{class_fbx_limits_a6b64655b62833ad966cf868b4781bf86}{Apply} (const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \&p\+Vector)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\hyperlink{class_fbx_limits}{Fbx\+Limits} defines a limit range for one transform component, either translation, rotation or scaling. One transform component limit contains two part\+: a min value and a max value limit, which means that each value of the corresponding transform component cannot go beyond the range set by the min and max values. Although the members are identified as X, Y and Z (the W component is ignored) at this level, they are unitless values and will only have meaning within the context they are queried.
+
+For each limit, there is one flag to indicate if the limit is active or not. Before accessing the limit info, the caller need to query the flag first to make sure that the retrieved values will be meaningful. 
+
+ fbxtransforms.\+h の 34 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_limits_a19b22bfab7e355c4d02cea76fa5a0716}\label{class_fbx_limits_a19b22bfab7e355c4d02cea76fa5a0716}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Fbx\+Limits@{Fbx\+Limits}}
+\index{Fbx\+Limits@{Fbx\+Limits}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Fbx\+Limits()}{FbxLimits()}}
+{\footnotesize\ttfamily Fbx\+Limits\+::\+Fbx\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor 
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_limits_a6b64655b62833ad966cf868b4781bf86}\label{class_fbx_limits_a6b64655b62833ad966cf868b4781bf86}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Apply@{Apply}}
+\index{Apply@{Apply}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Apply()}{Apply()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Limits\+::\+Apply (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \&}]{p\+Vector }\end{DoxyParamCaption})}
+
+Apply the active limits to the components of the vector provided. \begin{DoxyReturn}{戻り値}
+The new vector clamped by active limits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_a2225bf4117f0c8c7cd99f74390ad26e3}\label{class_fbx_limits_a2225bf4117f0c8c7cd99f74390ad26e3}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Active@{Get\+Active}}
+\index{Get\+Active@{Get\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Active()}{GetActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retrieve the active state of this limit. \begin{DoxyReturn}{戻り値}
+True if the limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_a8212a912af1692135239e402a38cd47c}\label{class_fbx_limits_a8212a912af1692135239e402a38cd47c}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Any\+Min\+Max\+Active@{Get\+Any\+Min\+Max\+Active}}
+\index{Get\+Any\+Min\+Max\+Active@{Get\+Any\+Min\+Max\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Any\+Min\+Max\+Active()}{GetAnyMinMaxActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Any\+Min\+Max\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Find if any of the minimum or maximum active state are set. \begin{DoxyReturn}{戻り値}
+If any component of the minimum or maximum active state are set, true is returned. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{注釈}
+The global active state will not count when resolving this. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{class_fbx_limits_a398d831c3b798b29ccf33e29a72d6962}\label{class_fbx_limits_a398d831c3b798b29ccf33e29a72d6962}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Max@{Get\+Max}}
+\index{Get\+Max@{Get\+Max}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Max()}{GetMax()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Limits\+::\+Get\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the maximum limits. \begin{DoxyReturn}{戻り値}
+The current X, Y and Z values for the maximum limits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_abf8ef22b8369f55d59c5066f7a1e64a4}\label{class_fbx_limits_abf8ef22b8369f55d59c5066f7a1e64a4}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Max\+Active@{Get\+Max\+Active}}
+\index{Get\+Max\+Active@{Get\+Max\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Max\+Active()}{GetMaxActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Get\+Max\+Active (\begin{DoxyParamCaption}\item[{bool \&}]{p\+X\+Active,  }\item[{bool \&}]{p\+Y\+Active,  }\item[{bool \&}]{p\+Z\+Active }\end{DoxyParamCaption}) const}
+
+Get the active states of the three components of the maximum limit. 
+\begin{DoxyParams}{引数}
+{\em p\+X\+Active} & {\ttfamily True} if the X component maximum limit is active. \\
+\hline
+{\em p\+Y\+Active} & {\ttfamily True} if the Y component maximum limit is active. \\
+\hline
+{\em p\+Z\+Active} & {\ttfamily True} if the Z component maximum limit is active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a1c06d0786e11e5bded1464359b32ef86}\label{class_fbx_limits_a1c06d0786e11e5bded1464359b32ef86}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Max\+X\+Active@{Get\+Max\+X\+Active}}
+\index{Get\+Max\+X\+Active@{Get\+Max\+X\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Max\+X\+Active()}{GetMaxXActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Max\+X\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the active state of the maximum X component. \begin{DoxyReturn}{戻り値}
+True if the X component maximum limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_a9c35de6b7cf9fbc6eb72b6cc37211cd7}\label{class_fbx_limits_a9c35de6b7cf9fbc6eb72b6cc37211cd7}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Max\+Y\+Active@{Get\+Max\+Y\+Active}}
+\index{Get\+Max\+Y\+Active@{Get\+Max\+Y\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Max\+Y\+Active()}{GetMaxYActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Max\+Y\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the active state of the maximum Y component. \begin{DoxyReturn}{戻り値}
+True if the Y component maximum limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_a80245178e61a5c9145685ea619731b3c}\label{class_fbx_limits_a80245178e61a5c9145685ea619731b3c}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Max\+Z\+Active@{Get\+Max\+Z\+Active}}
+\index{Get\+Max\+Z\+Active@{Get\+Max\+Z\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Max\+Z\+Active()}{GetMaxZActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Max\+Z\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the active state of the maximum Z component. \begin{DoxyReturn}{戻り値}
+True if the Z component maximum limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_a9c58030943ee716e37374c7ec77c7283}\label{class_fbx_limits_a9c58030943ee716e37374c7ec77c7283}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Min@{Get\+Min}}
+\index{Get\+Min@{Get\+Min}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Min()}{GetMin()}}
+{\footnotesize\ttfamily \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} Fbx\+Limits\+::\+Get\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the minimum limits. \begin{DoxyReturn}{戻り値}
+The current X, Y and Z values for the minimum limits. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_af9f15f72a7e0be4f1244c14bb1af6e50}\label{class_fbx_limits_af9f15f72a7e0be4f1244c14bb1af6e50}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Min\+Active@{Get\+Min\+Active}}
+\index{Get\+Min\+Active@{Get\+Min\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Min\+Active()}{GetMinActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Get\+Min\+Active (\begin{DoxyParamCaption}\item[{bool \&}]{p\+X\+Active,  }\item[{bool \&}]{p\+Y\+Active,  }\item[{bool \&}]{p\+Z\+Active }\end{DoxyParamCaption}) const}
+
+Get the active states of the three components of the minimum limit. 
+\begin{DoxyParams}{引数}
+{\em p\+X\+Active} & {\ttfamily True} if the X component minimum limit is active. \\
+\hline
+{\em p\+Y\+Active} & {\ttfamily True} if the Y component minimum limit is active. \\
+\hline
+{\em p\+Z\+Active} & {\ttfamily True} if the Z component minimum limit is active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a2eb90034a35d752ab84c1fd2ae5ae254}\label{class_fbx_limits_a2eb90034a35d752ab84c1fd2ae5ae254}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Min\+X\+Active@{Get\+Min\+X\+Active}}
+\index{Get\+Min\+X\+Active@{Get\+Min\+X\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Min\+X\+Active()}{GetMinXActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Min\+X\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the active state of the minimum X component. \begin{DoxyReturn}{戻り値}
+True if the X component minimum limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_a1dbd5286be843c07799ad0c5c0296345}\label{class_fbx_limits_a1dbd5286be843c07799ad0c5c0296345}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Min\+Y\+Active@{Get\+Min\+Y\+Active}}
+\index{Get\+Min\+Y\+Active@{Get\+Min\+Y\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Min\+Y\+Active()}{GetMinYActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Min\+Y\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the active state of the minimum Y component. \begin{DoxyReturn}{戻り値}
+True if the Y component minimum limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_afd07bd7e174be42570ce976146bbba48}\label{class_fbx_limits_afd07bd7e174be42570ce976146bbba48}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Get\+Min\+Z\+Active@{Get\+Min\+Z\+Active}}
+\index{Get\+Min\+Z\+Active@{Get\+Min\+Z\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Get\+Min\+Z\+Active()}{GetMinZActive()}}
+{\footnotesize\ttfamily bool Fbx\+Limits\+::\+Get\+Min\+Z\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the active state of the minimum Z component. \begin{DoxyReturn}{戻り値}
+True if the Z component minimum limit is active. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_fbx_limits_ae59422fb31755035d02b272e74b9e518}\label{class_fbx_limits_ae59422fb31755035d02b272e74b9e518}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!operator=@{operator=}}
+\index{operator=@{operator=}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_fbx_limits}{Fbx\+Limits}\& Fbx\+Limits\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_fbx_limits}{Fbx\+Limits} \&}]{p\+Limits }\end{DoxyParamCaption})}
+
+
+
+Assignment Operator 
+
+\mbox{\Hypertarget{class_fbx_limits_a9250fab25f1f8cf5e64651073ad8a327}\label{class_fbx_limits_a9250fab25f1f8cf5e64651073ad8a327}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Active (\begin{DoxyParamCaption}\item[{const bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of this limit. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, this limit will become globally active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_ab3af1af72a0c006c836a9684cc66af27}\label{class_fbx_limits_ab3af1af72a0c006c836a9684cc66af27}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Max@{Set\+Max}}
+\index{Set\+Max@{Set\+Max}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Max()}{SetMax()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Max (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \&}]{p\+Max }\end{DoxyParamCaption})}
+
+Set the maximum limits. 
+\begin{DoxyParams}{引数}
+{\em p\+Max} & The X, Y and Z values for the maximum limits. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_adb51ef228a31741ab0ad20a5a83d4ab6}\label{class_fbx_limits_adb51ef228a31741ab0ad20a5a83d4ab6}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Max\+Active@{Set\+Max\+Active}}
+\index{Set\+Max\+Active@{Set\+Max\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Max\+Active()}{SetMaxActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Max\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+X\+Active,  }\item[{bool}]{p\+Y\+Active,  }\item[{bool}]{p\+Z\+Active }\end{DoxyParamCaption})}
+
+Set the active states of the three components of the maximum limits. 
+\begin{DoxyParams}{引数}
+{\em p\+X\+Active} & If true, the X component maximum limit will be active. \\
+\hline
+{\em p\+Y\+Active} & If true, the Y component maximum limit will be active. \\
+\hline
+{\em p\+Z\+Active} & If true, the Z component maximum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a3cd2e8d3fb746b1872a2a94c382ab410}\label{class_fbx_limits_a3cd2e8d3fb746b1872a2a94c382ab410}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Max\+X\+Active@{Set\+Max\+X\+Active}}
+\index{Set\+Max\+X\+Active@{Set\+Max\+X\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Max\+X\+Active()}{SetMaxXActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Max\+X\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of the maximum X component. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, the X component maximum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a6b8a5aa910a87cc805a00a70c0df2439}\label{class_fbx_limits_a6b8a5aa910a87cc805a00a70c0df2439}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Max\+Y\+Active@{Set\+Max\+Y\+Active}}
+\index{Set\+Max\+Y\+Active@{Set\+Max\+Y\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Max\+Y\+Active()}{SetMaxYActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Max\+Y\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of the maximum Y component. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, the Y component maximum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a83dfa28859c1e26985e2ec963fe32a28}\label{class_fbx_limits_a83dfa28859c1e26985e2ec963fe32a28}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Max\+Z\+Active@{Set\+Max\+Z\+Active}}
+\index{Set\+Max\+Z\+Active@{Set\+Max\+Z\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Max\+Z\+Active()}{SetMaxZActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Max\+Z\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of the maximum Z component. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, the Z component maximum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_ad380f8aaba424943aa46a1f8d642e0a2}\label{class_fbx_limits_ad380f8aaba424943aa46a1f8d642e0a2}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Min@{Set\+Min}}
+\index{Set\+Min@{Set\+Min}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Min()}{SetMin()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Min (\begin{DoxyParamCaption}\item[{const \hyperlink{fbxtypes_8h_ae0a96f14cde566774c7553aa7523b7a7}{Fbx\+Double3} \&}]{p\+Min }\end{DoxyParamCaption})}
+
+Set the minimum limits. 
+\begin{DoxyParams}{引数}
+{\em p\+Min} & The X, Y and Z values for the minimum limits. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a51a68932b8f0c1a97244088d4840e8ea}\label{class_fbx_limits_a51a68932b8f0c1a97244088d4840e8ea}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Min\+Active@{Set\+Min\+Active}}
+\index{Set\+Min\+Active@{Set\+Min\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Min\+Active()}{SetMinActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Min\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+X\+Active,  }\item[{bool}]{p\+Y\+Active,  }\item[{bool}]{p\+Z\+Active }\end{DoxyParamCaption})}
+
+Set the active states of the three components of the minimum limits. 
+\begin{DoxyParams}{引数}
+{\em p\+X\+Active} & If true, the X component minimum limit will be active. \\
+\hline
+{\em p\+Y\+Active} & If true, the Y component minimum limit will be active. \\
+\hline
+{\em p\+Z\+Active} & If true, the Z component minimum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a1023b7037e317e7f9346e07c70896de8}\label{class_fbx_limits_a1023b7037e317e7f9346e07c70896de8}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Min\+X\+Active@{Set\+Min\+X\+Active}}
+\index{Set\+Min\+X\+Active@{Set\+Min\+X\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Min\+X\+Active()}{SetMinXActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Min\+X\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of the minimum X component. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, the X component minimum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a0c318feddc17187ef7011f254068db8f}\label{class_fbx_limits_a0c318feddc17187ef7011f254068db8f}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Min\+Y\+Active@{Set\+Min\+Y\+Active}}
+\index{Set\+Min\+Y\+Active@{Set\+Min\+Y\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Min\+Y\+Active()}{SetMinYActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Min\+Y\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of the minimum Y component. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, the Y component minimum limit will be active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_fbx_limits_a4d082ec302ffcac6d5a83a5c01ec9817}\label{class_fbx_limits_a4d082ec302ffcac6d5a83a5c01ec9817}} 
+\index{Fbx\+Limits@{Fbx\+Limits}!Set\+Min\+Z\+Active@{Set\+Min\+Z\+Active}}
+\index{Set\+Min\+Z\+Active@{Set\+Min\+Z\+Active}!Fbx\+Limits@{Fbx\+Limits}}
+\subsubsection{\texorpdfstring{Set\+Min\+Z\+Active()}{SetMinZActive()}}
+{\footnotesize\ttfamily void Fbx\+Limits\+::\+Set\+Min\+Z\+Active (\begin{DoxyParamCaption}\item[{bool}]{p\+Active }\end{DoxyParamCaption})}
+
+Set the active state of the minimum Z component. 
+\begin{DoxyParams}{引数}
+{\em p\+Active} & If true, the Z component minimum limit will be active. \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/math/\hyperlink{fbxtransforms_8h}{fbxtransforms.\+h}\end{DoxyCompactItemize}

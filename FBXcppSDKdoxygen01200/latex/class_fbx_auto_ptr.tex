@@ -1,0 +1,217 @@
+\hypertarget{class_fbx_auto_ptr}{}\section{Fbx\+Auto\+Ptr$<$ Type, Policy $>$ クラステンプレート}
+\label{class_fbx_auto_ptr}\index{Fbx\+Auto\+Ptr$<$ Type, Policy $>$@{Fbx\+Auto\+Ptr$<$ Type, Policy $>$}}
+
+
+{\ttfamily \#include $<$fbxalloc.\+h$>$}
+
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_fbx_auto_ptr_ae988d5760ee4926a4a10d76c37b378fc}{Fbx\+Auto\+Ptr} (Type $\ast$p\+Ptr=0)
+\begin{DoxyCompactList}\small\item\em Construct from a pointer. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_auto_ptr_aa185a3ac9d0cc7b8c2b04825f3ea73ee}{$\sim$\+Fbx\+Auto\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+Type $\ast$ \hyperlink{class_fbx_auto_ptr_ae7006aca39929990a12c7c99af5d3ef7}{Get} () const
+\begin{DoxyCompactList}\small\item\em Retrieve the pointer it holds. \end{DoxyCompactList}\item 
+Type $\ast$ \hyperlink{class_fbx_auto_ptr_adfc79ea055e3de00252fb707ff5cfe31}{operator-\/$>$} () const
+\begin{DoxyCompactList}\small\item\em Member access operator. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_auto_ptr_ab7d5ac9eadc5c51ea062016f08640be1}{operator Type $\ast$} () const
+\begin{DoxyCompactList}\small\item\em Convert to a Type pointer. \end{DoxyCompactList}\item 
+Type \& \hyperlink{class_fbx_auto_ptr_acb65f0b9499fede18cb2749fa42f40a9}{operator$\ast$} () const
+\begin{DoxyCompactList}\small\item\em Dereference operator. \end{DoxyCompactList}\item 
+bool \hyperlink{class_fbx_auto_ptr_afc9bb02ba900f9920772416291690f45}{operator!} () const
+\begin{DoxyCompactList}\small\item\em Logical not operator. \end{DoxyCompactList}\item 
+\hyperlink{class_fbx_auto_ptr_ae92a5d1428b0ce74491aab76f8535b4c}{operator bool} () const
+\begin{DoxyCompactList}\small\item\em Convert to boolean value. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_auto_ptr_ab0b755d84668c33b007a3311adb2b9e1}{Reset} (Type $\ast$p\+Ptr=0)
+\begin{DoxyCompactList}\small\item\em Reset the scoped pointer by swapping with another pointer. \end{DoxyCompactList}\item 
+void \hyperlink{class_fbx_auto_ptr_a46656f93e4ec91ece72fb90b9091fd2c}{Swap} (\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr} \&p\+Other)
+\begin{DoxyCompactList}\small\item\em Swap with another pointer. \end{DoxyCompactList}\item 
+Type $\ast$ \hyperlink{class_fbx_auto_ptr_ab9460afa835fdaa907bf0ae32f939b8e}{Release} ()
+\begin{DoxyCompactList}\small\item\em Release the pointer, so that it won\textquotesingle{}t perform deletion in its destruction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\subsubsection*{template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$\newline
+class Fbx\+Auto\+Ptr$<$ Type, Policy $>$}
+
+\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr} mimics the {\ttfamily auto\+\_\+ptr} class template implementation available in the C++ Standard Library. The {\ttfamily auto\+\_\+ptr} template class describes an object that stores a pointer to a single allocated object of type Type$\ast$ that ensures that the object to which it points gets destroyed automatically when control leaves a scope. 
+
+ fbxalloc.\+h の 190 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{class_fbx_auto_ptr_ae988d5760ee4926a4a10d76c37b378fc}\label{class_fbx_auto_ptr_ae988d5760ee4926a4a10d76c37b378fc}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{Fbx\+Auto\+Ptr()}{FbxAutoPtr()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr} (\begin{DoxyParamCaption}\item[{Type $\ast$}]{p\+Ptr = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Construct from a pointer. 
+
+
+
+ fbxalloc.\+h の 194 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_aa185a3ac9d0cc7b8c2b04825f3ea73ee}\label{class_fbx_auto_ptr_aa185a3ac9d0cc7b8c2b04825f3ea73ee}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!````~Fbx\+Auto\+Ptr@{$\sim$\+Fbx\+Auto\+Ptr}}
+\index{````~Fbx\+Auto\+Ptr@{$\sim$\+Fbx\+Auto\+Ptr}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{$\sim$\+Fbx\+Auto\+Ptr()}{~FbxAutoPtr()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::$\sim$\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+
+
+ fbxalloc.\+h の 197 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{class_fbx_auto_ptr_ae7006aca39929990a12c7c99af5d3ef7}\label{class_fbx_auto_ptr_ae7006aca39929990a12c7c99af5d3ef7}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!Get@{Get}}
+\index{Get@{Get}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type$\ast$ \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the pointer it holds. 
+
+
+
+ fbxalloc.\+h の 200 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_ae92a5d1428b0ce74491aab76f8535b4c}\label{class_fbx_auto_ptr_ae92a5d1428b0ce74491aab76f8535b4c}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to boolean value. 
+
+
+
+ fbxalloc.\+h の 215 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_ab7d5ac9eadc5c51ea062016f08640be1}\label{class_fbx_auto_ptr_ab7d5ac9eadc5c51ea062016f08640be1}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!operator Type $\ast$@{operator Type $\ast$}}
+\index{operator Type $\ast$@{operator Type $\ast$}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{operator Type $\ast$()}{operator Type *()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::operator Type $\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Convert to a Type pointer. 
+
+
+
+ fbxalloc.\+h の 206 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_afc9bb02ba900f9920772416291690f45}\label{class_fbx_auto_ptr_afc9bb02ba900f9920772416291690f45}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!operator"!@{operator"!}}
+\index{operator"!@{operator"!}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{operator"!()}{operator!()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+bool \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::operator! (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Logical not operator. 
+
+
+
+ fbxalloc.\+h の 212 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_acb65f0b9499fede18cb2749fa42f40a9}\label{class_fbx_auto_ptr_acb65f0b9499fede18cb2749fa42f40a9}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type\& \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dereference operator. 
+
+
+
+ fbxalloc.\+h の 209 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_adfc79ea055e3de00252fb707ff5cfe31}\label{class_fbx_auto_ptr_adfc79ea055e3de00252fb707ff5cfe31}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type$\ast$ \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Member access operator. 
+
+
+
+ fbxalloc.\+h の 203 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_ab9460afa835fdaa907bf0ae32f939b8e}\label{class_fbx_auto_ptr_ab9460afa835fdaa907bf0ae32f939b8e}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!Release@{Release}}
+\index{Release@{Release}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+Type$\ast$ \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::Release (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Release the pointer, so that it won\textquotesingle{}t perform deletion in its destruction. 
+
+
+
+ fbxalloc.\+h の 233 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_ab0b755d84668c33b007a3311adb2b9e1}\label{class_fbx_auto_ptr_ab0b755d84668c33b007a3311adb2b9e1}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!Reset@{Reset}}
+\index{Reset@{Reset}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+void \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::Reset (\begin{DoxyParamCaption}\item[{Type $\ast$}]{p\+Ptr = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reset the scoped pointer by swapping with another pointer. 
+
+
+
+ fbxalloc.\+h の 218 行目に定義があります。
+
+\mbox{\Hypertarget{class_fbx_auto_ptr_a46656f93e4ec91ece72fb90b9091fd2c}\label{class_fbx_auto_ptr_a46656f93e4ec91ece72fb90b9091fd2c}} 
+\index{Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}!Swap@{Swap}}
+\index{Swap@{Swap}!Fbx\+Auto\+Ptr@{Fbx\+Auto\+Ptr}}
+\subsubsection{\texorpdfstring{Swap()}{Swap()}}
+{\footnotesize\ttfamily template$<$class Type, class Policy = Fbx\+Deletion\+Policy\+Default$<$\+Type$>$$>$ \\
+void \hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$\+::Swap (\begin{DoxyParamCaption}\item[{\hyperlink{class_fbx_auto_ptr}{Fbx\+Auto\+Ptr}$<$ Type, Policy $>$ \&}]{p\+Other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Swap with another pointer. 
+
+
+
+ fbxalloc.\+h の 225 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Maya/scripts/\+F\+B\+X\+\_\+\+S\+D\+K/2017.\+1/include/fbxsdk/core/arch/\hyperlink{fbxalloc_8h}{fbxalloc.\+h}\end{DoxyCompactItemize}
